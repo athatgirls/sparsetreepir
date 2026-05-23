@@ -827,7 +827,7 @@ For backend measurements, we use the height-$128$ workloads and compare PBC-SMT 
 
 \subsection{Privacy-Preserving Layouts}
 
-We compare four layout choices. \emph{Perfectized TreePIR} treats the SMT as a complete height-$h$ perfect tree and is used only as an accounting baseline, because a height-$128$ or height-$256$ full coordinate tree is not materializable. \emph{PBC-SMT} applies a generic probabilistic-batch-code style layout to the same active proof records: it stores three replicated copies and spreads them over $\lceil1.5m\rceil$ buckets. Our implementation uses deterministic balanced placement for this resource-level baseline, so the reported PBC maximum bucket is the balanced accounting value rather than a favorable or unfavorable sampled Cuckoo seed. \emph{Flat active PIR} stores active proof records once, but searches one global active database for each proof slot. \emph{SparseTreePIR} stores the same active proof records once, partitions them by active-interval coloring, and applies \ActiveBalance{} to reduce the largest color store.
+We compare four layout choices. \emph{Perfectized TreePIR} treats the SMT as a complete height-$h$ perfect tree and is used only as an accounting baseline, because a height-$128$ or height-$256$ full coordinate tree is not materializable. \emph{PBC-SMT} is a PBC-style accounting baseline over the same active proof records: it stores three replicated copies and spreads them over $\lceil1.5m\rceil$ buckets. Our implementation uses deterministic balanced placement rather than sampled Cuckoo placement when reporting bucket sizes. This gives the PBC-style baseline an optimistic bucket balance and removes seed dependence from the layout comparison. \emph{Flat active PIR} stores active proof records once, but searches one global active database for each proof slot. \emph{SparseTreePIR} stores the same active proof records once, partitions them by active-interval coloring, and applies \ActiveBalance{} to reduce the largest color store.
 
 \begin{table*}[!t]
 \centering
@@ -859,7 +859,7 @@ In Table~\ref{tab:real_workload_shape}, Active $N$ is the number of PIR-facing p
 
 \begin{table}[!t]
 \centering
-\caption{Measured sources of improvement on the real SMT workload suite}
+\caption{Measured sources of improvement on the real SMT workload suite. Percentage reductions are arithmetic means over the six height-$128$ workload instances.}
 \label{tab:real_gain_sources}
 \scriptsize
 \setlength{\tabcolsep}{3pt}
@@ -913,27 +913,27 @@ In five of the six height-$128$ workloads, \ActiveBalance{} reaches the reported
 
 We next measure concrete backend behavior. The SimplePIR integration materializes the $32$-byte digest records for each color store and calls the official SimplePIR Go API~\cite{simplepir}, including \texttt{Setup}, \texttt{Query}, \texttt{Answer}, and \texttt{Recover}. Each digest is retrieved as eight $32$-bit chunks because the artifact's convenient database constructor represents one entry as a machine word. The bridge verifies recovered chunks, so this is an end-to-end digest-retrieval check, although it is not optimized digest packing.
 
-The PIANO integration uses the public PIANO artifact~\cite{piano} with the exact bucket-size vector induced by each real workload layout. It is therefore an executable backend-shape runner rather than a full SMT digest-reconstruction bridge. PIANO's artifact internally caps the number of subdatabase queries according to its refresh window for small databases; the raw tables record the completed subdatabase-level query counts. We use it to test whether the same SparseTreePIR-versus-PBC-SMT layout comparison persists under a second public PIR implementation.
+The PIANO integration uses the public PIANO artifact~\cite{piano} with the exact bucket-size vector induced by each real workload layout. It is therefore an executable backend-shape runner rather than a full SMT digest-reconstruction bridge. PIANO's artifact internally caps the number of subdatabase queries according to its refresh window for small databases; the raw tables record the completed subdatabase-level query counts. Accordingly, we treat PIANO as a secondary backend-shape check, while the SimplePIR bridge is the main end-to-end digest-retrieval backend.
 
 \begin{table}[!t]
 \centering
-\caption{Repeated executable-backend results on real height-$128$ workloads. Each entry averages six workloads over three seeds and $50$ requested occupied targets per seed. Timing columns report mean reduction $\pm$ the average sample standard deviation across workloads.}
+\caption{Repeated executable-backend results on real height-$128$ workloads. Each entry averages six workloads over three seeds and $50$ requested occupied targets per seed. Timing columns report mean reduction $\pm$ the average sample standard deviation across workloads. Answer red. is SimplePIR server-answer time; Setup red. is backend preprocessing only and excludes layout construction and metadata publication.}
 \label{tab:real_backend_summary}
 \scriptsize
 \setlength{\tabcolsep}{3pt}
 \resizebox{\linewidth}{!}{%
-\begin{tabular}{lrrrrrl}
+\begin{tabular}{lrrrrrrr}
 \toprule
-Backend & Runs & Width red. & Max-bucket red. & Online red. & Query red. & Setup red. \\
+Backend & Runs & Width red. & Max-bucket red. & Online red. & Query red. & Answer red. & Setup red. \\
 \midrule
-SimplePIR full API & $3\times50$ & 34.8\% & -- & $52.4\pm0.0\%$ & $40.5\pm1.3\%$ & $57.3\pm3.5\%$ \\
-PIANO local runner & $3\times50$ & 34.8\% & 48.6\% & $57.4\pm0.0\%$ & $58.3\pm11.1\%$ & $67.8\pm8.3\%$ \\
+SimplePIR full API & $3\times50$ & 34.8\% & -- & $52.4\pm0.0\%$ & $40.5\pm1.3\%$ & $44.1\pm3.5\%$ & $57.3\pm3.5\%$ \\
+PIANO local runner & $3\times50$ & 34.8\% & 48.6\% & $57.4\pm0.0\%$ & $58.3\pm11.1\%$ & -- & $67.8\pm8.3\%$ \\
 \bottomrule
 \end{tabular}
 \par}
 \end{table}
 
-Table~\ref{tab:real_backend_summary} is the main backend result. Against PBC-SMT, SparseTreePIR reduces online communication by $52.4\%$ under the full SimplePIR bridge and by $57.4\%$ under the PIANO runner. Query generation and setup time also decrease substantially. The reductions are not caused by changing the PIR primitive; both schemes are measured through the same backend in each row. They come from the database profile exposed to the backend: PBC-SMT stores three copies over approximately $1.5m$ buckets, while SparseTreePIR stores one copy over $m$ active color stores.
+Table~\ref{tab:real_backend_summary} is the main backend result. Against PBC-SMT, SparseTreePIR reduces online communication by $52.4\%$ under the full SimplePIR bridge and by $57.4\%$ under the PIANO runner. In the SimplePIR full-API bridge, server-answer time decreases by $44.1\%$ on average; PIANO answer timers are not reported because the artifact's small-database counters are often zero or quantized. Query generation and backend setup time also decrease substantially. The reductions are not caused by changing the PIR primitive; both schemes are measured through the same backend in each row. They come from the database profile exposed to the backend: PBC-SMT stores three copies over approximately $1.5m$ buckets, while SparseTreePIR stores one copy over $m$ active color stores.
 
 \begin{table*}[!t]
 \centering

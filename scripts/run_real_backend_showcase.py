@@ -217,6 +217,11 @@ def summarize(rows: Sequence[Dict[str, object]]) -> List[Dict[str, object]]:
                 "pbc_setup_ms": pbc["setup_ms"],
                 "sparse_setup_ms": sparse["setup_ms"],
                 "setup_reduction": safe_reduction(float(pbc["setup_ms"]), float(sparse["setup_ms"])),
+                "pbc_server_total_ms": pbc["server_total_ms"],
+                "sparse_server_total_ms": sparse["server_total_ms"],
+                "server_total_reduction": optional_reduction(
+                    float(pbc["server_total_ms"]), float(sparse["server_total_ms"]), min_baseline=0.01
+                ),
                 "pbc_server_parallel_ms": pbc["server_parallel_ms"],
                 "sparse_server_parallel_ms": sparse["server_parallel_ms"],
                 "server_parallel_reduction": optional_reduction(
@@ -255,14 +260,15 @@ def write_note(path: Path, raw_rows: Sequence[Dict[str, object]], summary_rows: 
         "",
         "## Average Effect Against PBC-SMT",
         "",
-        "| Backend | Datasets | Width reduction | Max-bucket reduction | Online KB reduction | Query-time reduction | Setup reduction |",
-        "|---|---:|---:|---:|---:|---:|---:|",
+        "| Backend | Datasets | Width reduction | Max-bucket reduction | Online KB reduction | Query-time reduction | Answer-time reduction | Setup reduction |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|",
     ]
     for backend, rows in by_backend.items():
         lines.append(
             f"| {backend} | {len(rows)} | {pct(avg(rows, 'width_reduction'))} | "
             f"{pct(avg(rows, 'max_bucket_reduction')) if any(r.get('max_bucket_reduction', '') != '' for r in rows) else 'n/a'} | "
             f"{pct(avg(rows, 'online_reduction'))} | {pct(avg(rows, 'query_reduction'))} | "
+            f"{pct(avg(rows, 'server_total_reduction')) if any(r.get('server_total_reduction', '') != '' for r in rows) else 'n/a'} | "
             f"{pct(avg(rows, 'setup_reduction'))} |"
         )
 

@@ -15,6 +15,7 @@ METRIC_COLUMNS = [
     "max_bucket_reduction",
     "online_reduction",
     "query_reduction",
+    "server_total_reduction",
     "setup_reduction",
 ]
 
@@ -149,6 +150,11 @@ def write_note(path: Path, aggregate_rows: Sequence[Dict[str, object]], seeds: S
     by_backend: Dict[str, List[Dict[str, object]]] = defaultdict(list)
     for row in aggregate_rows:
         by_backend[str(row["backend"])].append(row)
+    complete_answer_backends = {
+        backend
+        for backend, rows in by_backend.items()
+        if all(row.get("server_total_reduction_mean", "") != "" for row in rows)
+    }
 
     lines = [
         "# Real Backend Showcase Repeated Runs",
@@ -159,19 +165,24 @@ def write_note(path: Path, aggregate_rows: Sequence[Dict[str, object]], seeds: S
         "",
         "## Backend Averages",
         "",
-        "| Backend | Workloads | Online mean | Online std | Query mean | Query std | Setup mean | Setup std |",
-        "|---|---:|---:|---:|---:|---:|---:|---:|",
+        "| Backend | Workloads | Online mean | Online std | Query mean | Query std | Answer mean | Answer std | Setup mean | Setup std |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
     ]
     for backend, rows in sorted(by_backend.items()):
         online = [float(row["online_reduction_mean"]) for row in rows if row["online_reduction_mean"] != ""]
         online_std = [float(row["online_reduction_std"]) for row in rows if row["online_reduction_std"] != ""]
         query = [float(row["query_reduction_mean"]) for row in rows if row["query_reduction_mean"] != ""]
         query_std = [float(row["query_reduction_std"]) for row in rows if row["query_reduction_std"] != ""]
+        answer = [float(row["server_total_reduction_mean"]) for row in rows if row["server_total_reduction_mean"] != ""]
+        answer_std = [float(row["server_total_reduction_std"]) for row in rows if row["server_total_reduction_std"] != ""]
+        answer_complete = len(answer) == len(rows)
         setup = [float(row["setup_reduction_mean"]) for row in rows if row["setup_reduction_mean"] != ""]
         setup_std = [float(row["setup_reduction_std"]) for row in rows if row["setup_reduction_std"] != ""]
         lines.append(
             f"| {backend} | {len(rows)} | {pct(average(online))} | {pct(average(online_std))} | "
             f"{pct(average(query))} | {pct(average(query_std))} | "
+            f"{pct(average(answer)) if answer_complete else 'n/a'} | "
+            f"{pct(average(answer_std)) if answer_complete else 'n/a'} | "
             f"{pct(average(setup))} | {pct(average(setup_std))} |"
         )
 
@@ -180,15 +191,21 @@ def write_note(path: Path, aggregate_rows: Sequence[Dict[str, object]], seeds: S
             "",
             "## Per-Workload Means",
             "",
-            "| Backend | Dataset | h | Online mean | Online std | Query mean | Setup mean |",
-            "|---|---|---:|---:|---:|---:|---:|",
+            "| Backend | Dataset | h | Online mean | Online std | Query mean | Answer mean | Setup mean |",
+            "|---|---|---:|---:|---:|---:|---:|---:|",
         ]
     )
     for row in aggregate_rows:
+        answer_cell = (
+            pct(row["server_total_reduction_mean"])
+            if row["backend"] in complete_answer_backends and row["server_total_reduction_mean"] != ""
+            else "n/a"
+        )
         lines.append(
             f"| {row['backend']} | {row['dataset']} | {row['height']} | "
             f"{pct(row['online_reduction_mean'])} | {pct(row['online_reduction_std'])} | "
-            f"{pct(row['query_reduction_mean'])} | {pct(row['setup_reduction_mean'])} |"
+            f"{pct(row['query_reduction_mean'])} | {answer_cell} | "
+            f"{pct(row['setup_reduction_mean'])} |"
         )
 
     path.parent.mkdir(parents=True, exist_ok=True)
