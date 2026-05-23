@@ -33,7 +33,7 @@ Figure~\ref{fig:algorithm-stack} gives a compact map from ordinary SMT proof ser
 \begin{figure*}[!t]
 \centering
 \includegraphics[width=0.98\textwidth]{../figures/sparsetreepir_private_retrieval_solution_figure.pdf}
-\caption{SparseTreePIR solution map from ordinary SMT proof serving to target-private proof retrieval. The mechanism stores only active proof records, uses served intervals and active-width coloring for fixed-shape batch retrieval, balances color stores with \ActiveBalance{}, hides real and dummy PIR roles, and recovers the standard height-$h$ SMT proof locally.}
+\caption{SparseTreePIR solution map from ordinary SMT proof serving to target-private proof retrieval. The PIR-facing mechanism places only active proof records in color stores, uses served intervals and active-width coloring for fixed-shape batch retrieval, balances stores with \ActiveBalance{}, hides real and dummy PIR roles, and recovers the standard height-$h$ SMT proof locally.}
 \label{fig:algorithm-stack}
 \end{figure*}
 
@@ -203,11 +203,11 @@ The first condition ensures that $u$ itself carries a real digest rather than a 
 
 \begin{proposition}[Minimal non-default PIR record set]
 \label{prop:active-record-minimality}
-Fix a public height-$h$ SMT snapshot $T$ and the public default-empty hash chain. In the record-based retrieval model where a PIR record supplies a proof sibling digest and public defaults may be filled locally, $\mathcal{A}(T)$ is exactly the set of non-default sibling digests that may be required by some occupied-leaf membership proof. Consequently, any PIR-facing database that supports all occupied-leaf membership proofs must make one digest for every node in $\mathcal{A}(T)$ retrievable, while no default-empty sibling position needs a PIR record.
+Fix a public height-$h$ SMT snapshot $T$ and the public default-empty hash chain, and assume the SMT hash function is collision resistant. In the record-based retrieval model where a PIR record supplies a proof sibling digest and public defaults may be filled locally, $\mathcal{A}(T)$ is exactly the set of non-default sibling digests that may be required by some occupied-leaf membership proof, except with negligible hash-collision probability. Consequently, any PIR-facing database that supports all occupied-leaf membership proofs must make one digest for every node in $\mathcal{A}(T)$ retrievable, while no default-empty sibling position needs a PIR record.
 \end{proposition}
 
 \begin{proof}
-If $u\in\mathcal{A}(T)$, then $u$ is non-empty and $\operatorname{sib}(u)$ is also non-empty. Choose any occupied leaf in the subtree of $\operatorname{sib}(u)$; the verifier-facing membership proof for that leaf contains the digest of $u$ as a sibling digest. Because $u$ is non-empty, this digest is not supplied by the public default-empty chain except with the usual hash-collision failure probability. Thus a record-based private retrieval layout that reconstructs every occupied-leaf proof must make this digest retrievable. Conversely, if a proof sibling subtree is empty, its digest is the public value $\Delta_t$ for the corresponding height $t$ and is reconstructed locally. A non-empty node whose sibling subtree is empty is not a sibling for any occupied target leaf. Therefore the necessary and sufficient non-default PIR record set is precisely $\mathcal{A}(T)$.
+If $u\in\mathcal{A}(T)$, then $u$ is non-empty and $\operatorname{sib}(u)$ is also non-empty. Choose any occupied leaf in the subtree of $\operatorname{sib}(u)$; the verifier-facing membership proof for that leaf contains the digest of $u$ as a sibling digest. By collision resistance, a non-empty subtree digest is computationally distinct from the corresponding public default-empty digest except with negligible probability. Thus a record-based private retrieval layout that reconstructs every occupied-leaf proof must make this digest retrievable. Conversely, if a proof sibling subtree is empty, its digest is the public value $\Delta_t$ for the corresponding height $t$ and is reconstructed locally. A non-empty node whose sibling subtree is empty is not a sibling for any occupied target leaf. Therefore the necessary and sufficient non-default PIR record set is precisely $\mathcal{A}(T)$.
 \end{proof}
 
 \begin{definition}[Active proof path]
@@ -970,7 +970,7 @@ ZKsync broad        & 138.938& 65.344 & 32.302 & 17.679 & 0.268 & 0.120 \\
 \par}
 \end{table}
 
-Table~\ref{tab:simplepir_raw_means} gives the absolute SimplePIR values behind the aggregate ratios. The ratios in Table~\ref{tab:real_backend_summary} are computed from per-workload reductions, so they need not equal ratios of rounded arithmetic means in the raw table. The seed-level CSVs also report backend setup time and the raw PIANO runner values.
+Table~\ref{tab:simplepir_raw_means} gives the absolute SimplePIR values behind the aggregate ratios. The ratios in Table~\ref{tab:real_backend_summary} are computed from per-workload reductions, so they need not equal ratios of rounded arithmetic means in the raw table. The artifact also includes an aggregate raw-means CSV for both SimplePIR and PIANO, including backend setup time.
 
 \begin{table}[!t]
 \centering

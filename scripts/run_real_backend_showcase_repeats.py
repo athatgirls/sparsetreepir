@@ -19,6 +19,21 @@ METRIC_COLUMNS = [
     "setup_reduction",
 ]
 
+RAW_MEAN_COLUMNS = [
+    "pbc_max_bucket",
+    "sparse_max_bucket",
+    "pbc_online_kb",
+    "sparse_online_kb",
+    "pbc_query_ms",
+    "sparse_query_ms",
+    "pbc_setup_ms",
+    "sparse_setup_ms",
+    "pbc_server_total_ms",
+    "sparse_server_total_ms",
+    "pbc_server_parallel_ms",
+    "sparse_server_parallel_ms",
+]
+
 
 def parse_int_list(raw: str) -> List[int]:
     values = [int(item.strip()) for item in raw.split(",") if item.strip()]
@@ -140,6 +155,33 @@ def aggregate(seed_summaries: Sequence[Tuple[int, Path]]) -> Tuple[List[Dict[str
     return per_seed_rows, aggregate_rows
 
 
+def aggregate_raw_means(per_seed_rows: Sequence[Dict[str, object]]) -> List[Dict[str, object]]:
+    grouped: Dict[Tuple[str, str, int], List[Dict[str, object]]] = defaultdict(list)
+    for row in per_seed_rows:
+        grouped[(str(row["backend"]), str(row["dataset"]), int(row["height"]))].append(row)
+
+    raw_rows: List[Dict[str, object]] = []
+    for (backend, dataset, height), rows in sorted(grouped.items()):
+        out: Dict[str, object] = {
+            "backend": backend,
+            "dataset": dataset,
+            "height": height,
+            "seeds": len(rows),
+            "pbc_width": rows[0].get("pbc_width", ""),
+            "sparse_width": rows[0].get("sparse_width", ""),
+        }
+        for column in RAW_MEAN_COLUMNS:
+            values = [value for row in rows if (value := maybe_float(str(row.get(column, "")))) is not None]
+            if values:
+                out[f"{column}_mean"] = average(values)
+                out[f"{column}_std"] = sample_stdev(values)
+            else:
+                out[f"{column}_mean"] = ""
+                out[f"{column}_std"] = ""
+        raw_rows.append(out)
+    return raw_rows
+
+
 def pct(value: object) -> str:
     if value == "":
         return "n/a"
@@ -229,6 +271,7 @@ def main() -> None:
     parser.add_argument("--note-dir", type=Path, default=Path("notes"))
     parser.add_argument("--combined-output", type=Path, default=Path("examples/real_backend_showcase_repeats_seed_rows.csv"))
     parser.add_argument("--aggregate-output", type=Path, default=Path("examples/real_backend_showcase_repeats_summary.csv"))
+    parser.add_argument("--raw-means-output", type=Path, default=Path("examples/real_backend_showcase_raw_means.csv"))
     parser.add_argument("--note", type=Path, default=Path("notes/real_backend_showcase_repeats_note.md"))
     parser.add_argument("--skip-runs", action="store_true", help="Aggregate existing per-seed summaries without running backends.")
     args = parser.parse_args()
@@ -245,11 +288,14 @@ def main() -> None:
         seed_summaries.append((seed, summary_path))
 
     per_seed_rows, aggregate_rows = aggregate(seed_summaries)
+    raw_mean_rows = aggregate_raw_means(per_seed_rows)
     write_csv(args.combined_output, per_seed_rows)
     write_csv(args.aggregate_output, aggregate_rows)
+    write_csv(args.raw_means_output, raw_mean_rows)
     write_note(args.note, aggregate_rows, seeds)
     print(f"combined={args.combined_output}")
     print(f"aggregate={args.aggregate_output}")
+    print(f"raw_means={args.raw_means_output}")
     print(f"note={args.note}")
 
 
