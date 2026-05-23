@@ -373,12 +373,12 @@ This section turns the model into a concrete retrieval construction. The offline
 
 SparseTreePIR instantiates a snapshot-specific retrieval layout with a fixed online transcript. During setup, the server extracts active proof-bearing nodes, partitions them into color subdatabases, and publishes metadata that maps target ranks to served intervals. During online retrieval, the client sends exactly one PIR subquery to each color subdatabase. If the target proof contains a real node in that color, the query selects that node; otherwise, the query is a dummy sampled through the same PIR interface. After receiving the responses, the client writes the real digests into the appropriate proof slots and fills the remaining slots with public default hashes. Figure~\ref{fig:workflow} summarizes this setup-and-retrieval flow.
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=\linewidth]{../figures/sparsetreepir_workflow_figure.pdf}
-\caption{End-to-end view. The server organizes only active proof-bearing nodes into color subdatabases, while the client retrieves at most one real node per color and completes the remaining proof levels from public default hashes.}
-\label{fig:workflow}
-\end{figure}
+\begin{figure*}[!t]
+	\centering
+	\includegraphics[width=0.98\textwidth]{../figures/sparsetreepir_algorithmic_pipeline.png}
+	\caption{SparseTreePIR algorithmic pipeline. Offline setup extracts active proof-bearing nodes, builds served intervals, colors the active interval forest, and balances color stores. Online retrieval uses public metadata to issue exactly one PIR query per color, then combines retrieved real sibling digests with public default hashes to reconstruct the standard height-$h$ SMT proof.}
+	\label{fig:workflow}
+\end{figure*}
 
 \noindent\textbf{Online retrieval pattern.}
 Given a fixed public SMT snapshot $T$, setup outputs active color subdatabases
