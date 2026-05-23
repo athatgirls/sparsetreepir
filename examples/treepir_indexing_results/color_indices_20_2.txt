@@ -1,0 +1,21 @@
+TX_index: 17
+colorA_20_2.json; NodeID: 2; Index: 0
+colorB_20_2.json; NodeID: 65537; Index: 2
+colorC_20_2.json; NodeID: 16; Index: 0
+colorD_20_2.json; NodeID: 4; Index: 0
+colorE_20_2.json; NodeID: 32768; Index: 1
+colorF_20_2.json; NodeID: 1024; Index: 0
+colorG_20_2.json; NodeID: 8; Index: 0
+colorH_20_2.json; NodeID: 524296; Index: 3
+colorI_20_2.json; NodeID: 131074; Index: 8
+colorJ_20_2.json; NodeID: 512; Index: 0
+colorK_20_2.json; NodeID: 128; Index: 0
+colorL_20_2.json; NodeID: 64; Index: 0
+colorM_20_2.json; NodeID: 32; Index: 0
+colorN_20_2.json; NodeID: 1048592; Index: 11
+colorO_20_2.json; NodeID: 262148; Index: 8
+colorP_20_2.json; NodeID: 256; Index: 0
+colorQ_20_2.json; NodeID: 4096; Index: 1
+colorR_20_2.json; NodeID: 2048; Index: 1
+colorS_20_2.json; NodeID: 8192; Index: 1
+colorT_20_2.json; NodeID: 16384; Index: 1

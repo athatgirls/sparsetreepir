@@ -1,0 +1,3 @@
+label,source_path,height,key_mode,input_records,unique_keys,occupied_leaves,slot_collisions,active_nodes,exact_width,avg_active_path_len,max_active_path_len_by_leaf,dummy_fraction,ideal_max_bucket,profile_max_bucket,profile_size_gap,profile_over_ideal,profile_runtime_ms,valid
+fuel_smt_test_vectors_intermediate_snapshots,datasets\fuel_smt_test_workload_intermediate.csv,128,hex-prefix,6120,100,100,0,198,9,6.88,9,0.23555555555555555,22,22,0,1.0,166.77599982358515,True
+fuel_smt_test_vectors_intermediate_snapshots,datasets\fuel_smt_test_workload_intermediate.csv,256,hex-prefix,6120,100,100,0,198,9,6.88,9,0.23555555555555555,22,22,0,1.0,168.2780000846833,True

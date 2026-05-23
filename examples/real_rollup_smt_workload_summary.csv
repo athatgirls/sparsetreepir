@@ -1,0 +1,11 @@
+workload,height,keys,active_nodes,m,avg_active_path,dummy_fraction_percent,ideal_max_bucket,profile_max_bucket,ratio,gap,runtime_ms,valid
+Polygon recent,128,652,1302,12,9.68,19.36,109,109,1.000,1,1651.1,True
+Polygon recent,256,652,1302,12,9.68,19.36,109,109,1.000,1,1628.5,True
+Polygon multi-window,128,1348,2694,14,10.73,23.36,193,193,1.000,1,4942.5,True
+Polygon multi-window,256,1348,2694,14,10.73,23.36,193,193,1.000,1,5149.5,True
+Polygon broad,128,7040,14078,17,13.11,22.86,829,829,1.000,1,40527.7,True
+Polygon broad,256,7040,14078,17,13.11,22.86,829,829,1.000,1,43666.8,True
+ZKsync sample,128,956,1910,13,10.19,21.62,147,147,1.000,1,3079.0,True
+ZKsync sample,256,956,1910,13,10.19,21.62,147,147,1.000,1,3256.4,True
+ZKsync broad,128,7740,15478,17,13.25,22.03,911,911,1.000,1,32124.2,True
+ZKsync broad,256,7740,15478,17,13.25,22.03,911,911,1.000,1,32350.9,True

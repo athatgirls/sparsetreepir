@@ -1,0 +1,117 @@
+{
+  "height": 4,
+  "sparsity": 0.8,
+  "seed": 20260407,
+  "total_leaves": 16,
+  "occupied_leaf_count": 3,
+  "occupied_leaf_heap_indices": [
+    16,
+    27,
+    31
+  ],
+  "occupied_leaf_slots_0_based": [
+    0,
+    11,
+    15
+  ],
+  "occupied_leaves": [
+    16,
+    27,
+    31
+  ],
+  "stored_proof_node_count": 4,
+  "num_colors": 2,
+  "count_loads": [
+    2,
+    2
+  ],
+  "weight_loads": [
+    3,
+    2
+  ],
+  "count_gap": 0,
+  "weight_gap": 1,
+  "valid": true,
+  "issues": [],
+  "sample_queries": [
+    {
+      "leaf_heap_index": 16,
+      "leaf_slot_0_based": 0,
+      "plan": [
+        "C1->3",
+        "C2->dummy"
+      ]
+    },
+    {
+      "leaf_heap_index": 27,
+      "leaf_slot_0_based": 11,
+      "plan": [
+        "C1->2",
+        "C2->7"
+      ]
+    },
+    {
+      "leaf_heap_index": 31,
+      "leaf_slot_0_based": 15,
+      "plan": [
+        "C1->2",
+        "C2->6"
+      ]
+    }
+  ],
+  "proof_nodes": [
+    {
+      "index": 2,
+      "depth": 1,
+      "color": 1,
+      "weight": 2,
+      "interval_rank": [
+        1,
+        2
+      ],
+      "covers_leaves": [
+        27,
+        31
+      ]
+    },
+    {
+      "index": 3,
+      "depth": 1,
+      "color": 1,
+      "weight": 1,
+      "interval_rank": [
+        0,
+        0
+      ],
+      "covers_leaves": [
+        16
+      ]
+    },
+    {
+      "index": 6,
+      "depth": 2,
+      "color": 2,
+      "weight": 1,
+      "interval_rank": [
+        2,
+        2
+      ],
+      "covers_leaves": [
+        31
+      ]
+    },
+    {
+      "index": 7,
+      "depth": 2,
+      "color": 2,
+      "weight": 1,
+      "interval_rank": [
+        1,
+        1
+      ],
+      "covers_leaves": [
+        27
+      ]
+    }
+  ]
+}

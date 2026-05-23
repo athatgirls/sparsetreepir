@@ -1,0 +1,1209 @@
+\section{Introduction}
+\label{sec:intro}
+
+Sparse Merkle Trees (SMTs) are Merkle trees instantiated over large logical address spaces. A height-$h$ SMT has $2^h$ possible leaf coordinates, but only a small fraction of them may be occupied; every empty subtree is represented by a public default digest. This default-completion property makes SMTs a natural building block for revocation maps, authenticated dictionaries, and blockchain state commitments~\cite{sparsemt,revtrans,jmt,ethereum,zcash}. Verification preserves the standard Merkle semantics: to prove membership of a target leaf, a verifier checks the leaf value together with one sibling digest per level and reconstructs the committed root.
+
+The standard SMT proof-serving interface is efficient, but it is not private. A server that receives a proof request learns which key, account, certificate, or state object the client is checking, and it also learns the corresponding path in the authenticated map. Prior SMT systems mainly optimize storage layout, proof generation, multiproofs, and update cost. They do not hide the requested target. This paper therefore studies not proof-size minimization, but target-private retrieval of the non-publicly reconstructible proof material.
+
+Private information retrieval (PIR) is the natural cryptographic primitive for hiding a database index. However, an SMT proof is not a single database record. It is a height-$h$ proof array containing two kinds of entries: real sibling digests that must be obtained from the server, and default-empty digests that the client can reconstruct publicly. Running one independent PIR query per SMT level would hide the target, but it would turn one proof request into many unrelated PIR lookups and would ignore the structure of the proof.
+
+The resulting retrieval problem is naturally a batch PIR problem: a private proof request needs a fixed-shape way to retrieve several proof records without revealing which authenticated path they support. Generic batch-PIR organizations can hide multiple requested records, but they treat those records as an arbitrary set. This line includes classical batch codes and combinatorial batch codes~\cite{batchcodes,cbc}, the probabilistic-batch-code (PBC) route introduced by Angel et al. at S\&P 2018~\cite{sealpir}, and recent multi-query PIR systems such as Vectorized BatchPIR and PIRANA~\cite{vectorbatchpir,pirana}. These systems improve the cryptographic or coding layer, but they do not identify which SMT-specific proof objects should populate the PIR database or how the public default levels should be completed after private retrieval.
+
+Merkle proofs have more structure than an arbitrary batch: the requested sibling digests are tied together by one root-to-leaf path. TreePIR~\cite{treepir} demonstrates how this path structure can be exploited for a perfect binary tree: color proof nodes so that any proof path contains at most one node of each color, and then issue one PIR subquery per color.
+
+TreePIR provides the relevant organizing principle, but its object does not directly match SMT proof retrieval. Its coloring and indexing algorithms are built for a perfect-tree proof organization. If we first perfectize an SMT, public default coordinates and inactive logical positions become PIR database records, producing a mismatched PIR-facing database profile. TreePIR discusses sparse Merkle trees as a possible extension, but its main construction and indexing guarantees are developed for perfect trees; the compressed sparse setting changes the coloring object and leaves growing sparse trees outside the main framework.
+
+The central challenge is therefore not whether TreePIR's one-query-per-color principle is applicable to SMTs, but \emph{what object that principle should color}. SparseTreePIR answers this challenge by separating the verifier-facing proof from the PIR-facing database. The verifier still receives a standard height-$h$ SMT proof. The PIR database, however, contains only \emph{active proof-bearing sibling nodes}: non-empty sibling-side nodes that can appear in membership proofs of occupied leaves.
+
+Active nodes define the retrieval object rather than merely reducing storage. Each active node serves a contiguous interval of target leaves, so the PIR-facing proof records form a laminar active-interval forest. SparseTreePIR colors this forest under an ancestor-distinct constraint, publishes served-interval metadata for target lookup, and sends one PIR subquery per active color. If a color contains a real proof node for the target, the subquery is real; otherwise it is a dummy sampled from the same PIR interface. The client places the real replies into the height-$h$ proof array and fills the remaining levels from the public default-hash chain.
+
+This organization induces the central resource question. Once target privacy is required, the relevant comparison is no longer against a non-private proof-serving API, but among privacy-preserving layouts that expose different database profiles to the PIR backend. SparseTreePIR asks which proof records should become PIR records, how many fixed-shape subqueries are required, and how large the searched subdatabases become. After the active proof records have been identified, a second layout issue remains: a valid coloring may still place substantially more records in one color subdatabase than another. We address this later with \ActiveBalance{}, a subtree-load refinement that preserves the active one-query-per-color query pattern while flattening color-subdatabase loads.
+
+The paper makes three contributions, each addressing one obstacle in turning SMT proof serving into target-private batch retrieval.
+\begin{enumerate}[leftmargin=2em]
+  \item \textbf{PIR-facing proof-record abstraction.} We define the active proof-bearing interval forest for fixed SMT membership proofs, give served-interval metadata for compact client lookup, and specify the fixed-shape real/dummy batch-PIR query pattern together with local default-hash proof completion.
+  \item \textbf{Active-width interface characterization.} We characterize the active batch width of the one-query-per-color SMT interface, showing that the private retrieval width is governed by the occupied-leaf skeleton rather than by the verifier height.
+  \item \textbf{Private-workload balancing and evaluation.} We introduce \ActiveBalance{}, a subtree-load refinement with an instance-wise balance certificate. The experiments use real SMT workloads to compare SparseTreePIR with privacy-preserving layouts derived from perfectized TreePIR, PBC-SMT, and flat active PIR. A SimplePIR bridge, a PIANO local runner, a lightweight LWE-style prototype used only as a sensitivity check, and a two-server XOR-PIR model then evaluate the sensitivity of this comparison across multiple backend profiles.
+\end{enumerate}
+
+Figure~\ref{fig:algorithm-stack} gives a compact map from ordinary SMT proof serving to the SparseTreePIR retrieval layout.
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=0.98\textwidth]{../figures/sparsetreepir_private_retrieval_solution_figure.pdf}
+\caption{SparseTreePIR solution map from ordinary SMT proof serving to target-private proof retrieval. The mechanism stores only active proof records, uses served intervals and active-width coloring for fixed-shape batch retrieval, balances color stores with \ActiveBalance{}, hides real and dummy PIR roles, and recovers the standard height-$h$ SMT proof locally.}
+\label{fig:algorithm-stack}
+\end{figure*}
+
+The rest of the paper is organized as follows. Section~\ref{sec:background} reviews the SMT and PIR background needed for the rest of the paper. Section~\ref{sec:related} positions the paper relative to authenticated maps, TreePIR, and PIR backends. Section~\ref{sec:model} introduces the SMT formulation. Section~\ref{sec:coloring} presents the direct SMT organization and retrieval pipeline. Section~\ref{sec:correctness} proves correctness and complexity properties. Section~\ref{sec:experiments} evaluates the SMT organization and balancing algorithm. Section~\ref{sec:conclusion} concludes.
+
+\section{Background and Problem Setting}
+\label{sec:background}
+
+This section establishes the concepts used by the rest of the paper. We do not review Merkle trees or PIR in full generality. Instead, we isolate the components that determine the organization problem: a Merkle proof is a structured batch of sibling digests; an SMT proof contains both non-default real sibling digests and public default-empty digests; and a private proof-retrieval scheme must decide which of these objects become PIR records and how large the resulting subdatabases are.
+
+\subsection{Merkle Proof Retrieval}
+
+A binary Merkle tree commits to a collection of records by hashing records at the leaves and recursively hashing pairs of children until a single root digest is obtained~\cite{merkle}. To verify that a target leaf belongs to the committed set, a client needs the leaf value and the sibling digest at each level on the path from that leaf to the root. The verifier recomputes the path upward and checks whether the resulting root equals the public commitment.
+
+From a retrieval viewpoint, a Merkle proof is therefore a structured batch of sibling digests, not an arbitrary set of records. If a client asks the server directly for the proof of leaf $i$, the server learns $i$ and also learns the corresponding proof path. This is the privacy problem addressed by TreePIR for perfect binary trees~\cite{treepir}: use the path structure to organize proof nodes into color subdatabases, then retrieve one node per color through PIR.
+
+\subsection{Sparse Merkle Proofs and Default Completion}
+
+An SMT is a Merkle tree over a fixed logical address space. A fixed-height binary SMT of height $h$ has $2^h$ logical leaf positions, even if only a small fraction of them are occupied. A standard membership proof for an occupied leaf still has one sibling digest per level, so its verification interface has length $h$. The sparse-tree property relevant here is that not every proof position needs to be transmitted by the server. If a sibling subtree is empty, its digest is the corresponding public default hash~\cite{sparsemt}. Only sibling subtrees that contain real data carry proof material that cannot be reconstructed from public defaults.
+
+This observation turns a proof into two kinds of records. \emph{Private records} are real sibling digests that must be hidden inside PIR. \emph{Public records} are default-empty digests that the client can reconstruct locally. Our scheme is built around this distinction. It never changes the SMT verifier's height-$h$ interface; it only changes which proof records are placed into PIR subdatabases.
+
+Figure~\ref{fig:smt-logical-storage} summarizes the two views of the same SMT snapshot. The left side shows the full logical coordinate tree used by the verifier. The right side shows the implementation-facing view: only the non-default skeleton and real sibling digests need storage, while empty proof levels are filled from the public default-hash chain.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{../figures/sparsetreepir_smt_logical_storage_figure.pdf}
+\caption{Logical and storage views of an SMT. The verifier reasons about a complete height-$h$ coordinate tree, but the PIR-facing database should not store every empty coordinate. A membership proof is completed by combining PIR-retrieved real sibling digests with public default hashes.}
+\label{fig:smt-logical-storage}
+\end{figure}
+
+\subsection{From Proof Privacy to Batch PIR}
+
+If each proof level were queried independently, retrieving one proof would require up to $h$ unrelated PIR invocations. TreePIR shows a better pattern for perfect trees: color the proof-bearing nodes so that a proof path contains at most one node of each color, then issue one PIR subquery per color~\cite{treepir}. The server observes a fixed batch of subqueries, while the client privately extracts the needed node from each color subdatabase.
+
+For SMTs, this pattern remains applicable, but the object being colored changes. The appropriate PIR-facing database is not the full logical SMT. It is the set of real sibling-side nodes that can appear in some proof. Once those nodes are identified, the same high-level goal applies: partition them into color subdatabases so that every target proof needs at most one real record from each color.
+
+\subsection{PIR-Facing Workload Metrics}
+
+Following TreePIR's resource-first view, we treat the cryptographic PIR backend as a black box and focus on the database profile exposed to that backend. For one fixed SMT snapshot, a retrieval layout exposes four quantities to the PIR layer: the number of proof records that must be retrieved through PIR, the number of PIR subqueries sent per membership proof, the largest searched subdatabase, and the public lookup metadata size. These quantities do not determine every backend cost, because practical PIR systems have different constants and packing strategies~\cite{chor,ko97,xpir,sealpir,spiral,simplepir}. They do determine the workload profile exposed to any backend: sequential execution scales over all queried subdatabases, while parallel execution is bottlenecked by the largest one. Thus, a sparse-proof layout is effective only if it preserves fixed-shape private retrieval, keeps the batch width below the full verifier height when the active structure permits, and avoids creating a large bottleneck subdatabase.
+
+This leaves a concrete retrieval-design problem: for a fixed SMT snapshot, which proof records should be placed in PIR subdatabases, how should these subdatabases be shaped, and how should the client reconstruct the standard height-$h$ SMT proof from private replies and public default hashes? Section~\ref{sec:coloring} presents SparseTreePIR, our construction for this problem.
+
+\section{Related Work}
+\label{sec:related}
+
+Merkle trees and authenticated data structures. Merkle's original hash-tree construction~\cite{merkle} underlies a broad family of authenticated data structures. Classical work on authenticated dictionaries and generic authenticated data structures studies how to make dictionary operations verifiable~\cite{padauth,adsgeneric}. Deployed systems use Merkle-style commitments in several roles: tamper-evident and certificate-transparency logs~\cite{ctv2,ctqueue,crosbywallach}, key-transparency, transparency-dictionary, and verifiable key-directory systems~\cite{coniks,transdict,parakeet,optiks}, replicated key-value stores~\cite{dynamo}, append-only authenticated structures~\cite{balloon}, and blockchain or stateless-client state commitments~\cite{utreexo,ethereum,zcash}. These works explain why authenticated maps matter. Our leakage model targets a different layer: the fixed SMT snapshot and its public metadata are not hidden; the goal is to hide which occupied target proof is retrieved from that public snapshot.
+
+Sparse Merkle trees and proof serving. SMTs refine Merkle authentication for large logical address spaces by assigning public default hashes to empty subtrees~\cite{sparsemt}. This idea appears naturally in revocation/transparency-style maps, authenticated maps, constrained revocation checking, and state-commitment structures such as Jellyfish Merkle Tree~\cite{revtrans,vcer,jmt}. Recent authenticated-map and rollup work further optimizes proof size, multiproofs, or batch update cost~\cite{compactmultiproof,rollupsmt,multicollisiontree}. These systems primarily optimize ordinary proof serving: a server traverses the requested coordinate, returns the non-default siblings, and relies on the verifier to reconstruct default-empty levels. SparseTreePIR preserves this proof semantics, but changes the retrieval interface. The server should be able to serve the same membership proof without learning which occupied leaf is being checked. Thus the key property for our protocol is not sparsity alone, but \emph{public reconstructibility under private retrieval}: default siblings can remain public, while real sibling digests must be organized into PIR subdatabases with a fixed-shape transcript.
+
+\begin{table*}[!t]
+\centering
+\caption{Ordinary SMT proof-serving work optimizes proof generation, storage, or update cost, whereas SparseTreePIR adds a target-private retrieval layer}
+\label{tab:smt-prior-proof-serving}
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.19\textwidth}
+                >{\raggedright\arraybackslash}p{0.34\textwidth}
+                >{\raggedright\arraybackslash}p{0.17\textwidth}
+                >{\raggedright\arraybackslash}p{0.22\textwidth}}
+\toprule
+Work & Reported goal/result & Optimized layer & Relation to our setting \\
+\midrule
+Efficient SMTs~\cite{sparsemt} &
+Formal SMT operations and caching; audit paths for membership/non-membership can be generated in practically constant time, reported below $4$ ms with SHA-512/256 &
+Plain proof generation &
+Non-private lower bound: server knows the queried coordinate \\
+\addlinespace
+Jellyfish Merkle Tree~\cite{jmt} &
+SMT variant for Diem state storage; optimizes node keys, node types, proof format, LSM-tree storage, I/O, and computation &
+Deployed state-tree storage &
+Representative SMT-system baseline, but proof requests are visible lookups \\
+\addlinespace
+Compact Merkle multiproofs~\cite{compactmultiproof} &
+Sparse multiproof encoding keeps only $k$ leaf indices instead of an index for every non-leaf hash in a multiproof &
+Multi-target proof compression &
+Reduces proof payload for known targets; does not hide which targets are requested \\
+\addlinespace
+Rollup SMT batch update~\cite{rollupsmt} &
+For zkSync Lite-style updates, improves account update time from $O(\log n)$ to $O(1)$ and reduces batch update cost by a one-pass traversal &
+State update/root recomputation &
+Orthogonal to retrieval privacy; update cost is not the bottleneck studied here \\
+\addlinespace
+Multicollision-resistant non-membership tree~\cite{multicollisiontree} &
+Reduces authenticated (non-)membership tree depth for ZK-oriented settings while preserving security parameters &
+Alternative accumulator/proof structure &
+Changes the authenticated structure; our work keeps standard SMT proof semantics and privatizes retrieval \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+Private retrieval of authenticated proofs. Lueks and Goldberg studied private retrieval of authenticated proofs in a multi-client setting~\cite{lueksgoldberg}; subsequent work explored privacy-preserving Certificate Transparency auditing and proof retrieval with CT-specific mechanisms~\cite{ctprivacy,kalesct}. The closest organization-layer idea is TreePIR~\cite{treepir}: color proof nodes so that one proof can be retrieved with one PIR query per color. We adopt this principle, but change the object being organized. TreePIR colors a perfect-tree proof structure; SparseTreePIR colors the active interval forest induced by a fixed SMT snapshot. This changes both sides of the retrieval layout: PIR subdatabases contain only active proof-bearing nodes, and the client uses served-interval metadata plus default-hash completion rather than perfect-tree position indexing. Therefore our method is an SMT proof-organization layer, not a competing PIR primitive.
+
+Batch and practical PIR. PIR research began with multi-server information-theoretic constructions~\cite{chor} and single-server computational PIR~\cite{ko97,cms}. Generic batch retrieval has a long line of work based on batch codes and combinatorial batch codes~\cite{batchcodes,cbc}. The practical PBC line was brought into PIR prominently by Angel, Chen, Laine, and Setty's 2018 SealPIR work, which uses probabilistic batch codes and Cuckoo-style placement to amortize multi-query PIR processing~\cite{sealpir,cuckoo}. More recent batch or multi-query PIR systems further reduce the cost of retrieving several records through vectorized processing or constant-weight-code techniques~\cite{vectorbatchpir,pirana}. Practical PIR backends have also improved server computation, communication, response size, and packing, including XPIR, OnionPIR, Spiral, SimplePIR, PIANO, and YPIR~\cite{xpir,onionpir,spiral,simplepir,piano,ypir}. These systems determine cryptographic constants and packing efficiency; our contribution determines the database profiles they query. We do not propose a new cryptographic PIR primitive. Instead, we organize SMT proof records into color subdatabases so that a single proof becomes a fixed-shape batch workload: one subquery per color, with real and dummy targets hidden by the underlying PIR security.
+
+Baselines induced by prior work. Existing SMT systems already optimize the \emph{ordinary} proof-serving path: the server stores a sparse/default-completable authenticated map, traverses the target coordinate, and returns the sibling digests needed by the verifier~\cite{sparsemt,revtrans,vcer,jmt}. Some default-empty siblings can be omitted because the client reconstructs them from the public default-hash chain. This semantic property is the starting point for our construction, but prior SMT proof serving is not a target-private retrieval pattern: the server learns the requested key or path. Table~\ref{tab:prior-baselines} separates what each prior line provides from what remains missing for fixed-shape batch PIR. It also motivates the evaluation methodology: we compare against prior-work-induced privacy-preserving layouts rather than only against internal ablations.
+
+\begin{table*}[!t]
+\centering
+\caption{Prior-work-induced organizations for SMT proof retrieval}
+\label{tab:prior-baselines}
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.18\textwidth}
+                >{\raggedright\arraybackslash}p{0.26\textwidth}
+                >{\raggedright\arraybackslash}p{0.20\textwidth}
+                >{\raggedright\arraybackslash}p{0.27\textwidth}}
+\toprule
+Prior line & Natural proof object & Induced baseline & Missing for our goal \\
+\midrule
+Standard SMT proof APIs~\cite{sparsemt,revtrans,jmt} &
+Height-$h$ proof path with real siblings and public defaults &
+Plain SMT proof serving &
+No target privacy; server sees the queried coordinate/path \\
+\addlinespace
+Compact SMT storage~\cite{sparsemt,vcer,jmt} &
+Non-default skeleton plus public default chain &
+Active-only proof serving &
+Saves storage, but gives no fixed-shape PIR query interface \\
+\addlinespace
+Generic batch-PIR placement~\cite{batchcodes,cbc,sealpir} &
+Active proof records treated as an arbitrary batch &
+PBC-SMT; flat active PIR &
+Ignores ancestor/path structure; may query or replicate too much \\
+\addlinespace
+TreePIR on perfect trees~\cite{treepir} &
+Colored proof nodes in a perfect-tree organization &
+Perfectized TreePIR &
+Colors the full coordinate tree, including public default positions \\
+\addlinespace
+This paper &
+Active sibling digests indexed by served intervals &
+SparseTreePIR &
+Active-width batch PIR with local default completion \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+Balancing PIR-facing color stores. After an active-color layout is chosen, the database layout still matters. A coloring that is valid but highly imbalanced can force one PIR subquery to operate over a much larger color class than the others. Perfect-tree coloring explains why colors reduce the proof-retrieval width, but it does not directly solve the SMT balance problem because active intervals can be highly uneven. Our \ActiveBalance{} algorithm addresses this organization issue on the active interval forest itself. The node-local rules used in the experiments are baselines only; the proposed algorithmic contribution is the subtree-level load refinement used to flatten the resulting PIR-facing color stores.
+
+\section{Problem Formulation and Leakage Model}
+\label{sec:model}
+
+This section defines the retrieval object studied in the paper. We work with one fixed public SMT snapshot and hide the queried occupied leaf within that snapshot. The snapshot's occupancy pattern is public, and the formal protocol targets membership-proof retrieval. Non-membership queries over arbitrary absent logical coordinates require served intervals over the full logical coordinate space rather than over occupied-leaf ranks, so that extension is outside the present scope.
+
+We use \emph{private record} only as shorthand for a record that must be retrieved through PIR rather than reconstructed from public default hashes; it is not secret from the storage server. The privacy goal is query privacy: the server should not learn which record, authenticated path, or target leaf is selected beyond the setup leakage defined below.
+
+\subsection{Fixed-Snapshot Active Proof Objects}
+
+Let $T$ be a fixed binary Sparse Merkle Tree of height $h$, and let $\mathcal{L}$ denote its set of real leaves. Hashes are still computed in the standard bottom-up way. The active-interval view in this work is used only for proof organization and query modeling; it does not alter the hash-construction process. We assume the standard public default-empty hash chain
+\[
+\Delta_0,\Delta_1,\ldots,\Delta_{h-1},
+\]
+where $\Delta_0$ is the default empty-leaf hash and $\Delta_{t+1}=H(\Delta_t\Vert \Delta_t)$ for $0\le t<h-1$. Thus, every empty sibling subtree of height $t$ has publicly reconstructible digest $\Delta_t$.
+
+\begin{definition}[Active proof-bearing node]
+For a node $u$ in $T$, let $\operatorname{cnt}(u)$ be the number of real leaves in the subtree rooted at $u$. Let $u$ be a non-root node, and let $\operatorname{sib}(u)$ be its sibling. We say that $u$ is an \emph{active proof-bearing node} if
+\[
+\operatorname{cnt}(u)>0
+\qquad\text{and}\qquad
+\operatorname{cnt}(\operatorname{sib}(u))>0.
+\]
+The set of all active proof-bearing nodes is denoted by $\mathcal{A}(T)$.
+\end{definition}
+
+The first condition ensures that $u$ itself carries a real digest rather than a public default-empty digest. The second condition ensures that $u$ is the sibling-side node for at least one real target leaf. Thus $\mathcal{A}(T)$ contains exactly the non-empty sibling digests that may have to be retrieved through PIR. Empty sibling subtrees remain outside the PIR database because their digests are publicly reconstructible from the default hash chain.
+
+\begin{definition}[Active proof path]
+For any real leaf $\ell \in \mathcal{L}$, let
+\[
+\mathsf{Path}(\ell)\subseteq \mathcal{A}(T)
+\]
+denote the sequence of all real, PIR-retrievable nodes in the complete Merkle proof of $\ell$, ordered from higher to lower proof levels. We call $\mathsf{Path}(\ell)$ the \emph{active proof path} of $\ell$.
+\end{definition}
+
+Equivalently, $\mathsf{Path}(\ell)$ contains exactly those sibling nodes on the standard height-$h$ proof of $\ell$ whose subtrees contain at least one real leaf. Sibling levels whose subtrees are empty are not active proof nodes and are later filled locally with the corresponding default hash.
+
+Although the full SMT proof length is always $h$, the number of real nodes on $\mathsf{Path}(\ell)$ may be smaller than $h$, because some levels correspond only to publicly reconstructible default empty nodes.
+
+Let
+\[
+m=\max_{\ell\in\mathcal{L}} |\mathsf{Path}(\ell)|
+\]
+be the \emph{active width} of the snapshot, namely the maximum number of non-default proof digests that can appear in one occupied-leaf membership proof. By construction, $m\le h$. Once the active-node retrieval model is fixed, this same quantity is also the active color count and the active batch width. Throughout the paper, $[m]$ denotes $\{1,\ldots,m\}$.
+
+The case $|\mathcal{L}|=1$ is degenerate: no occupied target has a non-default sibling subtree, so $\mathcal{A}(T)=\emptyset$, $m=0$, and no PIR query is issued. Unless explicitly stated otherwise, the rest of the paper assumes $|\mathcal{L}|\ge 2$.
+
+The role of $m$ is analogous to the role of $h$ in TreePIR only after public default-empty levels have been removed from the PIR-facing layout. It is not a tunable parameter chosen by the balancing algorithm; it is a public resource parameter of the fixed SMT snapshot. The full verifier still receives a height-$h$ proof after completion. The active width only measures how many proof positions may require private retrieval under the active-node retrieval model.
+
+\begin{remark}[Why $m$ can be much smaller than $h$]
+The value of $m$ is necessarily instance-dependent because it depends on where the occupied leaves branch. The setup phase publishes $m$ as part of the public organization, just as a perfect-tree TreePIR setup publishes height $h$. To interpret this parameter, suppose $n$ occupied leaves are sampled uniformly from a logical universe of size $U=2^h$, and condition on one target leaf. At proof level $t$ above the leaf, the sibling subtree contains $2^t$ logical leaves, so the probability that this level contributes an active private sibling is
+\[
+1-\frac{\binom{U-1-2^t}{n-1}}{\binom{U-1}{n-1}}
+\approx 1-\exp\!\left(-\frac{(n-1)2^t}{U-1}\right).
+\]
+Thus the expected active proof length of a random target is the sum of these probabilities over $t=0,\ldots,h-1$. When $n\ll U$, most low levels have empty sibling subtrees and only the levels near the branching depth of the occupied set contribute; the active width therefore tracks the occupied-leaf skeleton rather than the logical height. In adversarial layouts, the sharp worst-case bound remains $m\le\min\{h,n-1\}$.
+\end{remark}
+
+This paper focuses on target-private retrieval of \emph{membership} proofs for occupied leaves in a fixed public SMT snapshot. This scope matches the proof-retrieval setting in which the client privately asks for the authentication material of an existing committed object. Non-membership retrieval is a natural extension, but it changes the object being hidden. The target domain becomes the full logical coordinate space rather than the public occupied-leaf set; a proof may certify an empty coordinate, a divergence from the nearest occupied prefix, or a gap between existing keys; and the protocol must specify whether the server should learn that the query is for an absent coordinate. Consequently, the served intervals would have to range over logical coordinates or absent-coordinate regions, not only over occupied-leaf ranks. We therefore keep non-membership SparseTreePIR outside the present formal model and treat it as a separate extension requiring its own metadata and leakage model.
+
+\subsection{Served Intervals}
+
+To support efficient indexing, we associate each active node with the interval of target leaves for which it acts as a proof sibling. This is not the subtree interval of $u$ itself. Order the real leaves by their logical SMT positions and let $r(\ell)\in\{0,\ldots,|\mathcal{L}|-1\}$ be the real-leaf rank of $\ell$. Let $s=\operatorname{sib}(u)$, and define the \emph{served interval}
+\[
+I_{\mathsf{srv}}(u) = [L(s),R(s)]
+\]
+as the interval of real-leaf ranks covered by the sibling subtree of $u$. Thus $L(s)$ and $R(s)$ are rank endpoints, not heap-index endpoints in the full logical coordinate space. Then, for any real leaf $\ell$,
+\[
+u \in \mathsf{Path}(\ell) \Longleftrightarrow r(\ell) \in I_{\mathsf{srv}}(u).
+\]
+
+Since every binary subtree corresponds to a contiguous interval in leaf order, the resulting served intervals form a laminar family: any two intervals are either disjoint, or one contains the other. This structure underlies both our coloring method and our indexing method.
+
+\subsection{Active Coloring and Load Metrics}
+
+The constructions below use $m$ active colors, where $m$ is the active width defined above. Since $m\le h$, the resulting active batch profile is never wider than the SMT verifier height. Section~\ref{sec:correctness} later states the corresponding model-specific lower-bound argument: under the active-node, one-query-per-color model, a proof path containing $m$ active nodes requires $m$ distinct colors.
+
+\begin{definition}[Valid ancestral coloring]
+A map
+\[
+\varphi:\mathcal{A}(T)\rightarrow[m]
+\]
+is called a \emph{valid ancestral coloring} if for every real leaf $\ell\in\mathcal{L}$ and every two distinct nodes $u,v\in\mathsf{Path}(\ell)$, we have
+\[
+u\neq v \Longrightarrow \varphi(u)\neq \varphi(v).
+\]
+\end{definition}
+
+A valid ancestral coloring ensures that along every real proof path, colors are pairwise distinct. Hence, in each color subdatabase the client needs to retrieve at most one real node.
+
+For a color $c\in[m]$, let
+\[
+\mathcal{D}_c=\{u\in\mathcal{A}(T): \varphi(u)=c\}
+\]
+be the corresponding subdatabase, with size $N_c=|\mathcal{D}_c|$. Let $N=|\mathcal{A}(T)|$, and let
+\[
+\overline{N}=N/m
+\]
+be the average subdatabase size. The main optimization target in this paper is to keep the color subdatabases as balanced as possible while preserving valid active coloring. In particular, we track
+\[
+M(\varphi)=\max_c N_c,
+\qquad
+\Delta_N(\varphi)=\max_c N_c-\min_c N_c,
+\]
+and the normalized largest-bucket ratio
+\[
+R(\varphi)=\frac{M(\varphi)}{\overline{N}}.
+\]
+Here $M(\varphi)$ is the direct structural bottleneck, while $\Delta_N(\varphi)$ and $R(\varphi)$ indicate how far the partition is from an equal split.
+
+The \ActiveBalance{} scheme is self-contained. It first constructs a feasible active coloring by a first-fit traversal of the interval forest, and then refines that coloring by subtree-level color permutations that directly improve the global bucket loads.
+
+\begin{definition}[Client public inputs]
+For a target leaf $\ell$, the client is assumed to know the following public auxiliary inputs before issuing PIR queries:
+\begin{enumerate}[leftmargin=2em]
+  \item the tree height $h$ and the position of $\ell$ in the SMT;
+  \item the default-empty hash chain $\Delta_0,\ldots,\Delta_{h-1}$;
+  \item the real-leaf rank $r(\ell)$ of the target within the public ordered set of occupied leaves;
+  \item for each active color $c\in[m]$, a public metadata table
+  \[
+  \mathcal{M}_c=\bigl((I_{\mathsf{srv}}(u),\delta(u))\bigr)_{u\in\mathcal{D}_c},
+  \]
+  sorted by interval, where the two endpoints of $I_{\mathsf{srv}}(u)$ are real-leaf ranks and $\delta(u)=h-\operatorname{depth}(u)$ denotes the proof level of $u$ measured from leaf to root.
+\end{enumerate}
+\end{definition}
+
+The PIR subdatabases store only retrieved node digests. The level and interval information required for local proof reconstruction is carried by the public metadata tables rather than by private payloads.
+
+\subsection{Setup Leakage and Target Privacy}
+
+The retrieval protocol in this paper hides the queried target leaf inside one \emph{fixed public SMT instance}; it does not aim to hide the entire occupancy pattern of that instance. We model the storage server's snapshot-level view with the following deterministic setup leakage.
+
+\begin{definition}[Setup leakage]
+\label{def:leakagefunction}
+Let setup on a fixed SMT snapshot $T$ produce active color count $m$, active-node set $\mathcal{A}(T)$, coloring $\varphi:\mathcal{A}(T)\to[m]$, color subdatabases $\{\mathcal{D}_c\}_{c=1}^{m}$, and public metadata tables $\{\mathcal{M}_c\}_{c=1}^{m}$. Let $N_c=|\mathcal{D}_c|$. The setup leakage visible to the storage server is
+\[
+\begin{aligned}
+\mathcal{L}_{\mathsf{setup}}(T)=
+\Bigl(&h,\mathsf{root}(T),\mathcal{L},
+\{\Delta_t\}_{t=0}^{h-1},\\
+&\mathcal{A}(T),m,\varphi,
+\{(\mathcal{D}_c,\mathcal{M}_c,N_c)\}_{c=1}^{m}
+\Bigr).
+\end{aligned}
+\]
+Thus the leakage includes the fixed occupancy pattern, the committed root, the public default chain, the complete active layout, and the server-side database layout. For an online target $\ell$, it does not include $\ell$, the active proof path $\mathsf{Path}(\ell)$, the set of real-query colors, or the selected item index inside any color subdatabase. The only target-independent online shape revealed by the protocol is that every retrieval sends exactly one PIR subquery to each of the $m$ active color stores.
+\end{definition}
+
+The hidden query information consists of the target leaf $\ell$, equivalently the active proof path $\mathsf{Path}(\ell)$, as well as which color positions correspond to real retrievals rather than dummy subqueries and which item index is privately selected inside each color subdatabase.
+
+\begin{table}[t]
+\centering
+\caption{Server-visible setup state and hidden query information}
+\label{tab:leakage}
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.45\linewidth}>{\raggedright\arraybackslash}p{0.45\linewidth}}
+\toprule
+Visible to the storage server & Hidden by PIR queries \\
+\midrule
+root, occupied-leaf set, default chain, active-node set, color stores, interval metadata, color assignment, color-store sizes, active color count $m$
+&
+target leaf $\ell$, active proof path, which color slots are real or dummy, selected item index inside each color store \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+We make this leakage profile explicit. The retrieval layout is precomputed once for a fixed SMT snapshot and is treated as server-visible structure thereafter. Our privacy claim is therefore \emph{query privacy relative to a server-visible active proof-bearing layout}, rather than structure privacy for the whole sparse tree. The corresponding transcript view is fixed-shape: the server sees one well-formed PIR query per color, while the real/dummy roles are client-local.
+
+\begin{definition}[Target privacy game]
+\label{def:privacygame}
+Let $\mathcal{L}_{\mathsf{setup}}(T)$ be the setup leakage in Definition~\ref{def:leakagefunction}. In the experiment $\mathsf{PrivTarget}_{\mathcal{A}}(\lambda)$, the challenger runs setup for the fixed SMT snapshot and gives $\mathcal{L}_{\mathsf{setup}}(T)$ to the adversary $\mathcal{A}$. The adversary chooses two real target leaves $\ell_0,\ell_1\in\mathcal{L}$. The challenger samples $b\leftarrow\{0,1\}$, runs the batch query-generation algorithm for $\ell_b$, and gives the full batch query transcript to $\mathcal{A}$. The adversary outputs a bit $b'$. Its advantage is
+\[
+\operatorname{Adv}^{\mathsf{target}}_{\mathcal{A}}
+=\left|\Pr[b'=b]-\frac12\right|.
+\]
+The protocol is target-private relative to $\mathcal{L}_{\mathsf{setup}}(T)$ if this advantage is negligible for every efficient adversary.
+\end{definition}
+
+For dummy positions, the client samples a well-formed PIR query to a valid index in the same color subdatabase, independently of the target leaf, and discards the response. The setup layout exposes only active, non-empty color subdatabases. Implementations that allow empty color classes can remove them during setup or pad them with one public dummy record.
+
+\section{SparseTreePIR Construction}
+\label{sec:coloring}
+
+This section turns the model into a concrete retrieval construction. The offline algorithm builds the PIR-facing databases from the compressed non-default skeleton, not from a materialized full tree. The online algorithms then show how a client generates a fixed-shape batch query and completes the standard height-$h$ SMT proof locally.
+
+\subsection{Construction Overview}
+
+SparseTreePIR instantiates a snapshot-specific retrieval layout with a fixed online transcript. During setup, the server extracts active proof-bearing nodes, partitions them into color subdatabases, and publishes metadata that maps target ranks to served intervals. During online retrieval, the client sends exactly one PIR subquery to each color subdatabase. If the target proof contains a real node in that color, the query selects that node; otherwise, the query is a dummy sampled through the same PIR interface. After receiving the responses, the client writes the real digests into the appropriate proof slots and fills the remaining slots with public default hashes. Figure~\ref{fig:workflow} summarizes this setup-and-retrieval flow.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../figures/sparsetreepir_workflow_figure.pdf}
+\caption{End-to-end view. The server organizes only active proof-bearing nodes into color subdatabases, while the client retrieves at most one real node per color and completes the remaining proof levels from public default hashes.}
+\label{fig:workflow}
+\end{figure}
+
+\noindent\textbf{Online retrieval pattern.}
+Given a fixed public SMT snapshot $T$, setup outputs active color subdatabases
+$\mathcal{D}_1,\ldots,\mathcal{D}_m$, public metadata tables
+$\mathcal{M}_1,\ldots,\mathcal{M}_m$, and $m$ active color classes. For every occupied target leaf, the online retrieval pattern sends exactly one PIR subquery to each $\mathcal{D}_c$. A subquery is real if color $c$ contains the active sibling digest serving the target leaf, and dummy otherwise. The client then combines the real PIR outputs with the public default-empty hash chain to reconstruct the standard height-$h$ SMT proof. The backend-facing resources of this pattern are PIR storage $|\mathcal{A}(T)|$, active batch width $m$, largest color store $\max_c|\mathcal{D}_c|$, and public metadata size $O(|\mathcal{A}(T)|)$.
+
+The algorithms below are written as a protocol stack rather than as independent routines. Algorithm~\ref{alg:color} is the server-side setup procedure for one fixed public SMT snapshot. It extracts the active proof-bearing nodes, computes the active-width parameter, invokes Algorithm~\ref{alg:activebalance} as a balancing subroutine, and publishes the metadata consumed by the client. Algorithm~\ref{alg:query} is the online client lookup and query-generation procedure. It consumes exactly the public outputs of setup and produces two outputs: the batch of PIR subqueries sent to the server, and a local target map that is never revealed. After the underlying PIR backend returns one response per color, Algorithm~\ref{alg:complete} uses that local map, the public metadata, and the default-empty hash chain to expand the real replies into the standard height-$h$ SMT proof.
+
+This separation mirrors the presentation style of TreePIR: setup fixes the colored database layout once, while every online retrieval has the same external profile. The server observes one PIR query per color store. Only the client knows which of those positions are real proof nodes and which are dummy placeholders.
+
+\subsection{Running Example}
+
+Figure~\ref{fig:smt-overview} gives the running example used throughout this section. It shows a complete height-$4$ coordinate tree for explanation, but the implementation traverses the compressed non-default skeleton and stores only the active proof-bearing nodes in color subdatabases. Because the model has already defined active nodes, served intervals, and valid coloring, the example can now be interpreted as an instance of the formal interface rather than as an additional rule.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../figures/sparsetreepir_running_example_figure.pdf}
+\caption{Running SMT example and its final color subdatabases. The full coordinate tree is explanatory; only active proof-bearing nodes are stored in PIR subdatabases.}
+\label{fig:smt-overview}
+\end{figure}
+
+The example separates three layers that are easy to conflate. The first is the \emph{full SMT coordinate tree}, which still has the usual SMT geometry and from which all hashes are derived. The second is the \emph{active proof-bearing structure}: only sibling-side nodes that can appear in at least one real proof are stored in PIR subdatabases. The third is the \emph{public completion layer}: every untouched proof level is reconstructed from the default-empty hash chain. Thus the scheme keeps the verifier's coordinate system intact, privatizes only the active proof-bearing layer, and leaves default completion public. The figure writes served sets using logical leaf labels for readability; the actual public metadata stores real-leaf rank intervals.
+
+The occupied leaves are $\{16,17,18,20,21,24,25\}$. The active proof-bearing nodes are exactly the twelve nodes shown in the color subdatabases of Figure~\ref{fig:smt-overview}:
+\[
+\{2,3,4,5,8,9,16,17,20,21,24,25\}.
+\]
+The longest active proof path has length $4$, so the setup exposes four active color classes in this example.
+
+This instance is instructive because it already exhibits the balance problem. The first-fit feasibility stage may produce the legal color split
+\[
+\begin{aligned}
+\mathcal{D}_1&=\{3,2\},\qquad
+\mathcal{D}_2=\{5,4,25,24\},\\
+\mathcal{D}_3&=\{9,8,21,20\},\qquad
+\mathcal{D}_4=\{17,16\},
+\end{aligned}
+\]
+whose bucket sizes are $(2,4,4,2)$. The coloring is valid, but it is visibly uneven. By contrast, the subtree-level refinement can transform the same active forest into
+\[
+\begin{aligned}
+\mathcal{D}_1&=\{2,17,16\},\qquad
+\mathcal{D}_2=\{3,25,24\},\\
+\mathcal{D}_3&=\{5,21,20\},\qquad
+\mathcal{D}_4=\{4,9,8\},
+\end{aligned}
+\]
+which is still valid and now has perfectly balanced bucket sizes $(3,3,3,3)$. This final split deliberately is not a layer coloring: for example, nodes $4$, $8$, and $9$ share color $4$ even though they lie at different logical depths in the full coordinate tree, while depth-$1$ nodes $2$ and $3$ have different colors. This is possible because the constraint is induced by served proof intervals, not by raw tree depth. Figure~\ref{fig:beforeafter} visualizes this change. In the current algorithm, this improvement is reached by a short sequence of accepted legal subtree permutations; the active color interface stays fixed throughout. We will reuse the same small instance again when illustrating one concrete query and local proof completion.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../figures/sparsetreepir_active_balance_before_after_figure.pdf}
+\caption{Running example for the coloring stage. The first-fit feasibility stage leaves an uneven but valid split, while \ActiveBalance{} applies accepted legal subtree permutations and reaches a flatter partition on the same active forest.}
+\label{fig:beforeafter}
+\end{figure}
+
+\newpage
+
+\subsection{Offline Active-Interval Setup}
+
+The server-side preprocessing stage takes one fixed SMT instance and produces exactly the data needed for online private retrieval. It never materializes a perfectized proof-bearing tree. Instead, it traverses the compressed non-default skeleton induced by the occupied leaves, extracts the active proof-bearing nodes, builds the laminar interval forest, computes the active-width parameter $m$, and then colors the nodes under that active-node retrieval model.
+
+\begin{algorithm}[H]
+\footnotesize
+\caption{Setup: direct SMT organization}
+\label{alg:color}
+\begin{algorithmic}[1]
+\Require Fixed public SMT snapshot $T$, occupied leaf set $\mathcal{L}$, balancing rounds $R_1$
+\Ensure Active color count $m$, active color subdatabases $\{\mathcal{D}_c\}_{c=1}^{m}$, public metadata tables $\{\mathcal{M}_c\}_{c=1}^{m}$, valid coloring $\varphi$
+\State Sort the occupied leaves by logical SMT position and assign real-leaf ranks $0,\ldots,|\mathcal{L}|-1$
+\State Build the compressed non-default skeleton $\mathcal{S}(T)$ induced by the occupied leaves
+\State Annotate each skeleton edge with its corresponding original SMT child root and skipped logical levels
+\State Initialize $\mathcal{A}(T)\gets \emptyset$
+\For{each branching skeleton node $p$ with two non-default original children}
+  \For{each original child root $u$ of $p$}
+    \State $s \gets \operatorname{sib}(u)$ in the full SMT coordinate system
+    \State Add $u$ to $\mathcal{A}(T)$
+    \State Assign served rank interval $I_{\mathsf{srv}}(u)=[L(s),R(s)]$ and proof level $\delta(u)$
+  \EndFor
+\EndFor
+\State Sort all active intervals by increasing left endpoint and decreasing interval length
+\State Build the interval forest $\mathcal{F}$ from interval-containment relations
+\State Set $m$ to the maximum depth of $\mathcal{F}$
+\State Compute $\varphi\gets \textsc{FirstFitColoring}(\mathcal{F},m)$
+\State Refine $\varphi\gets\ActiveBalance{}(\mathcal{F},\varphi,R_1)$ using Algorithm~\ref{alg:activebalance}
+\State Build the private subdatabases $\mathcal{D}_c$ and the public metadata tables $\mathcal{M}_c$
+\State \Return $m$, $\{\mathcal{D}_c\}_{c=1}^{m}$, $\{\mathcal{M}_c\}_{c=1}^{m}$, $\varphi$
+\end{algorithmic}
+\end{algorithm}
+
+The first-fit stage is only a feasibility step. It traverses each tree of $\mathcal{F}$ from root to leaves and assigns every node the smallest color in $[m]$ not used on its strict ancestor chain. Since no active proof path contains more than $m$ active nodes, such a color always exists. The actual balancing contribution is the subsequent \ActiveBalance{} subtree refinement. The protocol-complete formulation remains specific to fixed binary SMTs, because public proof completion relies on the standard default-empty hash chain.
+
+From a systems viewpoint, Algorithm~\ref{alg:color} is the offline setup stage of the construction. Once the color subdatabases and public metadata tables have been built for one fixed SMT instance, the online retrieval protocol never needs to see the whole tree again. The expensive structural work is pushed offline, while the online stage sees only interval tables, color subdatabases, and the public default-hash chain.
+
+\subsection{\ActiveBalance{}: Subtree-Level Load Refinement}
+
+The balancing component is the subtree-level refinement. Instead of moving one node at a time, \ActiveBalance{} treats a rooted subtree as a whole color-load vector and tries to permute its internal colors so that the global color loads become flatter. We compare candidate refinements by the lexicographic signature
+\[
+\Psi(\varphi)=
+\operatorname{sort}_{\downarrow}(N_1,\ldots,N_m),
+\]
+so the objective is to reduce the largest subdatabase first and then flatten the remaining count vector.
+
+For a rooted subtree $U$ of the interval forest and a color $c\in[m]$, let $C_U(c)$ denote the number of nodes of color $c$ currently appearing inside $U$. Let $A(U)\subseteq[m]$ be the set of colors not used on the strict ancestor chain of $U$. Since every node in $U$ must already be colored from $A(U)$, a legal refinement is any permutation $\pi_U$ of $A(U)$ applied uniformly to the colors inside $U$. Proposition~\ref{prop:permvalid} shows that every such permutation preserves validity.
+
+\begin{algorithm}[!t]
+\footnotesize
+\caption{\ActiveBalance{} subtree refinement}
+\label{alg:activebalance}
+\begin{algorithmic}[1]
+\Require Interval forest $\mathcal{F}$, valid active coloring $\varphi$, rounds $R_1$
+\Ensure Updated valid active coloring $\varphi$
+\State Compute global loads $\{N_c\}_{c=1}^{m}$ and $\Psi^\star\gets\Psi(\varphi)$
+\For{$t=1$ \textbf{to} $R_1$}
+  \State Annotate each subtree root $U$ with ancestor colors and histogram $\{C_U(c)\}_{c=1}^{m}$
+  \State $\mathsf{best}\gets\textsc{None}$
+  \For{each subtree root $U$ in $\mathcal{F}$}
+    \State $A(U)\gets [m]\setminus\text{AncestorColors}(U)$
+    \If{$|A(U)|\le 1$} \State \textbf{continue} \EndIf
+    \State Build $K_U[a,b]=(N_b-C_U(b)+C_U(a))^2$ for $a,b\in A(U)$
+    \State Let $\pi_U$ be the min-cost perfect matching on $K_U$
+    \State Form $\varphi'$ by applying $\pi_U$ inside $U$ and leaving all nodes outside $U$ unchanged
+    \If{$\Psi(\varphi')<\Psi^\star$}
+      \State $(\mathsf{best},\Psi^\star)\gets ((U,\pi_U,\varphi'),\Psi(\varphi'))$
+    \EndIf
+  \EndFor
+  \If{$\mathsf{best}=\textsc{None}$} \State \textbf{break} \EndIf
+  \State Apply $\mathsf{best}$ and update $\varphi$, $\{N_c\}_{c=1}^{m}$, and $\Psi^\star$
+\EndFor
+\State \Return $\varphi$
+\end{algorithmic}
+\end{algorithm}
+
+Algorithm~\ref{alg:activebalance} makes two design choices explicit. First, each subtree is evaluated against a count-only quadratic assignment objective rather than against the full combinatorial search over all possible recolorings. The cost term $(N_b-C_U(b)+C_U(a))^2$ is the squared size of bucket $b$ after the portion of color $b$ currently inside $U$ is removed and the portion of local color $a$ is mapped into it. Thus the surrogate favors moving heavier local color mass toward lighter global buckets. Second, after solving that local assignment, we accept a move only if the true global signature $\Psi(\varphi)$ decreases. Hence the surrogate guides the search, while the lexicographic bucket vector remains the actual acceptance rule.
+
+\subsection{Fixed-Shape Online Retrieval}
+\vspace{-0.6em}
+
+After offline organization, the client needs only public interval metadata to determine which color positions contain real proof material for the target leaf. Since same-color intervals are disjoint, one binary search per color is sufficient.
+
+\begin{algorithm}[H]
+\caption{Online query generation: one PIR subquery per color}
+\label{alg:query}
+\begin{algorithmic}[1]
+\Require Target leaf $\ell$ with real-leaf rank $r(\ell)$, color subdatabases $\{\mathcal{D}_c\}_{c=1}^{m}$, public metadata tables $\{\mathcal{M}_c\}_{c=1}^{m}$, underlying PIR query generator $\mathsf{PIR.Query}$
+\Ensure Batch query $\mathcal{Q}=\{Q_c\}_{c=1}^{m}$ and private local target map $\{\tau_c\}_{c=1}^{m}$
+\State Initialize $\mathcal{Q}\gets\emptyset$
+\For{$c=1$ \textbf{to} $m$}
+  \State Perform a binary search for $r(\ell)$ in the served-rank interval projection of $\mathcal{M}_c$
+  \If{there exists exactly one interval containing $r(\ell)$}
+    \State Let $j_c$ be the position of that node in $\mathcal{D}_c$
+    \State Set $\tau_c\gets j_c$ and $Q_c\gets\mathsf{PIR.Query}(\mathcal{D}_c,j_c)$
+  \Else
+    \State Set $\tau_c\gets \bot$ and sample $d_c\gets\mathsf{DummyIndex}(\mathcal{D}_c)$
+    \State Set $Q_c\gets\mathsf{PIR.Query}(\mathcal{D}_c,d_c)$
+  \EndIf
+  \State Add $Q_c$ to $\mathcal{Q}$
+\EndFor
+\State Send $\mathcal{Q}$ to the server and keep $\{\tau_c\}$ locally
+\State \Return $\mathcal{Q},\{\tau_c\}_{c=1}^{m}$
+\end{algorithmic}
+\end{algorithm}
+\vspace{-0.5em}
+
+\subsection{Local Proof Completion}
+\vspace{-0.6em}
+
+The online retrieval phase ends with a purely local completion step. Real PIR outputs are written into the proof levels indicated by the public metadata, while all untouched levels are filled by the default-empty hash chain. No additional server round is required after batch extraction.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{../figures/sparsetreepir_proof_completion_figure.pdf}
+\caption{One fixed-shape batch query and local proof completion for leaf $18$.}
+\label{fig:completion}
+\end{figure}
+
+Figure~\ref{fig:completion} illustrates how dummy responses coexist with proof completion. The client privately retrieves only the levels whose sibling subtrees contain real data, fills all other slots from the public default chain, and then performs the standard bottom-up SMT verification. In the example, leaf $18$ retrieves nodes $3$, $5$, and $8$, sends a dummy query for color $1$, and keeps the remaining proof slot equal to $\Delta_0$.
+
+\begin{algorithm}[H]
+\caption{Client-side proof expansion and root reconstruction}
+\label{alg:complete}
+\begin{algorithmic}[1]
+\Require Target leaf coordinate $\ell$, target leaf digest $a_0$, public metadata tables $\{\mathcal{M}_c\}_{c=1}^{m}$, private local target map $\{\tau_c\}_{c=1}^{m}$ from Algorithm~\ref{alg:query}, extracted PIR outputs $\{\sigma_c\}_{c=1}^{m}$, default-empty hash chain $\{\Delta_t\}_{t=0}^{h-1}$
+\Ensure Complete proof array $P[0..h-1]$ and reconstructed root digest $\rho$
+\For{$t=0$ \textbf{to} $h-1$}
+  \State Set $P[t]\gets \Delta_t$
+\EndFor
+\For{$c=1$ \textbf{to} $m$}
+  \If{$\tau_c\neq\bot$}
+    \State Read $(I_{\mathsf{srv}},\delta)\gets \mathcal{M}_c[\tau_c]$
+    \State Set $P[\delta]\gets \sigma_c$
+  \EndIf
+\EndFor
+\State $\rho\gets a_0$
+\For{$t=0$ \textbf{to} $h-1$}
+  \If{the $t$-th path bit of $\ell$ is $0$}
+    \State $\rho\gets H(\rho\Vert P[t])$
+  \Else
+    \State $\rho\gets H(P[t]\Vert \rho)$
+  \EndIf
+\EndFor
+\State \Return $P,\rho$
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{End-to-End Retrieval Walkthrough}
+
+Putting the previous pieces together, the online flow for one target leaf is as follows. The client uses the public interval tables to identify at most one real target per color, sends one PIR subquery for each color, interprets the extracted outputs through the local target map $\{\tau_c\}$, and writes only the real ones into the corresponding proof levels. It then combines those real responses with the default-empty chain and hashes upward to the root. At the protocol level, every retrieval has the same batch profile of exactly $m$ color positions; sparsity changes only which positions are real rather than dummy, and that distinction is hidden by the PIR layer.
+
+\section{Correctness, Privacy, and Complexity}
+\label{sec:correctness}
+
+The following claims are stated relative to the active-node, one-query-per-color model just defined. In particular, the active-width result is not a lower bound for every conceivable private proof-retrieval protocol. It characterizes the color count and batch profile for the model where each active proof-bearing node is assigned to one color subdatabase and each retrieval sends one subquery per active color.
+
+\begin{theorem}[Exact active width for one-query-per-color retrieval]
+\label{thm:mincolor}
+Let $n=|\mathcal{L}|\ge 2$ and let
+\[
+m=\max_{\ell\in\mathcal{L}} |\mathsf{Path}(\ell)|.
+\]
+For a fixed height-$h$ SMT snapshot, $m$ is the exact active width of the active-node one-query-per-color model: fewer than $m$ colors cannot support all target proofs, while $m$ colors are sufficient for a valid ancestral coloring of $\mathcal{A}(T)$. A feasible $m$-coloring can be computed in $O(N)$ time once the interval forest is available. Moreover,
+\[
+m\le \min\{h,n-1\},
+\]
+and this bound is tight for every $h$ and $n\ge 2$.
+\end{theorem}
+
+\begin{proof}
+For the lower bound, choose a real leaf $\ell^\star$ whose active proof path has length $m$. All nodes on $\mathsf{Path}(\ell^\star)$ appear together in one proof, so any valid ancestral coloring must assign pairwise distinct colors to these $m$ nodes. Hence at least $m$ colors are necessary.
+
+For the upper bound, recall that the served intervals $\{I_{\mathsf{srv}}(u)\}$ form a laminar family, and two active nodes can co-occur in a proof exactly when their served intervals intersect. In a laminar family, interval intersection is equivalent to ancestor-descendant relation in the interval forest. Therefore, assigning every node the color equal to its depth in that forest is valid: two nodes with the same depth cannot be in an ancestor-descendant relation, hence their served intervals are disjoint and they never appear in the same proof. This depth coloring uses exactly the maximum forest depth, which is precisely $m$. The coloring is computed by a single depth-first traversal, hence in $O(N)$ time.
+
+For the structural bound, every active proof node on the proof path of a target leaf $\ell$ corresponds to one ancestor where the sibling subtree is non-empty. These ancestors are at distinct SMT levels, so there are at most $h$ of them. Moreover, the non-empty sibling subtrees witnessed along one target path are pairwise disjoint, and each contains at least one occupied leaf different from $\ell$. Therefore, one target leaf can have at most $n-1$ active sibling nodes, proving $m\le \min\{h,n-1\}$.
+
+The same observation gives the compressed-skeleton interpretation: after contracting unary non-default paths, only branching ancestors contribute active proof material, and $m$ is the maximum number of such branching nodes on any compressed root-to-leaf path.
+
+For tightness, let $k=\min\{h,n-1\}$ and choose the target leaf with logical bit string $0^h$. For each depth $d=0,\ldots,k-1$, add one occupied leaf in the sibling subtree of the target path at that depth, for example the bit string $0^d1\,0^{h-d-1}$. These $k$ leaves make all $k$ corresponding sibling subtrees non-empty, so the target has $k$ active proof nodes. If more than $k+1$ occupied leaves are required, add them arbitrarily without removing any of these active witnesses. Hence the bound is attainable.
+\end{proof}
+
+\begin{remark}
+Theorem~\ref{thm:mincolor} is the point where the SMT formulation departs most clearly from a naive perfectized view. In a perfectized organization, the batch profile is pinned to the full tree height $h$ regardless of how much real proof material exists. In the direct SMT formulation, the active batch profile is governed instead by the maximum number of \emph{active} proof positions on any real path. Consequently, the storage gain and the width gain are related but not identical: reducing the stored proof-bearing structure is immediate, while reducing the number of active color queries requires the active proof paths themselves to become shorter.
+\end{remark}
+
+\begin{lemma}[Active-record bound]
+\label{lem:activecount}
+Let $n=|\mathcal{L}|$. Then
+\[
+|\mathcal{A}(T)| \le 2(n-1).
+\]
+The bound is tight for every binary occupied-leaf skeleton in which every branching internal node has two non-empty children represented in the SMT.
+\end{lemma}
+
+\begin{proof}
+Every active proof-bearing node $u$ has a parent $p$ whose two original SMT children are both non-empty: $u$ is non-empty by definition, and $\operatorname{sib}(u)$ is also non-empty. Conversely, each branching parent with two non-empty children contributes at most its two child roots to $\mathcal{A}(T)$. Thus $|\mathcal{A}(T)|$ is at most twice the number of branching internal nodes in the compressed non-default skeleton induced by the occupied leaves.
+
+Any finite rooted binary tree with $n$ leaves has at most $n-1$ branching internal nodes. Therefore $|\mathcal{A}(T)|\le 2(n-1)$. When the occupied-leaf skeleton is a full binary skeleton with $n-1$ branching internal nodes and both children of each branching node correspond to non-empty SMT subtrees, both child roots are active, giving equality.
+\end{proof}
+
+\begin{proposition}[Validity of subtree color permutations]
+\label{prop:permvalid}
+Let $\varphi$ be a valid ancestral coloring, let $U$ be any rooted subtree of the interval forest, and let $A(U)\subseteq[m]$ be the set of colors not used on the strict ancestor chain of $U$. Assume every node in $U$ is colored from $A(U)$. If $\pi$ is any permutation of $A(U)$, and every node $x\in U$ is recolored from $\varphi(x)$ to $\pi(\varphi(x))$ while all nodes outside $U$ keep their colors, then the resulting coloring is still valid.
+\end{proposition}
+
+\begin{proof}
+Consider any two nodes that may appear together on one active proof path. If both lie outside $U$, nothing changes. If both lie inside $U$, they were originally assigned distinct colors under $\varphi$, and applying the same permutation $\pi$ preserves distinctness because $\pi$ is injective on $A(U)$. It remains to consider a pair consisting of one node $x\in U$ and one node $y\notin U$.
+
+If $x$ and $y$ can co-occur on a proof path, then $y$ must be an ancestor of the subtree root of $U$, because nodes outside $U$ but incomparable with $U$ correspond to disjoint intervals and cannot appear on the same path. By definition, every ancestor color is excluded from $A(U)$. Therefore $\pi(\varphi(x))\in A(U)$ can never equal $\varphi(y)$, and the pair remains properly colored. Hence no violating ancestor-descendant pair is created, so the recolored assignment is valid.
+\end{proof}
+
+\begin{proposition}[Per-color uniqueness on proof paths]
+\label{prop:unique}
+If $\varphi$ is a valid ancestral coloring, then for every real leaf $\ell\in\mathcal{L}$ and every color $c\in[m]$, the path $\mathsf{Path}(\ell)$ contains at most one active node of color $c$.
+\end{proposition}
+
+\begin{proof}
+If there were two distinct nodes $u,v\in\mathsf{Path}(\ell)$ with $\varphi(u)=\varphi(v)=c$, the definition of valid ancestral coloring would be violated.
+\end{proof}
+
+\begin{proposition}[Fixed-shape batch retrieval]
+\label{prop:batch}
+Assume a correct single-item PIR backend. Then any valid ancestral coloring lets the client recover all real proof nodes of a target leaf $\ell$ using one batch-PIR request with exactly $m$ PIR subqueries.
+\end{proposition}
+
+\begin{proof}
+By Proposition~\ref{prop:unique}, each color contributes at most one real node to $\mathsf{Path}(\ell)$. Hence the client retrieves at most one real item from each subdatabase, and uses a dummy query otherwise. The extracted real items are exactly the non-default proof material that must be supplied through PIR.
+\end{proof}
+
+\begin{proposition}[Correctness of default-hash completion]
+\label{prop:complete}
+Assume that the underlying single-item PIR scheme is correct. If $\varphi$ is a valid ancestral coloring, then Algorithm~\ref{alg:complete} reconstructs the complete SMT proof of the target leaf $\ell$ from the real PIR outputs and the public default-empty hash chain.
+\end{proposition}
+
+\begin{proof}
+Fix a proof level $t\in\{0,\ldots,h-1\}$. There are two cases. If the sibling subtree at level $t$ contains at least one real leaf, then the corresponding proof node is active and belongs to $\mathsf{Path}(\ell)$. By Proposition~\ref{prop:unique}, it appears in exactly one color class, so Algorithm~\ref{alg:query} records a unique non-dummy target $\tau_c$, and correctness of PIR returns its digest in $\sigma_c$. Algorithm~\ref{alg:complete} then writes that digest into $P[t]$. Otherwise, the sibling subtree at level $t$ is empty, and by SMT construction its digest is exactly the public default hash $\Delta_t$, which remains in $P[t]$.
+
+Therefore, every proof level is filled with the correct sibling digest, either from a real PIR output or from the public default-empty hash chain. Standard bottom-up Merkle verification using the path bits of $\ell$ then reconstructs the correct root digest.
+\end{proof}
+
+\begin{theorem}[Target privacy under setup leakage]
+\label{prop:privacy}
+Assume the setup leakage profile and the target-privacy game in Definition~\ref{def:privacygame}. Assume also that the active color count $m$ is polynomially bounded in the security parameter, as holds when the SMT height $h$ is polynomially bounded because $m\le h$. If each underlying single-item PIR query is query-private over its corresponding color subdatabase, and if dummy queries are sampled from a distribution computationally indistinguishable from well-formed PIR queries over that same subdatabase, then the batch retrieval protocol is target-private relative to $\mathcal{L}_{\mathsf{setup}}(T)$.
+\end{theorem}
+
+\begin{proof}
+Fix any efficient adversary and any two target leaves $\ell_0,\ell_1$ chosen in the game. Condition on the setup leakage $\mathcal{L}_{\mathsf{setup}}(T)$: the active metadata tables, color assignment, subdatabase sizes, active color count $m$, and the fact that every retrieval sends exactly one query to every active color are all already known. The only remaining transcript components are the $m$ PIR queries themselves.
+
+Consider one color $c$. For target $\ell_b$, the client either has a unique real target index in $\mathcal{D}_c$ or has no real active node of that color and therefore sends a dummy query. If both targets induce real queries, query privacy of the underlying PIR makes the two selected indices indistinguishable. If one target induces a real query and the other induces a dummy query, the dummy-query assumption makes the dummy transcript indistinguishable from a well-formed PIR query over the same subdatabase, and query privacy hides the selected index. If both induce dummy queries, the distributions are identical by construction.
+
+Thus, for every color, the query transcript generated for $\ell_0$ is computationally indistinguishable from the query transcript generated for $\ell_1$. Since $m$ is polynomially bounded, a standard hybrid argument over the $m$ colors shows that the entire batch transcript is computationally indistinguishable between $b=0$ and $b=1$. Hence every efficient adversary has negligible advantage in $\mathsf{PrivTarget}_{\mathcal{A}}(\lambda)$.
+\end{proof}
+
+\begin{lemma}[Same-color intervals are disjoint]
+If $\varphi$ is a valid ancestral coloring, then for any color $c$, any two distinct intervals in
+\[
+\mathcal{I}_c=\{I_{\mathsf{srv}}(u): \varphi(u)=c\}
+\]
+are disjoint.
+\end{lemma}
+
+\begin{proof}
+Suppose two distinct nodes $u,v$ satisfy $\varphi(u)=\varphi(v)=c$ and $I_{\mathsf{srv}}(u)\cap I_{\mathsf{srv}}(v)\neq\emptyset$. Then any real leaf $\ell\in I_{\mathsf{srv}}(u)\cap I_{\mathsf{srv}}(v)$ has both $u$ and $v$ on its proof path, contradicting path-distinctness.
+\end{proof}
+
+\begin{theorem}[Structural lower bound for active-color balance]
+\label{thm:structlb}
+Let $N=|\mathcal{A}(T)|$ and let $m$ be the active color count induced by the active-width interface. For a node $v$ in the interval forest, let $d(v)$ be the number of active nodes on the forest path from its root to $v$, including $v$, and let $\operatorname{desc}(v)$ be the number of strict descendants of $v$ in the interval forest. Define
+\[
+B(T)=
+\max\left\{
+\left\lceil \frac{N}{m}\right\rceil,\,
+\max_{v:\ d(v)<m}
+\left\lceil \frac{\operatorname{desc}(v)}{m-d(v)}\right\rceil
+\right\}.
+\]
+Then every valid active coloring $\varphi:\mathcal{A}(T)\rightarrow[m]$ satisfies
+\[
+\max_{c\in[m]} |\mathcal{D}_c| \ge B(T).
+\]
+\end{theorem}
+
+\begin{proof}
+The term $\lceil N/m\rceil$ is the baseline equal-split lower bound. For the second term, fix any node $v$ with $d(v)<m$. Along the active ancestor path from the forest root to $v$, validity forces $d(v)$ distinct colors to appear. Every strict descendant of $v$ is also a descendant of all nodes on this path, and therefore cannot use any of these $d(v)$ colors. Hence all $\operatorname{desc}(v)$ strict descendants must be assigned to at most $m-d(v)$ remaining colors. By the pigeonhole principle, at least one color subdatabase contains at least
+\[
+\left\lceil \frac{\operatorname{desc}(v)}{m-d(v)}\right\rceil
+\]
+of these descendants. Taking the maximum over all such $v$ and combining it with the equal-split bound proves the claim.
+\end{proof}
+
+\begin{proposition}[ActiveBalance certificate]
+\label{prop:activebalancecert}
+Let $\varphi_{\mathsf{out}}$ be the coloring returned by Algorithm~\ref{alg:activebalance}, and let
+\[
+U=\max_{c\in[m]}|\mathcal{D}_c(\varphi_{\mathsf{out}})|.
+\]
+Then $U/B(T)$ is an instance-wise balance certificate: if $\operatorname{OPT}$ is the smallest possible largest subdatabase among all valid active colorings over $[m]$, then $U/\operatorname{OPT}\le U/B(T)$. Moreover, Algorithm~\ref{alg:activebalance} terminates at a subtree-permutation local optimum with respect to the lexicographic bucket signature $\Psi$.
+\end{proposition}
+
+\begin{proof}
+Let $\operatorname{OPT}$ be the minimum possible value of $\max_c|\mathcal{D}_c|$ among all valid active colorings over $[m]$. By Theorem~\ref{thm:structlb}, $\operatorname{OPT}\ge B(T)$. Therefore
+\[
+\frac{U}{\operatorname{OPT}}\le \frac{U}{B(T)}.
+\]
+This gives an a posteriori balance certificate for the returned instance.
+
+For termination, observe that every accepted subtree permutation is required to strictly decrease the lexicographic signature $\Psi$, while rejected moves do not change the coloring. There are only finitely many valid active colorings of the active forest over $[m]$. Thus the algorithm cannot accept infinitely many moves. When it stops because no improving move is found, no candidate subtree color permutation considered by Algorithm~\ref{alg:activebalance} can further decrease $\Psi$, which is precisely subtree-permutation local optimality under this move set.
+\end{proof}
+
+\begin{theorem}[Indexing complexity]
+\label{thm:index}
+Let $N=|\mathcal{A}(T)|$ be the total number of active proof-bearing nodes, and let $N_c=|\mathcal{D}_c|$ be the size of color subdatabase $c$. Then the interval-based preprocessing and query-indexing complexities satisfy
+\begin{align*}
+&\text{preprocessing time} \in O(N\log N),\\
+&\text{preprocessing space} \in O(N),\\
+&\text{single batch-PIR query indexing time} \in O(m\log N).
+\end{align*}
+\end{theorem}
+
+\begin{proof}
+Computing the intervals of all active nodes takes $O(N)$ time. Sorting the interval tables costs
+\[
+O\!\left(\sum_{c=1}^{m}N_c\log N_c\right)\subseteq O(N\log N).
+\]
+At query time, the client performs one binary search per color, which costs
+\[
+O\!\left(\sum_{c=1}^{m}\log N_c\right)\subseteq O(m\log N).
+\]
+The total storage for active nodes and sorted interval tables is $O(N)$.
+\end{proof}
+
+\begin{theorem}[ActiveBalance complexity]
+\label{thm:activebalancecomplexity}
+Fix one valid active coloring of an interval forest with $N$ active nodes and active color count $m$. Then one execution of Algorithm~\ref{alg:activebalance} with at most $R_1$ accepted-or-rejected passes runs in
+\[
+O(R_1 N m^3)
+\]
+time and uses $O(Nm)$ additional space.
+\end{theorem}
+
+\begin{proof}
+In one pass, Algorithm~\ref{alg:activebalance} first annotates every subtree with its ancestor color mask and its per-color count histogram. Storing the count vectors for all $N$ nodes costs $O(Nm)$ space, and computing them by one bottom-up traversal costs $O(Nm)$ time.
+
+Now consider one fixed subtree root $U$. Its available-color set has size at most $m$, so building the local cost matrix $K_U$ takes $O(m^2)$ time. The minimum-cost perfect matching on that square matrix is solved by the Hungarian algorithm in $O(m^3)$ time. Forming the resulting candidate load vector and checking whether the global signature improves costs at most $O(m)$. Hence evaluating one subtree costs $O(m^3)$ time, and evaluating all $N$ subtree roots in one pass costs $O(Nm^3)$.
+
+The algorithm performs at most $R_1$ passes, and every accepted move strictly decreases the lexicographic signature $\Psi(\varphi)$, so no pass is repeated indefinitely. Therefore the total running time is $O(R_1 N m^3)$ and the peak extra space remains $O(Nm)$.
+\end{proof}
+
+\begin{theorem}[Client-side completion complexity]
+\label{thm:complete}
+Assume that the public metadata tables $\{\mathcal{M}_c\}_{c=1}^{m}$ are already available and that the default-empty hash chain $\Delta_0,\ldots,\Delta_{h-1}$ has been precomputed once. Then Algorithm~\ref{alg:complete} runs in $O(h)$ time and uses $O(h)$ additional space. Consequently, the total online client work of query generation plus proof completion is
+\[
+O(m\log N + h).
+\]
+\end{theorem}
+
+\begin{proof}
+Algorithm~\ref{alg:complete} initializes an array of length $h$, processes at most one extracted item per active color, and performs exactly $h$ bottom-up hash combinations. Each step is constant-time apart from the hash evaluations, so the total running time is $O(h)$ and the extra space for the completed proof array is also $O(h)$. Combining this with the $O(m\log N)$ indexing time of Algorithm~\ref{alg:query} yields the stated online complexity. The one-time public preprocessing of the default-empty hash chain costs $O(h)$ time and $O(h)$ space.
+\end{proof}
+
+The following theorem states the end-to-end guarantee used in the evaluation: it ties the construction to correctness, target privacy, storage, metadata, and backend-facing cost.
+
+\begin{theorem}[End-to-end SparseTreePIR guarantee]
+\label{thm:endtoend}
+Fix a public height-$h$ SMT snapshot $T$ with active set $\mathcal{A}(T)$, active color count $m$, a valid coloring $\varphi$, color subdatabases $\mathcal{D}_1,\ldots,\mathcal{D}_m$, and public metadata tables $\mathcal{M}_1,\ldots,\mathcal{M}_m$. Assume that the underlying single-item PIR backend is correct and query-private for each subdatabase, and that dummy queries are sampled from the same query distribution as well-formed PIR queries over the corresponding subdatabase. Then SparseTreePIR satisfies the following end-to-end guarantee for every occupied target leaf:
+\begin{enumerate}[leftmargin=2em]
+  \item the client reconstructs a valid standard height-$h$ SMT membership proof;
+  \item the retrieval is target-private relative to the setup leakage in Definition~\ref{def:leakagefunction} and the target-privacy game in Definition~\ref{def:privacygame};
+  \item the private server payload contains exactly $N=|\mathcal{A}(T)|$ digest records, and the public metadata size is $O(N)$;
+  \item client-side lookup and proof completion together cost $O(m\log N+h)$ time;
+  \item the backend workload is determined by the color-store load vector $\{|\mathcal{D}_c|\}_{c=1}^{m}$: a sequential execution performs one PIR query over each $\mathcal{D}_c$, while a parallel execution is bottlenecked by the largest per-color backend cost.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+The first item follows from Proposition~\ref{prop:batch} and Proposition~\ref{prop:complete}: each color returns at most one real active sibling digest, and default-empty levels are filled locally. The second item is exactly Theorem~\ref{prop:privacy}. The private payload consists of one digest for each active proof-bearing node by construction, while the metadata tables store a constant number of fields per active node, so their size is $O(N)$. The fourth item combines Theorem~\ref{thm:complete} with the interval-search bound in Theorem~\ref{thm:index}. Finally, the online protocol issues one independent PIR subquery to each color subdatabase. Therefore backend work composes over the sizes of the searched color stores, with the sequential and parallel interpretations stated above.
+\end{proof}
+
+\begin{remark}
+Algorithms~\ref{alg:query} and~\ref{alg:complete} are directly implementable: all inputs required by proof completion are either public metadata, public default hashes, or client-local state already produced during query generation. No additional server round is needed after batch-PIR extraction.
+\end{remark}
+
+\section{Experimental Evaluation}
+\label{sec:experiments}
+
+The evaluation focuses on the private SMT retrieval layer introduced in this paper. We compare privacy-preserving layouts over the same fixed public SMT snapshots, rather than using the non-private proof-serving API as a competing baseline. The experiments ask three questions. First, what PIR database profile is induced by real SMT workloads? Second, how much do active-interval coloring and \ActiveBalance{} improve the backend-facing quantities $N$, $m$, and $M(\varphi)$? Third, can the resulting color stores be queried through a concrete PIR backend?
+
+\subsection{Evaluation Setup and Metrics}
+
+We evaluate SparseTreePIR on six SMT key sets derived from rollup account-key traces and SMT test-vector workloads. The Polygon zkEVM and ZKsync Era rows are rollup-derived account-key workloads collected from historical windows; the FuelLabs row comes from SMT test-vector generation. Each key set is mapped into height-$128$ and height-$256$ SMT coordinate spaces. The Polygon and ZKsync keys are hashed with SHA-256 before taking the prefix coordinate, while the FuelLabs vectors use their hexadecimal prefix coordinates. Duplicate coordinates, if any arise after mapping, are treated as one occupied SMT leaf. No synthetic random-leaf workload is used in the main experiment.
+
+The structural metrics are deterministic functions of the mapped key set and the resulting active interval forest. For executable-backend measurements, each table row samples $20$ occupied targets from the corresponding height-$128$ workload and reports the average per-proof online quantities over those targets. The reported online communication excludes one-time layout construction and public metadata publication; timing columns measure client query generation for the stated backend bridge. All executable timings are same-machine relative measurements on a single workstation under one local software stack; each reported query-generation time is averaged over the same target-sampling rule. The artifact metadata records the exact CPU, memory, OS, source revisions, backend versions, command lines, and seeds for the run.
+
+The resource metrics are the active PIR record count
+$N=|\mathcal{A}(T)|$, the active batch width
+$m=\max_{\ell\in\mathcal{L}}|\mathsf{Path}(\ell)|$, the largest searched color store
+$M(\varphi)=\max_c|\mathcal{D}_c|$, the public metadata size, and the executable SimplePIR costs. These are the quantities exposed to the PIR layer. A backend with cost curve $g(s)$ over a database of $s$ digest records is driven by the color-store vector $\{|\mathcal{D}_c|\}$: sequential execution sums over the colors, while parallel execution is bottlenecked by the largest backend call.
+
+We compare four privacy-preserving layouts. \emph{Perfectized TreePIR} is an accounting baseline that first treats the SMT as a complete height-$h$ perfect tree, exposing $2^{h+1}-2$ PIR-facing proof positions. This corresponds to applying TreePIR to the full perfect-tree proof object, and it is infeasible to materialize at $h=128$ or $256$. \emph{PBC-SMT} applies the probabilistic-batch-code route to the same active SMT records: it stores three replicated copies and spreads them over $\lceil 1.5m\rceil$ buckets. We report the realized maximum bucket size for one fixed seeded placement used consistently across the backend-profile comparisons, not an expectation over PBC seeds. The fixed seed is used only to make the backend-profile comparison reproducible and is not tuned per workload; the structural comparison is driven primarily by the three-copy, $\lceil1.5m\rceil$-bucket placement. \emph{Flat active PIR} stores the active proof records once, but uses one global active database for every proof slot. \emph{SparseTreePIR} stores the same active records once, partitions them by active-interval coloring, and then applies \ActiveBalance{} to reduce the largest color store.
+
+\begin{table*}[!t]
+\centering
+\caption{SMT workloads and privacy-preserving layout profiles. Active $N$ is the number of PIR-facing proof records; $m$ is the active batch width; Dummy is the fraction of dummy color slots; PBC width/max reports $\lceil1.5m\rceil$ buckets and the realized largest PBC bucket; Sparse max is the largest SparseTreePIR color store after \ActiveBalance{}. All rows use key sets derived from rollup account-key traces or SMT test-vector workloads; no synthetic random trees are used.}
+\label{tab:real_workload_shape}
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+Workload & $h$ & Keys & Active $N$ & $m$ & Avg. path & Dummy & PBC width/max & Flat max & Sparse max \\
+\midrule
+FuelLabs SMT vectors & 128 & 100   & 198   & 9  & 6.88 & 23.56\% & 14 / 43     & 198   & 23 \\
+FuelLabs SMT vectors & 256 & 100   & 198   & 9  & 6.88 & 23.56\% & 14 / 43     & 198   & 23 \\
+Polygon recent       & 128 & 384   & 766   & 11 & 8.89 & 19.15\% & 17 / 136    & 766   & 70 \\
+Polygon recent       & 256 & 384   & 766   & 11 & 8.89 & 19.15\% & 17 / 136    & 766   & 70 \\
+ZKsync sample        & 128 & 956   & 1910  & 13 & 10.19 & 21.62\% & 20 / 287  & 1910  & 147 \\
+ZKsync sample        & 256 & 956   & 1910  & 13 & 10.19 & 21.62\% & 20 / 287  & 1910  & 147 \\
+Polygon multi-window & 128 & 1348  & 2694  & 14 & 10.73 & 23.36\% & 21 / 385  & 2694  & 193 \\
+Polygon multi-window & 256 & 1348  & 2694  & 14 & 10.73 & 23.36\% & 21 / 385  & 2694  & 193 \\
+Polygon broad        & 128 & 7040  & 14078 & 17 & 13.11 & 22.86\% & 26 / 1625 & 14078 & 829 \\
+Polygon broad        & 256 & 7040  & 14078 & 17 & 13.11 & 22.86\% & 26 / 1625 & 14078 & 829 \\
+ZKsync broad         & 128 & 7740  & 15478 & 17 & 13.25 & 22.03\% & 26 / 1786 & 15478 & 911 \\
+ZKsync broad         & 256 & 7740  & 15478 & 17 & 13.25 & 22.03\% & 26 / 1786 & 15478 & 911 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+Table~\ref{tab:real_workload_shape} reports the primary structural result. Across all real workloads, the active batch width is between $9$ and $17$, even though the verifier height is $128$ or $256$. This does not shorten the SMT proof checked by the verifier; it shows that the PIR-facing retrieval object is governed by the occupied-leaf skeleton rather than by every logical level. The largest active-color store after \ActiveBalance{} is also close to the equal-split scale. For the broad ZKsync workload, for example, $15478$ active proof records are partitioned into $m=17$ color stores, and the largest store contains $911$ records.
+
+\subsection{Decomposing the Resource Gains}
+
+Table~\ref{tab:real_gain_sources} separates the sources of improvement. Perfectized TreePIR chooses a mismatched PIR-facing object for SMTs; PBC-SMT uses the correct active records but treats them as an arbitrary batch; flat active PIR uses active records but does not split them into color stores; a node-local active coloring is valid but can be imbalanced. SparseTreePIR combines the active object, active-width coloring, and subtree-level balancing.
+
+\begin{table}[!t]
+\centering
+\caption{Measured gain sources on the real SMT workload suite}
+\label{tab:real_gain_sources}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{p{0.30\linewidth}p{0.30\linewidth}p{0.32\linewidth}}
+\toprule
+Comparison & Observed resource effect & Interpretation \\
+\midrule
+vs. perfectized TreePIR & Active $N\le15478$; full $h=128/256$ trees have $2^{129}{-}2$ / $2^{257}{-}2$ records & Full coordinate trees are a mismatched PIR-facing object for real SMT workloads. \\
+vs. PBC-SMT & Width down $34.8\%$; max bucket down $48.6\%$ & Generic batch placement does not exploit active interval/path structure. \\
+vs. flat active PIR & Max searched database down $92.1\%$ & Active storage alone is insufficient; color-store splitting changes the backend profile. \\
+vs. node-local active coloring & Max color store down $16.0\%$ & \ActiveBalance{} improves the exact-width active color-store profile. \\
+\bottomrule
+\end{tabular}
+\par}
+\end{table}
+
+The perfectized TreePIR row is an accounting baseline at these heights: the official TreePIR construction and indexing guarantees are developed for a materialized perfect-tree object, while a height-$128$ or height-$256$ SMT has an exponentially larger full coordinate tree than its active proof skeleton. The PBC-SMT row mirrors TreePIR's comparison against probabilistic batch codes, but applies the generic batch route to SMT active records. The result is a wider query pattern and replicated storage. Flat active PIR gives a contrasting baseline: it removes inactive coordinates but still searches the entire active database in every proof slot. SparseTreePIR is the only evaluated layout in the table that combines active proof records, an active-width query profile, and balanced active color stores.
+
+\subsection{\ActiveBalance{} on Real Active Forests}
+
+After the active object is chosen, a valid coloring is not automatically an efficient backend layout. Table~\ref{tab:real_activebalance} compares \ActiveBalance{} with a node-local hybrid initializer on the height-$128$ real workloads. Both layouts use the same active records and the same active width $m$; only the balancing step changes. The node-local hybrid initializer greedily assigns each active node a feasible color using ancestor-color constraints and current global color loads, but it does not apply subtree-level color permutations. This baseline isolates the effect of \ActiveBalance{} after a valid active coloring already exists. The lower column is the structural lower bound $B(T)$ from Theorem~\ref{thm:structlb}.
+
+\begin{table}[!t]
+\centering
+\caption{\ActiveBalance{} ablation on real height-$128$ active interval forests}
+\label{tab:real_activebalance}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lrrrrrrr}
+\toprule
+Workload & Active $N$ & $m$ & Lower & Hybrid max & AB max & Red. & Meta KB \\
+\midrule
+FuelLabs SMT vectors & 198   & 9  & 22  & 26   & 23  & 11.5\% & 4.6 \\
+Polygon recent       & 766   & 11 & 70  & 83   & 70  & 15.7\% & 18.0 \\
+ZKsync sample        & 1910  & 13 & 147 & 180  & 147 & 18.3\% & 44.8 \\
+Polygon multi-window & 2694  & 14 & 193 & 236  & 193 & 18.2\% & 63.1 \\
+Polygon broad        & 14078 & 17 & 829 & 929  & 829 & 10.8\% & 330.0 \\
+ZKsync broad         & 15478 & 17 & 911 & 1162 & 911 & 21.6\% & 362.8 \\
+\bottomrule
+\end{tabular}
+\par}
+\end{table}
+
+In five of the six height-$128$ real workloads, \ActiveBalance{} reaches the reported structural lower bound exactly; in the Fuel test-vector workload it is within $1.045\times$ of the lower bound. The metadata column uses the prototype encoding of $24$ public bytes per active record, compared with $32$ private digest bytes per active record. Thus the public lookup state is linear in the number of active proof records and remains far from the full coordinate-space scale.
+
+\subsection{SimplePIR Integration on Real Workloads}
+
+We also verify that the resulting color stores can be queried through a real PIR API. A small Go bridge materializes the $32$-byte digest records for each color store and calls the official SimplePIR package~\cite{simplepir}: \texttt{Init}, \texttt{Setup}, \texttt{Query}, \texttt{Answer}, and \texttt{Recover}. The bridge retrieves each digest as eight $32$-bit chunks because the artifact's convenient database constructor represents one entry as a machine word. This conservative encoding validates end-to-end compatibility and backend-profile effects; it is not intended to represent optimized digest packing.
+
+\begin{table*}[!t]
+\centering
+\caption{SimplePIR bridge on real height-$128$ workloads with chunked $32$-byte digest retrieval. Flat KB, PBC KB, and AB KB are the per-proof online communication for flat active PIR, PBC-SMT, and SparseTreePIR after \ActiveBalance{}, respectively; AB query ms is the SparseTreePIR client query-generation time.}
+\label{tab:real_simplepir}
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Workload & Active $N$ & $m$ & Flat KB & PBC KB & AB KB & AB vs Flat & AB vs PBC & AB query ms \\
+\midrule
+FuelLabs SMT vectors & 198   & 9  & 16.31  & 12.00  & 5.91  & 63.8\% & 50.8\% & 4.93 \\
+Polygon recent       & 766   & 11 & 38.84  & 25.50  & 11.69 & 69.9\% & 54.2\% & 6.44 \\
+ZKsync sample        & 1910  & 13 & 71.09  & 43.13  & 20.72 & 70.9\% & 52.0\% & 8.79 \\
+Polygon multi-window & 2694  & 14 & 91.44  & 51.84  & 25.38 & 72.2\% & 51.1\% & 9.64 \\
+Polygon broad        & 14078 & 17 & 253.41 & 133.25 & 62.16 & 75.5\% & 53.3\% & 16.55 \\
+ZKsync broad         & 15478 & 17 & 265.63 & 138.94 & 65.34 & 75.4\% & 53.0\% & 16.73 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+Table~\ref{tab:real_simplepir} reports per-proof online communication and the client query-generation time for SparseTreePIR. Each row samples $20$ occupied targets from the real workload at height $128$. Against flat active PIR, SparseTreePIR reduces online communication by $63.8$--$75.5\%$ because the backend no longer searches one large active database repeatedly. Against PBC-SMT, it reduces online communication by $50.8$--$54.2\%$ because it avoids three-copy generic batch placement and the wider $1.5m$ interface. The timing counters exhibit the same qualitative behavior, but we interpret them as resource-profile evidence rather than production performance: SimplePIR's parameter tiers and our conservative chunking make individual server-answer times non-smooth.
+
+\subsection{PBC-SMT Across Backend Profiles}
+
+PBC is a generic batch organization that can be instantiated with different PIR backends. We therefore separate concrete backend evidence from supplementary backend-profile checks. Figure~\ref{fig:real-pir-backends} reports the two results in this paper that call public executable PIR implementations over the SparseTreePIR layouts: the full SimplePIR API bridge above and a local runner built from the public PIANO artifact~\cite{piano}. Both use the same six height-$128$ real SMT workloads and compare PBC-SMT active placement with the active-interval color stores produced by SparseTreePIR. Across these two concrete backends, replacing PBC-SMT by SparseTreePIR reduces online traffic by approximately half and reduces client query generation by approximately $44$--$46\%$.
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=0.98\textwidth]{../figures/real_pir_backend_comparison.pdf}
+\caption{Executable PIR backend evidence on the real SMT workload suite. The figure includes only concrete backend runs that call public PIR code over the SparseTreePIR/PBC-SMT layouts: the SimplePIR full API bridge and the PIANO local runner. Analytical models and TreePIR-format artifact checks are excluded.}
+\label{fig:real-pir-backends}
+\end{figure*}
+
+To check that the PBC-SMT comparison is not specific to SimplePIR, Table~\ref{tab:multi_backend_pbc} additionally reports two supplementary backend profiles: a lightweight LWE-style prototype used only as a sensitivity check and an analytic two-server XOR-PIR communication model. The PIANO runner uses the artifact's native entry format and executes locally rather than as a tuned service, so we use it as additional backend-profile evidence rather than as a production deployment benchmark. The LWE-style prototype is not a production PIR system and is not used as main evidence, but it includes setup hints, randomized query generation, server matrix-vector work, and client decoding. The XOR model represents the information-theoretic two-server profile: two query vectors and two digest responses per bucket.
+
+\begin{table}[!t]
+\centering
+\caption{SparseTreePIR vs. PBC-SMT across backend profiles on the real workload suite}
+\label{tab:multi_backend_pbc}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lrrl}
+\toprule
+Backend profile & Online reduction & Query-time reduction & Evidence type \\
+\midrule
+SimplePIR full API & 52.4\% & 43.8\% & full Go API bridge \\
+PIANO local runner & 51.5\% & 46.1\% & public artifact runner \\
+LWE-style prototype & 62.3\% & 56.0\% & sensitivity-check prototype \\
+Two-server XOR model & 52.7\% & -- & analytic two-server model \\
+\bottomrule
+\end{tabular}
+\par}
+\end{table}
+
+Table~\ref{tab:multi_backend_pbc} reports averages over the same six height-$128$ real workloads used in Table~\ref{tab:real_simplepir}. Across all four backend profiles, replacing generic PBC-SMT placement with active-interval color stores reduces online traffic by approximately half. The exact timing reductions are backend-dependent, especially for small instances where parameter tiers and local artifact formats dominate, but the structural reason is the same: PBC-SMT stores three copies over about $1.5m$ buckets, while SparseTreePIR stores one copy over $m$ active color stores.
+
+\subsection{Scope and Limitations}
+
+The experiments support the specific claim of the paper: for fixed public SMT snapshots, the appropriate PIR-facing retrieval object is the active proof-bearing interval forest. Perfectized TreePIR is inflated by the full coordinate tree; PBC-SMT is a generic batch organization over the active records but pays replication and extra slots; flat active PIR stores the active records but queries an unnecessarily large database. SparseTreePIR combines active-only records, active-width color queries, served-interval lookup, and balanced color stores.
+
+This operating regime has a concrete implication. Increasing the verifier height from $128$ to $256$ does not change the active object for these hashed-key workloads, because the occupied-leaf skeleton is the same after the key prefix has separated. The verifier still checks a height-$h$ proof, and the client still fills default levels locally. What changes is the private workload: the server's PIR-facing database contains only active sibling digests, and the number of fixed-shape color queries is an active-path property rather than a height parameter alone.
+
+Finally, the claim is explicitly scoped. The formal protocol targets membership-proof retrieval for occupied leaves in a fixed public SMT snapshot. In this setting, the retrieval target is well defined: the target leaf is in the public occupied set, every private response is a non-default sibling digest, and all missing levels can be completed from the public default chain. Non-membership retrieval over arbitrary absent coordinates does not follow from the same metadata without modification. It would need intervals over absent logical ranges, rules for proving divergence or emptiness, and a stronger privacy game that states whether present-versus-absent query type is hidden. We therefore treat non-membership SparseTreePIR as a separate extension requiring a dedicated formal interface.
+
+The backend claim is also scoped. The SimplePIR bridge and PIANO runner are the concrete PIR integrations used as main backend evidence, while the LWE prototype and XOR model are supplementary profile checks. We also inspected the public TreePIR artifact backends. Their VBPIR and Spiral implementations execute on TreePIR-format perfect-tree layouts, but a full SparseTreePIR integration would require exporting our active color stores into those backend-specific database encodings and validating their extraction logic. YPIR is a plausible future backend, but our evaluation platform lacks the required AVX-512 support; SealPIR-style integration is also better suited to a Linux build environment with the full SEAL, Protobuf, and gRPC toolchain. These systems are therefore future integration targets rather than unreported completed experiments. A deployment can publish the active organization by epochs, but a full dynamic leakage and amortized-update treatment remains separate from the static organization layer validated here.
+
+\section{Conclusion and Future Directions}
+\label{sec:conclusion}
+
+We introduced SparseTreePIR, a direct active-interval organization for fixed binary SMT membership proofs. SparseTreePIR preserves the standard height-$h$ verifier proof semantics, but makes the PIR-facing database consist only of active proof-bearing sibling digests. Served-interval metadata, fixed-shape real/dummy PIR queries, and public default-hash completion together define a complete private retrieval layer for this SMT-specific object.
+
+The analysis shows that the active-node, one-query-per-color model is governed by active proof material rather than by every logical SMT level. The algorithmic contribution is that a valid active coloring is not sufficient by itself: color subdatabases must also be balanced. The subtree-level \ActiveBalance{} refinement keeps the active query pattern fixed while moving the largest bucket close to the structural lower bound across the tested real SMT workloads. The experiments focus on privacy-preserving layout choices over the same active proof material: direct active-interval coloring improves the relevant resource profile through active-only storage, active color count $m$, and a flatter largest searched subdatabase. The SimplePIR and PIANO bridges demonstrate compatibility with existing PIR implementations and show substantial improvement over flat uncolored-active PIR and PBC-SMT.
+
+The main extensions remain SMT-centered. First, non-membership SparseTreePIR should extend the served-interval abstraction from occupied-leaf ranks to absent logical-coordinate regions and define whether query existence is hidden. Second, the organization layer should be integrated with deployed sparse authenticated stores such as Revocation Transparency-style maps and Jellyfish Merkle Tree~\cite{revtrans,jmt}. Third, the instance-wise ActiveBalance certificate should be strengthened into an a priori guarantee for broader classes of interval forests.
+
+\begin{thebibliography}{99}
+\footnotesize
+\setlength{\itemsep}{0pt}
+\setlength{\parskip}{0pt}
+
+\bibitem{merkle}
+R. C. Merkle,
+\newblock ``A Certified Digital Signature,''
+\newblock in \emph{Advances in Cryptology---CRYPTO '89 Proceedings}, G. Brassard, Ed., LNCS 435, Springer, 1990, pp. 218--238.
+
+\bibitem{ctv2}
+B. Laurie, E. Messeri, and R. Stradling,
+\newblock ``Certificate Transparency Version 2.0,''
+\newblock RFC 9162, Internet Engineering Task Force, Dec. 2021.
+
+\bibitem{ctqueue}
+B. Laurie,
+\newblock ``Certificate Transparency,''
+\newblock \emph{ACM Queue}, vol. 12, no. 8, pp. 10--19, 2014.
+
+\bibitem{crosbywallach}
+S. A. Crosby and D. S. Wallach,
+\newblock ``Efficient Data Structures for Tamper-Evident Logging,''
+\newblock in \emph{Proc. 18th USENIX Security Symposium (USENIX Security)}, 2009.
+
+\bibitem{dynamo}
+G. DeCandia, D. Hastorun, M. Jampani, G. Kakulapati, A. Lakshman, A. Pilchin, S. Sivasubramanian, P. Vosshall, and W. Vogels,
+\newblock ``Dynamo: Amazon's Highly Available Key-Value Store,''
+\newblock in \emph{Proc. 21st ACM Symp. Operating Systems Principles (SOSP)}, 2007, pp. 205--220.
+
+\bibitem{padauth}
+A. Anagnostopoulos, M. T. Goodrich, and R. Tamassia,
+\newblock ``Persistent Authenticated Dictionaries and Their Applications,''
+\newblock in \emph{Information Security}, LNCS 2200, Springer, 2001, pp. 379--393.
+
+\bibitem{coniks}
+M. S. Melara, A. Blankstein, J. Bonneau, E. W. Felten, and M. J. Freedman,
+\newblock ``CONIKS: Bringing Key Transparency to End Users,''
+\newblock in \emph{Proc. 24th USENIX Security Symposium (USENIX Security)}, 2015, pp. 383--398.
+
+\bibitem{transdict}
+I. Tzialla, A. Kothapalli, B. Parno, and S. Setty,
+\newblock ``Transparency Dictionaries with Succinct Proofs of Correct Operation,''
+\newblock in \emph{Proc. Network and Distributed System Security Symposium (NDSS)}, 2022.
+
+\bibitem{parakeet}
+H. Malvai, L. Kokoris-Kogias, A. Sonnino, E. Ghosh, E. Ozturk, K. Lewi, and S. F. Lawlor,
+\newblock ``Parakeet: Practical Key Transparency for End-to-End Encrypted Messaging,''
+\newblock in \emph{Proc. Network and Distributed System Security Symposium (NDSS)}, 2023.
+
+\bibitem{optiks}
+J. Len, M. Chase, E. Ghosh, K. Laine, and R. Cruz Moreno,
+\newblock ``OPTIKS: An Optimized Key Transparency System,''
+\newblock in \emph{Proc. 33rd USENIX Security Symposium (USENIX Security)}, 2024, pp. 4355--4372.
+
+\bibitem{revtrans}
+B. Laurie and E. Kasper,
+\newblock ``Revocation Transparency,''
+\newblock Google Research technical report, Sep. 2012.
+
+\bibitem{vcer}
+D. Koisser, P. Jauernig, G. Tsudik, and A.-R. Sadeghi,
+\newblock ``V'CER: Efficient Certificate Validation in Constrained Networks,''
+\newblock in \emph{Proc. 31st USENIX Security Symposium (USENIX Security)}, 2022, pp. 4491--4508.
+
+\bibitem{utreexo}
+B. Bailey and S. Sankagiri,
+\newblock ``Merkle Trees Optimized for Stateless Clients in Bitcoin,''
+\newblock in \emph{Financial Cryptography and Data Security}, LNCS 12676, Springer, 2021, pp. 451--466.
+
+\bibitem{ethereum}
+G. Wood,
+\newblock ``Ethereum: A Secure Decentralised Generalised Transaction Ledger,''
+\newblock Ethereum Project Yellow Paper, 2014.
+
+\bibitem{zcash}
+D. E. Hopwood, S. Bowe, T. Hornby, and N. Wilcox,
+\newblock ``Zcash Protocol Specification,''
+\newblock Version 2023.4.0, 2023.
+
+\bibitem{sparsemt}
+R. Dahlberg, T. Pulls, and R. Peeters,
+\newblock ``Efficient Sparse Merkle Trees: Caching Strategies and Secure (Non-)Membership Proofs,''
+\newblock \emph{Cryptology ePrint Archive}, Paper 2016/683, 2016.
+
+\bibitem{jmt}
+Z. Gao, Y. Hu, and Q. Wu,
+\newblock ``Jellyfish Merkle Tree,''
+\newblock Diem Association technical paper, revised Jan. 12, 2021.
+
+\bibitem{compactmultiproof}
+L. Ramabaja and A. Avdullahu,
+\newblock ``Compact Merkle Multiproofs,''
+\newblock arXiv preprint arXiv:2002.07648, 2020.
+
+\bibitem{rollupsmt}
+B. Ma, V. N. Pathak, L. Liu, and S. Ruj,
+\newblock ``One-Phase Batch Update on Sparse Merkle Trees for Rollups,''
+\newblock arXiv preprint arXiv:2310.13328, 2023.
+
+\bibitem{zksyncdataset}
+M. I. Silva, J. Messias, and B. Livshits,
+\newblock ``A Public Dataset For the ZKsync Rollup,''
+\newblock arXiv preprint arXiv:2407.18699, 2024.
+
+\bibitem{multicollisiontree}
+M. Petkus,
+\newblock ``Efficient (Non-)Membership Tree from Multicollision-Resistance with Applications to Zero-Knowledge Proofs,''
+\newblock Cryptology ePrint Archive, Paper 2024/1259, 2024.
+
+\bibitem{treepir}
+Q. Cao, S. H. Dau, R. Gagiano, D. Huynh, X. Yi, P. L. Le, Q.-H. Luu, E. Viterbo, Y.-C. Huang, J. Zhu, M. M. Jalalzai, and C. Feng,
+\newblock ``TreePIR: Efficient Private Retrieval of Merkle Proofs via Tree Colorings with Fast Indexing and Zero Storage Overhead,''
+\newblock in \emph{Proc. IEEE Symp. Security and Privacy (SP)}, 2025, pp. 4476--4494.
+
+\bibitem{ctprivacy}
+S. Eskandarian, E. Messeri, J. Bonneau, and D. Boneh,
+\newblock ``Certificate Transparency with Privacy,''
+\newblock \emph{Proc. Privacy Enhancing Technologies}, vol. 2017, no. 4, pp. 329--344, 2017.
+
+\bibitem{kalesct}
+D. Kales, O. Omolola, and S. Ramacher,
+\newblock ``Revisiting User Privacy for Certificate Transparency,''
+\newblock in \emph{Proc. IEEE European Symp. Security and Privacy (EuroS\&P)}, 2019, pp. 432--447.
+
+\bibitem{lueksgoldberg}
+W. Lueks and I. Goldberg,
+\newblock ``Sublinear Scaling for Multi-Client Private Information Retrieval,''
+\newblock in \emph{Financial Cryptography and Data Security}, LNCS 8975, Springer, 2015, pp. 168--186.
+
+\bibitem{chor}
+B. Chor, O. Goldreich, E. Kushilevitz, and M. Sudan,
+\newblock ``Private information retrieval,''
+\newblock \emph{Journal of the ACM}, vol. 45, no. 6, pp. 965--981, 1998.
+
+\bibitem{ko97}
+E. Kushilevitz and R. Ostrovsky,
+\newblock ``Replication Is Not Needed: Single Database, Computationally-Private Information Retrieval,''
+\newblock in \emph{Proc. 38th Annu. IEEE Symp. Foundations of Computer Science (FOCS)}, 1997, pp. 364--373.
+
+\bibitem{cms}
+C. Cachin, S. Micali, and M. Stadler,
+\newblock ``Computationally Private Information Retrieval with Polylogarithmic Communication,''
+\newblock in \emph{Advances in Cryptology---EUROCRYPT '99}, LNCS 1592, Springer, 1999, pp. 402--414.
+
+\bibitem{batchcodes}
+Y. Ishai, E. Kushilevitz, R. Ostrovsky, and A. Sahai,
+\newblock ``Batch Codes and Their Applications,''
+\newblock in \emph{Proc. 36th Annu. ACM Symp. Theory of Computing (STOC)}, 2004, pp. 262--271.
+
+\bibitem{cbc}
+D. R. Stinson, R. Wei, and M. B. Paterson,
+\newblock ``Combinatorial Batch Codes,''
+\newblock \emph{Advances in Mathematics of Communications}, vol. 3, no. 1, pp. 13--27, 2009.
+
+\bibitem{cuckoo}
+R. Pagh and F. F. Rodler,
+\newblock ``Cuckoo Hashing,''
+\newblock \emph{Journal of Algorithms}, vol. 51, no. 2, pp. 122--144, 2004.
+
+\bibitem{xpir}
+C. Aguilar-Melchor, J. Barrier, L. Fousse, and M.-O. Killijian,
+\newblock ``XPIR: Private Information Retrieval for Everyone,''
+\newblock \emph{Proc. Priv. Enhancing Technol.}, vol. 2016, no. 2, pp. 155--174, 2016.
+
+\bibitem{sealpir}
+S. Angel, H. Chen, K. Laine, and S. Setty,
+\newblock ``PIR with Compressed Queries and Amortized Query Processing,''
+\newblock in \emph{Proc. IEEE Symp. Security and Privacy (SP)}, 2018, pp. 962--979.
+
+\bibitem{onionpir}
+M. H. Mughees, H. Chen, and L. Ren,
+\newblock ``OnionPIR: Response Efficient Single-Server PIR,''
+\newblock in \emph{Proc. ACM SIGSAC Conference on Computer and Communications Security (CCS)}, 2021, pp. 2292--2306.
+
+\bibitem{spiral}
+S. J. Menon and D. J. Wu,
+\newblock ``Spiral: Fast, High-Rate Single-Server PIR via FHE Composition,''
+\newblock in \emph{Proc. IEEE Symp. Security and Privacy (SP)}, 2022, pp. 930--947.
+
+\bibitem{simplepir}
+A. Henzinger, M. M. Hong, H. Corrigan-Gibbs, S. Meiklejohn, and V. Vaikuntanathan,
+\newblock ``One Server for the Price of Two: Simple and Fast Single-Server Private Information Retrieval,''
+\newblock in \emph{Proc. 32nd USENIX Security Symposium (USENIX Security)}, 2023, pp. 3889--3905.
+
+\bibitem{piano}
+M. Zhou, A. Park, W. Zheng, and E. Shi,
+\newblock ``Piano: Extremely Simple, Single-Server PIR with Sublinear Server Computation,''
+\newblock in \emph{Proc. IEEE Symp. Security and Privacy (SP)}, 2024, pp. 4296--4314.
+
+\bibitem{ypir}
+S. J. Menon and D. J. Wu,
+\newblock ``YPIR: High-Throughput Single-Server PIR with Silent Preprocessing,''
+\newblock in \emph{Proc. 33rd USENIX Security Symposium (USENIX Security)}, 2024, pp. 5985--6002.
+
+\bibitem{vectorbatchpir}
+M. H. Mughees and L. Ren,
+\newblock ``Vectorized Batch Private Information Retrieval,''
+\newblock in \emph{Proc. IEEE Symp. Security and Privacy (SP)}, 2023, pp. 437--452.
+
+\bibitem{pirana}
+J. Liu, J. Li, D. Wu, and K. Ren,
+\newblock ``PIRANA: Faster Multi-query PIR via Constant-weight Codes,''
+\newblock in \emph{Proc. IEEE Symp. Security and Privacy (SP)}, 2024, pp. 4315--4330.
+
+\bibitem{adsgeneric}
+A. Miller, M. Hicks, J. Katz, and E. Shi,
+\newblock ``Authenticated Data Structures, Generically,''
+\newblock in \emph{Proc. 41st ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages (POPL)}, 2014, pp. 411--423.
+
+\bibitem{balloon}
+T. Pulls and R. Peeters,
+\newblock ``Balloon: A Forward-Secure Append-Only Persistent Authenticated Data Structure,''
+\newblock in \emph{Computer Security---ESORICS 2015}, LNCS 9326, Springer, 2015, pp. 622--641.
+
+\end{thebibliography}
+
+
+

@@ -1,0 +1,30 @@
+{
+  "source": "FuelLabs/smt-test-generation",
+  "input": "external\\smt-test-generation-master\\fixtures\\smt_test_spec.json",
+  "test_count": 19,
+  "output_rows": 174,
+  "unique_keys": 100,
+  "max_final_live_keys": 100,
+  "test_live_counts": {
+    "Test Empty Root": 0,
+    "Test Update 1": 1,
+    "Test Update 2": 2,
+    "Test Update 3": 3,
+    "Test Update 5": 5,
+    "Test Update 10": 10,
+    "Test Update 100": 100,
+    "Test Update With Repeated Inputs": 1,
+    "Test Update Overwrite Key": 1,
+    "Test Update Union": 15,
+    "Test Update Sparse Union": 5,
+    "Test Update With Empty Data": 0,
+    "Test Update With Empty Data Performs Delete": 0,
+    "Test Update 1 Delete 1": 0,
+    "Test Update 2 Delete 1": 1,
+    "Test Update 10 Delete 5": 5,
+    "Test Delete Non-existent Key": 5,
+    "Test Interleaved Update Delete": 15,
+    "Test Delete Sparse Union": 5
+  },
+  "note": "This is a conformance/test-vector workload, not a real deployed SMT dataset. It is useful for checking update/delete semantics and small SMT edge cases."
+}

@@ -1,0 +1,73 @@
+height,empty_pct,seed,occupied_leaves,active_records,active_width_m,structural_lower_bound,target_batch,scheme,private,width,stored_records,max_bucket,sum_bucket_records,avg_real_slots_per_target,dummy_rate,ordinary_separate_bytes,ordinary_batch_dedup_bytes,private_workload_record_proxy,notes
+16,99.95,120000,33,64,7,10,1,ordinary_smt_batch_serving,False,0,64,0,0,3,0.0,96,96,0,Non-private semantic lower bound; server knows all targets.
+16,99.95,120000,33,64,7,10,1,full_coordinate_level_pir,True,16,131070,65536,131070,3,0.0,96,96,131070,Private PIR workload proxy; constants depend on backend packing.
+16,99.95,120000,33,64,7,10,1,pruned_level_pir_h,True,16,64,14,64,3,0.8125,96,96,64,Private PIR workload proxy; constants depend on backend packing.
+16,99.95,120000,33,64,7,10,1,sparsetreepir_batch_pir,True,7,64,10,64,3,0.5714285714285714,96,96,64,Private PIR workload proxy; constants depend on backend packing.
+16,99.95,120000,33,64,7,10,8,ordinary_smt_batch_serving,False,0,64,0,0,5.5,0.0,1408,1024,0,Non-private semantic lower bound; server knows all targets.
+16,99.95,120000,33,64,7,10,8,full_coordinate_level_pir,True,16,131070,65536,131070,5.5,0.0,1408,1024,1048560,Private PIR workload proxy; constants depend on backend packing.
+16,99.95,120000,33,64,7,10,8,pruned_level_pir_h,True,16,64,14,64,5.5,0.65625,1408,1024,512,Private PIR workload proxy; constants depend on backend packing.
+16,99.95,120000,33,64,7,10,8,sparsetreepir_batch_pir,True,7,64,10,64,5.5,0.21428571428571427,1408,1024,512,Private PIR workload proxy; constants depend on backend packing.
+16,99.95,120000,33,64,7,10,32,ordinary_smt_batch_serving,False,0,64,0,0,5.4375,0.0,5568,2016,0,Non-private semantic lower bound; server knows all targets.
+16,99.95,120000,33,64,7,10,32,full_coordinate_level_pir,True,16,131070,65536,131070,5.4375,0.0,5568,2016,4194240,Private PIR workload proxy; constants depend on backend packing.
+16,99.95,120000,33,64,7,10,32,pruned_level_pir_h,True,16,64,14,64,5.4375,0.66015625,5568,2016,2048,Private PIR workload proxy; constants depend on backend packing.
+16,99.95,120000,33,64,7,10,32,sparsetreepir_batch_pir,True,7,64,10,64,5.4375,0.22321428571428573,5568,2016,2048,Private PIR workload proxy; constants depend on backend packing.
+16,99.97500000000001,120000,16,30,5,6,1,ordinary_smt_batch_serving,False,0,30,0,0,4,0.0,128,128,0,Non-private semantic lower bound; server knows all targets.
+16,99.97500000000001,120000,16,30,5,6,1,full_coordinate_level_pir,True,16,131070,65536,131070,4,0.0,128,128,131070,Private PIR workload proxy; constants depend on backend packing.
+16,99.97500000000001,120000,16,30,5,6,1,pruned_level_pir_h,True,16,30,8,30,4,0.75,128,128,30,Private PIR workload proxy; constants depend on backend packing.
+16,99.97500000000001,120000,16,30,5,6,1,sparsetreepir_batch_pir,True,5,30,7,30,4,0.2,128,128,30,Private PIR workload proxy; constants depend on backend packing.
+16,99.97500000000001,120000,16,30,5,6,8,ordinary_smt_batch_serving,False,0,30,0,0,4.375,0.0,1120,704,0,Non-private semantic lower bound; server knows all targets.
+16,99.97500000000001,120000,16,30,5,6,8,full_coordinate_level_pir,True,16,131070,65536,131070,4.375,0.0,1120,704,1048560,Private PIR workload proxy; constants depend on backend packing.
+16,99.97500000000001,120000,16,30,5,6,8,pruned_level_pir_h,True,16,30,8,30,4.375,0.7265625,1120,704,240,Private PIR workload proxy; constants depend on backend packing.
+16,99.97500000000001,120000,16,30,5,6,8,sparsetreepir_batch_pir,True,5,30,7,30,4.375,0.125,1120,704,240,Private PIR workload proxy; constants depend on backend packing.
+16,99.97500000000001,120000,16,30,5,6,16,ordinary_smt_batch_serving,False,0,30,0,0,4.3125,0.0,2208,960,0,Non-private semantic lower bound; server knows all targets.
+16,99.97500000000001,120000,16,30,5,6,16,full_coordinate_level_pir,True,16,131070,65536,131070,4.3125,0.0,2208,960,2097120,Private PIR workload proxy; constants depend on backend packing.
+16,99.97500000000001,120000,16,30,5,6,16,pruned_level_pir_h,True,16,30,8,30,4.3125,0.73046875,2208,960,480,Private PIR workload proxy; constants depend on backend packing.
+16,99.97500000000001,120000,16,30,5,6,16,sparsetreepir_batch_pir,True,5,30,7,30,4.3125,0.1375,2208,960,480,Private PIR workload proxy; constants depend on backend packing.
+20,99.95,120000,524,1046,12,88,1,ordinary_smt_batch_serving,False,0,1046,0,0,8,0.0,256,256,0,Non-private semantic lower bound; server knows all targets.
+20,99.95,120000,524,1046,12,88,1,full_coordinate_level_pir,True,20,2097150,1048576,2097150,8,0.0,256,256,2097150,Private PIR workload proxy; constants depend on backend packing.
+20,99.95,120000,524,1046,12,88,1,pruned_level_pir_h,True,20,1046,214,1046,8,0.6,256,256,1046,Private PIR workload proxy; constants depend on backend packing.
+20,99.95,120000,524,1046,12,88,1,sparsetreepir_batch_pir,True,12,1046,88,1046,8,0.3333333333333333,256,256,1046,Private PIR workload proxy; constants depend on backend packing.
+20,99.95,120000,524,1046,12,88,8,ordinary_smt_batch_serving,False,0,1046,0,0,9.75,0.0,2496,2176,0,Non-private semantic lower bound; server knows all targets.
+20,99.95,120000,524,1046,12,88,8,full_coordinate_level_pir,True,20,2097150,1048576,2097150,9.75,0.0,2496,2176,16777200,Private PIR workload proxy; constants depend on backend packing.
+20,99.95,120000,524,1046,12,88,8,pruned_level_pir_h,True,20,1046,214,1046,9.75,0.5125,2496,2176,8368,Private PIR workload proxy; constants depend on backend packing.
+20,99.95,120000,524,1046,12,88,8,sparsetreepir_batch_pir,True,12,1046,88,1046,9.75,0.1875,2496,2176,8368,Private PIR workload proxy; constants depend on backend packing.
+20,99.95,120000,524,1046,12,88,32,ordinary_smt_batch_serving,False,0,1046,0,0,9.46875,0.0,9696,6336,0,Non-private semantic lower bound; server knows all targets.
+20,99.95,120000,524,1046,12,88,32,full_coordinate_level_pir,True,20,2097150,1048576,2097150,9.46875,0.0,9696,6336,67108800,Private PIR workload proxy; constants depend on backend packing.
+20,99.95,120000,524,1046,12,88,32,pruned_level_pir_h,True,20,1046,214,1046,9.46875,0.5265625,9696,6336,33472,Private PIR workload proxy; constants depend on backend packing.
+20,99.95,120000,524,1046,12,88,32,sparsetreepir_batch_pir,True,12,1046,88,1046,9.46875,0.2109375,9696,6336,33472,Private PIR workload proxy; constants depend on backend packing.
+20,99.97500000000001,120000,262,522,12,44,1,ordinary_smt_batch_serving,False,0,522,0,0,7,0.0,224,224,0,Non-private semantic lower bound; server knows all targets.
+20,99.97500000000001,120000,262,522,12,44,1,full_coordinate_level_pir,True,20,2097150,1048576,2097150,7,0.0,224,224,2097150,Private PIR workload proxy; constants depend on backend packing.
+20,99.97500000000001,120000,262,522,12,44,1,pruned_level_pir_h,True,20,522,106,522,7,0.65,224,224,522,Private PIR workload proxy; constants depend on backend packing.
+20,99.97500000000001,120000,262,522,12,44,1,sparsetreepir_batch_pir,True,12,522,44,522,7,0.4166666666666667,224,224,522,Private PIR workload proxy; constants depend on backend packing.
+20,99.97500000000001,120000,262,522,12,44,8,ordinary_smt_batch_serving,False,0,522,0,0,8.25,0.0,2112,1792,0,Non-private semantic lower bound; server knows all targets.
+20,99.97500000000001,120000,262,522,12,44,8,full_coordinate_level_pir,True,20,2097150,1048576,2097150,8.25,0.0,2112,1792,16777200,Private PIR workload proxy; constants depend on backend packing.
+20,99.97500000000001,120000,262,522,12,44,8,pruned_level_pir_h,True,20,522,106,522,8.25,0.5875,2112,1792,4176,Private PIR workload proxy; constants depend on backend packing.
+20,99.97500000000001,120000,262,522,12,44,8,sparsetreepir_batch_pir,True,12,522,44,522,8.25,0.3125,2112,1792,4176,Private PIR workload proxy; constants depend on backend packing.
+20,99.97500000000001,120000,262,522,12,44,32,ordinary_smt_batch_serving,False,0,522,0,0,8.5625,0.0,8768,5376,0,Non-private semantic lower bound; server knows all targets.
+20,99.97500000000001,120000,262,522,12,44,32,full_coordinate_level_pir,True,20,2097150,1048576,2097150,8.5625,0.0,8768,5376,67108800,Private PIR workload proxy; constants depend on backend packing.
+20,99.97500000000001,120000,262,522,12,44,32,pruned_level_pir_h,True,20,522,106,522,8.5625,0.571875,8768,5376,16704,Private PIR workload proxy; constants depend on backend packing.
+20,99.97500000000001,120000,262,522,12,44,32,sparsetreepir_batch_pir,True,12,522,44,522,8.5625,0.2864583333333333,8768,5376,16704,Private PIR workload proxy; constants depend on backend packing.
+24,99.95,120000,8389,16776,17,987,1,ordinary_smt_batch_serving,False,0,16776,0,0,14,0.0,448,448,0,Non-private semantic lower bound; server knows all targets.
+24,99.95,120000,8389,16776,17,987,1,full_coordinate_level_pir,True,24,33554430,16777216,33554430,14,0.0,448,448,33554430,Private PIR workload proxy; constants depend on backend packing.
+24,99.95,120000,8389,16776,17,987,1,pruned_level_pir_h,True,24,16776,3312,16776,14,0.4166666666666667,448,448,16776,Private PIR workload proxy; constants depend on backend packing.
+24,99.95,120000,8389,16776,17,987,1,sparsetreepir_batch_pir,True,17,16776,987,16776,14,0.17647058823529413,448,448,16776,Private PIR workload proxy; constants depend on backend packing.
+24,99.95,120000,8389,16776,17,987,8,ordinary_smt_batch_serving,False,0,16776,0,0,13.375,0.0,3424,3104,0,Non-private semantic lower bound; server knows all targets.
+24,99.95,120000,8389,16776,17,987,8,full_coordinate_level_pir,True,24,33554430,16777216,33554430,13.375,0.0,3424,3104,268435440,Private PIR workload proxy; constants depend on backend packing.
+24,99.95,120000,8389,16776,17,987,8,pruned_level_pir_h,True,24,16776,3312,16776,13.375,0.4427083333333333,3424,3104,134208,Private PIR workload proxy; constants depend on backend packing.
+24,99.95,120000,8389,16776,17,987,8,sparsetreepir_batch_pir,True,17,16776,987,16776,13.375,0.21323529411764705,3424,3104,134208,Private PIR workload proxy; constants depend on backend packing.
+24,99.95,120000,8389,16776,17,987,32,ordinary_smt_batch_serving,False,0,16776,0,0,13.375,0.0,13696,10560,0,Non-private semantic lower bound; server knows all targets.
+24,99.95,120000,8389,16776,17,987,32,full_coordinate_level_pir,True,24,33554430,16777216,33554430,13.375,0.0,13696,10560,1073741760,Private PIR workload proxy; constants depend on backend packing.
+24,99.95,120000,8389,16776,17,987,32,pruned_level_pir_h,True,24,16776,3312,16776,13.375,0.4427083333333333,13696,10560,536832,Private PIR workload proxy; constants depend on backend packing.
+24,99.95,120000,8389,16776,17,987,32,sparsetreepir_batch_pir,True,17,16776,987,16776,13.375,0.21323529411764705,13696,10560,536832,Private PIR workload proxy; constants depend on backend packing.
+24,99.97500000000001,120000,4194,8386,16,525,1,ordinary_smt_batch_serving,False,0,8386,0,0,12,0.0,384,384,0,Non-private semantic lower bound; server knows all targets.
+24,99.97500000000001,120000,4194,8386,16,525,1,full_coordinate_level_pir,True,24,33554430,16777216,33554430,12,0.0,384,384,33554430,Private PIR workload proxy; constants depend on backend packing.
+24,99.97500000000001,120000,4194,8386,16,525,1,pruned_level_pir_h,True,24,8386,1684,8386,12,0.5,384,384,8386,Private PIR workload proxy; constants depend on backend packing.
+24,99.97500000000001,120000,4194,8386,16,525,1,sparsetreepir_batch_pir,True,16,8386,525,8386,12,0.25,384,384,8386,Private PIR workload proxy; constants depend on backend packing.
+24,99.97500000000001,120000,4194,8386,16,525,8,ordinary_smt_batch_serving,False,0,8386,0,0,12.875,0.0,3296,2976,0,Non-private semantic lower bound; server knows all targets.
+24,99.97500000000001,120000,4194,8386,16,525,8,full_coordinate_level_pir,True,24,33554430,16777216,33554430,12.875,0.0,3296,2976,268435440,Private PIR workload proxy; constants depend on backend packing.
+24,99.97500000000001,120000,4194,8386,16,525,8,pruned_level_pir_h,True,24,8386,1684,8386,12.875,0.4635416666666667,3296,2976,67088,Private PIR workload proxy; constants depend on backend packing.
+24,99.97500000000001,120000,4194,8386,16,525,8,sparsetreepir_batch_pir,True,16,8386,525,8386,12.875,0.1953125,3296,2976,67088,Private PIR workload proxy; constants depend on backend packing.
+24,99.97500000000001,120000,4194,8386,16,525,32,ordinary_smt_batch_serving,False,0,8386,0,0,12.28125,0.0,12576,9376,0,Non-private semantic lower bound; server knows all targets.
+24,99.97500000000001,120000,4194,8386,16,525,32,full_coordinate_level_pir,True,24,33554430,16777216,33554430,12.28125,0.0,12576,9376,1073741760,Private PIR workload proxy; constants depend on backend packing.
+24,99.97500000000001,120000,4194,8386,16,525,32,pruned_level_pir_h,True,24,8386,1684,8386,12.28125,0.48828125,12576,9376,268352,Private PIR workload proxy; constants depend on backend packing.
+24,99.97500000000001,120000,4194,8386,16,525,32,sparsetreepir_batch_pir,True,16,8386,525,8386,12.28125,0.232421875,12576,9376,268352,Private PIR workload proxy; constants depend on backend packing.

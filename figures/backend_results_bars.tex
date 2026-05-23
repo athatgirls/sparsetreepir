@@ -1,0 +1,91 @@
+\documentclass[tikz,border=6pt]{standalone}
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{groupplots}
+\pgfplotsset{compat=1.18}
+
+\definecolor{CountBlue}{RGB}{90,145,220}
+\definecolor{HybridGreen}{RGB}{105,176,110}
+\definecolor{ProfilePurple}{RGB}{150,110,190}
+
+\begin{document}
+\begin{tikzpicture}
+\begin{groupplot}[
+  group style={group size=2 by 1, horizontal sep=2.05cm},
+  width=7.2cm,
+  height=5.7cm,
+  ymin=0.35,
+  ymax=1.08,
+  ylabel={Normalized cost},
+  ymajorgrids=true,
+  grid style={gray!18},
+  major grid style={gray!28},
+  ytick={0.4,0.6,0.8,1.0},
+  xtick=data,
+  enlarge x limits=0.22,
+  xticklabel style={font=\footnotesize,align=center},
+  yticklabel style={font=\footnotesize},
+  label style={font=\small},
+  tick label style={font=\footnotesize},
+  legend style={font=\footnotesize,draw=none,fill=none,at={(0.5,1.16)},anchor=south,legend columns=3},
+  legend cell align=left
+]
+
+\nextgroupplot[
+  title={Two-server XOR backend},
+  title style={font=\small},
+  symbolic x coords={Query,Response,Parallel}
+]
+\addplot+[ybar,bar width=6.5pt,draw=CountBlue!80!black,fill=CountBlue!70] coordinates {
+  (Query,0.506)
+  (Response,0.995)
+  (Parallel,0.607)
+};
+\addlegendentry{\texttt{count\_balanced}}
+\addplot+[ybar,bar width=6.5pt,draw=HybridGreen!80!black,fill=HybridGreen!72] coordinates {
+  (Query,0.514)
+  (Response,0.995)
+  (Parallel,0.429)
+};
+\addlegendentry{\texttt{hybrid}}
+\addplot+[ybar,bar width=6.5pt,draw=ProfilePurple!80!black,fill=ProfilePurple!70] coordinates {
+  (Query,0.515)
+  (Response,0.995)
+  (Parallel,0.429)
+};
+\addlegendentry{\texttt{profile\_balanced}}
+\addplot[dashed,black,thick,forget plot] coordinates {
+  (Query,1.0)
+  (Response,1.0)
+  (Parallel,1.0)
+};
+
+\nextgroupplot[
+  title={Matrix-linear backend},
+  title style={font=\small},
+  symbolic x coords={Query,Response,Parallel}
+]
+\addplot+[ybar,bar width=6.5pt,draw=CountBlue!80!black,fill=CountBlue!70] coordinates {
+  (Query,0.768)
+  (Response,0.744)
+  (Parallel,0.846)
+};
+\addplot+[ybar,bar width=6.5pt,draw=HybridGreen!80!black,fill=HybridGreen!72] coordinates {
+  (Query,0.921)
+  (Response,0.895)
+  (Parallel,0.923)
+};
+\addplot+[ybar,bar width=6.5pt,draw=ProfilePurple!80!black,fill=ProfilePurple!70] coordinates {
+  (Query,0.953)
+  (Response,0.913)
+  (Parallel,0.846)
+};
+\addplot[dashed,black,thick,forget plot] coordinates {
+  (Query,1.0)
+  (Response,1.0)
+  (Parallel,1.0)
+};
+
+\end{groupplot}
+\end{tikzpicture}
+\end{document}

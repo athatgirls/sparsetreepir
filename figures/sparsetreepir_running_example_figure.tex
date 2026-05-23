@@ -1,0 +1,207 @@
+\documentclass[tikz,border=8pt]{standalone}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc}
+
+\definecolor{COne}{RGB}{229,115,115}
+\definecolor{CTwo}{RGB}{255,183,77}
+\definecolor{CThree}{RGB}{129,199,132}
+\definecolor{CFour}{RGB}{100,181,246}
+\definecolor{DefaultGray}{RGB}{224,224,224}
+
+\tikzset{
+  node base/.style={
+    draw,
+    circle,
+    minimum size=5.8mm,
+    inner sep=0pt,
+    font=\scriptsize,
+    thick,
+  },
+  default node/.style={
+    node base,
+    draw=gray!60,
+    fill=DefaultGray,
+    text=gray!70!black,
+  },
+  real node/.style={
+    node base,
+    draw=black,
+    fill=white,
+  },
+  public node/.style={
+    node base,
+    draw=black,
+    fill=white,
+    line width=1.1pt,
+  },
+  c1 node/.style={
+    node base,
+    fill=COne!28,
+    draw=COne!75!black,
+  },
+  c2 node/.style={
+    node base,
+    fill=CTwo!32,
+    draw=CTwo!75!black,
+  },
+  c3 node/.style={
+    node base,
+    fill=CThree!28,
+    draw=CThree!75!black,
+  },
+  c4 node/.style={
+    node base,
+    fill=CFour!28,
+    draw=CFour!75!black,
+  },
+  db box/.style={
+    draw,
+    rounded corners=2pt,
+    text width=8.9cm,
+    align=left,
+    font=\footnotesize,
+    minimum height=10mm,
+    inner sep=5pt,
+    thick,
+  },
+  legend box/.style={
+    draw,
+    rounded corners=2pt,
+    fill=gray!6,
+    font=\small,
+    align=left,
+    inner sep=4pt,
+  },
+}
+
+\begin{document}
+\begin{tikzpicture}[x=0.78cm,y=1.05cm,>=Latex]
+
+\node[font=\bfseries\large] at (0.0, 1.0) {Conceptual SMT Coordinate Tree};
+\node[font=\small] at (0.0, 0.25) {toy height-$4$ logical SMT with occupied leaves $\{16,17,18,20,21,24,25\}$};
+\node[font=\bfseries\large] at (14.85, 1.0) {PIR Color Subdatabases};
+
+% Tree coordinates
+\node[public node] (n1) at (0, -0.8) {1};
+
+\node[c1 node] (n2) at (-4, -2.0) {2};
+\node[c2 node] (n3) at (4, -2.0) {3};
+
+\node[c4 node] (n4) at (-6, -3.2) {4};
+\node[c3 node] (n5) at (-2, -3.2) {5};
+\node[real node] (n6) at (2, -3.2) {6};
+\node[default node] (n7) at (6, -3.2) {7};
+
+\node[c4 node] (n8) at (-7, -4.4) {8};
+\node[c4 node] (n9) at (-5, -4.4) {9};
+\node[real node] (n10) at (-3, -4.4) {10};
+\node[default node] (n11) at (-1, -4.4) {11};
+\node[real node] (n12) at (1, -4.4) {12};
+\node[default node] (n13) at (3, -4.4) {13};
+\node[default node] (n14) at (5, -4.4) {14};
+\node[default node] (n15) at (7, -4.4) {15};
+
+\node[c1 node] (n16) at (-7.5, -5.6) {16};
+\node[c1 node] (n17) at (-6.5, -5.6) {17};
+\node[real node] (n18) at (-5.5, -5.6) {18};
+\node[default node] (n19) at (-4.5, -5.6) {19};
+\node[c3 node] (n20) at (-3.5, -5.6) {20};
+\node[c3 node] (n21) at (-2.5, -5.6) {21};
+\node[default node] (n22) at (-1.5, -5.6) {22};
+\node[default node] (n23) at (-0.5, -5.6) {23};
+\node[c2 node] (n24) at (0.5, -5.6) {24};
+\node[c2 node] (n25) at (1.5, -5.6) {25};
+\node[default node] (n26) at (2.5, -5.6) {26};
+\node[default node] (n27) at (3.5, -5.6) {27};
+\node[default node] (n28) at (4.5, -5.6) {28};
+\node[default node] (n29) at (5.5, -5.6) {29};
+\node[default node] (n30) at (6.5, -5.6) {30};
+\node[default node] (n31) at (7.5, -5.6) {31};
+
+% Tree edges
+\draw[gray!65] (n1) -- (n2);
+\draw[gray!65] (n1) -- (n3);
+\draw[gray!65] (n2) -- (n4);
+\draw[gray!65] (n2) -- (n5);
+\draw[gray!65] (n3) -- (n6);
+\draw[gray!65] (n3) -- (n7);
+\draw[gray!65] (n4) -- (n8);
+\draw[gray!65] (n4) -- (n9);
+\draw[gray!65] (n5) -- (n10);
+\draw[gray!65] (n5) -- (n11);
+\draw[gray!65] (n6) -- (n12);
+\draw[gray!65] (n6) -- (n13);
+\draw[gray!65] (n7) -- (n14);
+\draw[gray!65] (n7) -- (n15);
+\draw[gray!65] (n8) -- (n16);
+\draw[gray!65] (n8) -- (n17);
+\draw[gray!65] (n9) -- (n18);
+\draw[gray!65] (n9) -- (n19);
+\draw[gray!65] (n10) -- (n20);
+\draw[gray!65] (n10) -- (n21);
+\draw[gray!65] (n11) -- (n22);
+\draw[gray!65] (n11) -- (n23);
+\draw[gray!65] (n12) -- (n24);
+\draw[gray!65] (n12) -- (n25);
+\draw[gray!65] (n13) -- (n26);
+\draw[gray!65] (n13) -- (n27);
+\draw[gray!65] (n14) -- (n28);
+\draw[gray!65] (n14) -- (n29);
+\draw[gray!65] (n15) -- (n30);
+\draw[gray!65] (n15) -- (n31);
+
+% Legend
+\node[legend box, anchor=north west] at (-8.4, -6.5) {%
+  \begin{tikzpicture}[x=1cm,y=1cm,baseline]
+    \node[c1 node] at (0,0) {};
+    \node[anchor=west,font=\small] at (0.45,0) {PIR record in a color subdatabase};
+    \node[real node] at (0,-0.55) {};
+    \node[anchor=west,font=\small] at (0.45,-0.55) {non-default node, not a PIR proof record};
+    \node[default node] at (0,-1.10) {};
+    \node[anchor=west,font=\small] at (0.45,-1.10) {default empty node};
+  \end{tikzpicture}
+};
+
+% Labels
+\node[font=\scriptsize] at ($(n1)+(0,0.55)$) {public root};
+\node[font=\scriptsize] at ($(n2)+(-0.65,0.0)$) {C1};
+\node[font=\scriptsize] at ($(n3)+(0.65,0.0)$) {C2};
+\node[font=\scriptsize] at ($(n4)+(-0.65,0.0)$) {C4};
+\node[font=\scriptsize] at ($(n5)+(0.65,0.0)$) {C3};
+\node[font=\scriptsize] at ($(n8)+(-0.65,0.0)$) {C4};
+\node[font=\scriptsize] at ($(n16)+(-0.60,0.0)$) {C1};
+\node[font=\scriptsize] at ($(n20)+(0,-0.48)$) {C3};
+\node[font=\scriptsize] at ($(n24)+(0,-0.48)$) {C2};
+
+% Subdatabase boxes
+\node[db box, fill=COne!10, draw=COne!75!black, anchor=north west] (db1) at (9.2, -0.7) {%
+  \textbf{Subdatabase C1}\\
+  node $2$: serves leaves $\{24,25\}$\\
+  node $16$: serves leaf $\{17\}$;\quad node $17$: serves leaf $\{16\}$
+};
+
+\node[db box, fill=CTwo!10, draw=CTwo!75!black, anchor=north west] (db2) at (9.2, -2.35) {%
+  \textbf{Subdatabase C2}\\
+  node $3$: serves leaves $\{16,17,18,20,21\}$\\
+  node $24$: serves leaf $\{25\}$;\quad node $25$: serves leaf $\{24\}$
+};
+
+\node[db box, fill=CThree!10, draw=CThree!75!black, anchor=north west] (db3) at (9.2, -4.0) {%
+  \textbf{Subdatabase C3}\\
+  node $5$: serves leaves $\{16,17,18\}$\\
+  node $20$: serves leaf $\{21\}$;\quad node $21$: serves leaf $\{20\}$
+};
+
+\node[db box, fill=CFour!10, draw=CFour!75!black, anchor=north west] (db4) at (9.2, -5.65) {%
+  \textbf{Subdatabase C4}\\
+  node $4$: serves leaves $\{20,21\}$\\
+  node $8$: serves leaf $\{18\}$;\quad node $9$: serves leaves $\{16,17\}$
+};
+
+% The node color and the right-hand listing jointly define subdatabase membership.
+
+\end{tikzpicture}
+\end{document}

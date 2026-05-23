@@ -1,0 +1,3 @@
+label,source_path,height,key_mode,input_records,unique_keys,occupied_leaves,slot_collisions,active_nodes,exact_width,avg_active_path_len,max_active_path_len_by_leaf,dummy_fraction,ideal_max_bucket,profile_max_bucket,profile_size_gap,profile_over_ideal,profile_runtime_ms,valid
+zksync_era_account_leaf_workload_sample,datasets\zksync_era_account_leaf_workload_sample.csv,128,sha256,956,956,956,0,1910,13,10.189330543933055,13,0.21620534277438044,147,147,1,1.0,3078.99389998056,True
+zksync_era_account_leaf_workload_sample,datasets\zksync_era_account_leaf_workload_sample.csv,256,sha256,956,956,956,0,1910,13,10.189330543933055,13,0.21620534277438044,147,147,1,1.0,3256.354399956763,True

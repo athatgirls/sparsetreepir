@@ -1,0 +1,11 @@
+file,exit_code,hashes,query_bytes,response_bytes,total_bytes,query_gen_us,answer_us,extract_us,db_gen_us,rate,stdout_check,stderr
+colorA_10_2.json,0,204,28672,11264,39936,6723,31089,717,258657,0.015625,invalid,AVX512F is not enabled.
+colorB_10_2.json,0,204,28672,11264,39936,5550,31063,1152,242036,0.015625,invalid,AVX512F is not enabled.
+colorC_10_2.json,0,204,28672,11264,39936,4522,38257,848,250555,0.015625,invalid,AVX512F is not enabled.
+colorD_10_2.json,0,204,28672,11264,39936,4404,43130,869,260872,0.015625,invalid,AVX512F is not enabled.
+colorE_10_2.json,0,205,28672,11264,39936,4224,30509,733,237580,0.015625,invalid,AVX512F is not enabled.
+colorF_10_2.json,0,205,28672,11264,39936,4964,44094,841,248966,0.015625,invalid,AVX512F is not enabled.
+colorG_10_2.json,0,205,28672,11264,39936,3692,30421,720,241531,0.015625,invalid,AVX512F is not enabled.
+colorH_10_2.json,0,205,28672,11264,39936,3817,27942,712,238386,0.015625,invalid,AVX512F is not enabled.
+colorI_10_2.json,0,205,28672,11264,39936,3702,31055,719,231283,0.015625,invalid,AVX512F is not enabled.
+colorJ_10_2.json,0,205,28672,11264,39936,3963,38575,986,240170,0.015625,invalid,AVX512F is not enabled.

@@ -1,0 +1,4 @@
+height,batch_size,num_entries,tree_initialization_us,pbc_db_total_ms,database_size_bytes,map_size_bytes,map_to_database_ratio,avg_indexing_ms,avg_map_handover_us,failure_rate
+10,10,2046,2137,33,65496,288542,4.40549,37,522,0
+16,16,131070,220097,1036,4194264,18480926,4.40624,34,70961,0
+20,20,2097150,3504149,24735,67108824,295698206,4.40625,86,1884669,0
