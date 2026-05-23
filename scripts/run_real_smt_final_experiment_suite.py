@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import csv
 import math
+import os
 import random
 from dataclasses import dataclass
 from pathlib import Path
@@ -781,7 +782,7 @@ def main() -> None:
     simplepir_rows: List[Dict[str, object]] = []
     if args.run_simplepir:
         workspace = Path.cwd()
-        workspace_drive = ensure_subst_drive(args.simplepir_drive, workspace)
+        workspace_drive = ensure_subst_drive(args.simplepir_drive, workspace) if os.name == "nt" else workspace.resolve()
         simplepir_root, go_exe, env = simplepir_environment(workspace_drive)
         backend_specs = backend_instances(workloads, [args.simplepir_height], args.simplepir_workloads)
         print()

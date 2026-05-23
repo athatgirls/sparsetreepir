@@ -6,12 +6,12 @@ This note replaces the previous synthetic height/sparsity experiments. Every SMT
 
 | Workload | Kind | Key mode | Source |
 |---|---|---|---|
-| Polygon zkEVM recent | deployment-trace | sha256 | `datasets\polygon_zkevm_account_leaf_workload.csv` |
-| Polygon zkEVM multi-window | deployment-trace | sha256 | `datasets\polygon_zkevm_account_leaf_workload_multiwindow.csv` |
-| Polygon zkEVM broad | deployment-trace | sha256 | `datasets\polygon_zkevm_account_leaf_workload_broad_multiwindow.csv` |
-| ZKsync Era sample | deployment-trace | sha256 | `datasets\zksync_era_account_leaf_workload_sample.csv` |
-| ZKsync Era broad | deployment-trace | sha256 | `datasets\zksync_era_account_leaf_workload_broad_sample.csv` |
-| FuelLabs SMT test vectors | smt-test-vector | hex-prefix | `datasets\fuel_smt_test_workload.csv` |
+| Polygon zkEVM recent | deployment-trace | sha256 | `datasets/polygon_zkevm_account_leaf_workload.csv` |
+| Polygon zkEVM multi-window | deployment-trace | sha256 | `datasets/polygon_zkevm_account_leaf_workload_multiwindow.csv` |
+| Polygon zkEVM broad | deployment-trace | sha256 | `datasets/polygon_zkevm_account_leaf_workload_broad_multiwindow.csv` |
+| ZKsync Era sample | deployment-trace | sha256 | `datasets/zksync_era_account_leaf_workload_sample.csv` |
+| ZKsync Era broad | deployment-trace | sha256 | `datasets/zksync_era_account_leaf_workload_broad_sample.csv` |
+| FuelLabs SMT test vectors | smt-test-vector | hex-prefix | `datasets/fuel_smt_test_workload.csv` |
 
 ## 1. Main real-workload resource shape
 
@@ -62,21 +62,21 @@ Plain SMT proof serving is included only as a semantic reference. It is much che
 
 | Dataset | h | scheme | width | active | queries | setup ms | query ms | answer parallel ms | recover ms | online KB |
 |---|---:|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Polygon zkEVM recent | 128 | flat_active_pir | 11 | 766 | 20 | 1.541 | 9.726 | 0.125 | 0.583 | 38.844 |
-| Polygon zkEVM recent | 128 | pbc_smt_active | 17 | 766 | 20 | 6.561 | 11.676 | 0.000 | 1.008 | 25.500 |
-| Polygon zkEVM recent | 128 | sparsetreepir_activebalance | 11 | 766 | 20 | 0.763 | 6.442 | 0.000 | 0.258 | 11.688 |
-| Polygon zkEVM multi-window | 128 | flat_active_pir | 14 | 2694 | 20 | 7.752 | 17.705 | 0.161 | 1.365 | 91.438 |
-| Polygon zkEVM multi-window | 128 | pbc_smt_active | 21 | 2694 | 20 | 27.938 | 17.597 | 0.101 | 2.108 | 51.844 |
-| Polygon zkEVM multi-window | 128 | sparsetreepir_activebalance | 14 | 2694 | 20 | 8.048 | 9.637 | 0.050 | 0.929 | 25.375 |
-| Polygon zkEVM broad | 128 | flat_active_pir | 17 | 14078 | 20 | 34.428 | 43.995 | 0.709 | 7.910 | 253.406 |
-| Polygon zkEVM broad | 128 | pbc_smt_active | 26 | 14078 | 20 | 100.300 | 30.852 | 0.466 | 4.554 | 133.250 |
-| Polygon zkEVM broad | 128 | sparsetreepir_activebalance | 17 | 14078 | 20 | 30.872 | 16.555 | 0.253 | 2.788 | 62.156 |
-| ZKsync Era sample | 128 | flat_active_pir | 13 | 1910 | 20 | 2.754 | 14.044 | 0.127 | 1.331 | 71.094 |
-| ZKsync Era sample | 128 | pbc_smt_active | 20 | 1910 | 20 | 14.303 | 14.622 | 0.127 | 1.727 | 43.125 |
-| ZKsync Era sample | 128 | sparsetreepir_activebalance | 13 | 1910 | 20 | 5.015 | 8.791 | 0.025 | 0.377 | 20.719 |
-| ZKsync Era broad | 128 | flat_active_pir | 17 | 15478 | 20 | 29.703 | 47.312 | 0.748 | 7.784 | 265.625 |
-| ZKsync Era broad | 128 | pbc_smt_active | 26 | 15478 | 20 | 100.599 | 34.479 | 0.154 | 4.091 | 138.938 |
-| ZKsync Era broad | 128 | sparsetreepir_activebalance | 17 | 15478 | 20 | 41.689 | 16.729 | 0.100 | 2.675 | 65.344 |
-| FuelLabs SMT test vectors | 128 | flat_active_pir | 9 | 198 | 20 | 1.573 | 6.065 | 0.000 | 0.277 | 16.312 |
-| FuelLabs SMT test vectors | 128 | pbc_smt_active | 14 | 198 | 20 | 2.752 | 7.595 | 0.000 | 0.250 | 12.000 |
-| FuelLabs SMT test vectors | 128 | sparsetreepir_activebalance | 9 | 198 | 20 | 2.047 | 4.927 | 0.000 | 0.275 | 5.906 |
+| Polygon zkEVM recent | 128 | flat_active_pir | 11 | 766 | 20 | 4.379 | 12.156 | 0.014 | 0.493 | 38.844 |
+| Polygon zkEVM recent | 128 | pbc_smt_active | 17 | 766 | 20 | 7.653 | 12.218 | 0.004 | 0.663 | 25.500 |
+| Polygon zkEVM recent | 128 | sparsetreepir_activebalance | 11 | 766 | 20 | 4.885 | 7.951 | 0.005 | 0.369 | 11.688 |
+| Polygon zkEVM multi-window | 128 | flat_active_pir | 14 | 2694 | 20 | 9.111 | 19.122 | 0.024 | 1.676 | 91.438 |
+| Polygon zkEVM multi-window | 128 | pbc_smt_active | 21 | 2694 | 20 | 27.007 | 18.380 | 0.010 | 1.646 | 51.844 |
+| Polygon zkEVM multi-window | 128 | sparsetreepir_activebalance | 14 | 2694 | 20 | 9.010 | 10.574 | 0.006 | 0.635 | 25.375 |
+| Polygon zkEVM broad | 128 | flat_active_pir | 17 | 14078 | 20 | 35.549 | 40.363 | 0.082 | 5.065 | 253.406 |
+| Polygon zkEVM broad | 128 | pbc_smt_active | 26 | 14078 | 20 | 108.728 | 31.277 | 0.013 | 3.289 | 133.250 |
+| Polygon zkEVM broad | 128 | sparsetreepir_activebalance | 17 | 14078 | 20 | 40.346 | 17.217 | 0.012 | 1.847 | 62.156 |
+| ZKsync Era sample | 128 | flat_active_pir | 13 | 1910 | 20 | 7.985 | 15.850 | 0.015 | 1.104 | 71.094 |
+| ZKsync Era sample | 128 | pbc_smt_active | 20 | 1910 | 20 | 19.337 | 15.901 | 0.006 | 1.198 | 43.125 |
+| ZKsync Era sample | 128 | sparsetreepir_activebalance | 13 | 1910 | 20 | 8.051 | 9.494 | 0.005 | 0.465 | 20.719 |
+| ZKsync Era broad | 128 | flat_active_pir | 17 | 15478 | 20 | 39.721 | 41.299 | 0.065 | 4.618 | 265.625 |
+| ZKsync Era broad | 128 | pbc_smt_active | 26 | 15478 | 20 | 127.937 | 32.046 | 0.016 | 3.417 | 138.938 |
+| ZKsync Era broad | 128 | sparsetreepir_activebalance | 17 | 15478 | 20 | 44.024 | 18.525 | 0.012 | 1.925 | 65.344 |
+| FuelLabs SMT test vectors | 128 | flat_active_pir | 9 | 198 | 20 | 0.925 | 10.988 | 0.015 | 0.339 | 16.312 |
+| FuelLabs SMT test vectors | 128 | pbc_smt_active | 14 | 198 | 20 | 3.454 | 9.119 | 0.004 | 0.304 | 12.000 |
+| FuelLabs SMT test vectors | 128 | sparsetreepir_activebalance | 9 | 198 | 20 | 1.673 | 6.005 | 0.004 | 0.127 | 5.906 |

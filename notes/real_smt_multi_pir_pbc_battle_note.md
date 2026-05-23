@@ -12,8 +12,8 @@ The point is not that PBC is a PIR backend. PBC is a batch organization. We ther
 | Backend | Avg. online reduction | Avg. query-time reduction | Avg. parallel-server reduction |
 |---|---:|---:|---:|
 | 2server-XOR-PIR-model | 52.7% | 100.0% | 48.6% |
-| LWE-PIR-prototype-d64 | 62.3% | 56.0% | 53.5% |
-| SimplePIR-full-api | 52.4% | 43.8% | 68.6% |
+| LWE-PIR-prototype-d64 | 62.3% | 53.5% | 48.1% |
+| SimplePIR-full-api | 52.4% | 39.8% | 10.3% |
 
 ## Per-workload summary
 
