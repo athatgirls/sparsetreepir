@@ -35,7 +35,7 @@ This note replaces the previous synthetic height/sparsity experiments. Every SMT
 | Comparison | Mean resource change on real workloads | Interpretation |
 |---|---:|---|
 | vs perfectized TreePIR object | active N <= 15,478, while full h=128/256 trees have $2^{129}-2$ / $2^{257}-2$ records | Full coordinate tree is the wrong PIR-facing object for real SMT workloads. |
-| vs Pruned TreePIR-h | width down 92.1%, max bucket down 60.7% | Pruning defaults but keeping TreePIR's height-h query universe leaves many empty color slots and unbalanced level buckets. |
+| vs Pruned TreePIR-h | width down 92.1%, max bucket down 60.7% | Pruning defaults but keeping TreePIR-style h-color query universe leaves many empty color slots and unbalanced level buckets. |
 | vs PBC-style SMT route | width down 34.8%, max bucket down 48.6% | Generic batch coding does not exploit active interval/path structure. |
 | vs flat active PIR | max searched database down 92.1% | Storing only active records is not enough; color partitioning changes backend shape. |
 | vs node-local hybrid coloring | max color store down 16.0% | ActiveBalance improves the exact-width active color-store profile. |

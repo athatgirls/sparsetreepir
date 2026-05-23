@@ -311,7 +311,7 @@ def scheme_layout_rows(instance: InstanceArtifacts) -> List[Dict[str, object]]:
                 if instance.height > 0 and avg_path_lengths
                 else 0.0
             ),
-            "notes": "Pruned TreePIR-style baseline: delete default records but keep the height-h level-color query universe.",
+            "notes": "Pruned TreePIR-style baseline: delete default records but keep the TreePIR-style h-color query universe.",
         },
         {
             **common,

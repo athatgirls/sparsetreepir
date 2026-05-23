@@ -203,6 +203,15 @@ The set of all active proof-bearing nodes is denoted by $\mathcal{A}(T)$.
 
 The first condition ensures that $u$ itself carries a real digest rather than a public default-empty digest. The second condition ensures that $u$ is the sibling-side node for at least one real target leaf. Thus $\mathcal{A}(T)$ contains exactly the non-empty sibling digests that may have to be retrieved through PIR. Empty sibling subtrees remain outside the PIR database because their digests are publicly reconstructible from the default hash chain.
 
+\begin{proposition}[Minimal non-default PIR record set]
+\label{prop:active-record-minimality}
+Fix a public height-$h$ SMT snapshot $T$ and the public default-empty hash chain. In the record-based retrieval model where a PIR record supplies a proof sibling digest and public defaults may be filled locally, $\mathcal{A}(T)$ is exactly the set of non-default sibling digests that may be required by some occupied-leaf membership proof. Consequently, any PIR-facing database that supports all occupied-leaf membership proofs must make one digest for every node in $\mathcal{A}(T)$ retrievable, while no default-empty sibling position needs a PIR record.
+\end{proposition}
+
+\begin{proof}
+If $u\in\mathcal{A}(T)$, then $u$ is non-empty and $\operatorname{sib}(u)$ is also non-empty. Choose any occupied leaf in the subtree of $\operatorname{sib}(u)$; the verifier-facing membership proof for that leaf contains the digest of $u$ as a sibling digest. Because $u$ is non-empty, this digest is not supplied by the public default-empty chain except with the usual hash-collision failure probability. Thus a record-based private retrieval layout that reconstructs every occupied-leaf proof must make this digest retrievable. Conversely, if a proof sibling subtree is empty, its digest is the public value $\Delta_t$ for the corresponding height $t$ and is reconstructed locally. A non-empty node whose sibling subtree is empty is not a sibling for any occupied target leaf. Therefore the necessary and sufficient non-default PIR record set is precisely $\mathcal{A}(T)$.
+\end{proof}
+
 \begin{definition}[Active proof path]
 For any real leaf $\ell \in \mathcal{L}$, let
 \[
@@ -302,7 +311,7 @@ For a target leaf $\ell$, the client is assumed to know the following public aux
 \end{enumerate}
 \end{definition}
 
-The PIR subdatabases store only retrieved node digests. The level and interval information required for local proof reconstruction is carried by the public metadata tables rather than by private payloads.
+The PIR subdatabases store only retrieved node digests. The level and interval information required for local proof reconstruction is carried by the public metadata tables rather than by PIR records.
 
 \subsection{Setup Leakage and Target Privacy}
 
@@ -795,14 +804,14 @@ Fix a public height-$h$ SMT snapshot $T$ with active set $\mathcal{A}(T)$, activ
 \begin{enumerate}[leftmargin=2em]
   \item the client reconstructs a valid standard height-$h$ SMT membership proof;
   \item the retrieval is target-private relative to the setup leakage in Definition~\ref{def:leakagefunction} and the target-privacy game in Definition~\ref{def:privacygame};
-  \item the private server payload contains exactly $N=|\mathcal{A}(T)|$ digest records, and the public metadata size is $O(N)$;
+  \item the PIR database contains exactly $N=|\mathcal{A}(T)|$ digest records, and the public metadata size is $O(N)$;
   \item client-side lookup and proof completion together cost $O(m\log N+h)$ time;
   \item the backend workload is determined by the color-store load vector $\{|\mathcal{D}_c|\}_{c=1}^{m}$: a sequential execution performs one PIR query over each $\mathcal{D}_c$, while a parallel execution is bottlenecked by the largest per-color backend cost.
 \end{enumerate}
 \end{theorem}
 
 \begin{proof}
-The first item follows from Proposition~\ref{prop:batch} and Proposition~\ref{prop:complete}: each color returns at most one real active sibling digest, and default-empty levels are filled locally. The second item is exactly Theorem~\ref{prop:privacy}. The private payload consists of one digest for each active proof-bearing node by construction, while the metadata tables store a constant number of fields per active node, so their size is $O(N)$. The fourth item combines Theorem~\ref{thm:complete} with the interval-search bound in Theorem~\ref{thm:index}. Finally, the online protocol issues one independent PIR subquery to each color subdatabase. Therefore backend work composes over the sizes of the searched color stores, with the sequential and parallel interpretations stated above.
+The first item follows from Proposition~\ref{prop:batch} and Proposition~\ref{prop:complete}: each color returns at most one real active sibling digest, and default-empty levels are filled locally. The second item is exactly Theorem~\ref{prop:privacy}. The PIR-facing database consists of one digest for each active proof-bearing node by construction, while the metadata tables store a constant number of fields per active node, so their size is $O(N)$. The fourth item combines Theorem~\ref{thm:complete} with the interval-search bound in Theorem~\ref{thm:index}. Finally, the online protocol issues one independent PIR subquery to each color subdatabase. Therefore backend work composes over the sizes of the searched color stores, with the sequential and parallel interpretations stated above.
 \end{proof}
 
 \begin{remark}
@@ -813,7 +822,7 @@ Algorithms~\ref{alg:query} and~\ref{alg:complete} are directly implementable: al
 \section{Experimental Evaluation}
 \label{sec:experiments}
 
-The evaluation studies SparseTreePIR as a private retrieval layout for fixed public SMT snapshots. We do not compare against ordinary SMT proof serving as if it were a privacy-preserving baseline: direct proof serving is included only as a semantic reference because it reveals the target. Instead, the experiments compare layouts that can be queried with a fixed-shape private transcript. The baselines are chosen to test the ``simple sparse TreePIR extension'' hypothesis directly: perfectized TreePIR applies the full perfect-tree object, Pruned TreePIR-$h$ deletes default records but keeps TreePIR's height-$h$ level-color query universe, PBC-style SMT applies generic batch placement after active extraction, and flat active PIR removes inactive records but does not exploit active-width coloring. The evaluation asks four questions: (i) what PIR-facing database profile is induced by real SMT key sets; (ii) how much of the improvement comes from choosing the active proof object rather than a perfect-tree object; (iii) how much does \ActiveBalance{} improve a valid active coloring; and (iv) whether the resulting layouts improve concrete executable PIR backends on the same real workloads.
+The evaluation studies SparseTreePIR as a private retrieval layout for fixed public SMT snapshots. We do not compare against ordinary SMT proof serving as if it were a privacy-preserving baseline: direct proof serving is included only as a semantic reference because it reveals the target. Instead, the experiments compare layouts that can be queried with a fixed-shape private transcript. The baselines are chosen to test the ``simple sparse TreePIR extension'' hypothesis directly: perfectized TreePIR applies the full perfect-tree object, Pruned TreePIR-$h$ deletes default records but keeps TreePIR's height-$h$ color/query universe, PBC-style SMT applies generic batch placement after active extraction, and flat active PIR removes inactive records but does not exploit active-width coloring. The evaluation asks four questions: (i) what PIR-facing database profile is induced by real SMT key sets; (ii) how much of the improvement comes from choosing the active proof object rather than a perfect-tree object; (iii) how much does \ActiveBalance{} improve a valid active coloring; and (iv) whether the resulting layouts improve concrete executable PIR backends on the same real workloads.
 
 \subsection{Workloads, Platform, and Metrics}
 
@@ -829,7 +838,7 @@ For backend measurements, we use the height-$128$ workloads and compare the PBC-
 
 \subsection{Privacy-Preserving Layouts}
 
-We compare five layout choices. \emph{Perfectized TreePIR} treats the SMT as a complete height-$h$ perfect tree and is used only as an accounting baseline, because a height-$128$ or height-$256$ full coordinate tree is not materializable. \emph{Pruned TreePIR-$h$} first removes public default records but keeps TreePIR's height-$h$ level-color query universe; it is the direct ``delete empty nodes'' baseline. \emph{PBC-style SMT} is an optimistic PBC-style accounting baseline over the same active proof records: it stores three replicated copies and spreads them over $\lceil1.5m\rceil$ buckets. Our implementation uses deterministic balanced placement rather than sampled Cuckoo placement when reporting bucket sizes. This gives the PBC-style baseline an optimistic bucket balance and removes seed dependence from the layout comparison. \emph{Flat active PIR} stores active proof records once, but searches one global active database for each proof slot. \emph{SparseTreePIR} stores the same active proof records once, partitions them by active-interval coloring, and applies \ActiveBalance{} to reduce the largest color store.
+We compare five layout choices. \emph{Perfectized TreePIR} treats the SMT as a complete height-$h$ perfect tree and is used only as an accounting baseline, because a height-$128$ or height-$256$ full coordinate tree is not materializable. \emph{Pruned TreePIR-$h$} first removes public default records but keeps TreePIR's height-$h$ color/query universe; it is the direct ``delete empty nodes'' baseline. \emph{PBC-style SMT} is an optimistic PBC-style accounting baseline over the same active proof records: it stores three replicated copies and spreads them over $\lceil1.5m\rceil$ buckets. Our implementation uses deterministic balanced placement rather than sampled Cuckoo placement when reporting bucket sizes. This gives the PBC-style baseline an optimistic bucket balance and removes seed dependence from the layout comparison. \emph{Flat active PIR} stores active proof records once, but searches one global active database for each proof slot. \emph{SparseTreePIR} stores the same active proof records once, partitions them by active-interval coloring, and applies \ActiveBalance{} to reduce the largest color store.
 
 \begin{table*}[!t]
 \centering
@@ -857,7 +866,7 @@ ZKsync broad         & 256 & 7740  & 15478 & 17 & 13.25 & 22.03\% & 256 / 3014 &
 \end{tabular}
 \end{table*}
 
-In Table~\ref{tab:real_workload_shape}, Active $N$ is the number of PIR-facing proof records, $m$ is the active batch width, Dummy is the fraction of dummy color slots under SparseTreePIR, Pruned width/max reports the height-$h$ level-color query universe after deleting default records, PBC width/max reports $\lceil1.5m\rceil$ buckets and the balanced PBC accounting bucket, and Sparse max is the largest SparseTreePIR color store after \ActiveBalance{}. The table shows that the PIR-facing active object is small even when the verifier proof remains a height-$128$ or height-$256$ SMT proof. Across the workload suite, the active batch width is between $9$ and $17$, while the direct pruned-TreePIR baseline still issues $128$ or $256$ level-color queries. For the broad ZKsync workload, for example, $15478$ active proof records are partitioned into $17$ color stores and the largest contains $911$ records, compared with a Pruned TreePIR-$128$ largest level bucket of $3014$ records. Increasing the logical height from $128$ to $256$ does not change these active records for the measured key sets because the occupied-leaf skeleton has already separated; the client still reconstructs the remaining verifier levels from public default hashes.
+In Table~\ref{tab:real_workload_shape}, Active $N$ is the number of PIR-facing proof records, $m$ is the active batch width, Dummy is the fraction of dummy color slots under SparseTreePIR, Pruned width/max reports the TreePIR-style $h$-color query universe after deleting default records, PBC width/max reports $\lceil1.5m\rceil$ buckets and the balanced PBC accounting bucket, and Sparse max is the largest SparseTreePIR color store after \ActiveBalance{}. The table shows that the PIR-facing active object is small even when the verifier proof remains a height-$128$ or height-$256$ SMT proof. Across the workload suite, the active batch width is between $9$ and $17$, while the direct pruned-TreePIR baseline still issues $128$ or $256$ color queries. For the broad ZKsync workload, for example, $15478$ active proof records are partitioned into $17$ color stores and the largest contains $911$ records, compared with a Pruned TreePIR-$128$ largest bucket of $3014$ records. Increasing the logical height from $128$ to $256$ does not change these active records for the measured key sets because the occupied-leaf skeleton has already separated; the client still reconstructs the remaining verifier levels from public default hashes.
 
 \begin{table}[!t]
 \centering
@@ -871,7 +880,7 @@ In Table~\ref{tab:real_workload_shape}, Active $N$ is the number of PIR-facing p
 Comparison & Observed resource effect & Interpretation \\
 \midrule
 vs. perfectized TreePIR & Full $h=128/256$ objects are $>4.3{\cdot}10^{34}\times$ / $>10^{73}\times$ larger than the largest active object & Full coordinate trees are a mismatched PIR-facing object for real SMT workloads. \\
-vs. Pruned TreePIR-$h$ & $9.5\times$ fewer subqueries; $2.5\times$ smaller largest level bucket & Pruning default records still leaves the wrong height-$h$ query universe. \\
+vs. Pruned TreePIR-$h$ & $9.5\times$ fewer subqueries; $2.5\times$ smaller largest pruned bucket & Pruning default records still leaves the wrong height-$h$ query universe. \\
 vs. PBC-style SMT & $1.5\times$ fewer subqueries; $1.9\times$ smaller largest bucket & Generic batch placement does not exploit active interval/path structure. \\
 vs. flat active PIR & $12.7\times$ smaller max searched database & Active storage alone is insufficient; color-store splitting changes the backend profile. \\
 vs. node-local active coloring & $1.2\times$ smaller max color store & \ActiveBalance{} improves the exact-width active color-store profile. \\
@@ -880,7 +889,7 @@ vs. node-local active coloring & $1.2\times$ smaller max color store & \ActiveBa
 \par}
 \end{table}
 
-Table~\ref{tab:real_gain_sources} separates the source of each improvement. Perfectized TreePIR uses a proof object that is natural for complete trees but inflated for sparse SMT snapshots. Pruned TreePIR-$h$ uses the active records but inherits TreePIR's height-pinned level-color universe, causing many dummy slots and level-bucket imbalance. PBC-style SMT also uses the active proof records, but treats them as an arbitrary batch and pays for replication and extra buckets. Flat active PIR removes inactive coordinates but still queries one large active database repeatedly. SparseTreePIR combines active-only storage, an active-width query pattern, and balanced color stores.
+Table~\ref{tab:real_gain_sources} separates the source of each improvement. Perfectized TreePIR uses a proof object that is natural for complete trees but inflated for sparse SMT snapshots. Pruned TreePIR-$h$ uses the active records but inherits TreePIR's height-pinned $h$-color query universe, causing many dummy slots and level-bucket imbalance. PBC-style SMT also uses the active proof records, but treats them as an arbitrary batch and pays for replication and extra buckets. Flat active PIR removes inactive coordinates but still queries one large active database repeatedly. SparseTreePIR combines active-only storage, an active-width query pattern, and balanced color stores.
 
 Overall, the evaluation isolates three effects. Active extraction removes the full coordinate tree from the PIR-facing database, avoiding a perfectized object that is more than $10^{34}\times$ larger even at height $128$. Active-width coloring is more than pruning: it replaces the height-$h$ pruned TreePIR query universe with the exact active width, giving $9.5\times$ fewer subqueries and a $2.5\times$ smaller largest bucket on the height-$128$ real workloads. It also gives $1.5\times$ fewer subqueries than the PBC-style baseline and a $12.7\times$ smaller searched database than flat active PIR. \ActiveBalance{} then reduces the largest searched color store by another $1.2\times$ without changing the active width. These effects are orthogonal to the choice of PIR backend: the backend experiments below measure whether the improved layout profile carries over to existing PIR implementations.
 
@@ -938,12 +947,37 @@ PIANO local runner & $3\times50$ & $1.5\times$ & $1.9\times$ & $2.3\times$ & $2.
 
 Table~\ref{tab:real_backend_summary} is the main backend result. Against the PBC-style SMT baseline, SparseTreePIR gives $2.1\times$ lower online communication under the full SimplePIR bridge and $2.3\times$ lower online communication under the PIANO runner. In the SimplePIR full-API bridge, server-answer time is $1.8\times$ lower on average; PIANO answer timers are not reported because the artifact's small-database counters are often zero or quantized. Query generation and backend setup time also improve by $1.7\times$--$3.1\times$. The ratio table is backed by checked-in raw seed-level CSVs: each row records the baseline and SparseTreePIR online KB, query-generation time, SimplePIR server-answer time, and backend setup time for a workload and target-sampling seed. These gains are not caused by changing the PIR primitive; both schemes are measured through the same backend in each row. They come from the database profile exposed to the backend: the PBC-style baseline stores three copies over approximately $1.5m$ buckets, while SparseTreePIR stores one copy over $m$ active color stores.
 
-\begin{table*}[!t]
+\begin{table}[!t]
+\centering
+\caption{Raw SimplePIR full-API means behind Table~\ref{tab:real_backend_summary}. Values are arithmetic means over the three target-sampling seeds; communication is KB per requested proof and timings are milliseconds.}
+\label{tab:simplepir_raw_means}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lrrrrrr}
+\toprule
+Workload & PBC KB & Sparse KB & PBC query & Sparse query & PBC answer & Sparse answer \\
+\midrule
+Fuel vectors        & 12.000 & 5.906  & 9.061  & 5.936  & 0.033 & 0.023 \\
+Polygon recent      & 25.500 & 11.688 & 12.180 & 7.609  & 0.044 & 0.029 \\
+ZKsync sample       & 43.125 & 20.719 & 15.817 & 9.684  & 0.076 & 0.038 \\
+Polygon multi-window& 51.844 & 25.375 & 17.792 & 10.633 & 0.081 & 0.047 \\
+Polygon broad       & 133.250& 62.156 & 32.367 & 17.223 & 0.245 & 0.114 \\
+ZKsync broad        & 138.938& 65.344 & 32.302 & 17.679 & 0.268 & 0.120 \\
+\bottomrule
+\end{tabular}
+\par}
+\end{table}
+
+Table~\ref{tab:simplepir_raw_means} gives the absolute SimplePIR values behind the aggregate ratios. The ratios in Table~\ref{tab:real_backend_summary} are computed from per-workload reductions, so they need not equal ratios of rounded arithmetic means in the raw table. The seed-level CSVs also report backend setup time and the raw PIANO runner values.
+
+\begin{table}[!t]
 \centering
 \caption{Per-workload executable-backend gains against the PBC-style SMT baseline. Width reports PBC-style buckets / SparseTreePIR colors; other entries are baseline/SparseTreePIR cost ratios averaged over three seeds.}
 \label{tab:real_backend_workloads}
 \scriptsize
-\setlength{\tabcolsep}{4pt}
+\setlength{\tabcolsep}{3pt}
+\resizebox{\linewidth}{!}{%
 \begin{tabular}{lrrrrrr}
 \toprule
 Workload & Width & SimplePIR online & SimplePIR query & PIANO online & PIANO query & PIANO max-bucket \\
@@ -956,7 +990,8 @@ Polygon broad        & 26 / 17 & $2.1\times$ & $1.9\times$ & $2.1\times$ & $3.1\
 ZKsync broad         & 26 / 17 & $2.1\times$ & $1.8\times$ & $2.1\times$ & $2.1\times$ & $2.0\times$ \\
 \bottomrule
 \end{tabular}
-\end{table*}
+\par}
+\end{table}
 
 Table~\ref{tab:real_backend_workloads} shows that the communication improvement is stable across workloads. SimplePIR online communication is $2.0\times$--$2.2\times$ lower, and PIANO online communication is $2.1\times$--$3.2\times$ lower. Timing gains vary more than communication because they depend on backend parameter tiers, artifact-local refresh behavior, and small-database effects, but every workload still benefits in the repeated measurements. These results support the intended experimental claim: the active-interval layout improves the concrete PIR workload seen by existing backends.
 
