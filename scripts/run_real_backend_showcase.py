@@ -55,6 +55,12 @@ def safe_reduction(baseline: float, improved: float) -> float:
     return 1.0 - improved / max(1e-9, baseline)
 
 
+def optional_reduction(baseline: float, improved: float) -> float | str:
+    if abs(baseline) < 1e-9:
+        return ""
+    return safe_reduction(baseline, improved)
+
+
 def loads_from_indexes(indexes: Dict[int, List[Tuple[int, int, int]]], width: int) -> List[int]:
     return [len(indexes.get(color, [])) for color in range(1, width + 1)]
 
@@ -213,7 +219,7 @@ def summarize(rows: Sequence[Dict[str, object]]) -> List[Dict[str, object]]:
                 "setup_reduction": safe_reduction(float(pbc["setup_ms"]), float(sparse["setup_ms"])),
                 "pbc_server_parallel_ms": pbc["server_parallel_ms"],
                 "sparse_server_parallel_ms": sparse["server_parallel_ms"],
-                "server_parallel_reduction": safe_reduction(
+                "server_parallel_reduction": optional_reduction(
                     float(pbc["server_parallel_ms"]), float(sparse["server_parallel_ms"])
                 ),
             }
