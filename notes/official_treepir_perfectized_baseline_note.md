@@ -8,9 +8,9 @@ TreePIR's coloring and fast indexing.
 
 | h | occupied | active nodes | TreePIR records | record reduction | width h -> m | max bucket reduction | official indexing |
 |---:|---:|---:|---:|---:|---:|---:|---:|
-| 16 | 33 | 64 | 131,070 | 2048.0x | 16 -> 7.33 (54.2%) | 877.7x | 855 us |
-| 20 | 524 | 1046 | 2,097,150 | 2004.9x | 20 -> 12.00 (40.0%) | 1191.6x | 1056 us |
-| 24 | 8389 | 16776 | 33,554,430 | 2000.1x | 24 -> 17.00 (29.2%) | 1412.7x | 1030 us |
+| 16 | 33 | 64 | 131,070 | 2048.0x | 16 -> 7.33 (54.2%) | 877.7x | 1008 us |
+| 20 | 524 | 1046 | 2,097,150 | 2004.9x | 20 -> 12.00 (40.0%) | 1191.6x | 1176 us |
+| 24 | 8389 | 16776 | 33,554,430 | 2000.1x | 24 -> 17.00 (29.2%) | 1412.7x | 1415 us |
 
 Interpretation: TreePIR can be run after perfectizing the SMT, but the
 official code's database sizes and color sequence are functions of the
