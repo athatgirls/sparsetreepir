@@ -44,6 +44,18 @@ PIANO backend evidence:
 python scripts/run_piano_wsl_backend_from_layouts.py --queries 5 --timeout 300
 ```
 
+Paper-facing real backend showcase:
+
+```bash
+python scripts/run_real_backend_showcase.py --workloads all --height 128 --backends simplepir,piano --query-samples 20
+```
+
+This command rebuilds the real SMT workload layouts and compares PBC-SMT
+against SparseTreePIR through executable SimplePIR and PIANO runners. It writes
+`examples/real_backend_showcase_raw.csv`,
+`examples/real_backend_showcase_summary.csv`, and
+`notes/real_backend_showcase_note.md`.
+
 For details, see `notes/linux_experiment_migration_plan.md`.
 
 ## Backend scope

@@ -13,6 +13,16 @@ prototypes, and prior-art artifact smoke tests.
 These are the two backends that should be described as current concrete
 backend evidence in the paper.
 
+For the paper-facing real-data run, use:
+
+```bash
+python scripts/run_real_backend_showcase.py --workloads all --height 128 --backends simplepir,piano --query-samples 20
+```
+
+This command compares PBC-SMT and SparseTreePIR on the repository's real SMT
+workloads through the executable SimplePIR and PIANO runners, and writes a
+single raw table plus a paired summary table.
+
 ## Already in the repository, but not a production backend integration
 
 | Backend/model | Status | How to describe it |
