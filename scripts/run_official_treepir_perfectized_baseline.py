@@ -8,14 +8,17 @@ then aligns the resulting perfect-tree costs with our direct SMT profile results
 from __future__ import annotations
 
 import csv
+import os
 import re
+import shutil
 import subprocess
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-TREEPIR_DIR = ROOT / "external" / "TreePIR-main" / "TreePIR-Indexing"
-JAVA_EXE = ROOT / "external" / "jre21" / "jdk-21.0.11+10-jre" / "bin" / "java.exe"
+TREEPIR_ROOT = Path(os.environ.get("TREEPIR_ROOT", ROOT / "external" / "TreePIR-main"))
+TREEPIR_DIR = TREEPIR_ROOT / "TreePIR-Indexing"
+WINDOWS_JAVA_EXE = ROOT / "external" / "jre21" / "jdk-21.0.11+10-jre" / "bin" / "java.exe"
 DIRECT_RESULTS = ROOT / "examples" / "height16_24_fixed_sparsity_profile_balance_results.csv"
 OUT_CSV = ROOT / "examples" / "official_treepir_perfectized_baseline.csv"
 OUT_NOTE = ROOT / "notes" / "official_treepir_perfectized_baseline_note.md"
@@ -25,12 +28,26 @@ SPARSITY = "0.9995"
 TARGET_LEAF = 17
 
 
+def java_exe() -> str:
+    if WINDOWS_JAVA_EXE.exists():
+        return str(WINDOWS_JAVA_EXE)
+    found = shutil.which("java")
+    if found:
+        return found
+    raise SystemExit("Could not find Java. Install a JRE/JDK or run scripts/setup_linux_extra_backend_sources.sh.")
+
+
 def run_official_indexing(height: int) -> dict[str, float]:
+    if not TREEPIR_DIR.exists():
+        raise SystemExit(
+            f"TreePIR indexing directory not found: {TREEPIR_DIR}\n"
+            "Run scripts/setup_linux_extra_backend_sources.sh on Linux first."
+        )
     list_file = TREEPIR_DIR / f"list_TXs_{height}_2.txt"
     list_file.write_text(f"{TARGET_LEAF}\n", encoding="utf-8")
 
     proc = subprocess.run(
-        [str(JAVA_EXE), "-cp", "src", "SubCSA", str(height), "."],
+        [java_exe(), "-cp", "src", "SubCSA", str(height), "."],
         cwd=TREEPIR_DIR,
         check=True,
         text=True,

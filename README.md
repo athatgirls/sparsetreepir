@@ -51,3 +51,12 @@ For details, see `notes/linux_experiment_migration_plan.md`.
 The Linux setup intentionally installs only the current executable SparseTreePIR
 backend integrations: SimplePIR and PIANO. Other backend attempts and artifact
 checks are documented separately in `notes/backend_integration_status.md`.
+
+To fetch and inspect additional real backend artifacts on Linux, run:
+
+```bash
+bash scripts/setup_linux_extra_backend_sources.sh
+python scripts/check_linux_backend_readiness.py
+```
+
+See `notes/linux_extra_backend_runbook.md` for the suggested order and scope.

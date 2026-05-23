@@ -44,3 +44,14 @@ Do not claim that SparseTreePIR has already been fully integrated with every
 production PIR backend. The honest claim is that SparseTreePIR changes the
 PIR-facing database shape, and we validate that shape with two executable
 backends plus supporting models/artifact checks.
+
+## Linux extra-backend preparation
+
+The repository now includes:
+
+- `scripts/setup_linux_extra_backend_sources.sh`
+- `scripts/check_linux_backend_readiness.py`
+- `notes/linux_extra_backend_runbook.md`
+
+These files prepare Linux checkouts for TreePIR, Spiral, YPIR, VBPIR, and
+SealPIR so that the remaining artifact work can be run on a Linux machine.
