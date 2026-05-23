@@ -23,6 +23,16 @@ This command compares PBC-SMT and SparseTreePIR on the repository's real SMT
 workloads through the executable SimplePIR and PIANO runners, and writes a
 single raw table plus a paired summary table.
 
+For the final paper table, run the repeated version:
+
+```bash
+bash scripts/collect_linux_experiment_env.sh
+python scripts/run_real_backend_showcase_repeats.py --seeds 73000,83000,93000 --workloads all --height 128 --backends simplepir,piano --query-samples 50
+```
+
+The repeated runner keeps per-seed CSVs and also writes an aggregate
+mean/stddev summary for the paper.
+
 ## Already in the repository, but not a production backend integration
 
 | Backend/model | Status | How to describe it |

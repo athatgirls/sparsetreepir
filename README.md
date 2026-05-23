@@ -56,6 +56,24 @@ against SparseTreePIR through executable SimplePIR and PIANO runners. It writes
 `examples/real_backend_showcase_summary.csv`, and
 `notes/real_backend_showcase_note.md`.
 
+Final repeated backend run for paper tables:
+
+```bash
+bash scripts/collect_linux_experiment_env.sh
+python scripts/run_real_backend_showcase_repeats.py --seeds 73000,83000,93000 --workloads all --height 128 --backends simplepir,piano --query-samples 50
+```
+
+Or run the same final checklist through one shell entrypoint:
+
+```bash
+bash scripts/run_final_linux_backend_experiments.sh
+```
+
+This produces per-seed backend results plus
+`examples/real_backend_showcase_repeats_summary.csv` and
+`notes/real_backend_showcase_repeats_note.md`. See
+`notes/linux_final_backend_runbook.md` for the final Linux checklist.
+
 For details, see `notes/linux_experiment_migration_plan.md`.
 
 ## Backend scope
