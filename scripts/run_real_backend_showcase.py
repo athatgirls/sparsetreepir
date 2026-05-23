@@ -55,8 +55,8 @@ def safe_reduction(baseline: float, improved: float) -> float:
     return 1.0 - improved / max(1e-9, baseline)
 
 
-def optional_reduction(baseline: float, improved: float) -> float | str:
-    if abs(baseline) < 1e-9:
+def optional_reduction(baseline: float, improved: float, *, min_baseline: float = 1e-9) -> float | str:
+    if abs(baseline) < min_baseline:
         return ""
     return safe_reduction(baseline, improved)
 
@@ -220,7 +220,7 @@ def summarize(rows: Sequence[Dict[str, object]]) -> List[Dict[str, object]]:
                 "pbc_server_parallel_ms": pbc["server_parallel_ms"],
                 "sparse_server_parallel_ms": sparse["server_parallel_ms"],
                 "server_parallel_reduction": optional_reduction(
-                    float(pbc["server_parallel_ms"]), float(sparse["server_parallel_ms"])
+                    float(pbc["server_parallel_ms"]), float(sparse["server_parallel_ms"]), min_baseline=0.01
                 ),
             }
         )

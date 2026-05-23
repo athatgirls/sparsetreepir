@@ -16,7 +16,6 @@ METRIC_COLUMNS = [
     "online_reduction",
     "query_reduction",
     "setup_reduction",
-    "server_parallel_reduction",
 ]
 
 
