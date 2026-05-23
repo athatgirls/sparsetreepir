@@ -670,7 +670,7 @@ def write_note(
             "Full coordinate tree is the wrong PIR-facing object for real SMT workloads. |"
         )
         lines.append(
-            f"| vs Pruned TreePIR-h | width down {pct(width_reduction_pruned)}, max bucket down {pct(bucket_reduction_pruned)} | Pruning defaults but keeping TreePIR's height-h query universe leaves many empty color slots and unbalanced level buckets. |"
+            f"| vs Pruned TreePIR-h | width down {pct(width_reduction_pruned)}, max bucket down {pct(bucket_reduction_pruned)} | Pruning defaults but keeping the TreePIR-style h-color query universe leaves many empty color slots and unbalanced pruned stores. |"
         )
         lines.append(
             f"| vs PBC-style SMT route | width down {pct(width_reduction_pbc)}, max bucket down {pct(bucket_reduction_pbc)} | Generic batch coding does not exploit active interval/path structure. |"
