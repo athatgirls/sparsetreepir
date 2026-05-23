@@ -15,27 +15,28 @@ This note replaces the previous synthetic height/sparsity experiments. Every SMT
 
 ## 1. Main real-workload resource shape
 
-| Dataset | h | keys | active N | m | avg path | dummy | PBC width/max | Flat max | Sparse max | Sparse/lower |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| FuelLabs SMT test vectors | 128 | 100 | 198 | 9 | 6.88 | 23.56% | 14/43 | 198 | 23 | 1.045 |
-| FuelLabs SMT test vectors | 256 | 100 | 198 | 9 | 6.88 | 23.56% | 14/43 | 198 | 23 | 1.045 |
-| Polygon zkEVM broad | 128 | 7,040 | 14,078 | 17 | 13.11 | 22.86% | 26/1,625 | 14,078 | 829 | 1.000 |
-| Polygon zkEVM broad | 256 | 7,040 | 14,078 | 17 | 13.11 | 22.86% | 26/1,625 | 14,078 | 829 | 1.000 |
-| Polygon zkEVM multi-window | 128 | 1,348 | 2,694 | 14 | 10.73 | 23.36% | 21/385 | 2,694 | 193 | 1.000 |
-| Polygon zkEVM multi-window | 256 | 1,348 | 2,694 | 14 | 10.73 | 23.36% | 21/385 | 2,694 | 193 | 1.000 |
-| Polygon zkEVM recent | 128 | 384 | 766 | 11 | 8.89 | 19.15% | 17/136 | 766 | 70 | 1.000 |
-| Polygon zkEVM recent | 256 | 384 | 766 | 11 | 8.89 | 19.15% | 17/136 | 766 | 70 | 1.000 |
-| ZKsync Era broad | 128 | 7,740 | 15,478 | 17 | 13.25 | 22.03% | 26/1,786 | 15,478 | 911 | 1.000 |
-| ZKsync Era broad | 256 | 7,740 | 15,478 | 17 | 13.25 | 22.03% | 26/1,786 | 15,478 | 911 | 1.000 |
-| ZKsync Era sample | 128 | 956 | 1,910 | 13 | 10.19 | 21.62% | 20/287 | 1,910 | 147 | 1.000 |
-| ZKsync Era sample | 256 | 956 | 1,910 | 13 | 10.19 | 21.62% | 20/287 | 1,910 | 147 | 1.000 |
+| Dataset | h | keys | active N | m | avg path | dummy | Pruned-h width/max | PBC width/max | Flat max | Sparse max | Sparse/lower |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| FuelLabs SMT test vectors | 128 | 100 | 198 | 9 | 6.88 | 23.56% | 128/40 | 14/43 | 198 | 23 | 1.045 |
+| FuelLabs SMT test vectors | 256 | 100 | 198 | 9 | 6.88 | 23.56% | 256/40 | 14/43 | 198 | 23 | 1.045 |
+| Polygon zkEVM broad | 128 | 7,040 | 14,078 | 17 | 13.11 | 22.86% | 128/2,762 | 26/1,625 | 14,078 | 829 | 1.000 |
+| Polygon zkEVM broad | 256 | 7,040 | 14,078 | 17 | 13.11 | 22.86% | 256/2,762 | 26/1,625 | 14,078 | 829 | 1.000 |
+| Polygon zkEVM multi-window | 128 | 1,348 | 2,694 | 14 | 10.73 | 23.36% | 128/530 | 21/385 | 2,694 | 193 | 1.000 |
+| Polygon zkEVM multi-window | 256 | 1,348 | 2,694 | 14 | 10.73 | 23.36% | 256/530 | 21/385 | 2,694 | 193 | 1.000 |
+| Polygon zkEVM recent | 128 | 384 | 766 | 11 | 8.89 | 19.15% | 128/168 | 17/136 | 766 | 70 | 1.000 |
+| Polygon zkEVM recent | 256 | 384 | 766 | 11 | 8.89 | 19.15% | 256/168 | 17/136 | 766 | 70 | 1.000 |
+| ZKsync Era broad | 128 | 7,740 | 15,478 | 17 | 13.25 | 22.03% | 128/3,014 | 26/1,786 | 15,478 | 911 | 1.000 |
+| ZKsync Era broad | 256 | 7,740 | 15,478 | 17 | 13.25 | 22.03% | 256/3,014 | 26/1,786 | 15,478 | 911 | 1.000 |
+| ZKsync Era sample | 128 | 956 | 1,910 | 13 | 10.19 | 21.62% | 128/370 | 20/287 | 1,910 | 147 | 1.000 |
+| ZKsync Era sample | 256 | 956 | 1,910 | 13 | 10.19 | 21.62% | 256/370 | 20/287 | 1,910 | 147 | 1.000 |
 
 ## 2. Improvement source summary
 
 | Comparison | Mean resource change on real workloads | Interpretation |
 |---|---:|---|
 | vs perfectized TreePIR object | active N <= 15,478, while full h=128/256 trees have $2^{129}-2$ / $2^{257}-2$ records | Full coordinate tree is the wrong PIR-facing object for real SMT workloads. |
-| vs PBC-SMT active route | width down 34.8%, max bucket down 48.6% | Generic batch coding does not exploit active interval/path structure. |
+| vs Pruned TreePIR-h | width down 92.1%, max bucket down 60.7% | Pruning defaults but keeping TreePIR's height-h query universe leaves many empty color slots and unbalanced level buckets. |
+| vs PBC-style SMT route | width down 34.8%, max bucket down 48.6% | Generic batch coding does not exploit active interval/path structure. |
 | vs flat active PIR | max searched database down 92.1% | Storing only active records is not enough; color partitioning changes backend shape. |
 | vs node-local hybrid coloring | max color store down 16.0% | ActiveBalance improves the exact-width active color-store profile. |
 

@@ -224,11 +224,21 @@ def pbc_width(active_width: int) -> int:
     return max(1, math.ceil(1.5 * active_width))
 
 
+def pruned_treepir_h_loads(nodes: Sequence[ProofNode], height: int) -> List[int]:
+    loads = [0] * height
+    for node in nodes:
+        if 1 <= node.depth <= height:
+            loads[node.depth - 1] += 1
+    return loads
+
+
 def scheme_layout_rows(instance: InstanceArtifacts) -> List[Dict[str, object]]:
     active_count = len(instance.active_nodes)
     full_records = full_tree_record_count(instance.height)
     pbc_w = pbc_width(instance.active_width)
     pbc_stored = 3 * active_count
+    pruned_loads = pruned_treepir_h_loads(instance.active_nodes, instance.height)
+    pruned_max = max(pruned_loads) if pruned_loads else 0
     first_fit_max = max(instance.first_fit_loads) if instance.first_fit_loads else 0
     hybrid_max = max(instance.hybrid_loads) if instance.hybrid_loads else 0
     sparse_max = max(instance.sparse_loads) if instance.sparse_loads else 0
@@ -243,7 +253,7 @@ def scheme_layout_rows(instance: InstanceArtifacts) -> List[Dict[str, object]]:
     common = {
         "dataset": instance.spec.label,
         "dataset_kind": instance.spec.kind,
-        "source_path": str(instance.spec.path),
+        "source_path": instance.spec.path.as_posix(),
         "height": instance.height,
         "key_mode": instance.spec.key_mode,
         "input_records": instance.input_records,
@@ -285,6 +295,23 @@ def scheme_layout_rows(instance: InstanceArtifacts) -> List[Dict[str, object]]:
             "sum_bucket_records": full_records,
             "max_bucket_log2": f"{math.log2(ceil_div(full_records, instance.height)):.3f}",
             "notes": "Accounting baseline: literal TreePIR-style perfect-tree object before SMT active compaction.",
+        },
+        {
+            **common,
+            "scheme": "pruned_treepir_h",
+            "private": True,
+            "width": instance.height,
+            "stored_records": active_count,
+            "replication": 1.0,
+            "max_bucket": pruned_max,
+            "sum_bucket_records": active_count,
+            "max_bucket_log2": "",
+            "dummy_fraction": (
+                mean((instance.height - value) / instance.height for value in avg_path_lengths)
+                if instance.height > 0 and avg_path_lengths
+                else 0.0
+            ),
+            "notes": "Pruned TreePIR-style baseline: delete default records but keep the height-h level-color query universe.",
         },
         {
             **common,
@@ -518,6 +545,11 @@ def write_csv(path: Path, rows: Sequence[Dict[str, object]]) -> None:
         writer.writerows(rows)
 
 
+def read_csv(path: Path) -> List[Dict[str, object]]:
+    with path.open("r", encoding="utf-8", newline="") as handle:
+        return list(csv.DictReader(handle))
+
+
 def fmt(value: object, digits: int = 2) -> str:
     if isinstance(value, str):
         return value
@@ -541,6 +573,7 @@ def write_note(
     path.parent.mkdir(parents=True, exist_ok=True)
     sparse_rows = [row for row in layout_rows if row["scheme"] == "sparsetreepir_activebalance"]
     pbc_rows = [row for row in layout_rows if row["scheme"] == "pbc_smt_active"]
+    pruned_rows = [row for row in layout_rows if row["scheme"] == "pruned_treepir_h"]
     flat_rows = [row for row in layout_rows if row["scheme"] == "flat_active_pir"]
     full_rows = [row for row in layout_rows if row["scheme"] == "perfectized_treepir"]
     hybrid_rows = [row for row in layout_rows if row["scheme"] == "hybrid_active_coloring"]
@@ -556,27 +589,29 @@ def write_note(
         "|---|---|---|---|",
     ]
     for spec in selected_workloads(args.workloads):
-        lines.append(f"| {spec.label} | {spec.kind} | {spec.key_mode} | `{spec.path}` |")
+        lines.append(f"| {spec.label} | {spec.kind} | {spec.key_mode} | `{spec.path.as_posix()}` |")
 
     lines.extend(
         [
             "",
             "## 1. Main real-workload resource shape",
             "",
-            "| Dataset | h | keys | active N | m | avg path | dummy | PBC width/max | Flat max | Sparse max | Sparse/lower |",
-            "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
+            "| Dataset | h | keys | active N | m | avg path | dummy | Pruned-h width/max | PBC width/max | Flat max | Sparse max | Sparse/lower |",
+            "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
         ]
     )
     sparse_by_key = {(row["dataset"], row["height"]): row for row in sparse_rows}
+    pruned_by_key = {(row["dataset"], row["height"]): row for row in pruned_rows}
     pbc_by_key = {(row["dataset"], row["height"]): row for row in pbc_rows}
     flat_by_key = {(row["dataset"], row["height"]): row for row in flat_rows}
     for key in sorted(sparse_by_key):
         sparse = sparse_by_key[key]
+        pruned = pruned_by_key[key]
         pbc = pbc_by_key[key]
         flat = flat_by_key[key]
         ratio = float(sparse["max_bucket"]) / max(1.0, float(sparse["structural_lower_bound"]))
         lines.append(
-            "| {dataset} | {h} | {keys} | {active} | {m} | {avg_path} | {dummy} | {pbc_width}/{pbc_max} | {flat_max} | {sparse_max} | {ratio:.3f} |".format(
+            "| {dataset} | {h} | {keys} | {active} | {m} | {avg_path} | {dummy} | {pruned_width}/{pruned_max} | {pbc_width}/{pbc_max} | {flat_max} | {sparse_max} | {ratio:.3f} |".format(
                 dataset=sparse["dataset"],
                 h=sparse["height"],
                 keys=fmt(sparse["unique_keys"], 0),
@@ -584,6 +619,8 @@ def write_note(
                 m=fmt(sparse["active_width_m"], 0),
                 avg_path=fmt(sparse["avg_active_path"], 2),
                 dummy=pct(float(sparse["dummy_fraction"]), 2),
+                pruned_width=fmt(pruned["width"], 0),
+                pruned_max=fmt(pruned["max_bucket"], 0),
                 pbc_width=fmt(pbc["width"], 0),
                 pbc_max=fmt(pbc["max_bucket"], 0),
                 flat_max=fmt(flat["max_bucket"], 0),
@@ -603,6 +640,14 @@ def write_note(
     )
     if sparse_rows:
         max_active = max(int(row["stored_records"]) for row in sparse_rows)
+        width_reduction_pruned = mean(
+            1.0 - float(s["width"]) / float(p["width"])
+            for s, p in zip(sparse_rows, pruned_rows)
+        )
+        bucket_reduction_pruned = mean(
+            1.0 - float(s["max_bucket"]) / float(p["max_bucket"])
+            for s, p in zip(sparse_rows, pruned_rows)
+        )
         width_reduction_pbc = mean(
             1.0 - float(s["width"]) / float(p["width"])
             for s, p in zip(sparse_rows, pbc_rows)
@@ -625,7 +670,10 @@ def write_note(
             "Full coordinate tree is the wrong PIR-facing object for real SMT workloads. |"
         )
         lines.append(
-            f"| vs PBC-SMT active route | width down {pct(width_reduction_pbc)}, max bucket down {pct(bucket_reduction_pbc)} | Generic batch coding does not exploit active interval/path structure. |"
+            f"| vs Pruned TreePIR-h | width down {pct(width_reduction_pruned)}, max bucket down {pct(bucket_reduction_pruned)} | Pruning defaults but keeping TreePIR's height-h query universe leaves many empty color slots and unbalanced level buckets. |"
+        )
+        lines.append(
+            f"| vs PBC-style SMT route | width down {pct(width_reduction_pbc)}, max bucket down {pct(bucket_reduction_pbc)} | Generic batch coding does not exploit active interval/path structure. |"
         )
         lines.append(
             f"| vs flat active PIR | max searched database down {pct(bucket_reduction_flat)} | Storing only active records is not enough; color partitioning changes backend shape. |"
@@ -816,6 +864,8 @@ def main() -> None:
                     f"width={row['width']}, online={float(row['online_total_kb']):.3f} KB, "
                     f"answer_parallel={float(row['server_parallel_ms']):.3f} ms"
                 )
+    elif args.simplepir_csv.exists():
+        simplepir_rows = read_csv(args.simplepir_csv)
 
     write_csv(args.instances_csv, instance_rows)
     write_csv(args.layouts_csv, layout_rows)
