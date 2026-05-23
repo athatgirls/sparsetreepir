@@ -45,3 +45,9 @@ python scripts/run_piano_wsl_backend_from_layouts.py --queries 5 --timeout 300
 ```
 
 For details, see `notes/linux_experiment_migration_plan.md`.
+
+## Backend scope
+
+The Linux setup intentionally installs only the current executable SparseTreePIR
+backend integrations: SimplePIR and PIANO. Other backend attempts and artifact
+checks are documented separately in `notes/backend_integration_status.md`.
