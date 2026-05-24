@@ -82,13 +82,15 @@ The resulting design problem is as follows. Given a fixed public SMT snapshot, d
 \section{Related Work}
 \label{sec:related}
 
-Merkle trees and authenticated data structures. Merkle's original hash-tree construction~\cite{merkle} underlies a broad family of authenticated data structures. Classical work on authenticated dictionaries and generic authenticated data structures studies how to make dictionary operations verifiable~\cite{padauth,adsgeneric}. Deployed systems use Merkle-style commitments in several roles: tamper-evident and certificate-transparency logs~\cite{ctv2,ctqueue,crosbywallach}, key-transparency, transparency-dictionary, and verifiable key-directory systems~\cite{coniks,transdict,parakeet,optiks}, replicated key-value stores~\cite{dynamo}, append-only authenticated structures~\cite{balloon}, and blockchain or stateless-client state commitments~\cite{utreexo,ethereum,zcash}. These works explain why authenticated maps matter. Our leakage model targets a different layer: the fixed SMT snapshot and its public metadata are not hidden; the goal is to hide which occupied target proof is retrieved from that public snapshot.
+\textit{Merkle trees and authenticated data structures.}
+Merkle's hash-tree construction~\cite{merkle} underlies authenticated dictionaries and generic authenticated data structures~\cite{padauth,adsgeneric}. Deployed systems use Merkle-style commitments for certificate-transparency logs~\cite{ctv2,ctqueue,crosbywallach}, key-transparency and verifiable-directory systems~\cite{coniks,transdict,parakeet,optiks}, replicated key-value stores~\cite{dynamo}, append-only authenticated structures~\cite{balloon}, and blockchain or stateless-client commitments~\cite{utreexo,ethereum,zcash}. These systems provide integrity and efficient verification, but they do not hide which proof a client requests. Our setting keeps the SMT snapshot and public metadata visible, while hiding the queried occupied leaf.
 
-Sparse Merkle trees and proof serving. SMTs refine Merkle authentication for large logical address spaces by assigning public default hashes to empty subtrees~\cite{sparsemt}. This idea appears naturally in revocation/transparency-style maps, authenticated maps, constrained revocation checking, and state-commitment structures such as Jellyfish Merkle Tree~\cite{revtrans,vcer,jmt}. Recent authenticated-map and rollup work further optimizes proof size, multiproofs, or batch update cost~\cite{compactmultiproof,rollupsmt,multicollisiontree}. These systems primarily optimize ordinary proof serving: a server traverses the requested coordinate, returns the non-default siblings, and relies on the verifier to reconstruct default-empty levels. SparseTreePIR preserves these proof semantics but changes the retrieval interface. The server should be able to serve the same membership proof without learning which occupied leaf is being checked. Thus the key property for our protocol is not sparsity alone, but \emph{public reconstructibility under private retrieval}: default siblings can remain public, while real sibling digests must be partitioned into PIR subdatabases under a fixed-shape transcript.
+\textit{Sparse Merkle trees and proof generation.}
+SMTs support large logical key spaces by assigning public default hashes to empty subtrees~\cite{sparsemt}. They appear in revocation/transparency maps, authenticated maps, constrained revocation checking, and state-commitment structures such as Jellyfish Merkle Tree~\cite{revtrans,vcer,jmt}. Recent work optimizes proof size, multiproofs, non-membership proofs, batch updates, or alternative authenticated structures~\cite{compactmultiproof,rollupsmt,multicollisiontree}. These systems improve ordinary SMT storage, updates, or proof generation. SparseTreePIR keeps the standard verification interface: the client reconstructs a height-$h$ membership proof. The change is at the retrieval layer, where only non-default sibling digests are queried through PIR and default-empty levels are reconstructed locally.
 
 \begin{table*}[!t]
 \centering
-\caption{Ordinary SMT proof-serving work optimizes proof generation, storage, or update cost, whereas SparseTreePIR adds a target-private retrieval layer}
+\caption{Representative authenticated-map and SMT proof-serving systems and their relation to private proof retrieval}
 \label{tab:smt-prior-proof-serving}
 \scriptsize
 \setlength{\tabcolsep}{4pt}
@@ -127,15 +129,18 @@ Changes the authenticated structure; our work keeps standard SMT proof semantics
 \end{tabular}
 \end{table*}
 
-Private retrieval of authenticated proofs. Lueks and Goldberg studied private retrieval of authenticated proofs in a multi-client setting~\cite{lueksgoldberg}; subsequent work explored privacy-preserving Certificate Transparency auditing and proof retrieval with CT-specific mechanisms~\cite{ctprivacy,kalesct}. The closest layout-level idea is TreePIR~\cite{treepir}: color proof nodes so that one proof can be retrieved with one PIR query per color. We adopt this principle, but change the object being partitioned. TreePIR colors a perfect-tree proof structure; SparseTreePIR colors the active interval forest induced by a fixed SMT snapshot. This is a different retrieval domain, not merely a smaller instance of the same domain: the records are selected by non-default sibling semantics, indexed by served intervals over occupied targets, and completed back into a height-$h$ verifier proof using public default hashes. Thus applying TreePIR to a perfectized SMT, or applying generic batch placement to the active records, leaves the main SMT-specific problem unsolved. SparseTreePIR is an SMT proof-retrieval layout, not a competing PIR primitive.
+\textit{Private retrieval of authenticated proofs.}
+Private retrieval of authenticated proofs has been studied in multi-client and transparency-log settings~\cite{lueksgoldberg,ctprivacy,kalesct}. The closest structural baseline is TreePIR~\cite{treepir}, which partitions proof nodes of a perfect binary Merkle tree into color classes so that each proof path contains at most one node from each class. SparseTreePIR uses the same one-query-per-color principle, but the database records are different. TreePIR is formulated for a perfect-tree proof layout; an SMT contains public default proof positions that should not be stored or queried through PIR. Pruning those records after expanding to a perfect tree still leaves the wrong query universe. SparseTreePIR instead builds the PIR database directly from non-default sibling digests that can occur in occupied-leaf membership proofs, uses interval metadata for lookup, and reconstructs the ordinary height-$h$ proof with default hashes. Thus it is an SMT proof-retrieval layout, not a new PIR primitive and not a direct TreePIR instantiation.
 
-Batch and practical PIR. PIR research began with multi-server information-theoretic constructions~\cite{chor} and single-server computational PIR~\cite{ko97,cms}. Generic batch retrieval has a long line of work based on batch codes and combinatorial batch codes~\cite{batchcodes,cbc}. The practical PBC line was brought into PIR prominently by Angel, Chen, Laine, and Setty's 2018 SealPIR work, which uses probabilistic batch codes and Cuckoo-style placement to amortize multi-query PIR processing~\cite{sealpir,cuckoo}. More recent batch or multi-query PIR systems further reduce the cost of retrieving several records through vectorized processing or constant-weight-code techniques~\cite{vectorbatchpir,pirana}. Practical PIR backends have also improved server computation, communication, response size, and packing, including XPIR, OnionPIR, Spiral, SimplePIR, PIANO, and YPIR~\cite{xpir,onionpir,spiral,simplepir,piano,ypir}. These systems determine cryptographic constants and packing efficiency; our contribution determines the database profiles they query. We do not propose a new cryptographic PIR primitive. Instead, we partition SMT proof records into color subdatabases so that a single proof becomes a fixed-shape batch workload: one subquery per color, with real and dummy targets hidden by the underlying PIR security.
+\textit{Batch PIR and practical PIR backends.}
+PIR began with multi-server information-theoretic constructions~\cite{chor} and single-server computational PIR~\cite{ko97,cms}. Batch retrieval uses batch codes and combinatorial batch codes~\cite{batchcodes,cbc}; practical systems use probabilistic batch codes, Cuckoo-style placement, vectorized processing, or constant-weight-code techniques~\cite{sealpir,cuckoo,vectorbatchpir,pirana}. Backends such as XPIR, OnionPIR, Spiral, SimplePIR, PIANO, and YPIR improve communication, server computation, packing, and preprocessing~\cite{xpir,onionpir,spiral,simplepir,piano,ypir}. These systems provide the private-retrieval backend. They do not specify which SMT proof records should enter the PIR database, how to group them into subdatabases, or how to reconstruct the standard SMT proof. SparseTreePIR exposes such a database layout to any compatible backend; real and dummy queries are hidden by the query privacy of the underlying PIR scheme.
 
-Baselines induced by prior work. Existing SMT systems already optimize the \emph{ordinary} proof-serving path: the server stores a sparse/default-completable authenticated map, traverses the target coordinate, and returns the sibling digests needed by the verifier~\cite{sparsemt,revtrans,vcer,jmt}. Some default-empty siblings can be omitted because the client reconstructs them from the public default-hash chain. This semantic property is the starting point for our construction, but prior SMT proof serving is not a target-private retrieval pattern: the server learns the requested key or path. Table~\ref{tab:prior-baselines} separates what each prior line provides from what remains missing for fixed-shape batch PIR. It also motivates the evaluation methodology: we compare against prior-work-induced privacy-preserving layouts rather than only against internal ablations.
+\textit{Baselines derived from prior work.}
+Existing SMT systems optimize ordinary proof serving: the server traverses the requested coordinate and returns the sibling digests needed for verification~\cite{sparsemt,revtrans,vcer,jmt}. Some default-empty siblings can be omitted because the client reconstructs them from public defaults, but the request still reveals the key or path. Table~\ref{tab:prior-baselines} separates what each prior line provides from what remains missing for batch PIR. Once query privacy is required, the relevant comparison is between PIR database layouts for the same proof-retrieval task, rather than only against non-private proof-serving systems or internal ablations.
 
 \begin{table*}[!t]
 \centering
-\caption{Prior-work-induced layouts for SMT proof retrieval}
+\caption{PIR database layouts for private SMT proof retrieval derived from prior work}
 \label{tab:prior-baselines}
 \scriptsize
 \setlength{\tabcolsep}{4pt}
@@ -147,17 +152,17 @@ Baselines induced by prior work. Existing SMT systems already optimize the \emph
 Prior line & Natural proof object & Induced baseline & Missing for our goal \\
 \midrule
 Standard SMT proof APIs~\cite{sparsemt,revtrans,jmt} &
-Height-$h$ proof path with real siblings and public defaults &
+Height-$h$ proof path with non-default siblings and public defaults &
 Plain SMT proof serving &
 No target privacy; server sees the queried coordinate/path \\
 \addlinespace
 Compact SMT storage~\cite{sparsemt,vcer,jmt} &
 Non-default skeleton plus public default chain &
-Active-only proof serving &
-Saves storage, but gives no fixed-shape PIR query pattern \\
+Non-default proof-record serving &
+Saves storage, but gives no fixed PIR query pattern \\
 \addlinespace
 Generic batch-PIR placement~\cite{batchcodes,cbc,sealpir} &
-Active proof records treated as an arbitrary batch &
+Non-default proof records treated as an arbitrary batch &
 PBC-style SMT; flat active PIR &
 Ignores ancestor/path structure; may query or replicate too much \\
 \addlinespace
@@ -167,14 +172,15 @@ Perfectized and pruned TreePIR &
 Colors the full coordinate tree, including public default positions \\
 \addlinespace
 This paper &
-Active sibling digests indexed by served intervals &
+Non-default sibling digests with interval metadata &
 SparseTreePIR &
-Active-width batch PIR with local default completion \\
+Fixed-pattern batch PIR with local default-hash reconstruction \\
 \bottomrule
 \end{tabular}
 \end{table*}
 
-Balancing PIR-facing color stores. After an active-color layout is chosen, the database layout still matters. A coloring that is valid but highly imbalanced can force one PIR subquery to operate over a much larger color class than the others. Perfect-tree coloring explains why colors reduce the proof-retrieval width, but it does not directly solve the SMT balance problem because active intervals can be highly uneven. Our \ActiveBalance{} algorithm addresses this layout issue on the active interval forest itself. The node-local rules used in the experiments are baselines only; the proposed algorithmic contribution is the subtree-level load refinement used to flatten the resulting PIR-facing color stores.
+\textit{Balancing color subdatabases.}
+A valid coloring does not necessarily give an efficient PIR layout: one color subdatabase may be much larger than the others. Perfect-tree coloring reduces the number of queries for perfect Merkle trees, but it does not address the load imbalance caused by sparse SMT snapshots. \ActiveBalance{} is a backend-independent refinement that preserves the same fixed number of PIR queries while reducing the largest queried subdatabase, complementing ordinary SMT proof-generation optimizations.
 
 \section{Problem Formulation and Leakage Model}
 \label{sec:model}
