@@ -598,15 +598,21 @@ Putting these pieces together, the online flow for one target leaf is as follows
 \section{Correctness, Privacy, and Complexity}
 \label{sec:correctness}
 
-The following claims are stated relative to the record-based one-query-per-color model just defined. In particular, the retrieval-width result is not a lower bound for every conceivable private proof-retrieval protocol. It characterizes the color count and batch profile for the model where each PIR-retrievable sibling node is assigned to one color subdatabase and each retrieval sends one subquery per color.
+This section proves the correctness, privacy, and complexity properties of SparseTreePIR. The results are stated for the one-query-per-color retrieval model used by the construction: each retrievable proof node is stored in one color subdatabase, and each online retrieval sends one PIR query to every color subdatabase. For brevity in this section, we call the PIR-retrievable sibling nodes of Section~\ref{sec:model} \emph{active proof nodes}.
 
-\begin{theorem}[Exact retrieval width for one-query-per-color retrieval]
+Let $N=|\mathcal{A}(T)|$ be the number of active proof nodes and let $n=|\mathcal{L}|$ be the number of occupied leaves. If $n=1$, then $\mathcal{A}(T)=\emptyset$, $m=0$, and no PIR query is needed. Unless otherwise stated, we assume $n\ge 2$.
+
+\subsection{Width and Record Complexity}
+
+The first result characterizes the number of colors needed by the one-query-per-color retrieval model.
+
+\begin{theorem}[Tightness of $m$ in one-query-per-color retrieval]
 \label{thm:mincolor}
-Let $n=|\mathcal{L}|\ge 2$ and let
+Let
 \[
 m=\max_{\ell\in\mathcal{L}} |\mathsf{Path}(\ell)|.
 \]
-For a fixed height-$h$ SMT snapshot, $m$ is the exact retrieval width of the one-query-per-color model: fewer than $m$ colors cannot support all target proofs, while $m$ colors are sufficient for a proper coloring of $\mathcal{A}(T)$. A feasible $m$-coloring can be computed in $O(N)$ time once the interval forest is available. Moreover,
+For a fixed height-$h$ SMT snapshot, $m$ colors are necessary and sufficient in the one-query-per-color retrieval model. A proper $m$-coloring can be computed in $O(N)$ time once the interval forest has been constructed. Moreover,
 \[
 m\le \min\{h,n-1\},
 \]
@@ -614,22 +620,20 @@ and this bound is tight for every $h$ and $n\ge 2$.
 \end{theorem}
 
 \begin{proof}
-For the lower bound, choose an occupied leaf $\ell^\star$ whose PIR-retrievable sibling set has size $m$. All nodes in $\mathsf{Path}(\ell^\star)$ appear together in one proof, so any proper coloring must assign pairwise distinct colors to these $m$ nodes. Hence at least $m$ colors are necessary.
+For necessity, choose an occupied leaf $\ell^\star$ with $|\mathsf{Path}(\ell^\star)|=m$. All nodes in $\mathsf{Path}(\ell^\star)$ appear in the same membership proof. Therefore, any proper coloring must assign distinct colors to these $m$ nodes. Hence at least $m$ colors are necessary.
 
-For the upper bound, recall that the target-rank intervals $\{I_{\mathsf{srv}}(u)\}$ form a laminar family, and two PIR-retrievable sibling nodes can co-occur in a proof exactly when their intervals intersect. In a laminar family, interval intersection is equivalent to ancestor-descendant relation in the interval forest. Therefore, assigning every node the color equal to its depth in that forest is proper: two nodes with the same depth cannot be in an ancestor-descendant relation, hence their intervals are disjoint and they never appear in the same proof. This depth coloring uses exactly the maximum forest depth, which is precisely $m$. The coloring is computed by a single depth-first traversal, hence in $O(N)$ time.
+For sufficiency, consider the target-rank intervals $\{I_{\mathsf{srv}}(u):u\in\mathcal{A}(T)\}$. These intervals form a laminar family. Two active proof nodes can appear in the same membership proof exactly when their intervals contain the same target rank. In a laminar family, this is equivalent to one interval containing the other, i.e., to an ancestor-descendant relation in the corresponding interval forest. Thus, coloring each node by its depth in the interval forest is proper: two nodes at the same forest depth are not ancestor and descendant, so their intervals are disjoint and they cannot co-occur in one proof. The number of colors used by this depth coloring is the maximum number of target-rank intervals containing any target rank, which is exactly $m$. A single traversal of the interval forest computes this coloring in $O(N)$ time.
 
-For the structural bound, every PIR-retrievable sibling node on the proof path of a target leaf $\ell$ corresponds to one ancestor where the sibling subtree is non-empty. These ancestors are at distinct SMT levels, so there are at most $h$ of them. Moreover, the non-empty sibling subtrees witnessed along one target path are pairwise disjoint, and each contains at least one occupied leaf different from $\ell$. Therefore, one target leaf can have at most $n-1$ PIR-retrievable sibling nodes, proving $m\le \min\{h,n-1\}$.
+For the structural bound, every active proof node on a target path corresponds to a distinct SMT level whose sibling subtree is non-empty. Hence there are at most $h$ such nodes. In addition, the non-empty sibling subtrees on one target path are pairwise disjoint, and each contains at least one occupied leaf different from the target leaf. Therefore, the path contains at most $n-1$ active proof nodes. This proves $m\le \min\{h,n-1\}$.
 
-The same observation gives the compressed-skeleton interpretation: after contracting unary non-default paths, only branching ancestors contribute non-default proof records, and $m$ is the maximum number of such branching nodes on any compressed root-to-leaf path.
-
-For tightness, let $k=\min\{h,n-1\}$ and choose the target leaf with logical bit string $0^h$. For each depth $d=0,\ldots,k-1$, add one occupied leaf in the sibling subtree of the target path at that depth, for example the bit string $0^d1\,0^{h-d-1}$. These $k$ leaves make all $k$ corresponding sibling subtrees non-empty, so the target has $k$ PIR-retrievable sibling nodes. If more than $k+1$ occupied leaves are required, add them arbitrarily without removing any of these witnesses. Hence the bound is attainable.
+The bound is tight. Let $k=\min\{h,n-1\}$ and choose the target leaf with logical bit string $0^h$. For each depth $d=0,\ldots,k-1$, add one occupied leaf in the sibling subtree that branches away from the target path at depth $d$, for example the bit string $0^d1\,0^{h-d-1}$. These $k$ leaves make $k$ different sibling subtrees on the target path non-empty, so the target proof contains $k$ active proof nodes. Any remaining occupied leaves can be added elsewhere without removing these witnesses. Hence the bound is attainable.
 \end{proof}
 
 \begin{remark}
 Theorem~\ref{thm:mincolor} is where the SMT formulation departs most clearly from a naive complete-tree view. In a complete-tree layout, the batch profile is pinned to the full tree height $h$ regardless of how much non-default proof material exists. In the direct SMT formulation, the batch profile is governed instead by the maximum number of non-default sibling positions on any occupied-leaf proof. Consequently, the storage gain and the width gain are related but not identical: reducing the stored proof records is immediate, while reducing the number of color queries requires the proof-specific PIR record sets themselves to become smaller.
 \end{remark}
 
-\begin{lemma}[Active-record bound]
+\begin{lemma}[Number of active proof nodes]
 \label{lem:activecount}
 Let $n=|\mathcal{L}|$. Then
 \[
@@ -639,10 +643,14 @@ The bound is tight for every binary occupied-leaf skeleton in which every branch
 \end{lemma}
 
 \begin{proof}
-Every PIR-retrievable sibling node $u$ has a parent $p$ whose two original SMT children are both non-empty: $u$ is non-empty by definition, and $\operatorname{sib}(u)$ is also non-empty. Conversely, each branching parent with two non-empty children contributes at most its two child roots to $\mathcal{A}(T)$. Thus $|\mathcal{A}(T)|$ is at most twice the number of branching internal nodes in the compressed non-default skeleton induced by the occupied leaves.
+Every active proof node $u$ has a parent $p$ whose two original SMT children are both non-empty: $u$ is non-empty by definition, and $\operatorname{sib}(u)$ is also non-empty. Conversely, each branching parent with two non-empty children contributes at most its two child roots to $\mathcal{A}(T)$. Thus $|\mathcal{A}(T)|$ is at most twice the number of branching internal nodes in the compressed non-default skeleton induced by the occupied leaves.
 
 Any finite rooted binary tree with $n$ leaves has at most $n-1$ branching internal nodes. Therefore $|\mathcal{A}(T)|\le 2(n-1)$. When the occupied-leaf skeleton is a full binary skeleton with $n-1$ branching internal nodes and both children of each branching node correspond to non-empty SMT subtrees, both child roots are active, giving equality.
 \end{proof}
+
+\subsection{Correctness}
+
+We next prove that the coloring and retrieval procedures return exactly the non-default sibling digests needed for a standard SMT membership proof.
 
 \begin{proposition}[Validity of subtree color permutations]
 \label{prop:permvalid}
@@ -657,7 +665,7 @@ If $x$ and $y$ can co-occur on a proof path, then $y$ must be an ancestor of the
 
 \begin{proposition}[Per-color uniqueness on proof paths]
 \label{prop:unique}
-If $\varphi$ is a proper coloring, then for every occupied leaf $\ell\in\mathcal{L}$ and every color $c\in[m]$, the set $\mathsf{Path}(\ell)$ contains at most one PIR-retrievable sibling node of color $c$.
+If $\varphi$ is a proper coloring, then for every occupied leaf $\ell\in\mathcal{L}$ and every color $c\in[m]$, the set $\mathsf{Path}(\ell)$ contains at most one active proof node of color $c$.
 \end{proposition}
 
 \begin{proof}
@@ -666,11 +674,11 @@ If there were two distinct nodes $u,v\in\mathsf{Path}(\ell)$ with $\varphi(u)=\v
 
 \begin{proposition}[Fixed-size batch retrieval]
 \label{prop:batch}
-Assume a correct single-item PIR backend. Then any proper coloring lets the client recover all PIR records of a target leaf $\ell$ using one batch-PIR request with exactly $m$ PIR subqueries.
+Assume a correct single-item PIR backend. Then any proper coloring lets the client recover all active proof nodes of a target leaf $\ell$ using one batch-PIR request with exactly $m$ PIR subqueries.
 \end{proposition}
 
 \begin{proof}
-By Proposition~\ref{prop:unique}, each color contributes at most one required record to $\mathsf{Path}(\ell)$. Hence the client retrieves at most one real item from each subdatabase, and uses a dummy query otherwise. The extracted real items are exactly the non-default proof material that must be supplied through PIR.
+By Proposition~\ref{prop:unique}, each color subdatabase contains at most one node from $\mathsf{Path}(\ell)$. Therefore, for each color, the client either sends a PIR query for the unique real record in that subdatabase, or sends a dummy PIR query when no such record exists. Correctness of the PIR scheme returns the selected digest in every real color. These returned digests are exactly the non-default sibling digests in $\mathsf{Path}(\ell)$.
 \end{proof}
 
 \begin{proposition}[Correctness of default-hash completion]
@@ -679,10 +687,12 @@ Assume that the underlying single-item PIR scheme is correct. If $\varphi$ is a 
 \end{proposition}
 
 \begin{proof}
-Fix a proof level $t\in\{0,\ldots,h-1\}$. There are two cases. If the sibling subtree at level $t$ contains at least one occupied leaf, then the corresponding proof node is PIR-retrievable and belongs to $\mathsf{Path}(\ell)$. By Proposition~\ref{prop:unique}, it appears in exactly one color class, so Algorithm~\ref{alg:query} records a unique non-dummy target $\tau_c$, and correctness of PIR returns its digest in $\sigma_c$. Algorithm~\ref{alg:complete} then writes that digest into $P[t]$. Otherwise, the sibling subtree at level $t$ is empty, and by SMT construction its digest is exactly the public default hash $\Delta_t$, which remains in $P[t]$.
-
-Therefore, every proof level is filled with the correct sibling digest, either from a real PIR output or from the public default-empty hash chain. Standard bottom-up Merkle verification using the path bits of $\ell$ then reconstructs the correct root digest.
+Fix a proof level $t\in\{0,\ldots,h-1\}$. If the sibling subtree at level $t$ is non-empty, then its digest is an active proof node. This node belongs to $\mathsf{Path}(\ell)$, appears in exactly one color subdatabase by Proposition~\ref{prop:unique}, and is retrieved correctly by Algorithm~\ref{alg:query}. Algorithm~\ref{alg:complete} writes this digest into the proof slot $P[t]$. If the sibling subtree at level $t$ is empty, then its digest is the public default value $\Delta_t$, and Algorithm~\ref{alg:complete} leaves $P[t]=\Delta_t$. Hence every proof slot contains the correct sibling digest. The client can therefore recompute the SMT root by the standard bottom-up Merkle verification procedure.
 \end{proof}
+
+\subsection{Target Privacy}
+
+We now prove target privacy relative to the setup leakage defined in Section~\ref{sec:model}.
 
 \begin{theorem}[Target privacy under setup leakage]
 \label{prop:privacy}
@@ -690,12 +700,16 @@ Assume the setup leakage profile and the target-privacy game in Definition~\ref{
 \end{theorem}
 
 \begin{proof}
-Fix any efficient adversary and any two target leaves $\ell_0,\ell_1$ chosen in the game. Condition on the setup leakage $\mathcal{L}_{\mathsf{setup}}(T)$: the metadata tables, color assignment, subdatabase sizes, retrieval width $m$, and the fact that every retrieval sends exactly one query to every color subdatabase are all already known. The only remaining transcript components are the $m$ PIR queries themselves.
+Fix any efficient adversary and any two occupied target leaves $\ell_0,\ell_1$ chosen in the game. Condition on the setup leakage $\mathcal{L}_{\mathsf{setup}}(T)$. The adversary already knows the SMT snapshot information included in the leakage, the active proof nodes, the coloring, the public metadata tables, the color subdatabase sizes, and the fact that every retrieval sends one PIR query to each color subdatabase. Therefore, the only target-dependent part of the online transcript is the sequence of PIR queries.
 
-Consider one color $c$. For target $\ell_b$, the client either has a unique real target index in $\mathcal{D}_c$ or has no required PIR record of that color and therefore sends a dummy query. If both targets induce real queries, query privacy of the underlying PIR makes the two selected indices indistinguishable. If one target induces a real query and the other induces a dummy query, the dummy-query assumption makes the dummy transcript indistinguishable from a well-formed PIR query over the same subdatabase, and query privacy hides the selected index. If both induce dummy queries, the distributions are identical by construction.
+Consider one color $c$. For target $\ell_b$, Algorithm~\ref{alg:query} either queries the unique real index in $\mathcal{D}_c$ whose target-rank interval contains the target rank, or sends a dummy query over the same subdatabase. If both targets induce real queries, single-item PIR query privacy makes the two selected indices computationally indistinguishable. If one target induces a real query and the other induces a dummy query, the dummy query is still distributed as a well-formed PIR query over the same subdatabase, and PIR query privacy hides whether the selected index is meaningful. If both targets induce dummy queries, the two query distributions are identical up to target-independent randomness.
 
-Thus, for every color, the query transcript generated for $\ell_0$ is computationally indistinguishable from the query transcript generated for $\ell_1$. Since $m$ is polynomially bounded, a standard hybrid argument over the $m$ colors shows that the entire batch transcript is computationally indistinguishable between $b=0$ and $b=1$. Hence every efficient adversary has negligible advantage in $\mathsf{PrivTarget}_{\mathcal{A}}(\lambda)$.
+A standard hybrid argument over the $m$ colors shows that the complete batch transcript for $\ell_0$ is computationally indistinguishable from the complete batch transcript for $\ell_1$. Since $m$ is polynomially bounded, the hybrid loss is negligible. Thus every efficient adversary has negligible advantage in the target-privacy game.
 \end{proof}
+
+\subsection{Load Balance}
+
+Correctness and privacy require only a proper coloring. The running time of a PIR backend, however, depends on the sizes of the color subdatabases. We therefore analyze the maximum subdatabase size.
 
 \begin{lemma}[Same-color intervals are disjoint]
 If $\varphi$ is a proper coloring, then for any color $c$, any two distinct intervals in
@@ -706,12 +720,12 @@ are disjoint.
 \end{lemma}
 
 \begin{proof}
-Suppose two distinct nodes $u,v$ satisfy $\varphi(u)=\varphi(v)=c$ and $I_{\mathsf{srv}}(u)\cap I_{\mathsf{srv}}(v)\neq\emptyset$. Then any occupied leaf $\ell\in I_{\mathsf{srv}}(u)\cap I_{\mathsf{srv}}(v)$ has both $u$ and $v$ in its proof-specific PIR record set, contradicting proper coloring.
+Suppose two distinct same-color nodes $u$ and $v$ had overlapping target-rank intervals. Then some occupied-leaf rank would be contained in both intervals, so the corresponding membership proof would contain both $u$ and $v$. This contradicts Proposition~\ref{prop:unique}.
 \end{proof}
 
 \begin{theorem}[Structural lower bound for color-subdatabase balance]
 \label{thm:structlb}
-Let $N=|\mathcal{A}(T)|$ and let $m$ be the retrieval width induced by the record-based model. For a node $v$ in the interval forest, let $d(v)$ be the number of PIR-retrievable nodes on the forest path from its root to $v$, including $v$, and let $\operatorname{desc}(v)$ be the number of strict descendants of $v$ in the interval forest. Define
+Let $N=|\mathcal{A}(T)|$ and let $m$ be the number of colors. For a node $v$ in the interval forest, let $d(v)$ be the number of active proof nodes on the path from the root of its connected component to $v$, including $v$, and let $\operatorname{desc}(v)$ be the number of strict descendants of $v$. Define
 \[
 B(T)=
 \max\left\{
@@ -720,6 +734,7 @@ B(T)=
 \left\lceil \frac{\operatorname{desc}(v)}{m-d(v)}\right\rceil
 \right\}.
 \]
+If the second maximum is over an empty set, it is omitted.
 Then every proper coloring $\varphi:\mathcal{A}(T)\rightarrow[m]$ satisfies
 \[
 \max_{c\in[m]} |\mathcal{D}_c| \ge B(T).
@@ -727,44 +742,52 @@ Then every proper coloring $\varphi:\mathcal{A}(T)\rightarrow[m]$ satisfies
 \end{theorem}
 
 \begin{proof}
-The term $\lceil N/m\rceil$ is the baseline equal-split lower bound. For the second term, fix any node $v$ with $d(v)<m$. Along the ancestor path from the forest root to $v$, proper coloring forces $d(v)$ distinct colors to appear. Every strict descendant of $v$ is also a descendant of all nodes on this path, and therefore cannot use any of these $d(v)$ colors. Hence all $\operatorname{desc}(v)$ strict descendants must be assigned to at most $m-d(v)$ remaining colors. By the pigeonhole principle, at least one color subdatabase contains at least
+The term $\lceil N/m\rceil$ is the equal-split lower bound. For the second term, fix a node $v$ with $d(v)<m$. The $d(v)$ nodes on the path from the component root to $v$ must have distinct colors. Every strict descendant of $v$ co-occurs with each of these path nodes in some proof and therefore cannot use any of their $d(v)$ colors. Hence the $\operatorname{desc}(v)$ strict descendants must be assigned to at most $m-d(v)$ remaining colors. By the pigeonhole principle, at least one color subdatabase contains at least
 \[
 \left\lceil \frac{\operatorname{desc}(v)}{m-d(v)}\right\rceil
 \]
 of these descendants. Taking the maximum over all such $v$ and combining it with the equal-split bound proves the claim.
 \end{proof}
 
-\begin{proposition}[ActiveBalance certificate]
+\begin{proposition}[A posteriori balance certificate and termination]
 \label{prop:activebalancecert}
 Let $\varphi_{\mathsf{out}}$ be the coloring returned by Algorithm~\ref{alg:activebalance}, and let
 \[
 U=\max_{c\in[m]}|\mathcal{D}_c(\varphi_{\mathsf{out}})|.
 \]
-Then $U/B(T)$ is an instance-wise balance certificate: if $\operatorname{OPT}$ is the smallest possible largest subdatabase among all proper colorings over $[m]$, then $U/\operatorname{OPT}\le U/B(T)$. Moreover, Algorithm~\ref{alg:activebalance} terminates at a subtree-permutation local optimum with respect to the lexicographic load vector $\Psi$.
-\end{proposition}
-
-\begin{proof}
-Let $\operatorname{OPT}$ be the minimum possible value of $\max_c|\mathcal{D}_c|$ among all proper colorings over $[m]$. By Theorem~\ref{thm:structlb}, $\operatorname{OPT}\ge B(T)$. Therefore
+Let $\operatorname{OPT}$ be the smallest possible value of $\max_c|\mathcal{D}_c|$ over all proper $m$-colorings. Then
 \[
 \frac{U}{\operatorname{OPT}}\le \frac{U}{B(T)}.
 \]
-This gives an a posteriori balance certificate for the returned instance.
+Thus $U/B(T)$ is an a posteriori balance certificate for the returned coloring. Moreover, Algorithm~\ref{alg:activebalance} accepts only finitely many improving moves. If it stops because no candidate subtree permutation improves the load vector, then the returned coloring is a local optimum under the allowed subtree-permutation moves.
+\end{proposition}
 
-For termination, observe that every accepted subtree permutation is required to strictly decrease the lexicographic load vector $\Psi$, while rejected moves do not change the coloring. There are only finitely many proper colorings of the interval forest over $[m]$. Thus the algorithm cannot accept infinitely many moves. When it stops because no improving move is found, no candidate subtree color permutation considered by Algorithm~\ref{alg:activebalance} can further decrease $\Psi$, which is precisely subtree-permutation local optimality under this move set.
+\begin{proof}
+By Theorem~\ref{thm:structlb}, $\operatorname{OPT}\ge B(T)$. Therefore
+\[
+\frac{U}{\operatorname{OPT}}\le \frac{U}{B(T)}.
+\]
+This proves the certificate.
+
+For termination, every accepted move strictly decreases the lexicographically sorted load vector $\Psi(\varphi)=\mathrm{sort}_{\downarrow}(|\mathcal{D}_1|,\ldots,|\mathcal{D}_m|)$. There are finitely many colorings of the finite interval forest over the fixed color set $[m]$. Therefore, the algorithm cannot accept infinitely many strictly improving moves. If a pass finds no improving candidate, then no subtree permutation considered by the algorithm can further decrease $\Psi$, which is exactly local optimality with respect to this move set.
 \end{proof}
+
+\subsection{Indexing and Runtime Complexity}
+
+The remaining results give the preprocessing, balancing, and online client costs.
 
 \begin{theorem}[Indexing complexity]
 \label{thm:index}
-Let $N=|\mathcal{A}(T)|$ be the total number of PIR-retrievable sibling nodes, and let $N_c=|\mathcal{D}_c|$ be the size of color subdatabase $c$. Then the interval-based preprocessing and query-indexing complexities satisfy
+Let $N=|\mathcal{A}(T)|$ be the total number of active proof nodes, and let $N_c=|\mathcal{D}_c|$ be the size of color subdatabase $c$. Then the interval metadata construction and query indexing satisfy
 \begin{align*}
 &\text{preprocessing time} \in O(N\log N),\\
 &\text{preprocessing space} \in O(N),\\
-&\text{single batch-PIR query indexing time} \in O(m\log N).
+&\text{single-retrieval indexing time} \in O(m\log N).
 \end{align*}
 \end{theorem}
 
 \begin{proof}
-Computing the intervals of all PIR-retrievable nodes takes $O(N)$ time. Sorting the interval tables costs
+Computing the target-rank interval and proof level for each active proof node takes $O(N)$ time once the compressed non-default skeleton is available. Sorting the metadata tables costs
 \[
 O\!\left(\sum_{c=1}^{m}N_c\log N_c\right)\subseteq O(N\log N).
 \]
@@ -772,12 +795,12 @@ At query time, the client performs one binary search per color, which costs
 \[
 O\!\left(\sum_{c=1}^{m}\log N_c\right)\subseteq O(m\log N).
 \]
-The total storage for active nodes and sorted interval tables is $O(N)$.
+The active digest records and their interval metadata require $O(N)$ space.
 \end{proof}
 
 \begin{theorem}[ActiveBalance complexity]
 \label{thm:activebalancecomplexity}
-Fix one proper coloring of an interval forest with $N$ PIR-retrievable nodes and retrieval width $m$. Then one execution of Algorithm~\ref{alg:activebalance} with at most $R_1$ accepted-or-rejected passes runs in
+Given a proper coloring of an interval forest with $N$ active proof nodes and $m$ colors, one execution of Algorithm~\ref{alg:activebalance} with at most $R_1$ passes runs in
 \[
 O(R_1 N m^3)
 \]
@@ -785,41 +808,41 @@ time and uses $O(Nm)$ additional space.
 \end{theorem}
 
 \begin{proof}
-In one pass, Algorithm~\ref{alg:activebalance} first annotates every subtree with its ancestor color mask and its per-color count histogram. Storing the count vectors for all $N$ nodes costs $O(Nm)$ space, and computing them by one bottom-up traversal costs $O(Nm)$ time.
+In one pass, Algorithm~\ref{alg:activebalance} computes, for each subtree root, the colors used by its ancestors and the per-color counts inside the subtree. These histograms require $O(Nm)$ space and can be computed in $O(Nm)$ time by a bottom-up traversal.
 
-Now consider one fixed subtree root $U$. Its available-color set has size at most $m$, so building the local cost matrix $K_U$ takes $O(m^2)$ time. The minimum-cost perfect matching on that square matrix is solved by the Hungarian algorithm in $O(m^3)$ time. Forming the resulting candidate load vector and checking whether the global signature improves costs at most $O(m)$. Hence evaluating one subtree costs $O(m^3)$ time, and evaluating all $N$ subtree roots in one pass costs $O(Nm^3)$.
+For a fixed subtree root $U$, the available-color set has size at most $m$. Building the local cost matrix $K_U$ takes $O(m^2)$ time, and solving the resulting assignment problem using the Hungarian algorithm takes $O(m^3)$ time. Checking the induced global load vector costs $O(m)$, which is dominated by $O(m^3)$. Evaluating all $N$ subtree roots therefore costs $O(Nm^3)$ per pass and $O(R_1Nm^3)$ over $R_1$ passes.
 
-The algorithm performs at most $R_1$ passes, and every accepted move strictly decreases the lexicographic signature $\Psi(\varphi)$, so no pass is repeated indefinitely. Therefore the total running time is $O(R_1 N m^3)$ and the peak extra space remains $O(Nm)$.
+The peak additional storage is $O(Nm)$.
 \end{proof}
 
 \begin{theorem}[Client-side completion complexity]
 \label{thm:complete}
-Assume that the public metadata tables $\{\mathcal{M}_c\}_{c=1}^{m}$ are already available and that the default-empty hash chain $\Delta_0,\ldots,\Delta_{h-1}$ has been precomputed once. Then Algorithm~\ref{alg:complete} runs in $O(h)$ time and uses $O(h)$ additional space. Consequently, the total online client work of query generation plus proof completion is
+Assume that the public metadata tables $\{\mathcal{M}_c\}_{c=1}^{m}$ are already available and that the default-empty hash chain $\Delta_0,\ldots,\Delta_{h-1}$ has been precomputed once. Then Algorithm~\ref{alg:complete} runs in $O(h)$ time and uses $O(h)$ additional space. Consequently, the total online client work for query indexing and proof completion is
 \[
 O(m\log N + h).
 \]
 \end{theorem}
 
 \begin{proof}
-Algorithm~\ref{alg:complete} initializes an array of length $h$, processes at most one extracted item per color, and performs exactly $h$ bottom-up hash combinations. Each step is constant-time apart from the hash evaluations, so the total running time is $O(h)$ and the extra space for the completed proof array is also $O(h)$. Combining this with the $O(m\log N)$ indexing time of Algorithm~\ref{alg:query} yields the stated online complexity. The one-time public preprocessing of the default-empty hash chain costs $O(h)$ time and $O(h)$ space.
+Algorithm~\ref{alg:complete} initializes a proof array of length $h$, processes at most one real PIR output per color, and performs exactly $h$ bottom-up hash computations. Thus its time and space costs are both $O(h)$. Combining this with the $O(m\log N)$ indexing cost from Theorem~\ref{thm:index} gives the stated bound. The default-empty hash chain is public and can be precomputed once in $O(h)$ time and space.
 \end{proof}
 
 The following theorem states the end-to-end guarantee used in the evaluation: it ties the construction to correctness, target privacy, storage, metadata, and PIR workload cost.
 
 \begin{theorem}[End-to-end SparseTreePIR guarantee]
 \label{thm:endtoend}
-Fix a public height-$h$ SMT snapshot $T$ with PIR-retrievable node set $\mathcal{A}(T)$, retrieval width $m$, a proper coloring $\varphi$, color subdatabases $\mathcal{D}_1,\ldots,\mathcal{D}_m$, and public metadata tables $\mathcal{M}_1,\ldots,\mathcal{M}_m$. Assume that the underlying single-item PIR backend is correct and query-private for each subdatabase, and that dummy queries are sampled from the same query distribution as well-formed PIR queries over the corresponding subdatabase. Then SparseTreePIR satisfies the following end-to-end guarantee for every occupied target leaf:
+Fix a public height-$h$ SMT snapshot $T$ with active proof-node set $\mathcal{A}(T)$, number of colors $m$, a proper coloring $\varphi$, color subdatabases $\mathcal{D}_1,\ldots,\mathcal{D}_m$, and public metadata tables $\mathcal{M}_1,\ldots,\mathcal{M}_m$. Assume that the underlying single-item PIR backend is correct and query-private for each subdatabase, and that dummy queries are sampled from the same query distribution as well-formed PIR queries over the corresponding subdatabase. Then SparseTreePIR satisfies the following end-to-end guarantee for every occupied target leaf:
 \begin{enumerate}[leftmargin=2em]
   \item the client reconstructs a valid standard height-$h$ SMT membership proof;
   \item the retrieval is target-private relative to the setup leakage in Definition~\ref{def:leakagefunction} and the target-privacy game in Definition~\ref{def:privacygame};
   \item the PIR database contains exactly $N=|\mathcal{A}(T)|$ digest records, and the public metadata size is $O(N)$;
   \item client-side lookup and proof completion together cost $O(m\log N+h)$ time;
-  \item the backend workload is determined by the subdatabase-size vector $\{|\mathcal{D}_c|\}_{c=1}^{m}$: a sequential execution performs one PIR query over each $\mathcal{D}_c$, while a parallel execution is bottlenecked by the largest per-color backend cost.
+  \item the PIR-backend workload is determined by the load vector $(|\mathcal{D}_1|,\ldots,|\mathcal{D}_m|)$: a sequential execution performs one PIR query over each color subdatabase, while a parallel execution is bottlenecked by the largest per-color backend call.
 \end{enumerate}
 \end{theorem}
 
 \begin{proof}
-The first item follows from Proposition~\ref{prop:batch} and Proposition~\ref{prop:complete}: each color returns at most one required non-default sibling digest, and default-empty levels are filled locally. The second item is exactly Theorem~\ref{prop:privacy}. The PIR database consists of one digest for each PIR-retrievable sibling node by construction, while the metadata tables store a constant number of fields per node, so their size is $O(N)$. The fourth item combines Theorem~\ref{thm:complete} with the interval-search bound in Theorem~\ref{thm:index}. Finally, the online protocol issues one independent PIR subquery to each color subdatabase. Therefore backend work composes over the sizes of the searched subdatabases, with the sequential and parallel interpretations stated above.
+The first item follows from Proposition~\ref{prop:batch} and Proposition~\ref{prop:complete}: the client privately retrieves all non-default sibling digests and fills the remaining proof slots with public default hashes. The second item follows from Theorem~\ref{prop:privacy}. For the third item, the construction stores one digest for every active proof node, and each metadata entry contains a constant number of fields. The fourth item combines Theorem~\ref{thm:index} and Theorem~\ref{thm:complete}. Finally, Algorithm~\ref{alg:query} issues one independent PIR query to each color subdatabase, so the backend workload composes over the color subdatabase sizes. Under parallel execution, the largest per-color backend call determines the bottleneck.
 \end{proof}
 
 \begin{remark}
