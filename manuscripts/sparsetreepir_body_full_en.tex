@@ -375,42 +375,42 @@ For dummy positions, the client samples a well-formed PIR query to a valid index
 \section{SparseTreePIR Construction}
 \label{sec:coloring}
 
-This section turns the model into a concrete retrieval construction. The offline algorithm builds the PIR-facing databases from the compressed non-default skeleton, not from a materialized full tree. The online algorithms then show how a client generates a fixed-shape batch query and completes the standard height-$h$ SMT proof locally.
+This section presents the fixed-snapshot retrieval protocol. Offline preprocessing constructs the PIR database from the compressed non-default SMT representation, rather than from a materialized full binary tree. Online retrieval issues a target-independent batch of PIR queries and reconstructs the standard height-$h$ SMT membership proof locally using public default hashes.
 
 \subsection{Construction Overview}
 
-SparseTreePIR instantiates a snapshot-specific retrieval layout with a fixed online transcript. During setup, the server extracts active proof-bearing nodes, partitions them into color subdatabases, and publishes metadata that maps target ranks to served intervals. During online retrieval, the client sends exactly one PIR subquery to each color subdatabase. If the target proof contains a real node in that color, the query selects that node; otherwise, the query is a dummy sampled through the same PIR interface. After receiving the responses, the client writes the real digests into the appropriate proof slots and fills the remaining slots with public default hashes. Figure~\ref{fig:workflow} summarizes this setup-and-retrieval flow.
+SparseTreePIR instantiates a snapshot-specific retrieval layout with a target-independent online transcript. During setup, the server identifies active proof records, partitions them into color subdatabases, and publishes metadata that maps target ranks to lookup intervals. During online retrieval, the client sends exactly one PIR subquery to each color subdatabase. If the target proof needs a record in that color, the query selects that record. Otherwise, the query is a dummy sampled through the same PIR interface. After receiving the responses, the client writes the real digests into the appropriate proof slots and fills the remaining slots with public default hashes. Figure~\ref{fig:workflow} summarizes this setup-and-retrieval flow.
 
 \begin{figure}[!t]
 	\centering
 	\includegraphics[width=\linewidth]{../figures/sparsetreepir_algorithmic_pipeline.png}
-	\caption{SparseTreePIR algorithmic pipeline. Offline setup extracts active proof-bearing nodes, builds served intervals, colors the active interval forest, and balances color stores. Online retrieval uses public metadata to issue exactly one PIR query per color, then combines retrieved real sibling digests with public default hashes to reconstruct the standard height-$h$ SMT proof.}
+	\caption{SparseTreePIR algorithmic pipeline. Offline setup extracts active proof records, builds target-rank intervals, colors the laminar interval forest, and balances color subdatabases. Online retrieval uses public metadata to issue exactly one PIR query per color, then combines retrieved non-default sibling digests with public default hashes to reconstruct the standard height-$h$ SMT proof.}
 	\label{fig:workflow}
 \end{figure}
 
 \noindent\textbf{Online retrieval pattern.}
-Given a fixed public SMT snapshot $T$, setup outputs active color subdatabases
+Given a fixed public SMT snapshot $T$, setup outputs color subdatabases
 $\mathcal{D}_1,\ldots,\mathcal{D}_m$, public metadata tables
-$\mathcal{M}_1,\ldots,\mathcal{M}_m$, and $m$ active color classes. For every occupied target leaf, the online retrieval pattern sends exactly one PIR subquery to each $\mathcal{D}_c$. A subquery is real if color $c$ contains the active sibling digest serving the target leaf, and dummy otherwise. The client then combines the real PIR outputs with the public default-empty hash chain to reconstruct the standard height-$h$ SMT proof. The backend-facing resources of this pattern are PIR storage $|\mathcal{A}(T)|$, active batch width $m$, largest color store $\max_c|\mathcal{D}_c|$, and public metadata size $O(|\mathcal{A}(T)|)$.
+$\mathcal{M}_1,\ldots,\mathcal{M}_m$, and $m$ color classes. For every occupied target leaf, the client sends exactly one PIR subquery to each $\mathcal{D}_c$. A subquery is real if color $c$ contains the non-default sibling digest required by the target proof, and dummy otherwise. The client then combines the real PIR outputs with the public default-empty hash chain to reconstruct the standard height-$h$ SMT proof. The PIR workload metrics are storage $|\mathcal{A}(T)|$, active width $m$, largest subdatabase size $\max_c|\mathcal{D}_c|$, and public metadata size $O(|\mathcal{A}(T)|)$.
 
-The algorithms below are written as a protocol stack rather than as independent routines. Algorithm~\ref{alg:color} is the server-side setup procedure for one fixed public SMT snapshot. It extracts the active proof-bearing nodes, computes the active-width parameter, invokes Algorithm~\ref{alg:activebalance} as a balancing subroutine, and publishes the metadata consumed by the client. Algorithm~\ref{alg:query} is the online client lookup and query-generation procedure. It consumes exactly the public outputs of setup and produces two outputs: the batch of PIR subqueries sent to the server, and a local target map that is never revealed. After the underlying PIR backend returns one response per color, Algorithm~\ref{alg:complete} uses that local map, the public metadata, and the default-empty hash chain to expand the real replies into the standard height-$h$ SMT proof.
+The algorithms below are written as a protocol stack rather than as independent routines. Algorithm~\ref{alg:color} is the server-side setup procedure for one fixed public SMT snapshot. It extracts active proof records, computes the active-width parameter, invokes Algorithm~\ref{alg:activebalance} as a balancing subroutine, and publishes the metadata consumed by the client. Algorithm~\ref{alg:query} is the online client lookup and query-generation procedure. It consumes exactly the public outputs of setup and produces two outputs: the batch of PIR subqueries sent to the server, and a client-side selection map that is never revealed. After the underlying PIR backend returns one response per color, Algorithm~\ref{alg:complete} uses that selection map, the public metadata, and the default-empty hash chain to reconstruct the standard height-$h$ SMT proof.
 
-This separation mirrors the presentation style of TreePIR: setup fixes the colored database layout once, while every online retrieval has the same external profile. The server observes one PIR query per color store. Only the client knows which of those positions are real proof nodes and which are dummy placeholders.
+This separation mirrors the presentation style of TreePIR: setup fixes the colored database layout once, while every online retrieval has the same external profile. The server observes one PIR query per color subdatabase. Only the client knows which queries retrieve proof records and which are dummy queries.
 
 \subsection{Running Example}
 
-Figure~\ref{fig:smt-overview} gives the running example used throughout this section. It shows a complete height-$4$ coordinate tree for explanation, but the implementation traverses the compressed non-default skeleton and stores only the active proof-bearing nodes in color subdatabases. Because the model has already defined active nodes, served intervals, and valid coloring, the example can now be interpreted as an instance of the formal interface rather than as an additional rule.
+Figure~\ref{fig:smt-overview} gives the running example used throughout this section. It shows a complete height-$4$ coordinate tree for explanation, but the implementation traverses the compressed non-default representation and stores only active proof records in color subdatabases. Because the model has already defined the record set, target-rank intervals, and valid coloring, the example can now be interpreted as an instance of the formal interface rather than as an additional rule.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{../figures/sparsetreepir_running_example_figure.pdf}
-\caption{Running SMT example and its final color subdatabases. The full coordinate tree is explanatory; only active proof-bearing nodes are stored in PIR subdatabases.}
+\caption{Running SMT example and its final color subdatabases. The full coordinate tree is explanatory; only active proof records are stored in PIR subdatabases.}
 \label{fig:smt-overview}
 \end{figure}
 
-The example separates three layers that are easy to conflate. The first is the \emph{full SMT coordinate tree}, which still has the usual SMT geometry and from which all hashes are derived. The second is the \emph{active proof-bearing structure}: only sibling-side nodes that can appear in at least one real proof are stored in PIR subdatabases. The third is the \emph{public completion layer}: every untouched proof level is reconstructed from the default-empty hash chain. Thus the scheme keeps the verifier's coordinate system intact, privatizes only the active proof-bearing layer, and leaves default completion public. The figure writes served sets using logical leaf labels for readability; the actual public metadata stores real-leaf rank intervals.
+The example separates three standard objects. The first is the \emph{full SMT coordinate tree}, which determines hash positions and proof levels. The second is the set of non-default sibling digests that may appear in membership proofs; these digests form the active proof records stored in the PIR database. The third is \emph{client-side proof reconstruction}: proof levels whose sibling subtrees are empty are filled with public default hashes rather than retrieved through PIR. The figure labels intervals using logical leaf identifiers for readability; the actual public metadata stores target-rank intervals over the ordered occupied leaves.
 
-The occupied leaves are $\{16,17,18,20,21,24,25\}$. The active proof-bearing nodes are exactly the twelve nodes shown in the color subdatabases of Figure~\ref{fig:smt-overview}:
+The occupied leaves are $\{16,17,18,20,21,24,25\}$. The active proof records are exactly the twelve nodes shown in the color subdatabases of Figure~\ref{fig:smt-overview}:
 \[
 \{2,3,4,5,8,9,16,17,20,21,24,25\}.
 \]
@@ -425,7 +425,7 @@ This instance is instructive because it already exhibits the balance problem. Th
 \mathcal{D}_4=\{17,16\},
 \end{aligned}
 \]
-whose bucket sizes are $(2,4,4,2)$. The coloring is valid, but it is visibly uneven. By contrast, the subtree-level refinement can transform the same active forest into
+whose subdatabase sizes are $(2,4,4,2)$. The coloring is valid, but it is visibly uneven. By contrast, subtree recoloring can transform the same interval forest into
 \[
 \begin{aligned}
 \mathcal{D}_1&=\{2,17,16\},\qquad
@@ -434,28 +434,28 @@ whose bucket sizes are $(2,4,4,2)$. The coloring is valid, but it is visibly une
 \mathcal{D}_4=\{4,9,8\},
 \end{aligned}
 \]
-which is still valid and now has perfectly balanced bucket sizes $(3,3,3,3)$. This final split deliberately is not a layer coloring: for example, nodes $4$, $8$, and $9$ share color $4$ even though they lie at different logical depths in the full coordinate tree, while depth-$1$ nodes $2$ and $3$ have different colors. This is possible because the constraint is induced by served proof intervals, not by raw tree depth. Figure~\ref{fig:beforeafter} visualizes this change. In the current algorithm, this improvement is reached by a short sequence of accepted legal subtree permutations; the active color interface stays fixed throughout. We will reuse the same small instance again when illustrating one concrete query and local proof completion.
+which is still valid and now has balanced subdatabase sizes $(3,3,3,3)$. This final split deliberately is not a layer coloring: for example, nodes $4$, $8$, and $9$ share color $4$ even though they lie at different logical depths in the full coordinate tree, while depth-$1$ nodes $2$ and $3$ have different colors. This is possible because the constraint is induced by target-rank intervals, not by raw tree depth. Figure~\ref{fig:beforeafter} visualizes this change. In the current algorithm, this improvement is reached by a short sequence of accepted legal subtree recolorings; the online query pattern stays fixed throughout. We will reuse the same small instance again when illustrating one concrete query and client-side proof reconstruction.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{../figures/sparsetreepir_active_balance_before_after_figure.pdf}
-\caption{Running example for the coloring stage. The first-fit feasibility stage leaves an uneven but valid split, while \ActiveBalance{} applies accepted legal subtree permutations and reaches a flatter partition on the same active forest.}
+\caption{Running example for the coloring stage. The first-fit feasibility stage leaves an uneven but valid split, while \ActiveBalance{} applies accepted legal subtree recolorings and reaches a flatter partition on the same interval forest.}
 \label{fig:beforeafter}
 \end{figure}
 
 \newpage
 
-\subsection{Offline Active-Interval Setup}
+\subsection{Offline Preprocessing}
 
-The server-side preprocessing stage takes one fixed SMT instance and produces exactly the data needed for online private retrieval. It never materializes a perfectized proof-bearing tree. Instead, it traverses the compressed non-default skeleton induced by the occupied leaves, extracts the active proof-bearing nodes, builds the laminar interval forest, computes the active-width parameter $m$, and then colors the nodes under that active-node retrieval model.
+The preprocessing algorithm is run once for a fixed public SMT snapshot. It takes the occupied leaf set and the compressed non-default SMT representation as input, and outputs the color subdatabases and public metadata used by online retrieval. It does not materialize the full logical tree. Instead, it traverses the compressed non-default structure, identifies the non-default sibling digests that may appear in membership proofs, and records for each digest its target-rank interval and proof level. The resulting intervals form a laminar interval forest. Setup then computes a valid coloring, applies \ActiveBalance{} to reduce the largest subdatabase size, and publishes the metadata tables.
 
 \begin{algorithm}[H]
 \footnotesize
-\caption{Setup: direct SMT organization}
+\caption{Offline preprocessing}
 \label{alg:color}
 \begin{algorithmic}[1]
 \Require Fixed public SMT snapshot $T$, occupied leaf set $\mathcal{L}$, balancing rounds $R_1$
-\Ensure Active color count $m$, active color subdatabases $\{\mathcal{D}_c\}_{c=1}^{m}$, public metadata tables $\{\mathcal{M}_c\}_{c=1}^{m}$, valid coloring $\varphi$
+\Ensure Active width $m$, color subdatabases $\{\mathcal{D}_c\}_{c=1}^{m}$, public metadata tables $\{\mathcal{M}_c\}_{c=1}^{m}$, valid coloring $\varphi$
 \State Sort the occupied leaves by logical SMT position and assign real-leaf ranks $0,\ldots,|\mathcal{L}|-1$
 \State Build the compressed non-default skeleton $\mathcal{S}(T)$ induced by the occupied leaves
 \State Annotate each skeleton edge with its corresponding original SMT child root and skipped logical levels
@@ -464,41 +464,41 @@ The server-side preprocessing stage takes one fixed SMT instance and produces ex
   \For{each original child root $u$ of $p$}
     \State $s \gets \operatorname{sib}(u)$ in the full SMT coordinate system
     \State Add $u$ to $\mathcal{A}(T)$
-    \State Assign served rank interval $I_{\mathsf{srv}}(u)=[L(s),R(s)]$ and proof level $\delta(u)$
+    \State Assign target-rank interval $I_{\mathsf{srv}}(u)=[L(s),R(s)]$ and proof level $\delta(u)$
   \EndFor
 \EndFor
-\State Sort all active intervals by increasing left endpoint and decreasing interval length
+\State Sort all target-rank intervals by increasing left endpoint and decreasing interval length
 \State Build the interval forest $\mathcal{F}$ from interval-containment relations
 \State Set $m$ to the maximum depth of $\mathcal{F}$
 \State Compute $\varphi\gets \textsc{FirstFitColoring}(\mathcal{F},m)$
 \State Refine $\varphi\gets\ActiveBalance{}(\mathcal{F},\varphi,R_1)$ using Algorithm~\ref{alg:activebalance}
-\State Build the private subdatabases $\mathcal{D}_c$ and the public metadata tables $\mathcal{M}_c$
+\State Build the color subdatabases $\mathcal{D}_c$ and the public metadata tables $\mathcal{M}_c$
 \State \Return $m$, $\{\mathcal{D}_c\}_{c=1}^{m}$, $\{\mathcal{M}_c\}_{c=1}^{m}$, $\varphi$
 \end{algorithmic}
 \end{algorithm}
 
-The first-fit stage is only a feasibility step. It traverses each tree of $\mathcal{F}$ from root to leaves and assigns every node the smallest color in $[m]$ not used on its strict ancestor chain. Since no active proof path contains more than $m$ active nodes, such a color always exists. The actual balancing contribution is the subsequent \ActiveBalance{} subtree refinement. The protocol-complete formulation remains specific to fixed binary SMTs, because public proof completion relies on the standard default-empty hash chain.
+The first-fit stage is only a feasibility step. It traverses each tree of $\mathcal{F}$ from root to leaves and assigns every node the smallest color in $[m]$ not used on its strict ancestor chain. Since no active proof path contains more than $m$ active nodes, such a color always exists. The actual balancing contribution is the subsequent \ActiveBalance{} recoloring step. The protocol-complete formulation remains specific to fixed binary SMTs, because client-side proof reconstruction relies on the standard default-empty hash chain.
 
 From a systems viewpoint, Algorithm~\ref{alg:color} is the offline setup stage of the construction. Once the color subdatabases and public metadata tables have been built for one fixed SMT instance, the online retrieval protocol never needs to see the whole tree again. The expensive structural work is pushed offline, while the online stage sees only interval tables, color subdatabases, and the public default-hash chain.
 
-\subsection{\ActiveBalance{}: Subtree-Level Load Refinement}
+\subsection{\ActiveBalance{}: Load Balancing by Subtree Recoloring}
 
-The balancing component is the subtree-level refinement. Instead of moving one node at a time, \ActiveBalance{} treats a rooted subtree as a whole color-load vector and tries to permute its internal colors so that the global color loads become flatter. We compare candidate refinements by the lexicographic signature
+A valid coloring guarantees that each proof needs at most one real record from each color subdatabase, but it does not guarantee balanced subdatabase sizes. A highly imbalanced coloring can make one PIR query much more expensive than the others. \ActiveBalance{} is a load-balancing procedure that preserves the active width $m$ and changes only the assignment of records to colors. It evaluates subtree recolorings using the lexicographic load vector
 \[
 \Psi(\varphi)=
 \operatorname{sort}_{\downarrow}(N_1,\ldots,N_m),
 \]
 so the objective is to reduce the largest subdatabase first and then flatten the remaining count vector.
 
-For a rooted subtree $U$ of the interval forest and a color $c\in[m]$, let $C_U(c)$ denote the number of nodes of color $c$ currently appearing inside $U$. Let $A(U)\subseteq[m]$ be the set of colors not used on the strict ancestor chain of $U$. Since every node in $U$ must already be colored from $A(U)$, a legal refinement is any permutation $\pi_U$ of $A(U)$ applied uniformly to the colors inside $U$. Proposition~\ref{prop:permvalid} shows that every such permutation preserves validity.
+For a rooted subtree $U$ of the interval forest and a color $c\in[m]$, let $C_U(c)$ denote the number of nodes of color $c$ currently appearing inside $U$. Let $A(U)\subseteq[m]$ be the set of colors not used on the strict ancestor chain of $U$. Since every node in $U$ must already be colored from $A(U)$, any permutation $\pi_U$ of these available colors can be applied uniformly inside $U$ without violating the coloring constraint. Proposition~\ref{prop:permvalid} shows that every such permutation preserves validity.
 
 \begin{algorithm}[!t]
 \footnotesize
-\caption{\ActiveBalance{} subtree refinement}
+\caption{\ActiveBalance{} subtree recoloring}
 \label{alg:activebalance}
 \begin{algorithmic}[1]
-\Require Interval forest $\mathcal{F}$, valid active coloring $\varphi$, rounds $R_1$
-\Ensure Updated valid active coloring $\varphi$
+\Require Laminar interval forest $\mathcal{F}$, valid coloring $\varphi$, rounds $R_1$
+\Ensure Updated valid coloring $\varphi$
 \State Compute global loads $\{N_c\}_{c=1}^{m}$ and $\Psi^\star\gets\Psi(\varphi)$
 \For{$t=1$ \textbf{to} $R_1$}
   \State Annotate each subtree root $U$ with ancestor colors and histogram $\{C_U(c)\}_{c=1}^{m}$
@@ -520,22 +520,22 @@ For a rooted subtree $U$ of the interval forest and a color $c\in[m]$, let $C_U(
 \end{algorithmic}
 \end{algorithm}
 
-Algorithm~\ref{alg:activebalance} makes two design choices explicit. First, each subtree is evaluated against a count-only quadratic assignment objective rather than against the full combinatorial search over all possible recolorings. The cost term $(N_b-C_U(b)+C_U(a))^2$ is the squared size of bucket $b$ after the portion of color $b$ currently inside $U$ is removed and the portion of local color $a$ is mapped into it. Thus the surrogate favors moving heavier local color mass toward lighter global buckets. Second, after solving that local assignment, we accept a move only if the true global signature $\Psi(\varphi)$ decreases. Hence the surrogate guides the search, while the lexicographic bucket vector remains the actual acceptance rule.
+Algorithm~\ref{alg:activebalance} makes two design choices explicit. First, each subtree is evaluated against a count-only quadratic assignment objective rather than against the full combinatorial search over all possible recolorings. The cost term $(N_b-C_U(b)+C_U(a))^2$ is the squared size of subdatabase $b$ after the portion of color $b$ currently inside $U$ is removed and the portion of local color $a$ is mapped into it. Thus the surrogate favors moving heavier local color mass toward lighter global subdatabases. Second, after solving that local assignment, we accept a move only if the true global signature $\Psi(\varphi)$ decreases. Hence the surrogate guides the search, while the lexicographic load vector remains the actual acceptance rule.
 
-\subsection{Fixed-Shape Online Retrieval}
+\subsection{Target-Independent Online Query Generation}
 \vspace{-0.6em}
 
-After offline organization, the client needs only public interval metadata to determine which color positions contain real proof material for the target leaf. Since same-color intervals are disjoint, one binary search per color is sufficient.
+After preprocessing, the client uses only public metadata to determine which color subdatabases contain proof records for the target. For each color $c$, the metadata table $\mathcal{M}_c$ is sorted by target-rank interval. Since intervals with the same color are disjoint, one binary search returns either a unique matching record or no matching record.
 
 \begin{algorithm}[H]
 \caption{Online query generation: one PIR subquery per color}
 \label{alg:query}
 \begin{algorithmic}[1]
 \Require Target leaf $\ell$ with real-leaf rank $r(\ell)$, color subdatabases $\{\mathcal{D}_c\}_{c=1}^{m}$, public metadata tables $\{\mathcal{M}_c\}_{c=1}^{m}$, underlying PIR query generator $\mathsf{PIR.Query}$
-\Ensure Batch query $\mathcal{Q}=\{Q_c\}_{c=1}^{m}$ and private local target map $\{\tau_c\}_{c=1}^{m}$
+\Ensure Batch query $\mathcal{Q}=\{Q_c\}_{c=1}^{m}$ and client-side selection map $\{\tau_c\}_{c=1}^{m}$
 \State Initialize $\mathcal{Q}\gets\emptyset$
 \For{$c=1$ \textbf{to} $m$}
-  \State Perform a binary search for $r(\ell)$ in the served-rank interval projection of $\mathcal{M}_c$
+  \State Perform a binary search for $r(\ell)$ in the target-rank interval projection of $\mathcal{M}_c$
   \If{there exists exactly one interval containing $r(\ell)$}
     \State Let $j_c$ be the position of that node in $\mathcal{D}_c$
     \State Set $\tau_c\gets j_c$ and $Q_c\gets\mathsf{PIR.Query}(\mathcal{D}_c,j_c)$
@@ -551,25 +551,25 @@ After offline organization, the client needs only public interval metadata to de
 \end{algorithm}
 \vspace{-0.5em}
 
-\subsection{Local Proof Completion}
+\subsection{Client-Side Proof Reconstruction}
 \vspace{-0.6em}
 
-The online retrieval phase ends with a purely local completion step. Real PIR outputs are written into the proof levels indicated by the public metadata, while all untouched levels are filled by the default-empty hash chain. No additional server round is required after batch extraction.
+The online retrieval phase ends with a local reconstruction step. The server returns one PIR response for each color subdatabase. The client decodes all responses, but only those marked in the client-side selection map are used as proof records. The proof array is initialized with public default hashes, and each real response overwrites the proof level indicated by the metadata. No additional server round is required.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{../figures/sparsetreepir_proof_completion_figure.pdf}
-\caption{One fixed-shape batch query and local proof completion for leaf $18$.}
+\caption{One target-independent batch query and client-side proof reconstruction for leaf $18$.}
 \label{fig:completion}
 \end{figure}
 
-Figure~\ref{fig:completion} illustrates how dummy responses coexist with proof completion. The client privately retrieves only the levels whose sibling subtrees contain real data, fills all other slots from the public default chain, and then performs the standard bottom-up SMT verification. In the example, leaf $18$ retrieves nodes $3$, $5$, and $8$, sends a dummy query for color $1$, and keeps the remaining proof slot equal to $\Delta_0$.
+Figure~\ref{fig:completion} illustrates how dummy responses coexist with proof reconstruction. The client privately retrieves only the levels whose sibling subtrees contain non-default data, fills all other slots from the public default chain, and then performs the standard bottom-up SMT verification. In the example, leaf $18$ retrieves nodes $3$, $5$, and $8$, sends a dummy query for color $1$, and keeps the remaining proof slot equal to $\Delta_0$.
 
 \begin{algorithm}[H]
-\caption{Client-side proof expansion and root reconstruction}
+\caption{Client-side proof reconstruction}
 \label{alg:complete}
 \begin{algorithmic}[1]
-\Require Target leaf coordinate $\ell$, target leaf digest $a_0$, public metadata tables $\{\mathcal{M}_c\}_{c=1}^{m}$, private local target map $\{\tau_c\}_{c=1}^{m}$ from Algorithm~\ref{alg:query}, extracted PIR outputs $\{\sigma_c\}_{c=1}^{m}$, default-empty hash chain $\{\Delta_t\}_{t=0}^{h-1}$
+\Require Target leaf coordinate $\ell$, target leaf digest $a_0$, public metadata tables $\{\mathcal{M}_c\}_{c=1}^{m}$, client-side selection map $\{\tau_c\}_{c=1}^{m}$ from Algorithm~\ref{alg:query}, decoded PIR responses $\{\sigma_c\}_{c=1}^{m}$, default-empty hash chain $\{\Delta_t\}_{t=0}^{h-1}$
 \Ensure Complete proof array $P[0..h-1]$ and reconstructed root digest $\rho$
 \For{$t=0$ \textbf{to} $h-1$}
   \State Set $P[t]\gets \Delta_t$
@@ -592,9 +592,9 @@ Figure~\ref{fig:completion} illustrates how dummy responses coexist with proof c
 \end{algorithmic}
 \end{algorithm}
 
-\subsection{End-to-End Retrieval Walkthrough}
+\subsection{End-to-End Protocol Flow}
 
-Putting the previous pieces together, the online flow for one target leaf is as follows. The client uses the public interval tables to identify at most one real target per color, sends one PIR subquery for each color, interprets the extracted outputs through the local target map $\{\tau_c\}$, and writes only the real ones into the corresponding proof levels. It then combines those real responses with the default-empty chain and hashes upward to the root. At the protocol level, every retrieval has the same batch profile of exactly $m$ color positions; sparsity changes only which positions are real rather than dummy, and that distinction is hidden by the PIR layer.
+Putting these pieces together, the online flow for one target leaf is as follows. The client obtains its rank in the public ordered set of occupied leaves and performs one metadata lookup per color subdatabase. If the target rank lies in a stored target-rank interval, the client privately queries the corresponding record; otherwise, it sends a dummy PIR query to the same subdatabase. Thus every retrieval produces the same target-independent batch transcript: one well-formed PIR query per color. After decoding the PIR responses, the client uses its selection map to place the real non-default sibling digests into the proof array. All remaining positions are filled with public default hashes, and the client hashes upward along the target coordinate to obtain the SMT root.
 
 \section{Correctness, Privacy, and Complexity}
 \label{sec:correctness}
