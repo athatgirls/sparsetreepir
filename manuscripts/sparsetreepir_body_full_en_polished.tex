@@ -210,6 +210,7 @@ The set of all PIR-retrievable sibling nodes is denoted by $\mathcal{A}(T)$.
 \end{definition}
 
 The first condition ensures that $u$ itself has a non-default digest. The second condition ensures that $u$ can appear as a sibling node in the membership proof of at least one occupied target leaf. Thus $\mathcal{A}(T)$ contains exactly the non-default sibling digests that may have to be retrieved through PIR. Empty sibling subtrees remain outside the PIR database because their digests are publicly reconstructible from the default-hash chain.
+We sometimes call nodes in $\mathcal{A}(T)$ \emph{active proof nodes}; this is only shorthand for PIR-retrievable non-default sibling nodes, not for arbitrary non-empty SMT nodes.
 
 \begin{proposition}[Minimal non-default PIR record set]
 \label{prop:active-record-minimality}
@@ -265,6 +266,7 @@ u \in \mathsf{Path}(\ell) \Longleftrightarrow r(\ell) \in I_{\mathsf{srv}}(u).
 \]
 
 Since every binary subtree corresponds to a contiguous interval in leaf order, the resulting target-rank intervals form a laminar family: any two intervals are either disjoint, or one contains the other. This structure underlies both the coloring method and the indexing method.
+The intervals are public lookup metadata derived from the fixed snapshot and the public occupied-leaf order. Publishing them is therefore part of the setup leakage below; it does not attempt to hide the occupancy pattern or density of the snapshot. If the occupied-leaf set itself were sensitive, the layout would need additional occupancy-hiding mechanisms, such as dummy occupied leaves or oblivious metadata publication, which are outside the present query-privacy model.
 
 \subsection{Coloring and Load Metrics}
 
@@ -325,6 +327,8 @@ The PIR subdatabases store node digests. The level and interval information requ
 
 The retrieval protocol in this paper hides the queried target leaf inside one \emph{fixed public SMT instance}; it does not aim to hide the entire occupancy pattern of that instance. We model the storage server's snapshot-level view with the following deterministic setup leakage.
 
+We assume the underlying backend is a correct single-item PIR scheme with query privacy over each fixed subdatabase: for any two valid indices in the same subdatabase, the server-observable query distributions are computationally indistinguishable. We also require the real and dummy queries for a given subdatabase to use the same PIR query interface and the same observable query/response lengths. Otherwise, a backend-level length or format difference could reveal whether a color is real or dummy.
+
 \begin{definition}[Setup leakage]
 \label{def:leakagefunction}
 Let setup on a fixed SMT snapshot $T$ produce retrieval width $m$, PIR-retrievable node set $\mathcal{A}(T)$, coloring $\varphi:\mathcal{A}(T)\to[m]$, color subdatabases $\{\mathcal{D}_c\}_{c=1}^{m}$, and public metadata tables $\{\mathcal{M}_c\}_{c=1}^{m}$. Let $N_c=|\mathcal{D}_c|$. The setup leakage visible to the storage server is
@@ -362,6 +366,8 @@ target leaf $\ell$, required PIR records, which color slots are real or dummy, s
 
 We make this leakage profile explicit. The retrieval layout is precomputed once for a fixed SMT snapshot and is treated as server-visible structure thereafter. Our privacy claim is therefore \emph{query privacy relative to a server-visible PIR database layout}, rather than structure privacy for the whole sparse tree. The corresponding transcript view has a fixed query shape: the server sees one well-formed PIR query per color, while the real/dummy roles are client-local.
 
+The privacy model is honest-but-curious with respect to the storage server. A malicious server cannot make an incorrect digest verify against the public SMT root except with the usual hash-collision probability, but it can cause retrieval failure or equivocate about published metadata unless the subdatabases and metadata are authenticated. Such authenticated publication, for example by committing to the public layout or by using an authenticated PIR service layer, is complementary to the query-privacy mechanism studied here.
+
 \begin{definition}[Target privacy game]
 \label{def:privacygame}
 Let $\mathcal{L}_{\mathsf{setup}}(T)$ be the setup leakage in Definition~\ref{def:leakagefunction}. In the experiment $\mathsf{PrivTarget}_{\mathcal{A}}(\lambda)$, the challenger runs setup for the fixed SMT snapshot and gives $\mathcal{L}_{\mathsf{setup}}(T)$ to the adversary $\mathcal{A}$. The adversary chooses two occupied target leaves $\ell_0,\ell_1\in\mathcal{L}$. The challenger samples $b\leftarrow\{0,1\}$, runs the batch query-generation algorithm for $\ell_b$, and gives the full batch query transcript to $\mathcal{A}$. The adversary outputs a bit $b'$. Its advantage is
@@ -372,7 +378,12 @@ Let $\mathcal{L}_{\mathsf{setup}}(T)$ be the setup leakage in Definition~\ref{de
 The protocol is target-private relative to $\mathcal{L}_{\mathsf{setup}}(T)$ if this advantage is negligible for every efficient adversary.
 \end{definition}
 
-For dummy positions, the client samples a well-formed PIR query to a valid index in the same color subdatabase, independently of the target leaf, and discards the response. The setup layout exposes only non-empty color subdatabases. Implementations that allow empty color classes can remove them during setup or pad them with one public dummy record.
+\begin{definition}[Dummy query distribution]
+\label{def:dummyquery}
+For a non-empty color subdatabase $\mathcal{D}_c$ of size $N_c$, a dummy query samples an index $d_c\leftarrow \{0,\ldots,N_c-1\}$ independently of the target leaf and invokes the same query algorithm $\mathsf{PIR.Query}(\mathcal{D}_c,d_c)$ used for real records.
+\end{definition}
+
+For dummy positions, the client uses Definition~\ref{def:dummyquery} and discards the response locally. The setup layout exposes only non-empty color subdatabases. Implementations that allow empty color classes can remove them during setup or pad them with one public dummy record.
 
 \section{SparseTreePIR Construction}
 \label{sec:coloring}
@@ -540,7 +551,7 @@ After preprocessing, the client uses only public metadata to determine which col
     \State Let $j_c$ be the position of that node in $\mathcal{D}_c$
     \State Set $\tau_c\gets j_c$ and $Q_c\gets\mathsf{PIR.Query}(\mathcal{D}_c,j_c)$
   \Else
-    \State Set $\tau_c\gets \bot$ and sample $d_c\gets\mathsf{DummyIndex}(\mathcal{D}_c)$
+    \State Set $\tau_c\gets \bot$ and sample $d_c\leftarrow\{0,\ldots,|\mathcal{D}_c|-1\}$
     \State Set $Q_c\gets\mathsf{PIR.Query}(\mathcal{D}_c,d_c)$
   \EndIf
   \State Add $Q_c$ to $\mathcal{Q}$
@@ -696,13 +707,13 @@ We now prove target privacy relative to the setup leakage defined in Section~\re
 
 \begin{theorem}[Target privacy under setup leakage]
 \label{prop:privacy}
-Assume the setup leakage profile and the target-privacy game in Definition~\ref{def:privacygame}. Assume also that the retrieval width $m$ is polynomially bounded in the security parameter, as holds when the SMT height $h$ is polynomially bounded because $m\le h$. If each underlying single-item PIR query is query-private over its corresponding color subdatabase, and if dummy queries are sampled from a distribution computationally indistinguishable from well-formed PIR queries over that same subdatabase, then the batch retrieval protocol is target-private relative to $\mathcal{L}_{\mathsf{setup}}(T)$.
+Assume the setup leakage profile and the target-privacy game in Definition~\ref{def:privacygame}. Assume also that the retrieval width $m$ is polynomially bounded in the security parameter, as holds when the SMT height $h$ is polynomially bounded because $m\le h$. If each underlying single-item PIR query is query-private over its corresponding color subdatabase, and if dummy queries are generated as in Definition~\ref{def:dummyquery}, then the batch retrieval protocol is target-private relative to $\mathcal{L}_{\mathsf{setup}}(T)$.
 \end{theorem}
 
 \begin{proof}
 Fix any efficient adversary and any two occupied target leaves $\ell_0,\ell_1$ chosen in the game. Condition on the setup leakage $\mathcal{L}_{\mathsf{setup}}(T)$. The adversary already knows the SMT snapshot information included in the leakage, the active proof nodes, the coloring, the public metadata tables, the color subdatabase sizes, and the fact that every retrieval sends one PIR query to each color subdatabase. Therefore, the only target-dependent part of the online transcript is the sequence of PIR queries.
 
-Consider one color $c$. For target $\ell_b$, Algorithm~\ref{alg:query} either queries the unique real index in $\mathcal{D}_c$ whose target-rank interval contains the target rank, or sends a dummy query over the same subdatabase. If both targets induce real queries, single-item PIR query privacy makes the two selected indices computationally indistinguishable. If one target induces a real query and the other induces a dummy query, the dummy query is still distributed as a well-formed PIR query over the same subdatabase, and PIR query privacy hides whether the selected index is meaningful. If both targets induce dummy queries, the two query distributions are identical up to target-independent randomness.
+Consider one color $c$. For target $\ell_b$, Algorithm~\ref{alg:query} either queries the unique real index in $\mathcal{D}_c$ whose target-rank interval contains the target rank, or sends a dummy query over the same subdatabase as in Definition~\ref{def:dummyquery}. If both targets induce real queries, single-item PIR query privacy makes the two selected indices computationally indistinguishable. If one target induces a real query and the other induces a dummy query, the dummy query is still a well-formed PIR query over the same subdatabase, and PIR query privacy hides whether the selected index is meaningful. If both targets induce dummy queries, the two query distributions are identical up to target-independent randomness.
 
 A standard hybrid argument over the $m$ colors shows that the complete batch transcript for $\ell_0$ is computationally indistinguishable from the complete batch transcript for $\ell_1$. Since $m$ is polynomially bounded, the hybrid loss is negligible. Thus every efficient adversary has negligible advantage in the target-privacy game.
 \end{proof}
@@ -831,7 +842,7 @@ The following theorem states the end-to-end guarantee used in the evaluation: it
 
 \begin{theorem}[End-to-end SparseTreePIR guarantee]
 \label{thm:endtoend}
-Fix a public height-$h$ SMT snapshot $T$ with active proof-node set $\mathcal{A}(T)$, number of colors $m$, a proper coloring $\varphi$, color subdatabases $\mathcal{D}_1,\ldots,\mathcal{D}_m$, and public metadata tables $\mathcal{M}_1,\ldots,\mathcal{M}_m$. Assume that the underlying single-item PIR backend is correct and query-private for each subdatabase, and that dummy queries are sampled from the same query distribution as well-formed PIR queries over the corresponding subdatabase. Then SparseTreePIR satisfies the following end-to-end guarantee for every occupied target leaf:
+Fix a public height-$h$ SMT snapshot $T$ with active proof-node set $\mathcal{A}(T)$, number of colors $m$, a proper coloring $\varphi$, color subdatabases $\mathcal{D}_1,\ldots,\mathcal{D}_m$, and public metadata tables $\mathcal{M}_1,\ldots,\mathcal{M}_m$. Assume that the underlying single-item PIR backend is correct and query-private for each subdatabase, and that dummy queries are generated as in Definition~\ref{def:dummyquery}. Then SparseTreePIR satisfies the following end-to-end guarantee for every occupied target leaf:
 \begin{enumerate}[leftmargin=2em]
   \item the client reconstructs a valid standard height-$h$ SMT membership proof;
   \item the retrieval is target-private relative to the setup leakage in Definition~\ref{def:leakagefunction} and the target-privacy game in Definition~\ref{def:privacygame};
@@ -865,7 +876,7 @@ All backend measurements were run on Ubuntu 22.04.5 with Linux 6.8, a 13th Gen I
 
 \subsection{Privacy-Preserving Layouts}
 
-We compare five privacy-preserving retrieval layouts. \emph{Complete-tree TreePIR} treats the SMT as a complete height-$h$ perfect tree and is used only as an accounting baseline, because a height-$128$ or height-$256$ full coordinate tree is not materializable. \emph{Height-preserving pruned TreePIR} removes public default records from the searched payloads but keeps a height-$h$ query pattern. \emph{PBC-style SMT} is an optimistic generic batch-placement baseline over the same active proof records: it stores three replicated copies and spreads them over $\lceil1.5m\rceil$ buckets. Our implementation uses deterministic balanced placement rather than sampled Cuckoo placement when reporting bucket sizes, giving this baseline optimistic load balance and removing seed dependence. \emph{Unpartitioned active-record PIR} stores active proof records once but searches one global active-record database for each proof slot. \emph{SparseTreePIR} stores the same active proof records once, partitions them into per-color subdatabases, and applies \ActiveBalance{} to reduce the maximum subdatabase size.
+We compare five privacy-preserving retrieval layouts. \emph{Complete-tree TreePIR} treats the SMT as a complete height-$h$ perfect tree and is used only as an accounting baseline, because a height-$128$ or height-$256$ full coordinate tree is not materializable. \emph{Height-preserving pruned TreePIR} removes public default records from the searched payloads but keeps a height-$h$ query pattern. \emph{PBC-style SMT} is an optimistic generic batch-placement baseline over the same active proof records: it uses the standard three-copy, $\lceil1.5m\rceil$-bucket resource profile, but reports deterministic balanced placement rather than sampled Cuckoo placement. Thus it is an optimistic accounting baseline for bucket sizes, not a completed sampled PBC implementation. \emph{Unpartitioned active-record PIR} stores active proof records once but searches one global active-record database for each proof slot. \emph{SparseTreePIR} stores the same active proof records once, partitions them into per-color subdatabases, and applies \ActiveBalance{} to reduce the maximum subdatabase size.
 
 \paragraph{Height-preserving pruned TreePIR baseline.}
 For each verifier proof slot $i\in[h]$, let $\mathcal{P}_i$ be the set of non-default sibling digests that can appear in slot $i$ across occupied-leaf membership proofs. This baseline searches only these non-default records, but online retrieval still sends one query for every proof level, using a dummy query when the target proof has no non-default sibling at that level. Its query width is therefore $h$, and its maximum subdatabase size is $\max_i|\mathcal{P}_i|$. This baseline tests whether simply deleting default records is sufficient once the protocol has already committed to a height-$h$ query pattern.
