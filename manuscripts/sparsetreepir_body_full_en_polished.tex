@@ -872,7 +872,7 @@ The main text reports the workload classes, platform, backends, repetitions, and
 
 The deterministic structural metrics are the number of PIR records $N=|\mathcal{A}(T)|$, the number of subqueries $m$, the maximum per-color subdatabase size $M(\varphi)$, the dummy-query fraction, and the public metadata size. These quantities describe the workload exposed to a PIR backend. For implementation-based measurements, we use the height-$128$ workloads and compare SparseTreePIR with the PBC-style SMT baseline using SimplePIR and PIANO. Each backend experiment is repeated over three target-sampling seeds with $50$ occupied targets per workload.
 
-All backend measurements were run on Ubuntu 22.04.5 with Linux 6.8, a 13th Gen Intel Core i5-13500HX CPU with 20 hardware threads, 15 GiB RAM, Python 3.10.12, Go 1.18.1, GCC/G++ 11.4, and CMake 3.22. The SimplePIR and PIANO checkouts are pinned at commits \texttt{e9020b03bf28} and \texttt{f7107cfadc15}. Online communication counts backend upload and download bytes for the measured PIR calls. Setup time refers to backend preprocessing for the measured databases, query time refers to client query generation, and server-response time is reported separately when measured.
+All backend measurements were run on Ubuntu 22.04.5 with Linux 6.8, a 13th Gen Intel Core i5-13500HX CPU with 20 hardware threads, 15 GiB RAM, Python 3.10.12, Go 1.18.1, GCC/G++ 11.4, and CMake 3.22. Online communication counts backend upload and download bytes for the measured PIR calls. Setup time refers to backend preprocessing for the measured databases, query time refers to client query generation, and server-response time is reported separately when measured.
 
 \subsection{Privacy-Preserving Layouts}
 
