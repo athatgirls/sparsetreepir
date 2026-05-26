@@ -67,7 +67,7 @@
 \begin{tikzpicture}[x=0.86cm,y=0.82cm,>=Latex]
 
 \node[font=\bfseries\small] at (2.6,0.45) {(a) Logical height-$h$ coordinate tree};
-\node[font=\bfseries\small] at (10.2,0.45) {(b) PIR-facing skeleton and proof completion};
+\node[font=\bfseries\small] at (10.2,0.45) {(b) Retrieval database and proof completion};
 
 % Logical coordinate tree, h=3.
 \node[coord node] (l1) at (2.6,-0.45) {};
@@ -102,7 +102,7 @@
 \node[font=\scriptsize,below=1.5mm of l14] {$110$};
 \node[font=\scriptsize,below=1.5mm of l15] {$111$};
 
-\node[font=\scriptsize,PrivateBlue!75!black,align=center] at ($(l3)+(0.0,0.62)$) {real sibling\\digest};
+\node[font=\scriptsize,PrivateBlue!75!black,align=center] at ($(l3)+(0.0,0.62)$) {non-default\\sibling digest};
 \node[font=\scriptsize,gray!70!black,align=center] at ($(l5)+(0,0.58)$) {default\\subtree};
 
 % Stored skeleton and completion.
@@ -117,7 +117,7 @@
 \draw[gray!70] (s3) -- (s4);
 \draw[gray!70] (s3) -- (s5);
 
-\node[note,anchor=north west,text width=2.9cm] (skel) at (6.7,-3.35) {PIR-facing skeleton stores occupied leaves and non-empty internal digests. Empty subtrees are not materialized.};
+\node[note,anchor=north west,text width=2.9cm] (skel) at (6.7,-3.35) {The PIR database stores non-default proof digests. Empty subtrees are not materialized.};
 
 \node[note,anchor=north west,text width=3.0cm] (defs) at (10.9,-0.85) {Public default chain:\\$\Delta_0$ for an empty leaf\\$\Delta_1=H(\Delta_0,\Delta_0)$\\$\cdots$};
 

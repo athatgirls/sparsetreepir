@@ -26,7 +26,7 @@ This paper makes the following contributions.
 	\item \textbf{Balancing and evaluation.} We introduce \ActiveBalance{}, a load-balancing algorithm for the color subdatabases. Experiments on SMT workloads compare SparseTreePIR with complete-tree TreePIR, height-preserving pruned TreePIR, a PBC-style SMT baseline, and unpartitioned active-record PIR. Repeated SimplePIR and PIANO runs show $2.1\times$--$2.3\times$ lower online communication than the PBC-style baseline on the same snapshots, without modifying the underlying PIR primitive.
 \end{enumerate}
 
-Figure~\ref{fig:workflow} summarizes how SparseTreePIR transforms ordinary SMT proof serving into private proof retrieval.
+Figure~\ref{fig:verification-retrieval-view} illustrates the separation between the verification view and the retrieval view, and Figure~\ref{fig:workflow} summarizes the end-to-end SparseTreePIR pipeline.
 
 The rest of the paper is organized as follows. Section~\ref{sec:background} gives the background and problem setting needed for our formulation. Section~\ref{sec:related} positions SparseTreePIR relative to authenticated maps, TreePIR, and PIR backends. Section~\ref{sec:model} defines the problem, leakage model, and PIR-retrievable sibling nodes. Section~\ref{sec:coloring} presents the SparseTreePIR construction. Section~\ref{sec:correctness} proves correctness, target privacy, and complexity properties. Section~\ref{sec:experiments} evaluates the resulting private-retrieval layout and balancing algorithm. Section~\ref{sec:conclusion} concludes.
 
@@ -179,24 +179,7 @@ The intervals are public lookup metadata derived from the fixed snapshot and the
 
 \begin{figure}[!t]
 \centering
-\scriptsize
-\setlength{\tabcolsep}{3pt}
-\setlength{\fboxsep}{1pt}
-\begin{tabular}{lccccccc}
-\toprule
-Target rank & 0 & 1 & 2 & 3 & 4 & 5 & 6 \\
-\midrule
-Color 1 &
-\multicolumn{3}{c}{\fbox{\(\;u_1:[0,2]\;\)}} &
-\multicolumn{2}{c}{\fbox{\(\;u_2:[3,4]\;\)}} &
-\multicolumn{2}{c}{\fbox{\(\;u_3:[5,6]\;\)}} \\
-Color 2 &
-\multicolumn{5}{c}{\fbox{\(\;u_4:[0,4]\;\)}} &
-\multicolumn{2}{c}{\fbox{\(\;u_5:[5,6]\;\)}} \\
-Color 3 &
-\multicolumn{7}{c}{\fbox{\(\;u_6:[0,6]\;\)}} \\
-\bottomrule
-\end{tabular}
+\includegraphics[width=\linewidth]{../figures/sparsetreepir_interval_coloring_figure.pdf}
 \caption{Target-rank intervals and proper coloring. Each non-default sibling digest is associated with the target ranks whose proofs require it. Intervals form a laminar family, and a proper coloring ensures that any vertical target rank intersects at most one record from each color subdatabase.}
 \label{fig:interval-coloring}
 \end{figure}
@@ -511,18 +494,7 @@ Table~\ref{tab:real_workload_shape} shows that SparseTreePIR uses only $9$--$17$
 
 \begin{figure}[!t]
 \centering
-\scriptsize
-\setlength{\tabcolsep}{3pt}
-\begin{tabular}{p{0.47\linewidth}r@{\quad}l}
-\toprule
-Comparison metric & Gain & Relative scale \\
-\midrule
-Pruned TreePIR subqueries & \(9.5\times\) & \rule{3.25cm}{4pt} \\
-Pruned TreePIR max size & \(2.5\times\) & \rule{0.86cm}{4pt} \\
-SimplePIR communication & \(2.1\times\) & \rule{0.72cm}{4pt} \\
-PIANO communication & \(2.3\times\) & \rule{0.79cm}{4pt} \\
-\bottomrule
-\end{tabular}
+\includegraphics[width=\linewidth]{../figures/sparsetreepir_gain_summary_bars.pdf}
 \caption{Summary of layout and backend gains. SparseTreePIR reduces query width and maximum searched subdatabase size at the layout level, and these improvements translate into lower online communication with SimplePIR and PIANO.}
 \label{fig:gain_summary}
 \end{figure}
@@ -782,10 +754,65 @@ T. Pulls and R. Peeters,
 
 \appendices
 
-\section{Supplementary Proof Details}
+\section{Supplementary Algorithms and Proof Details}
 \label{app:proofs}
 
-This appendix gives proof details omitted from the main text. They are included for auditability; the main correctness, privacy, and complexity claims are stated in Section~\ref{sec:correctness}.
+This appendix gives pseudocode and proof details omitted from the main text. They are included for auditability; the main correctness, privacy, and complexity claims are stated in Section~\ref{sec:correctness}.
+
+\setcounter{algorithm}{0}
+\renewcommand{\thealgorithm}{A.\arabic{algorithm}}
+
+\begin{algorithm}[H]
+\caption{Offline preprocessing}
+\label{alg:app_setup}
+\footnotesize
+\begin{algorithmic}[1]
+\Require Fixed SMT snapshot \(T\), occupied leaf set \(\mathcal{L}\), balancing passes \(R_1\)
+\Ensure Retrieval width \(m\), color subdatabases \(\{\mathcal{D}_c\}_{c=1}^{m}\), metadata tables \(\{\mathcal{M}_c\}_{c=1}^{m}\), coloring \(\varphi\)
+\State Traverse the compressed non-default SMT representation and compute occupied-leaf counts and rank endpoints.
+\For{each non-root node \(u\)}
+    \If{\(\operatorname{cnt}(u)>0\) and \(\operatorname{cnt}(\operatorname{sib}(u))>0\)}
+        \State Add \(u\) to \(\mathcal{A}(T)\).
+        \State Record its digest, proof level \(\delta(u)\), and target-rank interval \(I_{\mathsf{srv}}(u)\).
+    \EndIf
+\EndFor
+\State Build the laminar interval forest from the target-rank intervals.
+\State Set \(m\gets \max_{\ell\in\mathcal{L}}|\mathsf{Path}(\ell)|\).
+\State Compute an initial proper coloring \(\varphi:\mathcal{A}(T)\rightarrow[m]\).
+\State Apply \(\ActiveBalance{}\) to refine \(\varphi\) for at most \(R_1\) passes.
+\For{each color \(c\in[m]\)}
+    \State Build \(\mathcal{D}_c\) from digest records with color \(c\).
+    \State Build \(\mathcal{M}_c\) from \((I_{\mathsf{srv}}(u),\delta(u),\operatorname{pos}_c(u))\), sorted by interval.
+\EndFor
+\State \Return \(m,\{\mathcal{D}_c\},\{\mathcal{M}_c\},\varphi\)
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}[H]
+\caption{\ActiveBalance{} by subtree recoloring}
+\label{alg:app_activebalance}
+\footnotesize
+\begin{algorithmic}[1]
+\Require Interval forest \(F\), proper coloring \(\varphi\), colors \([m]\), pass limit \(R_1\)
+\Ensure Refined proper coloring \(\varphi\)
+\For{\(r=1,\ldots,R_1\)}
+    \State \(\mathsf{changed}\gets\mathsf{false}\); compute the current load vector \((|\mathcal{D}_1|,\ldots,|\mathcal{D}_m|)\).
+    \For{each subtree root \(v\) of \(F\)}
+        \State \(C_{\mathrm{anc}}\gets\{\varphi(a):a\text{ is a strict ancestor of }v\}\)
+        \State \(C_{\mathrm{avail}}\gets [m]\setminus C_{\mathrm{anc}}\)
+        \State Build the cost matrix induced by recoloring the subtree of \(v\) with colors in \(C_{\mathrm{avail}}\).
+        \State Solve the resulting assignment problem to obtain the best subtree color permutation \(\pi_v\).
+        \If{applying \(\pi_v\) strictly decreases the lexicographically sorted load vector}
+            \State Recolor the subtree of \(v\), update the loads, and set \(\mathsf{changed}\gets\mathsf{true}\).
+        \EndIf
+    \EndFor
+    \If{\(\mathsf{changed}=\mathsf{false}\)}
+        \State \textbf{break}
+    \EndIf
+\EndFor
+\State \Return \(\varphi\)
+\end{algorithmic}
+\end{algorithm}
 
 \subsection{Record and Width Bounds}
 
@@ -815,7 +842,7 @@ Metadata construction costs \(O(N\log N)\) time to sort the per-color interval t
 \section{Additional Experimental Tables}
 \label{app:experiments}
 
-\begin{table}[!t]
+\begin{table}[H]
 \centering
 \caption{\ActiveBalance{} ablation on real height-\(128\) workloads.}
 \label{tab:app_activebalance}
@@ -837,7 +864,7 @@ ZKsync broad         & 15478 & 17 & 911 & 1162 & 911 & 21.6\% & 362.8 \\
 \par}
 \end{table}
 
-\begin{table}[!t]
+\begin{table}[H]
 \centering
 \caption{Raw SimplePIR full-API means behind Table~\ref{tab:real_backend_summary}. Communication is KB per requested proof; timings are milliseconds.}
 \label{tab:app_simplepir_raw}
@@ -859,7 +886,7 @@ ZKsync broad         & 138.938& 65.344 & 32.302 & 17.679 & 0.268 & 0.120 \\
 \par}
 \end{table}
 
-\begin{table}[!t]
+\begin{table}[H]
 \centering
 \caption{Per-workload implementation-based backend gains against the PBC-style SMT baseline. Entries are baseline/SparseTreePIR ratios averaged over three target-sampling seeds.}
 \label{tab:app_backend_workloads}
