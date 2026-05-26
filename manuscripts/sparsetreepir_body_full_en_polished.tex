@@ -323,44 +323,16 @@ For dummy positions, the client uses Definition~\ref{def:dummyquery} and discard
 
 This section gives the fixed-snapshot retrieval protocol. Offline preprocessing constructs color subdatabases from the compressed non-default SMT representation; online retrieval sends one target-independent batch of PIR queries and reconstructs the standard height-$h$ proof with public default hashes. Figure~\ref{fig:workflow} summarizes the setup and retrieval flow.
 
-\begin{figure}[!t]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{../figures/sparsetreepir_algorithmic_pipeline.png}
-	\caption{SparseTreePIR algorithmic pipeline. Offline setup extracts active proof records, builds target-rank intervals, colors the laminar interval forest, and balances color subdatabases. Online retrieval uses public metadata to issue exactly one PIR query per color, then combines retrieved non-default sibling digests with public default hashes to reconstruct the standard height-$h$ SMT proof.}
+	\caption{SparseTreePIR pipeline. Setup builds color subdatabases and public metadata; online retrieval sends one PIR query per color and reconstructs the standard SMT proof with public default hashes.}
 	\label{fig:workflow}
 \end{figure}
 
 \subsection{Offline Preprocessing}
 
-Algorithm~\ref{alg:color} is the setup routine for one fixed public SMT snapshot. It identifies the non-default sibling digests that may appear in membership proofs, records for each digest its target-rank interval and proof level, builds the laminar interval forest, colors it, and publishes the resulting subdatabases and metadata. The procedure never materializes the full logical coordinate tree.
-
-\begin{algorithm}[H]
-\footnotesize
-\caption{Offline preprocessing}
-\label{alg:color}
-\begin{algorithmic}[1]
-\Require Fixed public SMT snapshot $T$, occupied leaf set $\mathcal{L}$, balancing rounds $R_1$
-\Ensure Active width $m$, color subdatabases $\{\mathcal{D}_c\}_{c=1}^{m}$, public metadata tables $\{\mathcal{M}_c\}_{c=1}^{m}$, valid coloring $\varphi$
-\State Sort the occupied leaves by logical SMT position and assign occupied-leaf ranks $0,\ldots,|\mathcal{L}|-1$
-\State Build the compressed non-default skeleton $\mathcal{S}(T)$ induced by the occupied leaves
-\State Annotate each skeleton edge with its corresponding original SMT child root and skipped logical levels
-\State Initialize $\mathcal{A}(T)\gets \emptyset$
-\For{each branching skeleton node $p$ with two non-default original children}
-  \For{each original child root $u$ of $p$}
-    \State $s \gets \operatorname{sib}(u)$ in the full SMT coordinate system
-    \State Add $u$ to $\mathcal{A}(T)$
-    \State Assign target-rank interval $I_{\mathsf{srv}}(u)=[L(s),R(s)]$ and proof level $\delta(u)$
-  \EndFor
-\EndFor
-\State Sort all target-rank intervals by increasing left endpoint and decreasing interval length
-\State Build the interval forest $\mathcal{F}$ from interval-containment relations
-\State Set $m$ to the maximum depth of $\mathcal{F}$
-\State Compute $\varphi\gets \textsc{FirstFitColoring}(\mathcal{F},m)$
-\State Refine $\varphi\gets\ActiveBalance{}(\mathcal{F},\varphi,R_1)$ by subtree recoloring
-\State Build the color subdatabases $\mathcal{D}_c$ and the public metadata tables $\mathcal{M}_c$
-\State \Return $m$, $\{\mathcal{D}_c\}_{c=1}^{m}$, $\{\mathcal{M}_c\}_{c=1}^{m}$, $\varphi$
-\end{algorithmic}
-\end{algorithm}
+Offline setup is run once for a fixed public SMT snapshot. It identifies the non-default sibling digests that may appear in membership proofs, records for each digest its target-rank interval and proof level, builds the laminar interval forest, colors it, and publishes the resulting subdatabases and metadata. The procedure never materializes the full logical coordinate tree.
 
 The first-fit stage is a feasibility step: it traverses the interval forest and assigns every node the smallest color not used on its strict ancestor chain. \ActiveBalance{} then applies legal subtree recolorings to reduce the lexicographically sorted load vector $\operatorname{sort}_{\downarrow}(|\mathcal{D}_1|,\ldots,|\mathcal{D}_m|)$ while preserving the coloring constraint. Once setup has built the color subdatabases and metadata tables, online retrieval needs only interval lookup, one PIR query per color, and the public default-hash chain.
 
@@ -808,7 +780,6 @@ T. Pulls and R. Peeters,
 
 \end{thebibliography}
 
-\clearpage
 \appendices
 
 \section{Supplementary Proof Details}
