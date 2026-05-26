@@ -47,6 +47,13 @@ A Sparse Merkle Tree is a Merkle tree over a fixed logical address space. A bina
 
 An SMT membership proof for an occupied leaf still contains one sibling digest per level, so the proof length is always $h$. The important sparse-tree property is that some proof entries are public: if a sibling subtree is empty, the corresponding entry is the default digest for that level and does not need retrieval. If the sibling subtree is non-empty, its digest is a non-default sibling digest that may have to be obtained from the server. Thus the verification view is the standard height-$h$ membership proof, while the retrieval view contains only the non-default sibling digests that can appear in such proofs. The retrieval protocol changes how the proof is obtained, not how it is verified.
 
+\begin{figure}[!t]
+	\centering
+	\includegraphics[width=\linewidth]{../figures/sparsetreepir_smt_logical_storage_figure.pdf}
+	\caption{Verification and retrieval views of an SMT proof. The verifier checks a standard height-$h$ proof, while the PIR database stores only non-default sibling digests. Empty sibling levels are reconstructed locally from the public default-hash chain.}
+	\label{fig:verification-retrieval-view}
+\end{figure}
+
 \subsection{From Proof Privacy to Batch PIR}
 
 The privacy goal is query privacy for membership-proof retrieval: given a fixed public SMT snapshot, the server should not learn which occupied leaf the client is proving, nor which authentication path is selected. The tree root, the default-hash chain, and the public retrieval layout may be known to the server.
@@ -169,6 +176,30 @@ u \in \mathsf{Path}(\ell) \Longleftrightarrow r(\ell) \in I_{\mathsf{srv}}(u).
 
 Since every binary subtree corresponds to a contiguous interval in leaf order, the resulting target-rank intervals form a laminar family: any two intervals are either disjoint, or one contains the other. This structure underlies both the coloring method and the indexing method.
 The intervals are public lookup metadata derived from the fixed snapshot and the public occupied-leaf order. Publishing them is therefore part of the setup leakage below; it does not attempt to hide the occupancy pattern or density of the snapshot. If the occupied-leaf set itself were sensitive, the layout would need additional occupancy-hiding mechanisms, such as dummy occupied leaves or oblivious metadata publication, which are outside the present query-privacy model.
+
+\begin{figure}[!t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\setlength{\fboxsep}{1pt}
+\begin{tabular}{lccccccc}
+\toprule
+Target rank & 0 & 1 & 2 & 3 & 4 & 5 & 6 \\
+\midrule
+Color 1 &
+\multicolumn{3}{c}{\fbox{\(\;u_1:[0,2]\;\)}} &
+\multicolumn{2}{c}{\fbox{\(\;u_2:[3,4]\;\)}} &
+\multicolumn{2}{c}{\fbox{\(\;u_3:[5,6]\;\)}} \\
+Color 2 &
+\multicolumn{5}{c}{\fbox{\(\;u_4:[0,4]\;\)}} &
+\multicolumn{2}{c}{\fbox{\(\;u_5:[5,6]\;\)}} \\
+Color 3 &
+\multicolumn{7}{c}{\fbox{\(\;u_6:[0,6]\;\)}} \\
+\bottomrule
+\end{tabular}
+\caption{Target-rank intervals and proper coloring. Each non-default sibling digest is associated with the target ranks whose proofs require it. Intervals form a laminar family, and a proper coloring ensures that any vertical target rank intersects at most one record from each color subdatabase.}
+\label{fig:interval-coloring}
+\end{figure}
 
 \subsection{Coloring and Load Metrics}
 
@@ -506,28 +537,25 @@ ZKsync broad         & 7740  & 15478 & 17 & 128 / 3014 & 26 / 1786 & 15478 & 911
 
 Table~\ref{tab:real_workload_shape} shows that SparseTreePIR uses only $9$--$17$ subqueries, whereas height-preserving pruned TreePIR still issues $128$ queries at height $128$ and $256$ queries at height $256$. For the broad ZKsync workload, $15478$ active proof records are partitioned into $17$ subdatabases, and the largest SparseTreePIR subdatabase contains $911$ records; the Pruned TreePIR-$128$ baseline has a largest subdatabase of $3014$ records.
 
-\begin{table}[!t]
+\begin{figure}[!t]
 \centering
-\caption{Measured sources of improvement on the real SMT workload suite. Multiplicative gains are computed from arithmetic-mean reductions over the six height-$128$ workload instances.}
-\label{tab:real_gain_sources}
 \scriptsize
 \setlength{\tabcolsep}{3pt}
-\resizebox{\linewidth}{!}{%
-\begin{tabular}{p{0.30\linewidth}p{0.30\linewidth}p{0.32\linewidth}}
+\begin{tabular}{p{0.47\linewidth}r@{\quad}l}
 \toprule
-Comparison & Observed resource effect & Interpretation \\
+Comparison metric & Gain & Relative scale \\
 \midrule
-vs. complete-tree TreePIR & Full $h=128/256$ layouts are $>4.3{\cdot}10^{34}\times$ / $>10^{73}\times$ larger than the largest active-record layout & Full coordinate trees are mismatched to sparse SMT proof retrieval. \\
-vs. pruned TreePIR & $9.5\times$ fewer subqueries; $2.5\times$ smaller maximum subdatabase & Deleting default records still leaves a height-$h$ query pattern. \\
-vs. PBC-style SMT & $1.5\times$ fewer subqueries; $1.9\times$ smaller largest bucket & Generic batch placement ignores authentication-path structure. \\
-vs. unpartitioned active-record PIR & $12.7\times$ smaller maximum searched database & Storing only non-default records is insufficient without partitioning. \\
-vs. node-local coloring & $1.2\times$ smaller maximum subdatabase & \ActiveBalance{} improves a valid coloring without changing $m$. \\
+Pruned TreePIR subqueries & \(9.5\times\) & \rule{3.25cm}{4pt} \\
+Pruned TreePIR max size & \(2.5\times\) & \rule{0.86cm}{4pt} \\
+SimplePIR communication & \(2.1\times\) & \rule{0.72cm}{4pt} \\
+PIANO communication & \(2.3\times\) & \rule{0.79cm}{4pt} \\
 \bottomrule
 \end{tabular}
-\par}
-\end{table}
+\caption{Summary of layout and backend gains. SparseTreePIR reduces query width and maximum searched subdatabase size at the layout level, and these improvements translate into lower online communication with SimplePIR and PIANO.}
+\label{fig:gain_summary}
+\end{figure}
 
-Table~\ref{tab:real_gain_sources} separates the sources of improvement. SparseTreePIR stores only non-default proof records, replaces the height-$h$ pruned TreePIR query pattern with $m$ subqueries, and balances per-color subdatabases. \ActiveBalance{} reaches the structural lower bound $B(T)$ on five of the six height-$128$ workloads, is within $1.045\times$ on the FuelLabs workload, and reduces the maximum subdatabase size by $10.8\%$--$21.6\%$ relative to a node-local greedy initializer.
+Figure~\ref{fig:gain_summary} separates the main sources of improvement. SparseTreePIR stores only non-default proof records, replaces the height-$h$ pruned TreePIR query pattern with $m$ subqueries, and balances per-color subdatabases. Complete-tree TreePIR is much larger still: at height $128$ and $256$, full coordinate-tree layouts are more than \(4.3{\cdot}10^{34}\times\) and \(10^{73}\times\) larger than the largest active-record layout. \ActiveBalance{} reaches the structural lower bound $B(T)$ on five of the six height-$128$ workloads, is within $1.045\times$ on the FuelLabs workload, and reduces the maximum subdatabase size by $10.8\%$--$21.6\%$ relative to a node-local greedy initializer.
 
 \subsection{Experiments with Existing PIR Backends}
 
