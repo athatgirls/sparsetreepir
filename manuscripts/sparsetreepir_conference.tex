@@ -1,8 +1,12 @@
-\documentclass[conference]{IEEEtran}
+\documentclass[conference,compsoc]{IEEEtran}
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{cite}
+\ifCLASSOPTIONcompsoc
+  \usepackage[nocompress]{cite}
+\else
+  \usepackage{cite}
+\fi
 \usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
 \usepackage{algorithm}
 \usepackage{algpseudocode}
