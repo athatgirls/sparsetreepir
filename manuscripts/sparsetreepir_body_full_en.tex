@@ -779,3 +779,108 @@ T. Pulls and R. Peeters,
 \newblock in \emph{Computer Security---ESORICS 2015}, LNCS 9326, Springer, 2015, pp. 622--641.
 
 \end{thebibliography}
+
+\clearpage
+\appendices
+
+\section{Supplementary Proof Details}
+\label{app:proofs}
+
+This appendix gives proof details omitted from the main text. They are included for auditability; the main correctness, privacy, and complexity claims are stated in Section~\ref{sec:correctness}.
+
+\subsection{Record and Width Bounds}
+
+\emph{Minimal record set.}
+For every node \(u\in\mathcal{A}(T)\), both \(u\) and its sibling contain occupied leaves. Choosing any occupied target leaf under \(\operatorname{sib}(u)\), the standard SMT membership proof for that target contains the digest of \(u\). Since \(u\) is non-empty, collision resistance implies that its digest is computationally distinct from the public default digest for the same subtree height, except with negligible probability. Thus a record-based retrieval database that supports all occupied-leaf membership proofs must make this digest retrievable. Conversely, if a sibling subtree is empty, its digest is the public default value \(\Delta_t\), and if a non-empty node has an empty sibling, it is not a proof sibling for any occupied target. Hence \(\mathcal{A}(T)\) is the necessary and sufficient non-default PIR record set.
+
+\emph{Number of records.}
+Every active proof node has a parent whose two SMT children are both non-empty. Conversely, each such branching parent contributes at most its two child roots to \(\mathcal{A}(T)\). The compressed non-default skeleton induced by \(n\) occupied leaves has at most \(n-1\) branching internal nodes, so \(|\mathcal{A}(T)|\le 2(n-1)\). Equality is reached by full binary occupied-leaf skeletons in which both children of every branching node correspond to non-empty SMT subtrees.
+
+\emph{Tightness of retrieval width.}
+The necessity and sufficiency of \(m\) colors follow from the interval-forest argument in Theorem~\ref{thm:mincolor}. To realize the bound, let \(k=\min\{h,n-1\}\), choose the target coordinate \(0^h\), and add occupied leaves \(0^d1\,0^{h-d-1}\) for \(d=0,\ldots,k-1\). These leaves make \(k\) distinct sibling subtrees on the target path non-empty, so the target proof contains \(k\) retrievable non-default siblings.
+
+\subsection{Correctness and Privacy}
+
+For a proper coloring, same-color target-rank intervals are disjoint. Otherwise, one occupied target rank would lie in two same-color intervals, and the corresponding proof would contain two records of the same color, contradicting properness. Therefore Algorithm~\ref{alg:query} has at most one real record per color. Correctness of the underlying PIR backend returns all selected real records, while public default hashes fill every empty proof level. This produces the standard height-\(h\) proof array used by ordinary SMT verification.
+
+For target privacy, condition on \(\mathcal{L}_{\mathsf{setup}}(T)\). The server already knows the snapshot, subdatabases, metadata, sizes, and the fact that one query is sent to each color. For one color, replacing the query generated for target \(\ell_0\) by the query generated for target \(\ell_1\) changes only the hidden PIR index or changes a real query into a well-formed dummy query over the same subdatabase. PIR query privacy makes the replacement computationally indistinguishable. A hybrid over the polynomially bounded number of colors gives the batch transcript indistinguishability claimed in Theorem~\ref{prop:privacy}.
+
+\subsection{ActiveBalance and Runtime}
+
+A subtree recoloring is valid because all colors used by strict ancestors of the subtree are removed from the available-color set. Pairs inside the subtree remain distinct under a common permutation; pairs outside the subtree do not change; and any co-occurring inside/outside pair must involve a strict ancestor whose color is unavailable inside the subtree. Thus the recoloring preserves properness.
+
+The balance certificate follows from Theorem~\ref{thm:structlb}: since every valid coloring has maximum subdatabase size at least \(B(T)\), a returned layout with maximum size \(U\) satisfies \(U/\mathrm{OPT}\le U/B(T)\). Termination follows because every accepted move strictly decreases the sorted load vector over finitely many colorings. For complexity, one pass computes subtree color histograms in \(O(Nm)\) space and evaluates \(N\) assignment problems of size at most \(m\), giving \(O(Nm^3)\) time per pass and \(O(R_1Nm^3)\) over \(R_1\) passes.
+
+Metadata construction costs \(O(N\log N)\) time to sort the per-color interval tables and \(O(N)\) space. Online lookup performs one binary search per color, for \(O(m\log N)\) time, and client-side proof reconstruction scans the height-\(h\) proof array, for \(O(h)\) additional time and space.
+
+\section{Additional Experimental Tables}
+\label{app:experiments}
+
+\begin{table}[!t]
+\centering
+\caption{\ActiveBalance{} ablation on real height-\(128\) workloads.}
+\label{tab:app_activebalance}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lrrrrrrr}
+\toprule
+Workload & PIR rec. & \(m\) & Lower & Greedy max & AB max & Red. & Meta KB \\
+\midrule
+FuelLabs SMT vectors & 198   & 9  & 22  & 26   & 23  & 11.5\% & 4.6 \\
+Polygon recent       & 766   & 11 & 70  & 83   & 70  & 15.7\% & 18.0 \\
+ZKsync sample        & 1910  & 13 & 147 & 180  & 147 & 18.3\% & 44.8 \\
+Polygon multi-window & 2694  & 14 & 193 & 236  & 193 & 18.2\% & 63.1 \\
+Polygon broad        & 14078 & 17 & 829 & 929  & 829 & 10.8\% & 330.0 \\
+ZKsync broad         & 15478 & 17 & 911 & 1162 & 911 & 21.6\% & 362.8 \\
+\bottomrule
+\end{tabular}
+\par}
+\end{table}
+
+\begin{table}[!t]
+\centering
+\caption{Raw SimplePIR full-API means behind Table~\ref{tab:real_backend_summary}. Communication is KB per requested proof; timings are milliseconds.}
+\label{tab:app_simplepir_raw}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lrrrrrr}
+\toprule
+Workload & PBC KB & Sparse KB & PBC query & Sparse query & PBC answer & Sparse answer \\
+\midrule
+Fuel vectors         & 12.000 & 5.906  & 9.061  & 5.936  & 0.033 & 0.023 \\
+Polygon recent       & 25.500 & 11.688 & 12.180 & 7.609  & 0.044 & 0.029 \\
+ZKsync sample        & 43.125 & 20.719 & 15.817 & 9.684  & 0.076 & 0.038 \\
+Polygon multi-window & 51.844 & 25.375 & 17.792 & 10.633 & 0.081 & 0.047 \\
+Polygon broad        & 133.250& 62.156 & 32.367 & 17.223 & 0.245 & 0.114 \\
+ZKsync broad         & 138.938& 65.344 & 32.302 & 17.679 & 0.268 & 0.120 \\
+\bottomrule
+\end{tabular}
+\par}
+\end{table}
+
+\begin{table}[!t]
+\centering
+\caption{Per-workload implementation-based backend gains against the PBC-style SMT baseline. Entries are baseline/SparseTreePIR ratios averaged over three target-sampling seeds.}
+\label{tab:app_backend_workloads}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lrrrrrr}
+\toprule
+Workload & Query count & SimplePIR comm. & SimplePIR query & PIANO comm. & PIANO query & PIANO max \\
+\midrule
+FuelLabs SMT vectors & 14 / 9  & \(2.0\times\) & \(1.5\times\) & \(3.2\times\) & \(3.4\times\) & \(1.9\times\) \\
+Polygon recent       & 17 / 11 & \(2.2\times\) & \(1.6\times\) & \(3.1\times\) & \(2.7\times\) & \(1.9\times\) \\
+ZKsync sample        & 20 / 13 & \(2.1\times\) & \(1.6\times\) & \(2.1\times\) & \(1.8\times\) & \(2.0\times\) \\
+Polygon multi-window & 21 / 14 & \(2.0\times\) & \(1.7\times\) & \(2.1\times\) & \(2.1\times\) & \(2.0\times\) \\
+Polygon broad        & 26 / 17 & \(2.1\times\) & \(1.9\times\) & \(2.1\times\) & \(3.1\times\) & \(2.0\times\) \\
+ZKsync broad         & 26 / 17 & \(2.1\times\) & \(1.8\times\) & \(2.1\times\) & \(2.1\times\) & \(2.0\times\) \\
+\bottomrule
+\end{tabular}
+\par}
+\end{table}
+
+\noindent\textbf{Artifact contents.}
+The repository includes workload extraction scripts, checked-in workload summaries, raw per-seed backend outputs, aggregate mean and standard-deviation CSVs, and the environment record used for the measurements in Section~\ref{sec:experiments}.
