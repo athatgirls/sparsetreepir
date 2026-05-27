@@ -328,6 +328,12 @@ A valid coloring guarantees that each proof needs at most one real record from e
 \]
 where $N_c=|\mathcal{D}_c|$. The accepted-move rule reduces the largest subdatabase first and then flattens the remaining count vector. Section~\ref{sec:correctness} gives the preservation argument, balance certificate, and runtime bound.
 
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\linewidth]{../figures/sparsetreepir_active_balance_before_after_figure.pdf}
+\caption{\ActiveBalance{} as subtree recoloring. The refinement permutes colors inside a legal subtree, preserves the query width \(m\), and reduces the maximum color-subdatabase load in this toy instance.}
+\label{fig:activebalance}
+\end{figure}
 
 \subsection{Target-Independent Online Query Generation}
 
