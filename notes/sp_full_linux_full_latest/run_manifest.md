@@ -13,6 +13,11 @@
 - Scale heights: `64,128,256`
 - Scale occupied counts: `100,1000`
 - Scale trials per setting: `3`
+- Deployment workloads: `Polygon zkEVM broad,ZKsync Era broad`
+- Deployment heights: `128`
+- Deployment occupied counts: `1000,10000,100000`
+- Deployment epochs per setting: `3`
+- Deployment balance rounds: `60`
 - Exact-balance settings: `10:0.98,12:0.99,14:0.995`
 
 ## Paper-Facing Outputs
@@ -20,6 +25,8 @@
 - `examples/sp_full_linux_full_latest/real_smt_final_suite_layouts.csv`
 - `examples/sp_full_linux_full_latest/small_opt_balance_results.csv`
 - `notes/sp_full_linux_full_latest/profile_balance_scale_experiment_note.md`
+- `examples/sp_full_linux_full_latest/deployment_scale_snapshot_summary.csv`
+- `notes/sp_full_linux_full_latest/deployment_scale_snapshot_experiment_note.md`
 - `examples/sp_full_linux_full_latest/real_backend_showcase_repeats_summary.csv`
 - `examples/sp_full_linux_full_latest/real_backend_showcase_raw_means.csv`
 - `examples/sp_full_linux_full_latest/end_to_end_paired_comparison.csv`
@@ -30,5 +37,6 @@
 - TreePIR/pruned/full-layout comparison: `real_smt_final_suite_layouts.csv`; optional official TreePIR run in `official_treepir_perfectized_baseline.csv`.
 - ActiveBalance optimality check: `small_opt_balance_results.csv`.
 - Scale and distribution sensitivity: `profile_balance_scale_experiment_note.md`.
+- Deployment-scale dynamic snapshot evidence: `deployment_scale_snapshot_summary.csv`.
 - Paired executable SimplePIR/PIANO backend evidence: `real_backend_showcase_repeats_*.csv`.
 - End-to-end accounting: `end_to_end_paired_comparison.csv`.
