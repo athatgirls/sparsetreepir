@@ -177,6 +177,10 @@ cat > "$NOTE_DIR/run_manifest.md" <<EOF
 - Backend seeds: \`$BACKEND_SEEDS\`
 - Backend query samples per seed: \`$BACKEND_QUERY_SAMPLES\`
 - Backends: \`$BACKENDS\`
+- Scale heights: \`$SCALE_HEIGHTS\`
+- Scale occupied counts: \`$SCALE_OCCUPIED\`
+- Scale trials per setting: \`$SCALE_TRIALS\`
+- Exact-balance settings: \`$EXACT_SETTINGS\`
 
 ## Paper-Facing Outputs
 

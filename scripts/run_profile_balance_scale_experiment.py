@@ -53,6 +53,16 @@ def _slots_to_heap_indices(slots: Iterable[int], tree_height: int) -> List[int]:
     return sorted(base + slot for slot in slots)
 
 
+def sample_unique_slots(total_slots: int, occupied_count: int, rng: random.Random) -> List[int]:
+    if total_slots <= 1_000_000:
+        return sorted(rng.sample(range(total_slots), occupied_count))
+
+    slots: set[int] = set()
+    while len(slots) < occupied_count:
+        slots.add(rng.randrange(total_slots))
+    return sorted(slots)
+
+
 def generate_occupied_leaves_with_distribution(
     tree_height: int,
     occupied_count: int,
@@ -64,7 +74,7 @@ def generate_occupied_leaves_with_distribution(
     rng = random.Random(seed)
 
     if distribution == "uniform":
-        slots = sorted(rng.sample(range(total_slots), occupied_count))
+        slots = sample_unique_slots(total_slots, occupied_count, rng)
         return _slots_to_heap_indices(slots, tree_height)
 
     if distribution == "sequential":
