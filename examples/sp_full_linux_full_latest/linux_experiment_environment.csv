@@ -1,0 +1,13 @@
+key,value
+captured_at,2026-05-28T18:49:09+08:00
+repo_head,848f3a9277509d6bd2e89bac32b0256463a131cc
+kernel,"Linux thighlight 6.8.0-117-generic #117~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu May  7 22:17:46 UTC  x86_64 x86_64 x86_64 GNU/Linux"
+python,"Python 3.10.12"
+go,"go version go1.18.1 linux/amd64"
+gcc,"gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0"
+g++,"g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0"
+java,"openjdk version ""11.0.30"" 2026-01-20"
+cmake,"cmake version 3.22.1"
+simplepir_commit,e9020b03bf2872c75b8954e749e32408b5db87ed
+piano_commit,f7107cfadc15a0ac3df20f0bc64f126bf359b702
+avx512_present,no
