@@ -76,6 +76,27 @@ This produces per-seed backend results plus
 
 For details, see `notes/linux_experiment_migration_plan.md`.
 
+## S&P full Linux experiment suite
+
+For a full paper-facing rerun aimed at the IEEE S&P submission, use:
+
+```bash
+bash scripts/run_sp_full_linux_experiments.sh smoke
+bash scripts/run_sp_full_linux_experiments.sh full
+```
+
+The full suite runs the real SMT layout study, exact small-instance
+ActiveBalance checks, scale/distribution sensitivity, paired SimplePIR/PIANO
+backend repeats, and end-to-end accounting. To include the optional official
+TreePIR artifact baseline, run:
+
+```bash
+SPARSETREEPIR_WITH_EXTRA_SETUP=1 SPARSETREEPIR_RUN_TREEPIR=1 \
+  bash scripts/run_sp_full_linux_experiments.sh full
+```
+
+See `notes/sp_full_linux_experiment_runbook.md` for outputs and overrides.
+
 ## Backend scope
 
 The Linux setup intentionally installs only the current executable SparseTreePIR

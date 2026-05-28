@@ -7,6 +7,7 @@ then aligns the resulting perfect-tree costs with our direct SMT profile results
 
 from __future__ import annotations
 
+import argparse
 import csv
 import os
 import re
@@ -28,6 +29,13 @@ SPARSITY = "0.9995"
 TARGET_LEAF = 17
 
 
+def parse_int_list(raw: str) -> list[int]:
+    values = [int(item.strip()) for item in raw.split(",") if item.strip()]
+    if not values:
+        raise ValueError("height list cannot be empty")
+    return values
+
+
 def java_exe() -> str:
     if WINDOWS_JAVA_EXE.exists():
         return str(WINDOWS_JAVA_EXE)
@@ -37,18 +45,18 @@ def java_exe() -> str:
     raise SystemExit("Could not find Java. Install a JRE/JDK or run scripts/setup_linux_extra_backend_sources.sh.")
 
 
-def run_official_indexing(height: int) -> dict[str, float]:
-    if not TREEPIR_DIR.exists():
+def run_official_indexing(treepir_dir: Path, height: int, target_leaf: int) -> dict[str, float]:
+    if not treepir_dir.exists():
         raise SystemExit(
-            f"TreePIR indexing directory not found: {TREEPIR_DIR}\n"
+            f"TreePIR indexing directory not found: {treepir_dir}\n"
             "Run scripts/setup_linux_extra_backend_sources.sh on Linux first."
         )
-    list_file = TREEPIR_DIR / f"list_TXs_{height}_2.txt"
-    list_file.write_text(f"{TARGET_LEAF}\n", encoding="utf-8")
+    list_file = treepir_dir / f"list_TXs_{height}_2.txt"
+    list_file.write_text(f"{target_leaf}\n", encoding="utf-8")
 
     proc = subprocess.run(
         [java_exe(), "-cp", "src", "SubCSA", str(height), "."],
-        cwd=TREEPIR_DIR,
+        cwd=treepir_dir,
         check=True,
         text=True,
         capture_output=True,
@@ -70,11 +78,11 @@ def run_official_indexing(height: int) -> dict[str, float]:
     }
 
 
-def load_direct_results() -> dict[int, dict[str, float]]:
+def load_direct_results(path: Path, sparsity: str) -> dict[int, dict[str, float]]:
     by_height: dict[int, dict[str, float]] = {}
-    with DIRECT_RESULTS.open(newline="", encoding="utf-8") as f:
+    with path.open(newline="", encoding="utf-8") as f:
         for row in csv.DictReader(f):
-            if row["sparsity"] != SPARSITY:
+            if row["sparsity"] != sparsity:
                 continue
             h = int(row["height"])
             by_height[h] = {
@@ -88,15 +96,28 @@ def load_direct_results() -> dict[int, dict[str, float]]:
 
 
 def main() -> None:
-    direct = load_direct_results()
+    parser = argparse.ArgumentParser(description="Run official TreePIR indexing as a perfectized SMT baseline.")
+    parser.add_argument("--treepir-root", type=Path, default=TREEPIR_ROOT)
+    parser.add_argument("--direct-results", type=Path, default=DIRECT_RESULTS)
+    parser.add_argument("--output", type=Path, default=OUT_CSV)
+    parser.add_argument("--note", type=Path, default=OUT_NOTE)
+    parser.add_argument("--heights", default=",".join(str(height) for height in HEIGHTS))
+    parser.add_argument("--sparsity", default=SPARSITY)
+    parser.add_argument("--target-leaf", type=int, default=TARGET_LEAF)
+    args = parser.parse_args()
+
+    treepir_dir = args.treepir_root / "TreePIR-Indexing"
+    direct = load_direct_results(args.direct_results, args.sparsity)
     rows: list[dict[str, float | int | str]] = []
-    for h in HEIGHTS:
-        official = run_official_indexing(h)
+    for h in parse_int_list(args.heights):
+        if h not in direct:
+            raise SystemExit(f"height {h} with sparsity {args.sparsity} not found in {args.direct_results}")
+        official = run_official_indexing(treepir_dir=treepir_dir, height=h, target_leaf=args.target_leaf)
         ours = direct[h]
         rows.append(
             {
                 "height": h,
-                "sparsity": SPARSITY,
+                "sparsity": args.sparsity,
                 "occupied": round(ours["occupied"], 3),
                 "direct_active_nodes": round(ours["active_nodes"], 3),
                 "treepir_records": official["treepir_records"],
@@ -112,8 +133,8 @@ def main() -> None:
             }
         )
 
-    OUT_CSV.parent.mkdir(parents=True, exist_ok=True)
-    with OUT_CSV.open("w", newline="", encoding="utf-8") as f:
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    with args.output.open("w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
         writer.writeheader()
         writer.writerows(rows)
@@ -147,9 +168,10 @@ def main() -> None:
             "color subdatabase on the same fixed-height SMT snapshots.",
         ]
     )
-    OUT_NOTE.write_text("\n".join(lines) + "\n", encoding="utf-8")
-    print(OUT_CSV)
-    print(OUT_NOTE)
+    args.note.parent.mkdir(parents=True, exist_ok=True)
+    args.note.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print(args.output)
+    print(args.note)
 
 
 if __name__ == "__main__":
