@@ -1,6 +1,6 @@
 # S&P Linux Experiment Runbook
 
-This runbook is the paper-facing experiment checklist for a Security & Privacy submission. It groups the experiments needed to defend the current SparseTreePIR claims against the main reviewer risks: TreePIR/PBC baselines, ActiveBalance optimality, scale sensitivity, executable PIR backend evidence, and end-to-end accounting.
+This runbook is the paper-facing experiment checklist for a Security & Privacy submission. It groups the experiments needed to defend the current SparseTreePIR claims against the main reviewer risks: TreePIR/PBC baselines, ActiveBalance optimality, scale sensitivity, deployment-scale dynamic snapshots, executable PIR backend evidence, and end-to-end accounting.
 
 ## 1. Fresh Linux Setup
 
@@ -61,13 +61,16 @@ The most useful file to open first is `notes/.../run_manifest.md`.
 3. Scale and distribution sensitivity:
    `profile_balance_scale_experiment_note.md`.
 
-4. Optional official TreePIR perfectized baseline:
+4. Deployment-scale dynamic snapshot experiment:
+   `deployment_scale_snapshot_rows.csv`, `deployment_scale_snapshot_summary.csv`, and `deployment_scale_snapshot_experiment_note.md`.
+
+5. Optional official TreePIR perfectized baseline:
    `official_treepir_perfectized_baseline.csv`.
 
-5. Paired executable backend runs:
+6. Paired executable backend runs:
    SimplePIR and PIANO over PBC-style SMT versus SparseTreePIR, with three seeds and 50 targets per seed by default.
 
-6. End-to-end accounting:
+7. End-to-end accounting:
    `end_to_end_cost_breakdown.csv`, `end_to_end_paired_comparison.csv`, and `end_to_end_cost_breakdown_note.md`.
 
 ## 5. Useful Overrides
@@ -77,6 +80,9 @@ SPARSETREEPIR_OUT_TAG=linux_server_a_full \
 SPARSETREEPIR_BACKEND_SEEDS=73000,83000,93000,103000,113000 \
 SPARSETREEPIR_QUERY_SAMPLES=100 \
 SPARSETREEPIR_BACKENDS=simplepir,piano \
+SPARSETREEPIR_DEPLOYMENT_TARGETS=1000,10000,100000 \
+SPARSETREEPIR_DEPLOYMENT_COLORING_STRATEGY=hybrid \
+SPARSETREEPIR_DEPLOYMENT_BALANCE_ROUNDS=60 \
 bash scripts/run_sp_full_linux_experiments.sh full
 ```
 
@@ -92,6 +98,7 @@ bash scripts/run_sp_full_linux_experiments.sh full
 
 - Use `real_smt_final_suite_layouts.csv` for Table 3-style layout results.
 - Use `real_backend_showcase_repeats_summary.csv` and `real_backend_showcase_raw_means.csv` for Table 4-style backend ratios.
+- Use `deployment_scale_snapshot_summary.csv` for a deployment-scale paragraph or appendix table showing dynamic snapshot build cost, width gain, max-bucket gain, memory, and per-epoch churn behavior.
 - Use `end_to_end_paired_comparison.csv` for appendix-level end-to-end accounting.
 - Use `small_opt_balance_results.csv` and the scale note to defend ActiveBalance against the "just a heuristic" critique.
 - Use the optional TreePIR baseline note to defend against the "just TreePIR on a sparse tree" critique.

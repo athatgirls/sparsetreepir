@@ -55,6 +55,11 @@ if [[ "$MODE" == "smoke" ]]; then
   SCALE_HEIGHTS="${SPARSETREEPIR_SCALE_HEIGHTS:-16}"
   SCALE_OCCUPIED="${SPARSETREEPIR_SCALE_OCCUPIED:-64}"
   SCALE_TRIALS="${SPARSETREEPIR_SCALE_TRIALS:-1}"
+  DEPLOYMENT_WORKLOADS="${SPARSETREEPIR_DEPLOYMENT_WORKLOADS:-Polygon zkEVM broad}"
+  DEPLOYMENT_HEIGHTS="${SPARSETREEPIR_DEPLOYMENT_HEIGHTS:-16}"
+  DEPLOYMENT_TARGETS="${SPARSETREEPIR_DEPLOYMENT_TARGETS:-64,128}"
+  DEPLOYMENT_EPOCHS="${SPARSETREEPIR_DEPLOYMENT_EPOCHS:-2}"
+  DEPLOYMENT_BALANCE_ROUNDS="${SPARSETREEPIR_DEPLOYMENT_BALANCE_ROUNDS:-5}"
   EXACT_SETTINGS="${SPARSETREEPIR_EXACT_SETTINGS:-8:0.95}"
   EXACT_TRIALS="${SPARSETREEPIR_EXACT_TRIALS:-1}"
 else
@@ -67,6 +72,11 @@ else
   SCALE_HEIGHTS="${SPARSETREEPIR_SCALE_HEIGHTS:-64,128,256}"
   SCALE_OCCUPIED="${SPARSETREEPIR_SCALE_OCCUPIED:-100,1000,10000}"
   SCALE_TRIALS="${SPARSETREEPIR_SCALE_TRIALS:-3}"
+  DEPLOYMENT_WORKLOADS="${SPARSETREEPIR_DEPLOYMENT_WORKLOADS:-Polygon zkEVM broad,ZKsync Era broad}"
+  DEPLOYMENT_HEIGHTS="${SPARSETREEPIR_DEPLOYMENT_HEIGHTS:-128}"
+  DEPLOYMENT_TARGETS="${SPARSETREEPIR_DEPLOYMENT_TARGETS:-1000,10000,100000}"
+  DEPLOYMENT_EPOCHS="${SPARSETREEPIR_DEPLOYMENT_EPOCHS:-3}"
+  DEPLOYMENT_BALANCE_ROUNDS="${SPARSETREEPIR_DEPLOYMENT_BALANCE_ROUNDS:-60}"
   EXACT_SETTINGS="${SPARSETREEPIR_EXACT_SETTINGS:-10:0.98,12:0.99,14:0.995}"
   EXACT_TRIALS="${SPARSETREEPIR_EXACT_TRIALS:-3}"
 fi
@@ -126,6 +136,21 @@ run_step exact_balance python scripts/run_small_opt_balance_experiment.py \
   echo '```'
 } 2>&1 | tee "$LOG_DIR/profile_scale.log" > "$NOTE_DIR/profile_balance_scale_experiment_note.md"
 
+run_step deployment_scale python scripts/run_deployment_scale_snapshot_experiment.py \
+  --workloads "$DEPLOYMENT_WORKLOADS" \
+  --heights "$DEPLOYMENT_HEIGHTS" \
+  --target-counts "$DEPLOYMENT_TARGETS" \
+  --epochs "$DEPLOYMENT_EPOCHS" \
+  --churn-fraction "${SPARSETREEPIR_DEPLOYMENT_CHURN:-0.05}" \
+  --prefix-bits "${SPARSETREEPIR_DEPLOYMENT_PREFIX_BITS:-24}" \
+  --coloring-strategy "${SPARSETREEPIR_DEPLOYMENT_COLORING_STRATEGY:-hybrid}" \
+  --balance-rounds "$DEPLOYMENT_BALANCE_ROUNDS" \
+  --seed-base "${SPARSETREEPIR_DEPLOYMENT_SEED_BASE:-410000}" \
+  --max-active-nodes "${SPARSETREEPIR_DEPLOYMENT_MAX_ACTIVE_NODES:-5000000}" \
+  --rows-output "$EXAMPLE_DIR/deployment_scale_snapshot_rows.csv" \
+  --summary-output "$EXAMPLE_DIR/deployment_scale_snapshot_summary.csv" \
+  --note "$NOTE_DIR/deployment_scale_snapshot_experiment_note.md"
+
 if [[ "$RUN_TREEPIR" == "1" || ( "$RUN_TREEPIR" == "auto" && -d "$ROOT/external/TreePIR-main/TreePIR-Indexing" ) ]]; then
   run_step treepir_perfectized python scripts/run_official_treepir_perfectized_baseline.py \
     --output "$EXAMPLE_DIR/official_treepir_perfectized_baseline.csv" \
@@ -180,6 +205,11 @@ cat > "$NOTE_DIR/run_manifest.md" <<EOF
 - Scale heights: \`$SCALE_HEIGHTS\`
 - Scale occupied counts: \`$SCALE_OCCUPIED\`
 - Scale trials per setting: \`$SCALE_TRIALS\`
+- Deployment workloads: \`$DEPLOYMENT_WORKLOADS\`
+- Deployment heights: \`$DEPLOYMENT_HEIGHTS\`
+- Deployment occupied counts: \`$DEPLOYMENT_TARGETS\`
+- Deployment epochs per setting: \`$DEPLOYMENT_EPOCHS\`
+- Deployment balance rounds: \`$DEPLOYMENT_BALANCE_ROUNDS\`
 - Exact-balance settings: \`$EXACT_SETTINGS\`
 
 ## Paper-Facing Outputs
@@ -187,6 +217,8 @@ cat > "$NOTE_DIR/run_manifest.md" <<EOF
 - \`examples/$OUT_TAG/real_smt_final_suite_layouts.csv\`
 - \`examples/$OUT_TAG/small_opt_balance_results.csv\`
 - \`notes/$OUT_TAG/profile_balance_scale_experiment_note.md\`
+- \`examples/$OUT_TAG/deployment_scale_snapshot_summary.csv\`
+- \`notes/$OUT_TAG/deployment_scale_snapshot_experiment_note.md\`
 - \`examples/$OUT_TAG/real_backend_showcase_repeats_summary.csv\`
 - \`examples/$OUT_TAG/real_backend_showcase_raw_means.csv\`
 - \`examples/$OUT_TAG/end_to_end_paired_comparison.csv\`
@@ -197,6 +229,7 @@ cat > "$NOTE_DIR/run_manifest.md" <<EOF
 - TreePIR/pruned/full-layout comparison: \`real_smt_final_suite_layouts.csv\`; optional official TreePIR run in \`official_treepir_perfectized_baseline.csv\`.
 - ActiveBalance optimality check: \`small_opt_balance_results.csv\`.
 - Scale and distribution sensitivity: \`profile_balance_scale_experiment_note.md\`.
+- Deployment-scale dynamic snapshot evidence: \`deployment_scale_snapshot_summary.csv\`.
 - Paired executable SimplePIR/PIANO backend evidence: \`real_backend_showcase_repeats_*.csv\`.
 - End-to-end accounting: \`end_to_end_paired_comparison.csv\`.
 EOF
