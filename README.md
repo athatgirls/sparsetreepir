@@ -38,6 +38,22 @@ python scripts/run_real_smt_final_experiment_suite.py --run-simplepir
 python scripts/run_real_smt_multi_pir_pbc_battle.py
 ```
 
+TreePIR-compatible PBC active-record baseline:
+
+```bash
+python scripts/run_treepir_pbc_active_backend.py \
+  --workloads all \
+  --heights 128 \
+  --seeds 73000,83000,93000 \
+  --queries 50 \
+  --output-dir examples/treepir_pbc_active_linux
+```
+
+Add `--run-simplepir --simplepir-root external/simplepir --go-exe external/go/bin/go`
+after running the Linux dependency setup to execute the generated PBC manifests
+through the same SimplePIR bridge. See
+`notes/treepir_pbc_active_backend_runbook.md`.
+
 PIANO backend evidence:
 
 ```bash

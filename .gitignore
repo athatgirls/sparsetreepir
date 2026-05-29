@@ -51,6 +51,7 @@ examples/sp_full_linux_*/layouts/
 # Smoke checks are for local dependency wiring; keep full result CSV/notes in Git.
 examples/sp_full_linux_smoke_*/
 notes/sp_full_linux_smoke_*/
+examples/treepir_pbc_active*/
 
 # OS/editor noise
 .DS_Store
