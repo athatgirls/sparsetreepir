@@ -1,0 +1,36 @@
+manifest=examples/treepir_pbc_active_linux_latest/seed73000/polygon_zkevm_recent_h128/treepir_pbc_active/manifest.json failures=0/50 buckets=17 max=151
+simplepir online_kb=27.094 setup_ms=9.739
+manifest=examples/treepir_pbc_active_linux_latest/seed83000/polygon_zkevm_recent_h128/treepir_pbc_active/manifest.json failures=0/50 buckets=17 max=151
+simplepir online_kb=27.094 setup_ms=9.255
+manifest=examples/treepir_pbc_active_linux_latest/seed93000/polygon_zkevm_recent_h128/treepir_pbc_active/manifest.json failures=0/50 buckets=17 max=151
+simplepir online_kb=27.094 setup_ms=11.154
+manifest=examples/treepir_pbc_active_linux_latest/seed73000/polygon_zkevm_multi-window_h128/treepir_pbc_active/manifest.json failures=1/50 buckets=21 max=418
+simplepir online_kb=53.812 setup_ms=30.077
+manifest=examples/treepir_pbc_active_linux_latest/seed83000/polygon_zkevm_multi-window_h128/treepir_pbc_active/manifest.json failures=0/50 buckets=21 max=418
+simplepir online_kb=53.812 setup_ms=27.361
+manifest=examples/treepir_pbc_active_linux_latest/seed93000/polygon_zkevm_multi-window_h128/treepir_pbc_active/manifest.json failures=0/50 buckets=21 max=418
+simplepir online_kb=53.812 setup_ms=27.140
+manifest=examples/treepir_pbc_active_linux_latest/seed73000/polygon_zkevm_broad_h128/treepir_pbc_active/manifest.json failures=0/50 buckets=26 max=1693
+simplepir online_kb=134.062 setup_ms=111.201
+manifest=examples/treepir_pbc_active_linux_latest/seed83000/polygon_zkevm_broad_h128/treepir_pbc_active/manifest.json failures=1/50 buckets=26 max=1693
+simplepir online_kb=134.062 setup_ms=110.995
+manifest=examples/treepir_pbc_active_linux_latest/seed93000/polygon_zkevm_broad_h128/treepir_pbc_active/manifest.json failures=0/50 buckets=26 max=1693
+simplepir online_kb=134.062 setup_ms=108.912
+manifest=examples/treepir_pbc_active_linux_latest/seed73000/zksync_era_sample_h128/treepir_pbc_active/manifest.json failures=0/50 buckets=20 max=317
+simplepir online_kb=45.000 setup_ms=21.302
+manifest=examples/treepir_pbc_active_linux_latest/seed83000/zksync_era_sample_h128/treepir_pbc_active/manifest.json failures=0/50 buckets=20 max=317
+simplepir online_kb=45.000 setup_ms=21.020
+manifest=examples/treepir_pbc_active_linux_latest/seed93000/zksync_era_sample_h128/treepir_pbc_active/manifest.json failures=0/50 buckets=20 max=317
+simplepir online_kb=45.000 setup_ms=20.437
+manifest=examples/treepir_pbc_active_linux_latest/seed73000/zksync_era_broad_h128/treepir_pbc_active/manifest.json failures=0/50 buckets=26 max=1850
+simplepir online_kb=142.188 setup_ms=116.732
+manifest=examples/treepir_pbc_active_linux_latest/seed83000/zksync_era_broad_h128/treepir_pbc_active/manifest.json failures=0/50 buckets=26 max=1850
+simplepir online_kb=142.188 setup_ms=120.887
+manifest=examples/treepir_pbc_active_linux_latest/seed93000/zksync_era_broad_h128/treepir_pbc_active/manifest.json failures=0/50 buckets=26 max=1850
+simplepir online_kb=142.188 setup_ms=122.320
+manifest=examples/treepir_pbc_active_linux_latest/seed73000/fuellabs_smt_test_vectors_h128/treepir_pbc_active/manifest.json failures=0/50 buckets=14 max=49
+simplepir online_kb=13.562 setup_ms=3.911
+manifest=examples/treepir_pbc_active_linux_latest/seed83000/fuellabs_smt_test_vectors_h128/treepir_pbc_active/manifest.json failures=0/50 buckets=14 max=49
+simplepir online_kb=13.562 setup_ms=3.632
+manifest=examples/treepir_pbc_active_linux_latest/seed93000/fuellabs_smt_test_vectors_h128/treepir_pbc_active/manifest.json failures=0/50 buckets=14 max=49
+simplepir online_kb=13.562 setup_ms=3.535

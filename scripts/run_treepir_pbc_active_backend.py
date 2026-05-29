@@ -5,6 +5,7 @@ import csv
 import hashlib
 import json
 import math
+import os
 import random
 import time
 from dataclasses import dataclass
@@ -358,8 +359,19 @@ def main() -> None:
     seeds = parse_int_list(args.seeds)
 
     workspace = args.workspace.resolve()
-    workspace_drive = ensure_subst_drive(workspace, args.workspace_drive) if args.run_simplepir else args.workspace_drive
-    env = simplepir_environment(workspace) if args.run_simplepir else {}
+    workspace_drive = args.workspace_drive
+    simplepir_root = args.simplepir_root
+    go_exe = args.go_exe
+    env: Dict[str, str] = {}
+
+    if args.run_simplepir:
+        drive_name = str(args.workspace_drive).rstrip("/\\")
+        workspace_drive = ensure_subst_drive(drive_name, workspace) if os.name == "nt" else workspace
+        detected_simplepir_root, detected_go_exe, env = simplepir_environment(workspace_drive)
+        if args.simplepir_root == Path("external/simplepir"):
+            simplepir_root = detected_simplepir_root
+        if args.go_exe == Path("external/go/bin/go"):
+            go_exe = detected_go_exe
 
     manifest_rows: List[Dict[str, object]] = []
     backend_rows: List[Dict[str, object]] = []
@@ -398,8 +410,8 @@ def main() -> None:
                         manifest_path=stats.manifest_path,
                         workspace=workspace,
                         workspace_drive=workspace_drive,
-                        simplepir_root=args.simplepir_root,
-                        go_exe=args.go_exe,
+                        simplepir_root=simplepir_root,
+                        go_exe=go_exe,
                         env=env,
                         timeout=args.timeout,
                     )
