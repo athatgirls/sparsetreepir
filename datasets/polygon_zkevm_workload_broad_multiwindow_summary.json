@@ -1,0 +1,147 @@
+{
+  "source": "Polygon zkEVM public JSON-RPC multi-window sample",
+  "rpc_url": "https://zkevm-rpc.com",
+  "latest_block": 32098486,
+  "offsets": [
+    1000,
+    500000,
+    1000000,
+    2000000,
+    4000000,
+    8000000,
+    12000000,
+    16000000,
+    20000000,
+    24000000,
+    28000000
+  ],
+  "window_blocks": 100000,
+  "step": 10,
+  "leaf_types": [
+    0,
+    1,
+    2,
+    4
+  ],
+  "leaf_type_names": {
+    "0": "balance",
+    "1": "nonce",
+    "2": "code_hash",
+    "4": "code_hash_length"
+  },
+  "window_summaries": [
+    {
+      "window": "31997487-32097486",
+      "offset": 1000,
+      "sampled_blocks": 10000,
+      "nonempty_blocks": 300,
+      "fetched_blocks": 300,
+      "transactions": 441,
+      "unique_addresses_in_window": 86,
+      "unique_addresses_merged": 86
+    },
+    {
+      "window": "31498487-31598486",
+      "offset": 500000,
+      "sampled_blocks": 10000,
+      "nonempty_blocks": 240,
+      "fetched_blocks": 240,
+      "transactions": 288,
+      "unique_addresses_in_window": 107,
+      "unique_addresses_merged": 151
+    },
+    {
+      "window": "30998487-31098486",
+      "offset": 1000000,
+      "sampled_blocks": 10000,
+      "nonempty_blocks": 300,
+      "fetched_blocks": 300,
+      "transactions": 476,
+      "unique_addresses_in_window": 95,
+      "unique_addresses_merged": 195
+    },
+    {
+      "window": "29998487-30098486",
+      "offset": 2000000,
+      "sampled_blocks": 10000,
+      "nonempty_blocks": 300,
+      "fetched_blocks": 300,
+      "transactions": 416,
+      "unique_addresses_in_window": 133,
+      "unique_addresses_merged": 269
+    },
+    {
+      "window": "27998487-28098486",
+      "offset": 4000000,
+      "sampled_blocks": 10000,
+      "nonempty_blocks": 300,
+      "fetched_blocks": 300,
+      "transactions": 438,
+      "unique_addresses_in_window": 147,
+      "unique_addresses_merged": 349
+    },
+    {
+      "window": "23998487-24098486",
+      "offset": 8000000,
+      "sampled_blocks": 10000,
+      "nonempty_blocks": 300,
+      "fetched_blocks": 300,
+      "transactions": 371,
+      "unique_addresses_in_window": 231,
+      "unique_addresses_merged": 518
+    },
+    {
+      "window": "19998487-20098486",
+      "offset": 12000000,
+      "sampled_blocks": 10000,
+      "nonempty_blocks": 300,
+      "fetched_blocks": 300,
+      "transactions": 499,
+      "unique_addresses_in_window": 297,
+      "unique_addresses_merged": 752
+    },
+    {
+      "window": "15998487-16098486",
+      "offset": 16000000,
+      "sampled_blocks": 10000,
+      "nonempty_blocks": 300,
+      "fetched_blocks": 300,
+      "transactions": 381,
+      "unique_addresses_in_window": 296,
+      "unique_addresses_merged": 982
+    },
+    {
+      "window": "11998487-12098486",
+      "offset": 20000000,
+      "sampled_blocks": 10000,
+      "nonempty_blocks": 300,
+      "fetched_blocks": 300,
+      "transactions": 405,
+      "unique_addresses_in_window": 347,
+      "unique_addresses_merged": 1263
+    },
+    {
+      "window": "7998487-8098486",
+      "offset": 24000000,
+      "sampled_blocks": 10000,
+      "nonempty_blocks": 300,
+      "fetched_blocks": 300,
+      "transactions": 300,
+      "unique_addresses_in_window": 296,
+      "unique_addresses_merged": 1528
+    },
+    {
+      "window": "3998487-4098486",
+      "offset": 28000000,
+      "sampled_blocks": 10000,
+      "nonempty_blocks": 300,
+      "fetched_blocks": 300,
+      "transactions": 300,
+      "unique_addresses_in_window": 267,
+      "unique_addresses_merged": 1760
+    }
+  ],
+  "unique_addresses": 1760,
+  "workload_keys": 7040,
+  "note": "Multi-window public-block address workload for Polygon zkEVM. This is not a full state-tree node dump; account-level SMT keys are expanded from observed addresses."
+}

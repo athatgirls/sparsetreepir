@@ -1,0 +1,25 @@
+{
+  "source": "Polygon zkEVM public JSON-RPC",
+  "rpc_url": "https://zkevm-rpc.com",
+  "start_block": 32096921,
+  "end_block": 32096940,
+  "leaf_types": [
+    0,
+    1,
+    2,
+    4
+  ],
+  "leaf_type_names": {
+    "0": "balance",
+    "1": "nonce",
+    "2": "code_hash",
+    "4": "code_hash_length"
+  },
+  "requested_blocks": 20,
+  "fetched_blocks": 20,
+  "failed_blocks": 0,
+  "transactions": 0,
+  "unique_addresses": 0,
+  "workload_keys": 0,
+  "note": "This is a Polygon-zkEVM-derived SMT key workload built from public block addresses. It is not a full Polygon state-tree node dump. Account-level leaf keys are represented by address plus Polygon SMT_KEY type and then mapped to experiment coordinates by the SparseTreePIR workload script."
+}

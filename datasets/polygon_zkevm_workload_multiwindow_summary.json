@@ -1,0 +1,70 @@
+{
+  "source": "Polygon zkEVM public JSON-RPC multi-window sample",
+  "rpc_url": "https://zkevm-rpc.com",
+  "latest_block": 32098389,
+  "offsets": [
+    1000,
+    1000000,
+    4000000,
+    10000000
+  ],
+  "window_blocks": 50000,
+  "step": 5,
+  "leaf_types": [
+    0,
+    1,
+    2,
+    4
+  ],
+  "leaf_type_names": {
+    "0": "balance",
+    "1": "nonce",
+    "2": "code_hash",
+    "4": "code_hash_length"
+  },
+  "window_summaries": [
+    {
+      "window": "32047390-32097389",
+      "offset": 1000,
+      "sampled_blocks": 10000,
+      "nonempty_blocks": 200,
+      "fetched_blocks": 200,
+      "transactions": 296,
+      "unique_addresses_in_window": 66,
+      "unique_addresses_merged": 66
+    },
+    {
+      "window": "31048390-31098389",
+      "offset": 1000000,
+      "sampled_blocks": 10000,
+      "nonempty_blocks": 200,
+      "fetched_blocks": 200,
+      "transactions": 303,
+      "unique_addresses_in_window": 64,
+      "unique_addresses_merged": 94
+    },
+    {
+      "window": "28048390-28098389",
+      "offset": 4000000,
+      "sampled_blocks": 10000,
+      "nonempty_blocks": 200,
+      "fetched_blocks": 200,
+      "transactions": 264,
+      "unique_addresses_in_window": 130,
+      "unique_addresses_merged": 183
+    },
+    {
+      "window": "22048390-22098389",
+      "offset": 10000000,
+      "sampled_blocks": 10000,
+      "nonempty_blocks": 200,
+      "fetched_blocks": 200,
+      "transactions": 254,
+      "unique_addresses_in_window": 199,
+      "unique_addresses_merged": 337
+    }
+  ],
+  "unique_addresses": 337,
+  "workload_keys": 1348,
+  "note": "Multi-window public-block address workload for Polygon zkEVM. This is not a full state-tree node dump; account-level SMT keys are expanded from observed addresses."
+}
