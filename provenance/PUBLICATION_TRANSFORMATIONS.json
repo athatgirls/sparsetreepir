@@ -1,0 +1,1538 @@
+{
+  "release": "2026-09-12-current-paper",
+  "policy": "Captured command/provenance metadata anonymized; original archive manifests describe historical source packages. RELEASE_MANIFEST.json authenticates the publication payload.",
+  "metadata_transformations": [
+    {
+      "path": "examples/tifs_breakthrough_20260910/backend/packed_smoke.json",
+      "original_sha256": "60588bbf46f2a7c621a60c5ce46a1793bf1f483aaea8595dac3f697fabeb7b53",
+      "published_sha256": "d1f1e8c59d8df71cd5367003342a6d85bdca9fd0cfdac1ad4f121c19531df9bb",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/logs/csa_h10.json",
+      "original_sha256": "83b984697ec20d2fbdcfb7c7d685690e7e06d833a1181d81eef68b945e078dee",
+      "published_sha256": "92fb6368d49407679633c87f9d00b47196901f4a6049cf04e6692e264e025d45",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/logs/csa_h4.json",
+      "original_sha256": "a9a9ea4122fa3bb9990112a444dbdfbeaae944724cca9ea95395e4caecaba144",
+      "published_sha256": "7b55c2dc45f79f5bab77e81d3465a5fd555d443f4f8985d08987454439408b67",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/logs/index_h10.json",
+      "original_sha256": "ec01e800c1320ae89d876e369b1f370393c5c91baee5dc6b1689765023c2f3c6",
+      "published_sha256": "672ce460d4f3378930ea26157686d05f2c8ccc95bea7469777b96ee8a37bac44",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/logs/index_h4.json",
+      "original_sha256": "5242c091ed17f57b28eeba76d4625f76c443cdaa49838252e921d97626d574b1",
+      "published_sha256": "f07e87906d66ba39221ec452f16f460b113f03d97106d08c9c6b79cd27484195",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/logs/javac_csa.json",
+      "original_sha256": "7cf141fadec7d733cabf526e6372e162668c3aeae158e08db503694c6cede33d",
+      "published_sha256": "55b05abf893cb4f13d42b529a9c17d9a31b546419fc0242a0f17bdf56c7ad5bb",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/logs/javac_index.json",
+      "original_sha256": "876e187e06073c5e029157251fcd9c33d2de963336e21ec4bf399022113ff392",
+      "published_sha256": "7ab71771cb9c3c762593d1f92e403b14a22b1fe62a5ed31bd61ef5a1c83c952e",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/native_vbpir/build_attempt1.json",
+      "original_sha256": "87ffa333259dd9fd071144412fa1c4b28feea13f485227d7c810e0f81de49887",
+      "published_sha256": "d6ab27bfa99a97198206782a479fa82feaedc87ee1d69db12175acce557ae564",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/native_vbpir/build_log.json",
+      "original_sha256": "f16baa9594056e74b9784ae7b5f4eccc671b6d4423e3a020189ce95d2f0fc3ec",
+      "published_sha256": "de519a418f709dd15a28a94dbe738af67d2735942986b28c6ab4374d9753089a",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/native_vbpir/configure_attempt1.json",
+      "original_sha256": "c8b1186bf1635d91222fce6c6df066e56517d93b1755ea564a5bca4a2db937a3",
+      "published_sha256": "908b95f0da9f86bdcdaf00fa68f9d12a5a459e8e900ab2fff557329eb1c0c3da",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/native_vbpir/configure_log.json",
+      "original_sha256": "537cef17172ee90d4ec2d9dee2e4b77580f74da5cca61dd8fc0545d3b5be31c2",
+      "published_sha256": "0366187cdd47edaf453094a53e8c88e89b399ebd294142029b15cefba45305f2",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h10/repeat0/activebalance/manifest.json",
+      "original_sha256": "58bc3609a27df8aa91c33d1c3b8226b5678ab3da6b97f7872229f1e0fe72ca8c",
+      "published_sha256": "490e0aab5da27b4d527c7ddfde7d21ef01b52a698b566939ff0118d6268f0922",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h10/repeat0/activebalance/process.json",
+      "original_sha256": "035801839342242785adfb94feb880750ceeb06424c4dd0ee480f04da9ac426c",
+      "published_sha256": "55cfacfa20ff65e07b8d77447ea1b43a06d996cf5bd027ac2bc37c33fef6002f",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h10/repeat0/first_fit/manifest.json",
+      "original_sha256": "7aa2da449b0e07687e3a263f0724014c15685ff78cb06d04091bfff4986ee44b",
+      "published_sha256": "846da89324d7a17915c27379dd9e515ed835576d3838e93ad2c92d0241c016e6",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h10/repeat0/first_fit/process.json",
+      "original_sha256": "3e7e94b2365f7e0303588586c7bc2c60137851607dc2f713f68504352eae34e5",
+      "published_sha256": "08bc1464945d4934673c4d323c0c2b9bad17d0918348fd4eadc6f409d2cee35e",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h10/repeat0/treepir_official/manifest.json",
+      "original_sha256": "47ec49e1c6b987fcae6b7713138824c402f41d3ebcbd60587283cc0781b581c2",
+      "published_sha256": "8b97d919703b3ef2ee8d98a27c8af26d923779a991a426eb2195b9d48e08a15d",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h10/repeat0/treepir_official/process.json",
+      "original_sha256": "11eb57fa59e1b5b08e59781790e27a84b18680fd5b05ab72834a58db37f68511",
+      "published_sha256": "299c13646205410cd86680f8403c8c6fbb347338de8c998875eb7241289bb136",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h10/repeat1/activebalance/manifest.json",
+      "original_sha256": "5f9cfa40f203141d1c9e217d41e26b9494746c4b0c4d5cdf4131b7998b5198ee",
+      "published_sha256": "565a1bb421f1e064ad7c1fc6caaa79b166b183a7dedbb07b2175fb4f085fc7b2",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h10/repeat1/activebalance/process.json",
+      "original_sha256": "042550c2d63ac9970a9a5fa769975b801fab4406a7d5942a8e0f5d77182f46d2",
+      "published_sha256": "d2db8c732c645833cfc2a75de546ca2d599708f591539766f2da682a0c1e475e",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h10/repeat1/first_fit/manifest.json",
+      "original_sha256": "bf1730898c3fd9ca71a7f156b3927c9ddd080f9c08eec154af9aa3a26c51f0e5",
+      "published_sha256": "c2e7f79a6ee1d060ce18d2774c61114f0c6b9e6dfc2a72d94298f5af556a5365",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h10/repeat1/first_fit/process.json",
+      "original_sha256": "37885c9c4402eac4c09ca22971a7731035af073459b938a9e6a4738c28211439",
+      "published_sha256": "4030de839b2d19a9f14808b035e70c73f3543863816ff87843cce1ef5f684d39",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h10/repeat1/treepir_official/manifest.json",
+      "original_sha256": "5e18eae1cf1f4c3d086b6ad2ae98139ef1bcc2c7ba78108e99f7a498692603fa",
+      "published_sha256": "97929141dd3821629cb90fe8512424720880863079e8b79001ee37b8bd15aede",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h10/repeat1/treepir_official/process.json",
+      "original_sha256": "7778c86129eb0e2d49edd3825e797791b2752782931f34f855f0598b1492c936",
+      "published_sha256": "3519e232c6e40507d44ccbfb8f549fc8d5e4dc25152e1c94f4ae3f1018a3ac30",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h10/repeat2/activebalance/manifest.json",
+      "original_sha256": "dc11b271352a0f84937702cef8fb818015ceb736611317e701a82492cce4169f",
+      "published_sha256": "6f93b644406cb9b28e9f3d0224080c314a3f81982c1ade85afe1b3c8049b95d0",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h10/repeat2/activebalance/process.json",
+      "original_sha256": "06eb49d1a0c3f3f7c2de89a70f11ea84462e96f7d98ec9a78f54f2f0be466704",
+      "published_sha256": "ff82fac431d25bf127d7d61b9b8e21340c74eb4e24f142697f75ea602898632b",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h10/repeat2/first_fit/manifest.json",
+      "original_sha256": "05ade4ef8d65bf7e07613de53568ab2815ebe9b7d7f76bc82e565545e6aee8cb",
+      "published_sha256": "7c678b6d55104ba2c04a4e63acfac82ede8e8db78c85939dc7a38073bd574ab3",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h10/repeat2/first_fit/process.json",
+      "original_sha256": "7afd3d25ebe2e050aaa9f523875039610332ce466e3543c2c4c4e5e259d53a37",
+      "published_sha256": "120b7ca5d0aef84e25362895d2fa4b4e34d4e285e563102a194c4b7d99098089",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h10/repeat2/treepir_official/manifest.json",
+      "original_sha256": "0bc4d57ff4b9e05857f6d1c323f564b313fa8f7118ae304b12030183304769c4",
+      "published_sha256": "5385357f2c7ec5eb27a152ce6eefc1aa9bf01e998fa8cfee042ce9baf1b3c768",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h10/repeat2/treepir_official/process.json",
+      "original_sha256": "91e6b27bfdf1e9271a8f63119694429c3e0786613167856c41a30bffe9865f63",
+      "published_sha256": "a68c443ad98c62200edb16dce623aea43324ed8c6c90998e0bb6a1deeccbcf25",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h4/repeat0/activebalance/manifest.json",
+      "original_sha256": "a8f8a526f336a62489d6b7cc9fd79414ecd9cb29ca4b65acd2b7483569f5aa87",
+      "published_sha256": "b896781111826505801582162f9f2d1aee113eb41cb2fb47d1bb9028abfecff5",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h4/repeat0/activebalance/process.json",
+      "original_sha256": "c8fe95ca338028da0ad2b568e7c6dd3c07b010fc8812700c45fae56dce1cb0c6",
+      "published_sha256": "4e604e32ab6c5903f77367b49d0de06ec2a7bded6cb9291ce44bfaeeef785a48",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h4/repeat0/first_fit/manifest.json",
+      "original_sha256": "eff4ce93555d81ead1eae7241d1d1790d66aa6af0f73949cb8e2958941ce6b3c",
+      "published_sha256": "f6880afe684e6bdafabe68c40da8296943c2bcb571cd5ff3a85c1fe50639d5d2",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h4/repeat0/first_fit/process.json",
+      "original_sha256": "a0aa45c8ce87160c1b063206ffc6d5a49609ff09d8f781e2ea18bf78e01c7889",
+      "published_sha256": "fe4a1d7146abed8cd09c37f799eee87c06b6cb84b7a28dd079c0065d409d2796",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h4/repeat0/treepir_official/manifest.json",
+      "original_sha256": "25df6989236c8591d754b0f35fd2fb552bc5ebb564b873f3e7355420ea68d613",
+      "published_sha256": "c1963ac6dfd405ebc3423b39c247172c7c5f5e5d644b8172e8a166efa74f8776",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h4/repeat0/treepir_official/process.json",
+      "original_sha256": "fcc99af073a63428948fd6957cc9eb2debbfa5c8be487f2300f17fe5a00e5102",
+      "published_sha256": "5254487557f2f6a9ddfa1df7c050cb77d20ecdae1e29aec8740fac15851e94f6",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h4/repeat1/activebalance/manifest.json",
+      "original_sha256": "27f4faae370746328dc34d1748fa8994603a952f0e32deee6ffeeeb15348d78d",
+      "published_sha256": "9827eebe20e21ee41f621a06ffbc938e3aad8fb0d3ded0e8bb029b0680abc23d",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h4/repeat1/activebalance/process.json",
+      "original_sha256": "9a73d07cac9b433aa59788b6bf8f6cdd71c8b56a5166e1061cc636c6e62b30a7",
+      "published_sha256": "26469c4aabc8514d1c2249c55765ba853b69310afa706bb81771835a4cf3546f",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h4/repeat1/first_fit/manifest.json",
+      "original_sha256": "ce643d288530d76bb3178aca78c6d27f5e4ba0863bb43fb8df6cab963a50f9f0",
+      "published_sha256": "404dbbcc5ef22a0290cd2ea294a60ef1de0b636dfd256f8ba5ee3b05451e5e1e",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h4/repeat1/first_fit/process.json",
+      "original_sha256": "6459f2be81604a97f38160050d0433fb3aefc8b78aca4746a05b07cc1b5e1740",
+      "published_sha256": "bb98da9abcf50323032e993302d1b47a7cb555710c4b4536d76745317b9114bf",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h4/repeat1/treepir_official/manifest.json",
+      "original_sha256": "fcced14496b97f7c8823b16c2bdb7df0a9db5ae5100b96fbe553c7617506329c",
+      "published_sha256": "74e988060516b8cf282bc20bdb4e4297c3449caea59821f5bb6d613c7f8b078a",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h4/repeat1/treepir_official/process.json",
+      "original_sha256": "8bc88fb81e1aae2ba1daa47d9379c534bdfc5b076826587464fac0f89db1895a",
+      "published_sha256": "53c1300c21b33ce6706286c283740c1047fbfc43d23596d96ee255559e4c5d6c",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h4/repeat2/activebalance/manifest.json",
+      "original_sha256": "c2cd41cc18745e8c41209e4e696a1361bebe6db5979021ee756aa19d3e8f4b53",
+      "published_sha256": "b8f026b3b7c011c5ea3f5c472f794e5a8abed1b140efc675e7ae3c8f505db655",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h4/repeat2/activebalance/process.json",
+      "original_sha256": "91927ffdc0998e54a0657750fe931152ed05145398255a37af5289bff6afa7b0",
+      "published_sha256": "cd271bd6afc0544fb7b88fe83679e1b7f4886e03468abc0c6bfce4eaea778614",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h4/repeat2/first_fit/manifest.json",
+      "original_sha256": "97455decb35ebd5af3f793083c85c18731d67cd36b69cc6c3544f8cc5167b226",
+      "published_sha256": "8a0a0b7acdb3b1237b2941bd03752778b0639b5713ce5f8e80f39242a2ba6802",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h4/repeat2/first_fit/process.json",
+      "original_sha256": "d6cb448a6776b811e90d3bc3ffdf9cf661d67fc47e356c7d1ef80a9fb48a1cb1",
+      "published_sha256": "f35571ba71fc0f3986fd4f5a0734a779e15eb801a317b6bf4244401f0e51688f",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h4/repeat2/treepir_official/manifest.json",
+      "original_sha256": "eda303260b78b6f8f0460e4c385d29f7f10957fb60860421af8812986e10ca5f",
+      "published_sha256": "ba62efa16fb17c8c071a88785971b8d70ea816a5a38408c50e42a7a14f2d6dab",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/common_simplepir/h4/repeat2/treepir_official/process.json",
+      "original_sha256": "f4e3a291d0694ae4a38cc538894223fd339ff847dae8430382c162b316bc14e1",
+      "published_sha256": "9fc8f2ef5a02dd1a2dc45a4799e8498ed3a7b6278e99188e5df0122dcdf26845",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/native_vbpir/authenticated_common_runs/activebalance/process.json",
+      "original_sha256": "f5bbd2c631dde9a09fbbeb288867281da1c7fcd350a2b87695d5dac37de0d57d",
+      "published_sha256": "5adf4ea664b9ce3f2c466656779b1cf5f123637f1d18b3b8153e82355af57284",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/native_vbpir/authenticated_common_runs/treepir_official/process.json",
+      "original_sha256": "4c63917140fc5af509240ef62c83e3e69267631360e4e08932316b8c171ef194",
+      "published_sha256": "bd32428123c66c7de36294afcef6fa9e0c935c927b67c73eed14ffbe4d2d45f1",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/native_vbpir/smoke/activebalance/process.json",
+      "original_sha256": "63a86fb44a4e2da3720fe1fdfb3aef0e166e16a1462f8a8fad22a8b69e1973be",
+      "published_sha256": "43c52a5b03559ccc515980fe7b60137e4afd17758cd38b986ab34d47fa5c9a71",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_contribution_gate_20260910/external/native_vbpir/smoke/treepir_official/process.json",
+      "original_sha256": "cf4c73f8572f941fe180786df0d27a5024bbb33f8825439afc39af94edeab4a1",
+      "published_sha256": "784dd106354402a4ca45adb0fbe2242e9af95080f898c1c9e9148fd281fce58d",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/inputs/cluster90_n10000/process.json",
+      "original_sha256": "873b7ba790402c8314ff5172f92af85387db7e3d73591d987f5852e16993187c",
+      "published_sha256": "90c5b89a077ae25bb5bd30fe34f8b4ffca70595ebe143d39618d5dc509a4525b",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/inputs/complete_h10/process.json",
+      "original_sha256": "6ac1f730da17ff598aadcc5257ffb3b264e79f18ead17f6e8ffcba612c349a11",
+      "published_sha256": "a00e03bd140a5c232c3cac9d627c70ff1a02b3962e091abc9dcfaa6c7ea4434a",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/inputs/complete_h14/official_source_audit.json",
+      "original_sha256": "344a74232a9b1dc4da0ab82e705aed53fb16dbeb55df7e16274eac8f61192767",
+      "published_sha256": "abb9506452fac70a49a527bf69659e1089ab8c10e57534fca4222a3b9bb3ac6b",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/inputs/complete_h14/process.json",
+      "original_sha256": "cf19f9813cbe85b17d039c2efbf1f6ed1c0e27b3d6535591f14713242a49a40f",
+      "published_sha256": "afda6c9db2f63aaabac5d1f0c0ea412e2796ec195e7526173c82c84ff5ec1378",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/inputs/prefix64_n10000/process.json",
+      "original_sha256": "96fd279e0e730fceca3f31baff3d7adbc0cb976713fca3788dcae52f88d622ab",
+      "published_sha256": "f25b168eaaeae876d7b13c57474c3285ff8d94a363aa01062447dced866b66bd",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/inputs/uniform_n1000/process.json",
+      "original_sha256": "980164ec960243fca90de824f80eae2e6d6852b6ab86d7559188c5a0c3025eb3",
+      "published_sha256": "2c028faa4e3e65c5f9afffbd99a31b8fe8227b8eccb89e057893678a481f0c26",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/inputs/uniform_n10000/process.json",
+      "original_sha256": "dba7f6be1e3b5d8d58976a7d85fa0fbbcdc15528ccd1331504d8c91cbb56d586",
+      "published_sha256": "ce0748493438fe23187bde89f74e9357c719f2ebe076d139122a1c047f7c0067",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/inputs/uniform_n100000/process.json",
+      "original_sha256": "865ffe348e5267b85d1f8292b5a4bad672ed2510ba0b7fc9940381cb7f3be702",
+      "published_sha256": "99feddbc9eae0adeae4623555f92d06c1435aec9fdfc5d0333e37e7cc679979c",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/cluster90_n10000/ab/repeat0/command.json",
+      "original_sha256": "5b1d5b7bfc7ea9bbc0d11bc39a48380a0d2ee82848832e2426f51c7d9c06d463",
+      "published_sha256": "64d9a8925f1303d25283d2c9d332c0d2d645753ec51b0d12e7ce077cf4676f97",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/cluster90_n10000/ab/repeat1/command.json",
+      "original_sha256": "b37c049db9bc59cc78bda6d43a5fd00fc3030e70c6e92f3bcef9218f117910aa",
+      "published_sha256": "39f5d5d6fa1fd5c87eee3e32080b2e79af7befc5636e6364e9ab7f1e55da6972",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/cluster90_n10000/ab/repeat2/command.json",
+      "original_sha256": "44256d0b3298b8c8077ab0dd51916600a930da4688c8737d397325efdec86373",
+      "published_sha256": "f19bf24d8c20e20b3ceb069989b467b0d58e519fc715b05db08bd6048907027a",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/cluster90_n10000/pbc/repeat0/command.json",
+      "original_sha256": "fa5f131175e06c0e1cfbf50b9d3b8e6329974b0cb0566ed53ee0c6c419e8870a",
+      "published_sha256": "86d1a1f6c295533642c57660555b8f438683f2fe55c99d4713fd96ec0251bfa9",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/cluster90_n10000/pbc/repeat1/command.json",
+      "original_sha256": "f2709fa42386ad868ee1f27d8e9f74b59d59d3d3116d489c036ce6687e504bf0",
+      "published_sha256": "789cf6d952f018f71dacd1e233d1c11cd133fc02ea74d229bb7d9e3a8b6011b4",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/cluster90_n10000/pbc/repeat2/command.json",
+      "original_sha256": "49dca562cc903cdb33ac2f997a370b44cbe0a040032e98cf98d819c72893f797",
+      "published_sha256": "f6de15c10640ea4002ac4b0854dc20c162f730e07c091c55dc6397bb3a87bd53",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/complete_h10/ab/repeat0/command.json",
+      "original_sha256": "58faf422f8063de6bc338ad9cc34775cb3a916bffee8f8319ae8489fd3c981fb",
+      "published_sha256": "1aa796ca1a5cbb1e0bc15b62343855efa8745a5f1193ef7d2c87cdfefd824ce1",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/complete_h10/ab/repeat1/command.json",
+      "original_sha256": "fd0f344426534f73d9887b132eb4c9ecb3710e6c608a86fdaba25d6adc45744e",
+      "published_sha256": "d00f9c9e7c5178b5a1c4eee3bb90e2440bbca26389042cfe19ce8d8c4a456944",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/complete_h10/ab/repeat2/command.json",
+      "original_sha256": "5914a54cc8986a19a8d651574420a6dc20b4278648e48063b8a0c2c359b1e201",
+      "published_sha256": "debe6e848af87f0967ace3bce92b2d54b64d9f25d09589324492eb9eb5983e4f",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/complete_h10/pbc/repeat0/command.json",
+      "original_sha256": "cbc0e2f736fdef765990f9323c18b621aa2399e8cc6e9af4f3077fb987988a10",
+      "published_sha256": "fe51925d587d85f2d79319deb89f1890d62a2b82877caea1e8cd4635621c0d25",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/complete_h10/pbc/repeat1/command.json",
+      "original_sha256": "eb7add07ae8bfc92033c81634c968287504ce8c33a0be43ea3dca5293be1d30d",
+      "published_sha256": "add7d71d4c6b06f5e0fb3c7b53ff349c38d2b24033e9fe6d8342b88d35733b7a",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/complete_h10/pbc/repeat2/command.json",
+      "original_sha256": "6dcf91209f93d7c897f1f9953dbb29b875b2c47c714420bcfe71a7e9a9a5387f",
+      "published_sha256": "2aafde7f07383ab9d8bf08c6d856574198e1669c07ea8dccf571129ecf5f4c0a",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/complete_h10/treepir/repeat0/command.json",
+      "original_sha256": "9f76ad407187cb38bc8ac9ab5e2d183e182d7635e44126e6b2a1b5e6b35e2257",
+      "published_sha256": "5ee4b93fd6f0f0ae8c3d965fad4d6ac005b41599902f21343d43a3dd9212201a",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/complete_h10/treepir/repeat1/command.json",
+      "original_sha256": "4383ecb647f918ea2ff51864842fa4698da48952addda23cf0843bb92368051c",
+      "published_sha256": "1ef98ae43fe057ee3a30587d03055f27021d0f7da8f6f23f47f7628ad8fd0dbe",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/complete_h10/treepir/repeat2/command.json",
+      "original_sha256": "3bde3a8c2d11e31307a8ecb3628fece1abf59a8faf7c56a6ad7f3927cbb45e43",
+      "published_sha256": "24bc807453b38c5d6bec0b6e50a3c208f11d520b8af110602f9f1ffceb4141be",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/complete_h14/ab/repeat0/command.json",
+      "original_sha256": "b4c65e0e2aa57506d5fb1e6e926f2d9cd1c26013d5150f1d677e2231eaf5d763",
+      "published_sha256": "68a92c6bc2a83abb54dd2c211b7a177e9fcd1b209a8152cee55076f5159ef1a4",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/complete_h14/ab/repeat1/command.json",
+      "original_sha256": "1e9ad7edf915013da0b19733a580d1acc4c58e1aac709b52579f23c382ee6dd0",
+      "published_sha256": "1c03c30d0e91673376b2f580498a21cc5a6eaf84150561e107d5b3ac88400bd7",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/complete_h14/ab/repeat2/command.json",
+      "original_sha256": "6b412797e8d4ecf393a3a89f1ea6185b51f7724872df06e2d310840b0dd096c2",
+      "published_sha256": "a4d4e6bf4bfd3972386021839b6afa5b85f23bde105caf3892268ee5de998863",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/complete_h14/pbc/repeat0/command.json",
+      "original_sha256": "2afdcc74d1d583b91bb9c08130bcea67f62ba73b10996df91d12a9e2e3fc9365",
+      "published_sha256": "3ab3833c166216d61da6a76819af6f9633d6d7ea88eb01b8daec163918e31665",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/complete_h14/pbc/repeat1/command.json",
+      "original_sha256": "578a62e390992300d317781d01a87ea9783e1dc6867886334f0cfc9f5cce54b8",
+      "published_sha256": "f4893f265b36b487d0d8fd6f4c418e3253deb184072ecf227e1d4a0a408d5ae9",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/complete_h14/pbc/repeat2/command.json",
+      "original_sha256": "4743f5e599bc46b49045946955d5daccf5ae51c79a2be145c08a733c01271ff0",
+      "published_sha256": "df560eab0c0aa80dff219f1bd6369967973cec155cd7b6dc0df4807497885c15",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/complete_h14/treepir/repeat0/command.json",
+      "original_sha256": "f2a13723ab029384d302b0edc3783cfa065d376b3c16ea7941320a15a5ce219c",
+      "published_sha256": "856b38fb8cfe01715510f1c9b89fdb0dd8cddd6b0fd77519ca3799b6d93dbca9",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/complete_h14/treepir/repeat1/command.json",
+      "original_sha256": "4f464361baf1e78c504ee95b22bb7ecbdd8d834844442bd7c1134a3fe3061f54",
+      "published_sha256": "9e50f3b3bd66714b1791c0b59f98a174e7fce7d0e53fc23ff0869b2184e17250",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/complete_h14/treepir/repeat2/command.json",
+      "original_sha256": "6a8c109b3314e226b85ad36ed072a3f4b1c334a0397c113bb0beb4039f9c512e",
+      "published_sha256": "78614b6535e0dd35bf9d4edb04a110740ce6705565f6d54d1823eccb23b5904a",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/prefix64_n10000/ab/repeat0/command.json",
+      "original_sha256": "18c20bbdab8c4ff7f524ee0056fb3aaa4588af6c1ab1af18c1f17a8d17b3e3ae",
+      "published_sha256": "82cb4f75ebd66e1f1d48269e65b4d6032ebedd8d1c04d5f9faab7fcf9de95b0d",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/prefix64_n10000/ab/repeat1/command.json",
+      "original_sha256": "0f7dade7a16d2962dd6a1ddb00411eae0869c228ccec75a654798b42631ff130",
+      "published_sha256": "35a7e559ca665ea785baaf1ebc44ebe751363b0d317a537ee69a0acac3685357",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/prefix64_n10000/ab/repeat2/command.json",
+      "original_sha256": "f0e4d80e29e6db6d4a667d50ecb2ffd1881bb012fdbb563b70c593f852dc828b",
+      "published_sha256": "ddaee6994893570a313fae470b02f53ac5f0a3abbed39af8f7c163c65b5d7cdb",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/prefix64_n10000/pbc/repeat0/command.json",
+      "original_sha256": "452bfc799f11543a89a9d1430c99c96f2f990b16cc515ca71d07ffca6f6fc61b",
+      "published_sha256": "d98de7d65a232b5592d0b6b9d08fa82beebf45c3d63ca99072fabac263d5cdf9",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/prefix64_n10000/pbc/repeat1/command.json",
+      "original_sha256": "2aac25292675dcd23acd84456e4be5af7de3a3ffc66bbcce459913a0e9ca14e7",
+      "published_sha256": "4470e5d046fb103e89a9964d7e08c2bf16c760a2b8022cf6f568a4cb2772cebf",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/prefix64_n10000/pbc/repeat2/command.json",
+      "original_sha256": "2f232ea95aa75a184f75186cb9f96772f544c05b48e044c8b3545abab6eb5e49",
+      "published_sha256": "d127213df5c2666bb7fa6fc92fe96f1c7efe082a9daa0a62caf0fa4ec9d58e82",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/uniform_n1000/ab/repeat0/command.json",
+      "original_sha256": "7dd34e73768706961aa2217bd5c76882f1015475ec7c5ad442bad0ac2aa374e2",
+      "published_sha256": "add3ef8df74cf8e4a7f8d87e46661faad899bca46d751e1aff31b16c51ed9d30",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/uniform_n1000/ab/repeat1/command.json",
+      "original_sha256": "b0f9418a91d8436c15e9c497a21c26c4d77118924e8d2f938b28d4d852711cc7",
+      "published_sha256": "f44238e603b2f93d6d139f8cdd46e9ea0aab2c41fae0dca224e9a55e385708f2",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/uniform_n1000/ab/repeat2/command.json",
+      "original_sha256": "54c5909110016c666db8a6096d3195589fee656159d3414e985e1ee761ea9f46",
+      "published_sha256": "2d4a46d7349da02442516230e3b5cfefb4ca9777addc6827fb4009e4b9b3525c",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/uniform_n1000/pbc/repeat0/command.json",
+      "original_sha256": "67e0bb79ee44f82e3ce5c22c95eb4bc21e9f4ee5a38b95291eaa7a5b2c3f2829",
+      "published_sha256": "354135ca5ee4b45b90e5dc522efbf2987d57ad9144b950716015bf71f91f5dac",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/uniform_n1000/pbc/repeat1/command.json",
+      "original_sha256": "0b6dc806ea1a9e3c4ec66aa89edee0a3c43215634bdc1bcca8dd522cf9d23490",
+      "published_sha256": "ea7864fdd254ec2c8644f102c3c8d3c4a0b39c3e54db5f2c240c1a5428394e11",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/uniform_n1000/pbc/repeat2/command.json",
+      "original_sha256": "c0d412c768188982b8d356b3b5459b40bd8e55abdc43ebcb73db8d7b13dc50d9",
+      "published_sha256": "525efd7be930799a8e12beb26b27af85d789a355eba3fb5517745046d6262c66",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/uniform_n10000/ab/repeat0/command.json",
+      "original_sha256": "30b2fd8615243a7d348e58e7bf8e8978a3b638c65189bb3798c4066836ec3547",
+      "published_sha256": "3b9de9bddabee9f63896ccce2a09177bd37e9f93708d2b59f7cd32a345e8b464",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/uniform_n10000/ab/repeat1/command.json",
+      "original_sha256": "624cb5047c1ed99dc92001751ec4da44925bb8795eb5c53589f1f75e72194a7b",
+      "published_sha256": "ba94ee642a25b730dd0686da72d1ad338be7bcd91702440c3aaa4f7e0e72fd65",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/uniform_n10000/ab/repeat2/command.json",
+      "original_sha256": "d0164d68b862368c9fbaa83a1c5f4a52bba16d83dea9256c0d18b01135e81cca",
+      "published_sha256": "174abecfbd00f60cab4ffee5fbdbd8dc8a37ce5159e0bf3d9500612e2fb95662",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/uniform_n10000/pbc/repeat0/command.json",
+      "original_sha256": "f5e5c0755088c3a65fc44939f96f66cc95d7ed8064b1feec490ba70bc4651cec",
+      "published_sha256": "2f2047ae3ea0a9f4b8b3e4576c3a7100e0b3039a9777ea338fef31cd9bea30b3",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/uniform_n10000/pbc/repeat1/command.json",
+      "original_sha256": "d0c3737dbff6c823478c550379b24ba4ea7d77f17db48a0dcc356df4ab1ce63d",
+      "published_sha256": "dae45e76b3a58abb54123cc9e3b2bbadfa012a79665df9cdaae0bbab8dbaf45a",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/uniform_n10000/pbc/repeat2/command.json",
+      "original_sha256": "cffcb7c5839e4075b081fd0b3dbfe997c533be453293e6e1cb62cda91df0e0e6",
+      "published_sha256": "ce870265998cf334975a6f8b35df367a0c4f56758f1d41ffc737cacee8199255",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/uniform_n100000/ab/repeat0/command.json",
+      "original_sha256": "0b7aa93b16b88c0a1390d2a8f51d0517f89412a498e1b35240a87cdd6b0d4b7e",
+      "published_sha256": "5e42d7e577ba3132a531c73a1d239c4155975cc2c699d8d0b214cb1e9045f24c",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/uniform_n100000/ab/repeat1/command.json",
+      "original_sha256": "7d9c7d6c62cc0293937657c7a85817ec24d2d03c3f5c199176880b98a3d74795",
+      "published_sha256": "8629a0c994759351d8b7816eb1729d5670dd5ab51a91be49132f846f3307930c",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/uniform_n100000/ab/repeat2/command.json",
+      "original_sha256": "f6c2b9dc57759861ba8055be2c884d526c35e8c6d64e4fcdba0b4cb5b148b004",
+      "published_sha256": "30f357c6321d9764a5463e01d0902283baec2f8d5b7d8a13beb2c8c2022639dd",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/uniform_n100000/pbc/repeat0/command.json",
+      "original_sha256": "e0e260d627849b88caf9c53dc51d38734a2682f0ae92d6448273daf34a435b81",
+      "published_sha256": "667ca2989004d1d80e30a55b1207d9fefe8b13e66897509f6332bb2cd5b3cade",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/uniform_n100000/pbc/repeat1/command.json",
+      "original_sha256": "e16c6387fba146a52d90f4b7decebb12fbed6fe8256759d078721c31ebb87193",
+      "published_sha256": "a751a7b5eec8cf77ff94660010f732aaf22e2d4536af4590282d1f2aab1a0913",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/runs/uniform_n100000/pbc/repeat2/command.json",
+      "original_sha256": "2bb32b1a667c801cbd14b6bc7317b58e2a51b75475614f79907b85251d6cf388",
+      "published_sha256": "55424fb822ccd092ef8b3af7d026411e17370ec9b401399c39d0b568b8b560d3",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/smoke/complete_h10/ab/repeat0/command.json",
+      "original_sha256": "bb5f4edfece455b389cf4362ceaf2f9e17d4fb4da56c050c192a10a23f95bb05",
+      "published_sha256": "bea0ac71b82819d043953180612258801bd21cf76e822ba03ec77bb580b83c0f",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/smoke/complete_h10/pbc/repeat0/command.json",
+      "original_sha256": "56562582d3679b4c32abe846457847cf50f5530dfaa78b777a6d7f06b2b6f704",
+      "published_sha256": "45448f41610dcf95e36fe8f28a06480b65a3640a3019ffaf59af37e2f0421946",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/smoke/complete_h10/treepir/repeat0/command.json",
+      "original_sha256": "9cd5ef3043976bb72c6a2fb90a6d6ec2f0c5b4fa527e7780c19045e6920fa096",
+      "published_sha256": "6e9ed42e90501ba2a49a90298323390d66e4275aceb506a48e369820814a1884",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/smoke/uniform_n1000/ab/repeat0/command.json",
+      "original_sha256": "24c89d840dcf0923431b8658d53413d2b4f5c43c85f54abdb0cec35461161cb5",
+      "published_sha256": "1ecb9142030e43b3f7114b5d1c1cc275914cdbbfab4c5fd21a67e69e14b231fd",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_external_extension_20260911/smoke/uniform_n1000/pbc/repeat0/command.json",
+      "original_sha256": "3e87959358d4d5c05b5bd130bc70727c37216428e40a9966e9ecc2f03b3211d2",
+      "published_sha256": "7dd0408778c3abead34eaa82a3d286061084dd06a5922f6edc5fc411e61fb23a",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_layout_transfer_20260910/system/runs/activebalance/repeat0/commands.json",
+      "original_sha256": "6f3b101b2f08f2190b625f9709632784d479a55b1b03c7836c0fd2ef35a60a32",
+      "published_sha256": "ab5aa821a671a3b3986b590544d5dbe7ed9ce6d15801ba1b0c3b380bcd725718",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_layout_transfer_20260910/system/runs/activebalance/repeat1/commands.json",
+      "original_sha256": "de86c9b53cab88329820de06e911b6d73fddc90ab8fbf58de42e1683c8a1cadc",
+      "published_sha256": "1b67958b2fecfbf56f181b554bb21e588211cfa65ded54e2eae251d52b478127",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_layout_transfer_20260910/system/runs/activebalance/repeat2/commands.json",
+      "original_sha256": "f576e5c00826d76099da0ec145d9e232890557d1011f7ad733a560d4aeb332c9",
+      "published_sha256": "8160a0a002242eee1fc4b20905025c3b24b98733288a76496a349beb296dfb5d",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_layout_transfer_20260910/system/runs/activebalance/repeat3/commands.json",
+      "original_sha256": "2782d333683122687e611d67967dd80d22495c9f2279f742454e0abc258d3835",
+      "published_sha256": "7b809a5f26300909fe24b0b1976c15d1ab25e4f9c2ea5e9d563b5254f0174fde",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_layout_transfer_20260910/system/runs/activebalance/repeat4/commands.json",
+      "original_sha256": "9ece04807e00576adc1252957e22f2e3975c56ea9bf5826d129bafd97ac6d5b2",
+      "published_sha256": "84305de4232887453cafab735c9da854c8c1734dedd8e82283952dae220a717d",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_layout_transfer_20260910/system/runs/first_fit/repeat0/commands.json",
+      "original_sha256": "68b04b8ef62faa1a1249676802fc57854c2779c7e6decf0fdba04eb509df1f40",
+      "published_sha256": "8f8e26ecc482b026d8ecd31da79b0f4fe26fceebb8da54fca8df9d781f5baa6d",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_layout_transfer_20260910/system/runs/first_fit/repeat1/commands.json",
+      "original_sha256": "81467c472b014d3713a0572b1d62bdf449bd64e38a5a85150c5e11c8a713b12f",
+      "published_sha256": "302a950fad0f1748f14420309bdc26d2912b00f7ad857bcad8ee81a718241523",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_layout_transfer_20260910/system/runs/first_fit/repeat2/commands.json",
+      "original_sha256": "a03b26bc433bcb794a09102c4c7eaae674ebec8afb17e31d78361522e5f913a1",
+      "published_sha256": "f606b8ba2dff27d914bbef878c46a8ee432d194a85f6299ca56a0cbb6e19a199",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_layout_transfer_20260910/system/runs/first_fit/repeat3/commands.json",
+      "original_sha256": "e85d01cfdcc0c0683452a5ebfaf3f4b419811775c704004eec69640ced1602d7",
+      "published_sha256": "763ec6468dca6e52ac00bddfa1cf4c591464e854abbab49b26e253c791983247",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_layout_transfer_20260910/system/runs/first_fit/repeat4/commands.json",
+      "original_sha256": "c3c9dc61e91534a998f22b2d23ebb54196af7b530267b39ba776cd6150268e43",
+      "published_sha256": "c2b25dc3d6ede65c5ecd570e545244f5a6d44fdd11f42d8d156248dfe68f8095",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_layout_transfer_20260910/system/runs/full_cache/repeat0/commands.json",
+      "original_sha256": "654efdbac73ce8c16a1db3c4e0ce90509b4aaf24a7ca3c3daf0c46bcdfa18991",
+      "published_sha256": "d50652d0f1650e1015ed444bcce698622f09fdad7a99f78349e4b5f5454d2245",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_layout_transfer_20260910/system/runs/full_cache/repeat1/commands.json",
+      "original_sha256": "aba6a6eee0b2ed5b64d2c5d731bad874b8721f00163f14a888086fbb67366a39",
+      "published_sha256": "47b2f3151521d895483aa96ac789bde0f8e3cc96878321b0a9c6f93e12b30116",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_layout_transfer_20260910/system/runs/full_cache/repeat2/commands.json",
+      "original_sha256": "21f5f6968673a38afd9a4e225f515d504329d693b200eb3684f061c5ceaf0a5d",
+      "published_sha256": "0da10d78d0133347331857d9e27710fcf73a8561f53bbde2c1b634693b78957a",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_layout_transfer_20260910/system/runs/full_cache/repeat3/commands.json",
+      "original_sha256": "d75a0a935e9924f73e5fada3f6ff4f364485d137c18e5d9f8f37fd96c771c542",
+      "published_sha256": "a649179768e2b178e60a6f730281de373f5b4b77d162b9797066dec55377584b",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_layout_transfer_20260910/system/runs/full_cache/repeat4/commands.json",
+      "original_sha256": "b1a8ae02c506fd57e2da9cd65094753775d4de778c6b671dd38ce058fa07e5a7",
+      "published_sha256": "be9867ee3099b5db673460d2eca23e4dc459c78f4a953d8fce3ededffe8f8844",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_layout_transfer_20260910/system/runs/opt_witness22/repeat0/commands.json",
+      "original_sha256": "af3ebfa27af20f5e5561e0467643fc8f114100e2d0ae5f667accc2455a0d7d0f",
+      "published_sha256": "f0d96af28e3826b41e0c5372b03391da2823f9980f16e535477cde80703e353f",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_layout_transfer_20260910/system/runs/opt_witness22/repeat1/commands.json",
+      "original_sha256": "03126683fd62f8e8d37b17a1c9b65de75edbcfa974c36584aa693f72dfd39110",
+      "published_sha256": "4169fa3251a03a73a3404e0d66a8877e24106202e672000b8288cc5cd5f4104a",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_layout_transfer_20260910/system/runs/opt_witness22/repeat2/commands.json",
+      "original_sha256": "61d84126b2bc406d4667a36bdeee99cd4569d353652f12e3a3a7ab0c0a8ce8f5",
+      "published_sha256": "4442dd4a91cc224bd08a3fa04229f62e509453ae0a6bc482da6a1ce908c9655c",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_layout_transfer_20260910/system/runs/opt_witness22/repeat3/commands.json",
+      "original_sha256": "9a7ada0960bb93cfc7fc4a17daa89a602f2ac50f2be4da832cc211aa9f253560",
+      "published_sha256": "3f4124b696099c5f88546659422d8dc557993ec23aaf6bae415523c6d4617b35",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_layout_transfer_20260910/system/runs/opt_witness22/repeat4/commands.json",
+      "original_sha256": "94e71a0f3a2342c79a5ab0155e5c2a9134b36108b6dd046f822dacf901025a6a",
+      "published_sha256": "962adbbc1c46c9795c146f64a5061be325df3ea8b5112541db0d045e866024ce",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_layout_transfer_20260910/system/smoke_v2/activebalance/repeat0/commands.json",
+      "original_sha256": "ee3aca23449a687a470f22f4cc1f79cb82e86dadff8b79287156c099a532a30b",
+      "published_sha256": "5cf8ca68a10574e614921cae972a2cfa5f5125c5feefc9226269732de949e51d",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_layout_transfer_20260910/system/smoke_v2/first_fit/repeat0/commands.json",
+      "original_sha256": "f265c10db8a6ea0a0426876f8dea118f87dab85e99201b2d1b21908499f625ed",
+      "published_sha256": "7157420789488533d584ed67fa9c0f744d0377ab645b51d0b38c7948b30aaeeb",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_layout_transfer_20260910/system/smoke_v2/full_cache/repeat0/commands.json",
+      "original_sha256": "7574692adec4ca8da828038896ef6fc360d0033b3348cc6d87bd016a79b800f2",
+      "published_sha256": "f85d8d4a17422635f20f8f000a74d8d39f149d3e934e2e6ba52fc545609ba2b1",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_layout_transfer_20260910/system/smoke_v2/opt_witness22/repeat0/commands.json",
+      "original_sha256": "99f51c57d9576ba5ffdcdc862104ceb551083ba91c847812a9679983d5a07aa2",
+      "published_sha256": "8b6325fc9f9375a2cd2108cb45eeb4af95250742d2053f1c9b15cef66dabd480",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_revision_20260910/backend_smoke/SMOKE_VALIDATION.json",
+      "original_sha256": "07796096d7f4e20f7ccc65962e5462e134e51b369c6097bc9c51b1938d5f15f8",
+      "published_sha256": "aff61414e4c02ecd031444e5fe149f539de10b984e0e2131b2fe42031f1b164d",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_revision_20260910/correctness/correctness_report.json",
+      "original_sha256": "b5ef3ebed9f4741faf0aa7edc39d0e8cd01d398e6c66fb117109a5d1b8fda899",
+      "published_sha256": "6a50c395e147d4d04d56cc27d0f814cd89b6939fed3caa5fc7fb9d3c6e783fa0",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_revision_20260910/ct_application/runs_verified_evidence/activebalance/repeat0/commands.json",
+      "original_sha256": "5a2b54c4eb6c28d0f6d017aaa10d947fd650b74fdeba28648417021b2d1cafe9",
+      "published_sha256": "76754bf28389e1520c5b11fcece2fe0f574d97231102118d26cc3f7bfd62437f",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_revision_20260910/ct_application/runs_verified_evidence/activebalance/repeat1/commands.json",
+      "original_sha256": "e35806bc24ce97d5693c88a970fd5fbbaf997f4bd6a74bece619cbd43a33d38d",
+      "published_sha256": "be41e54218b3aa827140d1e588f485160620002e1bed57e72ef8a13b3d03d00f",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_revision_20260910/ct_application/runs_verified_evidence/activebalance/repeat2/commands.json",
+      "original_sha256": "c9795e4ea0c645bcdea494971f7124e0e6f4a37f910319616b115bee12f066e7",
+      "published_sha256": "e492d3bf87380ed7dc6b78b75beaeb73d57962911a202fc37e6c2a60d07539ea",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_revision_20260910/ct_application/runs_verified_evidence/activebalance/repeat3/commands.json",
+      "original_sha256": "1d2aaa0ce934743d17aaeb3cd45123df8db15baf6eca0c8cc1e5ac78354d98fa",
+      "published_sha256": "2c039ed692fb908397a1ab9f3aa58d6e612337bd1016ebf69cfddc5d7b0f830b",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_revision_20260910/ct_application/runs_verified_evidence/activebalance/repeat4/commands.json",
+      "original_sha256": "614e33eec9df26d064938d5a55ae3db1e645cccc5c26c49ba8eb39126d8ee0e3",
+      "published_sha256": "2280527cb731325b4ac1cda876e1a846d4579931ead3951d2ce4a2de4ea8e104",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_revision_20260910/ct_application/runs_verified_evidence/first_fit/repeat0/commands.json",
+      "original_sha256": "124bcf686db49468a9102907b8be84765808024ec9fa0f3e7a012540b892e72c",
+      "published_sha256": "179252f7c22a441b3e3dd46c4af490bfb0fef811110a8291e4d1730007ee72dd",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_revision_20260910/ct_application/runs_verified_evidence/first_fit/repeat1/commands.json",
+      "original_sha256": "cd1f9cfd62b708f0f61fff337b88abf4f9abc4b13652a5e8f258ee78e54abe9c",
+      "published_sha256": "d7a943d7329b5516b143059b1996aa233ce11f90a13e817c10b03ccdacc7b265",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_revision_20260910/ct_application/runs_verified_evidence/first_fit/repeat2/commands.json",
+      "original_sha256": "983fe857ca51a44a54e04b273aaa922851bd3932e9915d9182e0b2a46f01fda2",
+      "published_sha256": "a00e649229a1174760e1952a5f3b49d0b027d3088431c5481d8938d253fb4947",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_revision_20260910/ct_application/runs_verified_evidence/first_fit/repeat3/commands.json",
+      "original_sha256": "fc9c574966a861802538a8f70fd172d49b5dc3204bc4d56d7a74499b3555a892",
+      "published_sha256": "3575eb2b0df1d5150281bb624e5961d51686e374f6efa161cff059a429c48570",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_revision_20260910/ct_application/runs_verified_evidence/first_fit/repeat4/commands.json",
+      "original_sha256": "cfb43d4b7761718f794f3a02da2edd8565e904885866cc0539ddba72505bf635",
+      "published_sha256": "fed475c36cea1cd804212e0ca06981d3232cd54d0bf15dd9a2ef28a7044a08aa",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_revision_20260910/ct_application/runs_verified_evidence/full_cache/repeat0/commands.json",
+      "original_sha256": "cba22f6d7065138603a9ede28491711b6fe30fdd32cdea5488a2cbe09626d1aa",
+      "published_sha256": "461a700e662602d889f3331da0633cc1d64054234da2c633c482ac893eb129de",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_revision_20260910/ct_application/runs_verified_evidence/full_cache/repeat1/commands.json",
+      "original_sha256": "4758b4442969164fc4f2cdefa393dadf7bc86b3f87634e0d389ed00882f4181a",
+      "published_sha256": "e50de4c02defa9ef1c6780097967f917e52dc40309677b8f84dc85f24b612b60",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_revision_20260910/ct_application/runs_verified_evidence/full_cache/repeat2/commands.json",
+      "original_sha256": "14b8cf8ce043c4fb6e69a8f4c8adc16eeba7c0d73958156e32992ffc8841f7ea",
+      "published_sha256": "fc152321266883cb40e41f34763227b37ac1da8a10d810a243323358bd928b0b",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_revision_20260910/ct_application/runs_verified_evidence/full_cache/repeat3/commands.json",
+      "original_sha256": "610a89c4829b3cd0bb9e3918ea591e22f9fec4df6180aeef218374b0afa65713",
+      "published_sha256": "0ce345f5d1fbfcf293e774ab790e0dbde49088e1a1311d98984f292fb05fd1fe",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_revision_20260910/ct_application/runs_verified_evidence/full_cache/repeat4/commands.json",
+      "original_sha256": "7f1a5e9985808f59848bb26332b07fd741a1c7dbe4b76f6acf8e1faa65d4e896",
+      "published_sha256": "b27ba0cccdcc3a587cbdebc296cee7be56ac0fbbc51a270419ffe502e420099c",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_revision_20260910/ct_application/runs_verified_evidence/nonempty_depth/repeat0/commands.json",
+      "original_sha256": "818c78768fccf530952de9a7467cb91cfed393d836c56f2090631d22ed9184de",
+      "published_sha256": "ed493ecc78accb99dbf58bdd853efef59c1c8f9718aaec7583704dd0a8359be5",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_revision_20260910/ct_application/runs_verified_evidence/nonempty_depth/repeat1/commands.json",
+      "original_sha256": "31249a1c04ef8a3f77bfe9a74749dfca3c0c7a21b22407596d4cb13256025f2f",
+      "published_sha256": "18c04e2fc519f1cf8a29ead4d922de247d0f70d49d08ad6618a3b370ca3cce4a",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_revision_20260910/ct_application/runs_verified_evidence/nonempty_depth/repeat2/commands.json",
+      "original_sha256": "ab64195d63032cd77e680f492055477d1c9d7f043298b3ccf2a67e45a1cbef9e",
+      "published_sha256": "3900f6f495b6b7a4fcba68d12eac215e69e65f5ae4750a953c78ab83d26cb9b1",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_revision_20260910/ct_application/runs_verified_evidence/nonempty_depth/repeat3/commands.json",
+      "original_sha256": "0208c3500bacfa8854c4e6b6cf9e08bd33de4aa9b682258845d96f08e50c0e0a",
+      "published_sha256": "11a7664dc135c2a3446a6dbc9c5c8df1cfc16b6d9dc2cb26cec988e64e3b385c",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_revision_20260910/ct_application/runs_verified_evidence/nonempty_depth/repeat4/commands.json",
+      "original_sha256": "1dd915fa23707b4abb8a54cfc88de81453ac0910395a9a2216633d25a2f9204c",
+      "published_sha256": "0486ec74ad0f1c0de02efd6c509416e087079d155ff1c897613ae27948cdfb48",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/audit/pbc_failure_diagnosis.json",
+      "original_sha256": "37de82c33cdc15a4faf9e00ed5d6587e9e98c7bc795123c1b741571ad25e35ae",
+      "published_sha256": "ddf60c83a395a70081356ae9d112124d504ed5c2fea6393168e5798121610939",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/inputs/_hash_exporter/build_manifest.json",
+      "original_sha256": "b9adfd1473d234721e74e3b41ddcab874545c5b79d7ecf9eded898df0db59533",
+      "published_sha256": "808417ce4f9617c9d4cb766436506ece691f79f0f88bcef41bfff17d6f15669d",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/cluster90_n10000/ab/repeat0/command.json",
+      "original_sha256": "fa53648da1014ec39e12f301396c11fd2d87a24f26bf92d67ae0bfe2bbb3592c",
+      "published_sha256": "bdfaa7a9e32492378ff5650cb89a057262eafce3bcf14deeddf86075a13246df",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/cluster90_n10000/ab/repeat1/command.json",
+      "original_sha256": "023cda092cb6964d4b2eb492fffc4da2d5bd2c62ddfc9945b9f6442c2b961826",
+      "published_sha256": "75b64a6bd9b687269e0ea43e90ed4383911d018a4af156ba6c71e91667b2e053",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/cluster90_n10000/ab/repeat2/command.json",
+      "original_sha256": "85de30a533496206e08c41f361cbe42c1a3d3807bf1f0a8fe37616c94c9fe8cb",
+      "published_sha256": "d8878daec2d74bd1f747afc7b88bc7cccb35adb2cdc0a0bb52eb70a8a2ddddcc",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/cluster90_n10000/first_fit/repeat0/command.json",
+      "original_sha256": "f9a91f56c8273ed88c0142486c6bba7d2cafce737856d44d855cc573962d1f38",
+      "published_sha256": "3d47fe29b5dcf82b002945f3c9b9713901ef407becc6c83c70df449b61631bbf",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/cluster90_n10000/first_fit/repeat1/command.json",
+      "original_sha256": "65429471c99da67cf559e88bb67337545258b695b6049e192ac3b873c4ff8edd",
+      "published_sha256": "9d2cc566312f2e0193f57c0d1ce57b36bf75b84c69efc907346ae2d4b4a07d8f",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/cluster90_n10000/first_fit/repeat2/command.json",
+      "original_sha256": "c8d76f571a42ae23325edf90623869da012561cf3844c77e1082842d7c80b844",
+      "published_sha256": "928329714fbf06081e89ea4c5064eb1f1d035f2bc112cea0bfeed5a86a4ce355",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/cluster90_n10000/flat/repeat0/command.json",
+      "original_sha256": "c428a515a2f0794547fb54698d8f502d6a5322b4e4e0d2cacc2a24b387b9d647",
+      "published_sha256": "cb549e0ffe6ad440a4af416aee475a7c2b872a3ea0bd27d97875e4acc2a696d6",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/cluster90_n10000/flat/repeat1/command.json",
+      "original_sha256": "f46c9cafb8413e13c48940e77cb25aa71c1a5f2d8833fafe941761aebb40e905",
+      "published_sha256": "7fe574e0f6c09b621c0a64f61cc053b97ac0b9b905acdf77ab2c31b71d4a667e",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/cluster90_n10000/flat/repeat2/command.json",
+      "original_sha256": "320dc3e91ac0238deccb2b9133d0fb4ec98fb0801aeff7faf7260cd1fc939699",
+      "published_sha256": "12272617b444009694658c77b48d94abfbccd76dc1730c266aecb36c7d4a160b",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/cluster90_n10000/pbc/repeat0/command.json",
+      "original_sha256": "57838d78ec89d7921af4e5ec48b937c57874720e33d43661b75a0689faae6601",
+      "published_sha256": "1a5a6ad045613d03509d6f96b447113e09df474d701b9c12957649579ea405cb",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/cluster90_n10000/pbc/repeat1/command.json",
+      "original_sha256": "5ea80ede6607ac5977265de2fa89316e40a818a68972893088fa67ab2d744a16",
+      "published_sha256": "ae481540976bc65a78775f5135343a9fa28f0cd54a7378fe00e241bd44c61453",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/cluster90_n10000/pbc/repeat2/command.json",
+      "original_sha256": "a2febcb2f49b709a8699e1a734e33228f8377b069ee3fbadd18d95c8db5dc221",
+      "published_sha256": "dbe8d3b30bde0ea5b0653331550734be206a19d326734bb5d91141e21cb3ca19",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/complete_h10/ab/repeat0/command.json",
+      "original_sha256": "68155121c0ffe97d88889e9c3c88c9768ce8426432ac8272f5e855abddd41117",
+      "published_sha256": "3bf4a0de8c5d09299d5d549ae34783f884b9feef7c503d538cd7b10dc6a56da4",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/complete_h10/ab/repeat1/command.json",
+      "original_sha256": "571795ccb07b6df7711a6df1fc02b885b674f226d2a4b469421c98d84830b1c3",
+      "published_sha256": "1e995113e01316c46b6b45e7b54a2ab4dc42b0cfe05d7a04c4789f3dc8fdf5dc",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/complete_h10/ab/repeat2/command.json",
+      "original_sha256": "b8f2b6edff41b59b99668c99959089d196a8f3912992d79e6f2bd52db8a06ee1",
+      "published_sha256": "d9b5742c83702f0e3cc85616a791d4de9376a3f6d0a3b92757eaa32d962a34fa",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/complete_h10/first_fit/repeat0/command.json",
+      "original_sha256": "118e1e334d4d20949a77fcda02afbba8c0a6788aa3fa89a71729f47c1040c918",
+      "published_sha256": "445700bef9bd213e2f75616a7d9be29046c6fff62739c3163ffc10bdb26999e2",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/complete_h10/first_fit/repeat1/command.json",
+      "original_sha256": "24a4563d0dd01bc7d0bca9aaa3cdb4661a0906cd4468737bc559af6f6a4f120d",
+      "published_sha256": "57394f8d663226f88628079fda00f47309a46c49bcbe1a2d1a6003ca2ccd4c43",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/complete_h10/first_fit/repeat2/command.json",
+      "original_sha256": "9c18117eb92e4aec2dc8fdbcdc983892eb20e73a5672eea6e271375a3993fc72",
+      "published_sha256": "52b7d1a9ded38d727f011f9fa8d3fb8623696eefdff8e8ae09a2114ee5a81adf",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/complete_h10/flat/repeat0/command.json",
+      "original_sha256": "d321b35e6ec1eabde04456a6faa48725ff8a567dc405006dcdbb2321e8311263",
+      "published_sha256": "d3334f8143d7c3800f7d9d2525b591d980bd5a9e2df720fed459545b201e6ace",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/complete_h10/flat/repeat1/command.json",
+      "original_sha256": "616afd0a5bcf35e52176adb59fd7ce2fc676aa366657278bfc19f333f938c9e4",
+      "published_sha256": "1f54c61ba81ec233479899bc83da4b018c9167a251b8339929b55e9d34e4bf0e",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/complete_h10/flat/repeat2/command.json",
+      "original_sha256": "0e6c32c29f2ebcf5b903bec1bfc234d50970abab7abe611c24c360ee2675adc6",
+      "published_sha256": "77ada1e76115eb0ea6f94cb48ca3b2d3481bebfc5293a5ad52846af75f3397a0",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/complete_h10/pbc/repeat0/command.json",
+      "original_sha256": "47732013d265bdbf2d8be02bfb1e694ba413ce5dec61fa4d4bdebb1fd00e29f7",
+      "published_sha256": "416280e7b31b41fd9132b88ddde82d58c20fd70c90a8f9a5db0041c4e2f6374e",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/complete_h10/pbc/repeat1/command.json",
+      "original_sha256": "cd478c8d9064fa30dad49814c82b608aaa7322bfc32c8e53b456e41bb2a6c99b",
+      "published_sha256": "bda60237d0cc2afad86e90f17a235e701a828dff3da7cf5a52098509d2d10bd2",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/complete_h10/pbc/repeat2/command.json",
+      "original_sha256": "b97d9135b86c074f75cd812f09c1798d1cc29840c291f6bd80965f4ae004ff5d",
+      "published_sha256": "ce5fa6d928090a0d815c048fd8bd3f63eda795c29e8352c0ff638932b67b5fd5",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/complete_h14/ab/repeat0/command.json",
+      "original_sha256": "7c6f75fdc4d46856cad254188c1536c34194f2a9d0935e22b6d04c8682d7ec1b",
+      "published_sha256": "14c9e61ce02dc90d7ebdc242ca13850ce9a30c6a063dcf9e301383629d38b42b",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/complete_h14/ab/repeat1/command.json",
+      "original_sha256": "68add3faa93c82b8c9daa84a547b4036da68d0df7a199c1885889d3887b95f44",
+      "published_sha256": "90c113368e6643df0fa4af6e997c5bc07205b888118a6f064af2a0a9ddae0d64",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/complete_h14/ab/repeat2/command.json",
+      "original_sha256": "ed9842ba9a14a7573e66f199b8aeaf47ecdc13c4a12d13e3e339498054513809",
+      "published_sha256": "210c3750679236f0032132cb204e2ffac6f26b87416c274a61e904254621c210",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/complete_h14/first_fit/repeat0/command.json",
+      "original_sha256": "1a83797849309723fc27c75c9e8df5c462fdabbc8343cb8fa49a689b470387fc",
+      "published_sha256": "5d2508c87eaab4c6af2f6a8d84e5fb84ae4937e81b3953f75549ae59894b418f",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/complete_h14/first_fit/repeat1/command.json",
+      "original_sha256": "b34cb6d6af3cce5c100623e7a859c42fa508f843a98fdfcdf0eaf581f322a6b4",
+      "published_sha256": "9f42a01f173753e263c1d3349435550aa48cb561a0b21e8422a1ce3aaf02f51a",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/complete_h14/first_fit/repeat2/command.json",
+      "original_sha256": "df6b87bcc2165113414210248768a9ad485925b80d0979aa3de310892924e100",
+      "published_sha256": "a8dd4312102ad9097c5c8b4d85fe54cd6c895a72aec1873f58f8875c1cb14aca",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/complete_h14/flat/repeat0/command.json",
+      "original_sha256": "f573342b386b0dd4fdac24a5e800fc4be3a402efb02efdcbbfdb812307f1757a",
+      "published_sha256": "a04e79fdc44a18337ba7aece0988bd953dfc56f74563e3af917602e5f3adf8cd",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/complete_h14/flat/repeat1/command.json",
+      "original_sha256": "c4b67abeb58fdbeeba1e0668e7748ee5ee2873040a9b2550a137f2534c04e8dc",
+      "published_sha256": "5d8996ece759223413245f41682718b709554f37cf4b16ae97386331ce17f6a8",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/complete_h14/flat/repeat2/command.json",
+      "original_sha256": "b623e02b7b31ea688ec66c505577fd0ab81890a1fa39ae56181ea7be8de02a63",
+      "published_sha256": "2051b6e207b01f7c82ef43233640535ede6f32f5a8b9b5768204e20a760c8fe2",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/complete_h14/pbc/repeat0/command.json",
+      "original_sha256": "c245cbd5790bf95dde9a63e26ec2b3132654c02ae39d9a9b5bd3d404c38aa107",
+      "published_sha256": "60160c5b785f69287d7afbbd981b77ff35cd8835bc80b621a1b77e335fc7e949",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/complete_h14/pbc/repeat1/command.json",
+      "original_sha256": "79d690ef11d382ff3e03fc057bd44ba22e4edd410b2ddb7d8fdd5ea28b711f53",
+      "published_sha256": "9b22546ea7edf5e6995a5b621c64f3d8f3843825a7d49fd1eff18199117e0570",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/complete_h14/pbc/repeat2/command.json",
+      "original_sha256": "266cc063e343106ac3d5bb58b770997211dcf7f299d010c962e915a14e9edf37",
+      "published_sha256": "fe74096224aebaf23591022c50c3779877290ad45f6e7256b331ea3fb55b9bee",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/prefix64_n10000/ab/repeat0/command.json",
+      "original_sha256": "6bcb2db37101003d84349eabe958800532303172a09ee52f63197f340dbab4d4",
+      "published_sha256": "3f8692f14307c2e38e5a4d9bf0aa48b6c6d1639320991349247553f09ebe7f8f",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/prefix64_n10000/ab/repeat1/command.json",
+      "original_sha256": "2e0abd668983dd72e8206e1e8fb4c0853895151642ac756395bc1dca7cf0075c",
+      "published_sha256": "5f647cd5d7ceea52c16d19cbed119d9631069279fc0a2e3b2ab621da8c200c3c",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/prefix64_n10000/ab/repeat2/command.json",
+      "original_sha256": "dd7c2dd04f01ce816a0dfd7d25f4923ec4f9236b175e212885b77b113d987bf0",
+      "published_sha256": "d4a018bc97111f54b64abd43785f3674b1105b68d00605444d5733e2235953b2",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/prefix64_n10000/first_fit/repeat0/command.json",
+      "original_sha256": "f9fb5df3b0823f781faf77468d8bcdd000842dc063013275551e7affe0ee2071",
+      "published_sha256": "95298174aef825661303299a4d83cc9918d929af4b363c60ba6beafe9ac37e6b",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/prefix64_n10000/first_fit/repeat1/command.json",
+      "original_sha256": "9bdae489013bf750ee00e4cf8870c854cb9027e401a6a91992553b7f0d775a03",
+      "published_sha256": "d964ce0c82bb5568cfd6051a7b96f60f0d1ab02111ca00ef1dbee868decf3b01",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/prefix64_n10000/first_fit/repeat2/command.json",
+      "original_sha256": "46b2d23bcd7e9152bc207bf62f125a7053e731fbf9f54a9673ca210767eeeec0",
+      "published_sha256": "6354a36eb7207f0c9cbfd2b8eed6ffcf609005410c91038cf836357780e89de4",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/prefix64_n10000/flat/repeat0/command.json",
+      "original_sha256": "9dd38268072defce8bdb66f38eb2e15b646d511e2fa1683bf7e00b871b7c7b12",
+      "published_sha256": "a0a57bfc6ed2cee26b28727c2064b6705cc9b2a52efa8a8da45a1638f0f810ad",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/prefix64_n10000/flat/repeat1/command.json",
+      "original_sha256": "03b30f80a3d224150aa085199632589b50dc92f8279feb9a63e5f8058d6913b4",
+      "published_sha256": "ce01c64d2d8af48306ee6cf155c9d873131f714d558585ddc6a7f4f839274323",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/prefix64_n10000/flat/repeat2/command.json",
+      "original_sha256": "67a84347124927ee9207454860ddca87cd28e88997c1228542024bee399eed2b",
+      "published_sha256": "88bc8e70bc8d0c7b6eaf7949677a9fec81a9ede7dfaceb0244faa39a26b7d5fd",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/prefix64_n10000/pbc/repeat0/command.json",
+      "original_sha256": "b03982214a80e88930bdc22577cd903eea81c6ea9a94c1ea03a653b27a73589d",
+      "published_sha256": "1a0a5ead394fdf54416d170a15d3a1b338067d41a15cada7c62120f244e52d96",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/prefix64_n10000/pbc/repeat1/command.json",
+      "original_sha256": "dcf73e414af369c3a6314faf0e3bc95ce1fbdc9dce3991ffa3211f2c9d2e5032",
+      "published_sha256": "1abbb8639c64db0f4350c5f585a3ea2603d1910bed63af20ee4caa5035fec4d6",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/prefix64_n10000/pbc/repeat2/command.json",
+      "original_sha256": "fda0db8373e811ec3523070f5768c127898c936686b44047cb522a8748b20279",
+      "published_sha256": "668b7dfe63f59ad496185e2fa35f1335738b50f6964c7c2afda66575a7f500a0",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n1000/ab/repeat0/command.json",
+      "original_sha256": "1cda2bf00c99b38f3988ae0de8064961c9427d30a1799fc803cbb56667055d84",
+      "published_sha256": "395458c20284b2a88925eeb64521020e382be821929802efec43002d96d944b6",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n1000/ab/repeat1/command.json",
+      "original_sha256": "348b4fd777d69fd5f723bada0a326944ed757c40000f6d7ee0fb0af6863cbf18",
+      "published_sha256": "b05b4b0bec636723c5c406affbfdf4c3b97c8e974c55916a5fa0d28937a14a9c",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n1000/ab/repeat2/command.json",
+      "original_sha256": "0c86143a82c494e0afac130f2138e1b4c187a1674b09a346d8d73c3b2fad6d3a",
+      "published_sha256": "a1e705d0a13b1fee39e8dace2a107b158ef7837ca2eda013dbbdfd9961e75e41",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n1000/first_fit/repeat0/command.json",
+      "original_sha256": "8055be0da69f16108e2d0df3bc62f578906dc056a7cdf1c207bf911c26498222",
+      "published_sha256": "fa17b2b330b19be341549164176eb24d518876f33f1f9783c89351435e2f6b03",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n1000/first_fit/repeat1/command.json",
+      "original_sha256": "b188d219fefd2d7d4137baf6a291fa9766f1ecfff169a0fd18f91b1f4840efa7",
+      "published_sha256": "b67c0bc4e67686402852b0fab81ee66596636e40d46f095533abe9c4af52c05c",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n1000/first_fit/repeat2/command.json",
+      "original_sha256": "cc384ef104110e09be1ca98a37a26511750581433e6958edad52f518f458a5cd",
+      "published_sha256": "25a71e8f15284e8156946e162797df8d85c44a15f534ddf744a961ce41c420f8",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n1000/flat/repeat0/command.json",
+      "original_sha256": "17d8a886b3f3e87d0dfe14c3e808d55e4ee378d6502b96e0ab492914221a8a62",
+      "published_sha256": "d7d0670a8ca393fa3d71ee7df32844b1c11d3b4976e8270df82c812f869dca61",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n1000/flat/repeat1/command.json",
+      "original_sha256": "36b0b3152f53b1002cc6fd7a1212e0c0493ef93e33045d7f48a7422717dfbfb2",
+      "published_sha256": "362e7b5fe4ca2f2cc745ff97c8b9dd5692e348e584edba9a82e1bd0c689ab231",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n1000/flat/repeat2/command.json",
+      "original_sha256": "630dee551024d2aeb49e23b3140a6cc657f8d6ece4dc35ac01abc5970867740e",
+      "published_sha256": "57442188a667747555fbb6caca8e71dda2c9efeb44d2c11753a4969b10dbc1ea",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n1000/pbc/repeat0/command.json",
+      "original_sha256": "f2c1c6845b39145295a233f459bf5fee2da16d07563e85e90d17e8e99f0730e5",
+      "published_sha256": "41671c98499eda75f6d5f62190213e81cafcd9e43987b24d405d6244ca8f25a9",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n1000/pbc/repeat1/command.json",
+      "original_sha256": "d300c938cedb1f773ff26a306980dd2b00ed76cde83d19a1147bd55efe97f95e",
+      "published_sha256": "28bf71669a522533747a3318f9e4bedf8048929968ea2fc993a546d2bfeb472d",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n1000/pbc/repeat2/command.json",
+      "original_sha256": "4b5ab0a244c05989348ec17c9d8ed27a8e0432fe5ef3360e465e82b2190863fc",
+      "published_sha256": "992cfdf69bbe056a92a327cb1b1f68c0eade335eaf49a36fecee7f9345370e61",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n10000/ab/repeat0/command.json",
+      "original_sha256": "945bc0324f2b511c1192797c4d88216cd74a1189ab90c0774579b2fc26298f77",
+      "published_sha256": "7f8a2a7a3a6cc3a49c3dbcdfd742d4ddfa245c6749ea6915ad1ba851130ad36a",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n10000/ab/repeat1/command.json",
+      "original_sha256": "7bd52c61b1e6e4ec2e384e82166156114ecb23c5fe145e0866b96dfbe980da86",
+      "published_sha256": "e3642a27a93818babbe73a6c9c262bf7a66b4cb26af2b569881d4e8a091caaca",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n10000/ab/repeat2/command.json",
+      "original_sha256": "90f31686fe947e7364511c608369a9da204ba0fcb51728cc6e5d3378b50151b9",
+      "published_sha256": "91028234de6a895801c53ad6362d0f9fddc2b82408799206b6c74baaef1a0f89",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n10000/first_fit/repeat0/command.json",
+      "original_sha256": "aaccad406477d2af4cd2c573c0b43491e1d8b60fc7ff5264a3f009337ba938af",
+      "published_sha256": "8971312c5b367c0eb628600855a03de23db05bccd0e7de4b1ce786dc0432f4b1",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n10000/first_fit/repeat1/command.json",
+      "original_sha256": "e516e502ca31937d3b9d3a9e34c15d88a590179755ab3e887f5a491362082d1c",
+      "published_sha256": "71b8efc517cce9381f3c0269d0f831183b92f4b0df11e1f7a6df4ee3b5db0c9c",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n10000/first_fit/repeat2/command.json",
+      "original_sha256": "ae388a2f5098da7c3661901b19ac29d6d16f72c907ce5081c516286a429738a4",
+      "published_sha256": "93be08692ceb655f68ebc6f7c1601a0414c1835388952d40058948ebc5397674",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n10000/flat/repeat0/command.json",
+      "original_sha256": "0c5ee2a2e8522823277d0f559376372a2f67eb5d55aaae4d084e3e5b03c52b73",
+      "published_sha256": "9760ade65763bdff763172fccdcb6a9ae9f96f03519149b9ca558a09e17f5b7b",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n10000/flat/repeat1/command.json",
+      "original_sha256": "d011645fc6d8cc822a94d580f49374ed12e7c7423434e60f03a206ec5690725c",
+      "published_sha256": "306519a11f44f67afc7c82f385ef1f5b3981b0f9a039b8777719e93cb5d01b6d",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n10000/flat/repeat2/command.json",
+      "original_sha256": "239464a581bfb7f0b7f7727d4e1f892d9c8dca9ba08c53ed34a9c15a10d2ac4a",
+      "published_sha256": "2420bce0cc8ba3ad1936560199c5f584c89ad2015ae6984417ee9c7361df8459",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n10000/pbc/repeat0/command.json",
+      "original_sha256": "2136f4cbe29935547b70af9807904d09a7b1a8232c78a3357dd1a028186c2103",
+      "published_sha256": "017fdd27cabdf2eb785b67a5edbe0b65c56d45537b72d7860a6b3b5b8d62ace0",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n10000/pbc/repeat1/command.json",
+      "original_sha256": "50b38afbcc163bf8c7710e78af8770f14b636041e5a3603433a6e6447e83c04f",
+      "published_sha256": "19a821df314c010d5b0449d6a37f2c688e9a4796004b00460acd1a971a97ab02",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n10000/pbc/repeat2/command.json",
+      "original_sha256": "50529daf016603b2ce3c8db3bba0a97b11b702b06e1215895cf27b27b5e3be36",
+      "published_sha256": "9f541d89b9f21d481ea7531e1b19264f8b4d5801d2ec67ed55cb4415d405a5cb",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n100000/ab/repeat0/command.json",
+      "original_sha256": "a18f9feb0be09d622a33be5c525ac9a5855e50e7f7623e4a144e18df75fabdcc",
+      "published_sha256": "ac1d5aa45067594fd834d8c01e7eaf027d62a77750e637504cdfe0e83cfc93dc",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n100000/ab/repeat1/command.json",
+      "original_sha256": "9afc380d60537f3c9efece4bce7f8d79bbb44c05bf61b05881870f2ac6aaf481",
+      "published_sha256": "5ca8b196339f0eadcd3c33d91cbe0746b109524bc8a955f17e59897f949cadd9",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n100000/ab/repeat2/command.json",
+      "original_sha256": "8ad19dfdaf394b1e0ade369c5f4b997a6d8064deb7269b1a6c9b02bdf45ae9de",
+      "published_sha256": "9d76ab56176def027d0c4d5ec2d1bf5fa753b7278607b034f68f4dff7bf01ea7",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n100000/first_fit/repeat0/command.json",
+      "original_sha256": "dcc8a1af359b2eacd58e87955a2e69661ffdcd17328c3ac72ed791df74e91299",
+      "published_sha256": "3d6cc42f811027258ff4f0137e4c014941dcfbb37789d219bfffa20fb2de9bc6",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n100000/first_fit/repeat1/command.json",
+      "original_sha256": "cd38806ccfc56ea62fbe9caa785b95c69a9221d47276569209ff3dc74a5d9242",
+      "published_sha256": "11cf31d690e9fb3b4e7eadb0e64a7326c98fe7ec3deaf99f9b5c3a64d6c58286",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n100000/first_fit/repeat2/command.json",
+      "original_sha256": "f50bcd0936efac7036408ece58b70d5736563fe1d3401c4e1e4ffa175bd288c0",
+      "published_sha256": "c05b59524f38d3099dca91612fe04e1cc234c6f5c92c348cc45918444f18c151",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n100000/flat/repeat0/command.json",
+      "original_sha256": "2e498dcb820fe5621cde23abd3fa022bf05ac71128799c0c5a0c31a8a05d1a16",
+      "published_sha256": "9de92fbff558f7d6da23912f4aff127c0b2e15f5bf327158308a0bfb1f26086b",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n100000/flat/repeat1/command.json",
+      "original_sha256": "7988cb40760010cf6214369006f43ff0a71a6b19c3379fc890d45c8dbc6cae66",
+      "published_sha256": "fd4c1ecce88ae22c1770169061e1af1e714ad5de7b692c1356c7b068d1501738",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n100000/flat/repeat2/command.json",
+      "original_sha256": "db0c7bea5b70b2a4534d1a59b759ac675a8e2469174259001cd3fce37e263cb8",
+      "published_sha256": "634c05f31d2676478dcf6135dc01967b7cd18613cec93a11aaf2f6b6f65ef052",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n100000/pbc/repeat0/command.json",
+      "original_sha256": "0ef5f2c72bb48ae976a6b151d462664354e63fc21855a1946800fe8cc46cbfeb",
+      "published_sha256": "542a6ffaba46b917695e56597aad4180a8a878e8d6e902f02ec77ff9db300c60",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n100000/pbc/repeat1/command.json",
+      "original_sha256": "3c92de974b1375ca8e1443f55a12ba5f7bce5b1387f3f555f55bb32ce0dd91da",
+      "published_sha256": "90746cdf3868d6b209120b305f5c4b87f8cbc675a2497518b724060404f821ae",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/runs/uniform_n100000/pbc/repeat2/command.json",
+      "original_sha256": "54efcdb24b3246e909971fb7171435a9ba3df3a9ba038f1f8e776b4262a94214",
+      "published_sha256": "933c84ec5490198ab9fe67ea56491494386ad264ced26f8a40cec2169525a415",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/smoke/uniform_n1000/ab/repeat0/command.json",
+      "original_sha256": "ca6d8afd297b08b411f2ec6e53b151806b388890692699d6f444d952f62a3d6b",
+      "published_sha256": "14d9aa7adb51f96ba3ab99d0a0445d1dd92c7862fb0b93669588e1cf8d85de85",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/smoke/uniform_n1000/first_fit/repeat0/command.json",
+      "original_sha256": "ab5aaa6fe3e0886e4ef085d86ac21d5f76e964db6d05387a71352b526708657d",
+      "published_sha256": "739c5e94240141cf85498384ef8ff79487a98f86e9e285257943f007795e66b9",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/smoke/uniform_n1000/flat/repeat0/command.json",
+      "original_sha256": "f316329a7323246473bba6e3600c1800157909d0ba61da41610599cacb9d9e5c",
+      "published_sha256": "3e2740db72f6856c471f9f5ac3b2aaf150e5060719290eb106921fa063f117a1",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/smoke/uniform_n1000/pbc/repeat0/command.json",
+      "original_sha256": "bf4d892468839f356c13b94375a537ada40599ac5837f32898eeab443682f2a0",
+      "published_sha256": "2a172b05831ed1d81a6949ddeb4e95155573658e169dc03ecc1ee2b985b6ad36",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/smoke/uniform_n100000/ab/repeat0/command.json",
+      "original_sha256": "3d08896f118c6feee230ae4d9f84201e0e1054ba863e2a51c20f448c812b900a",
+      "published_sha256": "efeac51131cd92155053b1a881af01aad9691a57234c5583ee4373f8b1b30151",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/smoke/uniform_n100000/first_fit/repeat0/command.json",
+      "original_sha256": "1378493130ef68bc71cc6617e091de0d02c45d2109132db5bb3c8526fbdebac6",
+      "published_sha256": "ba0fb66e33996383a3bfba698d51236065e51aa791b67951007b1ea85306edc4",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/smoke/uniform_n100000/flat/repeat0/command.json",
+      "original_sha256": "74d726874cdd6740fe13a3590b72f91733f1719bcd17e33a9b5d4fd72b7fb25d",
+      "published_sha256": "754b490a358c155286413d7864ab3c5d77b330ea72b84e880d48b556269e43e9",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_simplepir_extension_20260911/smoke/uniform_n100000/pbc/repeat0/command.json",
+      "original_sha256": "9d155398e46274d1601a331d8c42c6dd113c9bccaa8801922f3009204fd518aa",
+      "published_sha256": "c99dd3842258008cad92f1380b538317020e28bb2916bb3163daebaa30974753",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "paper-results/verification/PRIMARY_EVIDENCE_SELECTION.json",
+      "original_sha256": "a4690030d3b88f16f099527b73e6905a66d7299334eb09fe22eccf5975978d1b",
+      "published_sha256": "a554a3062feb85c0ba8e364ce2afb2389d7d200cfb5819428fc574613c34f6cf",
+      "change": "Only workspace-prefix strings/keys normalized to /artifact; scalar numerical measurements and cryptographic digests unchanged."
+    },
+    {
+      "path": "examples/tifs_revision_20260910/ct_application/README.md",
+      "original_sha256": "f3efd57520ef895edfbe34d1e439012b7a991c6f1922a6c5a92f4bfa50fb9a78",
+      "published_sha256": "53a0df17e853c24279ee5f4707c1d3ea8020c119ea5d3f4bc5a51daabd38bf0d",
+      "change": "Machine path in captured reproduction instructions replaced by /path/to/sparsetreepir. No algorithm or measured value changed."
+    },
+    {
+      "path": "scripts/summarize_tifs_ct_application_20260910.py",
+      "original_sha256": "6d9b4e14c2de695b6bdc6de9317ab5e99933b7f0492ae5114b98d707fe3e8fcf",
+      "published_sha256": "fae70d69af1715254c2a8369ba01fe9fb514e5e69ba49cb2bec36b26b97dc0fb",
+      "change": "Machine path in captured reproduction instructions replaced by /path/to/sparsetreepir. No algorithm or measured value changed."
+    }
+  ],
+  "portable_paper_generators": "Source-root resolution adjusted to this artifact layout; provenance uses relative examples paths. Manuscript compilation helper omitted because this anonymous code artifact does not include author-bearing manuscript sources.",
+  "upstream_paths": "Upstream-authored example paths are retained where their exact bytes form pinned third-party source."
+}

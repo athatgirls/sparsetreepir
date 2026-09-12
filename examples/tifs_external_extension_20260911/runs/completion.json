@@ -1,0 +1,8 @@
+{
+  "scheduled": 48,
+  "completed": 48,
+  "failures": [],
+  "unavailable_inputs": [],
+  "measured_target_requests": 480,
+  "smoke_excluded_from_performance": false
+}

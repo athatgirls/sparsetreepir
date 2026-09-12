@@ -1,0 +1,24 @@
+{
+  "case": "uniform_n1000",
+  "status": "complete",
+  "exit_code": 0,
+  "process_wall_s": 1.471406193000007,
+  "timeout_s": 600,
+  "memory_limit_gib": 10,
+  "command": [
+    "/var/tmp/tifs_revision_20260910_venv/bin/python",
+    "/artifact/scripts/prepare_external_extension_20260911.py",
+    "--worker",
+    "uniform_n1000",
+    "--output",
+    "/mnt/d/DesktopProjects/论文/examples/tifs_external_extension_20260911/inputs",
+    "--pool",
+    "32",
+    "--root-limit",
+    "20000",
+    "--memory-gib",
+    "10",
+    "--java-timeout",
+    "180"
+  ]
+}

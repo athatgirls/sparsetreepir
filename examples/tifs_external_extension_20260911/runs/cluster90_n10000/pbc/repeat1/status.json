@@ -1,0 +1,38 @@
+{
+  "case": "cluster90_n10000",
+  "repeat": 1,
+  "method": "pbc",
+  "pool_indices": [
+    18,
+    9,
+    16,
+    8,
+    5,
+    30,
+    29,
+    2,
+    15,
+    3
+  ],
+  "target_ids": [
+    4767,
+    3173,
+    4238,
+    1497,
+    1069,
+    9205,
+    9052,
+    529,
+    4109,
+    542
+  ],
+  "input_sha256": "eca43032d1fff6e1023aa1fb5480ba2cb2e1638e14d641d16e8dd25feb364e48",
+  "returncode": 0,
+  "timeout": false,
+  "wall_seconds": 5.042794480999987,
+  "binary_sha256": "d2d25b32f8853661c30990f1b9ff231de369ee0e176eac428eb22b7fa5e7ce4a",
+  "input_source_sha256": "eca43032d1fff6e1023aa1fb5480ba2cb2e1638e14d641d16e8dd25feb364e48",
+  "run_input_sha256": "79c7901fcda32fb831a5fbc8679a4c8d45a4a9fde0810a004e658f840381bc9c",
+  "result_sha256": "8f58c43b3085156cdc67e9afd039880ced965bf4d1b87cea2c661860a85f403a",
+  "status": "complete"
+}

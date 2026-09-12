@@ -1,0 +1,13 @@
+{
+  "python": "3.12.3",
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "go": "go version go1.22.2 linux/amd64",
+  "cpu": "Intel(R) Core(TM) Ultra 5 245K",
+  "samples": 100,
+  "repeats": 5,
+  "warmup": 5,
+  "gomaxprocs": 1,
+  "target_schedule": "100 distinct Fuel targets shuffled per repeat, exactly paired across four methods; fixed seed 202609103000+repeat",
+  "method_order": "independently shuffled per repeat with the same per-repeat seeded RNG",
+  "client_role": "Only known selected slots/values and pinned root are opened locally; public directory, Params/DBinfo, expanded A, hints/cache all arrive through TCP."
+}

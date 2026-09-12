@@ -1,0 +1,1 @@
+{"id": "saturated_n65536_h16_ab-sorted_p1_s20260910_r1", "status": "complete", "actual_n": 65536, "m": 16, "max_bucket": 32769, "U_over_B": 4.0001220703125, "coloring_s": 0.85767900000792, "valid": true}

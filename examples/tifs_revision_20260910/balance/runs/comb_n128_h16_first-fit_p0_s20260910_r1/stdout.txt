@@ -1,0 +1,1 @@
+{"id": "comb_n128_h16_first-fit_p0_s20260910_r1", "status": "complete", "actual_n": 128, "m": 16, "max_bucket": 74, "U_over_B": 4.625, "coloring_s": 0.00047940004151314497, "valid": true}

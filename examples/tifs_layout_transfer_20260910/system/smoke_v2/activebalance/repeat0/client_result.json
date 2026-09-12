@@ -1,0 +1,107 @@
+{
+  "schema": 1,
+  "method": "activebalance",
+  "client_pid": 397,
+  "server_address": "127.0.0.1:34209",
+  "bootstrap_ms": 27.228885,
+  "bootstrap_upload_wire_bytes": 15,
+  "bootstrap_download_wire_bytes": 5888459,
+  "metadata_bytes": 4842,
+  "slots_bytes": 1600,
+  "cache_payload_bytes": 0,
+  "warmup_queries": 1,
+  "queries": [
+    {
+      "sample_index": 0,
+      "target_index": 71,
+      "end_to_end_ms": 7.470467,
+      "known_value_decode_and_routing_ms": 0.019148,
+      "query_generation_ms": 6.774346,
+      "serialize_transport_answer_ms": 0.382134,
+      "decode_ms": 0.277241,
+      "assembly_rootcheck_ms": 0.0136,
+      "upload_wire_bytes": 4336,
+      "download_wire_bytes": 5200,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 121,
+          "digest_hex": "f6e7c9aa9958172410e3d585454a9fcef8025427cd88e06a9c56910385e00b00"
+        },
+        {
+          "level": 122,
+          "digest_hex": "9981c970f63268c852ece001812ba3c7f928faaf97f413628061bb5b57824335"
+        },
+        {
+          "level": 123,
+          "digest_hex": "7e4618d8ed676162c94b361acbcd6f3f141154a41eeb7510ef5e4f217966888c"
+        },
+        {
+          "level": 124,
+          "digest_hex": "5ddd4fa2bc3cc52b2720271e3ac14515ecc3dccb146065fa4dd9d0bc146d457f"
+        },
+        {
+          "level": 125,
+          "digest_hex": "e5872fcc90baee04b3549eb6524522f9e5f4738cf9711bd02a08feac9e363e99"
+        },
+        {
+          "level": 126,
+          "digest_hex": "e01b6602c5b23ea13716cf6fe63a1e9e49a1b1dd9e9d58491935637551d7b36f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 9
+    },
+    {
+      "sample_index": 1,
+      "target_index": 19,
+      "end_to_end_ms": 7.600361,
+      "known_value_decode_and_routing_ms": 0.007436,
+      "query_generation_ms": 6.429654,
+      "serialize_transport_answer_ms": 0.840858,
+      "decode_ms": 0.302472,
+      "assembly_rootcheck_ms": 0.018633,
+      "upload_wire_bytes": 4336,
+      "download_wire_bytes": 5200,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 121,
+          "digest_hex": "22b5720ca1d646959256f20fd843fa41af267c77dd149464a3c6db2e9f9ea31b"
+        },
+        {
+          "level": 122,
+          "digest_hex": "d15a25a749aa69b7c66ceb4ae9e2c13d905bbcc606d1aba50cf4875d64f26f63"
+        },
+        {
+          "level": 123,
+          "digest_hex": "67d0b3ab291b4d805a82049982c6172041bce1f14c5a813ca1026d8dc863fefa"
+        },
+        {
+          "level": 124,
+          "digest_hex": "833fb9b71d9b1c9765205f861fb8619048914463b7541305d5ce771c0a756a2c"
+        },
+        {
+          "level": 125,
+          "digest_hex": "0cf76ea1ff1977e0eccf349ea33e4f52d6b6d015dd69145da274e31eb2430036"
+        },
+        {
+          "level": 126,
+          "digest_hex": "315e0c4751043a683a3bea17699a4d0483a7351d379a71b378fb8a4b6ee608a4"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 9
+    }
+  ],
+  "client_peak_rss_bytes": 24772608,
+  "scope": "Separate client/server processes; one persistent TCP connection on loopback. End-to-end includes known-value decoding and public-directory routing, query generation, serialization, transport, server answer, decode, and SMT root verification. Excludes initial bootstrap and process launch; bootstrap separately measured. Wire bytes count successful socket application reads/writes including framing, not TCP/IP headers or retransmissions."
+}

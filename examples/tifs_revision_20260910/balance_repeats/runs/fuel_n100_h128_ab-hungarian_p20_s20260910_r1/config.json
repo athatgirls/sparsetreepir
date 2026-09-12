@@ -1,0 +1,13 @@
+{
+  "id": "fuel_n100_h128_ab-hungarian_p20_s20260910_r1",
+  "distribution": "real",
+  "n": 100,
+  "height": 128,
+  "algorithm": "ab-hungarian",
+  "passes": 20,
+  "seed": 20260910,
+  "repeat": 1,
+  "label": "fuel",
+  "source": "datasets/fuel_smt_test_workload.csv",
+  "key_mode": "hex-prefix"
+}

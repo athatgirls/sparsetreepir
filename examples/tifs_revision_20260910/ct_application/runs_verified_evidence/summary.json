@@ -1,0 +1,239 @@
+{
+  "schema": 1,
+  "groups": {
+    "first_fit": {
+      "mean_e2e_ms": {
+        "mean": 9.080808138,
+        "sample_sd": 0.25291290762721796,
+        "n": 5
+      },
+      "bootstrap_ms": {
+        "mean": 31.3516862,
+        "sample_sd": 4.846078852713521,
+        "n": 5
+      },
+      "bootstrap_total_wire_bytes": {
+        "mean": 12279233,
+        "sample_sd": 0.0,
+        "n": 5
+      },
+      "mean_online_wire_bytes": {
+        "mean": 17568,
+        "sample_sd": 0.0,
+        "n": 5
+      },
+      "client_peak_rss_bytes": {
+        "mean": 44613632,
+        "sample_sd": 693761.3225079646,
+        "n": 5
+      },
+      "server_peak_rss_bytes": {
+        "mean": 54106521.6,
+        "sample_sd": 997334.366276827,
+        "n": 5
+      },
+      "mean_query_ms": {
+        "mean": 8.04794534,
+        "sample_sd": 0.2571325981703273,
+        "n": 5
+      },
+      "mean_server_answer_ms": {
+        "mean": 0.038383664,
+        "sample_sd": 0.002588726234990869,
+        "n": 5
+      },
+      "mean_decode_ms": {
+        "mean": 0.523676728,
+        "sample_sd": 0.006548192905593851,
+        "n": 5
+      },
+      "mean_route_ms": {
+        "mean": 0.012881554,
+        "sample_sd": 0.0006478015493420804,
+        "n": 5
+      },
+      "mean_verify_ms": {
+        "mean": 0.013858976,
+        "sample_sd": 0.0006475850430484018,
+        "n": 5
+      }
+    },
+    "activebalance": {
+      "mean_e2e_ms": {
+        "mean": 10.735046092,
+        "sample_sd": 0.9070126338318384,
+        "n": 5
+      },
+      "bootstrap_ms": {
+        "mean": 41.2056388,
+        "sample_sd": 3.076610828333705,
+        "n": 5
+      },
+      "bootstrap_total_wire_bytes": {
+        "mean": 15392350,
+        "sample_sd": 0.0,
+        "n": 5
+      },
+      "mean_online_wire_bytes": {
+        "mean": 20832,
+        "sample_sd": 0.0,
+        "n": 5
+      },
+      "client_peak_rss_bytes": {
+        "mean": 53634662.4,
+        "sample_sd": 339271.4599443932,
+        "n": 5
+      },
+      "server_peak_rss_bytes": {
+        "mean": 85467955.2,
+        "sample_sd": 2128648.2849628306,
+        "n": 5
+      },
+      "mean_query_ms": {
+        "mean": 9.46931088,
+        "sample_sd": 0.8458563035838197,
+        "n": 5
+      },
+      "mean_server_answer_ms": {
+        "mean": 0.035407374,
+        "sample_sd": 0.0043572598136936945,
+        "n": 5
+      },
+      "mean_decode_ms": {
+        "mean": 0.693065344,
+        "sample_sd": 0.021858185467924354,
+        "n": 5
+      },
+      "mean_route_ms": {
+        "mean": 0.015674578,
+        "sample_sd": 0.0015919941238647837,
+        "n": 5
+      },
+      "mean_verify_ms": {
+        "mean": 0.015292042,
+        "sample_sd": 0.0018493212030823631,
+        "n": 5
+      }
+    },
+    "nonempty_depth": {
+      "mean_e2e_ms": {
+        "mean": 11.330057514,
+        "sample_sd": 0.3374095495338986,
+        "n": 5
+      },
+      "bootstrap_ms": {
+        "mean": 36.485360400000005,
+        "sample_sd": 8.73097834529154,
+        "n": 5
+      },
+      "bootstrap_total_wire_bytes": {
+        "mean": 14383745,
+        "sample_sd": 0.0,
+        "n": 5
+      },
+      "mean_online_wire_bytes": {
+        "mean": 21344,
+        "sample_sd": 0.0,
+        "n": 5
+      },
+      "client_peak_rss_bytes": {
+        "mean": 50357862.4,
+        "sample_sd": 624486.2131999392,
+        "n": 5
+      },
+      "server_peak_rss_bytes": {
+        "mean": 61575987.2,
+        "sample_sd": 765011.7523092048,
+        "n": 5
+      },
+      "mean_query_ms": {
+        "mean": 10.1534538,
+        "sample_sd": 0.3210593062351816,
+        "n": 5
+      },
+      "mean_server_answer_ms": {
+        "mean": 0.047445468,
+        "sample_sd": 0.002577296584198255,
+        "n": 5
+      },
+      "mean_decode_ms": {
+        "mean": 0.60295097,
+        "sample_sd": 0.012352720605516405,
+        "n": 5
+      },
+      "mean_route_ms": {
+        "mean": 0.015843212,
+        "sample_sd": 0.00043461488253395086,
+        "n": 5
+      },
+      "mean_verify_ms": {
+        "mean": 0.013587768,
+        "sample_sd": 0.0003658223215852198,
+        "n": 5
+      }
+    },
+    "full_cache": {
+      "mean_e2e_ms": {
+        "mean": 0.025434934,
+        "sample_sd": 0.005938740717414762,
+        "n": 5
+      },
+      "bootstrap_ms": {
+        "mean": 1.1175226,
+        "sample_sd": 0.20542928649367406,
+        "n": 5
+      },
+      "bootstrap_total_wire_bytes": {
+        "mean": 65566,
+        "sample_sd": 0.0,
+        "n": 5
+      },
+      "mean_online_wire_bytes": {
+        "mean": 0,
+        "sample_sd": 0.0,
+        "n": 5
+      },
+      "client_peak_rss_bytes": {
+        "mean": 6527385.6,
+        "sample_sd": 58617.180389370485,
+        "n": 5
+      },
+      "server_peak_rss_bytes": {
+        "mean": 4561305.6,
+        "sample_sd": 58617.180389370485,
+        "n": 5
+      },
+      "mean_query_ms": {
+        "mean": 0,
+        "sample_sd": 0.0,
+        "n": 5
+      },
+      "mean_server_answer_ms": {
+        "mean": 0,
+        "sample_sd": 0.0,
+        "n": 5
+      },
+      "mean_decode_ms": {
+        "mean": 0.000558936,
+        "sample_sd": 0.00017429563184428922,
+        "n": 5
+      },
+      "mean_route_ms": {
+        "mean": 0.004635804,
+        "sample_sd": 0.0014083093647100412,
+        "n": 5
+      },
+      "mean_verify_ms": {
+        "mean": 0.017343178,
+        "sample_sd": 0.004003183137919124,
+        "n": 5
+      }
+    }
+  },
+  "completed_independent_pairs": 20,
+  "verified_measured_proofs": 2000,
+  "warmup_queries_excluded": true,
+  "statistical_unit": "independent client/server process pair mean; sample SD across pairs",
+  "network": "TCP loopback only; framing included, TCP/IP headers and retransmissions excluded",
+  "bootstrap": "actual serialized metadata, slots, Params/DBinfo, fully materialized public A and hints; full cache instead sends all active records; excludes publisher/server setup before listening"
+}

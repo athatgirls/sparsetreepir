@@ -1,0 +1,29 @@
+{
+  "manifest_sha256": "0585182a2be8adced46e6bf2d15420fc4eccfc02fe12582aa639dc71239a404a",
+  "database_sha256": {
+    "color_01.bin": "bef200e0570265940133ac8fa6086b457bce10a23059708ff799fe137683c5b2",
+    "color_02.bin": "cd444fe016f259e3d133ec700f267cfaf9cf6f7e9db193c2d5f92628a8e7bdb4",
+    "color_03.bin": "1e63c651253092648677540d81cafeca6c1507c0eaf1a2fcd9efc3db41a45d8a",
+    "color_04.bin": "2266cc5df7fa9f4decdab65df8bb15932fcf6e3ee5c539aaeebab1c8e7e1eea1",
+    "color_05.bin": "5c764f813ff9e67c67f41178bd951ea3c7f361c97d11d7ee381d3719f912af75",
+    "color_06.bin": "6a3a8b76680f1165e3c16a52031db2fbbb9fc3a6525da7a1d9110a5bec33202d",
+    "color_07.bin": "c54b0a1e9f53ad78508dbb6ba8bfec86a1e79692ad8a1fc8395ad7501b263006",
+    "color_08.bin": "ec6c24333e7774ab086f7d7cee5883e43772f18a617d172269b40cb0d6d8b66c",
+    "color_09.bin": "dc7e4dec280ff95c919d451d9ae75048e948d3833dbb534817c46cbd24fb6edd",
+    "color_10.bin": "75655a34fbef9081b97e04c84d24198221105b288d45d40ddfb4cd3d6b003cd8",
+    "color_11.bin": "4df6a840f2da77aebe9ebcd892660e339edc2f60000beff108381ee10e1f2a27",
+    "color_12.bin": "92ab683cf2e5d760be5286b4bc0d946038ae798c104e11f1b311d08f53f4666d",
+    "color_13.bin": "3979a505d5e203654162d8c1ac52aa4a50fbd7aadc809b58617de1ac9c97b87a",
+    "color_14.bin": "27cc60c3126fafb78549a4e7cf061341f31bc81255118443f3ad08e9d97c2282",
+    "color_15.bin": "e0e730658e3b3cf80f77e47d466c6d62c8d4be06692e1d8424845e36fdc810da",
+    "color_16.bin": "83e9667780eda109b57f5122693190b51c902305a125ffc4eb861c7597abbe6d",
+    "color_17.bin": "e5e6462bc2d65b6d1720e5e7ddf508eafa82d20775e0b210a63f87d74b6ef051",
+    "color_18.bin": "d4c523c2ebab020bebdfeb3eb316b5d5613107fb7753e3ddd1303c65a8116540",
+    "color_19.bin": "c9159d368654f0492d8ed1cc87865e8f663059ad10061c8eb4c5ba4a216596f7",
+    "color_20.bin": "b42ce6f05d1dd9cf3fd5719ab7d4f453e87e07aba7a3120b390f108ff81208ab"
+  },
+  "binary_sha256": "d633487b2913aee719ade941a9a9629d45f27559261fb9e0bd255e93235fca40",
+  "warmup": 5,
+  "gomaxprocs": 1,
+  "schema": "verified-backend-v2"
+}

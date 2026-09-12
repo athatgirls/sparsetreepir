@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "complete_requested_experiment": true,
+  "auditor_sha256": "0e4ab849904827d9560665c6f690334ac9d22a6e54b1266f0c44ab579fd929e5",
+  "process_results_verified": 48,
+  "measured_proofs_verified": 480,
+  "proofs_including_warmups_verified": 576,
+  "source_run_configuration": {
+    "schema": 1,
+    "seed": 2026091103,
+    "repeats": 3,
+    "samples": 10,
+    "warmup": 2,
+    "cases_requested": [
+      "uniform_n1000",
+      "uniform_n10000",
+      "uniform_n100000",
+      "prefix64_n10000",
+      "cluster90_n10000",
+      "complete_h10",
+      "complete_h14"
+    ],
+    "smoke_excluded_from_performance": false,
+    "binary_sha256": "d2d25b32f8853661c30990f1b9ff231de369ee0e176eac428eb22b7fa5e7ce4a",
+    "script_sha256": "e7c6b8f7574e30a341ffd19ae684e7be26eb32559f3ba5bedbb36e48236aff13",
+    "timeout_seconds": 600,
+    "address_space_limit_bytes": 10737418240,
+    "OMP_NUM_THREADS": 1,
+    "statistical_unit": "independent process mean",
+    "scope": "serialized in-process proof pipeline; no network latency"
+  },
+  "authentication": "independent Python SHA-256 reconstruction, heap-sibling need derivation, three negative controls",
+  "actual_recovery_used": true,
+  "all_envelopes_target_independent_within_process": true,
+  "failed_or_invalid_processes": [],
+  "incomplete_requested_inputs": [],
+  "scope": "in-process serialized proof pipeline; RSS combines roles; no network or isolated client RAM claim"
+}

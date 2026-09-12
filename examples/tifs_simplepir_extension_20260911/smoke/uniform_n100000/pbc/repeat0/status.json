@@ -1,0 +1,22 @@
+{
+  "case": "uniform_n100000",
+  "repeat": 0,
+  "method": "pbc",
+  "pool_indices": [
+    3,
+    1
+  ],
+  "target_ids": [
+    4341,
+    2563
+  ],
+  "input_sha256": "74c289b5ab2ea31c0ad941fe5f72e54c011cdf86b3e2affd6f1a36a8caf538ef",
+  "returncode": 0,
+  "timeout": false,
+  "wall_seconds": 5.145648514999991,
+  "binary_sha256": "4a1c83d3f8dfa12557aec5b5666224cc36840e9aa2fe758b6f634437a69bfa02",
+  "input_source_sha256": "74c289b5ab2ea31c0ad941fe5f72e54c011cdf86b3e2affd6f1a36a8caf538ef",
+  "run_input_sha256": "96c36f8ce2cb4d7d3ae25be31f574f4880aebc03def3697b12e7afd40d1e82e6",
+  "result_sha256": "f8a7a52f3d61ee40d524d9461c51ec326060f4ab2f5e6cf598c8dc05f917a127",
+  "status": "complete"
+}

@@ -1,0 +1,94 @@
+{
+  "source": "examples\\tifs_revision_20260910\\theory_exploration\\final\\small_shape_exact_results.json",
+  "source_sha256": "3d78ac466087cf08f99ea66265383b352e0144b80e80850146a622493c13a86f",
+  "source_rows": 1323,
+  "source_exact_OPT": "Frozen exact profile DP from source JSON; no new exact solver run or solver time charged to FF/AB.",
+  "source_census_scope": {
+    "leaves_min": 2,
+    "leaves_max": 14,
+    "width_cap": 6,
+    "source_enumeration_censored": false,
+    "shapes_by_leaf_count": {
+      "2": 1,
+      "3": 1,
+      "4": 2,
+      "5": 3,
+      "6": 6,
+      "7": 11,
+      "8": 22,
+      "9": 39,
+      "10": 70,
+      "11": 118,
+      "12": 200,
+      "13": 324,
+      "14": 526
+    },
+    "orientation": "One source-canonical non-plane binary shape ordering; not every left/right orientation and not a random workload distribution."
+  },
+  "embedding": "Original nested child order; [] is a leaf; path bits padded with zeros to maximum depth; original root is not a proof record.",
+  "algorithms": "Actual tifs_revision_smt.build_layout; first_fit_coloring and best_count_profile_balanced from current implementation, not replacement heuristics.",
+  "tie_breaking": "Forest ordered by (interval_left, -interval_length, heap_node); pre-order candidate traversal. FF chooses smallest unused color. AB starts from FF, Hungarian rows/columns enumerate ascending available color; strict < updates retain first equal-cost/equal-signature encountered candidate. No randomness in coloring.",
+  "AB_round_budget": 20,
+  "AB_max_passes": 6,
+  "AB_max_moves": 5,
+  "AB_budget_exhaustions": 0,
+  "runtime_seconds_including_embedding_build_and_all_target_root_checks": 2.208253899938427,
+  "python": "3.14.2",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "metrics": "U is largest bucket. Certificate excess (U-LB)/LB upper-bounds relative suboptimality; exact gap (U-OPT)/OPT is directly measured against certified optimum. Neither is a latency speedup.",
+  "lower_bound_remaining_shapes": 13,
+  "AB_suboptimal_and_Bhier_tight": 200,
+  "AB_suboptimal_and_Bhier_slack": 0,
+  "AB_suboptimal_OPT_to_U_counts": {
+    "4->5": 178,
+    "5->6": 12,
+    "6->7": 10
+  },
+  "real_AB_equals_B": 6,
+  "real_shapes": 7,
+  "frozen_real_measurement_scope": "Only frozen binary directory contents are counted and validated; no algorithm rerun or change to old measurements.",
+  "files_sha256": {
+    "scripts\\measure_gap_algorithm_20260910.py": "c4f75d5b989852a8f1e078c144e072099fc067d0a5f8b5608c940de74001d08f",
+    "scripts\\tifs_revision_smt.py": "f0dc6c6c9af2d7a9c032991f5407c7cca79e7353394d6a18d9f8e8bb5e72c740",
+    "scripts\\run_height_sparsity_profile_balance_experiment.py": "6e13f887cbe283ade74aad6cd2174aa3c1d66001ada2106fc27935b3284f63f5",
+    "scripts\\generate_full_sparse_smt_example.py": "5cd3630af580fe03214fd9816ff66601e3f32e79a4e3d304b445bd8f12d17b1d",
+    "examples\\tifs_revision_20260910\\theory_exploration\\final\\real_workload_bounds.json": "2d09c91f194e951a4ea6b9f3f0dfeb3f8613dc660d43352437a5b725ff254bd5"
+  },
+  "fuel_witness_independent_check": {
+    "witness_path": "examples\\tifs_remaining_gap_20260910\\fuel\\capacity22_result.json",
+    "sha256": "94dd81f17f4eebc90f3f0822276e72e4f3393642f1133051175b40e0470a56b7",
+    "frozen_input_copy": "fuel_capacity22_witness_snapshot.json",
+    "metadata_records_exact_match": 198,
+    "inclusive_target_ranks_checked": 100,
+    "integer_colors_checked": 198,
+    "witness_color_indexing": "zero-based 0..8; frozen AB uses 1..9",
+    "loads": [
+      22,
+      22,
+      22,
+      22,
+      22,
+      22,
+      22,
+      22,
+      22
+    ],
+    "optimality": "ceil(198/9)=22 plus proper capacity-22 coloring"
+  },
+  "first_fit": {
+    "exact_optimum_attained": 96,
+    "max_exact_gap": 1.0,
+    "mean_exact_gap": 0.4321563546053342,
+    "max_certificate_excess_Bhier": 1.0,
+    "total_coloring_seconds": 0.00955319800414145,
+    "proofs_color_and_root_verified": 16642
+  },
+  "activebalance": {
+    "exact_optimum_attained": 1123,
+    "max_exact_gap": 0.25,
+    "mean_exact_gap": 0.03670949861426052,
+    "max_certificate_excess_Bhier": 0.25,
+    "total_coloring_seconds": 0.912141198059544,
+    "proofs_color_and_root_verified": 16642
+  }
+}

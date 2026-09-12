@@ -1,0 +1,17 @@
+{
+  "trusted_root_hex": "283ea1495be5cd0619e21c176a986dab657f1b29ecf35d8309e94cb1f9599ecb",
+  "height": 128,
+  "warmup": 1,
+  "targets": [
+    {
+      "target_index": 71,
+      "slot_hex": "b40711a88c7039756fb8a73827eabe2c",
+      "value_hex": "cf9d5121fc789b994ecfe265927613c606dfbc8457bcd528b9eaa46a488757e2"
+    },
+    {
+      "target_index": 19,
+      "slot_hex": "31b67dba7cfd6e2d7540f9c96d90a45b",
+      "value_hex": "81cdce68d05e36784a65f82cc56fac4de7397bc96d601ccdb0768c51e618d513"
+    }
+  ]
+}

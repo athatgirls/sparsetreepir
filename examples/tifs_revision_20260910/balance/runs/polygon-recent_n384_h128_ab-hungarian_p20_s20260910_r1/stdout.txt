@@ -1,0 +1,1 @@
+{"id": "polygon-recent_n384_h128_ab-hungarian_p20_s20260910_r1", "status": "complete", "actual_n": 384, "m": 11, "max_bucket": 70, "U_over_B": 1.0, "coloring_s": 0.2168314001755789, "valid": true}

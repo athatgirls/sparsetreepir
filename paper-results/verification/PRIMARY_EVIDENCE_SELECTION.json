@@ -1,0 +1,89 @@
+{
+  "reported_scope": "Uniform-key scaling and complete-tree controls. This manuscript selection does not redefine the original full experimental schedule or assert success of all exploratory runs.",
+  "cohorts": [
+    {
+      "backend": "SimplePIR",
+      "cases": [
+        "uniform_n1000",
+        "uniform_n10000",
+        "uniform_n100000"
+      ],
+      "methods": [
+        "ab",
+        "pbc",
+        "flat",
+        "first_fit"
+      ],
+      "processes": 36,
+      "measured_proofs": 360
+    },
+    {
+      "backend": "VBPIR",
+      "cases": [
+        "uniform_n1000",
+        "uniform_n10000",
+        "uniform_n100000"
+      ],
+      "methods": [
+        "ab",
+        "pbc"
+      ],
+      "processes": 18,
+      "measured_proofs": 180
+    },
+    {
+      "backend": "VBPIR",
+      "cases": [
+        "complete_h10",
+        "complete_h14"
+      ],
+      "methods": [
+        "ab",
+        "pbc",
+        "treepir"
+      ],
+      "processes": 18,
+      "measured_proofs": 180
+    }
+  ],
+  "reported_processes": 72,
+  "reported_measured_proofs": 720,
+  "reported_warmup_proofs": 144,
+  "sources": {
+    "SimplePIR": {
+      "results_sha256": "0b2ce172dc03fd044330317049c0232d6eabc3d056211bbe42beb93a12ab07d1",
+      "original_source": "/artifact/examples/tifs_simplepir_extension_20260911"
+    },
+    "VBPIR": {
+      "results_sha256": "a8a063693477e8089ee24c74a69e57d6875381ba4c902cfda3985b8daff07c87",
+      "original_source": "/artifact/examples/tifs_external_extension_20260911"
+    }
+  },
+  "ablation": [
+    {
+      "leaves": 1000,
+      "ff_capacity": 580,
+      "ab_capacity": 154,
+      "capacity_ratio": 3.7662337662337664,
+      "paired_time_ratio": 1.6796014641278347,
+      "traffic_ratio": 1.796908315565032
+    },
+    {
+      "leaves": 10000,
+      "ff_capacity": 5646,
+      "ab_capacity": 1179,
+      "capacity_ratio": 4.788804071246819,
+      "paired_time_ratio": 2.1431092961800036,
+      "traffic_ratio": 2.1362538250926075
+    },
+    {
+      "leaves": 100000,
+      "ff_capacity": 52876,
+      "ab_capacity": 9552,
+      "capacity_ratio": 5.535594639865996,
+      "paired_time_ratio": 2.1151991461136745,
+      "traffic_ratio": 2.331765148663907
+    }
+  ],
+  "script_sha256": "c22a255953e6e74cb9fe6c8e001da463de24b01b4b3c9e0b5cf1e6176a739d9d"
+}

@@ -1,0 +1,1208 @@
+[
+  {
+    "source_index": 223,
+    "n": 11,
+    "N": 20,
+    "m": 5,
+    "shape": [
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ],
+      [
+        [],
+        [
+          [
+            [],
+            [
+              [],
+              []
+            ]
+          ],
+          [
+            [
+              [],
+              []
+            ],
+            [
+              [],
+              []
+            ]
+          ]
+        ]
+      ]
+    ],
+    "notation": "((L,(L,L)),(L,((L,(L,L)),((L,L),(L,L)))))",
+    "B_hier": 4,
+    "B_joint": 5,
+    "optimum": 5,
+    "minimum_anchor_witness": {
+      "context": -1,
+      "N_context": 20,
+      "q": 5,
+      "k": 2,
+      "J": 7,
+      "chain": [
+        5,
+        7
+      ],
+      "unanchored_colors": 3,
+      "deficit_at_H": 1,
+      "side_regions": [
+        {
+          "colors": 2,
+          "beta": 4,
+          "shapes": [
+            [
+              [],
+              [
+                [],
+                []
+              ]
+            ]
+          ],
+          "notations": [
+            "(L,(L,L))"
+          ]
+        },
+        {
+          "colors": 1,
+          "beta": 1,
+          "shapes": [
+            []
+          ],
+          "notations": [
+            "L"
+          ]
+        }
+      ]
+    },
+    "violating_constraints": 1,
+    "actual_smt_certificate": "examples/tifs_remaining_gap_20260910/theory/actual_smt_certificates/source_0223.json",
+    "target_proofs_checked": 11
+  },
+  {
+    "source_index": 290,
+    "n": 12,
+    "N": 22,
+    "m": 6,
+    "shape": [
+      [],
+      [
+        [
+          [],
+          [
+            [],
+            []
+          ]
+        ],
+        [
+          [],
+          [
+            [
+              [],
+              [
+                [],
+                []
+              ]
+            ],
+            [
+              [
+                [],
+                []
+              ],
+              [
+                [],
+                []
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    "notation": "(L,((L,(L,L)),(L,((L,(L,L)),((L,L),(L,L))))))",
+    "B_hier": 4,
+    "B_joint": 5,
+    "optimum": 5,
+    "minimum_anchor_witness": {
+      "context": 1,
+      "N_context": 20,
+      "q": 5,
+      "k": 2,
+      "J": 7,
+      "chain": [
+        7,
+        9
+      ],
+      "unanchored_colors": 3,
+      "deficit_at_H": 1,
+      "side_regions": [
+        {
+          "colors": 2,
+          "beta": 4,
+          "shapes": [
+            [
+              [],
+              [
+                [],
+                []
+              ]
+            ]
+          ],
+          "notations": [
+            "(L,(L,L))"
+          ]
+        },
+        {
+          "colors": 1,
+          "beta": 1,
+          "shapes": [
+            []
+          ],
+          "notations": [
+            "L"
+          ]
+        }
+      ]
+    },
+    "violating_constraints": 2,
+    "actual_smt_certificate": "examples/tifs_remaining_gap_20260910/theory/actual_smt_certificates/source_0290.json",
+    "target_proofs_checked": 12
+  },
+  {
+    "source_index": 600,
+    "n": 13,
+    "N": 24,
+    "m": 6,
+    "shape": [
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ],
+      [
+        [],
+        [
+          [
+            [],
+            [
+              [],
+              []
+            ]
+          ],
+          [
+            [
+              [],
+              []
+            ],
+            [
+              [
+                [],
+                []
+              ],
+              [
+                [],
+                []
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    "notation": "((L,(L,L)),(L,((L,(L,L)),((L,L),((L,L),(L,L))))))",
+    "B_hier": 4,
+    "B_joint": 5,
+    "optimum": 5,
+    "minimum_anchor_witness": {
+      "context": -1,
+      "N_context": 24,
+      "q": 6,
+      "k": 2,
+      "J": 7,
+      "chain": [
+        5,
+        7
+      ],
+      "unanchored_colors": 4,
+      "deficit_at_H": 1,
+      "side_regions": [
+        {
+          "colors": 2,
+          "beta": 4,
+          "shapes": [
+            [
+              [],
+              [
+                [],
+                []
+              ]
+            ]
+          ],
+          "notations": [
+            "(L,(L,L))"
+          ]
+        },
+        {
+          "colors": 1,
+          "beta": 1,
+          "shapes": [
+            []
+          ],
+          "notations": [
+            "L"
+          ]
+        }
+      ]
+    },
+    "violating_constraints": 1,
+    "actual_smt_certificate": "examples/tifs_remaining_gap_20260910/theory/actual_smt_certificates/source_0600.json",
+    "target_proofs_checked": 13
+  },
+  {
+    "source_index": 601,
+    "n": 13,
+    "N": 24,
+    "m": 6,
+    "shape": [
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ],
+      [
+        [],
+        [
+          [
+            [],
+            [
+              [],
+              []
+            ]
+          ],
+          [
+            [
+              [],
+              [
+                [],
+                []
+              ]
+            ],
+            [
+              [],
+              [
+                [],
+                []
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    "notation": "((L,(L,L)),(L,((L,(L,L)),((L,(L,L)),(L,(L,L))))))",
+    "B_hier": 4,
+    "B_joint": 5,
+    "optimum": 5,
+    "minimum_anchor_witness": {
+      "context": -1,
+      "N_context": 24,
+      "q": 6,
+      "k": 2,
+      "J": 7,
+      "chain": [
+        5,
+        7
+      ],
+      "unanchored_colors": 4,
+      "deficit_at_H": 1,
+      "side_regions": [
+        {
+          "colors": 2,
+          "beta": 4,
+          "shapes": [
+            [
+              [],
+              [
+                [],
+                []
+              ]
+            ]
+          ],
+          "notations": [
+            "(L,(L,L))"
+          ]
+        },
+        {
+          "colors": 1,
+          "beta": 1,
+          "shapes": [
+            []
+          ],
+          "notations": [
+            "L"
+          ]
+        }
+      ]
+    },
+    "violating_constraints": 1,
+    "actual_smt_certificate": "examples/tifs_remaining_gap_20260910/theory/actual_smt_certificates/source_0601.json",
+    "target_proofs_checked": 13
+  },
+  {
+    "source_index": 602,
+    "n": 13,
+    "N": 24,
+    "m": 6,
+    "shape": [
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ],
+      [
+        [],
+        [
+          [
+            [],
+            [
+              [],
+              [
+                [],
+                []
+              ]
+            ]
+          ],
+          [
+            [],
+            [
+              [
+                [],
+                []
+              ],
+              [
+                [],
+                []
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    "notation": "((L,(L,L)),(L,((L,(L,(L,L))),(L,((L,L),(L,L))))))",
+    "B_hier": 4,
+    "B_joint": 5,
+    "optimum": 5,
+    "minimum_anchor_witness": {
+      "context": -1,
+      "N_context": 24,
+      "q": 6,
+      "k": 2,
+      "J": 7,
+      "chain": [
+        5,
+        7
+      ],
+      "unanchored_colors": 4,
+      "deficit_at_H": 1,
+      "side_regions": [
+        {
+          "colors": 2,
+          "beta": 4,
+          "shapes": [
+            [
+              [],
+              [
+                [],
+                []
+              ]
+            ]
+          ],
+          "notations": [
+            "(L,(L,L))"
+          ]
+        },
+        {
+          "colors": 1,
+          "beta": 1,
+          "shapes": [
+            []
+          ],
+          "notations": [
+            "L"
+          ]
+        }
+      ]
+    },
+    "violating_constraints": 1,
+    "actual_smt_certificate": "examples/tifs_remaining_gap_20260910/theory/actual_smt_certificates/source_0602.json",
+    "target_proofs_checked": 13
+  },
+  {
+    "source_index": 603,
+    "n": 13,
+    "N": 24,
+    "m": 6,
+    "shape": [
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ],
+      [
+        [],
+        [
+          [
+            [],
+            [
+              [],
+              [
+                [],
+                []
+              ]
+            ]
+          ],
+          [
+            [
+              [],
+              []
+            ],
+            [
+              [],
+              [
+                [],
+                []
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    "notation": "((L,(L,L)),(L,((L,(L,(L,L))),((L,L),(L,(L,L))))))",
+    "B_hier": 4,
+    "B_joint": 5,
+    "optimum": 5,
+    "minimum_anchor_witness": {
+      "context": -1,
+      "N_context": 24,
+      "q": 6,
+      "k": 2,
+      "J": 7,
+      "chain": [
+        5,
+        7
+      ],
+      "unanchored_colors": 4,
+      "deficit_at_H": 1,
+      "side_regions": [
+        {
+          "colors": 2,
+          "beta": 4,
+          "shapes": [
+            [
+              [],
+              [
+                [],
+                []
+              ]
+            ]
+          ],
+          "notations": [
+            "(L,(L,L))"
+          ]
+        },
+        {
+          "colors": 1,
+          "beta": 1,
+          "shapes": [
+            []
+          ],
+          "notations": [
+            "L"
+          ]
+        }
+      ]
+    },
+    "violating_constraints": 1,
+    "actual_smt_certificate": "examples/tifs_remaining_gap_20260910/theory/actual_smt_certificates/source_0603.json",
+    "target_proofs_checked": 13
+  },
+  {
+    "source_index": 604,
+    "n": 13,
+    "N": 24,
+    "m": 6,
+    "shape": [
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ],
+      [
+        [],
+        [
+          [
+            [],
+            [
+              [
+                [],
+                []
+              ],
+              [
+                [],
+                []
+              ]
+            ]
+          ],
+          [
+            [
+              [],
+              []
+            ],
+            [
+              [],
+              []
+            ]
+          ]
+        ]
+      ]
+    ],
+    "notation": "((L,(L,L)),(L,((L,((L,L),(L,L))),((L,L),(L,L)))))",
+    "B_hier": 4,
+    "B_joint": 5,
+    "optimum": 5,
+    "minimum_anchor_witness": {
+      "context": -1,
+      "N_context": 24,
+      "q": 6,
+      "k": 2,
+      "J": 7,
+      "chain": [
+        5,
+        7
+      ],
+      "unanchored_colors": 4,
+      "deficit_at_H": 1,
+      "side_regions": [
+        {
+          "colors": 2,
+          "beta": 4,
+          "shapes": [
+            [
+              [],
+              [
+                [],
+                []
+              ]
+            ]
+          ],
+          "notations": [
+            "(L,(L,L))"
+          ]
+        },
+        {
+          "colors": 1,
+          "beta": 1,
+          "shapes": [
+            []
+          ],
+          "notations": [
+            "L"
+          ]
+        }
+      ]
+    },
+    "violating_constraints": 1,
+    "actual_smt_certificate": "examples/tifs_remaining_gap_20260910/theory/actual_smt_certificates/source_0604.json",
+    "target_proofs_checked": 13
+  },
+  {
+    "source_index": 605,
+    "n": 13,
+    "N": 24,
+    "m": 6,
+    "shape": [
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ],
+      [
+        [],
+        [
+          [
+            [
+              [],
+              []
+            ],
+            [
+              [],
+              []
+            ]
+          ],
+          [
+            [
+              [],
+              []
+            ],
+            [
+              [],
+              [
+                [],
+                []
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    "notation": "((L,(L,L)),(L,(((L,L),(L,L)),((L,L),(L,(L,L))))))",
+    "B_hier": 4,
+    "B_joint": 5,
+    "optimum": 5,
+    "minimum_anchor_witness": {
+      "context": -1,
+      "N_context": 24,
+      "q": 6,
+      "k": 2,
+      "J": 7,
+      "chain": [
+        5,
+        7
+      ],
+      "unanchored_colors": 4,
+      "deficit_at_H": 1,
+      "side_regions": [
+        {
+          "colors": 2,
+          "beta": 4,
+          "shapes": [
+            [
+              [],
+              [
+                [],
+                []
+              ]
+            ]
+          ],
+          "notations": [
+            "(L,(L,L))"
+          ]
+        },
+        {
+          "colors": 1,
+          "beta": 1,
+          "shapes": [
+            []
+          ],
+          "notations": [
+            "L"
+          ]
+        }
+      ]
+    },
+    "violating_constraints": 1,
+    "actual_smt_certificate": "examples/tifs_remaining_gap_20260910/theory/actual_smt_certificates/source_0605.json",
+    "target_proofs_checked": 13
+  },
+  {
+    "source_index": 613,
+    "n": 13,
+    "N": 24,
+    "m": 5,
+    "shape": [
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ],
+      [
+        [
+          [],
+          []
+        ],
+        [
+          [
+            [
+              [],
+              []
+            ],
+            [
+              [],
+              []
+            ]
+          ],
+          [
+            [
+              [],
+              []
+            ],
+            [
+              [],
+              []
+            ]
+          ]
+        ]
+      ]
+    ],
+    "notation": "((L,(L,L)),((L,L),(((L,L),(L,L)),((L,L),(L,L)))))",
+    "B_hier": 5,
+    "B_joint": 6,
+    "optimum": 6,
+    "minimum_anchor_witness": {
+      "context": -1,
+      "N_context": 24,
+      "q": 5,
+      "k": 2,
+      "J": 8,
+      "chain": [
+        5,
+        9
+      ],
+      "unanchored_colors": 3,
+      "deficit_at_H": 1,
+      "side_regions": [
+        {
+          "colors": 2,
+          "beta": 4,
+          "shapes": [
+            [
+              [],
+              [
+                [],
+                []
+              ]
+            ]
+          ],
+          "notations": [
+            "(L,(L,L))"
+          ]
+        },
+        {
+          "colors": 1,
+          "beta": 2,
+          "shapes": [
+            [
+              [],
+              []
+            ]
+          ],
+          "notations": [
+            "(L,L)"
+          ]
+        }
+      ]
+    },
+    "violating_constraints": 1,
+    "actual_smt_certificate": "examples/tifs_remaining_gap_20260910/theory/actual_smt_certificates/source_0613.json",
+    "target_proofs_checked": 13
+  },
+  {
+    "source_index": 636,
+    "n": 13,
+    "N": 24,
+    "m": 6,
+    "shape": [
+      [
+        [],
+        [
+          [],
+          [
+            [],
+            []
+          ]
+        ]
+      ],
+      [
+        [],
+        [
+          [],
+          [
+            [
+              [],
+              [
+                [],
+                []
+              ]
+            ],
+            [
+              [
+                [],
+                []
+              ],
+              [
+                [],
+                []
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    "notation": "((L,(L,(L,L))),(L,(L,((L,(L,L)),((L,L),(L,L))))))",
+    "B_hier": 4,
+    "B_joint": 5,
+    "optimum": 5,
+    "minimum_anchor_witness": {
+      "context": -1,
+      "N_context": 24,
+      "q": 6,
+      "k": 3,
+      "J": 11,
+      "chain": [
+        7,
+        9,
+        11
+      ],
+      "unanchored_colors": 3,
+      "deficit_at_H": 1,
+      "side_regions": [
+        {
+          "colors": 3,
+          "beta": 6,
+          "shapes": [
+            [
+              [],
+              [
+                [],
+                [
+                  [],
+                  []
+                ]
+              ]
+            ]
+          ],
+          "notations": [
+            "(L,(L,(L,L)))"
+          ]
+        },
+        {
+          "colors": 2,
+          "beta": 1,
+          "shapes": [
+            []
+          ],
+          "notations": [
+            "L"
+          ]
+        },
+        {
+          "colors": 1,
+          "beta": 1,
+          "shapes": [
+            []
+          ],
+          "notations": [
+            "L"
+          ]
+        }
+      ]
+    },
+    "violating_constraints": 1,
+    "actual_smt_certificate": "examples/tifs_remaining_gap_20260910/theory/actual_smt_certificates/source_0636.json",
+    "target_proofs_checked": 13
+  },
+  {
+    "source_index": 643,
+    "n": 13,
+    "N": 24,
+    "m": 5,
+    "shape": [
+      [
+        [],
+        [
+          [],
+          [
+            [],
+            []
+          ]
+        ]
+      ],
+      [
+        [],
+        [
+          [
+            [
+              [],
+              []
+            ],
+            [
+              [],
+              []
+            ]
+          ],
+          [
+            [
+              [],
+              []
+            ],
+            [
+              [],
+              []
+            ]
+          ]
+        ]
+      ]
+    ],
+    "notation": "((L,(L,(L,L))),(L,(((L,L),(L,L)),((L,L),(L,L)))))",
+    "B_hier": 5,
+    "B_joint": 6,
+    "optimum": 6,
+    "minimum_anchor_witness": {
+      "context": -1,
+      "N_context": 24,
+      "q": 5,
+      "k": 2,
+      "J": 8,
+      "chain": [
+        7,
+        9
+      ],
+      "unanchored_colors": 3,
+      "deficit_at_H": 1,
+      "side_regions": [
+        {
+          "colors": 2,
+          "beta": 5,
+          "shapes": [
+            [
+              [],
+              [
+                [],
+                [
+                  [],
+                  []
+                ]
+              ]
+            ]
+          ],
+          "notations": [
+            "(L,(L,(L,L)))"
+          ]
+        },
+        {
+          "colors": 1,
+          "beta": 1,
+          "shapes": [
+            []
+          ],
+          "notations": [
+            "L"
+          ]
+        }
+      ]
+    },
+    "violating_constraints": 1,
+    "actual_smt_certificate": "examples/tifs_remaining_gap_20260910/theory/actual_smt_certificates/source_0643.json",
+    "target_proofs_checked": 13
+  },
+  {
+    "source_index": 811,
+    "n": 14,
+    "N": 26,
+    "m": 6,
+    "shape": [
+      [],
+      [
+        [
+          [],
+          [
+            [],
+            []
+          ]
+        ],
+        [
+          [
+            [],
+            []
+          ],
+          [
+            [
+              [
+                [],
+                []
+              ],
+              [
+                [],
+                []
+              ]
+            ],
+            [
+              [
+                [],
+                []
+              ],
+              [
+                [],
+                []
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    "notation": "(L,((L,(L,L)),((L,L),(((L,L),(L,L)),((L,L),(L,L))))))",
+    "B_hier": 5,
+    "B_joint": 6,
+    "optimum": 6,
+    "minimum_anchor_witness": {
+      "context": 1,
+      "N_context": 24,
+      "q": 5,
+      "k": 2,
+      "J": 8,
+      "chain": [
+        7,
+        11
+      ],
+      "unanchored_colors": 3,
+      "deficit_at_H": 1,
+      "side_regions": [
+        {
+          "colors": 2,
+          "beta": 4,
+          "shapes": [
+            [
+              [],
+              [
+                [],
+                []
+              ]
+            ]
+          ],
+          "notations": [
+            "(L,(L,L))"
+          ]
+        },
+        {
+          "colors": 1,
+          "beta": 2,
+          "shapes": [
+            [
+              [],
+              []
+            ]
+          ],
+          "notations": [
+            "(L,L)"
+          ]
+        }
+      ]
+    },
+    "violating_constraints": 2,
+    "actual_smt_certificate": "examples/tifs_remaining_gap_20260910/theory/actual_smt_certificates/source_0811.json",
+    "target_proofs_checked": 14
+  },
+  {
+    "source_index": 820,
+    "n": 14,
+    "N": 26,
+    "m": 6,
+    "shape": [
+      [],
+      [
+        [
+          [],
+          [
+            [],
+            [
+              [],
+              []
+            ]
+          ]
+        ],
+        [
+          [],
+          [
+            [
+              [
+                [],
+                []
+              ],
+              [
+                [],
+                []
+              ]
+            ],
+            [
+              [
+                [],
+                []
+              ],
+              [
+                [],
+                []
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    "notation": "(L,((L,(L,(L,L))),(L,(((L,L),(L,L)),((L,L),(L,L))))))",
+    "B_hier": 5,
+    "B_joint": 6,
+    "optimum": 6,
+    "minimum_anchor_witness": {
+      "context": 1,
+      "N_context": 24,
+      "q": 5,
+      "k": 2,
+      "J": 8,
+      "chain": [
+        9,
+        11
+      ],
+      "unanchored_colors": 3,
+      "deficit_at_H": 1,
+      "side_regions": [
+        {
+          "colors": 2,
+          "beta": 5,
+          "shapes": [
+            [
+              [],
+              [
+                [],
+                [
+                  [],
+                  []
+                ]
+              ]
+            ]
+          ],
+          "notations": [
+            "(L,(L,(L,L)))"
+          ]
+        },
+        {
+          "colors": 1,
+          "beta": 1,
+          "shapes": [
+            []
+          ],
+          "notations": [
+            "L"
+          ]
+        }
+      ]
+    },
+    "violating_constraints": 2,
+    "actual_smt_certificate": "examples/tifs_remaining_gap_20260910/theory/actual_smt_certificates/source_0820.json",
+    "target_proofs_checked": 14
+  }
+]

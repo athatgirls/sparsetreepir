@@ -1,0 +1,90 @@
+{
+  "official_repository": "https://github.com/ahenzinger/simplepir",
+  "commit": "e9020b03bf2872c75b8954e749e32408b5db87ed",
+  "source_status_pir_and_go_mod": "",
+  "source": "D:\\DesktopProjects\\\u8bba\u6587\\.tools\\simplepir\\simplepir-main",
+  "copied_unmodified": true,
+  "files": [
+    {
+      "path": "go.mod",
+      "sha256": "c88f360a80734fce345af8f3bcb7f6830817bc2ed7a5fbb805282297887b4796"
+    },
+    {
+      "path": "pir/.gitignore",
+      "sha256": "beb0e14271320466c2c65dbcbf09e9804022159e2652c2f66cb775d34e8ef5f2"
+    },
+    {
+      "path": "pir/database.go",
+      "sha256": "1622cd3e91621e10d992fbbfdb0f74d7a7a20e137b00b986590a5324ccb18fd8"
+    },
+    {
+      "path": "pir/double_pir.go",
+      "sha256": "066ab6cffae3147c2cb4e2e1aaebb057e75903bf8b123ab428c8af2cc7fb5614"
+    },
+    {
+      "path": "pir/experiments.sh",
+      "sha256": "3c89f2c6e1cd75c6360b982fa9b3e402f9493abe7b336ae591666256a744afb2"
+    },
+    {
+      "path": "pir/gauss.go",
+      "sha256": "c326558cc9c536ee522188263e298081132965663a8d5e88433ce04bf2e253d5"
+    },
+    {
+      "path": "pir/gauss_test.go",
+      "sha256": "f9ac3bd6d16929a5b2a13c75513b460fc448c4996a4816b792b40a4b8b71ea06"
+    },
+    {
+      "path": "pir/logging.go",
+      "sha256": "928ee1d28149d4fd1df9f453b03ed0d90002fa51bb7bc20996a92480fb97663f"
+    },
+    {
+      "path": "pir/matrix.go",
+      "sha256": "ec6d5bf10a26546d8c8082fe5bc0e173c8f94c3a14e5e7a75f3c6df7c3b97f53"
+    },
+    {
+      "path": "pir/params.csv",
+      "sha256": "b3db22f70c038f741dacda0aec7a531397a32c4bfca0df4a98156f37adf089ca"
+    },
+    {
+      "path": "pir/params.go",
+      "sha256": "c520a84e2fb712c791ea64fe228bd64259f93a1f59399fdf162109aa22db05bd"
+    },
+    {
+      "path": "pir/pir.c",
+      "sha256": "744eb6ff6fd1c7e5ae91977eab175d8cfaa177165446e75c2edbee73b182e3c1"
+    },
+    {
+      "path": "pir/pir.go",
+      "sha256": "81c80ac872b215fc6e5161568241714b37ad4a0453979ec232b4fd0cde59b993"
+    },
+    {
+      "path": "pir/pir.h",
+      "sha256": "dde206eccaf7b58b641015945b4c672082dc18f2f3cf6693dc035b27c1a82d41"
+    },
+    {
+      "path": "pir/pir_test.go",
+      "sha256": "a086df6dc421690cf7cd4febe1bdf1bca990b02d73eece0ba33d6e83d6c9c5a8"
+    },
+    {
+      "path": "pir/rand.go",
+      "sha256": "15da8cea8ab4f77b6a29aa83c76cbda9465b97c0a2f143ef4c2704b8a97d34d3"
+    },
+    {
+      "path": "pir/simple-cpu.out",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "pir/simple_pir.go",
+      "sha256": "84d8cb9f016154827a1bbaa578a3dad2b7188526f91e5f3ca617bd89b8119f15"
+    },
+    {
+      "path": "pir/utils.go",
+      "sha256": "fe6d4b3c3a66a6fc6d07a12d0ee7139c57316ee684b836916ce15d7144de99a9"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "fefacddd05c33c09efdcf994082865eaf85dd8d895aab76dd37ccacae929e16f"
+    }
+  ],
+  "adapter_scope": "Real Init/Setup/Query/Answer; standard vertical 256-bit input/recovery width wrapper; actual matrix frames and local proof pipeline."
+}

@@ -1,0 +1,58 @@
+{
+  "method": "first_fit",
+  "height": 10,
+  "metadata_file": "layout_metadata.bin",
+  "slots_file": "occupied_slots.bin",
+  "subdatabases": [
+    {
+      "color": 1,
+      "records": 2,
+      "database_file": "color_01.bin"
+    },
+    {
+      "color": 2,
+      "records": 4,
+      "database_file": "color_02.bin"
+    },
+    {
+      "color": 3,
+      "records": 8,
+      "database_file": "color_03.bin"
+    },
+    {
+      "color": 4,
+      "records": 16,
+      "database_file": "color_04.bin"
+    },
+    {
+      "color": 5,
+      "records": 32,
+      "database_file": "color_05.bin"
+    },
+    {
+      "color": 6,
+      "records": 64,
+      "database_file": "color_06.bin"
+    },
+    {
+      "color": 7,
+      "records": 128,
+      "database_file": "color_07.bin"
+    },
+    {
+      "color": 8,
+      "records": 256,
+      "database_file": "color_08.bin"
+    },
+    {
+      "color": 9,
+      "records": 512,
+      "database_file": "color_09.bin"
+    },
+    {
+      "color": 10,
+      "records": 1024,
+      "database_file": "color_10.bin"
+    }
+  ]
+}

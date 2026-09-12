@@ -1,0 +1,106 @@
+{
+  "scheme": "treepir_official",
+  "height": 4,
+  "width": 4,
+  "active_nodes": 30,
+  "query_samples": 16,
+  "record_bytes": 32,
+  "subdatabases": [
+    {
+      "color": 1,
+      "records": 7,
+      "record_bytes": 32,
+      "database_file": "/artifact/examples/tifs_contribution_gate_20260910/external/complete_h4/treepir_official/color_01.bin",
+      "query_indices": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        4,
+        0,
+        5,
+        0,
+        3,
+        6,
+        2,
+        0,
+        0,
+        4
+      ]
+    },
+    {
+      "color": 2,
+      "records": 7,
+      "record_bytes": 32,
+      "database_file": "/artifact/examples/tifs_contribution_gate_20260910/external/complete_h4/treepir_official/color_02.bin",
+      "query_indices": [
+        0,
+        0,
+        3,
+        4,
+        1,
+        2,
+        0,
+        5,
+        0,
+        1,
+        0,
+        0,
+        0,
+        4,
+        6,
+        0
+      ]
+    },
+    {
+      "color": 3,
+      "records": 8,
+      "record_bytes": 32,
+      "database_file": "/artifact/examples/tifs_contribution_gate_20260910/external/complete_h4/treepir_official/color_03.bin",
+      "query_indices": [
+        4,
+        4,
+        0,
+        3,
+        0,
+        0,
+        7,
+        1,
+        5,
+        0,
+        4,
+        5,
+        4,
+        2,
+        1,
+        6
+      ]
+    },
+    {
+      "color": 4,
+      "records": 8,
+      "record_bytes": 32,
+      "database_file": "/artifact/examples/tifs_contribution_gate_20260910/external/complete_h4/treepir_official/color_04.bin",
+      "query_indices": [
+        7,
+        6,
+        1,
+        0,
+        3,
+        1,
+        4,
+        0,
+        4,
+        2,
+        5,
+        4,
+        5,
+        0,
+        0,
+        4
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"id": "fuel_n100_h128_ab-sorted_p20_s20260910_r1", "status": "complete", "actual_n": 100, "m": 9, "max_bucket": 23, "U_over_B": 1.0454545454545454, "coloring_s": 0.007202700129710138, "valid": true}

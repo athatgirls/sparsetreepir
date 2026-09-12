@@ -1,0 +1,12 @@
+{
+  "command": [
+    "cmake",
+    "-S",
+    "/artifact/examples/tifs_contribution_gate_20260910/external/native_vbpir/source",
+    "-B",
+    "/artifact/examples/tifs_contribution_gate_20260910/external/native_vbpir/build"
+  ],
+  "returncode": 0,
+  "stdout": "-- Microsoft SEAL -> Version 4.3.2 detected\n-- Microsoft SEAL -> Targets available: SEAL::seal\n-- Configuring done (1.3s)\n-- Generating done (0.2s)\n-- Build files have been written to: /artifact/examples/tifs_contribution_gate_20260910/external/native_vbpir/build\n",
+  "stderr": "CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):\n  Compatibility with CMake < 3.5 will be removed from a future version of\n  CMake.\n\n  Update the VERSION argument <min> value or use a ...<max> suffix to tell\n  CMake that the project does not need compatibility with older versions.\n\n\n"
+}

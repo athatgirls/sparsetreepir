@@ -1,0 +1,11 @@
+{
+  "scheme": "SparseTreePIR-activebalance",
+  "height": 128,
+  "width": 0,
+  "active_nodes": 0,
+  "query_samples": 1,
+  "record_bytes": 32,
+  "warmup_queries": 2,
+  "subdatabases": [],
+  "hash_format": "sha256:leaf=H(00||value),internal=H(01||left||right),empty_leaf=H(02)"
+}

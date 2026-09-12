@@ -1,0 +1,1760 @@
+{
+  "parameters": [
+    {
+      "Color": 1,
+      "Records": 23,
+      "Chunks": [
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 23,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 23,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 23,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 23,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 23,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 23,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 23,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 23,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        }
+      ]
+    },
+    {
+      "Color": 2,
+      "Records": 22,
+      "Chunks": [
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        }
+      ]
+    },
+    {
+      "Color": 3,
+      "Records": 22,
+      "Chunks": [
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        }
+      ]
+    },
+    {
+      "Color": 4,
+      "Records": 21,
+      "Chunks": [
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 7,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 21,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 7
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 7,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 21,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 7
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 7,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 21,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 7
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 7,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 21,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 7
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 7,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 21,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 7
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 7,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 21,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 7
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 7,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 21,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 7
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 7,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 21,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 7
+          }
+        }
+      ]
+    },
+    {
+      "Color": 5,
+      "Records": 22,
+      "Chunks": [
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        }
+      ]
+    },
+    {
+      "Color": 6,
+      "Records": 22,
+      "Chunks": [
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        }
+      ]
+    },
+    {
+      "Color": 7,
+      "Records": 22,
+      "Chunks": [
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        }
+      ]
+    },
+    {
+      "Color": 8,
+      "Records": 22,
+      "Chunks": [
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        }
+      ]
+    },
+    {
+      "Color": 9,
+      "Records": 22,
+      "Chunks": [
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        },
+        {
+          "Params": {
+            "N": 1024,
+            "Sigma": 6.4,
+            "L": 12,
+            "M": 8,
+            "Logq": 32,
+            "P": 991
+          },
+          "Info": {
+            "Num": 22,
+            "Row_length": 32,
+            "Packing": 0,
+            "Ne": 4,
+            "X": 4,
+            "P": 991,
+            "Logq": 32,
+            "Basis": 10,
+            "Squishing": 3,
+            "Cols": 8
+          }
+        }
+      ]
+    }
+  ],
+  "hint_matrix_bytes": 3538944,
+  "shared_matrix_bytes": 2326528,
+  "bootstrap_header_json_bytes": 13057,
+  "schema": 1,
+  "method": "activebalance",
+  "server_pid": 570,
+  "setup_ms": 147.869216,
+  "query_batches_including_warmup": 105,
+  "server_answer_ms_including_warmup": [
+    0.014583,
+    0.022732,
+    0.017649,
+    0.013135,
+    0.024963,
+    0.018327,
+    0.013942,
+    0.016565,
+    0.022442,
+    0.014803,
+    0.012184,
+    0.013919,
+    0.01886,
+    0.016887,
+    0.013979,
+    0.013469,
+    0.015188,
+    0.014501,
+    0.014595,
+    0.015401,
+    0.014322,
+    0.013296,
+    0.012988,
+    0.015508,
+    0.014896,
+    0.017546,
+    0.0251,
+    0.01477,
+    0.014962,
+    0.015137,
+    0.01459,
+    0.015112,
+    0.014675,
+    0.013477,
+    0.014874,
+    0.014684,
+    0.014601,
+    0.014179,
+    0.015636,
+    0.013518,
+    0.014664,
+    0.01575,
+    0.014402,
+    0.013001,
+    0.014683,
+    0.016462,
+    0.019767,
+    0.018147,
+    0.01848,
+    0.017732,
+    0.014751,
+    0.013839,
+    0.050072,
+    0.01595,
+    0.013078,
+    0.015124,
+    0.013722,
+    0.012483,
+    0.014417,
+    0.015423,
+    0.014945,
+    0.015425,
+    0.015728,
+    0.012747,
+    0.01293,
+    0.014761,
+    0.012384,
+    0.016913,
+    0.01309,
+    0.015287,
+    0.014267,
+    0.013896,
+    0.014015,
+    0.015251,
+    0.015272,
+    0.016311,
+    0.016393,
+    0.014605,
+    0.015161,
+    0.014157,
+    0.013711,
+    0.0165,
+    0.051203,
+    0.016481,
+    0.020715,
+    0.016717,
+    0.017558,
+    0.013281,
+    0.046766,
+    0.021226,
+    0.044779,
+    0.029358,
+    0.038352,
+    0.029992,
+    0.041522,
+    0.026797,
+    0.030295,
+    0.03493,
+    0.067531,
+    0.023328,
+    0.022984,
+    0.030575,
+    0.029069,
+    0.030273,
+    0.025877
+  ],
+  "total_read_wire_bytes": 455295,
+  "total_written_wire_bytes": 6434459,
+  "server_peak_rss_bytes": 30642176
+}

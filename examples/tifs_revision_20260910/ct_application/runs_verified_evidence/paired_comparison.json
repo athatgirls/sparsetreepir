@@ -1,0 +1,10 @@
+{
+  "depth_over_ab_e2e_mean_ratio": 1.0624321545947064,
+  "sample_sd": 0.10775015058231374,
+  "n": 5,
+  "bootstrap_ab_over_cache": 234.7611566970686,
+  "online_depth_over_ab": 1.0245775729646698,
+  "firstfit_over_ab_e2e_mean_ratio": 0.8507388759478919,
+  "firstfit_over_ab_sample_sd": 0.07435314569357498,
+  "online_firstfit_over_ab": 0.8433179723502304
+}

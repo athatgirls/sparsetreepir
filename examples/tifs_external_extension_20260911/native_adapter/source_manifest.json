@@ -1,0 +1,97 @@
+{
+  "commit": "930063c5aefc441244abb4890fdf35383f3aa956",
+  "official_repo": "https://github.com/PIR-PIXR/TreePIR",
+  "original_files": {
+    "VBPIR_PBC/src/client.cpp": {
+      "git_blob": "7f092965274c9f08425a5526ea383a0225e04518",
+      "sha256": "3907a9b8bceadbff1346bce7303ea7460c58e6a766f3226235aa82184433969d"
+    },
+    "VBPIR_PBC/src/server.cpp": {
+      "git_blob": "2d9867e568367108dd29b99e2cdf5e0ef0cbaf5a",
+      "sha256": "3b9e68d08935d701da56498a7ad30d1887e7e3a210fdf782a13e00ef2bb43e17"
+    },
+    "VBPIR_PBC/src/pirparams.cpp": {
+      "git_blob": "19f0f02d5cae10647e4c5edddb4d377938d85b99",
+      "sha256": "b38fd8247cfcf70c410c4c4538aa575050ae091a0bd23bfadde1cbf0890baebc"
+    },
+    "VBPIR_PBC/src/utils.h": {
+      "git_blob": "536821b0a4d49c3ab75abf843da661a1fdb83fad",
+      "sha256": "cdfcacc6ea068a2f1b5afde4171be2fc415f7faf24fa79837280706e2265a799"
+    },
+    "VBPIR_PBC/header/client.h": {
+      "git_blob": "81ee5f474c43d299b396fb32e9c61645716dad4a",
+      "sha256": "6a6685958b53248684d764be41cc456850aac7db2a18e0c5c6b448af3df35b40"
+    },
+    "VBPIR_PBC/header/server.h": {
+      "git_blob": "64e55ec9e3b1635cdff3a80cd637f4bd230eb377",
+      "sha256": "40ea3c5b2aa5d94a25e9fa1872ed192160244d7f360f2cbe1fb67d37cff3ed74"
+    },
+    "VBPIR_PBC/header/pirparams.h": {
+      "git_blob": "5ff59f8fff54d8d3214b3e9f8aa4ecbc4e899952",
+      "sha256": "85ad6158c6073e0704881f7169981aaf580a4a4a7d5d256c2b5ca3b9e37e0446"
+    },
+    "VBPIR_PBC/header/database_constants.h": {
+      "git_blob": "1483281d2bbc9e02b962861f839852459264eaa2",
+      "sha256": "867a2d8b1135adf86be4726d20a429b1360494d6c4ce836d92b6e54b9b4a1319"
+    }
+  },
+  "adaptations": [
+    "server.h observational NTT/raw getters",
+    "database_constants.h missing cstdint include",
+    "common driver replaces complete-tree I/O and metrics",
+    "PBC three-candidate hash and recursive cuckoo routing copied with per-query reset and fixed experiment RNG seed"
+  ],
+  "crypto_cpp_unchanged": [
+    "src/client.cpp",
+    "src/server.cpp",
+    "src/pirparams.cpp"
+  ],
+  "copied_sha256": {
+    "header/client.h": "6a6685958b53248684d764be41cc456850aac7db2a18e0c5c6b448af3df35b40",
+    "header/database_constants.h": "36996d93d38400279e61aa82577e1b48d666c4f8e58f0b85b36a69010f438e4c",
+    "header/pirparams.h": "85ad6158c6073e0704881f7169981aaf580a4a4a7d5d256c2b5ca3b9e37e0446",
+    "header/server.h": "cd23f882e9ec49b3f77aa694d4f8b04151c8444ccfeb38147fba61c4cd5fb31c",
+    "rapidjson/allocators.h": "c5ab026e7f8fb5f6a6fa26ba7776a908b84336ad9bc3c837d25bffca74174427",
+    "rapidjson/cursorstreamwrapper.h": "9e619d9a57c2fdf51e89e422668d6fe3065cf227a66261ac2519f1870398fe39",
+    "rapidjson/document.h": "9803a673462349b352581e892217cd750957a783a286c8474d5822110d912b69",
+    "rapidjson/encodedstream.h": "394710616961270b0e4033c03a22b2e5b411958dc07eb4495ba36131648e3558",
+    "rapidjson/encodings.h": "1d4c62bd4ecc0b5a8b4b53faf48a8d09f09f086e41a90fc2b135517c3d148379",
+    "rapidjson/filereadstream.h": "d3d2aa0540471f4e58987f2184067e7cdf229363648ebf81af43c7e659bf2a40",
+    "rapidjson/filewritestream.h": "b16d4cbb8618e1b2bf58d91632f4a31a1fb2e4938b4cded365d723487792f0a5",
+    "rapidjson/fwd.h": "107d783b3fa7a9c2470b734f56ca15e620f6106fd47dc8f4efdd441f75395284",
+    "rapidjson/istreamwrapper.h": "662d18f16a26caec242c214c75b92394462f1e7dc10b786a61e1bf2f7e33e827",
+    "rapidjson/memorybuffer.h": "6890c9bde0a0edf28406b3f5757333a578ef83e97f3ca488c3c0762eea1501af",
+    "rapidjson/memorystream.h": "a7bf789978c6d7dda7bb93c0c9555b7d53b3177cbf34c3998c7e18068a3723f5",
+    "rapidjson/ostreamwrapper.h": "645eb8da79e36fcf0beb315a8ea336c6bd1a4db2003318b1ca68f17a167b27e6",
+    "rapidjson/pointer.h": "09e28745230e01b0f7b6dda2df1b519a4710fd01a68a979e967e256f0a05e259",
+    "rapidjson/prettywriter.h": "75adaed0efd180955a44cd5322fb20f5f1b15b5ed40998fe88c50fc2ecd2c64f",
+    "rapidjson/rapidjson.h": "38024939a128698376c4644ac162424dd8c6d4503246a78f7ccadaaef48c64f5",
+    "rapidjson/reader.h": "51e1efcefe8e55b54e31f15ba38918625916c693a900e26ce27e44202b6b599e",
+    "rapidjson/schema.h": "c45b295291a8acd531b97fd97afd721a6a5072455f12ce702c0e617e7a9349bd",
+    "rapidjson/stream.h": "a3708a941a130a5679d2302368169852e5c4ca5f54758ea0e94caf61615c8ae0",
+    "rapidjson/stringbuffer.h": "4788a86bc76a2880bdefa1765b366bda2303b62c1b8de1aabb4940fe37722b88",
+    "rapidjson/uri.h": "53d200ad6eae23399fab31687c50511b3a14cd32c0a36900151f34ea0bf4cde9",
+    "rapidjson/writer.h": "fab257f33c972b20927262543ea224bba8eddf48f243af6cd168f3a87528dda3",
+    "src/client.cpp": "3907a9b8bceadbff1346bce7303ea7460c58e6a766f3226235aa82184433969d",
+    "src/pirparams.cpp": "b38fd8247cfcf70c410c4c4538aa575050ae091a0bd23bfadde1cbf0890baebc",
+    "src/server.cpp": "3b9e68d08935d701da56498a7ad30d1887e7e3a210fdf782a13e00ef2bb43e17",
+    "src/utils.h": "cdfcacc6ea068a2f1b5afde4171be2fc415f7faf24fa79837280706e2265a799",
+    "rapidjson/error/en.h": "3cc7a00f9252b1183f3a108a9c7ceed59e408cd7b5a04f4c202a66a84a0fb578",
+    "rapidjson/error/error.h": "648743428973469227f6b419f80a979809c33bb8d66c409c8f3775f4f7381121",
+    "rapidjson/internal/biginteger.h": "f6fe43899a4ab84a94415ea08cfb6d3d72a9d86ab3158dcdfd8e78e57f8f0c20",
+    "rapidjson/internal/clzll.h": "4ca3e63eaae4c67b049e8a6cbb532182e1d9c9023b7d992c556fcab0c2f4c045",
+    "rapidjson/internal/diyfp.h": "b1c63c28dec8f82f7fdc2a39193d7a09a4c30343c3f008f060adc70e710e0a32",
+    "rapidjson/internal/dtoa.h": "73bdbedab68a0647156c918a7c879b7b0f13b88e2de2145c05fd7c65c8970cc5",
+    "rapidjson/internal/ieee754.h": "00757a3dc2aad5b90d915f9c49b378026dc612d49a7f057106d72b1ebd1a0105",
+    "rapidjson/internal/itoa.h": "a0f965f33b11ce112b7bf2fbdeaf5338fca174e33f9f47608ccdd6d8559f3871",
+    "rapidjson/internal/meta.h": "5fcbfd72da1732926e4d0be2a1d79dce892f98d7b66879f818c57583a82505d3",
+    "rapidjson/internal/pow10.h": "74cd5ef251a854565a36abe49521be4d8ed17a76e3d27231fd119fb9374a9364",
+    "rapidjson/internal/regex.h": "c1a1ca2a4f83dd620f2d0700392df94ed5b5c47ec0061b6f946ccdc416cc9b13",
+    "rapidjson/internal/stack.h": "1bc01f4623d7b4ed6e890220fa9753375c0f0fb87c8a84f41cd7eecf38a38cd2",
+    "rapidjson/internal/strfunc.h": "75805e1a7420e8055b28cf759d49082608993f13bf589fa514ba7dd27d304b8b",
+    "rapidjson/internal/strtod.h": "e73073b08cd86d44f8b26e890d7dcb5b13d80a1f4784ddcff9cf740cbaca7880",
+    "rapidjson/internal/swap.h": "72acfabebd33f44869e7724603e57744da33337998b32443b66eaba58d2bbbfd",
+    "rapidjson/msinttypes/inttypes.h": "78ee41fd99bcbe59ca93f6a870a83c0a90f4b179af571f6e684f2600491bbae7",
+    "rapidjson/msinttypes/stdint.h": "bf2d1bc4885bc1e0720ec9af8f399477c7e105ae1e70e2863c31a8123cae1c17"
+  }
+}

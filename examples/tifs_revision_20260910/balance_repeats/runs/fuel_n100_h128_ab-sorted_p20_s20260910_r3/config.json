@@ -1,0 +1,13 @@
+{
+  "id": "fuel_n100_h128_ab-sorted_p20_s20260910_r3",
+  "distribution": "real",
+  "n": 100,
+  "height": 128,
+  "algorithm": "ab-sorted",
+  "passes": 20,
+  "seed": 20260910,
+  "repeat": 3,
+  "label": "fuel",
+  "source": "datasets/fuel_smt_test_workload.csv",
+  "key_mode": "hex-prefix"
+}

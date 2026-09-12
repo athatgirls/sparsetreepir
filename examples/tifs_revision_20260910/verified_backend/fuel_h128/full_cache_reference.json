@@ -1,0 +1,10 @@
+{
+  "stored_and_bootstrap_bytes": 12714,
+  "digest_payload_bytes": 6336,
+  "directory_and_slots_bytes": 6378,
+  "proofs_checked": 100,
+  "local_proof_p50_ms": 0.09444199999997238,
+  "local_proof_p95_ms": 0.12484889999986315,
+  "online_request_bytes": 0,
+  "scope": "private by full download; client holds all active digests plus directory; initial transfer time is not measured"
+}

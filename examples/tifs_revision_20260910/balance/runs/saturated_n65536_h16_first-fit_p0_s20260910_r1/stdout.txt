@@ -1,0 +1,1 @@
+{"id": "saturated_n65536_h16_first-fit_p0_s20260910_r1", "status": "complete", "actual_n": 65536, "m": 16, "max_bucket": 65536, "U_over_B": 8.0, "coloring_s": 0.11087460000999272, "valid": true}

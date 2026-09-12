@@ -1,0 +1,215 @@
+{
+  "status": "pass",
+  "cases": [
+    {
+      "id": "S0606",
+      "signatures": {
+        "initial": [
+          5,
+          4,
+          4,
+          4,
+          4,
+          3
+        ],
+        "neutral": [
+          5,
+          4,
+          4,
+          4,
+          4,
+          3
+        ],
+        "optimal": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ]
+      },
+      "critical_palettes_verified": 6,
+      "two_legal_four_palette_moves_verified": true,
+      "membership_changed_colors": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "proofs_per_layout": 13,
+      "layout_count": 3,
+      "minimum_number_of_at_most_four_palette_moves_to_OPT": 2
+    },
+    {
+      "id": "S0710",
+      "signatures": {
+        "initial": [
+          5,
+          4,
+          4,
+          4,
+          4,
+          3
+        ],
+        "neutral": [
+          5,
+          4,
+          4,
+          4,
+          4,
+          3
+        ],
+        "optimal": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ]
+      },
+      "critical_palettes_verified": 6,
+      "two_legal_four_palette_moves_verified": true,
+      "membership_changed_colors": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "proofs_per_layout": 13,
+      "layout_count": 3,
+      "minimum_number_of_at_most_four_palette_moves_to_OPT": 2
+    },
+    {
+      "id": "H1199",
+      "signatures": {
+        "initial": [
+          6,
+          5,
+          5,
+          5,
+          5,
+          4
+        ],
+        "neutral": [
+          6,
+          5,
+          5,
+          5,
+          5,
+          4
+        ],
+        "optimal": [
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
+        ]
+      },
+      "critical_palettes_verified": 6,
+      "two_legal_four_palette_moves_verified": true,
+      "membership_changed_colors": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "proofs_per_layout": 16,
+      "layout_count": 3,
+      "minimum_number_of_at_most_four_palette_moves_to_OPT": 2
+    },
+    {
+      "id": "H1265",
+      "signatures": {
+        "initial": [
+          6,
+          5,
+          5,
+          5,
+          5,
+          4
+        ],
+        "neutral": [
+          6,
+          5,
+          5,
+          5,
+          5,
+          4
+        ],
+        "optimal": [
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
+        ]
+      },
+      "critical_palettes_verified": 6,
+      "two_legal_four_palette_moves_verified": true,
+      "membership_changed_colors": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "proofs_per_layout": 16,
+      "layout_count": 3,
+      "minimum_number_of_at_most_four_palette_moves_to_OPT": 2
+    },
+    {
+      "id": "H1285",
+      "signatures": {
+        "initial": [
+          7,
+          6,
+          6,
+          6,
+          5
+        ],
+        "neutral": [
+          7,
+          6,
+          6,
+          6,
+          5
+        ],
+        "optimal": [
+          6,
+          6,
+          6,
+          6,
+          6
+        ]
+      },
+      "critical_palettes_verified": 3,
+      "two_legal_four_palette_moves_verified": true,
+      "membership_changed_colors": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "proofs_per_layout": 16,
+      "layout_count": 3,
+      "minimum_number_of_at_most_four_palette_moves_to_OPT": 2
+    }
+  ],
+  "independent_joint_projection_constraints": 27,
+  "actual_target_proofs": 222,
+  "proof_scope": "same occupied targets under initial, neutral, optimal layouts",
+  "imports_from_coloring_or_SMT_implementation": false,
+  "input_sha256": "b6e57cd6ec9a672c30f1d5f67c3610349b80e1dedc6a6a304af27f4f4067647c",
+  "script_sha256": "fc22a01ba003747ec7e64bbb4166d1ddd406e69c44a5263a602a3ae37ff3f86e"
+}

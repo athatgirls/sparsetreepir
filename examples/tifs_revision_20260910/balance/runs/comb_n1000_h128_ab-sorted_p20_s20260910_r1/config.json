@@ -1,0 +1,10 @@
+{
+  "id": "comb_n1000_h128_ab-sorted_p20_s20260910_r1",
+  "distribution": "comb",
+  "n": 1000,
+  "height": 128,
+  "algorithm": "ab-sorted",
+  "passes": 20,
+  "seed": 20260910,
+  "repeat": 1
+}

@@ -1,0 +1,9 @@
+{
+  "status": "complete",
+  "independent_client_server_pairs": 20,
+  "measured_proofs_verified": 2000,
+  "failed_pairs": 0,
+  "fixed_wire_shape_all_queries": true,
+  "socket_byte_counters_match": true,
+  "distinct_process_ids": true
+}

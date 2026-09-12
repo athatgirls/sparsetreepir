@@ -1,0 +1,91 @@
+{
+  "date": "2026-09-11",
+  "scope": "bounded theory contribution gate; no frozen artifacts changed",
+  "artifacts": [
+    {
+      "file": "BMO11.pdf",
+      "bytes": 163152,
+      "sha256": "24c53e1ee33465200ef187bdaf5b05e3e9aa2fba0384d736bc75979f2248e9e3"
+    },
+    {
+      "file": "BMO11.txt",
+      "bytes": 43157,
+      "sha256": "b36ca40c905167afdcb59064e444a0788e764430299f6e5db335bf7e97cf59c6"
+    },
+    {
+      "file": "ESA2026_108.pdf",
+      "bytes": 1252698,
+      "sha256": "af44639015361ba3819a6a960097cdd3a2f80cce522bf439a30ebfd7f12b0f4a"
+    },
+    {
+      "file": "ESA2026_108.txt",
+      "bytes": 92463,
+      "sha256": "4caaa7f606b056447fabaafbb92accc5be26100724d33e849324e4b4b662d916"
+    },
+    {
+      "file": "frozen_3438_consistency.json",
+      "bytes": 1266010,
+      "sha256": "f3c0d37d24bb01e2f4879d0d3504282de4ca4347b0f4aae9f08e159765295061"
+    },
+    {
+      "file": "Gardi_PMS_04.pdf",
+      "bytes": 124730,
+      "sha256": "7ca7e1dd40ad73bedd3a99766125aad9ae2a6b43a27567a1b8305c188cf17161"
+    },
+    {
+      "file": "Gardi_PMS_04.txt",
+      "bytes": 12558,
+      "sha256": "64a60d34870d43a37a00a229cd5df23d46ca02fa962b76bac205a191ead580f4"
+    },
+    {
+      "file": "INDEPENDENT_LINEAR_EVALUATION_REVIEW.md",
+      "bytes": 8063,
+      "sha256": "4eb657550cd4b2a08087c29a5a0e8190942598bd1b24c2953a08b520329840d2"
+    },
+    {
+      "file": "INDEPENDENT_WRAPPER_REVIEW.md",
+      "bytes": 6380,
+      "sha256": "51022b16c6faf7eb92a2b2895cf6d963470f622b239d1e900d869647ae5ec393"
+    },
+    {
+      "file": "linear_evaluation_proof.tex",
+      "bytes": 3884,
+      "sha256": "ff3651864334c393f8aefc7d7295aaa6d67ff17b83a8963636c3c26ee1d65d6f"
+    },
+    {
+      "file": "NOVELTY_AND_THEORY.md",
+      "bytes": 13178,
+      "sha256": "54331e027b030693462cecca31e06a440e8ad6c12813e327447a9471e00d66d1"
+    },
+    {
+      "file": "Reddy_1910.10364v3.pdf",
+      "bytes": 304446,
+      "sha256": "281e14bff47ff6fa00cf4d0964e09a4e30fd7ebb5a6ebbfcda5a33a449dc5806"
+    },
+    {
+      "file": "Reddy_1910.10364v3.txt",
+      "bytes": 32893,
+      "sha256": "9404736d26148b757a171bd721671fb752214f781f5890caf3c669b818eec16b"
+    },
+    {
+      "file": "verify_joint_linear.py",
+      "bytes": 6905,
+      "sha256": "6c99907a565e388091774357c256e1d4555cd4ca01a8c579e675610e1042f17b"
+    },
+    {
+      "file": "verify_wrapping_family.py",
+      "bytes": 7918,
+      "sha256": "4c63fb7f0d0970d383a9de348504c4e80884a0d03a5597ae8b02a67cfcca962a"
+    },
+    {
+      "file": "wrapping_family_verification.json",
+      "bytes": 298062,
+      "sha256": "aa92c039c8b7b31e302b62ff553aa815e6cb6126c75c13214362cbdc2dbea492"
+    },
+    {
+      "file": "wrapping_invariance_proof.tex",
+      "bytes": 6160,
+      "sha256": "6d4dbefef1f5d6df802e0c0a119e940a4f827202641d9f243512ae647ae88e82"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+\begin{table*}[t]
+\centering\small
+\caption{Private retrieval of one sparse Merkle proof on identical uniform-key snapshots. AB is our layout; PBC follows the batch-code construction of Angel et al.~\cite{sealpir}, with three-choice placement from the VBPIR implementation~\cite{vectorbatchpir}. Processing time includes routing, cryptographic operations, serialization/deserialization, proof reconstruction, and root verification in one process. Values are mean $\pm$ sample SD of three independent process means; each process measures ten paired targets. Online traffic includes actual message framing. Backend comparisons are made within each row.}
+\label{tab:external-core}
+\setlength{\tabcolsep}{8pt}
+\begin{tabular}{llrrrr}\toprule
+ & & \multicolumn{2}{c}{Proof processing (ms)} & \multicolumn{2}{c}{Online traffic (KiB)}\\
+Backend & Occupied leaves & AB (ours) & PBC~\cite{sealpir} & AB (ours) & PBC~\cite{sealpir}\\\midrule
+SimplePIR~\cite{simplepir} & 1,000 & $2.01\pm 0.17$ & $4.53\pm 1.13$ & 7.33 & 15.88 \\
+SimplePIR~\cite{simplepir} & 10,000 & $5.36\pm 0.07$ & $11.22\pm 0.92$ & 24.25 & 52.02 \\
+SimplePIR~\cite{simplepir} & 100,000 & $17.40\pm 1.49$ & $38.19\pm 3.35$ & 83.03 & 177.39 \\
+\addlinespace
+VBPIR~\cite{vectorbatchpir} & 1,000 & $312.90\pm 13.64$ & $305.21\pm 6.13$ & 1024.37 & 1024.37 \\
+VBPIR~\cite{vectorbatchpir} & 10,000 & $336.81\pm 26.40$ & $330.06\pm 17.97$ & 1024.37 & 1024.37 \\
+VBPIR~\cite{vectorbatchpir} & 100,000 & $566.79\pm 2.69$ & $846.65\pm 40.59$ & 1280.49 & 1280.49 \\
+\addlinespace
+\bottomrule\end{tabular}
+\end{table*}

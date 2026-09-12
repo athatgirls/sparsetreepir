@@ -1,0 +1,1210 @@
+{
+  "source": "examples\\tifs_remaining_gap_20260910\\algorithm\\small_shape_algorithm_results.json",
+  "source_sha256": "136aa72b7a782d41fd0c591a97657494a719a6d6be4e5aa161348ce2f4ad1d94",
+  "cases": 200,
+  "candidate_subtrees": 3710,
+  "exhaustive_labeled_permutations": 309200,
+  "results": [
+    {
+      "id": "S0023",
+      "candidate_subtrees": 6,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0033",
+      "candidate_subtrees": 8,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0051",
+      "candidate_subtrees": 10,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0077",
+      "candidate_subtrees": 12,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0078",
+      "candidate_subtrees": 12,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0080",
+      "candidate_subtrees": 10,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0081",
+      "candidate_subtrees": 12,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0083",
+      "candidate_subtrees": 12,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0084",
+      "candidate_subtrees": 14,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0085",
+      "candidate_subtrees": 12,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0102",
+      "candidate_subtrees": 14,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0103",
+      "candidate_subtrees": 14,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0105",
+      "candidate_subtrees": 12,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0106",
+      "candidate_subtrees": 14,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0108",
+      "candidate_subtrees": 14,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0109",
+      "candidate_subtrees": 16,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0115",
+      "candidate_subtrees": 12,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0157",
+      "candidate_subtrees": 16,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0158",
+      "candidate_subtrees": 16,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0159",
+      "candidate_subtrees": 14,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0160",
+      "candidate_subtrees": 16,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0161",
+      "candidate_subtrees": 16,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0162",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0163",
+      "candidate_subtrees": 14,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0193",
+      "candidate_subtrees": 14,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0227",
+      "candidate_subtrees": 16,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0228",
+      "candidate_subtrees": 16,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0230",
+      "candidate_subtrees": 16,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0232",
+      "candidate_subtrees": 16,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0233",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0238",
+      "candidate_subtrees": 16,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0239",
+      "candidate_subtrees": 16,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0241",
+      "candidate_subtrees": 16,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0242",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0243",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0244",
+      "candidate_subtrees": 12,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0246",
+      "candidate_subtrees": 14,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0247",
+      "candidate_subtrees": 16,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0248",
+      "candidate_subtrees": 16,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0254",
+      "candidate_subtrees": 16,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0255",
+      "candidate_subtrees": 16,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0257",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0258",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0261",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0263",
+      "candidate_subtrees": 16,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0264",
+      "candidate_subtrees": 16,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0266",
+      "candidate_subtrees": 16,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0267",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0268",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0270",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0291",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0292",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0293",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0295",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0296",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0298",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0299",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0300",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0301",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0302",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0303",
+      "candidate_subtrees": 14,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0304",
+      "candidate_subtrees": 16,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0305",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0306",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0309",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0310",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0311",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0312",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0315",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0316",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0317",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0318",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0319",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0320",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0322",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0327",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0328",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0329",
+      "candidate_subtrees": 16,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0330",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0331",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0332",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0333",
+      "candidate_subtrees": 16,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0363",
+      "candidate_subtrees": 16,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0474",
+      "candidate_subtrees": 16,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0606",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0607",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0608",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0609",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0610",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0611",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0612",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0614",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0615",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0619",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0620",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0625",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0626",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0627",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0628",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0631",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0632",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0637",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0638",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0639",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0641",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0642",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0644",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0645",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0646",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0647",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0648",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0649",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0650",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0651",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0652",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0655",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0658",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0661",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0662",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0663",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0664",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0665",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0666",
+      "candidate_subtrees": 16,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0667",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0668",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0669",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0672",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0678",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0679",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0680",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0683",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0684",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0687",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0688",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0689",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0690",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0693",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0694",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0697",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0702",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0703",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0706",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0707",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0708",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0709",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0710",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0711",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0712",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0713",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0715",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0716",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0717",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0720",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0725",
+      "candidate_subtrees": 12,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0726",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0729",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0734",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0735",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0736",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0737",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0741",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0742",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0743",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0747",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0748",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0750",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0751",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0752",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0754",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0755",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0756",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0757",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0758",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0760",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0761",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0762",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0765",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0768",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0771",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0772",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0773",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0776",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0781",
+      "candidate_subtrees": 14,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0782",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0787",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0788",
+      "candidate_subtrees": 22,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0793",
+      "candidate_subtrees": 14,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0796",
+      "candidate_subtrees": 14,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0812",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0821",
+      "candidate_subtrees": 20,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0828",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0849",
+      "candidate_subtrees": 14,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0877",
+      "candidate_subtrees": 16,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0886",
+      "candidate_subtrees": 16,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0889",
+      "candidate_subtrees": 16,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0891",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0897",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0963",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S0987",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    },
+    {
+      "id": "S1030",
+      "candidate_subtrees": 18,
+      "Hungarian_equals_exact_lex_minimum": true,
+      "no_strict_subtree_permutation_improvement": true
+    }
+  ],
+  "scope": "Exhaustive audit of every available-color permutation on every eligible rooted subtree in all 200 nonoptimal original-AB base outputs. No claim that such local optimality is global optimality."
+}

@@ -1,0 +1,12 @@
+{
+  "command": [
+    "java",
+    "-cp",
+    "/artifact/examples/tifs_contribution_gate_20260910/external/java_build/csa:/artifact/examples/tifs_contribution_gate_20260910/external/official_sources/CSA/gson-2.10.1.jar",
+    "contribution_gate_csa_20260910",
+    "4"
+  ],
+  "returncode": 0,
+  "stdout": "color\tposition\tswapped_node\nA\t0\t2\nA\t1\t13\nA\t2\t24\nA\t3\t25\nA\t4\t15\nA\t5\t28\nA\t6\t29\nB\t0\t3\nB\t1\t9\nB\t2\t16\nB\t3\t17\nB\t4\t11\nB\t5\t20\nB\t6\t21\nC\t0\t4\nC\t1\t10\nC\t2\t22\nC\t3\t23\nC\t4\t6\nC\t5\t14\nC\t6\t30\nC\t7\t31\nD\t0\t5\nD\t1\t8\nD\t2\t18\nD\t3\t19\nD\t4\t7\nD\t5\t12\nD\t6\t26\nD\t7\t27\n",
+  "stderr": ""
+}

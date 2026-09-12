@@ -1,0 +1,288 @@
+{
+  "commit": "930063c5aefc441244abb4890fdf35383f3aa956",
+  "verified_original_files": {
+    "VBPIR_TreePIR/CMakeLists.txt": {
+      "git_blob_sha1": "117ccb9ef48ba77218a44cf4eef9d1a9579cda01",
+      "sha256": "27116deb2192c1b74d6c15716110b5a5d70265e39199958a29e4614929454af7"
+    },
+    "VBPIR_TreePIR/LICENSE": {
+      "git_blob_sha1": "c28ff8e4a0bcb20bc5716f2ac1b1bdfce9d11c69",
+      "sha256": "a5326c96edc2bee3f0d6b82f6fcc78dd41bcd4e7c5a2b385bd2683fa326a0700"
+    },
+    "VBPIR_TreePIR/header/batchpirclient.h": {
+      "git_blob_sha1": "9980467ae5973cac0162b0ea382c6deeb7e90fe8",
+      "sha256": "867090f57ca2085c3c8ee75e36109c12318d7f51e565c6f1b75d93331453516d"
+    },
+    "VBPIR_TreePIR/header/batchpirparams.h": {
+      "git_blob_sha1": "821f13a0ee7de0facae372f8e598efce37991e80",
+      "sha256": "151990a0d13a643bc47528ed5222d8137fb6b411332f9ed6cd23cad673b571c4"
+    },
+    "VBPIR_TreePIR/header/batchpirserver.h": {
+      "git_blob_sha1": "971d289809bb124cf5a383eeb28370a149db3cc1",
+      "sha256": "7872a716dcccb08687bc4ccafc640e6b49efc11b3893c7492887184740c2b1d3"
+    },
+    "VBPIR_TreePIR/header/client.h": {
+      "git_blob_sha1": "81ee5f474c43d299b396fb32e9c61645716dad4a",
+      "sha256": "6a6685958b53248684d764be41cc456850aac7db2a18e0c5c6b448af3df35b40"
+    },
+    "VBPIR_TreePIR/header/database_constants.h": {
+      "git_blob_sha1": "92b74f0b3332d042300baf1bfea704c368cd26df",
+      "sha256": "ebc2c6648bff68564dd7c924c896f83dfedbb1662478a4511c8264630adec904"
+    },
+    "VBPIR_TreePIR/header/pirparams.h": {
+      "git_blob_sha1": "5ff59f8fff54d8d3214b3e9f8aa4ecbc4e899952",
+      "sha256": "85ad6158c6073e0704881f7169981aaf580a4a4a7d5d256c2b5ca3b9e37e0446"
+    },
+    "VBPIR_TreePIR/header/server.h": {
+      "git_blob_sha1": "64e55ec9e3b1635cdff3a80cd637f4bd230eb377",
+      "sha256": "40ea3c5b2aa5d94a25e9fa1872ed192160244d7f360f2cbe1fb67d37cff3ed74"
+    },
+    "VBPIR_TreePIR/rapidjson/allocators.h": {
+      "git_blob_sha1": "35650aff4c9889896affb1c0e5db9046d0e95bd1",
+      "sha256": "c5ab026e7f8fb5f6a6fa26ba7776a908b84336ad9bc3c837d25bffca74174427"
+    },
+    "VBPIR_TreePIR/rapidjson/cursorstreamwrapper.h": {
+      "git_blob_sha1": "fd6513db14a6afcdc3f7f969c9e3f26faf26a829",
+      "sha256": "9e619d9a57c2fdf51e89e422668d6fe3065cf227a66261ac2519f1870398fe39"
+    },
+    "VBPIR_TreePIR/rapidjson/document.h": {
+      "git_blob_sha1": "2cd9a70a60037f9a3c2c24274e0dc43aabc6b3ee",
+      "sha256": "9803a673462349b352581e892217cd750957a783a286c8474d5822110d912b69"
+    },
+    "VBPIR_TreePIR/rapidjson/encodedstream.h": {
+      "git_blob_sha1": "cf046b89235f5732768dbca7a0fc2cd2bb99a5e4",
+      "sha256": "394710616961270b0e4033c03a22b2e5b411958dc07eb4495ba36131648e3558"
+    },
+    "VBPIR_TreePIR/rapidjson/encodings.h": {
+      "git_blob_sha1": "50ad18bdc08cd0a2c1b19c0bc8f956fd16719a67",
+      "sha256": "1d4c62bd4ecc0b5a8b4b53faf48a8d09f09f086e41a90fc2b135517c3d148379"
+    },
+    "VBPIR_TreePIR/rapidjson/error/en.h": {
+      "git_blob_sha1": "c87b04eb133ed55544ad7ac555a072393449a043",
+      "sha256": "3cc7a00f9252b1183f3a108a9c7ceed59e408cd7b5a04f4c202a66a84a0fb578"
+    },
+    "VBPIR_TreePIR/rapidjson/error/error.h": {
+      "git_blob_sha1": "cae345db36d2c1161c0c33ad744f5ee1eee6c0ee",
+      "sha256": "648743428973469227f6b419f80a979809c33bb8d66c409c8f3775f4f7381121"
+    },
+    "VBPIR_TreePIR/rapidjson/filereadstream.h": {
+      "git_blob_sha1": "f8bb43cb0cf197862ef88a599ea0e46f2ecd6ca2",
+      "sha256": "d3d2aa0540471f4e58987f2184067e7cdf229363648ebf81af43c7e659bf2a40"
+    },
+    "VBPIR_TreePIR/rapidjson/filewritestream.h": {
+      "git_blob_sha1": "5d89588c218ddb930ee5df309358079553d4a474",
+      "sha256": "b16d4cbb8618e1b2bf58d91632f4a31a1fb2e4938b4cded365d723487792f0a5"
+    },
+    "VBPIR_TreePIR/rapidjson/fwd.h": {
+      "git_blob_sha1": "d62f77f0ecfafdf34ca723dd136c987a2227cb24",
+      "sha256": "107d783b3fa7a9c2470b734f56ca15e620f6106fd47dc8f4efdd441f75395284"
+    },
+    "VBPIR_TreePIR/rapidjson/internal/biginteger.h": {
+      "git_blob_sha1": "4930043dc7c5f972cea77523fbc6cb6164416313",
+      "sha256": "f6fe43899a4ab84a94415ea08cfb6d3d72a9d86ab3158dcdfd8e78e57f8f0c20"
+    },
+    "VBPIR_TreePIR/rapidjson/internal/clzll.h": {
+      "git_blob_sha1": "8fc5118aa47b8e6f3984dd64e0d32f78f5be5f04",
+      "sha256": "4ca3e63eaae4c67b049e8a6cbb532182e1d9c9023b7d992c556fcab0c2f4c045"
+    },
+    "VBPIR_TreePIR/rapidjson/internal/diyfp.h": {
+      "git_blob_sha1": "1f60fb60ca04372e03cc8f22f984b568eb129207",
+      "sha256": "b1c63c28dec8f82f7fdc2a39193d7a09a4c30343c3f008f060adc70e710e0a32"
+    },
+    "VBPIR_TreePIR/rapidjson/internal/dtoa.h": {
+      "git_blob_sha1": "cd456721a71c03209a985502909dac5bf0cd08cf",
+      "sha256": "73bdbedab68a0647156c918a7c879b7b0f13b88e2de2145c05fd7c65c8970cc5"
+    },
+    "VBPIR_TreePIR/rapidjson/internal/ieee754.h": {
+      "git_blob_sha1": "68c9e96649b8aa5323fb06480da7cfad84bb2485",
+      "sha256": "00757a3dc2aad5b90d915f9c49b378026dc612d49a7f057106d72b1ebd1a0105"
+    },
+    "VBPIR_TreePIR/rapidjson/internal/itoa.h": {
+      "git_blob_sha1": "9fe8c932ffa6d03ac8926574b842abb0a191eab8",
+      "sha256": "a0f965f33b11ce112b7bf2fbdeaf5338fca174e33f9f47608ccdd6d8559f3871"
+    },
+    "VBPIR_TreePIR/rapidjson/internal/meta.h": {
+      "git_blob_sha1": "27092dc0d69c43e5601632170a5812c9abb3b8c6",
+      "sha256": "5fcbfd72da1732926e4d0be2a1d79dce892f98d7b66879f818c57583a82505d3"
+    },
+    "VBPIR_TreePIR/rapidjson/internal/pow10.h": {
+      "git_blob_sha1": "eae1a43ed1a06d980b9dc58f155c9c999f2ee58b",
+      "sha256": "74cd5ef251a854565a36abe49521be4d8ed17a76e3d27231fd119fb9374a9364"
+    },
+    "VBPIR_TreePIR/rapidjson/internal/regex.h": {
+      "git_blob_sha1": "6446c403af9f302dffe022a8b0f0efbaa0370184",
+      "sha256": "c1a1ca2a4f83dd620f2d0700392df94ed5b5c47ec0061b6f946ccdc416cc9b13"
+    },
+    "VBPIR_TreePIR/rapidjson/internal/stack.h": {
+      "git_blob_sha1": "73abd706e976926802d52564cb7f7e36b0070ba0",
+      "sha256": "1bc01f4623d7b4ed6e890220fa9753375c0f0fb87c8a84f41cd7eecf38a38cd2"
+    },
+    "VBPIR_TreePIR/rapidjson/internal/strfunc.h": {
+      "git_blob_sha1": "b698a8f43fa63b342f3f6254adf68dbac99b9461",
+      "sha256": "75805e1a7420e8055b28cf759d49082608993f13bf589fa514ba7dd27d304b8b"
+    },
+    "VBPIR_TreePIR/rapidjson/internal/strtod.h": {
+      "git_blob_sha1": "55f0e380bfaa351dc2b7a0f14fc2232540ec0fd9",
+      "sha256": "e73073b08cd86d44f8b26e890d7dcb5b13d80a1f4784ddcff9cf740cbaca7880"
+    },
+    "VBPIR_TreePIR/rapidjson/internal/swap.h": {
+      "git_blob_sha1": "2cf92f93a1d371ab8e6f2e2084cc107926cff61a",
+      "sha256": "72acfabebd33f44869e7724603e57744da33337998b32443b66eaba58d2bbbfd"
+    },
+    "VBPIR_TreePIR/rapidjson/istreamwrapper.h": {
+      "git_blob_sha1": "01437ec0127a01838f83215a9d101563d8e5a316",
+      "sha256": "662d18f16a26caec242c214c75b92394462f1e7dc10b786a61e1bf2f7e33e827"
+    },
+    "VBPIR_TreePIR/rapidjson/memorybuffer.h": {
+      "git_blob_sha1": "ffbc41ed1f7d2b48e809129e279fd12524fc5043",
+      "sha256": "6890c9bde0a0edf28406b3f5757333a578ef83e97f3ca488c3c0762eea1501af"
+    },
+    "VBPIR_TreePIR/rapidjson/memorystream.h": {
+      "git_blob_sha1": "77af6c999e977a3c46efd1f486caafed5e6418a9",
+      "sha256": "a7bf789978c6d7dda7bb93c0c9555b7d53b3177cbf34c3998c7e18068a3723f5"
+    },
+    "VBPIR_TreePIR/rapidjson/msinttypes/inttypes.h": {
+      "git_blob_sha1": "18111286bf55bc0c89e7f47afcb046bbb02e1781",
+      "sha256": "78ee41fd99bcbe59ca93f6a870a83c0a90f4b179af571f6e684f2600491bbae7"
+    },
+    "VBPIR_TreePIR/rapidjson/msinttypes/stdint.h": {
+      "git_blob_sha1": "3d4477b9a024a8f326afe362ce3926e04f4c8ec9",
+      "sha256": "bf2d1bc4885bc1e0720ec9af8f399477c7e105ae1e70e2863c31a8123cae1c17"
+    },
+    "VBPIR_TreePIR/rapidjson/ostreamwrapper.h": {
+      "git_blob_sha1": "11ed4d33f92250c24ebdbeb1963172c5a9a87a17",
+      "sha256": "645eb8da79e36fcf0beb315a8ea336c6bd1a4db2003318b1ca68f17a167b27e6"
+    },
+    "VBPIR_TreePIR/rapidjson/pointer.h": {
+      "git_blob_sha1": "6f4ef389268774806c7e5f20710b94fa2baa8055",
+      "sha256": "09e28745230e01b0f7b6dda2df1b519a4710fd01a68a979e967e256f0a05e259"
+    },
+    "VBPIR_TreePIR/rapidjson/prettywriter.h": {
+      "git_blob_sha1": "fe45df1d10f3c5c325af81930ba47dad7d3eb45f",
+      "sha256": "75adaed0efd180955a44cd5322fb20f5f1b15b5ed40998fe88c50fc2ecd2c64f"
+    },
+    "VBPIR_TreePIR/rapidjson/rapidjson.h": {
+      "git_blob_sha1": "5ea69479501a3b6180f5840dd76ec1c75b583b58",
+      "sha256": "38024939a128698376c4644ac162424dd8c6d4503246a78f7ccadaaef48c64f5"
+    },
+    "VBPIR_TreePIR/rapidjson/reader.h": {
+      "git_blob_sha1": "55546601e29bdf3ed306ab5e68ac142a3e115d6e",
+      "sha256": "51e1efcefe8e55b54e31f15ba38918625916c693a900e26ce27e44202b6b599e"
+    },
+    "VBPIR_TreePIR/rapidjson/schema.h": {
+      "git_blob_sha1": "439133fa6748f2137b11cae69a26f6bf4189493b",
+      "sha256": "c45b295291a8acd531b97fd97afd721a6a5072455f12ce702c0e617e7a9349bd"
+    },
+    "VBPIR_TreePIR/rapidjson/stream.h": {
+      "git_blob_sha1": "1fd70915c5472a570e8337ba7b6c4f9366398c07",
+      "sha256": "a3708a941a130a5679d2302368169852e5c4ca5f54758ea0e94caf61615c8ae0"
+    },
+    "VBPIR_TreePIR/rapidjson/stringbuffer.h": {
+      "git_blob_sha1": "82ad3ca6bbfe8adfc805ff7b471cec1386a99727",
+      "sha256": "4788a86bc76a2880bdefa1765b366bda2303b62c1b8de1aabb4940fe37722b88"
+    },
+    "VBPIR_TreePIR/rapidjson/uri.h": {
+      "git_blob_sha1": "f93e508a4f40974ef6881c7d96f57365f94c1eb3",
+      "sha256": "53d200ad6eae23399fab31687c50511b3a14cd32c0a36900151f34ea0bf4cde9"
+    },
+    "VBPIR_TreePIR/rapidjson/writer.h": {
+      "git_blob_sha1": "142230d96fcc92f6da97e0f7118f967ef3f682f7",
+      "sha256": "fab257f33c972b20927262543ea224bba8eddf48f243af6cd168f3a87528dda3"
+    },
+    "VBPIR_TreePIR/src/batchpirclient.cpp": {
+      "git_blob_sha1": "b6dc61cfc62306f7be90b618800e2dbbddb91b48",
+      "sha256": "cbac4e682545d2399887ff06defd307e8847f4bb40161bdd9c58d546174bf038"
+    },
+    "VBPIR_TreePIR/src/batchpirparams.cpp": {
+      "git_blob_sha1": "dffff8056f8c3c2c21dfab2b1b77281d8402d2a4",
+      "sha256": "83ae3aa59c8249f0bbcb7a76965471822ac43fc1572fd363e9f0c9e8727b342f"
+    },
+    "VBPIR_TreePIR/src/batchpirserver.cpp": {
+      "git_blob_sha1": "5bb3bba54a53f7c859ebddbb265f2344b9dceda6",
+      "sha256": "d6de630ff741f031b44a3e27e18f382db1ddc70508ca1d831ecf9d798041b71c"
+    },
+    "VBPIR_TreePIR/src/client.cpp": {
+      "git_blob_sha1": "516d05038d0c1ae6b5160894e4c0bd56ce93dcdc",
+      "sha256": "16cb39bf4fdd3b2cf5a422c3e3bba0bca597f3992988d75fb640fc126226106d"
+    },
+    "VBPIR_TreePIR/src/main.cpp": {
+      "git_blob_sha1": "124284f224ca87de5503fcc75228d1ae2b031f76",
+      "sha256": "6c6e142d2b794def9d7672efe2fbac76deca1739c6cc26816a5e090e9a786cbe"
+    },
+    "VBPIR_TreePIR/src/pirparams.cpp": {
+      "git_blob_sha1": "71f12b856293b1286532634a1e3403e893194bfb",
+      "sha256": "0d27364f1089cf7271283482c6580041a8acd7d99c5e66cd154404505b92819f"
+    },
+    "VBPIR_TreePIR/src/server.cpp": {
+      "git_blob_sha1": "2d9867e568367108dd29b99e2cdf5e0ef0cbaf5a",
+      "sha256": "3b9e68d08935d701da56498a7ad30d1887e7e3a210fdf782a13e00ef2bb43e17"
+    },
+    "VBPIR_TreePIR/src/utils.h": {
+      "git_blob_sha1": "225cdd41477273d13d77d102d68a257b2e6aa7ad",
+      "sha256": "ddc99f41fddce4554fb476b148026aec88efd43597884e000bdb11391c37a1f1"
+    }
+  },
+  "adapter_edits": {
+    "native_vbpir/source/CMakeLists.txt": "C++17; resolve installed SEAL CONFIG package (version recorded in configure log).",
+    "native_vbpir/source/header/database_constants.h": "Add missing standard <cstdint> include required for uint64_t on this compiler.",
+    "native_vbpir/source/src/main.cpp": "Hard-coded input-directory string replaced by TREEPIR_INPUT_DIR environment variable; query/recovery/timing logic unchanged.",
+    "native_vbpir/source/src/batchpirserver.cpp": "Hard-coded input-directory string replaced by TREEPIR_INPUT_DIR environment variable; query/recovery/timing logic unchanged."
+  },
+  "adapted_source_sha256": {
+    "CMakeLists.txt": "f762a7d3901104bdd3ad0b308b572225bcedd9f9f71772a0d94325a888b81e6c",
+    "LICENSE": "a5326c96edc2bee3f0d6b82f6fcc78dd41bcd4e7c5a2b385bd2683fa326a0700",
+    "header/batchpirclient.h": "867090f57ca2085c3c8ee75e36109c12318d7f51e565c6f1b75d93331453516d",
+    "header/batchpirparams.h": "151990a0d13a643bc47528ed5222d8137fb6b411332f9ed6cd23cad673b571c4",
+    "header/batchpirserver.h": "7872a716dcccb08687bc4ccafc640e6b49efc11b3893c7492887184740c2b1d3",
+    "header/client.h": "6a6685958b53248684d764be41cc456850aac7db2a18e0c5c6b448af3df35b40",
+    "header/database_constants.h": "fb0b0eb677c989c062b64ee4ad140b21d9f2d3f0fd4708abd7b2a63633954b7b",
+    "header/pirparams.h": "85ad6158c6073e0704881f7169981aaf580a4a4a7d5d256c2b5ca3b9e37e0446",
+    "header/server.h": "40ea3c5b2aa5d94a25e9fa1872ed192160244d7f360f2cbe1fb67d37cff3ed74",
+    "rapidjson/allocators.h": "c5ab026e7f8fb5f6a6fa26ba7776a908b84336ad9bc3c837d25bffca74174427",
+    "rapidjson/cursorstreamwrapper.h": "9e619d9a57c2fdf51e89e422668d6fe3065cf227a66261ac2519f1870398fe39",
+    "rapidjson/document.h": "9803a673462349b352581e892217cd750957a783a286c8474d5822110d912b69",
+    "rapidjson/encodedstream.h": "394710616961270b0e4033c03a22b2e5b411958dc07eb4495ba36131648e3558",
+    "rapidjson/encodings.h": "1d4c62bd4ecc0b5a8b4b53faf48a8d09f09f086e41a90fc2b135517c3d148379",
+    "rapidjson/filereadstream.h": "d3d2aa0540471f4e58987f2184067e7cdf229363648ebf81af43c7e659bf2a40",
+    "rapidjson/filewritestream.h": "b16d4cbb8618e1b2bf58d91632f4a31a1fb2e4938b4cded365d723487792f0a5",
+    "rapidjson/fwd.h": "107d783b3fa7a9c2470b734f56ca15e620f6106fd47dc8f4efdd441f75395284",
+    "rapidjson/istreamwrapper.h": "662d18f16a26caec242c214c75b92394462f1e7dc10b786a61e1bf2f7e33e827",
+    "rapidjson/memorybuffer.h": "6890c9bde0a0edf28406b3f5757333a578ef83e97f3ca488c3c0762eea1501af",
+    "rapidjson/memorystream.h": "a7bf789978c6d7dda7bb93c0c9555b7d53b3177cbf34c3998c7e18068a3723f5",
+    "rapidjson/ostreamwrapper.h": "645eb8da79e36fcf0beb315a8ea336c6bd1a4db2003318b1ca68f17a167b27e6",
+    "rapidjson/pointer.h": "09e28745230e01b0f7b6dda2df1b519a4710fd01a68a979e967e256f0a05e259",
+    "rapidjson/prettywriter.h": "75adaed0efd180955a44cd5322fb20f5f1b15b5ed40998fe88c50fc2ecd2c64f",
+    "rapidjson/rapidjson.h": "38024939a128698376c4644ac162424dd8c6d4503246a78f7ccadaaef48c64f5",
+    "rapidjson/reader.h": "51e1efcefe8e55b54e31f15ba38918625916c693a900e26ce27e44202b6b599e",
+    "rapidjson/schema.h": "c45b295291a8acd531b97fd97afd721a6a5072455f12ce702c0e617e7a9349bd",
+    "rapidjson/stream.h": "a3708a941a130a5679d2302368169852e5c4ca5f54758ea0e94caf61615c8ae0",
+    "rapidjson/stringbuffer.h": "4788a86bc76a2880bdefa1765b366bda2303b62c1b8de1aabb4940fe37722b88",
+    "rapidjson/uri.h": "53d200ad6eae23399fab31687c50511b3a14cd32c0a36900151f34ea0bf4cde9",
+    "rapidjson/writer.h": "fab257f33c972b20927262543ea224bba8eddf48f243af6cd168f3a87528dda3",
+    "src/batchpirclient.cpp": "cbac4e682545d2399887ff06defd307e8847f4bb40161bdd9c58d546174bf038",
+    "src/batchpirparams.cpp": "83ae3aa59c8249f0bbcb7a76965471822ac43fc1572fd363e9f0c9e8727b342f",
+    "src/batchpirserver.cpp": "680d7a5378386cc0b3047cd41b4d76cd93ad2a2ae6d909ca8e8bf884086dd99e",
+    "src/client.cpp": "16cb39bf4fdd3b2cf5a422c3e3bba0bca597f3992988d75fb640fc126226106d",
+    "src/main.cpp": "1753c7c9c314217fbc3fcffe11a9a58b2a25cf0fbbdfbcffc1432776b19c57fe",
+    "src/pirparams.cpp": "0d27364f1089cf7271283482c6580041a8acd7d99c5e66cd154404505b92819f",
+    "src/server.cpp": "3b9e68d08935d701da56498a7ad30d1887e7e3a210fdf782a13e00ef2bb43e17",
+    "src/utils.h": "ddc99f41fddce4554fb476b148026aec88efd43597884e000bdb11391c37a1f1",
+    "rapidjson/error/en.h": "3cc7a00f9252b1183f3a108a9c7ceed59e408cd7b5a04f4c202a66a84a0fb578",
+    "rapidjson/error/error.h": "648743428973469227f6b419f80a979809c33bb8d66c409c8f3775f4f7381121",
+    "rapidjson/internal/biginteger.h": "f6fe43899a4ab84a94415ea08cfb6d3d72a9d86ab3158dcdfd8e78e57f8f0c20",
+    "rapidjson/internal/clzll.h": "4ca3e63eaae4c67b049e8a6cbb532182e1d9c9023b7d992c556fcab0c2f4c045",
+    "rapidjson/internal/diyfp.h": "b1c63c28dec8f82f7fdc2a39193d7a09a4c30343c3f008f060adc70e710e0a32",
+    "rapidjson/internal/dtoa.h": "73bdbedab68a0647156c918a7c879b7b0f13b88e2de2145c05fd7c65c8970cc5",
+    "rapidjson/internal/ieee754.h": "00757a3dc2aad5b90d915f9c49b378026dc612d49a7f057106d72b1ebd1a0105",
+    "rapidjson/internal/itoa.h": "a0f965f33b11ce112b7bf2fbdeaf5338fca174e33f9f47608ccdd6d8559f3871",
+    "rapidjson/internal/meta.h": "5fcbfd72da1732926e4d0be2a1d79dce892f98d7b66879f818c57583a82505d3",
+    "rapidjson/internal/pow10.h": "74cd5ef251a854565a36abe49521be4d8ed17a76e3d27231fd119fb9374a9364",
+    "rapidjson/internal/regex.h": "c1a1ca2a4f83dd620f2d0700392df94ed5b5c47ec0061b6f946ccdc416cc9b13",
+    "rapidjson/internal/stack.h": "1bc01f4623d7b4ed6e890220fa9753375c0f0fb87c8a84f41cd7eecf38a38cd2",
+    "rapidjson/internal/strfunc.h": "75805e1a7420e8055b28cf759d49082608993f13bf589fa514ba7dd27d304b8b",
+    "rapidjson/internal/strtod.h": "e73073b08cd86d44f8b26e890d7dcb5b13d80a1f4784ddcff9cf740cbaca7880",
+    "rapidjson/internal/swap.h": "72acfabebd33f44869e7724603e57744da33337998b32443b66eaba58d2bbbfd",
+    "rapidjson/msinttypes/inttypes.h": "78ee41fd99bcbe59ca93f6a870a83c0a90f4b179af571f6e684f2600491bbae7",
+    "rapidjson/msinttypes/stdint.h": "bf2d1bc4885bc1e0720ec9af8f399477c7e105ae1e70e2863c31a8123cae1c17"
+  }
+}

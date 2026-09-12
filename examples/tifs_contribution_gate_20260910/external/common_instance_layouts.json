@@ -1,0 +1,116 @@
+[
+  {
+    "height": 4,
+    "method": "treepir_official",
+    "leaves": 16,
+    "records": 30,
+    "width": 4,
+    "loads": [
+      7,
+      7,
+      8,
+      8
+    ],
+    "max_bucket": 8,
+    "all_target_proofs_verified": 16,
+    "root_hex": "843bba0bfae47930c3f6d83b314fcd4bf6e3c79edcdf0ad219232cfb948b1c47"
+  },
+  {
+    "height": 4,
+    "method": "first_fit",
+    "leaves": 16,
+    "records": 30,
+    "width": 4,
+    "loads": [
+      2,
+      4,
+      8,
+      16
+    ],
+    "max_bucket": 16,
+    "all_target_proofs_verified": 16,
+    "root_hex": "843bba0bfae47930c3f6d83b314fcd4bf6e3c79edcdf0ad219232cfb948b1c47"
+  },
+  {
+    "height": 4,
+    "method": "activebalance",
+    "leaves": 16,
+    "records": 30,
+    "width": 4,
+    "loads": [
+      7,
+      8,
+      8,
+      7
+    ],
+    "max_bucket": 8,
+    "all_target_proofs_verified": 16,
+    "root_hex": "843bba0bfae47930c3f6d83b314fcd4bf6e3c79edcdf0ad219232cfb948b1c47"
+  },
+  {
+    "height": 10,
+    "method": "treepir_official",
+    "leaves": 1024,
+    "records": 2046,
+    "width": 10,
+    "loads": [
+      204,
+      204,
+      204,
+      204,
+      205,
+      205,
+      205,
+      205,
+      205,
+      205
+    ],
+    "max_bucket": 205,
+    "all_target_proofs_verified": 1024,
+    "root_hex": "5d78323d9f287e3495f32ccc28b6789f5e01620d27a9079ec3677f741093cb7b"
+  },
+  {
+    "height": 10,
+    "method": "first_fit",
+    "leaves": 1024,
+    "records": 2046,
+    "width": 10,
+    "loads": [
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256,
+      512,
+      1024
+    ],
+    "max_bucket": 1024,
+    "all_target_proofs_verified": 1024,
+    "root_hex": "5d78323d9f287e3495f32ccc28b6789f5e01620d27a9079ec3677f741093cb7b"
+  },
+  {
+    "height": 10,
+    "method": "activebalance",
+    "leaves": 1024,
+    "records": 2046,
+    "width": 10,
+    "loads": [
+      205,
+      205,
+      204,
+      205,
+      204,
+      205,
+      205,
+      204,
+      205,
+      204
+    ],
+    "max_bucket": 205,
+    "all_target_proofs_verified": 1024,
+    "root_hex": "5d78323d9f287e3495f32ccc28b6789f5e01620d27a9079ec3677f741093cb7b"
+  }
+]

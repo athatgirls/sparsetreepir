@@ -1,0 +1,1 @@
+{"scheme": "flat_cache_smoke", "height": 2, "width": 2, "active_nodes": 2, "query_samples": 2, "warmup_queries": 1, "subdatabases": [{"color": 1, "records": 2, "record_bytes": 32, "database_file": "records.bin", "query_indices": [0, 1]}, {"color": 2, "records": 2, "record_bytes": 32, "database_file": "records.bin", "query_indices": [1, 0]}]}

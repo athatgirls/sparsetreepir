@@ -1,0 +1,38 @@
+{
+  "case": "uniform_n10000",
+  "repeat": 1,
+  "method": "ab",
+  "pool_indices": [
+    28,
+    29,
+    31,
+    4,
+    24,
+    15,
+    12,
+    16,
+    20,
+    13
+  ],
+  "target_ids": [
+    8963,
+    9052,
+    9468,
+    741,
+    7500,
+    4109,
+    3652,
+    4238,
+    5982,
+    3731
+  ],
+  "input_sha256": "ef01ed77453c884022e1cb92d128ce0d5c5909dc88d5b3ae0edd852b38a81e0a",
+  "returncode": 0,
+  "timeout": false,
+  "wall_seconds": 0.5426861529999769,
+  "binary_sha256": "4a1c83d3f8dfa12557aec5b5666224cc36840e9aa2fe758b6f634437a69bfa02",
+  "input_source_sha256": "ef01ed77453c884022e1cb92d128ce0d5c5909dc88d5b3ae0edd852b38a81e0a",
+  "run_input_sha256": "106e81da8200ac2e5a4d0d1b90b4967702ea82ff03a47b03a9aad671a8a36089",
+  "result_sha256": "221b8f6f7fee15b2e1c5e768bf2e2b9c710a1f56a5ddfb29ee23c4599d8f38a7",
+  "status": "complete"
+}

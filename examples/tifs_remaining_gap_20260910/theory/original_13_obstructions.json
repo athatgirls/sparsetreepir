@@ -1,0 +1,1136 @@
+[
+  {
+    "source_index": 223,
+    "shape": [
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ],
+      [
+        [],
+        [
+          [
+            [],
+            [
+              [],
+              []
+            ]
+          ],
+          [
+            [
+              [],
+              []
+            ],
+            [
+              [],
+              []
+            ]
+          ]
+        ]
+      ]
+    ],
+    "notation": "((L,(L,L)),(L,((L,(L,L)),((L,L),(L,L)))))",
+    "N": 20,
+    "n": 11,
+    "m": 5,
+    "B": 4,
+    "B_anc": 4,
+    "B_hier": 4,
+    "B_joint": 5,
+    "witness": {
+      "context": -1,
+      "terminal": 7,
+      "anchor_ids": [
+        5,
+        7
+      ],
+      "k": 2,
+      "available_colors_q": 5,
+      "context_records": 20,
+      "joint_anchored_capacity_J": 7,
+      "sum_individual_capacities": 9,
+      "unanchored_colors": 3,
+      "old_capacity": 4,
+      "deficit_at_old_bound": 1,
+      "necessary_capacity": 5,
+      "regions": [
+        {
+          "available_anchor_colors": 2,
+          "root_ids": [
+            0
+          ],
+          "capacity": 4
+        },
+        {
+          "available_anchor_colors": 1,
+          "root_ids": [
+            6
+          ],
+          "capacity": 1
+        }
+      ]
+    },
+    "chain_context_constraints_checked": 38,
+    "exact_optimum": 5,
+    "old_hierarchical_gap": true,
+    "joint_gap": false
+  },
+  {
+    "source_index": 290,
+    "shape": [
+      [],
+      [
+        [
+          [],
+          [
+            [],
+            []
+          ]
+        ],
+        [
+          [],
+          [
+            [
+              [],
+              [
+                [],
+                []
+              ]
+            ],
+            [
+              [
+                [],
+                []
+              ],
+              [
+                [],
+                []
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    "notation": "(L,((L,(L,L)),(L,((L,(L,L)),((L,L),(L,L))))))",
+    "N": 22,
+    "n": 12,
+    "m": 6,
+    "B": 4,
+    "B_anc": 4,
+    "B_hier": 4,
+    "B_joint": 5,
+    "witness": {
+      "context": -1,
+      "terminal": 9,
+      "anchor_ids": [
+        1,
+        7,
+        9
+      ],
+      "k": 3,
+      "available_colors_q": 6,
+      "context_records": 22,
+      "joint_anchored_capacity_J": 9,
+      "sum_individual_capacities": 13,
+      "unanchored_colors": 3,
+      "old_capacity": 4,
+      "deficit_at_old_bound": 1,
+      "necessary_capacity": 5,
+      "regions": [
+        {
+          "available_anchor_colors": 3,
+          "root_ids": [
+            0
+          ],
+          "capacity": 1
+        },
+        {
+          "available_anchor_colors": 2,
+          "root_ids": [
+            2
+          ],
+          "capacity": 4
+        },
+        {
+          "available_anchor_colors": 1,
+          "root_ids": [
+            8
+          ],
+          "capacity": 1
+        }
+      ]
+    },
+    "chain_context_constraints_checked": 54,
+    "exact_optimum": 5,
+    "old_hierarchical_gap": true,
+    "joint_gap": false
+  },
+  {
+    "source_index": 600,
+    "shape": [
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ],
+      [
+        [],
+        [
+          [
+            [],
+            [
+              [],
+              []
+            ]
+          ],
+          [
+            [
+              [],
+              []
+            ],
+            [
+              [
+                [],
+                []
+              ],
+              [
+                [],
+                []
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    "notation": "((L,(L,L)),(L,((L,(L,L)),((L,L),((L,L),(L,L))))))",
+    "N": 24,
+    "n": 13,
+    "m": 6,
+    "B": 4,
+    "B_anc": 4,
+    "B_hier": 4,
+    "B_joint": 5,
+    "witness": {
+      "context": -1,
+      "terminal": 7,
+      "anchor_ids": [
+        5,
+        7
+      ],
+      "k": 2,
+      "available_colors_q": 6,
+      "context_records": 24,
+      "joint_anchored_capacity_J": 7,
+      "sum_individual_capacities": 9,
+      "unanchored_colors": 4,
+      "old_capacity": 4,
+      "deficit_at_old_bound": 1,
+      "necessary_capacity": 5,
+      "regions": [
+        {
+          "available_anchor_colors": 2,
+          "root_ids": [
+            0
+          ],
+          "capacity": 4
+        },
+        {
+          "available_anchor_colors": 1,
+          "root_ids": [
+            6
+          ],
+          "capacity": 1
+        }
+      ]
+    },
+    "chain_context_constraints_checked": 68,
+    "exact_optimum": 5,
+    "old_hierarchical_gap": true,
+    "joint_gap": false
+  },
+  {
+    "source_index": 601,
+    "shape": [
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ],
+      [
+        [],
+        [
+          [
+            [],
+            [
+              [],
+              []
+            ]
+          ],
+          [
+            [
+              [],
+              [
+                [],
+                []
+              ]
+            ],
+            [
+              [],
+              [
+                [],
+                []
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    "notation": "((L,(L,L)),(L,((L,(L,L)),((L,(L,L)),(L,(L,L))))))",
+    "N": 24,
+    "n": 13,
+    "m": 6,
+    "B": 4,
+    "B_anc": 4,
+    "B_hier": 4,
+    "B_joint": 5,
+    "witness": {
+      "context": -1,
+      "terminal": 7,
+      "anchor_ids": [
+        5,
+        7
+      ],
+      "k": 2,
+      "available_colors_q": 6,
+      "context_records": 24,
+      "joint_anchored_capacity_J": 7,
+      "sum_individual_capacities": 9,
+      "unanchored_colors": 4,
+      "old_capacity": 4,
+      "deficit_at_old_bound": 1,
+      "necessary_capacity": 5,
+      "regions": [
+        {
+          "available_anchor_colors": 2,
+          "root_ids": [
+            0
+          ],
+          "capacity": 4
+        },
+        {
+          "available_anchor_colors": 1,
+          "root_ids": [
+            6
+          ],
+          "capacity": 1
+        }
+      ]
+    },
+    "chain_context_constraints_checked": 68,
+    "exact_optimum": 5,
+    "old_hierarchical_gap": true,
+    "joint_gap": false
+  },
+  {
+    "source_index": 602,
+    "shape": [
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ],
+      [
+        [],
+        [
+          [
+            [],
+            [
+              [],
+              [
+                [],
+                []
+              ]
+            ]
+          ],
+          [
+            [],
+            [
+              [
+                [],
+                []
+              ],
+              [
+                [],
+                []
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    "notation": "((L,(L,L)),(L,((L,(L,(L,L))),(L,((L,L),(L,L))))))",
+    "N": 24,
+    "n": 13,
+    "m": 6,
+    "B": 4,
+    "B_anc": 4,
+    "B_hier": 4,
+    "B_joint": 5,
+    "witness": {
+      "context": -1,
+      "terminal": 7,
+      "anchor_ids": [
+        5,
+        7
+      ],
+      "k": 2,
+      "available_colors_q": 6,
+      "context_records": 24,
+      "joint_anchored_capacity_J": 7,
+      "sum_individual_capacities": 9,
+      "unanchored_colors": 4,
+      "old_capacity": 4,
+      "deficit_at_old_bound": 1,
+      "necessary_capacity": 5,
+      "regions": [
+        {
+          "available_anchor_colors": 2,
+          "root_ids": [
+            0
+          ],
+          "capacity": 4
+        },
+        {
+          "available_anchor_colors": 1,
+          "root_ids": [
+            6
+          ],
+          "capacity": 1
+        }
+      ]
+    },
+    "chain_context_constraints_checked": 58,
+    "exact_optimum": 5,
+    "old_hierarchical_gap": true,
+    "joint_gap": false
+  },
+  {
+    "source_index": 603,
+    "shape": [
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ],
+      [
+        [],
+        [
+          [
+            [],
+            [
+              [],
+              [
+                [],
+                []
+              ]
+            ]
+          ],
+          [
+            [
+              [],
+              []
+            ],
+            [
+              [],
+              [
+                [],
+                []
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    "notation": "((L,(L,L)),(L,((L,(L,(L,L))),((L,L),(L,(L,L))))))",
+    "N": 24,
+    "n": 13,
+    "m": 6,
+    "B": 4,
+    "B_anc": 4,
+    "B_hier": 4,
+    "B_joint": 5,
+    "witness": {
+      "context": -1,
+      "terminal": 7,
+      "anchor_ids": [
+        5,
+        7
+      ],
+      "k": 2,
+      "available_colors_q": 6,
+      "context_records": 24,
+      "joint_anchored_capacity_J": 7,
+      "sum_individual_capacities": 9,
+      "unanchored_colors": 4,
+      "old_capacity": 4,
+      "deficit_at_old_bound": 1,
+      "necessary_capacity": 5,
+      "regions": [
+        {
+          "available_anchor_colors": 2,
+          "root_ids": [
+            0
+          ],
+          "capacity": 4
+        },
+        {
+          "available_anchor_colors": 1,
+          "root_ids": [
+            6
+          ],
+          "capacity": 1
+        }
+      ]
+    },
+    "chain_context_constraints_checked": 68,
+    "exact_optimum": 5,
+    "old_hierarchical_gap": true,
+    "joint_gap": false
+  },
+  {
+    "source_index": 604,
+    "shape": [
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ],
+      [
+        [],
+        [
+          [
+            [],
+            [
+              [
+                [],
+                []
+              ],
+              [
+                [],
+                []
+              ]
+            ]
+          ],
+          [
+            [
+              [],
+              []
+            ],
+            [
+              [],
+              []
+            ]
+          ]
+        ]
+      ]
+    ],
+    "notation": "((L,(L,L)),(L,((L,((L,L),(L,L))),((L,L),(L,L)))))",
+    "N": 24,
+    "n": 13,
+    "m": 6,
+    "B": 4,
+    "B_anc": 4,
+    "B_hier": 4,
+    "B_joint": 5,
+    "witness": {
+      "context": -1,
+      "terminal": 7,
+      "anchor_ids": [
+        5,
+        7
+      ],
+      "k": 2,
+      "available_colors_q": 6,
+      "context_records": 24,
+      "joint_anchored_capacity_J": 7,
+      "sum_individual_capacities": 9,
+      "unanchored_colors": 4,
+      "old_capacity": 4,
+      "deficit_at_old_bound": 1,
+      "necessary_capacity": 5,
+      "regions": [
+        {
+          "available_anchor_colors": 2,
+          "root_ids": [
+            0
+          ],
+          "capacity": 4
+        },
+        {
+          "available_anchor_colors": 1,
+          "root_ids": [
+            6
+          ],
+          "capacity": 1
+        }
+      ]
+    },
+    "chain_context_constraints_checked": 68,
+    "exact_optimum": 5,
+    "old_hierarchical_gap": true,
+    "joint_gap": false
+  },
+  {
+    "source_index": 605,
+    "shape": [
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ],
+      [
+        [],
+        [
+          [
+            [
+              [],
+              []
+            ],
+            [
+              [],
+              []
+            ]
+          ],
+          [
+            [
+              [],
+              []
+            ],
+            [
+              [],
+              [
+                [],
+                []
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    "notation": "((L,(L,L)),(L,(((L,L),(L,L)),((L,L),(L,(L,L))))))",
+    "N": 24,
+    "n": 13,
+    "m": 6,
+    "B": 4,
+    "B_anc": 4,
+    "B_hier": 4,
+    "B_joint": 5,
+    "witness": {
+      "context": -1,
+      "terminal": 7,
+      "anchor_ids": [
+        5,
+        7
+      ],
+      "k": 2,
+      "available_colors_q": 6,
+      "context_records": 24,
+      "joint_anchored_capacity_J": 7,
+      "sum_individual_capacities": 9,
+      "unanchored_colors": 4,
+      "old_capacity": 4,
+      "deficit_at_old_bound": 1,
+      "necessary_capacity": 5,
+      "regions": [
+        {
+          "available_anchor_colors": 2,
+          "root_ids": [
+            0
+          ],
+          "capacity": 4
+        },
+        {
+          "available_anchor_colors": 1,
+          "root_ids": [
+            6
+          ],
+          "capacity": 1
+        }
+      ]
+    },
+    "chain_context_constraints_checked": 78,
+    "exact_optimum": 5,
+    "old_hierarchical_gap": true,
+    "joint_gap": false
+  },
+  {
+    "source_index": 613,
+    "shape": [
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ],
+      [
+        [
+          [],
+          []
+        ],
+        [
+          [
+            [
+              [],
+              []
+            ],
+            [
+              [],
+              []
+            ]
+          ],
+          [
+            [
+              [],
+              []
+            ],
+            [
+              [],
+              []
+            ]
+          ]
+        ]
+      ]
+    ],
+    "notation": "((L,(L,L)),((L,L),(((L,L),(L,L)),((L,L),(L,L)))))",
+    "N": 24,
+    "n": 13,
+    "m": 5,
+    "B": 5,
+    "B_anc": 5,
+    "B_hier": 5,
+    "B_joint": 6,
+    "witness": {
+      "context": -1,
+      "terminal": 9,
+      "anchor_ids": [
+        5,
+        9
+      ],
+      "k": 2,
+      "available_colors_q": 5,
+      "context_records": 24,
+      "joint_anchored_capacity_J": 8,
+      "sum_individual_capacities": 10,
+      "unanchored_colors": 3,
+      "old_capacity": 5,
+      "deficit_at_old_bound": 1,
+      "necessary_capacity": 6,
+      "regions": [
+        {
+          "available_anchor_colors": 2,
+          "root_ids": [
+            0
+          ],
+          "capacity": 4
+        },
+        {
+          "available_anchor_colors": 1,
+          "root_ids": [
+            6
+          ],
+          "capacity": 2
+        }
+      ]
+    },
+    "chain_context_constraints_checked": 44,
+    "exact_optimum": 6,
+    "old_hierarchical_gap": true,
+    "joint_gap": false
+  },
+  {
+    "source_index": 636,
+    "shape": [
+      [
+        [],
+        [
+          [],
+          [
+            [],
+            []
+          ]
+        ]
+      ],
+      [
+        [],
+        [
+          [],
+          [
+            [
+              [],
+              [
+                [],
+                []
+              ]
+            ],
+            [
+              [
+                [],
+                []
+              ],
+              [
+                [],
+                []
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    "notation": "((L,(L,(L,L))),(L,(L,((L,(L,L)),((L,L),(L,L))))))",
+    "N": 24,
+    "n": 13,
+    "m": 6,
+    "B": 4,
+    "B_anc": 4,
+    "B_hier": 4,
+    "B_joint": 5,
+    "witness": {
+      "context": -1,
+      "terminal": 11,
+      "anchor_ids": [
+        7,
+        9,
+        11
+      ],
+      "k": 3,
+      "available_colors_q": 6,
+      "context_records": 24,
+      "joint_anchored_capacity_J": 11,
+      "sum_individual_capacities": 18,
+      "unanchored_colors": 3,
+      "old_capacity": 4,
+      "deficit_at_old_bound": 1,
+      "necessary_capacity": 5,
+      "regions": [
+        {
+          "available_anchor_colors": 3,
+          "root_ids": [
+            0
+          ],
+          "capacity": 6
+        },
+        {
+          "available_anchor_colors": 2,
+          "root_ids": [
+            8
+          ],
+          "capacity": 1
+        },
+        {
+          "available_anchor_colors": 1,
+          "root_ids": [
+            10
+          ],
+          "capacity": 1
+        }
+      ]
+    },
+    "chain_context_constraints_checked": 58,
+    "exact_optimum": 5,
+    "old_hierarchical_gap": true,
+    "joint_gap": false
+  },
+  {
+    "source_index": 643,
+    "shape": [
+      [
+        [],
+        [
+          [],
+          [
+            [],
+            []
+          ]
+        ]
+      ],
+      [
+        [],
+        [
+          [
+            [
+              [],
+              []
+            ],
+            [
+              [],
+              []
+            ]
+          ],
+          [
+            [
+              [],
+              []
+            ],
+            [
+              [],
+              []
+            ]
+          ]
+        ]
+      ]
+    ],
+    "notation": "((L,(L,(L,L))),(L,(((L,L),(L,L)),((L,L),(L,L)))))",
+    "N": 24,
+    "n": 13,
+    "m": 5,
+    "B": 5,
+    "B_anc": 5,
+    "B_hier": 5,
+    "B_joint": 6,
+    "witness": {
+      "context": -1,
+      "terminal": 9,
+      "anchor_ids": [
+        7,
+        9
+      ],
+      "k": 2,
+      "available_colors_q": 5,
+      "context_records": 24,
+      "joint_anchored_capacity_J": 8,
+      "sum_individual_capacities": 11,
+      "unanchored_colors": 3,
+      "old_capacity": 5,
+      "deficit_at_old_bound": 1,
+      "necessary_capacity": 6,
+      "regions": [
+        {
+          "available_anchor_colors": 2,
+          "root_ids": [
+            0
+          ],
+          "capacity": 5
+        },
+        {
+          "available_anchor_colors": 1,
+          "root_ids": [
+            8
+          ],
+          "capacity": 1
+        }
+      ]
+    },
+    "chain_context_constraints_checked": 46,
+    "exact_optimum": 6,
+    "old_hierarchical_gap": true,
+    "joint_gap": false
+  },
+  {
+    "source_index": 811,
+    "shape": [
+      [],
+      [
+        [
+          [],
+          [
+            [],
+            []
+          ]
+        ],
+        [
+          [
+            [],
+            []
+          ],
+          [
+            [
+              [
+                [],
+                []
+              ],
+              [
+                [],
+                []
+              ]
+            ],
+            [
+              [
+                [],
+                []
+              ],
+              [
+                [],
+                []
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    "notation": "(L,((L,(L,L)),((L,L),(((L,L),(L,L)),((L,L),(L,L))))))",
+    "N": 26,
+    "n": 14,
+    "m": 6,
+    "B": 5,
+    "B_anc": 5,
+    "B_hier": 5,
+    "B_joint": 6,
+    "witness": {
+      "context": -1,
+      "terminal": 11,
+      "anchor_ids": [
+        1,
+        7,
+        11
+      ],
+      "k": 3,
+      "available_colors_q": 6,
+      "context_records": 26,
+      "joint_anchored_capacity_J": 10,
+      "sum_individual_capacities": 14,
+      "unanchored_colors": 3,
+      "old_capacity": 5,
+      "deficit_at_old_bound": 1,
+      "necessary_capacity": 6,
+      "regions": [
+        {
+          "available_anchor_colors": 3,
+          "root_ids": [
+            0
+          ],
+          "capacity": 1
+        },
+        {
+          "available_anchor_colors": 2,
+          "root_ids": [
+            2
+          ],
+          "capacity": 4
+        },
+        {
+          "available_anchor_colors": 1,
+          "root_ids": [
+            8
+          ],
+          "capacity": 2
+        }
+      ]
+    },
+    "chain_context_constraints_checked": 62,
+    "exact_optimum": 6,
+    "old_hierarchical_gap": true,
+    "joint_gap": false
+  },
+  {
+    "source_index": 820,
+    "shape": [
+      [],
+      [
+        [
+          [],
+          [
+            [],
+            [
+              [],
+              []
+            ]
+          ]
+        ],
+        [
+          [],
+          [
+            [
+              [
+                [],
+                []
+              ],
+              [
+                [],
+                []
+              ]
+            ],
+            [
+              [
+                [],
+                []
+              ],
+              [
+                [],
+                []
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    "notation": "(L,((L,(L,(L,L))),(L,(((L,L),(L,L)),((L,L),(L,L))))))",
+    "N": 26,
+    "n": 14,
+    "m": 6,
+    "B": 5,
+    "B_anc": 5,
+    "B_hier": 5,
+    "B_joint": 6,
+    "witness": {
+      "context": -1,
+      "terminal": 11,
+      "anchor_ids": [
+        1,
+        9,
+        11
+      ],
+      "k": 3,
+      "available_colors_q": 6,
+      "context_records": 26,
+      "joint_anchored_capacity_J": 10,
+      "sum_individual_capacities": 15,
+      "unanchored_colors": 3,
+      "old_capacity": 5,
+      "deficit_at_old_bound": 1,
+      "necessary_capacity": 6,
+      "regions": [
+        {
+          "available_anchor_colors": 3,
+          "root_ids": [
+            0
+          ],
+          "capacity": 1
+        },
+        {
+          "available_anchor_colors": 2,
+          "root_ids": [
+            2
+          ],
+          "capacity": 5
+        },
+        {
+          "available_anchor_colors": 1,
+          "root_ids": [
+            10
+          ],
+          "capacity": 1
+        }
+      ]
+    },
+    "chain_context_constraints_checked": 64,
+    "exact_optimum": 6,
+    "old_hierarchical_gap": true,
+    "joint_gap": false
+  }
+]

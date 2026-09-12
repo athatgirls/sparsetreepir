@@ -1,0 +1,8 @@
+dataset,n,N,m,B,hierarchical_bound,FF,AB,OPT,FF_over_B,AB_over_B,FF_exact_gap,AB_exact_gap,optimum_status
+fuel_h128,100,198,9,22,22,58,23,22,2.6363636363636362,1.0454545454545454,1.6363636363636365,0.045454545454545456,independently checked separate capacity-22 integer witness; not AB
+polygon-broad_h128,7040,14078,17,829,829,3844,829,829,4.636911942098914,1.0,3.6369119420989144,0.0,matched lower bound by frozen AB coloring
+polygon-multi_h128,1348,2694,14,193,193,772,193,193,4.0,1.0,3.0,0.0,matched lower bound by frozen AB coloring
+polygon-recent_h128,384,766,11,70,70,210,70,70,3.0,1.0,2.0,0.0,matched lower bound by frozen AB coloring
+zksync-broad_h128,7740,15478,17,911,911,4282,911,911,4.70032930845225,1.0,3.7003293084522504,0.0,matched lower bound by frozen AB coloring
+zksync-sample_h128,956,1910,13,147,147,556,147,147,3.7823129251700682,1.0,2.7823129251700682,0.0,matched lower bound by frozen AB coloring
+ct-record-mirror,512,1022,13,79,79,306,79,79,3.8734177215189876,1.0,2.8734177215189876,0.0,matched lower bound by frozen AB coloring

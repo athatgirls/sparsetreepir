@@ -1,0 +1,10 @@
+{
+  "manifest_sha256": "ad2018a3ff62e34d6efd7575fa4d761001eb7a16c886a47ae7d36389567aee72",
+  "database_sha256": {
+    "color_01.bin": "cd996a2e4b7a0b3449913d8fce253f1e410682690cb7da16688ee1094496eb21"
+  },
+  "binary_sha256": "d633487b2913aee719ade941a9a9629d45f27559261fb9e0bd255e93235fca40",
+  "warmup": 5,
+  "gomaxprocs": 1,
+  "schema": "verified-backend-v2"
+}

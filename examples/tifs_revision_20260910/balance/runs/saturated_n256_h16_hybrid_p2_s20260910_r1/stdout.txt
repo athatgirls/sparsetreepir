@@ -1,0 +1,1 @@
+{"id": "saturated_n256_h16_hybrid_p2_s20260910_r1", "status": "complete", "actual_n": 256, "m": 8, "max_bucket": 256, "U_over_B": 4.0, "coloring_s": 0.013169400044716895, "valid": true}

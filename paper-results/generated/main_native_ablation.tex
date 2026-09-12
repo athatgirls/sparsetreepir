@@ -1,0 +1,12 @@
+\begin{table}[t]
+\centering\footnotesize
+\caption{Effect of balancing under native 32-byte SimplePIR~\cite{simplepir}. AB is ours; First-fit (FF) is an internal control. Both colorings use the same minimum batch width. $U$ is the largest bucket; time ratios average the three paired process ratios. Ratios above one favor AB.}
+\label{tab:native-ablation}
+\setlength{\tabcolsep}{3.2pt}
+\begin{tabular}{rrrrr}\toprule
+Leaves & $U_{\rm FF}$ & $U_{\rm AB}$ & Time FF/AB & Bytes FF/AB\\\midrule
+1,000 & 580 & 154 & 1.68 & 1.80 \\
+10,000 & 5,646 & 1,179 & 2.14 & 2.14 \\
+100,000 & 52,876 & 9,552 & 2.12 & 2.33 \\
+\bottomrule\end{tabular}
+\end{table}

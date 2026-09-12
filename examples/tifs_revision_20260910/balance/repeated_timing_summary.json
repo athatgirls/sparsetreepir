@@ -1,0 +1,38 @@
+[
+  {
+    "algorithm": "first-fit",
+    "executions": 1,
+    "mean_s": 0.0014752000570297241,
+    "sample_sd_s": null,
+    "max_buckets": [
+      566
+    ],
+    "U_over_B": [
+      3.958041958041958
+    ]
+  },
+  {
+    "algorithm": "ab-hungarian",
+    "executions": 1,
+    "mean_s": 0.9614084996283054,
+    "sample_sd_s": null,
+    "max_buckets": [
+      143
+    ],
+    "U_over_B": [
+      1.0
+    ]
+  },
+  {
+    "algorithm": "ab-sorted",
+    "executions": 1,
+    "mean_s": 0.20420950010884553,
+    "sample_sd_s": null,
+    "max_buckets": [
+      143
+    ],
+    "U_over_B": [
+      1.0
+    ]
+  }
+]

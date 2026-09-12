@@ -1,0 +1,46 @@
+{
+  "forest": [
+    [
+      [
+        [],
+        []
+      ],
+      [
+        [],
+        []
+      ]
+    ],
+    [
+      [
+        [],
+        []
+      ],
+      [
+        [],
+        []
+      ]
+    ]
+  ],
+  "m": 3,
+  "local_minimum_cap": 3,
+  "only_profiles_at_local_minimum": [
+    [
+      1,
+      3,
+      3
+    ]
+  ],
+  "best_merge_of_local_optima": 6,
+  "alternative_each_profile": [
+    1,
+    2,
+    4
+  ],
+  "opposite_merge": [
+    5,
+    4,
+    5
+  ],
+  "global_average_bound_and_optimum": 5,
+  "actual_smt_certificate": "independent_balancing_counterexample_actual_smt.json"
+}

@@ -1,0 +1,1 @@
+{"id": "polygon-broad_n7040_h128_first-fit_p0_s20260910_r1", "status": "complete", "actual_n": 7040, "m": 17, "max_bucket": 3844, "U_over_B": 4.636911942098914, "coloring_s": 0.016202400089241564, "valid": true}

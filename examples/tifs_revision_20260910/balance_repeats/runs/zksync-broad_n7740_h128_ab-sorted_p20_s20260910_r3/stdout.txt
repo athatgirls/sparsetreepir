@@ -1,0 +1,1 @@
+{"id": "zksync-broad_n7740_h128_ab-sorted_p20_s20260910_r3", "status": "complete", "actual_n": 7740, "m": 17, "max_bucket": 911, "U_over_B": 1.0, "coloring_s": 2.1361104998504743, "valid": true}

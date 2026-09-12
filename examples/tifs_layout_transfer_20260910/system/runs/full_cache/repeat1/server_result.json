@@ -1,0 +1,15 @@
+{
+  "parameters": null,
+  "hint_matrix_bytes": 0,
+  "shared_matrix_bytes": 0,
+  "bootstrap_header_json_bytes": 61,
+  "schema": 1,
+  "method": "full_cache",
+  "server_pid": 444,
+  "setup_ms": 0.002756,
+  "query_batches_including_warmup": 0,
+  "server_answer_ms_including_warmup": [],
+  "total_read_wire_bytes": 15,
+  "total_written_wire_bytes": 12815,
+  "server_peak_rss_bytes": 4325376
+}

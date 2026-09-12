@@ -1,0 +1,482 @@
+{
+  "height": 6,
+  "slots": [
+    0,
+    32,
+    40,
+    44,
+    48,
+    56,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63
+  ],
+  "shape": [
+    [],
+    [
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ],
+      [
+        [],
+        [
+          [
+            [],
+            [
+              [],
+              []
+            ]
+          ],
+          [
+            [
+              [],
+              []
+            ],
+            [
+              [],
+              []
+            ]
+          ]
+        ]
+      ]
+    ]
+  ],
+  "N": 22,
+  "n": 12,
+  "m": 6,
+  "B": 4,
+  "C": 4,
+  "B_star": 4,
+  "hierarchical_bound": 4,
+  "C_witness": null,
+  "hierarchical_witness": null,
+  "optimum": 5,
+  "witness_loads": [
+    1,
+    3,
+    3,
+    5,
+    5,
+    5
+  ],
+  "root_hex": "40854472ec2ec2050c10b813135e281119da191d83a06151e9a404853dad9935",
+  "actual_interval_forest_matches_abstract_shape": true,
+  "every_occupied_target_proof_verified": true,
+  "records": [
+    {
+      "heap_index": "0x3",
+      "interval": [
+        0,
+        0
+      ],
+      "color": 5,
+      "digest_hex": "beebc6a85e08c755614ca59aceca9375078bb23bbdcb86204b83a27c73a4fae2"
+    },
+    {
+      "heap_index": "0x2",
+      "interval": [
+        1,
+        11
+      ],
+      "color": 0,
+      "digest_hex": "4a7f5d27411bad2598601f9bd41d5c82d3b00b5449f5950ea01087d506dcefbc"
+    },
+    {
+      "heap_index": "0x7",
+      "interval": [
+        1,
+        3
+      ],
+      "color": 2,
+      "digest_hex": "27d6819e673ff25ec40fab49a398211961e541f9fa8dcbda43b3d124de75c009"
+    },
+    {
+      "heap_index": "0xd",
+      "interval": [
+        1,
+        1
+      ],
+      "color": 5,
+      "digest_hex": "e80ca5700bff459391efcfb842441ba048747a58172ea7255570c44d31b19d14"
+    },
+    {
+      "heap_index": "0xc",
+      "interval": [
+        2,
+        3
+      ],
+      "color": 4,
+      "digest_hex": "d86c575eea08788caabb1b9c01b9b58b7e52c86b1dbcb79ba60eabc97ff70cc9"
+    },
+    {
+      "heap_index": "0x1b",
+      "interval": [
+        2,
+        2
+      ],
+      "color": 5,
+      "digest_hex": "040b9cb3151ecddae6c61abedd630f99a606223d8c87c759d6d2e8295a0f3fe3"
+    },
+    {
+      "heap_index": "0x1a",
+      "interval": [
+        3,
+        3
+      ],
+      "color": 5,
+      "digest_hex": "9c384d69b15db42645f2643a51fa0897360008043f437adf2efb411747b7cba5"
+    },
+    {
+      "heap_index": "0x6",
+      "interval": [
+        4,
+        11
+      ],
+      "color": 5,
+      "digest_hex": "c251fb897b3e24599d9bef1591710d0400924b194f21b555bfa5d6c68e69ebb3"
+    },
+    {
+      "heap_index": "0xf",
+      "interval": [
+        4,
+        4
+      ],
+      "color": 2,
+      "digest_hex": "f8452076a916417d19a992e42a43fa3cb37eb11e705f60470b068a8764986b7d"
+    },
+    {
+      "heap_index": "0xe",
+      "interval": [
+        5,
+        11
+      ],
+      "color": 2,
+      "digest_hex": "4cba573d5032d4a0658aa3a6ad7712cdd79f07cef767d3587861b8cb6ab0c669"
+    },
+    {
+      "heap_index": "0x1f",
+      "interval": [
+        5,
+        7
+      ],
+      "color": 1,
+      "digest_hex": "5fe3d1df067d29c468f540e9dc0f18b1ca6f4bd81712629826ddfbe2dfa7d812"
+    },
+    {
+      "heap_index": "0x3d",
+      "interval": [
+        5,
+        5
+      ],
+      "color": 4,
+      "digest_hex": "c66216b6223be4f3c8791defdca48e05be26a1c747a66254d3c5dc02f7028ba0"
+    },
+    {
+      "heap_index": "0x3c",
+      "interval": [
+        6,
+        7
+      ],
+      "color": 3,
+      "digest_hex": "f4d591c216e003163e3bb5bf0212a54d12c82de89d98291bb3c654c1ed286181"
+    },
+    {
+      "heap_index": "0x7b",
+      "interval": [
+        6,
+        6
+      ],
+      "color": 4,
+      "digest_hex": "3c36834bfb29723cef01a4d18a97995786b7252ba8872e891da4b0b7efce48a7"
+    },
+    {
+      "heap_index": "0x7a",
+      "interval": [
+        7,
+        7
+      ],
+      "color": 4,
+      "digest_hex": "989eb1c710bbb9f11e224a0c7c467da0f69330ab6dac8724793e1b9c09bcd87d"
+    },
+    {
+      "heap_index": "0x1e",
+      "interval": [
+        8,
+        11
+      ],
+      "color": 4,
+      "digest_hex": "57c1ae0372c9823c34fa92fe5e41655652cf7e6d01c0f163e2d753ca2e4024b0"
+    },
+    {
+      "heap_index": "0x3f",
+      "interval": [
+        8,
+        9
+      ],
+      "color": 1,
+      "digest_hex": "c098cdf74c220332f7c4047fbf563cfca4dc3f24201566fd6b4bbcfb2cdb5467"
+    },
+    {
+      "heap_index": "0x7d",
+      "interval": [
+        8,
+        8
+      ],
+      "color": 3,
+      "digest_hex": "71a433a6ba024c50010bc6cac88cf78fe15581d51b28b71d90dcc8652ebeda0f"
+    },
+    {
+      "heap_index": "0x7c",
+      "interval": [
+        9,
+        9
+      ],
+      "color": 3,
+      "digest_hex": "b7eac9306b908f71c6138ca8a51fff247fba62d37fe005f52f3690498088dc68"
+    },
+    {
+      "heap_index": "0x3e",
+      "interval": [
+        10,
+        11
+      ],
+      "color": 1,
+      "digest_hex": "eaa620df058ceab8ac6f843075c72918ffde47ae21e71edfdeaf04a2ce1859b5"
+    },
+    {
+      "heap_index": "0x7f",
+      "interval": [
+        10,
+        10
+      ],
+      "color": 3,
+      "digest_hex": "dee1978a8e9e64dcac992f5ebb6929594d92159d7c5976fbc41b9d267d7c7c92"
+    },
+    {
+      "heap_index": "0x7e",
+      "interval": [
+        11,
+        11
+      ],
+      "color": 3,
+      "digest_hex": "37376e8c4901d987c3a3366007e5ad70a75eeb4b75476b6f980c47cd8d9490fc"
+    }
+  ],
+  "proofs": [
+    {
+      "slot": 0,
+      "levels": [
+        5
+      ],
+      "colors": [
+        5
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 32,
+      "levels": [
+        3,
+        4,
+        5
+      ],
+      "colors": [
+        5,
+        2,
+        0
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 40,
+      "levels": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "colors": [
+        5,
+        4,
+        2,
+        0
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 44,
+      "levels": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "colors": [
+        5,
+        4,
+        2,
+        0
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 48,
+      "levels": [
+        3,
+        4,
+        5
+      ],
+      "colors": [
+        2,
+        5,
+        0
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 56,
+      "levels": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "colors": [
+        4,
+        1,
+        2,
+        5,
+        0
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 58,
+      "levels": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "colors": [
+        4,
+        3,
+        1,
+        2,
+        5,
+        0
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 59,
+      "levels": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "colors": [
+        4,
+        3,
+        1,
+        2,
+        5,
+        0
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 60,
+      "levels": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "colors": [
+        3,
+        1,
+        4,
+        2,
+        5,
+        0
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 61,
+      "levels": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "colors": [
+        3,
+        1,
+        4,
+        2,
+        5,
+        0
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 62,
+      "levels": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "colors": [
+        3,
+        1,
+        4,
+        2,
+        5,
+        0
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 63,
+      "levels": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "colors": [
+        3,
+        1,
+        4,
+        2,
+        5,
+        0
+      ],
+      "root_verified": true
+    }
+  ]
+}

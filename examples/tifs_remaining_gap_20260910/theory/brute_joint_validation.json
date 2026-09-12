@@ -1,0 +1,1646 @@
+[
+  {
+    "tree": [
+      [],
+      []
+    ],
+    "context": -1,
+    "terminal": 0,
+    "k": 1,
+    "formula_J": 2,
+    "independent_brute_J": 2,
+    "search_visits": 4
+  },
+  {
+    "tree": [
+      [],
+      []
+    ],
+    "context": -1,
+    "terminal": 1,
+    "k": 1,
+    "formula_J": 2,
+    "independent_brute_J": 2,
+    "search_visits": 4
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        []
+      ]
+    ],
+    "context": -1,
+    "terminal": 0,
+    "k": 1,
+    "formula_J": 3,
+    "independent_brute_J": 3,
+    "search_visits": 10
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        []
+      ]
+    ],
+    "context": -1,
+    "terminal": 1,
+    "k": 1,
+    "formula_J": 2,
+    "independent_brute_J": 2,
+    "search_visits": 8
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        []
+      ]
+    ],
+    "context": -1,
+    "terminal": 2,
+    "k": 2,
+    "formula_J": 4,
+    "independent_brute_J": 4,
+    "search_visits": 8
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        []
+      ]
+    ],
+    "context": 1,
+    "terminal": 2,
+    "k": 1,
+    "formula_J": 2,
+    "independent_brute_J": 2,
+    "search_visits": 4
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        []
+      ]
+    ],
+    "context": -1,
+    "terminal": 3,
+    "k": 2,
+    "formula_J": 4,
+    "independent_brute_J": 4,
+    "search_visits": 8
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        []
+      ]
+    ],
+    "context": 1,
+    "terminal": 3,
+    "k": 1,
+    "formula_J": 2,
+    "independent_brute_J": 2,
+    "search_visits": 4
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": -1,
+    "terminal": 0,
+    "k": 1,
+    "formula_J": 4,
+    "independent_brute_J": 4,
+    "search_visits": 18
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": -1,
+    "terminal": 1,
+    "k": 1,
+    "formula_J": 2,
+    "independent_brute_J": 2,
+    "search_visits": 12
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": -1,
+    "terminal": 2,
+    "k": 2,
+    "formula_J": 5,
+    "independent_brute_J": 5,
+    "search_visits": 19
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": 1,
+    "terminal": 2,
+    "k": 1,
+    "formula_J": 3,
+    "independent_brute_J": 3,
+    "search_visits": 10
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": -1,
+    "terminal": 3,
+    "k": 2,
+    "formula_J": 4,
+    "independent_brute_J": 4,
+    "search_visits": 25
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": 1,
+    "terminal": 3,
+    "k": 1,
+    "formula_J": 2,
+    "independent_brute_J": 2,
+    "search_visits": 8
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": -1,
+    "terminal": 4,
+    "k": 3,
+    "formula_J": 6,
+    "independent_brute_J": 6,
+    "search_visits": 13
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": 3,
+    "terminal": 4,
+    "k": 1,
+    "formula_J": 2,
+    "independent_brute_J": 2,
+    "search_visits": 4
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": 1,
+    "terminal": 4,
+    "k": 2,
+    "formula_J": 4,
+    "independent_brute_J": 4,
+    "search_visits": 8
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": -1,
+    "terminal": 5,
+    "k": 3,
+    "formula_J": 6,
+    "independent_brute_J": 6,
+    "search_visits": 13
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": 3,
+    "terminal": 5,
+    "k": 1,
+    "formula_J": 2,
+    "independent_brute_J": 2,
+    "search_visits": 4
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": 1,
+    "terminal": 5,
+    "k": 2,
+    "formula_J": 4,
+    "independent_brute_J": 4,
+    "search_visits": 8
+  },
+  {
+    "tree": [
+      [
+        [],
+        []
+      ],
+      [
+        [],
+        []
+      ]
+    ],
+    "context": -1,
+    "terminal": 0,
+    "k": 1,
+    "formula_J": 3,
+    "independent_brute_J": 3,
+    "search_visits": 12
+  },
+  {
+    "tree": [
+      [
+        [],
+        []
+      ],
+      [
+        [],
+        []
+      ]
+    ],
+    "context": -1,
+    "terminal": 1,
+    "k": 2,
+    "formula_J": 6,
+    "independent_brute_J": 6,
+    "search_visits": 12
+  },
+  {
+    "tree": [
+      [
+        [],
+        []
+      ],
+      [
+        [],
+        []
+      ]
+    ],
+    "context": 0,
+    "terminal": 1,
+    "k": 1,
+    "formula_J": 2,
+    "independent_brute_J": 2,
+    "search_visits": 4
+  },
+  {
+    "tree": [
+      [
+        [],
+        []
+      ],
+      [
+        [],
+        []
+      ]
+    ],
+    "context": -1,
+    "terminal": 2,
+    "k": 2,
+    "formula_J": 6,
+    "independent_brute_J": 6,
+    "search_visits": 12
+  },
+  {
+    "tree": [
+      [
+        [],
+        []
+      ],
+      [
+        [],
+        []
+      ]
+    ],
+    "context": 0,
+    "terminal": 2,
+    "k": 1,
+    "formula_J": 2,
+    "independent_brute_J": 2,
+    "search_visits": 4
+  },
+  {
+    "tree": [
+      [
+        [],
+        []
+      ],
+      [
+        [],
+        []
+      ]
+    ],
+    "context": -1,
+    "terminal": 3,
+    "k": 1,
+    "formula_J": 3,
+    "independent_brute_J": 3,
+    "search_visits": 21
+  },
+  {
+    "tree": [
+      [
+        [],
+        []
+      ],
+      [
+        [],
+        []
+      ]
+    ],
+    "context": -1,
+    "terminal": 4,
+    "k": 2,
+    "formula_J": 6,
+    "independent_brute_J": 6,
+    "search_visits": 12
+  },
+  {
+    "tree": [
+      [
+        [],
+        []
+      ],
+      [
+        [],
+        []
+      ]
+    ],
+    "context": 3,
+    "terminal": 4,
+    "k": 1,
+    "formula_J": 2,
+    "independent_brute_J": 2,
+    "search_visits": 4
+  },
+  {
+    "tree": [
+      [
+        [],
+        []
+      ],
+      [
+        [],
+        []
+      ]
+    ],
+    "context": -1,
+    "terminal": 5,
+    "k": 2,
+    "formula_J": 6,
+    "independent_brute_J": 6,
+    "search_visits": 12
+  },
+  {
+    "tree": [
+      [
+        [],
+        []
+      ],
+      [
+        [],
+        []
+      ]
+    ],
+    "context": 3,
+    "terminal": 5,
+    "k": 1,
+    "formula_J": 2,
+    "independent_brute_J": 2,
+    "search_visits": 4
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        [
+          [],
+          [
+            [],
+            []
+          ]
+        ]
+      ]
+    ],
+    "context": -1,
+    "terminal": 0,
+    "k": 1,
+    "formula_J": 5,
+    "independent_brute_J": 5,
+    "search_visits": 31
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        [
+          [],
+          [
+            [],
+            []
+          ]
+        ]
+      ]
+    ],
+    "context": -1,
+    "terminal": 1,
+    "k": 1,
+    "formula_J": 2,
+    "independent_brute_J": 2,
+    "search_visits": 16
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        [
+          [],
+          [
+            [],
+            []
+          ]
+        ]
+      ]
+    ],
+    "context": -1,
+    "terminal": 2,
+    "k": 2,
+    "formula_J": 6,
+    "independent_brute_J": 6,
+    "search_visits": 38
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        [
+          [],
+          [
+            [],
+            []
+          ]
+        ]
+      ]
+    ],
+    "context": 1,
+    "terminal": 2,
+    "k": 1,
+    "formula_J": 4,
+    "independent_brute_J": 4,
+    "search_visits": 18
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        [
+          [],
+          [
+            [],
+            []
+          ]
+        ]
+      ]
+    ],
+    "context": -1,
+    "terminal": 3,
+    "k": 2,
+    "formula_J": 4,
+    "independent_brute_J": 4,
+    "search_visits": 38
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        [
+          [],
+          [
+            [],
+            []
+          ]
+        ]
+      ]
+    ],
+    "context": 1,
+    "terminal": 3,
+    "k": 1,
+    "formula_J": 2,
+    "independent_brute_J": 2,
+    "search_visits": 12
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        [
+          [],
+          [
+            [],
+            []
+          ]
+        ]
+      ]
+    ],
+    "context": -1,
+    "terminal": 4,
+    "k": 3,
+    "formula_J": 7,
+    "independent_brute_J": 7,
+    "search_visits": 52
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        [
+          [],
+          [
+            [],
+            []
+          ]
+        ]
+      ]
+    ],
+    "context": 3,
+    "terminal": 4,
+    "k": 1,
+    "formula_J": 3,
+    "independent_brute_J": 3,
+    "search_visits": 10
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        [
+          [],
+          [
+            [],
+            []
+          ]
+        ]
+      ]
+    ],
+    "context": 1,
+    "terminal": 4,
+    "k": 2,
+    "formula_J": 5,
+    "independent_brute_J": 5,
+    "search_visits": 19
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        [
+          [],
+          [
+            [],
+            []
+          ]
+        ]
+      ]
+    ],
+    "context": -1,
+    "terminal": 5,
+    "k": 3,
+    "formula_J": 6,
+    "independent_brute_J": 6,
+    "search_visits": 94
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        [
+          [],
+          [
+            [],
+            []
+          ]
+        ]
+      ]
+    ],
+    "context": 3,
+    "terminal": 5,
+    "k": 1,
+    "formula_J": 2,
+    "independent_brute_J": 2,
+    "search_visits": 8
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        [
+          [],
+          [
+            [],
+            []
+          ]
+        ]
+      ]
+    ],
+    "context": 1,
+    "terminal": 5,
+    "k": 2,
+    "formula_J": 4,
+    "independent_brute_J": 4,
+    "search_visits": 25
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        [
+          [],
+          [
+            [],
+            []
+          ]
+        ]
+      ]
+    ],
+    "context": -1,
+    "terminal": 6,
+    "k": 4,
+    "formula_J": 8,
+    "independent_brute_J": 8,
+    "search_visits": 19
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        [
+          [],
+          [
+            [],
+            []
+          ]
+        ]
+      ]
+    ],
+    "context": 5,
+    "terminal": 6,
+    "k": 1,
+    "formula_J": 2,
+    "independent_brute_J": 2,
+    "search_visits": 4
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        [
+          [],
+          [
+            [],
+            []
+          ]
+        ]
+      ]
+    ],
+    "context": 3,
+    "terminal": 6,
+    "k": 2,
+    "formula_J": 4,
+    "independent_brute_J": 4,
+    "search_visits": 8
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        [
+          [],
+          [
+            [],
+            []
+          ]
+        ]
+      ]
+    ],
+    "context": 1,
+    "terminal": 6,
+    "k": 3,
+    "formula_J": 6,
+    "independent_brute_J": 6,
+    "search_visits": 13
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        [
+          [],
+          [
+            [],
+            []
+          ]
+        ]
+      ]
+    ],
+    "context": -1,
+    "terminal": 7,
+    "k": 4,
+    "formula_J": 8,
+    "independent_brute_J": 8,
+    "search_visits": 19
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        [
+          [],
+          [
+            [],
+            []
+          ]
+        ]
+      ]
+    ],
+    "context": 5,
+    "terminal": 7,
+    "k": 1,
+    "formula_J": 2,
+    "independent_brute_J": 2,
+    "search_visits": 4
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        [
+          [],
+          [
+            [],
+            []
+          ]
+        ]
+      ]
+    ],
+    "context": 3,
+    "terminal": 7,
+    "k": 2,
+    "formula_J": 4,
+    "independent_brute_J": 4,
+    "search_visits": 8
+  },
+  {
+    "tree": [
+      [],
+      [
+        [],
+        [
+          [],
+          [
+            [],
+            []
+          ]
+        ]
+      ]
+    ],
+    "context": 1,
+    "terminal": 7,
+    "k": 3,
+    "formula_J": 6,
+    "independent_brute_J": 6,
+    "search_visits": 13
+  },
+  {
+    "tree": [
+      [],
+      [
+        [
+          [],
+          []
+        ],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": -1,
+    "terminal": 0,
+    "k": 1,
+    "formula_J": 5,
+    "independent_brute_J": 5,
+    "search_visits": 34
+  },
+  {
+    "tree": [
+      [],
+      [
+        [
+          [],
+          []
+        ],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": -1,
+    "terminal": 1,
+    "k": 1,
+    "formula_J": 2,
+    "independent_brute_J": 2,
+    "search_visits": 16
+  },
+  {
+    "tree": [
+      [],
+      [
+        [
+          [],
+          []
+        ],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": -1,
+    "terminal": 2,
+    "k": 2,
+    "formula_J": 5,
+    "independent_brute_J": 5,
+    "search_visits": 27
+  },
+  {
+    "tree": [
+      [],
+      [
+        [
+          [],
+          []
+        ],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": 1,
+    "terminal": 2,
+    "k": 1,
+    "formula_J": 3,
+    "independent_brute_J": 3,
+    "search_visits": 12
+  },
+  {
+    "tree": [
+      [],
+      [
+        [
+          [],
+          []
+        ],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": -1,
+    "terminal": 3,
+    "k": 3,
+    "formula_J": 8,
+    "independent_brute_J": 8,
+    "search_visits": 17
+  },
+  {
+    "tree": [
+      [],
+      [
+        [
+          [],
+          []
+        ],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": 2,
+    "terminal": 3,
+    "k": 1,
+    "formula_J": 2,
+    "independent_brute_J": 2,
+    "search_visits": 4
+  },
+  {
+    "tree": [
+      [],
+      [
+        [
+          [],
+          []
+        ],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": 1,
+    "terminal": 3,
+    "k": 2,
+    "formula_J": 6,
+    "independent_brute_J": 6,
+    "search_visits": 12
+  },
+  {
+    "tree": [
+      [],
+      [
+        [
+          [],
+          []
+        ],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": -1,
+    "terminal": 4,
+    "k": 3,
+    "formula_J": 8,
+    "independent_brute_J": 8,
+    "search_visits": 17
+  },
+  {
+    "tree": [
+      [],
+      [
+        [
+          [],
+          []
+        ],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": 2,
+    "terminal": 4,
+    "k": 1,
+    "formula_J": 2,
+    "independent_brute_J": 2,
+    "search_visits": 4
+  },
+  {
+    "tree": [
+      [],
+      [
+        [
+          [],
+          []
+        ],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": 1,
+    "terminal": 4,
+    "k": 2,
+    "formula_J": 6,
+    "independent_brute_J": 6,
+    "search_visits": 12
+  },
+  {
+    "tree": [
+      [],
+      [
+        [
+          [],
+          []
+        ],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": -1,
+    "terminal": 5,
+    "k": 2,
+    "formula_J": 5,
+    "independent_brute_J": 5,
+    "search_visits": 56
+  },
+  {
+    "tree": [
+      [],
+      [
+        [
+          [],
+          []
+        ],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": 1,
+    "terminal": 5,
+    "k": 1,
+    "formula_J": 3,
+    "independent_brute_J": 3,
+    "search_visits": 21
+  },
+  {
+    "tree": [
+      [],
+      [
+        [
+          [],
+          []
+        ],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": -1,
+    "terminal": 6,
+    "k": 3,
+    "formula_J": 8,
+    "independent_brute_J": 8,
+    "search_visits": 17
+  },
+  {
+    "tree": [
+      [],
+      [
+        [
+          [],
+          []
+        ],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": 5,
+    "terminal": 6,
+    "k": 1,
+    "formula_J": 2,
+    "independent_brute_J": 2,
+    "search_visits": 4
+  },
+  {
+    "tree": [
+      [],
+      [
+        [
+          [],
+          []
+        ],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": 1,
+    "terminal": 6,
+    "k": 2,
+    "formula_J": 6,
+    "independent_brute_J": 6,
+    "search_visits": 12
+  },
+  {
+    "tree": [
+      [],
+      [
+        [
+          [],
+          []
+        ],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": -1,
+    "terminal": 7,
+    "k": 3,
+    "formula_J": 8,
+    "independent_brute_J": 8,
+    "search_visits": 17
+  },
+  {
+    "tree": [
+      [],
+      [
+        [
+          [],
+          []
+        ],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": 5,
+    "terminal": 7,
+    "k": 1,
+    "formula_J": 2,
+    "independent_brute_J": 2,
+    "search_visits": 4
+  },
+  {
+    "tree": [
+      [],
+      [
+        [
+          [],
+          []
+        ],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": 1,
+    "terminal": 7,
+    "k": 2,
+    "formula_J": 6,
+    "independent_brute_J": 6,
+    "search_visits": 12
+  },
+  {
+    "tree": [
+      [
+        [],
+        []
+      ],
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": -1,
+    "terminal": 0,
+    "k": 1,
+    "formula_J": 4,
+    "independent_brute_J": 4,
+    "search_visits": 20
+  },
+  {
+    "tree": [
+      [
+        [],
+        []
+      ],
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": -1,
+    "terminal": 1,
+    "k": 2,
+    "formula_J": 7,
+    "independent_brute_J": 7,
+    "search_visits": 23
+  },
+  {
+    "tree": [
+      [
+        [],
+        []
+      ],
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": 0,
+    "terminal": 1,
+    "k": 1,
+    "formula_J": 2,
+    "independent_brute_J": 2,
+    "search_visits": 4
+  },
+  {
+    "tree": [
+      [
+        [],
+        []
+      ],
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": -1,
+    "terminal": 2,
+    "k": 2,
+    "formula_J": 7,
+    "independent_brute_J": 7,
+    "search_visits": 23
+  },
+  {
+    "tree": [
+      [
+        [],
+        []
+      ],
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": 0,
+    "terminal": 2,
+    "k": 1,
+    "formula_J": 2,
+    "independent_brute_J": 2,
+    "search_visits": 4
+  },
+  {
+    "tree": [
+      [
+        [],
+        []
+      ],
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": -1,
+    "terminal": 3,
+    "k": 1,
+    "formula_J": 3,
+    "independent_brute_J": 3,
+    "search_visits": 32
+  },
+  {
+    "tree": [
+      [
+        [],
+        []
+      ],
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": -1,
+    "terminal": 4,
+    "k": 2,
+    "formula_J": 7,
+    "independent_brute_J": 7,
+    "search_visits": 27
+  },
+  {
+    "tree": [
+      [
+        [],
+        []
+      ],
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": 3,
+    "terminal": 4,
+    "k": 1,
+    "formula_J": 3,
+    "independent_brute_J": 3,
+    "search_visits": 10
+  },
+  {
+    "tree": [
+      [
+        [],
+        []
+      ],
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": -1,
+    "terminal": 5,
+    "k": 2,
+    "formula_J": 6,
+    "independent_brute_J": 6,
+    "search_visits": 81
+  },
+  {
+    "tree": [
+      [
+        [],
+        []
+      ],
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": 3,
+    "terminal": 5,
+    "k": 1,
+    "formula_J": 2,
+    "independent_brute_J": 2,
+    "search_visits": 8
+  },
+  {
+    "tree": [
+      [
+        [],
+        []
+      ],
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": -1,
+    "terminal": 6,
+    "k": 3,
+    "formula_J": 8,
+    "independent_brute_J": 8,
+    "search_visits": 19
+  },
+  {
+    "tree": [
+      [
+        [],
+        []
+      ],
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": 5,
+    "terminal": 6,
+    "k": 1,
+    "formula_J": 2,
+    "independent_brute_J": 2,
+    "search_visits": 4
+  },
+  {
+    "tree": [
+      [
+        [],
+        []
+      ],
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": 3,
+    "terminal": 6,
+    "k": 2,
+    "formula_J": 4,
+    "independent_brute_J": 4,
+    "search_visits": 8
+  },
+  {
+    "tree": [
+      [
+        [],
+        []
+      ],
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": -1,
+    "terminal": 7,
+    "k": 3,
+    "formula_J": 8,
+    "independent_brute_J": 8,
+    "search_visits": 19
+  },
+  {
+    "tree": [
+      [
+        [],
+        []
+      ],
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": 5,
+    "terminal": 7,
+    "k": 1,
+    "formula_J": 2,
+    "independent_brute_J": 2,
+    "search_visits": 4
+  },
+  {
+    "tree": [
+      [
+        [],
+        []
+      ],
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    "context": 3,
+    "terminal": 7,
+    "k": 2,
+    "formula_J": 4,
+    "independent_brute_J": 4,
+    "search_visits": 8
+  }
+]

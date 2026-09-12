@@ -1,0 +1,1 @@
+{"id": "uniform_n10000_h128_first-fit_p0_s20260910_r1", "status": "complete", "actual_n": 10000, "m": 18, "max_bucket": 5588, "U_over_B": 5.02970297029703, "coloring_s": 0.023706299951300025, "valid": true}

@@ -1,0 +1,2 @@
+Working with: n=1024; db size=2^15 (l=234, m=228); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.063300 MB

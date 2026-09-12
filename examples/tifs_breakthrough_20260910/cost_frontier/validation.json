@@ -1,0 +1,208 @@
+{
+  "schema": 1,
+  "scope": "Analytical matrix-byte counts; no new timing/network samples. Public-A seed variant assumes correct independent PRG streams and excludes all framing/parameter serialization. The frozen TCP horizon uses measured byte counts, extrapolated without further execution.",
+  "security_table_sha256": "b3db22f70c038f741dacda0aec7a531397a32c4bfca0df4a98156f37adf089ca",
+  "sources": [
+    {
+      "path": "examples\\tifs_revision_20260910\\verified_backend\\fuel_h128\\first_fit\\repeat0\\manifest.json",
+      "sha256": "f98e4244e5c0a9cdf021b7eb51f39207ded486af32a0c017ca02f7144ec497d6"
+    },
+    {
+      "path": "examples\\tifs_revision_20260910\\verified_backend\\fuel_h128\\activebalance\\repeat0\\manifest.json",
+      "sha256": "df9ca66275263c8ee4ee8902ba95bbc6e08be8b40574a942a7fb9f33ef242b25"
+    },
+    {
+      "path": "examples\\tifs_revision_20260910\\verified_backend\\fuel_h128\\nonempty_depth\\repeat0\\manifest.json",
+      "sha256": "1c6f5e3f34b9a23c4299f151f9500ce2f386bd6232f758a9f458856dd52f73d9"
+    },
+    {
+      "path": "examples\\tifs_revision_20260910\\verified_backend\\polygon-broad_h128\\first_fit\\repeat0\\manifest.json",
+      "sha256": "aeee23bda4aeeab9317e75e93717db8a665c2ec00d4685d5cf92222a8c877674"
+    },
+    {
+      "path": "examples\\tifs_revision_20260910\\verified_backend\\polygon-broad_h128\\activebalance\\repeat0\\manifest.json",
+      "sha256": "1fc3cbdecdca5284d1dd1bf71d0f313bf26012ed505ffbd0df016fe94971dbf0"
+    },
+    {
+      "path": "examples\\tifs_revision_20260910\\verified_backend\\polygon-broad_h128\\nonempty_depth\\repeat0\\manifest.json",
+      "sha256": "fb6b5e7f4dfc9c2c36ad9920ba8bee8ee705a6ef3efcfa92c920d00a1324b933"
+    },
+    {
+      "path": "examples\\tifs_revision_20260910\\verified_backend\\polygon-multi_h128\\first_fit\\repeat0\\manifest.json",
+      "sha256": "73ede92caa3c5a58364e0a3140e23bfd22ad1bbe7601c4890571dcaaefc97f01"
+    },
+    {
+      "path": "examples\\tifs_revision_20260910\\verified_backend\\polygon-multi_h128\\activebalance\\repeat0\\manifest.json",
+      "sha256": "be0934429bb04b27f8d30196dd2e25396f9ba5baa33284e85d481605032a6f0f"
+    },
+    {
+      "path": "examples\\tifs_revision_20260910\\verified_backend\\polygon-multi_h128\\nonempty_depth\\repeat0\\manifest.json",
+      "sha256": "7dda239a8402ac3eb767e3a7f761958f7558c24c15eb9c2239f29d632ca3d7b1"
+    },
+    {
+      "path": "examples\\tifs_revision_20260910\\verified_backend\\polygon-recent_h128\\first_fit\\repeat0\\manifest.json",
+      "sha256": "17f7d1aedae23b79f657a64804475c2a11bc1277c8c47de556800f6328dad8cf"
+    },
+    {
+      "path": "examples\\tifs_revision_20260910\\verified_backend\\polygon-recent_h128\\activebalance\\repeat0\\manifest.json",
+      "sha256": "f0012652a3b43c9f52f9985306d7b44dce87839a73cd277b6be28c6e8b44d324"
+    },
+    {
+      "path": "examples\\tifs_revision_20260910\\verified_backend\\polygon-recent_h128\\nonempty_depth\\repeat0\\manifest.json",
+      "sha256": "2d6975ea49d62d75d6315f39db9570038a49fd61afdb8efae90bdaf48eaa1fc2"
+    },
+    {
+      "path": "examples\\tifs_revision_20260910\\verified_backend\\zksync-broad_h128\\first_fit\\repeat0\\manifest.json",
+      "sha256": "eee480c6e0364651ba5a931dffb8ba7dda7a064c3587e5645c5695097024b66d"
+    },
+    {
+      "path": "examples\\tifs_revision_20260910\\verified_backend\\zksync-broad_h128\\activebalance\\repeat0\\manifest.json",
+      "sha256": "8bfd99b9503a94d2f3e67bb3474703f08706b76ca91687d1cd2417bf574d2562"
+    },
+    {
+      "path": "examples\\tifs_revision_20260910\\verified_backend\\zksync-broad_h128\\nonempty_depth\\repeat0\\manifest.json",
+      "sha256": "43a398a60af980ab809f8ccebebabc814d1f3dae988cdd72c5b25677c2750a31"
+    },
+    {
+      "path": "examples\\tifs_revision_20260910\\verified_backend\\zksync-sample_h128\\first_fit\\repeat0\\manifest.json",
+      "sha256": "2fbb2f221ddde2d2f77087fb27f2ddef1e282975ce2198584ac117bf31c3b234"
+    },
+    {
+      "path": "examples\\tifs_revision_20260910\\verified_backend\\zksync-sample_h128\\activebalance\\repeat0\\manifest.json",
+      "sha256": "23faaa49b980f4b8a7cb3cf17619e3b9c02991d705aa12509834f0d56d941514"
+    },
+    {
+      "path": "examples\\tifs_revision_20260910\\verified_backend\\zksync-sample_h128\\nonempty_depth\\repeat0\\manifest.json",
+      "sha256": "2e7409b41cac01e690b9c50fa2ed0aba479cc1198565f26f14e6f49c8ed63048"
+    },
+    {
+      "path": "examples\\tifs_revision_20260910\\ct_application\\runs_verified_evidence\\publisher\\first_fit\\server_manifest.json",
+      "sha256": "b8616bf42591d45e8d4a607ff2c8c8b378541364f8f5af2d6f59d1dbfba20977"
+    },
+    {
+      "path": "examples\\tifs_revision_20260910\\ct_application\\runs_verified_evidence\\publisher\\activebalance\\server_manifest.json",
+      "sha256": "9aa6a1c1d7bfe6ff8f6402e3ed708e7d03082c2161532780499055dd6632b17d"
+    },
+    {
+      "path": "examples\\tifs_revision_20260910\\ct_application\\runs_verified_evidence\\publisher\\nonempty_depth\\server_manifest.json",
+      "sha256": "7c6f4a3c6ea7c2b55421b655300de82368f0b09df95b6a2aedea62bf1e47a89a"
+    }
+  ],
+  "frozen_validation": [
+    {
+      "dataset": "Fuel vectors",
+      "method": "first_fit",
+      "checked_frozen_process_rows": 5,
+      "all_exact": true
+    },
+    {
+      "dataset": "Fuel vectors",
+      "method": "activebalance",
+      "checked_frozen_process_rows": 5,
+      "all_exact": true
+    },
+    {
+      "dataset": "Fuel vectors",
+      "method": "nonempty_depth",
+      "checked_frozen_process_rows": 5,
+      "all_exact": true
+    },
+    {
+      "dataset": "Polygon broad",
+      "method": "first_fit",
+      "checked_frozen_process_rows": 5,
+      "all_exact": true
+    },
+    {
+      "dataset": "Polygon broad",
+      "method": "activebalance",
+      "checked_frozen_process_rows": 5,
+      "all_exact": true
+    },
+    {
+      "dataset": "Polygon broad",
+      "method": "nonempty_depth",
+      "checked_frozen_process_rows": 5,
+      "all_exact": true
+    },
+    {
+      "dataset": "Polygon multi",
+      "method": "first_fit",
+      "checked_frozen_process_rows": 5,
+      "all_exact": true
+    },
+    {
+      "dataset": "Polygon multi",
+      "method": "activebalance",
+      "checked_frozen_process_rows": 5,
+      "all_exact": true
+    },
+    {
+      "dataset": "Polygon multi",
+      "method": "nonempty_depth",
+      "checked_frozen_process_rows": 5,
+      "all_exact": true
+    },
+    {
+      "dataset": "Polygon recent",
+      "method": "first_fit",
+      "checked_frozen_process_rows": 5,
+      "all_exact": true
+    },
+    {
+      "dataset": "Polygon recent",
+      "method": "activebalance",
+      "checked_frozen_process_rows": 5,
+      "all_exact": true
+    },
+    {
+      "dataset": "Polygon recent",
+      "method": "nonempty_depth",
+      "checked_frozen_process_rows": 5,
+      "all_exact": true
+    },
+    {
+      "dataset": "ZKsync broad",
+      "method": "first_fit",
+      "checked_frozen_process_rows": 5,
+      "all_exact": true
+    },
+    {
+      "dataset": "ZKsync broad",
+      "method": "activebalance",
+      "checked_frozen_process_rows": 5,
+      "all_exact": true
+    },
+    {
+      "dataset": "ZKsync broad",
+      "method": "nonempty_depth",
+      "checked_frozen_process_rows": 5,
+      "all_exact": true
+    },
+    {
+      "dataset": "ZKsync sample",
+      "method": "first_fit",
+      "checked_frozen_process_rows": 5,
+      "all_exact": true
+    },
+    {
+      "dataset": "ZKsync sample",
+      "method": "activebalance",
+      "checked_frozen_process_rows": 5,
+      "all_exact": true
+    },
+    {
+      "dataset": "ZKsync sample",
+      "method": "nonempty_depth",
+      "checked_frozen_process_rows": 5,
+      "all_exact": true
+    }
+  ],
+  "minimum_long_record_hint_bytes_per_nonempty_bucket": 106496,
+  "minimum_hint_proof": "For the full uncompressed native hint matrix: pinned security table has p<=991; a 256-bit record needs >=26 field elements. Each nonempty bucket needs L>=26. Its L x 1024 32-bit hint therefore occupies >=106496 bytes, regardless of rectangular dimensions. This is not a lower bound for compressed hints, shared-hint batching or other PIR schemes.",
+  "dominance_rule": "With a fixed snapshot, totalBytes(Q)=bootstrap+Q*online. If bootstrap>=fullCache and online>0, increasing Q cannot produce a bandwidth break-even. This is not a claim about other PIR protocols or dynamic authenticated updates.",
+  "all_seven_three_method_minimum_hints_exceed_cache_payload": true,
+  "rows": 168,
+  "measured_process_rows_reproduced": 90,
+  "script_sha256": "3b96a667926743a021df91cf3d0815a8fe46a7b3de986a7944bff9a402d9a279"
+}

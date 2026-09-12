@@ -1,0 +1,1 @@
+{"id": "comb_n128_h16_hybrid_p2_s20260910_r1", "status": "complete", "actual_n": 128, "m": 16, "max_bucket": 17, "U_over_B": 1.0625, "coloring_s": 0.02883680013474077, "valid": true}

@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "scope": "Independent Python certificate checks against the frozen original input; no routing rerun or benchmark.",
+  "maximum_matching_lower_bound": 16,
+  "hall_upper_bound": 16,
+  "therefore_exact_maximum_matching": 16,
+  "padded_left_count": 17,
+  "real_needed_exact_matching": 12,
+  "hall_real_record_count": 7,
+  "hall_dummy_record_count": 4,
+  "original_input_result_command_hashes_unchanged": true
+}

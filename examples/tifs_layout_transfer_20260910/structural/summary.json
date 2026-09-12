@@ -1,0 +1,316 @@
+{
+  "status": "pass",
+  "scope": {
+    "base": "All 1323 unlabeled unordered full-binary skeletons, 2–14 leaves, m≤6",
+    "holdout": "All 2115 further skeletons, 15–16 leaves, m≤6",
+    "orientation": "One frozen source-canonical orientation per shape",
+    "weighting": "Each shape has weight one; cohorts remain separate"
+  },
+  "definitions": {
+    "absolute_gap": "U−OPT, integer records",
+    "relative_gap": "(U−OPT)/OPT",
+    "ALG_over_OPT": "U/OPT",
+    "hit": "U=OPT"
+  },
+  "methods": [
+    {
+      "cohort": "base",
+      "method": "First-fit",
+      "shapes": 1323,
+      "OPT_attained": 96,
+      "failures": 1227,
+      "hit_fraction": 0.07256235827664399,
+      "mean_absolute_gap": 2.054421768707483,
+      "max_absolute_gap": 6,
+      "mean_relative_gap": 0.4321563546053342,
+      "max_relative_gap": 1.0,
+      "absolute_gap_counts": {
+        "0": 96,
+        "1": 364,
+        "2": 374,
+        "3": 376,
+        "4": 91,
+        "5": 18,
+        "6": 4
+      }
+    },
+    {
+      "cohort": "base",
+      "method": "AB",
+      "shapes": 1323,
+      "OPT_attained": 1123,
+      "failures": 200,
+      "hit_fraction": 0.8488284202569917,
+      "mean_absolute_gap": 0.15117157974300832,
+      "max_absolute_gap": 1,
+      "mean_relative_gap": 0.03670949861426052,
+      "max_relative_gap": 0.25,
+      "absolute_gap_counts": {
+        "0": 1123,
+        "1": 200
+      }
+    },
+    {
+      "cohort": "base",
+      "method": "AB + pair",
+      "shapes": 1323,
+      "OPT_attained": 1125,
+      "failures": 198,
+      "hit_fraction": 0.8503401360544217,
+      "mean_absolute_gap": 0.14965986394557823,
+      "max_absolute_gap": 1,
+      "mean_relative_gap": 0.036457545981355505,
+      "max_relative_gap": 0.25,
+      "absolute_gap_counts": {
+        "0": 1125,
+        "1": 198
+      }
+    },
+    {
+      "cohort": "base",
+      "method": "AB + 3",
+      "shapes": 1323,
+      "OPT_attained": 1314,
+      "failures": 9,
+      "hit_fraction": 0.9931972789115646,
+      "mean_absolute_gap": 0.006802721088435374,
+      "max_absolute_gap": 1,
+      "mean_relative_gap": 0.0014739229024943311,
+      "max_relative_gap": 0.25,
+      "absolute_gap_counts": {
+        "0": 1314,
+        "1": 9
+      }
+    },
+    {
+      "cohort": "base",
+      "method": "AB + 3→4",
+      "shapes": 1323,
+      "OPT_attained": 1321,
+      "failures": 2,
+      "hit_fraction": 0.99848828420257,
+      "mean_absolute_gap": 0.0015117157974300832,
+      "max_absolute_gap": 1,
+      "mean_relative_gap": 0.0003779289493575208,
+      "max_relative_gap": 0.25,
+      "absolute_gap_counts": {
+        "0": 1321,
+        "1": 2
+      }
+    },
+    {
+      "cohort": "base",
+      "method": "Exact OPT",
+      "shapes": 1323,
+      "OPT_attained": 1323,
+      "failures": 0,
+      "hit_fraction": 1.0,
+      "mean_absolute_gap": 0,
+      "max_absolute_gap": 0,
+      "mean_relative_gap": 0.0,
+      "max_relative_gap": 0.0,
+      "absolute_gap_counts": {
+        "0": 1323
+      }
+    },
+    {
+      "cohort": "holdout",
+      "method": "First-fit",
+      "shapes": 2115,
+      "OPT_attained": 20,
+      "failures": 2095,
+      "hit_fraction": 0.009456264775413711,
+      "mean_absolute_gap": 3.0217494089834513,
+      "max_absolute_gap": 8,
+      "mean_relative_gap": 0.5630710345603962,
+      "max_relative_gap": 1.4,
+      "absolute_gap_counts": {
+        "0": 20,
+        "1": 185,
+        "2": 466,
+        "3": 906,
+        "4": 254,
+        "5": 193,
+        "6": 66,
+        "7": 21,
+        "8": 4
+      }
+    },
+    {
+      "cohort": "holdout",
+      "method": "AB",
+      "shapes": 2115,
+      "OPT_attained": 1780,
+      "failures": 335,
+      "hit_fraction": 0.8416075650118203,
+      "mean_absolute_gap": 0.15839243498817968,
+      "max_absolute_gap": 1,
+      "mean_relative_gap": 0.029282899921197793,
+      "max_relative_gap": 0.2,
+      "absolute_gap_counts": {
+        "0": 1780,
+        "1": 335
+      }
+    },
+    {
+      "cohort": "holdout",
+      "method": "AB + pair",
+      "shapes": 2115,
+      "OPT_attained": 1796,
+      "failures": 319,
+      "hit_fraction": 0.8491725768321513,
+      "mean_absolute_gap": 0.1508274231678487,
+      "max_absolute_gap": 1,
+      "mean_relative_gap": 0.0280220646178093,
+      "max_relative_gap": 0.2,
+      "absolute_gap_counts": {
+        "0": 1796,
+        "1": 319
+      }
+    },
+    {
+      "cohort": "holdout",
+      "method": "AB + 3",
+      "shapes": 2115,
+      "OPT_attained": 2073,
+      "failures": 42,
+      "hit_fraction": 0.9801418439716312,
+      "mean_absolute_gap": 0.019858156028368795,
+      "max_absolute_gap": 1,
+      "mean_relative_gap": 0.003908589440504334,
+      "max_relative_gap": 0.2,
+      "absolute_gap_counts": {
+        "0": 2073,
+        "1": 42
+      }
+    },
+    {
+      "cohort": "holdout",
+      "method": "AB + 3→4",
+      "shapes": 2115,
+      "OPT_attained": 2112,
+      "failures": 3,
+      "hit_fraction": 0.9985815602836879,
+      "mean_absolute_gap": 0.0014184397163120568,
+      "max_absolute_gap": 1,
+      "mean_relative_gap": 0.00026792750197005515,
+      "max_relative_gap": 0.2,
+      "absolute_gap_counts": {
+        "0": 2112,
+        "1": 3
+      }
+    },
+    {
+      "cohort": "holdout",
+      "method": "Exact OPT",
+      "shapes": 2115,
+      "OPT_attained": 2115,
+      "failures": 0,
+      "hit_fraction": 1.0,
+      "mean_absolute_gap": 0,
+      "max_absolute_gap": 0,
+      "mean_relative_gap": 0.0,
+      "max_relative_gap": 0.0,
+      "absolute_gap_counts": {
+        "0": 2115
+      }
+    }
+  ],
+  "remaining_five": [
+    {
+      "cohort": "base",
+      "id": "S0606",
+      "n": 13,
+      "N": 24,
+      "m": 6,
+      "U": 5,
+      "OPT": 4,
+      "absolute_gap": 1,
+      "relative_gap": 0.25,
+      "relative_gap_exact": "1/4",
+      "stop_reason": "no_strict_4_color_improvement"
+    },
+    {
+      "cohort": "base",
+      "id": "S0710",
+      "n": 13,
+      "N": 24,
+      "m": 6,
+      "U": 5,
+      "OPT": 4,
+      "absolute_gap": 1,
+      "relative_gap": 0.25,
+      "relative_gap_exact": "1/4",
+      "stop_reason": "no_strict_4_color_improvement"
+    },
+    {
+      "cohort": "holdout",
+      "id": "H1199",
+      "n": 16,
+      "N": 30,
+      "m": 6,
+      "U": 6,
+      "OPT": 5,
+      "absolute_gap": 1,
+      "relative_gap": 0.2,
+      "relative_gap_exact": "1/5",
+      "stop_reason": "no_strict_4_color_improvement"
+    },
+    {
+      "cohort": "holdout",
+      "id": "H1265",
+      "n": 16,
+      "N": 30,
+      "m": 6,
+      "U": 6,
+      "OPT": 5,
+      "absolute_gap": 1,
+      "relative_gap": 0.2,
+      "relative_gap_exact": "1/5",
+      "stop_reason": "no_strict_4_color_improvement"
+    },
+    {
+      "cohort": "holdout",
+      "id": "H1285",
+      "n": 16,
+      "N": 30,
+      "m": 5,
+      "U": 7,
+      "OPT": 6,
+      "absolute_gap": 1,
+      "relative_gap": 0.16666666666666666,
+      "relative_gap_exact": "1/6",
+      "stop_reason": "no_strict_4_color_improvement"
+    }
+  ],
+  "no_constant_additive_guarantee": "Observed five final failures all have gap one; this is not a universal bound.",
+  "timing": "No new timing measured. Historical timing fields were deliberately not merged or plotted.",
+  "validation": "All 3438 FF layouts cross-checked by independent shape and record-parent depths and pairwise interval disjointness. Base reproduces frozen FF node colors. All frozen algorithm assignments checked for capacity and properness.",
+  "sources": {
+    "base_construction": {
+      "path": "examples/tifs_sufficiency_20260910/construction/base_construction_results.json",
+      "sha256": "2afc4d81d25169d9e9fa4626f51f947b6b7b18a3fc708e2293c2985d243e13fe"
+    },
+    "holdout_construction": {
+      "path": "examples/tifs_sufficiency_20260910/construction/holdout_construction_results.json",
+      "sha256": "5d7b7d34646e93448cb11a32046bc9b7b25743e9fdc41f70d6024c74c0174050"
+    },
+    "base_older_algorithm": {
+      "path": "examples/tifs_remaining_gap_20260910/algorithm/small_shape_algorithm_results.json",
+      "sha256": "136aa72b7a782d41fd0c591a97657494a719a6d6be4e5aa161348ce2f4ad1d94"
+    },
+    "holdout_exact": {
+      "path": "examples/tifs_remaining_gap_20260910/theory/expanded_exact_results.json",
+      "sha256": "9ed63cc78f17f98d85d1c32959757fb66ec3b0ac96b5ad08b4b052a900646383"
+    },
+    "frozen_summary": {
+      "path": "examples/tifs_sufficiency_20260910/construction/summary.json",
+      "sha256": "e2991c177feca01acb156dc6a0c7384ca1407bc1190178ddba8e7ad353744945"
+    },
+    "first_fit_definition": {
+      "path": "scripts/run_height_sparsity_profile_balance_experiment.py",
+      "sha256": "6e13f887cbe283ade74aad6cd2174aa3c1d66001ada2106fc27935b3284f63f5"
+    }
+  },
+  "presentation_script_sha256": "1b6e749272af752f60321f4869a2adb26e502cac88ac0b3ef02d551ebc41a59f"
+}

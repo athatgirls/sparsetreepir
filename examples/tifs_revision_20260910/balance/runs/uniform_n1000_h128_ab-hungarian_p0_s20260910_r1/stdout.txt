@@ -1,0 +1,1 @@
+{"id": "uniform_n1000_h128_ab-hungarian_p0_s20260910_r1", "status": "complete", "actual_n": 1000, "m": 14, "max_bucket": 566, "U_over_B": 3.958041958041958, "coloring_s": 0.003359600086696446, "valid": true}

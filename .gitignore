@@ -1,28 +1,9 @@
-# Python and local caches
 __pycache__/
-*.py[cod]
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
+*.pyc
 .venv/
-venv/
-
-# Local dependency checkouts and build outputs
-.tools/
-.gocache/
-.gomodcache/
-.gopath/
-.pydeps/
-build/
-external/
-
-# Regenerated layout dumps and logs
-examples/*/layouts/
-examples/*/logs/
-examples/*_layouts/
-*.log
-
-# OS/editor noise
-.DS_Store
-Thumbs.db
-desktop.ini
+/build/
+/output/
+/audit-output/
+*.aux
+*.log.tmp
+.reproduce/

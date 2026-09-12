@@ -1,0 +1,1524 @@
+{
+  "status": "pass",
+  "scope": "Offline recoloring and byte/hash audit; no PIR calls or timing claims.",
+  "witness_sha256": "94dd81f17f4eebc90f3f0822276e72e4f3393642f1133051175b40e0470a56b7",
+  "audit_script_sha256": "6c68e8344c28a2e729ae799527e15d744c76c93a285e914717530f3cbfc39002",
+  "metadata_sha256": "61749225f08de21a230b8759a95c0d71d93c2f68c7b5b3cc6978cba6211aa5f4",
+  "slots_sha256": "ff6d3ac7613e517adf6dbc2501bfb8bcb9bd078740db0e95e7fadea5c48fa1dc",
+  "payload_sha256": {
+    "examples\\tifs_revision_20260910\\verified_backend\\fuel_h128\\activebalance\\repeat0\\color_01.bin": "d7b719f7084e8b8d39b1d47fda7e72f3ca04f02d67d1da77fc1f533694c82f51",
+    "examples\\tifs_revision_20260910\\verified_backend\\fuel_h128\\activebalance\\repeat0\\color_02.bin": "86ed51084644065ad4bdbd34ecba705bc5d5e465389c33598bd417315d1b497e",
+    "examples\\tifs_revision_20260910\\verified_backend\\fuel_h128\\activebalance\\repeat0\\color_03.bin": "a9db779e112ab1fb607a2a640135342bc0118cfad55ac375d126e817b02fcff8",
+    "examples\\tifs_revision_20260910\\verified_backend\\fuel_h128\\activebalance\\repeat0\\color_04.bin": "4739d75dda7cbdc386bc38674c65694e3fa1f4c88f6a2bc711ceade5882d881e",
+    "examples\\tifs_revision_20260910\\verified_backend\\fuel_h128\\activebalance\\repeat0\\color_05.bin": "b10fe9fb1bb29909d84f6ef0c486ec356b9c3f6b3dffe5b10f9d26f24832eb31",
+    "examples\\tifs_revision_20260910\\verified_backend\\fuel_h128\\activebalance\\repeat0\\color_06.bin": "469d51d7b10c81cd48214167121b4f2d491ee4660c728b28f72e3207e1638169",
+    "examples\\tifs_revision_20260910\\verified_backend\\fuel_h128\\activebalance\\repeat0\\color_07.bin": "063d481dccfb53de17b25e6b6be4c4408f3f6c0ac62250c4f1d595d26607542c",
+    "examples\\tifs_revision_20260910\\verified_backend\\fuel_h128\\activebalance\\repeat0\\color_08.bin": "da7c530ead6268fbddfd6d5dedac932f8825ab6fe772f4660092525aed2090d0",
+    "examples\\tifs_revision_20260910\\verified_backend\\fuel_h128\\activebalance\\repeat0\\color_09.bin": "0e445ffdc5624475736bdcc8b2a5562b3cd5a96e0c646b5f3ca80521b8c93666"
+  },
+  "root_hex": "283ea1495be5cd0619e21c176a986dab657f1b29ecf35d8309e94cb1f9599ecb",
+  "unique_records": 198,
+  "capacity": 22,
+  "loads": [
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22
+  ],
+  "all_occupied_proofs_verified": 100,
+  "proofs": [
+    {
+      "rank": 0,
+      "slot": "0x3a88c8867b3fbcfeefc3270af46afbe",
+      "selected_colors": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7
+      ],
+      "active_records": 6,
+      "root_verified": true
+    },
+    {
+      "rank": 1,
+      "slot": "0x3e3c2420f5066a5fa6e36735ed8cc4f",
+      "selected_colors": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7
+      ],
+      "active_records": 6,
+      "root_verified": true
+    },
+    {
+      "rank": 2,
+      "slot": "0xa62d0f80072eafa5d94b92a01043d97",
+      "selected_colors": [
+        0,
+        2,
+        4,
+        5,
+        6,
+        8
+      ],
+      "active_records": 6,
+      "root_verified": true
+    },
+    {
+      "rank": 3,
+      "slot": "0xcc6a4ccca98a6360d42fde83780517e",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 8,
+      "root_verified": true
+    },
+    {
+      "rank": 4,
+      "slot": "0xd21caa7d0c6f1ff692603abec4315c5",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 8,
+      "root_verified": true
+    },
+    {
+      "rank": 5,
+      "slot": "0xf471c818c185f9c35ddd6c05738371e",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 8,
+      "root_verified": true
+    },
+    {
+      "rank": 6,
+      "slot": "0xf65dd2d76efb602f9554514892751d5",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 8,
+      "root_verified": true
+    },
+    {
+      "rank": 7,
+      "slot": "0x14236fe421fe9ddb8377a19b60ce71dd",
+      "selected_colors": [
+        0,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 8,
+      "slot": "0x1561ade0621c5acf44b780521f95a1e0",
+      "selected_colors": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 8,
+      "root_verified": true
+    },
+    {
+      "rank": 9,
+      "slot": "0x15b165510f75144be8633336a97ac62c",
+      "selected_colors": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 8,
+      "root_verified": true
+    },
+    {
+      "rank": 10,
+      "slot": "0x16ab79353cdbc2bef69a106f68d5f6b5",
+      "selected_colors": [
+        0,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 11,
+      "slot": "0x17eb70034b5b71092521d184c5e7b069",
+      "selected_colors": [
+        0,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 12,
+      "slot": "0x1bc5d0e3df0ea12c4d0078668d14924f",
+      "selected_colors": [
+        2,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 6,
+      "root_verified": true
+    },
+    {
+      "rank": 13,
+      "slot": "0x1fc244af2b96d0169a177e2559af29e0",
+      "selected_colors": [
+        0,
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 6,
+      "root_verified": true
+    },
+    {
+      "rank": 14,
+      "slot": "0x21548c66b44347d877e7b405a250121c",
+      "selected_colors": [
+        0,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 6,
+      "root_verified": true
+    },
+    {
+      "rank": 15,
+      "slot": "0x221f8af2372a95064f2ef7d7712216a9",
+      "selected_colors": [
+        0,
+        2,
+        4,
+        5,
+        6,
+        8
+      ],
+      "active_records": 6,
+      "root_verified": true
+    },
+    {
+      "rank": 16,
+      "slot": "0x282a163f3e6f52ab35cf838079369bce",
+      "selected_colors": [
+        0,
+        2,
+        4,
+        5,
+        6,
+        8
+      ],
+      "active_records": 6,
+      "root_verified": true
+    },
+    {
+      "rank": 17,
+      "slot": "0x2c19fc328bfccab923ee092d9123a9cc",
+      "selected_colors": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 18,
+      "slot": "0x2de44621c76edf2debbc2df62ccb52c5",
+      "selected_colors": [
+        0,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 19,
+      "slot": "0x31b67dba7cfd6e2d7540f9c96d90a45b",
+      "selected_colors": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 20,
+      "slot": "0x32fc4a6ccd676bae363546309128ef7c",
+      "selected_colors": [
+        0,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 21,
+      "slot": "0x3523d19074cac2abcc3ace63b121eefa",
+      "selected_colors": [
+        2,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 6,
+      "root_verified": true
+    },
+    {
+      "rank": 22,
+      "slot": "0x390b36a09502b05d4f8c27aea2636c6b",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 23,
+      "slot": "0x3b28a6c3766c6295adad976d349705ef",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 24,
+      "slot": "0x3f08f60bf2a0754139d918d80882ef46",
+      "selected_colors": [
+        0,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 6,
+      "root_verified": true
+    },
+    {
+      "rank": 25,
+      "slot": "0x4082763076bdaee3a85e52eb5893169d",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 26,
+      "slot": "0x4149d67891c7efddad38eb590d537d3f",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 27,
+      "slot": "0x433ebf5bc03dffa38536673207a21281",
+      "selected_colors": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 28,
+      "slot": "0x43b728ce5e336e2e48a38a61805a73c0",
+      "selected_colors": [
+        0,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 29,
+      "slot": "0x46cecbeaa7de6866910a4856ef1f7378",
+      "selected_colors": [
+        0,
+        3,
+        4,
+        6,
+        7
+      ],
+      "active_records": 5,
+      "root_verified": true
+    },
+    {
+      "rank": 30,
+      "slot": "0x5085cb99dbe1e374ccd321e5b58182d2",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 31,
+      "slot": "0x514970ce425bbbe11b969e5cd683f4c1",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8
+      ],
+      "active_records": 8,
+      "root_verified": true
+    },
+    {
+      "rank": 32,
+      "slot": "0x51be0458d20b1ce2ff5316e7e473109c",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8
+      ],
+      "active_records": 8,
+      "root_verified": true
+    },
+    {
+      "rank": 33,
+      "slot": "0x552d7d672c5bbbccfb210a425e36a1d6",
+      "selected_colors": [
+        0,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 34,
+      "slot": "0x560231689713a5933b6c8ac3e6b2f243",
+      "selected_colors": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 8,
+      "root_verified": true
+    },
+    {
+      "rank": 35,
+      "slot": "0x569ce7ffc5ab3343d40276040602bb1e",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8
+      ],
+      "active_records": 8,
+      "root_verified": true
+    },
+    {
+      "rank": 36,
+      "slot": "0x58ec452ede72799baf21664edc953297",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8
+      ],
+      "active_records": 8,
+      "root_verified": true
+    },
+    {
+      "rank": 37,
+      "slot": "0x59310b9b2c75881cf3edca5da5a755ed",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8
+      ],
+      "active_records": 8,
+      "root_verified": true
+    },
+    {
+      "rank": 38,
+      "slot": "0x5a05f87d329a8321f2006f4f3b11b810",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 39,
+      "slot": "0x5d6941b983cd61008a67cd3865fe78cc",
+      "selected_colors": [
+        1,
+        3,
+        4,
+        6,
+        7,
+        8
+      ],
+      "active_records": 6,
+      "root_verified": true
+    },
+    {
+      "rank": 40,
+      "slot": "0x683babc0c420c80a762490d4d73b2718",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 41,
+      "slot": "0x6870f86f6560dd5b0d0a47d0ae89df6a",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 42,
+      "slot": "0x688e94a51ee508a95e761294afb7a600",
+      "selected_colors": [
+        0,
+        2,
+        4,
+        5,
+        6,
+        7
+      ],
+      "active_records": 6,
+      "root_verified": true
+    },
+    {
+      "rank": 43,
+      "slot": "0x6b0e4bfa8dc9b19ccc121b2bd0d22da7",
+      "selected_colors": [
+        0,
+        4,
+        6,
+        7,
+        8
+      ],
+      "active_records": 5,
+      "root_verified": true
+    },
+    {
+      "rank": 44,
+      "slot": "0x702a137706cb2ef04842c238c2b37fed",
+      "selected_colors": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 45,
+      "slot": "0x719b774d7d3b2ebd5e2ce1cde4f59a2e",
+      "selected_colors": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 46,
+      "slot": "0x75ce1f4e6c052ea6fec089042a96928f",
+      "selected_colors": [
+        1,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 6,
+      "root_verified": true
+    },
+    {
+      "rank": 47,
+      "slot": "0x79a881f99a636d0ad75f16f53668982b",
+      "selected_colors": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "active_records": 6,
+      "root_verified": true
+    },
+    {
+      "rank": 48,
+      "slot": "0x7fde8eebf388fcff667a89be60430cc6",
+      "selected_colors": [
+        1,
+        3,
+        4,
+        6,
+        7,
+        8
+      ],
+      "active_records": 6,
+      "root_verified": true
+    },
+    {
+      "rank": 49,
+      "slot": "0x800b108f968347f00ac77eb6511893e1",
+      "selected_colors": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 50,
+      "slot": "0x8092fe01b9ce31a49ce380fc2fe1ee6b",
+      "selected_colors": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 51,
+      "slot": "0x825ac1bb838d399fb1ba55a6247e2c8c",
+      "selected_colors": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 52,
+      "slot": "0x83440636eff7b2ec0f78ef7b8e480a03",
+      "selected_colors": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 53,
+      "slot": "0x88185d128d9922e0e6bcd32b07b6c7f2",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        7
+      ],
+      "active_records": 6,
+      "root_verified": true
+    },
+    {
+      "rank": 54,
+      "slot": "0x8e00d1c0c8ffe94540e534e256d4589b",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 55,
+      "slot": "0x8ef3b0d7c4476e2c0a91ccc5867740a0",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 56,
+      "slot": "0x90a21fd1ef7b2ead7bf8b13df631f94d",
+      "selected_colors": [
+        0,
+        1,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 6,
+      "root_verified": true
+    },
+    {
+      "rank": 57,
+      "slot": "0x920218ce21e9b273c4110f07c5803f74",
+      "selected_colors": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 58,
+      "slot": "0x9246be1e9ba9f5de5baf766a256eb725",
+      "selected_colors": [
+        0,
+        1,
+        3,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 59,
+      "slot": "0x95534981420d9a1e5d3cd3b567c6e21f",
+      "selected_colors": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        7
+      ],
+      "active_records": 6,
+      "root_verified": true
+    },
+    {
+      "rank": 60,
+      "slot": "0x97efc1907815f13e6a02d4149a09e9a5",
+      "selected_colors": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7
+      ],
+      "active_records": 6,
+      "root_verified": true
+    },
+    {
+      "rank": 61,
+      "slot": "0xa40fb80ad4287819ecda5efac01c74c7",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 62,
+      "slot": "0xa5e537813128ccca735d65a9027cd505",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        7,
+        8
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 63,
+      "slot": "0xa7911cdfdc28e6a1867e359ba426081a",
+      "selected_colors": [
+        0,
+        2,
+        3,
+        5,
+        7,
+        8
+      ],
+      "active_records": 6,
+      "root_verified": true
+    },
+    {
+      "rank": 64,
+      "slot": "0xacdcbc039caf8f6b1cbc24d2f87a0378",
+      "selected_colors": [
+        0,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 65,
+      "slot": "0xad286c64373644140ff927b256b84154",
+      "selected_colors": [
+        0,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 66,
+      "slot": "0xae3c8b8d99a39542f78af83dbbb42c81",
+      "selected_colors": [
+        0,
+        1,
+        3,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 67,
+      "slot": "0xaf0ff5439963767457709e63313da233",
+      "selected_colors": [
+        0,
+        1,
+        3,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 68,
+      "slot": "0xb16a7efa6c4b528ecbe9db04df4d2bb4",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        7,
+        8
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 69,
+      "slot": "0xb253668f6b59f1ff28522831931e4d3c",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "active_records": 8,
+      "root_verified": true
+    },
+    {
+      "rank": 70,
+      "slot": "0xb310919be4d5c7892739294545b85928",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "active_records": 8,
+      "root_verified": true
+    },
+    {
+      "rank": 71,
+      "slot": "0xb40711a88c7039756fb8a73827eabe2c",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 72,
+      "slot": "0xb70aeff402d30d7d55ee164fd109ce39",
+      "selected_colors": [
+        0,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 73,
+      "slot": "0xb894454077582b5d5aad1f58872264af",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        7,
+        8
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 74,
+      "slot": "0xb9098fe78517adc23218f8cd7d804f55",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        7,
+        8
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 75,
+      "slot": "0xbc2d9ddc9857e53598677dbea82a2583",
+      "selected_colors": [
+        0,
+        2,
+        3,
+        6,
+        7,
+        8
+      ],
+      "active_records": 6,
+      "root_verified": true
+    },
+    {
+      "rank": 76,
+      "slot": "0xc006af35e3b4ca022ab986593a148b4f",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 77,
+      "slot": "0xc1a9fae908008d34f389b1dba2a1a8e8",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 8,
+      "root_verified": true
+    },
+    {
+      "rank": 78,
+      "slot": "0xc1c3c8fdf22e3a4adef796c8fdaf739d",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 8,
+      "root_verified": true
+    },
+    {
+      "rank": 79,
+      "slot": "0xc22ceee66b8ab104483c83053173b33f",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6
+      ],
+      "active_records": 6,
+      "root_verified": true
+    },
+    {
+      "rank": 80,
+      "slot": "0xc8d26116ed30f9816a05fdf061b25351",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        8
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 81,
+      "slot": "0xca3076acbb6ec2b695ebf174caa57ef3",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        8
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 82,
+      "slot": "0xcc74c0c353fe2c007aff8dc7db556638",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        8
+      ],
+      "active_records": 6,
+      "root_verified": true
+    },
+    {
+      "rank": 83,
+      "slot": "0xd2febf3079d64fcc48205885b66974fb",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        8
+      ],
+      "active_records": 6,
+      "root_verified": true
+    },
+    {
+      "rank": 84,
+      "slot": "0xd596e806d34bd7d4304b9f00ec340f02",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        8
+      ],
+      "active_records": 6,
+      "root_verified": true
+    },
+    {
+      "rank": 85,
+      "slot": "0xd8063c1eafe3b5fd49d4c8e8737316ba",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 9,
+      "root_verified": true
+    },
+    {
+      "rank": 86,
+      "slot": "0xd88c86f15bbea365d658ad95a81d4536",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "active_records": 9,
+      "root_verified": true
+    },
+    {
+      "rank": 87,
+      "slot": "0xd99e58435243d9fef9c88273b8d553b4",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "active_records": 8,
+      "root_verified": true
+    },
+    {
+      "rank": 88,
+      "slot": "0xdaceee899cdb68711b2b16b1708d684b",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "active_records": 8,
+      "root_verified": true
+    },
+    {
+      "rank": 89,
+      "slot": "0xdbf8f061b38993c8d7dc1f521c3df09f",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "active_records": 8,
+      "root_verified": true
+    },
+    {
+      "rank": 90,
+      "slot": "0xdf3f619804a92fdb4057192dc43dd748",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 91,
+      "slot": "0xdfe4224c822504739c7efea90fd28bf7",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 92,
+      "slot": "0xe084a105a7b7d599b8346d3cba5ac51b",
+      "selected_colors": [
+        0,
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
+      "active_records": 6,
+      "root_verified": true
+    },
+    {
+      "rank": 93,
+      "slot": "0xe696a8ec6b7f294aa56059125664931f",
+      "selected_colors": [
+        0,
+        1,
+        3,
+        4,
+        6,
+        7
+      ],
+      "active_records": 6,
+      "root_verified": true
+    },
+    {
+      "rank": 94,
+      "slot": "0xe882dd6a247f4ada1f700f1918bd23b7",
+      "selected_colors": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 95,
+      "slot": "0xe9f3440e5518839aa600db07b5400f8e",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 96,
+      "slot": "0xeaaf1805f2ec6a18eee5a7909f799086",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        8
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 97,
+      "slot": "0xeb23c65a4244616063b70d7502b960e5",
+      "selected_colors": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        8
+      ],
+      "active_records": 7,
+      "root_verified": true
+    },
+    {
+      "rank": 98,
+      "slot": "0xf8de494d620f85b1cfed002bb1ea4fbf",
+      "selected_colors": [
+        0,
+        1,
+        3,
+        6,
+        8
+      ],
+      "active_records": 5,
+      "root_verified": true
+    },
+    {
+      "rank": 99,
+      "slot": "0xfe5b0deca006174e2151088e1a7d60fe",
+      "selected_colors": [
+        0,
+        1,
+        3,
+        6,
+        8
+      ],
+      "active_records": 5,
+      "root_verified": true
+    }
+  ]
+}

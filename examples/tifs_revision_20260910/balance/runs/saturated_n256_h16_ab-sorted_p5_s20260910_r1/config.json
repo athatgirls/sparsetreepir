@@ -1,0 +1,10 @@
+{
+  "id": "saturated_n256_h16_ab-sorted_p5_s20260910_r1",
+  "distribution": "saturated",
+  "n": 256,
+  "height": 16,
+  "algorithm": "ab-sorted",
+  "passes": 5,
+  "seed": 20260910,
+  "repeat": 1
+}

@@ -1,0 +1,1 @@
+{"id": "polygon-recent_n384_h128_first-fit_p0_s20260910_r1", "status": "complete", "actual_n": 384, "m": 11, "max_bucket": 210, "U_over_B": 3.0, "coloring_s": 0.0009008001070469618, "valid": true}

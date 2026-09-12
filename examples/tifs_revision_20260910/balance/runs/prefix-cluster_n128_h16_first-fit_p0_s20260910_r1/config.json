@@ -1,0 +1,10 @@
+{
+  "id": "prefix-cluster_n128_h16_first-fit_p0_s20260910_r1",
+  "distribution": "prefix-cluster",
+  "n": 128,
+  "height": 16,
+  "algorithm": "first-fit",
+  "passes": 0,
+  "seed": 20260910,
+  "repeat": 1
+}

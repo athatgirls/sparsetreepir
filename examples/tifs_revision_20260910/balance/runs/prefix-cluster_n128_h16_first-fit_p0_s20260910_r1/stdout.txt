@@ -1,0 +1,1 @@
+{"id": "prefix-cluster_n128_h16_first-fit_p0_s20260910_r1", "status": "complete", "actual_n": 128, "m": 9, "max_bucket": 80, "U_over_B": 2.7586206896551726, "coloring_s": 0.000521700014360249, "valid": true}

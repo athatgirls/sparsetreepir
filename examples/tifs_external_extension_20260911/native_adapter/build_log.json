@@ -1,0 +1,12 @@
+{
+  "command": [
+    "cmake",
+    "--build",
+    "/mnt/d/DesktopProjects/\u8bba\u6587/examples/tifs_external_extension_20260911/native_adapter/build",
+    "--parallel",
+    "2"
+  ],
+  "returncode": 2,
+  "stdout": "[ 20%] Building CXX object CMakeFiles/serialized_proof_bench.dir/driver.cpp.o\n[ 40%] Building CXX object CMakeFiles/serialized_proof_bench.dir/vendor/src/client.cpp.o\n",
+  "stderr": "/mnt/d/DesktopProjects/\u8bba\u6587/examples/tifs_external_extension_20260911/native_adapter/driver.cpp: In function \u2018int run(const std::string&, const std::string&, size_t)\u2019:\n/mnt/d/DesktopProjects/\u8bba\u6587/examples/tifs_external_extension_20260911/native_adapter/driver.cpp:134:136: error: invalid operands of types \u2018const char [29]\u2019 and \u2018const char*\u2019 to binary \u2018operator+\u2019\n  134 |         seal::SEALContext context(enc,true,seal::sec_level_type::tc128);require(context.parameters_set(),\"SEAL tc128 context invalid: \"+context.parameter_error_message());\n      |                                                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n      |                                                                                                          |                                                             |\n      |                                                                                                          const char [29]                                               const char*\ngmake[2]: *** [CMakeFiles/serialized_proof_bench.dir/build.make:76: CMakeFiles/serialized_proof_bench.dir/driver.cpp.o] Error 1\ngmake[2]: *** Waiting for unfinished jobs....\ngmake[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/serialized_proof_bench.dir/all] Error 2\ngmake: *** [Makefile:91: all] Error 2\n"
+}

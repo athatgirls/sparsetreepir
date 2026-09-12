@@ -1,0 +1,119 @@
+{
+  "cases": [
+    {
+      "leaves": 2,
+      "shape": [
+        [],
+        []
+      ],
+      "width": 1,
+      "profiles": 1,
+      "brute_visits": 3
+    },
+    {
+      "leaves": 3,
+      "shape": [
+        [],
+        [
+          [],
+          []
+        ]
+      ],
+      "width": 2,
+      "profiles": 2,
+      "brute_visits": 15
+    },
+    {
+      "leaves": 4,
+      "shape": [
+        [],
+        [
+          [],
+          [
+            [],
+            []
+          ]
+        ]
+      ],
+      "width": 3,
+      "profiles": 3,
+      "brute_visits": 139
+    },
+    {
+      "leaves": 4,
+      "shape": [
+        [
+          [],
+          []
+        ],
+        [
+          [],
+          []
+        ]
+      ],
+      "width": 2,
+      "profiles": 2,
+      "brute_visits": 19
+    },
+    {
+      "leaves": 5,
+      "shape": [
+        [],
+        [
+          [],
+          [
+            [],
+            [
+              [],
+              []
+            ]
+          ]
+        ]
+      ],
+      "width": 4,
+      "profiles": 5,
+      "brute_visits": 2229
+    },
+    {
+      "leaves": 5,
+      "shape": [
+        [],
+        [
+          [
+            [],
+            []
+          ],
+          [
+            [],
+            []
+          ]
+        ]
+      ],
+      "width": 3,
+      "profiles": 4,
+      "brute_visits": 175
+    },
+    {
+      "leaves": 5,
+      "shape": [
+        [
+          [],
+          []
+        ],
+        [
+          [],
+          [
+            [],
+            []
+          ]
+        ]
+      ],
+      "width": 3,
+      "profiles": 4,
+      "brute_visits": 562
+    }
+  ],
+  "total_brute_visits": 3142,
+  "all_equal": true,
+  "symmetry_pruning": "none in brute force; DP quotients only complete global color permutations"
+}

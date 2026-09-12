@@ -1,0 +1,6 @@
+﻿cohort,id,n,N,m,U,OPT,absolute_gap,relative_gap,relative_gap_exact,stop_reason
+base,S0606,13,24,6,5,4,1,0.25,1/4,no_strict_4_color_improvement
+base,S0710,13,24,6,5,4,1,0.25,1/4,no_strict_4_color_improvement
+holdout,H1199,16,30,6,6,5,1,0.2,1/5,no_strict_4_color_improvement
+holdout,H1265,16,30,6,6,5,1,0.2,1/5,no_strict_4_color_improvement
+holdout,H1285,16,30,5,7,6,1,0.16666666666666666,1/6,no_strict_4_color_improvement

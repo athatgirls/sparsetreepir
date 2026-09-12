@@ -1,0 +1,8 @@
+{
+  "release": "2026-09-12-current-paper",
+  "scope": "Current main manuscript and cited supplementary evidence",
+  "main_processes": 72,
+  "main_measured_proofs": 720,
+  "main_warmups": 144,
+  "entrypoint": "README.md"
+}

@@ -1,0 +1,55 @@
+{
+  "height": 128,
+  "n": 100,
+  "N": 198,
+  "m": 9,
+  "root_hex": "283ea1495be5cd0619e21c176a986dab657f1b29ecf35d8309e94cb1f9599ecb",
+  "hash_format": "sha256:leaf=H(00||value),internal=H(01||left||right),empty_leaf=H(02)",
+  "source_snapshot": "examples/tifs_revision_20260910/verified_backend/fuel_h128",
+  "values": "same deterministic experimental values as frozen Fuel SMT; not native Fuel values",
+  "max_bucket": {
+    "first_fit": 58,
+    "activebalance": 23,
+    "opt_witness22": 22,
+    "full_cache": 198
+  },
+  "loads": {
+    "first_fit": [
+      2,
+      4,
+      8,
+      16,
+      32,
+      56,
+      58,
+      20,
+      2
+    ],
+    "activebalance": [
+      23,
+      22,
+      22,
+      21,
+      22,
+      22,
+      22,
+      22,
+      22
+    ],
+    "opt_witness22": [
+      22,
+      22,
+      22,
+      22,
+      22,
+      22,
+      22,
+      22,
+      22
+    ],
+    "full_cache": [
+      198
+    ]
+  },
+  "witness_scope": "Separate exact capacity-22 feasible witness, not AB and not the bounded 3/4-color prototype."
+}

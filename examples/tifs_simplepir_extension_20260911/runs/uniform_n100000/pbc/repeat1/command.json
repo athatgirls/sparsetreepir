@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "/artifact/examples/tifs_simplepir_extension_20260911/backend/build/simplepir_proof_bench",
+    "/artifact/examples/tifs_simplepir_extension_20260911/runs/uniform_n100000/pbc/repeat1/input.json",
+    "/artifact/examples/tifs_simplepir_extension_20260911/runs/uniform_n100000/pbc/repeat1/result.json",
+    "2"
+  ],
+  "environment_overrides": {
+    "GOMAXPROCS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  }
+}

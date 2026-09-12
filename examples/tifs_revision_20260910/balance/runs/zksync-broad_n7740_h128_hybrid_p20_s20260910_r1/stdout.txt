@@ -1,0 +1,1 @@
+{"id": "zksync-broad_n7740_h128_hybrid_p20_s20260910_r1", "status": "complete", "actual_n": 7740, "m": 17, "max_bucket": 1162, "U_over_B": 1.2755214050493964, "coloring_s": 0.744371599983424, "valid": true}

@@ -1,0 +1,51 @@
+{
+  "occupied": [
+    "001",
+    "100",
+    "110"
+  ],
+  "illustrated_target": "001",
+  "root_hex": "61b2341122128b9b0e687867a0976148187992d833651aa8fa88f994689d47cb",
+  "record_R_position": "1",
+  "record_R_hex": "d7fe8c46ff88b164ec8d38ec309876929af3329c4531060feab9f1ab58765ffe",
+  "all_occupied_proofs_checked": [
+    {
+      "target": "001",
+      "proof_bottom_up": [
+        "dbc1b4c900ffe48d575b5da5c638040125f65db0fe3e24494b76ea986457d986",
+        "fc39420ec3a5cda3666578b55cce1d2cbf7f11bb1a4dc73b3bc28610bf869462",
+        "d7fe8c46ff88b164ec8d38ec309876929af3329c4531060feab9f1ab58765ffe"
+      ]
+    },
+    {
+      "target": "100",
+      "proof_bottom_up": [
+        "dbc1b4c900ffe48d575b5da5c638040125f65db0fe3e24494b76ea986457d986",
+        "98fb4f97f1ade90b1e48d737dae80f7237161caf7754dcbd5436b314411b7e22",
+        "42f3a585b26d5eecf8adefc52e8f46de80a04dcc8bf3e00346514bb1a692c951"
+      ]
+    },
+    {
+      "target": "110",
+      "proof_bottom_up": [
+        "dbc1b4c900ffe48d575b5da5c638040125f65db0fe3e24494b76ea986457d986",
+        "7974322bd3c31b28232b6f75179113573aedd907ce545135b766dbeaf918ef8b",
+        "42f3a585b26d5eecf8adefc52e8f46de80a04dcc8bf3e00346514bb1a692c951"
+      ]
+    }
+  ],
+  "semantics": "Three ordinary sibling levels; target 001 uses local defaults at levels 0/1 and privately retrieves non-default sibling digest R at level 2. Colored target path is not the set of sibling records.",
+  "figure_inches": [
+    3.5,
+    1.35
+  ],
+  "minimum_base_font_pt": 8,
+  "script_sha256": "c273202022c7d03de6a96eb492e38be3ce23a7468b9e36df15a53048ce862ab9",
+  "figure_sha256": {
+    "sparsetreepir_smt_logical_storage_figure.pdf": "50ee8af5941239c105d81ecfdcfcb36fff025cae2a902ca7ace80b026c6d736f",
+    "sparsetreepir_smt_logical_storage_figure.png": "dd6ae06c1901191a47d447bcd577503449cfd1be50642032afd7c2b680b8b163",
+    "sparsetreepir_smt_logical_storage_figure.svg": "cbe56dd26b2f244a9851e4088794ccfada775b29a1b0b784094d4e0614043a0d"
+  },
+  "installed_into": "manuscripts/tifs/revision_20260910_transfer/figures/sparsetreepir_smt_logical_storage_figure.pdf",
+  "preserved_original_sha256": "a2f4a8e23ef50fd6752d298a06fa94bc0d7eabe108bce4e982623d2be1b96c49"
+}

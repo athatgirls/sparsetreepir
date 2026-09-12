@@ -1,0 +1,44 @@
+{
+  "dataset": "Fuel vectors",
+  "input_sha256": "6dc83a59a37929033f2518c374b6545f0dec43282b28f640b08117a47699e25b",
+  "n": 100,
+  "N": 198,
+  "m": 9,
+  "root": "283ea1495be5cd0619e21c176a986dab657f1b29ecf35d8309e94cb1f9599ecb",
+  "build_timings_ms": {
+    "first_fit": {
+      "hash_tree": 8.166910999999999,
+      "active_extraction": 12.251626999999932,
+      "forest_build": 0.15723799999989296,
+      "coloring": 0.04692799999972408,
+      "metadata_build": 0.14984100000026146
+    },
+    "hybrid": {
+      "hash_tree": 7.991267999999607,
+      "active_extraction": 14.524962999999946,
+      "forest_build": 0.12231199999979125,
+      "coloring": 2.871628999999931,
+      "metadata_build": 0.192987999999783
+    },
+    "activebalance": {
+      "hash_tree": 7.5341849999999155,
+      "active_extraction": 13.999853000000062,
+      "forest_build": 0.15321100000020849,
+      "coloring": 12.031487999999868,
+      "metadata_build": 0.23540099999985742
+    }
+  },
+  "pbc": {
+    "hash_seed": 202609100,
+    "public_setup_attempts": [
+      {
+        "seed": 202609100,
+        "failed_targets": 0,
+        "tested_targets": 100
+      }
+    ],
+    "routing_preflight_ms": 1.4199040000000274,
+    "bucket_count": 14,
+    "placement": "three distinct pseudorandom choices per active record; maximum bipartite matching; all occupied targets preflighted before publication"
+  }
+}

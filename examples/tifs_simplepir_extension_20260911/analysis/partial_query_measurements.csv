@@ -1,0 +1,8 @@
+case,method,repeat,target_id,warmup,ordinal,process_complete,included_in_performance,serialized_proof_wall_ms,route_ms,query_ms,query_roundtrip_ms,answer_ms,answer_roundtrip_ms,decode_ms,proof_verify_ms,query_matrix_payload_bytes,query_framed_bytes,answer_matrix_payload_bytes,answer_framed_bytes,online_framed_bytes,real_records,PIR_calls,root_independently_verified,three_negatives_independently_verified
+prefix64_n10000,pbc,0,3652,False,2,False,False,10.216559,0.033318,8.379177,0.01929,0.218408,0.017844,1.531874,0.012995,24960,25592,27040,27672,53264,12,26,True,True
+prefix64_n10000,pbc,0,3731,False,3,False,False,9.771401,0.027992,7.651607,0.017612,0.229524,0.014743,1.795473,0.01741,24960,25592,27040,27672,53264,14,26,True,True
+prefix64_n10000,pbc,0,1449,False,4,False,False,11.775826,0.030578,9.531902,0.02189,0.25151,0.020969,1.892899,0.021211,24960,25592,27040,27672,53264,14,26,True,True
+prefix64_n10000,pbc,0,8224,False,5,False,False,14.68909,0.037816,11.803086,0.023919,0.289169,0.019875,2.487459,0.020337,24960,25592,27040,27672,53264,11,26,True,True
+prefix64_n10000,pbc,0,320,False,6,False,False,11.066735,0.033499,8.968072,0.019849,0.229122,0.015453,1.777667,0.017304,24960,25592,27040,27672,53264,14,26,True,True
+prefix64_n10000,pbc,0,4684,False,7,False,False,9.924107,0.048031,8.001998,0.016355,0.194188,0.018374,1.62509,0.016179,24960,25592,27040,27672,53264,13,26,True,True
+prefix64_n10000,pbc,0,529,False,8,False,False,12.678166,0.033736,10.731715,0.019357,0.251358,0.017524,1.602691,0.016345,24960,25592,27040,27672,53264,13,26,True,True

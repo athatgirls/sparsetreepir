@@ -1,0 +1,1 @@
+{"id": "zksync-sample_n956_h128_hybrid_p20_s20260910_r1", "status": "complete", "actual_n": 956, "m": 13, "max_bucket": 180, "U_over_B": 1.2244897959183674, "coloring_s": 0.40626290009822696, "valid": true}

@@ -1,0 +1,21 @@
+{
+  "scheme": "empty-bucket-check",
+  "height": 4,
+  "width": 1,
+  "active_nodes": 0,
+  "query_samples": 1,
+  "record_bytes": 32,
+  "warmup_queries": 0,
+  "subdatabases": [
+    {
+      "color": 1,
+      "records": 1,
+      "record_bytes": 32,
+      "database_file": "color_01.bin",
+      "query_indices": [
+        0
+      ]
+    }
+  ],
+  "hash_format": "sha256:leaf=H(00||value),internal=H(01||left||right),empty_leaf=H(02)"
+}

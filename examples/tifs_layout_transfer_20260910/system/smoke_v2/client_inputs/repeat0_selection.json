@@ -1,0 +1,13 @@
+{
+  "seed": 202609103000,
+  "method_order": [
+    "activebalance",
+    "full_cache",
+    "first_fit",
+    "opt_witness22"
+  ],
+  "target_indices": [
+    71,
+    19
+  ]
+}

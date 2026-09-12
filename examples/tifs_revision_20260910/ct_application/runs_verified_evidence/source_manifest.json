@@ -1,0 +1,10 @@
+{
+  "sha256": {
+    "scripts/run_tifs_ct_application_20260910.py": "157c4e4f702ddda2d03ae5363d07ddef58e708a952f4cd989296f273bd68e51a",
+    "backend/simplepir/tifs_tcp_certificate_backend.go": "4c70535af0818422057ad67e0fa4e4340087a496000c38065b9d05ceacc65a88",
+    "scripts/tifs_revision_smt.py": "f0dc6c6c9af2d7a9c032991f5407c7cca79e7353394d6a18d9f8e8bb5e72c740",
+    "scripts/run_tifs_verified_backend_suite_20260910.py": "bf441840014a4059024229a989a356b771b694b001d05c975807ee08c8b5c589",
+    "examples/tifs_revision_20260910/ct_application/source/ct_records.csv": "70d7daa6c33a8fee866eb62db0653019171fd6fb5698a25402b008efc11dce2d",
+    "examples/tifs_revision_20260910/ct_application/tifs_tcp_certificate_backend": "3496ac2bb1a234cff2458e41f2c6ce25e03e4f399742b152bc754583e17aa4b7"
+  }
+}

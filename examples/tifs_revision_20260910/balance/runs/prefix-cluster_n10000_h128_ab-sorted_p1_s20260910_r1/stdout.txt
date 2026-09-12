@@ -1,0 +1,1 @@
+{"id": "prefix-cluster_n10000_h128_ab-sorted_p1_s20260910_r1", "status": "complete", "actual_n": 10000, "m": 17, "max_bucket": 2845, "U_over_B": 2.417162276975361, "coloring_s": 0.20748340000864118, "valid": true}

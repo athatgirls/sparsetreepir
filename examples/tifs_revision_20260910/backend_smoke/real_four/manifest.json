@@ -1,0 +1,48 @@
+{
+  "scheme": "SparseTreePIR-activebalance",
+  "height": 128,
+  "width": 3,
+  "active_nodes": 6,
+  "query_samples": 4,
+  "record_bytes": 32,
+  "warmup_queries": 2,
+  "subdatabases": [
+    {
+      "color": 1,
+      "records": 2,
+      "record_bytes": 32,
+      "database_file": "color_01.bin",
+      "query_indices": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "color": 2,
+      "records": 2,
+      "record_bytes": 32,
+      "database_file": "color_02.bin",
+      "query_indices": [
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "color": 3,
+      "records": 2,
+      "record_bytes": 32,
+      "database_file": "color_03.bin",
+      "query_indices": [
+        0,
+        1,
+        0,
+        1
+      ]
+    }
+  ],
+  "hash_format": "sha256:leaf=H(00||value),internal=H(01||left||right),empty_leaf=H(02)"
+}

@@ -1,0 +1,11 @@
+{
+  "original_source": "backend\\simplepir\\tifs_tcp_certificate_backend.go",
+  "original_sha256": "4c70535af0818422057ad67e0fa4e4340087a496000c38065b9d05ceacc65a88",
+  "derived_source": "scripts\\tifs_layout_transfer_tcp_20260910.go",
+  "changes": [
+    "Client input permits fixed known 16-byte slot and 32-byte value; no rehashing/rekeying Fuel snapshot.",
+    "Target ID renamed from CT index.",
+    "Server result logs already-computed Params/DBinfo and shared/hint element bytes.",
+    "Same PickParams(records,32,1024,32), eight digest chunks, Query/Answer/Recover, framing, warmup and timing boundaries."
+  ]
+}

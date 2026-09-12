@@ -1,0 +1,291 @@
+{
+  "groups": [
+    {
+      "height": 4,
+      "method": "treepir_official",
+      "processes": 3,
+      "metrics": {
+        "proofs": {
+          "mean": 16,
+          "sample_sd": 0.0
+        },
+        "max_bucket": {
+          "mean": 8,
+          "sample_sd": 0.0
+        },
+        "hint_bytes": {
+          "mean": 1048576,
+          "sample_sd": 0.0
+        },
+        "public_A_bytes": {
+          "mean": 524288,
+          "sample_sd": 0.0
+        },
+        "cache_digest_payload_bytes": {
+          "mean": 960,
+          "sample_sd": 0.0
+        },
+        "client_query_ms": {
+          "mean": 2.432617104166667,
+          "sample_sd": 0.3736186491645411
+        },
+        "server_answer_ms": {
+          "mean": 0.008964145833333333,
+          "sample_sd": 0.0016186436262507213
+        },
+        "client_decode_ms": {
+          "mean": 0.051815729166666664,
+          "sample_sd": 0.009045686166563505
+        },
+        "backend_wall_ms": {
+          "mean": 2.4995660625,
+          "sample_sd": 0.38424961154937776
+        },
+        "online_total_bytes": {
+          "mean": 1792,
+          "sample_sd": 0.0
+        }
+      }
+    },
+    {
+      "height": 4,
+      "method": "first_fit",
+      "processes": 3,
+      "metrics": {
+        "proofs": {
+          "mean": 16,
+          "sample_sd": 0.0
+        },
+        "max_bucket": {
+          "mean": 16,
+          "sample_sd": 0.0
+        },
+        "hint_bytes": {
+          "mean": 786432,
+          "sample_sd": 0.0
+        },
+        "public_A_bytes": {
+          "mean": 589824,
+          "sample_sd": 0.0
+        },
+        "cache_digest_payload_bytes": {
+          "mean": 960,
+          "sample_sd": 0.0
+        },
+        "client_query_ms": {
+          "mean": 2.2428835416666666,
+          "sample_sd": 0.1532643184979274
+        },
+        "server_answer_ms": {
+          "mean": 0.009749854166666667,
+          "sample_sd": 0.0020382139799011746
+        },
+        "client_decode_ms": {
+          "mean": 0.05004008333333333,
+          "sample_sd": 0.012939734942877581
+        },
+        "backend_wall_ms": {
+          "mean": 2.309578166666667,
+          "sample_sd": 0.16788794664672976
+        },
+        "online_total_bytes": {
+          "mean": 1536,
+          "sample_sd": 0.0
+        }
+      }
+    },
+    {
+      "height": 4,
+      "method": "activebalance",
+      "processes": 3,
+      "metrics": {
+        "proofs": {
+          "mean": 16,
+          "sample_sd": 0.0
+        },
+        "max_bucket": {
+          "mean": 8,
+          "sample_sd": 0.0
+        },
+        "hint_bytes": {
+          "mean": 1048576,
+          "sample_sd": 0.0
+        },
+        "public_A_bytes": {
+          "mean": 524288,
+          "sample_sd": 0.0
+        },
+        "cache_digest_payload_bytes": {
+          "mean": 960,
+          "sample_sd": 0.0
+        },
+        "client_query_ms": {
+          "mean": 2.291092208333333,
+          "sample_sd": 0.050343978098115076
+        },
+        "server_answer_ms": {
+          "mean": 0.008099020833333333,
+          "sample_sd": 0.00020500523367302905
+        },
+        "client_decode_ms": {
+          "mean": 0.060981291666666666,
+          "sample_sd": 0.01763604955170983
+        },
+        "backend_wall_ms": {
+          "mean": 2.366928666666667,
+          "sample_sd": 0.058043683502752456
+        },
+        "online_total_bytes": {
+          "mean": 1792,
+          "sample_sd": 0.0
+        }
+      }
+    },
+    {
+      "height": 10,
+      "method": "treepir_official",
+      "processes": 3,
+      "metrics": {
+        "proofs": {
+          "mean": 32,
+          "sample_sd": 0.0
+        },
+        "max_bucket": {
+          "mean": 205,
+          "sample_sd": 0.0
+        },
+        "hint_bytes": {
+          "mean": 9175040,
+          "sample_sd": 0.0
+        },
+        "public_A_bytes": {
+          "mean": 9830400,
+          "sample_sd": 0.0
+        },
+        "cache_digest_payload_bytes": {
+          "mean": 65472,
+          "sample_sd": 0.0
+        },
+        "client_query_ms": {
+          "mean": 8.172169041666667,
+          "sample_sd": 0.20877348161466344
+        },
+        "server_answer_ms": {
+          "mean": 0.051219635416666666,
+          "sample_sd": 0.002491183117033181
+        },
+        "client_decode_ms": {
+          "mean": 0.7356178958333334,
+          "sample_sd": 0.0161605591149727
+        },
+        "backend_wall_ms": {
+          "mean": 8.993846729166666,
+          "sample_sd": 0.20094562431408836
+        },
+        "online_total_bytes": {
+          "mean": 18560,
+          "sample_sd": 0.0
+        }
+      }
+    },
+    {
+      "height": 10,
+      "method": "first_fit",
+      "processes": 3,
+      "metrics": {
+        "proofs": {
+          "mean": 32,
+          "sample_sd": 0.0
+        },
+        "max_bucket": {
+          "mean": 1024,
+          "sample_sd": 0.0
+        },
+        "hint_bytes": {
+          "mean": 7208960,
+          "sample_sd": 0.0
+        },
+        "public_A_bytes": {
+          "mean": 6750208,
+          "sample_sd": 0.0
+        },
+        "cache_digest_payload_bytes": {
+          "mean": 65472,
+          "sample_sd": 0.0
+        },
+        "client_query_ms": {
+          "mean": 7.702341562499999,
+          "sample_sd": 1.1188254916421685
+        },
+        "server_answer_ms": {
+          "mean": 0.06043041666666667,
+          "sample_sd": 0.0010283973695705306
+        },
+        "client_decode_ms": {
+          "mean": 0.5754021979166667,
+          "sample_sd": 0.008319994599404168
+        },
+        "backend_wall_ms": {
+          "mean": 8.367383166666666,
+          "sample_sd": 1.1130481619384684
+        },
+        "online_total_bytes": {
+          "mean": 14144,
+          "sample_sd": 0.0
+        }
+      }
+    },
+    {
+      "height": 10,
+      "method": "activebalance",
+      "processes": 3,
+      "metrics": {
+        "proofs": {
+          "mean": 32,
+          "sample_sd": 0.0
+        },
+        "max_bucket": {
+          "mean": 205,
+          "sample_sd": 0.0
+        },
+        "hint_bytes": {
+          "mean": 9175040,
+          "sample_sd": 0.0
+        },
+        "public_A_bytes": {
+          "mean": 9830400,
+          "sample_sd": 0.0
+        },
+        "cache_digest_payload_bytes": {
+          "mean": 65472,
+          "sample_sd": 0.0
+        },
+        "client_query_ms": {
+          "mean": 7.9937061875,
+          "sample_sd": 0.38144769143486656
+        },
+        "server_answer_ms": {
+          "mean": 0.05255536458333333,
+          "sample_sd": 0.001947503956975417
+        },
+        "client_decode_ms": {
+          "mean": 0.7302709479166667,
+          "sample_sd": 0.015394562991636104
+        },
+        "backend_wall_ms": {
+          "mean": 8.812814677083333,
+          "sample_sd": 0.393759371314964
+        },
+        "online_total_bytes": {
+          "mean": 18560,
+          "sample_sd": 0.0
+        }
+      }
+    }
+  ],
+  "proofs_verified": 432,
+  "statistical_unit": "three independent process means, paired target sets; no timing claim across native PIR families",
+  "scope": "Common unchanged SimplePIR Query/Answer/Recover backend; indices prepared before measurement. No TCP, no online Java index cost, no claim this is the official full TreePIR system.",
+  "binary_sha256": "d633487b2913aee719ade941a9a9629d45f27559261fb9e0bd255e93235fca40",
+  "source_sha256": "630bddc33f6ec173987803f8f800fd16754f2485f6b629e0e4aeac70b284c6ab"
+}

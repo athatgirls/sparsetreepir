@@ -1,0 +1,38 @@
+{
+  "case": "uniform_n100000",
+  "repeat": 0,
+  "method": "flat",
+  "pool_indices": [
+    3,
+    1,
+    12,
+    8,
+    16,
+    23,
+    24,
+    19,
+    14,
+    17
+  ],
+  "target_ids": [
+    4341,
+    2563,
+    32877,
+    25699,
+    44461,
+    65796,
+    69428,
+    55961,
+    37474,
+    47863
+  ],
+  "input_sha256": "4bb68311ad2c694fa7043566357af29283e63f759c911df84d8150829f117fa2",
+  "returncode": 0,
+  "timeout": false,
+  "wall_seconds": 2.439210510999999,
+  "binary_sha256": "4a1c83d3f8dfa12557aec5b5666224cc36840e9aa2fe758b6f634437a69bfa02",
+  "input_source_sha256": "4bb68311ad2c694fa7043566357af29283e63f759c911df84d8150829f117fa2",
+  "run_input_sha256": "2aa7f2669e82629a46243028102dae2787ce8244e88368db7222263c8142384b",
+  "result_sha256": "48ac5c047c93076baf1b718072397367ac68bdc616d5f4ea3cec7286df08ae8f",
+  "status": "complete"
+}

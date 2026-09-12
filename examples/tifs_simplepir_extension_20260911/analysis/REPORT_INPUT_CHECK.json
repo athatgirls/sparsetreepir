@@ -1,0 +1,13 @@
+{
+  "time_reduction_percent": 54.43267412682569,
+  "online_reduction_percent": 53.19298863736457,
+  "encoded_storage_reduction_percent": 66.903073286052,
+  "cache_fields": {
+    "common_metadata_payload_bytes_mean": 14753044,
+    "common_metadata_payload_bytes_sd": 0.0,
+    "digest_only_cache_bytes_mean": 6399936,
+    "digest_only_cache_bytes_sd": 0.0,
+    "full_cache_reference_bytes_mean": 21152980,
+    "full_cache_reference_bytes_sd": 0.0
+  }
+}

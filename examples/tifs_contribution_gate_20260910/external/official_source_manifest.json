@@ -1,0 +1,67 @@
+{
+  "repository": "https://github.com/PIR-PIXR/TreePIR",
+  "commit": "930063c5aefc441244abb4890fdf35383f3aa956",
+  "pin_obtained_by": "git ls-remote HEAD refs/heads/main, 2026-09-11",
+  "files": {
+    "README.md": {
+      "url": "https://raw.githubusercontent.com/PIR-PIXR/TreePIR/930063c5aefc441244abb4890fdf35383f3aa956/README.md",
+      "sha256": "d9f6f4d9c9407a2b831436145783f45ba607433a072c65aaec0998acd5aa12a0",
+      "same_as_historical_local_copy": true
+    },
+    "TreePIR-Indexing/src/SubCSA.java": {
+      "url": "https://raw.githubusercontent.com/PIR-PIXR/TreePIR/930063c5aefc441244abb4890fdf35383f3aa956/TreePIR-Indexing/src/SubCSA.java",
+      "sha256": "28e40ad790a8ef56fd9d6ffa1c7fd0bdedb0123d209d4ee451329b6d10372568",
+      "same_as_historical_local_copy": true
+    },
+    "CSA/src/CSA.java": {
+      "url": "https://raw.githubusercontent.com/PIR-PIXR/TreePIR/930063c5aefc441244abb4890fdf35383f3aa956/CSA/src/CSA.java",
+      "sha256": "0aa4930a5bd6f3779676270c58f96e0f2918a08ed5e40270f36448706b31bc8f",
+      "same_as_historical_local_copy": true
+    },
+    "CSA/src/MerkleTrees.java": {
+      "url": "https://raw.githubusercontent.com/PIR-PIXR/TreePIR/930063c5aefc441244abb4890fdf35383f3aa956/CSA/src/MerkleTrees.java",
+      "sha256": "c52c377bfda335795e28215a065420263bacc0d6d8db0010c2578a4f6d7e042b",
+      "same_as_historical_local_copy": true
+    },
+    "CSA/gson-2.10.1.jar": {
+      "url": "https://raw.githubusercontent.com/PIR-PIXR/TreePIR/930063c5aefc441244abb4890fdf35383f3aa956/CSA/gson-2.10.1.jar",
+      "sha256": "4241c14a7727c34feea6507ec801318a3d4a90f070e4525681079fb94ee4c593",
+      "same_as_historical_local_copy": true
+    },
+    "VBPIR_TreePIR/src/main.cpp": {
+      "url": "https://raw.githubusercontent.com/PIR-PIXR/TreePIR/930063c5aefc441244abb4890fdf35383f3aa956/VBPIR_TreePIR/src/main.cpp",
+      "sha256": "6c6e142d2b794def9d7672efe2fbac76deca1739c6cc26816a5e090e9a786cbe",
+      "same_as_historical_local_copy": true
+    },
+    "VBPIR_TreePIR/src/batchpirserver.cpp": {
+      "url": "https://raw.githubusercontent.com/PIR-PIXR/TreePIR/930063c5aefc441244abb4890fdf35383f3aa956/VBPIR_TreePIR/src/batchpirserver.cpp",
+      "sha256": "d6de630ff741f031b44a3e27e18f382db1ddc70508ca1d831ecf9d798041b71c",
+      "same_as_historical_local_copy": true
+    },
+    "VBPIR_TreePIR/CMakeLists.txt": {
+      "url": "https://raw.githubusercontent.com/PIR-PIXR/TreePIR/930063c5aefc441244abb4890fdf35383f3aa956/VBPIR_TreePIR/CMakeLists.txt",
+      "sha256": "27116deb2192c1b74d6c15716110b5a5d70265e39199958a29e4614929454af7",
+      "same_as_historical_local_copy": true
+    },
+    "SealPIRplus/pirmessage_client.cpp": {
+      "url": "https://raw.githubusercontent.com/PIR-PIXR/TreePIR/930063c5aefc441244abb4890fdf35383f3aa956/SealPIRplus/pirmessage_client.cpp",
+      "sha256": "754fd9e368b6b98ee0b23209d43c7f123a9333b9f460e156cceea75a0cf8c171",
+      "same_as_historical_local_copy": true
+    },
+    "SealPIRplus/pirmessage_server.cpp": {
+      "url": "https://raw.githubusercontent.com/PIR-PIXR/TreePIR/930063c5aefc441244abb4890fdf35383f3aa956/SealPIRplus/pirmessage_server.cpp",
+      "sha256": "470c517967dc4a62ff00cbf90e3e5440a799e6e615dfc3a27b9f136777e6d780",
+      "same_as_historical_local_copy": true
+    },
+    "SealPIRplus/CMakeLists.txt": {
+      "url": "https://raw.githubusercontent.com/PIR-PIXR/TreePIR/930063c5aefc441244abb4890fdf35383f3aa956/SealPIRplus/CMakeLists.txt",
+      "sha256": "1143bd307a4898eb706887ee0d05dc35823d8b70c6c6f96ca4bccda24d8c91da",
+      "same_as_historical_local_copy": true
+    },
+    "SealPIR-Orchestrator/orchestrator.py": {
+      "url": "https://raw.githubusercontent.com/PIR-PIXR/TreePIR/930063c5aefc441244abb4890fdf35383f3aa956/SealPIR-Orchestrator/orchestrator.py",
+      "sha256": "7e8713bab300e4ef591e10b6501f934e2389a8b898057239092fc4a642f08088",
+      "same_as_historical_local_copy": true
+    }
+  }
+}

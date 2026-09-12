@@ -1,0 +1,85 @@
+***************************************************
+             Starting example index = 1               
+***************************************************
+Merkle Proof: 2 4 8 16 32 64 128 256 512 1024 
+sub_indices: 0 1 0 3 0 0 1 1 0 2 
++---------------------------------------------------+
+|               ENCRYPTION PARAMETERS               |
++---------------------------------------------------+
+|  seal_params_.poly_modulus_degree  = 8192
+|  seal_params_.coeff_modulus().bit_count   = [42 + 58 + 58 + 60] bits
+|  seal_params_.coeff_modulus().size = 4
+|  seal_params_.plain_modulus().bit_count = 28
++---------------------------------------------------+
++---------------------------------------------------+
+|                  Batch Parameters                 |
++---------------------------------------------------+
+| batch_size_:      10
+| num_entries_:     2046
++---------------------------------------------------+
+BatchPIRServer: Populating raw database...
+BatchPIRServer: Raw database populated.
+BatchPIRServer: Reading Color sub-databases and balancing...
+BatchPIRServer: Bucket Statistics:
+===================
+BatchPIRServer: Number of Buckets: 10
+Max Bucket Size: 205
+BatchPIRServer: Reading Color sub-databases completed.
+BatchPIRServer: Preparing PIR servers......
+dim_size = 64
++---------------------------------------------------+
+|                 PIR PARAMETERS                    |
++---------------------------------------------------+
+|  num_entries_                  = 205
+|  num_rounded_entries_          = 256
+|  entry_size_                   = 32
+|  num_columns_per_entry_        = 10
+|  db_ptx_                       = 40
+|  dimensions_                   = [ 64 4 ]
++---------------------------------------------------+
+BatchPIRServer: Converting and merging databases. This may take some time...
+BatchPIRServer: Processed database 1 of 10
+BatchPIRServer: Processed database 2 of 10
+BatchPIRServer: Processed database 3 of 10
+BatchPIRServer: Processed database 4 of 10
+BatchPIRServer: Processed database 5 of 10
+BatchPIRServer: Processed database 6 of 10
+BatchPIRServer: Processed database 7 of 10
+BatchPIRServer: Processed database 8 of 10
+BatchPIRServer: Processed database 9 of 10
+BatchPIRServer: Processed database 10 of 10
+BatchPIRServer: Database converted to PIR DB and merged successfully!
+BatchPIRServer: Database is NTT processed!
+BatchPIRServer: PIR servers preparation complete.
+Main: Starting query generation for example 1...
+Main: Query generation complete for example 1.
+Main: Starting response generation for example 1...
+Main: Response generation complete for example 1.
+Main: Extracting responses for example 1...
+Main: Noise budget left in the response: 47
+Main: Extraction complete for example 1.
+Contents of decode_responses:
+Hexadecimal string: 0xed7ac3b4435a5703ace927972466bed309c0d01867ad1dc4323a4eff93d202be
+Hexadecimal string: 0xa00609be6088e9264a83fc7fb11391a5361c06408716aa169f4a917d43d29b2a
+Hexadecimal string: 0xd4c8159e64f296261f5cb36b19c3ecfe079b801edb55462ef837121e07e1fcd8
+Hexadecimal string: 0x3e5b42b2a903a84c36ef1cd605027e978e7834aa9825e88e75828c50b76b644f
+Hexadecimal string: 0x8d432d10177b403cf404e0321c2268811287828fe9140302c3c542fad37c6307
+Hexadecimal string: 0x6e3251aecc7af9827f534686d27f3bb37e016ea38b5f3f00d3d05376d3e0b26b
+Hexadecimal string: 0x9e4a0a449988abf64929593d4ddba1de9f1d0e483a53f88b2847d76cd3468645
+Hexadecimal string: 0x637fd939eddeaf94258987e390a8db8d97ecea3e8b2bc7fe3f34934e7a26ae78
+Hexadecimal string: 0x343bd9479ea5290a48b9d38a1681c2a2f01d8f45f3d7f8d6ed2519359aae8966
+Hexadecimal string: 0x19cb8ca56e36ffd9e15e73addd22e0ce3282961e842d24b0458930b3164ae2a7
+Total Query communication: 385 KB
+Total Answer communication: 257 KB
+Main: All the entries matched for example 1!!
+
+***********************
+     Timings Report    
+***********************
+Input Parameters: Batch Size: 10, Number of Entries: 2046, Entry Size: 32
+Query generation time: 7568 microseconds
+Response generation time: 373400 microseconds
+Extraction time: 1123 microseconds
+Total Query communication: 385 KB
+Total Answer communication: 257 KB
+

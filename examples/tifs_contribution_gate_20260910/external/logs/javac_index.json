@@ -1,0 +1,14 @@
+{
+  "command": [
+    "javac",
+    "-d",
+    "/artifact/examples/tifs_contribution_gate_20260910/external/java_build/index",
+    "-cp",
+    "/artifact/examples/tifs_contribution_gate_20260910/external/official_sources/CSA/gson-2.10.1.jar",
+    "/artifact/examples/tifs_contribution_gate_20260910/external/official_sources/TreePIR-Indexing/src/SubCSA.java",
+    "/artifact/scripts/contribution_gate_index_20260910.java"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": ""
+}

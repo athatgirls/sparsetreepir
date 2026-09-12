@@ -1,0 +1,868 @@
+{
+  "total": 42,
+  "complete": 39,
+  "censored": 3,
+  "groups": [
+    {
+      "label": "fuel",
+      "algorithm": "ab-hungarian",
+      "attempts": 3,
+      "completed": 3,
+      "censored": 0,
+      "failed": 0,
+      "coloring_s_complete_only": {
+        "n": 3,
+        "mean": 0.02275473337310056,
+        "sample_sd": 0.005202389711760896,
+        "minimum": 0.017888200120069087,
+        "maximum": 0.028237999882549047
+      },
+      "subprocess_s_complete_only": {
+        "n": 3,
+        "mean": 1.0195846333323668,
+        "sample_sd": 0.007687560370006655,
+        "minimum": 1.011511499993503,
+        "maximum": 1.026817600009963
+      },
+      "observed_peak_RSS_MiB": {
+        "n": 3,
+        "mean": 70.10286458333333,
+        "sample_sd": 0.36648730890870673,
+        "minimum": 69.6796875,
+        "maximum": 70.31640625
+      },
+      "completed_scan_rounds": [
+        5,
+        5,
+        5
+      ],
+      "accepted_moves": [
+        4,
+        4,
+        4
+      ],
+      "endpoint_max_buckets": [
+        23,
+        23,
+        23
+      ],
+      "endpoint_U_over_B": [
+        1.0454545454545454,
+        1.0454545454545454,
+        1.0454545454545454
+      ],
+      "validity": [
+        true,
+        true,
+        true
+      ],
+      "equal_quality_completed_runs": true,
+      "same_key_hash": true,
+      "timeout_limits": [],
+      "individual_statuses": [
+        "complete",
+        "complete",
+        "complete"
+      ]
+    },
+    {
+      "label": "fuel",
+      "algorithm": "ab-sorted",
+      "attempts": 3,
+      "completed": 3,
+      "censored": 0,
+      "failed": 0,
+      "coloring_s_complete_only": {
+        "n": 3,
+        "mean": 0.00792140009192129,
+        "sample_sd": 0.0021999338007080843,
+        "minimum": 0.0061706999549642205,
+        "maximum": 0.010390800191089511
+      },
+      "subprocess_s_complete_only": {
+        "n": 3,
+        "mean": 0.9608602666218454,
+        "sample_sd": 0.1428489147396557,
+        "minimum": 0.816491499892436,
+        "maximum": 1.102139199967496
+      },
+      "observed_peak_RSS_MiB": {
+        "n": 3,
+        "mean": 70.16796875,
+        "sample_sd": 0.21119053110801986,
+        "minimum": 69.9296875,
+        "maximum": 70.33203125
+      },
+      "completed_scan_rounds": [
+        6,
+        6,
+        6
+      ],
+      "accepted_moves": [
+        5,
+        5,
+        5
+      ],
+      "endpoint_max_buckets": [
+        23,
+        23,
+        23
+      ],
+      "endpoint_U_over_B": [
+        1.0454545454545454,
+        1.0454545454545454,
+        1.0454545454545454
+      ],
+      "validity": [
+        true,
+        true,
+        true
+      ],
+      "equal_quality_completed_runs": true,
+      "same_key_hash": true,
+      "timeout_limits": [],
+      "individual_statuses": [
+        "complete",
+        "complete",
+        "complete"
+      ]
+    },
+    {
+      "label": "polygon-broad",
+      "algorithm": "ab-hungarian",
+      "attempts": 3,
+      "completed": 3,
+      "censored": 0,
+      "failed": 0,
+      "coloring_s_complete_only": {
+        "n": 3,
+        "mean": 11.61281733342912,
+        "sample_sd": 0.2831145532742257,
+        "minimum": 11.305887200287543,
+        "maximum": 11.863746600109152
+      },
+      "subprocess_s_complete_only": {
+        "n": 3,
+        "mean": 12.911537566687912,
+        "sample_sd": 0.28206213974737177,
+        "minimum": 12.681340900016949,
+        "maximum": 13.226175799965858
+      },
+      "observed_peak_RSS_MiB": {
+        "n": 3,
+        "mean": 143.59895833333334,
+        "sample_sd": 0.5833841937463002,
+        "minimum": 142.92578125,
+        "maximum": 143.95703125
+      },
+      "completed_scan_rounds": [
+        20,
+        20,
+        20
+      ],
+      "accepted_moves": [
+        20,
+        20,
+        20
+      ],
+      "endpoint_max_buckets": [
+        829,
+        829,
+        829
+      ],
+      "endpoint_U_over_B": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "validity": [
+        true,
+        true,
+        true
+      ],
+      "equal_quality_completed_runs": true,
+      "same_key_hash": true,
+      "timeout_limits": [],
+      "individual_statuses": [
+        "complete",
+        "complete",
+        "complete"
+      ]
+    },
+    {
+      "label": "polygon-broad",
+      "algorithm": "ab-sorted",
+      "attempts": 3,
+      "completed": 3,
+      "censored": 0,
+      "failed": 0,
+      "coloring_s_complete_only": {
+        "n": 3,
+        "mean": 2.5789101336849853,
+        "sample_sd": 0.012892732285533256,
+        "minimum": 2.5652404006104916,
+        "maximum": 2.590851500397548
+      },
+      "subprocess_s_complete_only": {
+        "n": 3,
+        "mean": 4.039536699963112,
+        "sample_sd": 0.10519443200803687,
+        "minimum": 3.919665399938822,
+        "maximum": 4.116472999914549
+      },
+      "observed_peak_RSS_MiB": {
+        "n": 3,
+        "mean": 143.36979166666666,
+        "sample_sd": 0.4052032287328432,
+        "minimum": 143.03515625,
+        "maximum": 143.8203125
+      },
+      "completed_scan_rounds": [
+        20,
+        20,
+        20
+      ],
+      "accepted_moves": [
+        20,
+        20,
+        20
+      ],
+      "endpoint_max_buckets": [
+        829,
+        829,
+        829
+      ],
+      "endpoint_U_over_B": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "validity": [
+        true,
+        true,
+        true
+      ],
+      "equal_quality_completed_runs": true,
+      "same_key_hash": true,
+      "timeout_limits": [],
+      "individual_statuses": [
+        "complete",
+        "complete",
+        "complete"
+      ]
+    },
+    {
+      "label": "polygon-multi",
+      "algorithm": "ab-hungarian",
+      "attempts": 3,
+      "completed": 3,
+      "censored": 0,
+      "failed": 0,
+      "coloring_s_complete_only": {
+        "n": 3,
+        "mean": 1.2338579000982766,
+        "sample_sd": 0.06884025289956311,
+        "minimum": 1.1705494999187067,
+        "maximum": 1.307141600176692
+      },
+      "subprocess_s_complete_only": {
+        "n": 3,
+        "mean": 2.3657515000086278,
+        "sample_sd": 0.14938500714301708,
+        "minimum": 2.205463199992664,
+        "maximum": 2.5010919000487775
+      },
+      "observed_peak_RSS_MiB": {
+        "n": 3,
+        "mean": 80.13020833333333,
+        "sample_sd": 0.3771369235630255,
+        "minimum": 79.6953125,
+        "maximum": 80.3671875
+      },
+      "completed_scan_rounds": [
+        12,
+        12,
+        12
+      ],
+      "accepted_moves": [
+        11,
+        11,
+        11
+      ],
+      "endpoint_max_buckets": [
+        193,
+        193,
+        193
+      ],
+      "endpoint_U_over_B": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "validity": [
+        true,
+        true,
+        true
+      ],
+      "equal_quality_completed_runs": true,
+      "same_key_hash": true,
+      "timeout_limits": [],
+      "individual_statuses": [
+        "complete",
+        "complete",
+        "complete"
+      ]
+    },
+    {
+      "label": "polygon-multi",
+      "algorithm": "ab-sorted",
+      "attempts": 3,
+      "completed": 3,
+      "censored": 0,
+      "failed": 0,
+      "coloring_s_complete_only": {
+        "n": 3,
+        "mean": 0.26138713338878006,
+        "sample_sd": 0.010162698317281855,
+        "minimum": 0.2518873999360949,
+        "maximum": 0.27210330008529127
+      },
+      "subprocess_s_complete_only": {
+        "n": 3,
+        "mean": 1.3683216999828194,
+        "sample_sd": 0.043458020796090395,
+        "minimum": 1.3415506000164896,
+        "maximum": 1.4184642999898642
+      },
+      "observed_peak_RSS_MiB": {
+        "n": 3,
+        "mean": 79.34244791666667,
+        "sample_sd": 0.5912046249215629,
+        "minimum": 78.66015625,
+        "maximum": 79.703125
+      },
+      "completed_scan_rounds": [
+        11,
+        11,
+        11
+      ],
+      "accepted_moves": [
+        10,
+        10,
+        10
+      ],
+      "endpoint_max_buckets": [
+        193,
+        193,
+        193
+      ],
+      "endpoint_U_over_B": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "validity": [
+        true,
+        true,
+        true
+      ],
+      "equal_quality_completed_runs": true,
+      "same_key_hash": true,
+      "timeout_limits": [],
+      "individual_statuses": [
+        "complete",
+        "complete",
+        "complete"
+      ]
+    },
+    {
+      "label": "polygon-recent",
+      "algorithm": "ab-hungarian",
+      "attempts": 3,
+      "completed": 3,
+      "censored": 0,
+      "failed": 0,
+      "coloring_s_complete_only": {
+        "n": 3,
+        "mean": 0.17706973330738643,
+        "sample_sd": 0.045179445165092084,
+        "minimum": 0.1279409999260679,
+        "maximum": 0.2168314001755789
+      },
+      "subprocess_s_complete_only": {
+        "n": 3,
+        "mean": 1.168625666682298,
+        "sample_sd": 0.16711135239744238,
+        "minimum": 0.9891676000552252,
+        "maximum": 1.3197737999726087
+      },
+      "observed_peak_RSS_MiB": {
+        "n": 3,
+        "mean": 70.52213541666667,
+        "sample_sd": 0.4097157853190225,
+        "minimum": 70.05078125,
+        "maximum": 70.79296875
+      },
+      "completed_scan_rounds": [
+        9,
+        9,
+        9
+      ],
+      "accepted_moves": [
+        8,
+        8,
+        8
+      ],
+      "endpoint_max_buckets": [
+        70,
+        70,
+        70
+      ],
+      "endpoint_U_over_B": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "validity": [
+        true,
+        true,
+        true
+      ],
+      "equal_quality_completed_runs": true,
+      "same_key_hash": true,
+      "timeout_limits": [],
+      "individual_statuses": [
+        "complete",
+        "complete",
+        "complete"
+      ]
+    },
+    {
+      "label": "polygon-recent",
+      "algorithm": "ab-sorted",
+      "attempts": 3,
+      "completed": 3,
+      "censored": 0,
+      "failed": 0,
+      "coloring_s_complete_only": {
+        "n": 3,
+        "mean": 0.05897280003409833,
+        "sample_sd": 0.002802633526818751,
+        "minimum": 0.057164100115187466,
+        "maximum": 0.062201199936680496
+      },
+      "subprocess_s_complete_only": {
+        "n": 3,
+        "mean": 0.9500974666637679,
+        "sample_sd": 0.21725022805811162,
+        "minimum": 0.7704317000461742,
+        "maximum": 1.1915476999711245
+      },
+      "observed_peak_RSS_MiB": {
+        "n": 3,
+        "mean": 70.74348958333333,
+        "sample_sd": 0.20162961172784327,
+        "minimum": 70.5703125,
+        "maximum": 70.96484375
+      },
+      "completed_scan_rounds": [
+        11,
+        11,
+        11
+      ],
+      "accepted_moves": [
+        10,
+        10,
+        10
+      ],
+      "endpoint_max_buckets": [
+        70,
+        70,
+        70
+      ],
+      "endpoint_U_over_B": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "validity": [
+        true,
+        true,
+        true
+      ],
+      "equal_quality_completed_runs": true,
+      "same_key_hash": true,
+      "timeout_limits": [],
+      "individual_statuses": [
+        "complete",
+        "complete",
+        "complete"
+      ]
+    },
+    {
+      "label": "uniform100k",
+      "algorithm": "ab-hungarian",
+      "attempts": 3,
+      "completed": 0,
+      "censored": 3,
+      "failed": 0,
+      "coloring_s_complete_only": null,
+      "subprocess_s_complete_only": null,
+      "observed_peak_RSS_MiB": {
+        "n": 3,
+        "mean": 655.5221354166666,
+        "sample_sd": 0.4638469705024178,
+        "minimum": 655.00390625,
+        "maximum": 655.8984375
+      },
+      "completed_scan_rounds": [
+        10,
+        9,
+        9
+      ],
+      "accepted_moves": [
+        10,
+        9,
+        9
+      ],
+      "endpoint_max_buckets": [
+        10608,
+        13207,
+        13207
+      ],
+      "endpoint_U_over_B": [
+        1.1668683313166868,
+        1.4527554724452756,
+        1.4527554724452756
+      ],
+      "validity": [
+        true,
+        true,
+        true
+      ],
+      "equal_quality_completed_runs": null,
+      "same_key_hash": true,
+      "timeout_limits": [
+        120.0,
+        120,
+        120
+      ],
+      "individual_statuses": [
+        "timeout",
+        "timeout",
+        "timeout"
+      ]
+    },
+    {
+      "label": "uniform100k",
+      "algorithm": "ab-sorted",
+      "attempts": 3,
+      "completed": 3,
+      "censored": 0,
+      "failed": 0,
+      "coloring_s_complete_only": {
+        "n": 3,
+        "mean": 40.98426249999708,
+        "sample_sd": 4.898937707454604,
+        "minimum": 35.35502879996784,
+        "maximum": 44.281980399857275
+      },
+      "subprocess_s_complete_only": {
+        "n": 3,
+        "mean": 46.14879673331355,
+        "sample_sd": 4.972530280700278,
+        "minimum": 40.430844499962404,
+        "maximum": 49.460347799933515
+      },
+      "observed_peak_RSS_MiB": {
+        "n": 3,
+        "mean": 763.5234375,
+        "sample_sd": 0.932661668605469,
+        "minimum": 762.76953125,
+        "maximum": 764.56640625
+      },
+      "completed_scan_rounds": [
+        20,
+        20,
+        20
+      ],
+      "accepted_moves": [
+        20,
+        20,
+        20
+      ],
+      "endpoint_max_buckets": [
+        9126,
+        9126,
+        9126
+      ],
+      "endpoint_U_over_B": [
+        1.003849961500385,
+        1.003849961500385,
+        1.003849961500385
+      ],
+      "validity": [
+        true,
+        true,
+        true
+      ],
+      "equal_quality_completed_runs": true,
+      "same_key_hash": true,
+      "timeout_limits": [],
+      "individual_statuses": [
+        "complete",
+        "complete",
+        "complete"
+      ]
+    },
+    {
+      "label": "zksync-broad",
+      "algorithm": "ab-hungarian",
+      "attempts": 3,
+      "completed": 3,
+      "censored": 0,
+      "failed": 0,
+      "coloring_s_complete_only": {
+        "n": 3,
+        "mean": 11.374348266632296,
+        "sample_sd": 1.3861074398480373,
+        "minimum": 10.061628600000404,
+        "maximum": 12.823720799991861
+      },
+      "subprocess_s_complete_only": {
+        "n": 3,
+        "mean": 12.841537166697284,
+        "sample_sd": 1.3811140403856395,
+        "minimum": 11.547520000021905,
+        "maximum": 14.295772900106385
+      },
+      "observed_peak_RSS_MiB": {
+        "n": 3,
+        "mean": 143.51171875,
+        "sample_sd": 0.32856648127462346,
+        "minimum": 143.140625,
+        "maximum": 143.765625
+      },
+      "completed_scan_rounds": [
+        19,
+        19,
+        19
+      ],
+      "accepted_moves": [
+        18,
+        18,
+        18
+      ],
+      "endpoint_max_buckets": [
+        911,
+        911,
+        911
+      ],
+      "endpoint_U_over_B": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "validity": [
+        true,
+        true,
+        true
+      ],
+      "equal_quality_completed_runs": true,
+      "same_key_hash": true,
+      "timeout_limits": [],
+      "individual_statuses": [
+        "complete",
+        "complete",
+        "complete"
+      ]
+    },
+    {
+      "label": "zksync-broad",
+      "algorithm": "ab-sorted",
+      "attempts": 3,
+      "completed": 3,
+      "censored": 0,
+      "failed": 0,
+      "coloring_s_complete_only": {
+        "n": 3,
+        "mean": 2.228926899998138,
+        "sample_sd": 0.08052039560925228,
+        "minimum": 2.1361104998504743,
+        "maximum": 2.2800648999400437
+      },
+      "subprocess_s_complete_only": {
+        "n": 3,
+        "mean": 3.6004309666653476,
+        "sample_sd": 0.10923774024004652,
+        "minimum": 3.4748058000113815,
+        "maximum": 3.673073200043291
+      },
+      "observed_peak_RSS_MiB": {
+        "n": 3,
+        "mean": 143.40755208333334,
+        "sample_sd": 0.13955393619232254,
+        "minimum": 143.25,
+        "maximum": 143.515625
+      },
+      "completed_scan_rounds": [
+        17,
+        17,
+        17
+      ],
+      "accepted_moves": [
+        16,
+        16,
+        16
+      ],
+      "endpoint_max_buckets": [
+        911,
+        911,
+        911
+      ],
+      "endpoint_U_over_B": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "validity": [
+        true,
+        true,
+        true
+      ],
+      "equal_quality_completed_runs": true,
+      "same_key_hash": true,
+      "timeout_limits": [],
+      "individual_statuses": [
+        "complete",
+        "complete",
+        "complete"
+      ]
+    },
+    {
+      "label": "zksync-sample",
+      "algorithm": "ab-hungarian",
+      "attempts": 3,
+      "completed": 3,
+      "censored": 0,
+      "failed": 0,
+      "coloring_s_complete_only": {
+        "n": 3,
+        "mean": 0.847919833380729,
+        "sample_sd": 0.07568482812115943,
+        "minimum": 0.7950894001405686,
+        "maximum": 0.9346252001123503
+      },
+      "subprocess_s_complete_only": {
+        "n": 3,
+        "mean": 1.9266762666714687,
+        "sample_sd": 0.1074879893373541,
+        "minimum": 1.8441548000555485,
+        "maximum": 2.048225999926217
+      },
+      "observed_peak_RSS_MiB": {
+        "n": 3,
+        "mean": 73.86979166666667,
+        "sample_sd": 0.35191677751177314,
+        "minimum": 73.52734375,
+        "maximum": 74.23046875
+      },
+      "completed_scan_rounds": [
+        13,
+        13,
+        13
+      ],
+      "accepted_moves": [
+        12,
+        12,
+        12
+      ],
+      "endpoint_max_buckets": [
+        147,
+        147,
+        147
+      ],
+      "endpoint_U_over_B": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "validity": [
+        true,
+        true,
+        true
+      ],
+      "equal_quality_completed_runs": true,
+      "same_key_hash": true,
+      "timeout_limits": [],
+      "individual_statuses": [
+        "complete",
+        "complete",
+        "complete"
+      ]
+    },
+    {
+      "label": "zksync-sample",
+      "algorithm": "ab-sorted",
+      "attempts": 3,
+      "completed": 3,
+      "censored": 0,
+      "failed": 0,
+      "coloring_s_complete_only": {
+        "n": 3,
+        "mean": 0.1906678666903948,
+        "sample_sd": 0.023510215738309102,
+        "minimum": 0.16411949996836483,
+        "maximum": 0.2088531000772491
+      },
+      "subprocess_s_complete_only": {
+        "n": 3,
+        "mean": 1.291127666636991,
+        "sample_sd": 0.0788806927609814,
+        "minimum": 1.2360800999449566,
+        "maximum": 1.381496399990283
+      },
+      "observed_peak_RSS_MiB": {
+        "n": 3,
+        "mean": 73.77604166666667,
+        "sample_sd": 0.31677576160120086,
+        "minimum": 73.43359375,
+        "maximum": 74.05859375
+      },
+      "completed_scan_rounds": [
+        13,
+        13,
+        13
+      ],
+      "accepted_moves": [
+        12,
+        12,
+        12
+      ],
+      "endpoint_max_buckets": [
+        147,
+        147,
+        147
+      ],
+      "endpoint_U_over_B": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "validity": [
+        true,
+        true,
+        true
+      ],
+      "equal_quality_completed_runs": true,
+      "same_key_hash": true,
+      "timeout_limits": [],
+      "individual_statuses": [
+        "complete",
+        "complete",
+        "complete"
+      ]
+    }
+  ],
+  "statistical_scope": "Three independent process executions of the same deterministic layout per full group; repeat 1 explicitly reused. sample SD, no claimed CI; censored rows never averaged as completed times."
+}

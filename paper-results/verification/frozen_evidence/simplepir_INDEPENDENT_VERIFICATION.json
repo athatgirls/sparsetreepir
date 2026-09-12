@@ -1,0 +1,90 @@
+{
+  "status": "audited_with_observed_failures",
+  "complete_requested_experiment": false,
+  "complete_run_plan": false,
+  "smoke_excluded_from_performance": false,
+  "auditor_sha256": "c6956924b71967b291b8c6f102cb2bd5437db276140883b5e21b7693c13f59fe",
+  "scheduled_executed_all": true,
+  "all_executed_outputs_audited": true,
+  "process_results_verified": 83,
+  "failed_process_results_audited": 1,
+  "total_process_results_audited": 84,
+  "measured_proofs_verified": 837,
+  "complete_process_measured_proofs": 830,
+  "partial_process_measured_proofs": 7,
+  "proofs_including_warmups_verified": 1005,
+  "valid_completed_cells": 27,
+  "incomplete_cells": [
+    {
+      "case": "prefix64_n10000",
+      "method": "pbc",
+      "processes": 2,
+      "scope": "successful_processes_conditional"
+    }
+  ],
+  "actual_recovered_record_slots_checked": 19290,
+  "expected_formal_processes": 84,
+  "expected_formal_measured_proofs": 840,
+  "expected_formal_proofs_including_warmups": 1008,
+  "source_run_configuration": {
+    "schema": 1,
+    "seed": 2026091117,
+    "query_routing_seed_base": 2026091103,
+    "repeats": 3,
+    "samples": 10,
+    "warmup": 2,
+    "cases_requested": [
+      "uniform_n1000",
+      "uniform_n10000",
+      "uniform_n100000",
+      "prefix64_n10000",
+      "cluster90_n10000",
+      "complete_h10",
+      "complete_h14"
+    ],
+    "methods_requested": [
+      "ab",
+      "pbc",
+      "flat",
+      "first_fit"
+    ],
+    "binary_sha256": "4a1c83d3f8dfa12557aec5b5666224cc36840e9aa2fe758b6f634437a69bfa02",
+    "script_sha256": "b38ab0dc8f79c34fee0ea07fffaadc3a8b77c2da924b3ffb69a126baed6087a3",
+    "frozen_target_schedule_sha256": "229824a4ba51bd72e4baa849f5c883262e8b6d5ce7024084e4eb83933f501310",
+    "smoke_excluded_from_performance": false,
+    "timeout_seconds": 600,
+    "address_space_limit_bytes": 10737418240,
+    "GOMAXPROCS": 1,
+    "statistical_unit": "independent process mean",
+    "scope": "native 32-byte long records; serialized in-process proof pipeline; no network latency"
+  },
+  "failed_or_invalid_or_missing_processes": [
+    {
+      "case": "prefix64_n10000",
+      "method": "pbc",
+      "repeat": 0,
+      "status": "observed_backend_failure_audited",
+      "backend_error": "PBC cuckoo exceeded 500 recursive attempts; no global rehash or target replacement",
+      "returncode": 2,
+      "timeout": false,
+      "verified_warmups": 2,
+      "verified_partial_measured_proofs": 7,
+      "first_uncompleted_phase": "measured",
+      "first_uncompleted_phase_ordinal_zero_based": 7,
+      "first_uncompleted_target_id": 3455,
+      "first_uncompleted_overall_ordinal_zero_based": 9,
+      "ordinal_evidence": "inferred from successfully persisted output prefix and source-reviewed sequential loop; no failed-query latency/result is imputed",
+      "result_sha256": "13ab417514f56977721cd6e21d5d3de8b3edd7f1e4cff3ed36b99b754e9e68fd",
+      "excluded_from_performance_aggregates": true
+    }
+  ],
+  "authentication": "Python derives siblings and query-support intervals from original heap coordinates; checks every real/dummy recovered digest and bucket position; rebuilds roots from actual decoded bytes and defaults; three independent negative controls.",
+  "actual_recovery_used": true,
+  "all_envelopes_target_independent_within_process": true,
+  "cross_backend_scope": "Snapshots, original records/levels/root, AB placement, official PBC placement and case/repeat target selection match frozen VBPIR. Crypto parameters and dummy/eviction traces are not asserted equal.",
+  "serialization_scope": "Independent exact frame/DBinfo/public-metadata lengths from source-reviewed actual encode/decode path; raw matrix wires are not retained, so no independent re-execution of lattice decryption is claimed.",
+  "randomness_scope": "Native duplicate query/secret sanity flags checked; cryptographic randomness/security is source-audited, not independently proved by these flags.",
+  "statistical_unit": "independent process mean; sample SD; paired df=2 Student-t interval only for three matched processes",
+  "cache_reference": "digest_only_cache_bytes counts all active 32B digests; full_cache_reference_bytes also includes the same compact JSON height/root/defaults/slots/intervals/batch directory, omitting mode/buckets/candidates. This is a specified shared-directory reference, not a lower bound or minimum necessary cache state.",
+  "scope": "native256bits/32B; expanded-A; same-process serialized proof processing, no network. RSS combines client/server and audit buffers. Full construction is outside backend setup."
+}

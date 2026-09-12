@@ -1,0 +1,25 @@
+{
+  "official_utils_sha256": "cdfcacc6ea068a2f1b5afde4171be2fc415f7faf24fa79837280706e2265a799",
+  "source_sha256": "4960c38eea38ce1eef09d85c86076730765abbd62f481d6234eeb8ace9d6dde3",
+  "command": [
+    "c++",
+    "-O2",
+    "-std=c++17",
+    "-I",
+    "/artifact/examples/tifs_external_extension_20260911/native_adapter/vendor",
+    "-I",
+    "/artifact/examples/tifs_external_extension_20260911/native_adapter/vendor/header",
+    "-isystem",
+    "/usr/local/include/SEAL-4.3",
+    "/mnt/d/DesktopProjects/论文/examples/tifs_simplepir_extension_20260911/inputs/_hash_exporter/export_public_placement.cpp",
+    "-o",
+    "/mnt/d/DesktopProjects/论文/examples/tifs_simplepir_extension_20260911/inputs/_hash_exporter/export_public_placement"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "",
+  "compile_wall_s": 5.195827368,
+  "compiler": "c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "scope": "Only official get_candidate_buckets executed; no encryption, PIR or timing benchmark",
+  "binary_sha256": "7d363677d4ed469b59c91d92c5d6d302741d2a3bfc11db6bf7dce4a9f481c610"
+}

@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "counts": {
+    "hall_failure_rejected": 1,
+    "augmenting_path_success": 1,
+    "matching_vs_bruteforce_graphs": 256,
+    "pbc_all_target_public_preflights": 10,
+    "six_layout_target_proofs": 498,
+    "metadata_binary_roundtrips": 60,
+    "driver_directory_read_and_route_checks": 60,
+    "full_cache_disk_reconstruction_proofs": 83,
+    "cases": 10
+  },
+  "scope": "Six layouts route all occupied targets of ten small test trees, with real digest-record serialization and root verification. Matching checked against brute force on 256 graphs. No PIR run or performance measurement.",
+  "metadata_result": "The driver reads the actual binary directory, recovers heap-id positions and routes each target without precomputed needs/choices. Cross-checked with an independent interval scan; index parsing is preprocessing; proper-color and Nonempty-depth queries use per-bucket interval binary search, while flat/PBC queries use h sibling-id lookups.",
+  "full_cache_byte_formula": "56*N + 26 + n*ceil(h/8), comprising 32*N payload, 24*N rows, 18-byte header, 8-byte bucket header, and occupied slots.",
+  "observed_boundary": "For singleton trees, m=0 and the five non-PBC layouts send zero queries; pbc_buckets currently produces three empty padded buckets. Treat that as a control-specific boundary, not useful PIR work.",
+  "driver_sha256": "bf441840014a4059024229a989a356b771b694b001d05c975807ee08c8b5c589",
+  "test_sha256": "27652f2226c4879fd5c30875128fb2770637c58a2ae99b733c828766b8cbf8ee"
+}

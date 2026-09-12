@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "seed": 2026091117,
+  "query_routing_seed_base": 2026091103,
+  "repeats": 1,
+  "samples": 2,
+  "warmup": 1,
+  "cases_requested": [
+    "uniform_n1000",
+    "uniform_n100000"
+  ],
+  "methods_requested": [
+    "ab",
+    "pbc",
+    "flat",
+    "first_fit"
+  ],
+  "binary_sha256": "4a1c83d3f8dfa12557aec5b5666224cc36840e9aa2fe758b6f634437a69bfa02",
+  "script_sha256": "b38ab0dc8f79c34fee0ea07fffaadc3a8b77c2da924b3ffb69a126baed6087a3",
+  "frozen_target_schedule_sha256": "229824a4ba51bd72e4baa849f5c883262e8b6d5ce7024084e4eb83933f501310",
+  "smoke_excluded_from_performance": true,
+  "timeout_seconds": 600,
+  "address_space_limit_bytes": 10737418240,
+  "GOMAXPROCS": 1,
+  "statistical_unit": "independent process mean",
+  "scope": "native 32-byte long records; serialized in-process proof pipeline; no network latency"
+}

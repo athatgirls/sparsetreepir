@@ -1,0 +1,140 @@
+{
+  "status": "complete",
+  "case": "cluster90_n10000",
+  "n": 10000,
+  "height": 128,
+  "N": 19998,
+  "m": 27,
+  "ab_loads": [
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256,
+    466,
+    578,
+    1088,
+    1081,
+    1077,
+    1082,
+    1087,
+    1088,
+    1088,
+    1087,
+    1084,
+    1087,
+    1086,
+    1087,
+    1086,
+    1087,
+    1084,
+    1086,
+    1079
+  ],
+  "ab_max_bucket": 1088,
+  "ab_scan_budget": 20,
+  "ab_reported_passes": 20,
+  "ab_reported_moves": 20,
+  "algorithm": "unchanged tifs_revision_smt.build_layout -> original best_count_profile_balanced (Hungarian)",
+  "root_hex": "13c8cad23adb8ab3cb706b03ff1676703b95b24660968fefbbbc4673d6b199a4",
+  "hash_format": "sha256:leaf=H(00||value),internal=H(01||left||right),empty_leaf=H(02)",
+  "generator": {
+    "generator": "SHA256(domain || seed_uint64_be || source_index_uint64_be), first 128 bits",
+    "key_domain_hex": "537061727365547265655049522d65787465726e616c2d32303236303931312d6b657900",
+    "source_indices": [
+      0,
+      9999
+    ],
+    "seed": 2026091103,
+    "collisions": 0,
+    "shared_prefix_bits": 0,
+    "prefix_transform": "source indices 0..8999: zero top 64 bits; 9000..9999: unchanged uniform 128 bits",
+    "cluster_fraction": 0.9,
+    "scope": "Synthetic deterministic coordinates; not real keys or a real request trace",
+    "unsorted_uniform_coordinates_sha256": "b8927b4026c7905605f400381825837297b4d4384cc7ecacb87569fff9217e35"
+  },
+  "target_pool": 32,
+  "target_rank_ids": [
+    315,
+    320,
+    529,
+    542,
+    741,
+    1069,
+    1449,
+    1475,
+    1497,
+    3173,
+    3212,
+    3455,
+    3652,
+    3731,
+    3916,
+    4109,
+    4238,
+    4684,
+    4767,
+    5557,
+    5982,
+    6025,
+    6995,
+    7285,
+    7500,
+    7967,
+    8224,
+    8678,
+    8963,
+    9052,
+    9205,
+    9468
+  ],
+  "checks": {
+    "ab": {
+      "all_target_routes_checked": 10000,
+      "root_proofs_checked": 10000,
+      "root_sampling": "all",
+      "wrong_used_digest_rejections": 10000,
+      "routing_independent_of_target_expectations": true
+    }
+  },
+  "build_layout_wall_s": 22.619042688999997,
+  "build_layout_stages_ms": {
+    "hash_tree": 405.0022329999763,
+    "active_extraction": 1329.2140519999975,
+    "forest_build": 13.884983999986389,
+    "coloring": 20843.638937000007,
+    "metadata_build": 20.143552000007503
+  },
+  "total_preparation_wall_s": 24.681512107000003,
+  "peak_process_rss_bytes": 395522048,
+  "address_space_limit_bytes": 10737418240,
+  "environment": {
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "python": "3.12.3"
+  },
+  "sources_sha256": {
+    "scripts/prepare_external_extension_20260911.py": "067c072c331c4394ae445e1105f4751b00da749c8f886678f7f1d90e1884474a",
+    "scripts/tifs_revision_smt.py": "f0dc6c6c9af2d7a9c032991f5407c7cca79e7353394d6a18d9f8e8bb5e72c740",
+    "scripts/fixed_sparse_tree_coloring.py": "0e835f0d26bf71a78e0652f53c73bf942f071af0df68bd32cd496d0d8bef7cf0",
+    "scripts/generate_full_sparse_smt_example.py": "5cd3630af580fe03214fd9816ff66601e3f32e79a4e3d304b445bd8f12d17b1d",
+    "scripts/run_height_sparsity_profile_balance_experiment.py": "6e13f887cbe283ade74aad6cd2174aa3c1d66001ada2106fc27935b3284f63f5",
+    "scripts/run_sparse_smt_pir_backend_experiment.py": "2f0ae62851d8d3fe1219183e0a26bead1a5fcc9607612a15371927aacab248fb",
+    "scripts/contribution_gate_csa_20260910.java": "6028930b85e0ad9720c20f4494009b3f24be722c19c8b3234b4eb918dc1f851c",
+    "scripts/contribution_gate_index_20260910.java": "2e80f5ca2583283684f3eedee02a2000ff5daa2ed9d3c146e65b6b116d6d9e3e"
+  },
+  "outputs": {
+    "ab.json": {
+      "sha256": "80f5c5a1b17e62820c7ce30fa2d1834f93401d125a0bba28d3702b01566eca71",
+      "bytes": 4392542
+    },
+    "pbc.json": {
+      "sha256": "eca43032d1fff6e1023aa1fb5480ba2cb2e1638e14d641d16e8dd25feb364e48",
+      "bytes": 3234396
+    }
+  },
+  "scope": "Synthetic/complete experimental SMT input generation and direct-hash validation only; no PIR or latency benchmark performed.",
+  "pbc_scope": "Global records/intervals only; original external PBC implementation must construct its own placement and real/dummy routing."
+}

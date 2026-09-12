@@ -1,0 +1,391 @@
+{
+  "rows": [
+    {
+      "height": 4,
+      "layout": "treepir_official",
+      "source": "same unchanged SimplePIR backend",
+      "initialization": {
+        "backend_setup_ms": {
+          "mean": 43.02979033333333,
+          "sample_sd": 3.540385621229461,
+          "processes": 3
+        },
+        "hint_payload_bytes": 1048576,
+        "expanded_public_A_payload_bytes": 524288,
+        "serialized_bootstrap_bytes": null,
+        "bootstrap_NA_reason": "No transport/bootstrap serialization in this component harness."
+      },
+      "online": {
+        "client_query_ms": {
+          "mean": 2.432617104166667,
+          "sample_sd": 0.3736186491645411
+        },
+        "server_answer_ms": {
+          "mean": 0.008964145833333333,
+          "sample_sd": 0.0016186436262507213
+        },
+        "client_decode_ms": {
+          "mean": 0.051815729166666664,
+          "sample_sd": 0.009045686166563505
+        },
+        "backend_wall_ms": {
+          "mean": 2.4995660625,
+          "sample_sd": 0.38424961154937776
+        },
+        "online_total_bytes": {
+          "mean": 1792,
+          "sample_sd": 0.0
+        }
+      },
+      "client_storage": {
+        "hint_plus_expanded_A_bytes": 1572864,
+        "scope": "PIR payload only: excludes indexing, secret state, objects and allocator overhead. Not full client RAM.",
+        "independent_client_RSS_bytes": null,
+        "client_RSS_NA_reason": "The runner combines client and server; its VmHWM cannot isolate client memory.",
+        "combined_process_peak_RSS_bytes": {
+          "mean": 10529450.666666666,
+          "sample_sd": 421337.53084828955,
+          "processes": 3
+        }
+      },
+      "full_system_E2E_ms": null,
+      "E2E_NA_reason": "Backend wall excludes online indexing, root verification, process launch, serialization and transport; no native common-service E2E run."
+    },
+    {
+      "height": 4,
+      "layout": "first_fit",
+      "source": "same unchanged SimplePIR backend",
+      "initialization": {
+        "backend_setup_ms": {
+          "mean": 37.82668266666666,
+          "sample_sd": 1.6975284953956824,
+          "processes": 3
+        },
+        "hint_payload_bytes": 786432,
+        "expanded_public_A_payload_bytes": 589824,
+        "serialized_bootstrap_bytes": null,
+        "bootstrap_NA_reason": "No transport/bootstrap serialization in this component harness."
+      },
+      "online": {
+        "client_query_ms": {
+          "mean": 2.2428835416666666,
+          "sample_sd": 0.1532643184979274
+        },
+        "server_answer_ms": {
+          "mean": 0.009749854166666667,
+          "sample_sd": 0.0020382139799011746
+        },
+        "client_decode_ms": {
+          "mean": 0.05004008333333333,
+          "sample_sd": 0.012939734942877581
+        },
+        "backend_wall_ms": {
+          "mean": 2.309578166666667,
+          "sample_sd": 0.16788794664672976
+        },
+        "online_total_bytes": {
+          "mean": 1536,
+          "sample_sd": 0.0
+        }
+      },
+      "client_storage": {
+        "hint_plus_expanded_A_bytes": 1376256,
+        "scope": "PIR payload only: excludes indexing, secret state, objects and allocator overhead. Not full client RAM.",
+        "independent_client_RSS_bytes": null,
+        "client_RSS_NA_reason": "The runner combines client and server; its VmHWM cannot isolate client memory.",
+        "combined_process_peak_RSS_bytes": {
+          "mean": 9480874.666666666,
+          "sample_sd": 302697.8179328905,
+          "processes": 3
+        }
+      },
+      "full_system_E2E_ms": null,
+      "E2E_NA_reason": "Backend wall excludes online indexing, root verification, process launch, serialization and transport; no native common-service E2E run."
+    },
+    {
+      "height": 4,
+      "layout": "activebalance",
+      "source": "same unchanged SimplePIR backend",
+      "initialization": {
+        "backend_setup_ms": {
+          "mean": 33.81934566666666,
+          "sample_sd": 3.3034064407156043,
+          "processes": 3
+        },
+        "hint_payload_bytes": 1048576,
+        "expanded_public_A_payload_bytes": 524288,
+        "serialized_bootstrap_bytes": null,
+        "bootstrap_NA_reason": "No transport/bootstrap serialization in this component harness."
+      },
+      "online": {
+        "client_query_ms": {
+          "mean": 2.291092208333333,
+          "sample_sd": 0.050343978098115076
+        },
+        "server_answer_ms": {
+          "mean": 0.008099020833333333,
+          "sample_sd": 0.00020500523367302905
+        },
+        "client_decode_ms": {
+          "mean": 0.060981291666666666,
+          "sample_sd": 0.01763604955170983
+        },
+        "backend_wall_ms": {
+          "mean": 2.366928666666667,
+          "sample_sd": 0.058043683502752456
+        },
+        "online_total_bytes": {
+          "mean": 1792,
+          "sample_sd": 0.0
+        }
+      },
+      "client_storage": {
+        "hint_plus_expanded_A_bytes": 1572864,
+        "scope": "PIR payload only: excludes indexing, secret state, objects and allocator overhead. Not full client RAM.",
+        "independent_client_RSS_bytes": null,
+        "client_RSS_NA_reason": "The runner combines client and server; its VmHWM cannot isolate client memory.",
+        "combined_process_peak_RSS_bytes": {
+          "mean": 10354688,
+          "sample_sd": 0.0,
+          "processes": 3
+        }
+      },
+      "full_system_E2E_ms": null,
+      "E2E_NA_reason": "Backend wall excludes online indexing, root verification, process launch, serialization and transport; no native common-service E2E run."
+    },
+    {
+      "height": 10,
+      "layout": "treepir_official",
+      "source": "same unchanged SimplePIR backend",
+      "initialization": {
+        "backend_setup_ms": {
+          "mean": 232.64962266666666,
+          "sample_sd": 8.03218581832699,
+          "processes": 3
+        },
+        "hint_payload_bytes": 9175040,
+        "expanded_public_A_payload_bytes": 9830400,
+        "serialized_bootstrap_bytes": null,
+        "bootstrap_NA_reason": "No transport/bootstrap serialization in this component harness."
+      },
+      "online": {
+        "client_query_ms": {
+          "mean": 8.172169041666667,
+          "sample_sd": 0.20877348161466344
+        },
+        "server_answer_ms": {
+          "mean": 0.051219635416666666,
+          "sample_sd": 0.002491183117033181
+        },
+        "client_decode_ms": {
+          "mean": 0.7356178958333334,
+          "sample_sd": 0.0161605591149727
+        },
+        "backend_wall_ms": {
+          "mean": 8.993846729166666,
+          "sample_sd": 0.20094562431408836
+        },
+        "online_total_bytes": {
+          "mean": 18560,
+          "sample_sd": 0.0
+        }
+      },
+      "client_storage": {
+        "hint_plus_expanded_A_bytes": 19005440,
+        "scope": "PIR payload only: excludes indexing, secret state, objects and allocator overhead. Not full client RAM.",
+        "independent_client_RSS_bytes": null,
+        "client_RSS_NA_reason": "The runner combines client and server; its VmHWM cannot isolate client memory.",
+        "combined_process_peak_RSS_bytes": {
+          "mean": 53127850.666666664,
+          "sample_sd": 1676091.674921552,
+          "processes": 3
+        }
+      },
+      "full_system_E2E_ms": null,
+      "E2E_NA_reason": "Backend wall excludes online indexing, root verification, process launch, serialization and transport; no native common-service E2E run."
+    },
+    {
+      "height": 10,
+      "layout": "first_fit",
+      "source": "same unchanged SimplePIR backend",
+      "initialization": {
+        "backend_setup_ms": {
+          "mean": 182.69250533333334,
+          "sample_sd": 5.886267406451248,
+          "processes": 3
+        },
+        "hint_payload_bytes": 7208960,
+        "expanded_public_A_payload_bytes": 6750208,
+        "serialized_bootstrap_bytes": null,
+        "bootstrap_NA_reason": "No transport/bootstrap serialization in this component harness."
+      },
+      "online": {
+        "client_query_ms": {
+          "mean": 7.702341562499999,
+          "sample_sd": 1.1188254916421685
+        },
+        "server_answer_ms": {
+          "mean": 0.06043041666666667,
+          "sample_sd": 0.0010283973695705306
+        },
+        "client_decode_ms": {
+          "mean": 0.5754021979166667,
+          "sample_sd": 0.008319994599404168
+        },
+        "backend_wall_ms": {
+          "mean": 8.367383166666666,
+          "sample_sd": 1.1130481619384684
+        },
+        "online_total_bytes": {
+          "mean": 14144,
+          "sample_sd": 0.0
+        }
+      },
+      "client_storage": {
+        "hint_plus_expanded_A_bytes": 13959168,
+        "scope": "PIR payload only: excludes indexing, secret state, objects and allocator overhead. Not full client RAM.",
+        "independent_client_RSS_bytes": null,
+        "client_RSS_NA_reason": "The runner combines client and server; its VmHWM cannot isolate client memory.",
+        "combined_process_peak_RSS_bytes": {
+          "mean": 42003114.666666664,
+          "sample_sd": 1097975.0567755778,
+          "processes": 3
+        }
+      },
+      "full_system_E2E_ms": null,
+      "E2E_NA_reason": "Backend wall excludes online indexing, root verification, process launch, serialization and transport; no native common-service E2E run."
+    },
+    {
+      "height": 10,
+      "layout": "activebalance",
+      "source": "same unchanged SimplePIR backend",
+      "initialization": {
+        "backend_setup_ms": {
+          "mean": 231.439576,
+          "sample_sd": 11.405726157443414,
+          "processes": 3
+        },
+        "hint_payload_bytes": 9175040,
+        "expanded_public_A_payload_bytes": 9830400,
+        "serialized_bootstrap_bytes": null,
+        "bootstrap_NA_reason": "No transport/bootstrap serialization in this component harness."
+      },
+      "online": {
+        "client_query_ms": {
+          "mean": 7.9937061875,
+          "sample_sd": 0.38144769143486656
+        },
+        "server_answer_ms": {
+          "mean": 0.05255536458333333,
+          "sample_sd": 0.001947503956975417
+        },
+        "client_decode_ms": {
+          "mean": 0.7302709479166667,
+          "sample_sd": 0.015394562991636104
+        },
+        "backend_wall_ms": {
+          "mean": 8.812814677083333,
+          "sample_sd": 0.393759371314964
+        },
+        "online_total_bytes": {
+          "mean": 18560,
+          "sample_sd": 0.0
+        }
+      },
+      "client_storage": {
+        "hint_plus_expanded_A_bytes": 19005440,
+        "scope": "PIR payload only: excludes indexing, secret state, objects and allocator overhead. Not full client RAM.",
+        "independent_client_RSS_bytes": null,
+        "client_RSS_NA_reason": "The runner combines client and server; its VmHWM cannot isolate client memory.",
+        "combined_process_peak_RSS_bytes": {
+          "mean": 52337322.666666664,
+          "sample_sd": 1716455.3416076205,
+          "processes": 3
+        }
+      },
+      "full_system_E2E_ms": null,
+      "E2E_NA_reason": "Backend wall excludes online indexing, root verification, process launch, serialization and transport; no native common-service E2E run."
+    },
+    {
+      "height": 10,
+      "layout": "activebalance",
+      "source": "official VBPIR core + portability and external authentication adapter",
+      "initialization": {
+        "backend_setup_ms": null,
+        "serialized_bootstrap_bytes": null,
+        "NA_reason": "Official main creates fresh server/client objects per target but does not time setup or serialize bootstrap."
+      },
+      "online": {
+        "query_ms": 7.206,
+        "answer_ms": 338.839,
+        "recover_ms": 1.211,
+        "unit": "one process, mean over 10 targets with fresh objects; descriptive only",
+        "original_query_estimate_KiB": 385,
+        "original_answer_estimate_KiB": 257,
+        "actual_wire_bytes": null,
+        "wire_NA_reason": "No transport. Original estimates use save_size()/2 and save_size(), then integer division by 1024."
+      },
+      "client_storage": {
+        "bytes": null,
+        "independent_client_RSS_bytes": null,
+        "NA_reason": "Native executable combines client/server and does not measure serialized keys/state or process RSS."
+      },
+      "full_system_E2E_ms": null,
+      "E2E_NA_reason": "Root verification is external and untimed; native executable has no client/server transport."
+    },
+    {
+      "height": 10,
+      "layout": "treepir_official",
+      "source": "official VBPIR core + portability and external authentication adapter",
+      "initialization": {
+        "backend_setup_ms": null,
+        "serialized_bootstrap_bytes": null,
+        "NA_reason": "Official main creates fresh server/client objects per target but does not time setup or serialize bootstrap."
+      },
+      "online": {
+        "query_ms": 6.761,
+        "answer_ms": 338.488,
+        "recover_ms": 1.263,
+        "unit": "one process, mean over 10 targets with fresh objects; descriptive only",
+        "original_query_estimate_KiB": 385,
+        "original_answer_estimate_KiB": 257,
+        "actual_wire_bytes": null,
+        "wire_NA_reason": "No transport. Original estimates use save_size()/2 and save_size(), then integer division by 1024."
+      },
+      "client_storage": {
+        "bytes": null,
+        "independent_client_RSS_bytes": null,
+        "NA_reason": "Native executable combines client/server and does not measure serialized keys/state or process RSS."
+      },
+      "full_system_E2E_ms": null,
+      "E2E_NA_reason": "Root verification is external and untimed; native executable has no client/server transport."
+    }
+  ],
+  "same_backend_paired_intervals": {
+    "4": {
+      "AB_minus_official_backend_wall_ms": -0.13263739583333312,
+      "95pct_t_df2_interval_ms": [
+        -1.0065330778395765,
+        0.7412582861729102
+      ],
+      "process_pairs": 3,
+      "interpretation": "Descriptive three-pair comparison; interval includes zero and does not establish equivalence."
+    },
+    "10": {
+      "AB_minus_official_backend_wall_ms": -0.1810320520833327,
+      "95pct_t_df2_interval_ms": [
+        -1.642399771420926,
+        1.2803356672542607
+      ],
+      "process_pairs": 3,
+      "interpretation": "Descriptive three-pair comparison; interval includes zero and does not establish equivalence."
+    }
+  },
+  "payload_only_cache_control": {
+    "height4_bytes": 960,
+    "height10_bytes": 65472,
+    "all_occupied_target_proofs": 1040,
+    "full_system_cache_timing": null,
+    "scope": "Full-tree heap positions implicit from public height; same pinned root and selected known value are common inputs. Digest payloads are materialized and checked, but a complete cache service/bootstrap is not timed."
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "dataset": "ZKsync broad",
+  "input_sha256": "efdb4aa351714249089a60ab89fe2fb71ea2df2501c976d20b751fab71f76eb3",
+  "n": 7740,
+  "N": 15478,
+  "m": 17,
+  "root": "0b42994f9a4d8534f480b64531702cba3900a14212ddbb49ee652b30dc81f18b",
+  "build_timings_ms": {
+    "first_fit": {
+      "hash_tree": 602.8760930000203,
+      "active_extraction": 1934.0746050000348,
+      "forest_build": 10.219267000024956,
+      "coloring": 6.531019999954424,
+      "metadata_build": 17.87131000003228
+    },
+    "hybrid": {
+      "hash_tree": 684.2096620000007,
+      "active_extraction": 2093.484138000008,
+      "forest_build": 14.703688999986753,
+      "coloring": 544.11312000002,
+      "metadata_build": 18.813622000038777
+    },
+    "activebalance": {
+      "hash_tree": 791.6363690000026,
+      "active_extraction": 2163.534392000031,
+      "forest_build": 11.46087299997589,
+      "coloring": 7201.406960999975,
+      "metadata_build": 21.118959000034465
+    }
+  },
+  "pbc": {
+    "hash_seed": 202609100,
+    "public_setup_attempts": [
+      {
+        "seed": 202609100,
+        "failed_targets": 0,
+        "tested_targets": 7740
+      }
+    ],
+    "routing_preflight_ms": 161.31959899996673,
+    "bucket_count": 26,
+    "placement": "three distinct pseudorandom choices per active record; maximum bipartite matching; all occupied targets preflighted before publication"
+  }
+}

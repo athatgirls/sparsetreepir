@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "independent_stdlib_tree_root": "283ea1495be5cd0619e21c176a986dab657f1b29ecf35d8309e94cb1f9599ecb",
+  "original_positional_payload_records_verified": 792,
+  "independent_process_pairs": 20,
+  "measured_proofs_reconstructed": 2000,
+  "recovered_sibling_records_verified": 13760,
+  "independent_bitflip_rejections": 2000,
+  "paired_targets_and_five_run_statistics_verified": true,
+  "socket_byte_conservation_verified": true,
+  "matrix_parameters_and_wire_padding_verified": true,
+  "source_hashes_verified": 28,
+  "paired_E2E_analysis": {
+    "first_fit": {
+      "paired_E2E_ratio_mean": 1.005278052722873,
+      "paired_E2E_difference_ms_mean": 0.029035525999999832,
+      "paired_difference_95pct_t_interval_ms": [
+        -0.11404807816578785,
+        0.17211913016578753
+      ]
+    },
+    "activebalance": {
+      "paired_E2E_ratio_mean": 1.045138233215478,
+      "paired_E2E_difference_ms_mean": 0.25893957600000006,
+      "paired_difference_95pct_t_interval_ms": [
+        -0.30723398453351936,
+        0.8251131365335195
+      ]
+    }
+  },
+  "dependency_source_hashes_verified": 23,
+  "scope": "t intervals describe five paired process means; only one fixed snapshot, no broad inferential application claim.",
+  "audit_script_sha256": "3f2b78f5c7134d011a94150e605b3a7ad1ebad236f19d6c94f418ed946a09fec"
+}

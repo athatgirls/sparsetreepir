@@ -1,0 +1,20 @@
+[
+  {
+    "case": "prefix64_n10000",
+    "method": "pbc",
+    "repeat": 0,
+    "status": "observed_backend_failure_audited",
+    "backend_error": "PBC cuckoo exceeded 500 recursive attempts; no global rehash or target replacement",
+    "returncode": 2,
+    "timeout": false,
+    "verified_warmups": 2,
+    "verified_partial_measured_proofs": 7,
+    "first_uncompleted_phase": "measured",
+    "first_uncompleted_phase_ordinal_zero_based": 7,
+    "first_uncompleted_target_id": 3455,
+    "first_uncompleted_overall_ordinal_zero_based": 9,
+    "ordinal_evidence": "inferred from successfully persisted output prefix and source-reviewed sequential loop; no failed-query latency/result is imputed",
+    "result_sha256": "13ab417514f56977721cd6e21d5d3de8b3edd7f1e4cff3ed36b99b754e9e68fd",
+    "excluded_from_performance_aggregates": true
+  }
+]

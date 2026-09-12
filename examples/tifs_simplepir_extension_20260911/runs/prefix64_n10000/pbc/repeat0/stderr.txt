@@ -1,0 +1,28 @@
+Working with: n=1024; db size=2^15 (l=260, m=238); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.073418 MB
+Total packed DB size is ~0.073418 MB
+Total packed DB size is ~0.073418 MB
+Total packed DB size is ~0.073418 MB
+Total packed DB size is ~0.073418 MB
+Total packed DB size is ~0.073418 MB
+Total packed DB size is ~0.073418 MB
+Total packed DB size is ~0.073418 MB
+Total packed DB size is ~0.073418 MB
+Total packed DB size is ~0.073418 MB
+Total packed DB size is ~0.073418 MB
+Total packed DB size is ~0.073418 MB
+Total packed DB size is ~0.073418 MB
+Total packed DB size is ~0.073418 MB
+Total packed DB size is ~0.073418 MB
+Total packed DB size is ~0.073418 MB
+Total packed DB size is ~0.073418 MB
+Total packed DB size is ~0.073418 MB
+Total packed DB size is ~0.073418 MB
+Total packed DB size is ~0.073418 MB
+Total packed DB size is ~0.073418 MB
+Total packed DB size is ~0.073418 MB
+Total packed DB size is ~0.073418 MB
+Total packed DB size is ~0.073418 MB
+Total packed DB size is ~0.073418 MB
+Total packed DB size is ~0.073418 MB
+PBC cuckoo exceeded 500 recursive attempts; no global rehash or target replacement

@@ -1,0 +1,110 @@
+{
+  "source": "Google Argon2026h2 public CT v1 get-entries",
+  "source_log_url": "https://ct.googleapis.com/logs/us1/argon2026h2/",
+  "log_list_url": "https://www.gstatic.com/ct/log_list/v3/log_list.json",
+  "log_list_sha256": "cc0dd80b8a72038a652a4185a3d7b9f94f1783201b3350b375b3bdabf93c3e21",
+  "retrieved_utc": "2026-09-10T12:11:05Z",
+  "requests": [
+    {
+      "url": "https://ct.googleapis.com/logs/us1/argon2026h2/ct/v1/get-entries?start=0&end=63",
+      "file": "entries_000000_000031.json",
+      "sha256": "719008c6c2722eb3dd0f30768c45ddf6b3021afd111ae7e1f7ef89e5a9fd4ef6",
+      "returned": 32
+    },
+    {
+      "url": "https://ct.googleapis.com/logs/us1/argon2026h2/ct/v1/get-entries?start=32&end=95",
+      "file": "entries_000032_000063.json",
+      "sha256": "c58b6e9cf7b8b54d3d9e5c6aa9dcba1527a60b7d3ad299fd8b36be366de8d35d",
+      "returned": 32
+    },
+    {
+      "url": "https://ct.googleapis.com/logs/us1/argon2026h2/ct/v1/get-entries?start=64&end=127",
+      "file": "entries_000064_000095.json",
+      "sha256": "4103e4b386a6975cbd5d6d46b4a98ab7d9a97607602b5eb4feeefea7efe3a021",
+      "returned": 32
+    },
+    {
+      "url": "https://ct.googleapis.com/logs/us1/argon2026h2/ct/v1/get-entries?start=96&end=159",
+      "file": "entries_000096_000127.json",
+      "sha256": "b0abaaef74acc9397a6220099db31b0ca7330a1eaacf72f424c4e0f9b183e2bf",
+      "returned": 32
+    },
+    {
+      "url": "https://ct.googleapis.com/logs/us1/argon2026h2/ct/v1/get-entries?start=128&end=191",
+      "file": "entries_000128_000159.json",
+      "sha256": "5e42613f4ca094e3542a1e9d82e2f914d57287175c396fcf4552d7910d745651",
+      "returned": 32
+    },
+    {
+      "url": "https://ct.googleapis.com/logs/us1/argon2026h2/ct/v1/get-entries?start=160&end=223",
+      "file": "entries_000160_000191.json",
+      "sha256": "a89401dafe5acd8d107209a35c62a75d9f2abd72c7bcb576bd93c21dd7a126d5",
+      "returned": 32
+    },
+    {
+      "url": "https://ct.googleapis.com/logs/us1/argon2026h2/ct/v1/get-entries?start=192&end=255",
+      "file": "entries_000192_000223.json",
+      "sha256": "3ac9038b63f15b8eefecd3e1f5abf7a51e41c7e7f0d485a4343670a4fbc4d97c",
+      "returned": 32
+    },
+    {
+      "url": "https://ct.googleapis.com/logs/us1/argon2026h2/ct/v1/get-entries?start=224&end=287",
+      "file": "entries_000224_000255.json",
+      "sha256": "731115f8cf02e94213c305ce777b08ba1cb27faf3f73d217119ac91be4a933d9",
+      "returned": 32
+    },
+    {
+      "url": "https://ct.googleapis.com/logs/us1/argon2026h2/ct/v1/get-entries?start=256&end=319",
+      "file": "entries_000256_000287.json",
+      "sha256": "617a0b9ace16268de90f70cf61db710b79660f2393a1629cc36fe69f7f2b74e8",
+      "returned": 32
+    },
+    {
+      "url": "https://ct.googleapis.com/logs/us1/argon2026h2/ct/v1/get-entries?start=288&end=351",
+      "file": "entries_000288_000319.json",
+      "sha256": "592f06f254d324e680420a6657d7992a4c3b92e0cbd7f78445762928c222e6cb",
+      "returned": 32
+    },
+    {
+      "url": "https://ct.googleapis.com/logs/us1/argon2026h2/ct/v1/get-entries?start=320&end=383",
+      "file": "entries_000320_000351.json",
+      "sha256": "2c7199adbb17cd395eb5684bfb5f1536de0e0953ee8bfabb2549885fd2d46fb5",
+      "returned": 32
+    },
+    {
+      "url": "https://ct.googleapis.com/logs/us1/argon2026h2/ct/v1/get-entries?start=352&end=415",
+      "file": "entries_000352_000383.json",
+      "sha256": "e096d612142400b830f0f5a5d184eebdecb2e845f3ac866a11ffbe9ef4ca0b5d",
+      "returned": 32
+    },
+    {
+      "url": "https://ct.googleapis.com/logs/us1/argon2026h2/ct/v1/get-entries?start=384&end=447",
+      "file": "entries_000384_000415.json",
+      "sha256": "b965b4db02530bc216a0b31ae3909c8c7e86b7eeff938f25b2ce9699494c338c",
+      "returned": 32
+    },
+    {
+      "url": "https://ct.googleapis.com/logs/us1/argon2026h2/ct/v1/get-entries?start=416&end=479",
+      "file": "entries_000416_000447.json",
+      "sha256": "fd255178cc5e0de1e13d329eeb4659059741db419b93d85edc16e181d5a0831b",
+      "returned": 32
+    },
+    {
+      "url": "https://ct.googleapis.com/logs/us1/argon2026h2/ct/v1/get-entries?start=448&end=511",
+      "file": "entries_000448_000479.json",
+      "sha256": "b8e34e995c686a59032029c79d394073cde9a16ae08da3ecb2cfe4a01da589ef",
+      "returned": 32
+    },
+    {
+      "url": "https://ct.googleapis.com/logs/us1/argon2026h2/ct/v1/get-entries?start=480&end=511",
+      "file": "entries_000480_000511.json",
+      "sha256": "e89f984f8abe9dcc4ba259957e9ff01dbb06185ba68ef6a59b524561585a3bbf",
+      "returned": 32
+    }
+  ],
+  "entries": 512,
+  "unique_slots_h128": 512,
+  "mapping": "key=first128bits(SHA256(raw leaf_input)); value=SHA256(raw leaf_input)",
+  "csv_sha256": "70d7daa6c33a8fee866eb62db0653019171fd6fb5698a25402b008efc11dce2d",
+  "scope": "Public certificate/precertificate log records copied into a new experimental SMT mirror. No native CT-root, certificate-chain, revocation, or log-consistency validation; controlled audit targets are not a browser-query trace."
+}
