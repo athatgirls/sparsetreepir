@@ -2,11 +2,11 @@
 
 Reproducibility artifact for **SparseTreePIR: Target-Private Retrieval of Sparse Merkle Proofs via Interval Coloring**.
 
-Release: **2026-09-12-current-paper**. Anonymous access: <https://anonymous.4open.science/r/sparsetreepir-59EE/>.
+Release: **2026-09-12-current-paper**. Start with the commands below and the [result-to-evidence map](docs/RESULTS.md).
 
 SparseTreePIR retrieves the non-default sibling digests needed for **one complete sparse Merkle proof** as a structured batch. Interval coloring puts simultaneously required digests into distinct databases; ActiveBalance (AB) balances their loads. The client restores public default digests at their original levels and checks the trusted root. Here, batch retrieval refers to the multiple nodes of one proof.
 
-This release replaces the earlier artifact contents with the implementations and evidence used by the current manuscript. The main experiments compare AB with PBC on **SimplePIR and VBPIR**, with First-fit/Flat-active ablations and official TreePIR CSA complete-tree controls. Supporting directories retain the correctness, workload, theory, construction, and TCP experiments cited by the supplement.
+The main experiments compare AB with PBC on **SimplePIR and VBPIR**, with First-fit/Flat-active ablations and official TreePIR CSA complete-tree controls. Supporting directories contain the correctness, workload, theory, construction, and TCP experiments cited by the supplement.
 
 ## Start here
 
@@ -15,12 +15,13 @@ This release replaces the earlier artifact contents with the implementations and
 | Audit frozen native run records and recovered proofs | `python3 reproduce/verify.py --output ../sparsetreepir-audit` |
 | Build the two native backends on Linux | `python3 reproduce/build_native.py --output ../sparsetreepir-build` |
 | Execute a short fresh test and audit it | `python3 reproduce/run_native.py --build ../sparsetreepir-build --output ../sparsetreepir-smoke --mode smoke` |
-| Regenerate current numerical tables and Figure 3 | `python3 reproduce_paper_results.py --output ../sparsetreepir-figures` |
+| Regenerate Tables III–IV, S2 and Figure 3; check the Table II example | `python3 reproduce_paper_results.py --output ../sparsetreepir-figures` |
 | Check release file hashes | `python3 verify_release_files.py` |
+| Check supplemental proof records and capacity certificates | `python3 reproduce_supplement.py --output ../sparsetreepir-supplement` |
 
 Use a new output directory for every command. Archived observations are never overwritten by these entry points. A frozen-evidence audit reconstructs and checks recorded recovered bytes; it does not rerun cryptographic operations or reproduce the old timings. A smoke run checks the executable pipeline and is not a substitute for the manuscript's repeated experiments.
 
-Python 3.10+ is required for the portable entry points. Install figure/theory dependencies with `python3 -m pip install -r requirements.txt`. Building/running the native backends requires Linux, a C++17 toolchain, CMake >=3.22, Go >=1.18, and OpenSSL/zlib/zstd development libraries. The VBPIR build helper uses pinned SEAL 4.3.2; an existing compatible installation can be supplied. See [native reproduction](docs/NATIVE_REPRODUCTION.md) for prerequisites, source pins, full-run commands, memory requirements, and output definitions.
+Use Python 3.12+ for the portable entry points. Install figure/theory dependencies with `python3 -m pip install -r requirements.txt`. Building/running the native backends requires Linux, a C++17 toolchain, CMake >=3.22, Go >=1.18, and OpenSSL/zlib/zstd development libraries. The VBPIR build helper uses pinned SEAL 4.3.2; an existing compatible installation can be supplied. See [native reproduction](docs/NATIVE_REPRODUCTION.md) for prerequisites, source pins, full-run commands, memory requirements, and output definitions, and [supplement reproduction](docs/SUPPLEMENT_REPRODUCTION.md) for the supporting checks.
 
 ## Reported experiment scope
 
@@ -44,7 +45,5 @@ The source archives also contain prefix-concentrated and clustered sensitivity c
 - `datasets/`: fixed input coordinate sets and their provenance.
 - `paper-results/`: current numerical table/figure generators, frozen summaries, and included vector figures.
 - `provenance/`: publication scope, original archive manifests, and declared release-copy transformations.
-
-Earlier PIANO experiments, unused backend attempts, obsolete paper drafts, reviewer correspondence, local build caches, and author contact information are not part of this release. Preserved source snapshots and measurements remain under their original experiment identifiers; these dates identify evidence, not different paper versions.
 
 Third-party implementations remain subject to their original notices; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Source availability alone does not grant an additional project-wide license.

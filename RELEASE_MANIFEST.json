@@ -1,7 +1,7 @@
 {
   "release": "2026-09-12-current-paper",
-  "file_count": 6961,
-  "payload_bytes": 732826316,
+  "file_count": 6963,
+  "payload_bytes": 732836821,
   "manifest_policy": "Manifest lists every tracked release payload except itself; no build output or cached verification tree is distributed.",
   "files": [
     {
@@ -121,8 +121,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 5185,
-      "sha256": "8ddd76f4425868fb38417d8d29f07b72a2f5c4ec82c282bd1827b429fec5ac8d"
+      "bytes": 4966,
+      "sha256": "cb654b5c272c1b3111cbc766a4f881c28b229620cddc93952fd3ea34fad6a6ba"
     },
     {
       "path": "RELEASE.json",
@@ -191,8 +191,13 @@
     },
     {
       "path": "docs/RESULTS.md",
-      "bytes": 5210,
-      "sha256": "7d4e3f642bad138c4b65f5991cc47e33206ce3444a052e41a9ef2c956dba79ea"
+      "bytes": 5623,
+      "sha256": "5809d16abda819d3823f1943124dfecad4b19a8ce770a533f9945c440b26c6b2"
+    },
+    {
+      "path": "docs/SUPPLEMENT_REPRODUCTION.md",
+      "bytes": 3063,
+      "sha256": "7cfb8ea6af4b5315756e93a0a30b665a51407d40dad5b6120de21faa48fcf765"
     },
     {
       "path": "examples/tifs_breakthrough_20260910/backend/README.md",
@@ -34521,8 +34526,13 @@
     },
     {
       "path": "reproduce_paper_results.py",
-      "bytes": 1662,
-      "sha256": "a20ff600c13bebdb666b44ee89780e7cffae1100a0072d825c58f886367083a7"
+      "bytes": 2005,
+      "sha256": "22fda093900f038c656c772cdcfc85e8df27d9d34f9f32cb1e7f6c00d40e2956"
+    },
+    {
+      "path": "reproduce_supplement.py",
+      "bytes": 6905,
+      "sha256": "469379fee1ed803c253e90610179fed845044090b22d72d7c02bc0f34571f2cb"
     },
     {
       "path": "requirements.txt",

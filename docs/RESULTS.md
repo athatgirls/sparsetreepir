@@ -2,13 +2,15 @@
 
 The mapping below follows release `2026-09-12-current-paper`. Roman table numbers refer to the main text; S-prefixed numbers refer to the supplement. References printed in figures/tables follow the manuscript bibliography, provided in `paper-results/references.tex`.
 
+The portable figure/table command regenerates Tables III–IV, Table S2, and Figure 3 and checks the worked example in Table II. Other included tables and figures are frozen outputs or explanatory illustrations; their supporting records are mapped below.
+
 | Manuscript item | Evidence / generator |
 |---|---|
 | Table I, notation; Figures 1-2, protocol/interval illustrations | Explanatory material, not measurements; vector figures are included in `paper-results/figures/`. |
 | Table II, worked batch example | `paper-results/reproduction_scripts/check_worked_batch_example.py`; independently reconstructs all seven targets. |
 | Table III and Figure 3, AB versus PBC on two backends | Native `examples/*extension_20260911/analysis/results.json`; `paper-results/reproduction_scripts/generate_external_core.py`. |
 | Table IV, First-fit versus AB | Same native SimplePIR evidence and generator; identical records and minimum batch width. |
-| Table V, six workload layouts | `datasets/`, `examples/tifs_revision_20260910/verified_backend/`, selected balance evidence; `paper-results/generated/main_layout_table.tex`. |
+| Table V, six workload layouts | `examples/tifs_revision_20260910/balance/real_comparison.csv` supplies layout counts and FF/Hybrid/AB loads; `verified_backend/run_summary.csv` in the same experiment directory supplies Depth loads; coordinate inputs are in `datasets/`. Frozen output: `paper-results/generated/main_layout_table.tex`. |
 | Table S1 and Figure S1, exact/construction gaps | `examples/tifs_remaining_gap_20260910/`, `tifs_sufficiency_20260910/construction/`, `tifs_layout_transfer_20260910/structural/`. |
 | Table S2, native initialization/client state | Native summaries; `paper-results/reproduction_scripts/build_external_supplement_table.py`. |
 | Table S3, comparator provenance | Current provenance table is included in `paper-results/generated/compact_evidence.tex`; source pins remain in each adapter. |

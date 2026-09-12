@@ -7,7 +7,11 @@ def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output',type=Path,required=True)
-    args=parser.parse_args();out=args.output.expanduser().absolute()
+    args=parser.parse_args();out=args.output.expanduser().resolve()
+    root=ROOT.resolve()
+    protected=[root/name for name in ['examples','scripts','paper-results','reproduce','docs','datasets','backend','provenance']]
+    if out==root or out in root.parents or any(out==p or p in out.parents for p in protected):
+        parser.error('Output must be outside the checked-in evidence and source directories.')
     if out.exists():parser.error('Use a new output directory; existing paths are not overwritten.')
     shutil.copytree(ROOT/'paper-results',out,ignore=shutil.ignore_patterns('__pycache__','*.pyc'))
     for script in ['generate_external_core.py','build_external_supplement_table.py','check_worked_batch_example.py']:
