@@ -1,0 +1,54 @@
+{
+  "status": "passed",
+  "tests": 9,
+  "checks": [
+    {
+      "test": "forged_decoded_digest_with_pass_flags",
+      "mutation_rejected": true,
+      "reason": "ACTUAL recovered digest differs from original publisher record"
+    },
+    {
+      "test": "wrong_bucket_position",
+      "mutation_rejected": true,
+      "reason": "decoded original record/position mismatch"
+    },
+    {
+      "test": "forged_proof_with_pass_flags",
+      "mutation_rejected": true,
+      "reason": "proof contains values other than actual recovery/defaults"
+    },
+    {
+      "test": "warmup_flag_changed",
+      "mutation_rejected": true,
+      "reason": "warmup flags differ"
+    },
+    {
+      "test": "query_frame_underreported",
+      "mutation_rejected": true,
+      "reason": "actual matrix framing formula differs: query_framed_bytes"
+    },
+    {
+      "test": "hint_underreported",
+      "mutation_rejected": true,
+      "reason": "setup hint_matrix_bytes differs: 958460 != 958464"
+    },
+    {
+      "test": "flat_state_duplicated",
+      "mutation_rejected": true,
+      "reason": "incorrect physical DB/state instance count"
+    },
+    {
+      "test": "changed_security_parameter",
+      "mutation_rejected": true,
+      "reason": "outside frozen official security parameter row"
+    },
+    {
+      "test": "no_process_outcomes_cannot_pass",
+      "mutation_rejected": true,
+      "reason": "no_verified_evidence"
+    }
+  ],
+  "auditor_sha256": "c6956924b71967b291b8c6f102cb2bd5437db276140883b5e21b7693c13f59fe",
+  "test_script_sha256": "02f54b43cc2cdc96e7226debcb8792233406f950a64d7027bff2f7cad65abd0b",
+  "scope": "No backend execution; original raw evidence unchanged. Mutated clones rehashed so semantic checks are tested."
+}

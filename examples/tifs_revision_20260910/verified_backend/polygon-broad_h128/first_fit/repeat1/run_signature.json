@@ -1,0 +1,26 @@
+{
+  "manifest_sha256": "f482d302e6fa1f508907e3ff801748db8104dcde9d9b004e1d900c71462dc0dd",
+  "database_sha256": {
+    "color_01.bin": "69840e2cc7acda5c747318320ddf05f4fbccb9f2792bbe179dd31acef2f8d6eb",
+    "color_02.bin": "81a56b9fd751abf19291e99e8544fc5b63227b35fa65cf70a2bb7899f01472d7",
+    "color_03.bin": "defa6d2cc243b9dac0d33b3d2d4506c3e7b6a18138552b363819f7189f603bba",
+    "color_04.bin": "60a343c44786e22383ed49ab14a22476bf506c27b4ac231e5800f88a9bf807b4",
+    "color_05.bin": "35fa309edaed1511be3601b3a1bf8101eaba63d160c157e83f876193c48b25c9",
+    "color_06.bin": "73fabd304ac0e34346baa681de3fc48f2abf45e389e39c15c7cdd2814bf4793b",
+    "color_07.bin": "ff0057bcca58b505bcd42c2311d565d1e390e6ec93718f391be0a76ae32f64eb",
+    "color_08.bin": "67f3ab5cca369f81d23b02a4de209b34c1eb9d2d54c170154b8af439185d1f1c",
+    "color_09.bin": "9716ef3668b12c1ed3657673cbceceea45a02a04b89806977ea8df6ea2354a03",
+    "color_10.bin": "d01e1218e3df31e03e509b868114499154508526ff2f32a9dddcbfe43f495c79",
+    "color_11.bin": "565f04bf7a31c7be45cee3edaba8dea973081d013e2107430664f93b241f8830",
+    "color_12.bin": "761c0f8d87ea6ec656cca6dd7a10de8cb7a6424387bed849dbaa27726f9b8494",
+    "color_13.bin": "e7d751069a319db1196d58133be6b7907c44ac1ee4cdb6a8723aa4a57fb035b4",
+    "color_14.bin": "92d080e6248bf8a422dab74a1179ae69720e8da0360bfd78bb6f769115f69aad",
+    "color_15.bin": "df549a2048d1d232b62e7cedacdd019d6cc88ea8dd28bbaa3c8a670776615fc9",
+    "color_16.bin": "9e3066f66ee131810b8b4aed53305c0937b770c3ef4448c9b537f81e7c7af489",
+    "color_17.bin": "4dd6148405761c4351e3eab79a0495ca0be8d3e8c5899785b1764b7a885711cb"
+  },
+  "binary_sha256": "d633487b2913aee719ade941a9a9629d45f27559261fb9e0bd255e93235fca40",
+  "warmup": 5,
+  "gomaxprocs": 1,
+  "schema": "verified-backend-v2"
+}

@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "case": "real_four",
+      "targets": 4,
+      "width": 3,
+      "root_checks_passed": 4,
+      "warmup_excluded": true
+    },
+    {
+      "case": "singleton",
+      "targets": 1,
+      "width": 0,
+      "root_checks_passed": 1,
+      "warmup_excluded": true
+    },
+    {
+      "case": "shared_file",
+      "targets": 2,
+      "unique_initializations": 1,
+      "records_checked": 4
+    },
+    {
+      "case": "out_of_range_index",
+      "rejected": true,
+      "exit_code": 1
+    }
+  ],
+  "binary": "/artifact/examples/tifs_revision_20260910/backend_smoke/tifs_full_proof_backend",
+  "scope": "smoke correctness, not publishable timing sample"
+}

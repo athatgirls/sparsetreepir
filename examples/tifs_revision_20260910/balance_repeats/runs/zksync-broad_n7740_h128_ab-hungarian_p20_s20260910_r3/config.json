@@ -1,0 +1,13 @@
+{
+  "id": "zksync-broad_n7740_h128_ab-hungarian_p20_s20260910_r3",
+  "distribution": "real",
+  "n": 7740,
+  "height": 128,
+  "algorithm": "ab-hungarian",
+  "passes": 20,
+  "seed": 20260910,
+  "repeat": 3,
+  "label": "zksync-broad",
+  "source": "datasets/zksync_era_account_leaf_workload_broad_sample.csv",
+  "key_mode": "sha256"
+}

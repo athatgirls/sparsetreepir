@@ -1,0 +1,13 @@
+{
+  "id": "zksync-sample_n956_h128_ab-sorted_p20_s20260910_r1",
+  "distribution": "real",
+  "n": 956,
+  "height": 128,
+  "algorithm": "ab-sorted",
+  "passes": 20,
+  "seed": 20260910,
+  "repeat": 1,
+  "label": "zksync-sample",
+  "source": "datasets/zksync_era_account_leaf_workload_sample.csv",
+  "key_mode": "sha256"
+}

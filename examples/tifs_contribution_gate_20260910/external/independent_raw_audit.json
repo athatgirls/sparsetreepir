@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "official_commit": "930063c5aefc441244abb4890fdf35383f3aa956",
+  "all_target_layout_proofs": 3120,
+  "all_target_full_cache_proofs": 1040,
+  "simplepir_recovered_proofs": 432,
+  "simplepir_actual_sibling_records": 3456,
+  "vbpir_recovered_proofs": 20,
+  "bitflip_rejections": "every reconstructed proof",
+  "paired_simplepir_target_sets": true,
+  "matrix_byte_accounting_and_identical_AB_TreePIR_shapes": true,
+  "seeded_target_and_randomized_method_orders_independently_replayed": true,
+  "paired_timing_differences": {
+    "4": {
+      "AB_minus_official_backend_wall_ms": -0.13263739583333312,
+      "95pct_t_df2_interval_ms": [
+        -1.0065330778395765,
+        0.7412582861729102
+      ],
+      "process_pairs": 3,
+      "interpretation": "Descriptive three-pair comparison; interval includes zero and does not establish equivalence."
+    },
+    "10": {
+      "AB_minus_official_backend_wall_ms": -0.1810320520833327,
+      "95pct_t_df2_interval_ms": [
+        -1.642399771420926,
+        1.2803356672542607
+      ],
+      "process_pairs": 3,
+      "interpretation": "Descriptive three-pair comparison; interval includes zero and does not establish equivalence."
+    }
+  },
+  "official_source_files_hashed": 12,
+  "native_source_files_hashed": 55,
+  "full_native_TCP_service_gate": "not completed; this audit does not convert backend components into a native service experiment",
+  "audit_script_sha256": "4be5ab391565b69044902f5fb05229cc3e25de2f14423d564c87d6706115561e"
+}

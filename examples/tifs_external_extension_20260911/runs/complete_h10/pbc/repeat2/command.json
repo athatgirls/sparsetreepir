@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "/artifact/examples/tifs_external_extension_20260911/native_adapter/build/serialized_proof_bench",
+    "/artifact/examples/tifs_external_extension_20260911/runs/complete_h10/pbc/repeat2/input.json",
+    "/artifact/examples/tifs_external_extension_20260911/runs/complete_h10/pbc/repeat2/result.json",
+    "2"
+  ],
+  "environment_overrides": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  }
+}

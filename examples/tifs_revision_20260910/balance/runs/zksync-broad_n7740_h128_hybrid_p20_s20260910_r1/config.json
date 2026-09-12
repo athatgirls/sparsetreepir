@@ -1,0 +1,13 @@
+{
+  "id": "zksync-broad_n7740_h128_hybrid_p20_s20260910_r1",
+  "distribution": "real",
+  "n": 7740,
+  "height": 128,
+  "algorithm": "hybrid",
+  "passes": 20,
+  "seed": 20260910,
+  "repeat": 1,
+  "label": "zksync-broad",
+  "source": "datasets/zksync_era_account_leaf_workload_broad_sample.csv",
+  "key_mode": "sha256"
+}

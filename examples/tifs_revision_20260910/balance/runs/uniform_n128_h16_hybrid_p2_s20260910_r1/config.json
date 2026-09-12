@@ -1,0 +1,10 @@
+{
+  "id": "uniform_n128_h16_hybrid_p2_s20260910_r1",
+  "distribution": "uniform",
+  "n": 128,
+  "height": 16,
+  "algorithm": "hybrid",
+  "passes": 2,
+  "seed": 20260910,
+  "repeat": 1
+}

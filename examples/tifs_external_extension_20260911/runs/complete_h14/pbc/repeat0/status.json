@@ -1,0 +1,38 @@
+{
+  "case": "complete_h14",
+  "repeat": 0,
+  "method": "pbc",
+  "pool_indices": [
+    20,
+    15,
+    21,
+    1,
+    19,
+    12,
+    13,
+    5,
+    16,
+    25
+  ],
+  "target_ids": [
+    9421,
+    7832,
+    9534,
+    640,
+    9368,
+    6910,
+    7304,
+    1482,
+    8104,
+    13990
+  ],
+  "input_sha256": "8959990961bc95a743e4b8e54c175101b6aa846179bb661807a06c980045625b",
+  "returncode": 0,
+  "timeout": false,
+  "wall_seconds": 8.00361508200001,
+  "binary_sha256": "d2d25b32f8853661c30990f1b9ff231de369ee0e176eac428eb22b7fa5e7ce4a",
+  "input_source_sha256": "8959990961bc95a743e4b8e54c175101b6aa846179bb661807a06c980045625b",
+  "run_input_sha256": "0420dee28035b9c7bd9970d432567f868416081786b793abd5b47f386396a6cd",
+  "result_sha256": "a30185af4f53b68af26fec6250b435dd048cc5e6c3089ccf2da65be182896a84",
+  "status": "complete"
+}

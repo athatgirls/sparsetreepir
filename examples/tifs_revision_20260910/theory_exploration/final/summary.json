@@ -1,0 +1,161 @@
+{
+  "enumerated_shapes": 1323,
+  "max_requested_leaves": 14,
+  "width_cap": 6,
+  "explicit_time_budget_seconds": 60.0,
+  "enumeration_censored": false,
+  "B_gaps": 85,
+  "Bstar_gaps": 34,
+  "hierarchical_gaps": 13,
+  "first_B_gap": {
+    "leaves": 9,
+    "shape": [
+      [
+        [],
+        []
+      ],
+      [
+        [
+          [],
+          [
+            [],
+            []
+          ]
+        ],
+        [
+          [
+            [],
+            []
+          ],
+          [
+            [],
+            []
+          ]
+        ]
+      ]
+    ],
+    "N": 16,
+    "n": 9,
+    "m": 4,
+    "B": 4,
+    "C": 5,
+    "B_star": 5,
+    "hierarchical_bound": 5,
+    "C_witness": {
+      "node": 3,
+      "depth": 1,
+      "sum_anchor_capacities": 3,
+      "denominator": 3,
+      "N_minus_sum": 13
+    },
+    "hierarchical_witness": null,
+    "optimum": 5,
+    "strict_B_gap": true,
+    "strict_Bstar_gap": false,
+    "strict_hierarchical_gap": false
+  },
+  "first_Bstar_gap": {
+    "leaves": 10,
+    "shape": [
+      [],
+      [
+        [
+          [],
+          []
+        ],
+        [
+          [
+            [],
+            [
+              [],
+              []
+            ]
+          ],
+          [
+            [
+              [],
+              []
+            ],
+            [
+              [],
+              []
+            ]
+          ]
+        ]
+      ]
+    ],
+    "N": 18,
+    "n": 10,
+    "m": 5,
+    "B": 4,
+    "C": 4,
+    "B_star": 4,
+    "hierarchical_bound": 5,
+    "C_witness": null,
+    "hierarchical_witness": {
+      "context": 1,
+      "node": 5,
+      "local_N": 16,
+      "local_available_colors": 4,
+      "anchored_colors": 1,
+      "anchor_sum": 3,
+      "denominator": 3
+    },
+    "optimum": 5,
+    "strict_B_gap": true,
+    "strict_Bstar_gap": true,
+    "strict_hierarchical_gap": false
+  },
+  "first_hierarchical_gap": {
+    "leaves": 11,
+    "shape": [
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ],
+      [
+        [],
+        [
+          [
+            [],
+            [
+              [],
+              []
+            ]
+          ],
+          [
+            [
+              [],
+              []
+            ],
+            [
+              [],
+              []
+            ]
+          ]
+        ]
+      ]
+    ],
+    "N": 20,
+    "n": 11,
+    "m": 5,
+    "B": 4,
+    "C": 4,
+    "B_star": 4,
+    "hierarchical_bound": 4,
+    "C_witness": null,
+    "hierarchical_witness": null,
+    "optimum": 5,
+    "strict_B_gap": true,
+    "strict_Bstar_gap": true,
+    "strict_hierarchical_gap": true
+  },
+  "brute_validation_cases": 7,
+  "seconds": 3.413202486000003,
+  "python": "3.12.3",
+  "script_sha256": "e80e58adacf8e9defb4a0cee89aabe4ab59f41919139e559c0e0e1228466cf31",
+  "dp_cache": "CacheInfo(hits=9953, misses=692, maxsize=None, currsize=692)"
+}

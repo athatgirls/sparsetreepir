@@ -1,0 +1,1 @@
+{"id": "prefix-cluster_n128_h16_ab-hungarian_p5_s20260910_r1", "status": "complete", "actual_n": 128, "m": 9, "max_bucket": 29, "U_over_B": 1.0, "coloring_s": 0.039184900117106736, "valid": true}

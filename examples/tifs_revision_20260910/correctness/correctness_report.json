@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "hash_format": "sha256:leaf=H(00||value),internal=H(01||left||right),empty_leaf=H(02)",
+  "counts": {
+    "layouts": 332,
+    "dense_tree_crosschecks": 278,
+    "verified_membership_proofs": 2153,
+    "dummy_records_discarded": 1379,
+    "wrong_root_rejected": 2153,
+    "wrong_value_rejected": 2153,
+    "proof_bitflip_rejected": 2152,
+    "decoded_record_bitflip_rejected": 2132,
+    "out_of_range_level_rejected": 2132,
+    "wrong_in_range_level_rejected": 2130,
+    "dummy_mutation_ignored": 844,
+    "manifest_binary_roundtrip_proofs": 66,
+    "manifest_roundtrip_layouts": 4,
+    "empty_bucket_manifest_checks": 1,
+    "invalid_slot_inputs_rejected": 3
+  },
+  "wall_seconds": 1.8812523999949917,
+  "scope": "Real SHA-256 SMT and exact-width first-fit/hybrid/ActiveBalance correctness; decoded records are read directly in these tests. No cryptographic PIR execution or performance claim.",
+  "enumeration": "Every occupied subset (including empty) at h=0,1,2,3; every occupied target. Independent dense reference roots/proofs.",
+  "large_heights": "h=128,256; empty/singleton/two-leaf/clustered/shared-prefix and 3 fixed random samples of 32 slots; every occupied target for all 3 layouts.",
+  "source_sha256": {
+    "/artifact/scripts/test_tifs_revision_smt.py": "2d8a40dc9daf0a5b5c30961011879c2f9f6267f5b08acc29802615808e84edd9",
+    "/artifact/scripts/tifs_revision_smt.py": "f0dc6c6c9af2d7a9c032991f5407c7cca79e7353394d6a18d9f8e8bb5e72c740",
+    "/artifact/scripts/run_height_sparsity_profile_balance_experiment.py": "6e13f887cbe283ade74aad6cd2174aa3c1d66001ada2106fc27935b3284f63f5",
+    "/artifact/scripts/run_sparse_smt_pir_backend_experiment.py": "2f0ae62851d8d3fe1219183e0a26bead1a5fcc9607612a15371927aacab248fb",
+    "/artifact/scripts/generate_full_sparse_smt_example.py": "5cd3630af580fe03214fd9816ff66601e3f32e79a4e3d304b445bd8f12d17b1d"
+  }
+}

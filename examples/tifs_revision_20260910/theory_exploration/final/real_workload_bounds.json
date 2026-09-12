@@ -1,0 +1,93 @@
+[
+  {
+    "input": "examples/tifs_revision_20260910/verified_backend/fuel_h128/activebalance/layout_metadata.bin",
+    "sha256": "61749225f08de21a230b8759a95c0d71d93c2f68c7b5b3cc6978cba6211aa5f4",
+    "N": 198,
+    "n": 100,
+    "m": 9,
+    "B": 22,
+    "C": 22,
+    "B_star": 22,
+    "hierarchical_bound": 22,
+    "C_witness": null,
+    "hierarchical_witness": null
+  },
+  {
+    "input": "examples/tifs_revision_20260910/verified_backend/polygon-broad_h128/activebalance/layout_metadata.bin",
+    "sha256": "4849ed0f8b89efe9698369233d0e8aeebc72b976a17625d14596ee094f4e3d06",
+    "N": 14078,
+    "n": 7040,
+    "m": 17,
+    "B": 829,
+    "C": 829,
+    "B_star": 829,
+    "hierarchical_bound": 829,
+    "C_witness": null,
+    "hierarchical_witness": null
+  },
+  {
+    "input": "examples/tifs_revision_20260910/verified_backend/polygon-multi_h128/activebalance/layout_metadata.bin",
+    "sha256": "02c7c4168b8a615c85044d4dc34fe0328c8125115f982bbab1ace6a6d64bac0e",
+    "N": 2694,
+    "n": 1348,
+    "m": 14,
+    "B": 193,
+    "C": 193,
+    "B_star": 193,
+    "hierarchical_bound": 193,
+    "C_witness": null,
+    "hierarchical_witness": null
+  },
+  {
+    "input": "examples/tifs_revision_20260910/verified_backend/polygon-recent_h128/activebalance/layout_metadata.bin",
+    "sha256": "a2a0e6ece6954abb34ed5c465ed163adb8ca894d46323f80ee5ea7217a14ee3e",
+    "N": 766,
+    "n": 384,
+    "m": 11,
+    "B": 70,
+    "C": 70,
+    "B_star": 70,
+    "hierarchical_bound": 70,
+    "C_witness": null,
+    "hierarchical_witness": null
+  },
+  {
+    "input": "examples/tifs_revision_20260910/verified_backend/zksync-broad_h128/activebalance/layout_metadata.bin",
+    "sha256": "a2f1a490059d6a6752848f34b1510f93345f96785d97a7d25a64abbf7902cc48",
+    "N": 15478,
+    "n": 7740,
+    "m": 17,
+    "B": 911,
+    "C": 911,
+    "B_star": 911,
+    "hierarchical_bound": 911,
+    "C_witness": null,
+    "hierarchical_witness": null
+  },
+  {
+    "input": "examples/tifs_revision_20260910/verified_backend/zksync-sample_h128/activebalance/layout_metadata.bin",
+    "sha256": "a8c96838239994785388ec89133c52f1dfb3d92177341975f92d4bc088af31fd",
+    "N": 1910,
+    "n": 956,
+    "m": 13,
+    "B": 147,
+    "C": 147,
+    "B_star": 147,
+    "hierarchical_bound": 147,
+    "C_witness": null,
+    "hierarchical_witness": null
+  },
+  {
+    "input": "examples/tifs_revision_20260910/ct_application/runs_verified_evidence/publisher/activebalance/layout_metadata.bin",
+    "sha256": "ef53025191b9237d1e97e8bc3cbc5da301eabc47871f7dd8240231bb68625249",
+    "N": 1022,
+    "n": 512,
+    "m": 13,
+    "B": 79,
+    "C": 79,
+    "B_star": 79,
+    "hierarchical_bound": 79,
+    "C_witness": null,
+    "hierarchical_witness": null
+  }
+]

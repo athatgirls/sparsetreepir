@@ -1,0 +1,142 @@
+{
+  "height": 2,
+  "slots": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "shape": [
+    [
+      [],
+      []
+    ],
+    [
+      [],
+      []
+    ]
+  ],
+  "N": 6,
+  "n": 4,
+  "m": 2,
+  "B": 3,
+  "C": 3,
+  "B_star": 3,
+  "hierarchical_bound": 3,
+  "C_witness": null,
+  "hierarchical_witness": null,
+  "optimum": 3,
+  "witness_loads": [
+    3,
+    3
+  ],
+  "root_hex": "50a9b319ccdb0c4a3d92c217e35d779597bfbdb420323ffc9136e4c8ceaa197b",
+  "actual_interval_forest_matches_abstract_shape": true,
+  "every_occupied_target_proof_verified": true,
+  "records": [
+    {
+      "heap_index": "0x3",
+      "interval": [
+        0,
+        1
+      ],
+      "color": 0,
+      "digest_hex": "4464fbea2c5c90a02faace1592ab7b8bc29105ba418ae5c7240548e147b3e6c7"
+    },
+    {
+      "heap_index": "0x5",
+      "interval": [
+        0,
+        0
+      ],
+      "color": 1,
+      "digest_hex": "4c103f5f5a998a2e535d35ff20aae4862603f90d2d8dbe7464e5d6e5dc0b5656"
+    },
+    {
+      "heap_index": "0x4",
+      "interval": [
+        1,
+        1
+      ],
+      "color": 1,
+      "digest_hex": "56d4985d5a790e351ec577e67930da72ca5e1971953def6886bbb71da500056e"
+    },
+    {
+      "heap_index": "0x2",
+      "interval": [
+        2,
+        3
+      ],
+      "color": 1,
+      "digest_hex": "2d433ea50a9de96011ea7f94b8987bc594d81b350314c722d6ddea61347c6850"
+    },
+    {
+      "heap_index": "0x7",
+      "interval": [
+        2,
+        2
+      ],
+      "color": 0,
+      "digest_hex": "c42cdbb64469a52299bf4f1e427e4be05ecebabc66e462a9d4fce639a2a2d390"
+    },
+    {
+      "heap_index": "0x6",
+      "interval": [
+        3,
+        3
+      ],
+      "color": 0,
+      "digest_hex": "56b4723a870e715b5e549d18ee2e8f4e59d02ed2622eaad37dc59fed074fff13"
+    }
+  ],
+  "proofs": [
+    {
+      "slot": 0,
+      "levels": [
+        0,
+        1
+      ],
+      "colors": [
+        1,
+        0
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 1,
+      "levels": [
+        0,
+        1
+      ],
+      "colors": [
+        1,
+        0
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 2,
+      "levels": [
+        0,
+        1
+      ],
+      "colors": [
+        0,
+        1
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 3,
+      "levels": [
+        0,
+        1
+      ],
+      "colors": [
+        0,
+        1
+      ],
+      "root_verified": true
+    }
+  ]
+}

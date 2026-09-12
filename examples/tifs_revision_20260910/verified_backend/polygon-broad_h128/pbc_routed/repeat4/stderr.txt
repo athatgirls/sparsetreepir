@@ -1,0 +1,416 @@
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=84, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007873 MB
+Working with: n=1024; db size=2^12 (l=84, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007873 MB
+Working with: n=1024; db size=2^12 (l=84, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007873 MB
+Working with: n=1024; db size=2^12 (l=84, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007873 MB
+Working with: n=1024; db size=2^12 (l=84, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007873 MB
+Working with: n=1024; db size=2^12 (l=84, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007873 MB
+Working with: n=1024; db size=2^12 (l=84, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007873 MB
+Working with: n=1024; db size=2^12 (l=84, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007873 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=84, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.008073 MB
+Working with: n=1024; db size=2^12 (l=84, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.008073 MB
+Working with: n=1024; db size=2^12 (l=84, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.008073 MB
+Working with: n=1024; db size=2^12 (l=84, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.008073 MB
+Working with: n=1024; db size=2^12 (l=84, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.008073 MB
+Working with: n=1024; db size=2^12 (l=84, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.008073 MB
+Working with: n=1024; db size=2^12 (l=84, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.008073 MB
+Working with: n=1024; db size=2^12 (l=84, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.008073 MB
+Working with: n=1024; db size=2^12 (l=80, m=80); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007593 MB
+Working with: n=1024; db size=2^12 (l=80, m=80); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007593 MB
+Working with: n=1024; db size=2^12 (l=80, m=80); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007593 MB
+Working with: n=1024; db size=2^12 (l=80, m=80); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007593 MB
+Working with: n=1024; db size=2^12 (l=80, m=80); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007593 MB
+Working with: n=1024; db size=2^12 (l=80, m=80); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007593 MB
+Working with: n=1024; db size=2^12 (l=80, m=80); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007593 MB
+Working with: n=1024; db size=2^12 (l=80, m=80); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007593 MB
+Working with: n=1024; db size=2^12 (l=80, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007498 MB
+Working with: n=1024; db size=2^12 (l=80, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007498 MB
+Working with: n=1024; db size=2^12 (l=80, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007498 MB
+Working with: n=1024; db size=2^12 (l=80, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007498 MB
+Working with: n=1024; db size=2^12 (l=80, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007498 MB
+Working with: n=1024; db size=2^12 (l=80, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007498 MB
+Working with: n=1024; db size=2^12 (l=80, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007498 MB
+Working with: n=1024; db size=2^12 (l=80, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007498 MB
+Working with: n=1024; db size=2^12 (l=84, m=80); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007973 MB
+Working with: n=1024; db size=2^12 (l=84, m=80); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007973 MB
+Working with: n=1024; db size=2^12 (l=84, m=80); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007973 MB
+Working with: n=1024; db size=2^12 (l=84, m=80); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007973 MB
+Working with: n=1024; db size=2^12 (l=84, m=80); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007973 MB
+Working with: n=1024; db size=2^12 (l=84, m=80); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007973 MB
+Working with: n=1024; db size=2^12 (l=84, m=80); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007973 MB
+Working with: n=1024; db size=2^12 (l=84, m=80); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007973 MB
+Working with: n=1024; db size=2^12 (l=84, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007873 MB
+Working with: n=1024; db size=2^12 (l=84, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007873 MB
+Working with: n=1024; db size=2^12 (l=84, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007873 MB
+Working with: n=1024; db size=2^12 (l=84, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007873 MB
+Working with: n=1024; db size=2^12 (l=84, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007873 MB
+Working with: n=1024; db size=2^12 (l=84, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007873 MB
+Working with: n=1024; db size=2^12 (l=84, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007873 MB
+Working with: n=1024; db size=2^12 (l=84, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007873 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=84, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.008073 MB
+Working with: n=1024; db size=2^12 (l=84, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.008073 MB
+Working with: n=1024; db size=2^12 (l=84, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.008073 MB
+Working with: n=1024; db size=2^12 (l=84, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.008073 MB
+Working with: n=1024; db size=2^12 (l=84, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.008073 MB
+Working with: n=1024; db size=2^12 (l=84, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.008073 MB
+Working with: n=1024; db size=2^12 (l=84, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.008073 MB
+Working with: n=1024; db size=2^12 (l=84, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.008073 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=84, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007873 MB
+Working with: n=1024; db size=2^12 (l=84, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007873 MB
+Working with: n=1024; db size=2^12 (l=84, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007873 MB
+Working with: n=1024; db size=2^12 (l=84, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007873 MB
+Working with: n=1024; db size=2^12 (l=84, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007873 MB
+Working with: n=1024; db size=2^12 (l=84, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007873 MB
+Working with: n=1024; db size=2^12 (l=84, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007873 MB
+Working with: n=1024; db size=2^12 (l=84, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007873 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=77); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007309 MB
+Working with: n=1024; db size=2^12 (l=80, m=77); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007309 MB
+Working with: n=1024; db size=2^12 (l=80, m=77); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007309 MB
+Working with: n=1024; db size=2^12 (l=80, m=77); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007309 MB
+Working with: n=1024; db size=2^12 (l=80, m=77); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007309 MB
+Working with: n=1024; db size=2^12 (l=80, m=77); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007309 MB
+Working with: n=1024; db size=2^12 (l=80, m=77); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007309 MB
+Working with: n=1024; db size=2^12 (l=80, m=77); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007309 MB
+Working with: n=1024; db size=2^12 (l=84, m=80); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007973 MB
+Working with: n=1024; db size=2^12 (l=84, m=80); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007973 MB
+Working with: n=1024; db size=2^12 (l=84, m=80); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007973 MB
+Working with: n=1024; db size=2^12 (l=84, m=80); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007973 MB
+Working with: n=1024; db size=2^12 (l=84, m=80); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007973 MB
+Working with: n=1024; db size=2^12 (l=84, m=80); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007973 MB
+Working with: n=1024; db size=2^12 (l=84, m=80); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007973 MB
+Working with: n=1024; db size=2^12 (l=84, m=80); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007973 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007498 MB
+Working with: n=1024; db size=2^12 (l=80, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007498 MB
+Working with: n=1024; db size=2^12 (l=80, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007498 MB
+Working with: n=1024; db size=2^12 (l=80, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007498 MB
+Working with: n=1024; db size=2^12 (l=80, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007498 MB
+Working with: n=1024; db size=2^12 (l=80, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007498 MB
+Working with: n=1024; db size=2^12 (l=80, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007498 MB
+Working with: n=1024; db size=2^12 (l=80, m=79); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007498 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=84, m=80); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007973 MB
+Working with: n=1024; db size=2^12 (l=84, m=80); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007973 MB
+Working with: n=1024; db size=2^12 (l=84, m=80); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007973 MB
+Working with: n=1024; db size=2^12 (l=84, m=80); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007973 MB
+Working with: n=1024; db size=2^12 (l=84, m=80); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007973 MB
+Working with: n=1024; db size=2^12 (l=84, m=80); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007973 MB
+Working with: n=1024; db size=2^12 (l=84, m=80); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007973 MB
+Working with: n=1024; db size=2^12 (l=84, m=80); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007973 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=82); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007783 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB
+Working with: n=1024; db size=2^12 (l=80, m=81); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~0.007688 MB

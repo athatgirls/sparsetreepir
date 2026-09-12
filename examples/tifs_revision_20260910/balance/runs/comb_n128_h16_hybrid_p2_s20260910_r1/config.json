@@ -1,0 +1,10 @@
+{
+  "id": "comb_n128_h16_hybrid_p2_s20260910_r1",
+  "distribution": "comb",
+  "n": 128,
+  "height": 16,
+  "algorithm": "hybrid",
+  "passes": 2,
+  "seed": 20260910,
+  "repeat": 1
+}

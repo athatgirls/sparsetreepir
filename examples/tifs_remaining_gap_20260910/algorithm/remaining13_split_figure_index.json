@@ -1,0 +1,49 @@
+{
+  "source_file": "small_shape_algorithm_results.json",
+  "source_sha256": "136aa72b7a782d41fd0c591a97657494a719a6d6be4e5aa161348ce2f4ad1d94",
+  "script_sha256": "dded4dc9f8f6ecfb17ab9351e3eaa46294d8273104b1ef3b7cd5a41ab10808ec",
+  "scope": "Additional split render only; original combined PDF/PNG/index and raw results preserved.",
+  "parts": [
+    {
+      "part": 1,
+      "figure_inches": [
+        7.1,
+        5.5
+      ],
+      "minimum_node_font_pt": 7.1,
+      "ids": [
+        "S0223",
+        "S0290",
+        "S0600",
+        "S0601",
+        "S0602",
+        "S0603"
+      ],
+      "files": {
+        "remaining13_part1.pdf": "96c27f119702f7353da741ac04762735c9811edce865f94cb3cb05860f085f90",
+        "remaining13_part1.png": "f18d7b0331fb2eadddadc97fdc5958843a61c2553df35c1a5f45a8df0fe33ab7"
+      }
+    },
+    {
+      "part": 2,
+      "figure_inches": [
+        7.1,
+        7.4
+      ],
+      "minimum_node_font_pt": 7.1,
+      "ids": [
+        "S0604",
+        "S0605",
+        "S0613",
+        "S0636",
+        "S0643",
+        "S0811",
+        "S0820"
+      ],
+      "files": {
+        "remaining13_part2.pdf": "4dad15ced1a7dace2e046843b86a8534a0a797eb634e398dbdddc98fbc72ca32",
+        "remaining13_part2.png": "816e01c19705510b1f3f6b2c5768dc4b1a4c375e7f4e686abe821a110194a31a"
+      }
+    }
+  ]
+}

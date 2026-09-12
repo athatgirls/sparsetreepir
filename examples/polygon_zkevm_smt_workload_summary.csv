@@ -1,7 +1,0 @@
-workload,height,keys,active_nodes,m,avg_active_path,dummy_fraction_percent,ideal_max_bucket,profile_max_bucket,ratio,gap,runtime_ms,valid
-1000 nonempty,128,652,1302,12,9.68,19.36,109,109,1.000,1,1651.1,True
-1000 nonempty,256,652,1302,12,9.68,19.36,109,109,1.000,1,1628.5,True
-multiwindow,128,1348,2694,14,10.73,23.36,193,193,1.000,1,4942.5,True
-multiwindow,256,1348,2694,14,10.73,23.36,193,193,1.000,1,5149.5,True
-broad multiwindow,128,7040,14078,17,13.11,22.86,829,829,1.000,1,40527.7,True
-broad multiwindow,256,7040,14078,17,13.11,22.86,829,829,1.000,1,43666.8,True

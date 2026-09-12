@@ -1,0 +1,38 @@
+{
+  "scope": "Excluded correctness smoke only; not formal benchmark samples.",
+  "methods": [
+    {
+      "method": "flat",
+      "status": "passed",
+      "proofs": 2,
+      "initialized_databases": 1,
+      "PIR_calls_per_proof": 13,
+      "result_sha256": "7ee8327b85d1fc005f8c6fdb1c008445bb3e44045acc0b7a7f9973ef494e986f"
+    },
+    {
+      "method": "ab",
+      "status": "passed",
+      "proofs": 2,
+      "initialized_databases": 13,
+      "PIR_calls_per_proof": 13,
+      "result_sha256": "bee574ca6ba9fcde7cd2ad692fa2ea7308ce4f28563428d39820868c0ca24e33"
+    },
+    {
+      "method": "pbc",
+      "status": "passed",
+      "proofs": 2,
+      "initialized_databases": 20,
+      "PIR_calls_per_proof": 20,
+      "result_sha256": "8d591a827ebad313d066a97269f6153a128267389e6dc9aa0a8f56f5e5a70baf"
+    },
+    {
+      "method": "first_fit",
+      "status": "passed",
+      "proofs": 2,
+      "initialized_databases": 13,
+      "PIR_calls_per_proof": 13,
+      "result_sha256": "67aa78a485961af7b666753709d0050fdfc2a33cc88f7eecce2e5e0d80a1e29a"
+    }
+  ],
+  "binary_sha256": "4a1c83d3f8dfa12557aec5b5666224cc36840e9aa2fe758b6f634437a69bfa02"
+}

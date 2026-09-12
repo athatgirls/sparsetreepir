@@ -1,0 +1,1 @@
+{"id": "zksync-sample_n956_h128_ab-hungarian_p20_s20260910_r1", "status": "complete", "actual_n": 956, "m": 13, "max_bucket": 147, "U_over_B": 1.0, "coloring_s": 0.9346252001123503, "valid": true}

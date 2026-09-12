@@ -1,0 +1,12 @@
+{
+  "command": [
+    "cmake",
+    "--build",
+    "/artifact/examples/tifs_contribution_gate_20260910/external/native_vbpir/build",
+    "--parallel",
+    "2"
+  ],
+  "returncode": 0,
+  "stdout": "[ 25%] Building CXX object CMakeFiles/vbpir_treepir.dir/src/batchpirclient.cpp.o\n[ 25%] Building CXX object CMakeFiles/vbpir_treepir.dir/src/batchpirparams.cpp.o\n[ 37%] Building CXX object CMakeFiles/vbpir_treepir.dir/src/batchpirserver.cpp.o\n[ 50%] Building CXX object CMakeFiles/vbpir_treepir.dir/src/client.cpp.o\n[ 62%] Building CXX object CMakeFiles/vbpir_treepir.dir/src/main.cpp.o\n[ 75%] Building CXX object CMakeFiles/vbpir_treepir.dir/src/pirparams.cpp.o\n[ 87%] Building CXX object CMakeFiles/vbpir_treepir.dir/src/server.cpp.o\n[100%] Linking CXX executable /artifact/examples/tifs_contribution_gate_20260910/external/native_vbpir/source/build/bin/vbpir_treepir\n[100%] Built target vbpir_treepir\n",
+  "stderr": ""
+}

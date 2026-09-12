@@ -1,0 +1,13 @@
+{
+  "id": "polygon-broad_n7040_h128_ab-hungarian_p20_s20260910_r1",
+  "distribution": "real",
+  "n": 7040,
+  "height": 128,
+  "algorithm": "ab-hungarian",
+  "passes": 20,
+  "seed": 20260910,
+  "repeat": 1,
+  "label": "polygon-broad",
+  "source": "datasets/polygon_zkevm_account_leaf_workload_broad_multiwindow.csv",
+  "key_mode": "sha256"
+}

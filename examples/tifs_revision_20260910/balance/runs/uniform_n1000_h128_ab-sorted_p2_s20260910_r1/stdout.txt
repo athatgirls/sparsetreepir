@@ -1,0 +1,1 @@
+{"id": "uniform_n1000_h128_ab-sorted_p2_s20260910_r1", "status": "complete", "actual_n": 1000, "m": 14, "max_bucket": 281, "U_over_B": 1.965034965034965, "coloring_s": 0.03229410003405064, "valid": true}

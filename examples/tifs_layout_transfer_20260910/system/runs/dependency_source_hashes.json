@@ -1,0 +1,28 @@
+{
+  "scope": "Build and imported helper source hashes recorded after completed run; old source files unmodified. Measured derived source/binary and parent TCP source also copied into source_snapshots.",
+  "sha256": {
+    ".tools\\simplepir\\simplepir-main\\pir\\database.go": "1622cd3e91621e10d992fbbfdb0f74d7a7a20e137b00b986590a5324ccb18fd8",
+    ".tools\\simplepir\\simplepir-main\\pir\\double_pir.go": "066ab6cffae3147c2cb4e2e1aaebb057e75903bf8b123ab428c8af2cc7fb5614",
+    ".tools\\simplepir\\simplepir-main\\pir\\gauss.go": "c326558cc9c536ee522188263e298081132965663a8d5e88433ce04bf2e253d5",
+    ".tools\\simplepir\\simplepir-main\\pir\\gauss_test.go": "f9ac3bd6d16929a5b2a13c75513b460fc448c4996a4816b792b40a4b8b71ea06",
+    ".tools\\simplepir\\simplepir-main\\pir\\logging.go": "928ee1d28149d4fd1df9f453b03ed0d90002fa51bb7bc20996a92480fb97663f",
+    ".tools\\simplepir\\simplepir-main\\pir\\matrix.go": "ec6d5bf10a26546d8c8082fe5bc0e173c8f94c3a14e5e7a75f3c6df7c3b97f53",
+    ".tools\\simplepir\\simplepir-main\\pir\\params.go": "c520a84e2fb712c791ea64fe228bd64259f93a1f59399fdf162109aa22db05bd",
+    ".tools\\simplepir\\simplepir-main\\pir\\pir.go": "81c80ac872b215fc6e5161568241714b37ad4a0453979ec232b4fd0cde59b993",
+    ".tools\\simplepir\\simplepir-main\\pir\\pir_test.go": "a086df6dc421690cf7cd4febe1bdf1bca990b02d73eece0ba33d6e83d6c9c5a8",
+    ".tools\\simplepir\\simplepir-main\\pir\\rand.go": "15da8cea8ab4f77b6a29aa83c76cbda9465b97c0a2f143ef4c2704b8a97d34d3",
+    ".tools\\simplepir\\simplepir-main\\pir\\simple_pir.go": "84d8cb9f016154827a1bbaa578a3dad2b7188526f91e5f3ca617bd89b8119f15",
+    ".tools\\simplepir\\simplepir-main\\pir\\utils.go": "fe6d4b3c3a66a6fc6d07a12d0ee7139c57316ee684b836916ce15d7144de99a9",
+    ".tools\\simplepir\\simplepir-main\\pir\\pir.c": "744eb6ff6fd1c7e5ae91977eab175d8cfaa177165446e75c2edbee73b182e3c1",
+    ".tools\\simplepir\\simplepir-main\\pir\\pir.h": "dde206eccaf7b58b641015945b4c672082dc18f2f3cf6693dc035b27c1a82d41",
+    ".tools\\simplepir\\simplepir-main\\go.mod": "c88f360a80734fce345af8f3bcb7f6830817bc2ed7a5fbb805282297887b4796",
+    "scripts\\fixed_sparse_tree_coloring.py": "0e835f0d26bf71a78e0652f53c73bf942f071af0df68bd32cd496d0d8bef7cf0",
+    "scripts\\generate_full_sparse_smt_example.py": "5cd3630af580fe03214fd9816ff66601e3f32e79a4e3d304b445bd8f12d17b1d",
+    "scripts\\run_height_sparsity_profile_balance_experiment.py": "6e13f887cbe283ade74aad6cd2174aa3c1d66001ada2106fc27935b3284f63f5",
+    "scripts\\run_sparse_smt_pir_backend_experiment.py": "2f0ae62851d8d3fe1219183e0a26bead1a5fcc9607612a15371927aacab248fb",
+    "scripts\\measure_gap_algorithm_20260910.py": "c4f75d5b989852a8f1e078c144e072099fc067d0a5f8b5608c940de74001d08f",
+    "scripts\\run_tifs_verified_backend_suite_20260910.py": "bf441840014a4059024229a989a356b771b694b001d05c975807ee08c8b5c589",
+    "scripts\\tifs_revision_smt.py": "f0dc6c6c9af2d7a9c032991f5407c7cca79e7353394d6a18d9f8e8bb5e72c740",
+    "scripts\\run_tifs_ct_application_20260910.py": "157c4e4f702ddda2d03ae5363d07ddef58e708a952f4cd989296f273bd68e51a"
+  }
+}

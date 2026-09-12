@@ -1,0 +1,38 @@
+{
+  "case": "complete_h10",
+  "repeat": 2,
+  "method": "treepir",
+  "pool_indices": [
+    17,
+    15,
+    18,
+    9,
+    10,
+    31,
+    4,
+    2,
+    3,
+    19
+  ],
+  "target_ids": [
+    513,
+    489,
+    529,
+    187,
+    396,
+    1009,
+    71,
+    66,
+    67,
+    585
+  ],
+  "input_sha256": "724a0be50810c061436e5b7fb93e5d8278ac5110c729a1866f774b2e53cda4d8",
+  "returncode": 0,
+  "timeout": false,
+  "wall_seconds": 4.0907766430000265,
+  "binary_sha256": "d2d25b32f8853661c30990f1b9ff231de369ee0e176eac428eb22b7fa5e7ce4a",
+  "input_source_sha256": "724a0be50810c061436e5b7fb93e5d8278ac5110c729a1866f774b2e53cda4d8",
+  "run_input_sha256": "9cd2d56a66b16973ce9460f3fc45615d3f9c44062b57a6caef7589fcced26acc",
+  "result_sha256": "3ea646b180990ff4b5771f53f9aa836a62ed0b75609ec5c83a868148dedfcbfd",
+  "status": "complete"
+}

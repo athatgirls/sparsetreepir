@@ -1,0 +1,4 @@
+case,comparator,paired_processes,comparator_over_ab_latency_mean,comparator_minus_ab_ms_mean,online_framed_bytes_comparator_over_ab,replicated_record_payload_bytes_comparator_over_ab,backend_rounded_raw_payload_bytes_comparator_over_ab,ntt_coefficient_payload_bytes_comparator_over_ab,setup_serialized_payload_bytes_comparator_over_ab,persistent_setup_wall_ms_comparator_over_ab
+complete_h10,pbc,1,0.9795063325896067,-6.165066500000023,1.0,3.0,2.625,1.75,1.0016586742495632,1.0407348085427157
+complete_h10,treepir,1,1.002266226129926,0.6817440000000374,1.0,1.0,1.0,1.0,1.0,0.9618265331063662
+uniform_n1000,pbc,1,1.0191137580282001,5.7279459999999744,1.0,3.0,3.076923076923077,2.0,1.0016195564836774,1.3978488048706916

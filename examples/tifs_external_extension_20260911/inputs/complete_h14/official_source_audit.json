@@ -1,0 +1,65 @@
+{
+  "commit": "930063c5aefc441244abb4890fdf35383f3aa956",
+  "sources": {
+    "CSA/src/CSA.java": "0aa4930a5bd6f3779676270c58f96e0f2918a08ed5e40270f36448706b31bc8f",
+    "CSA/src/MerkleTrees.java": "c52c377bfda335795e28215a065420263bacc0d6d8db0010c2578a4f6d7e042b",
+    "TreePIR-Indexing/src/SubCSA.java": "28e40ad790a8ef56fd9d6ffa1c7fd0bdedb0123d209d4ee451329b6d10372568"
+  },
+  "commands": [
+    {
+      "command": [
+        "javac",
+        "-d",
+        "/mnt/d/DesktopProjects/论文/examples/tifs_external_extension_20260911/inputs/complete_h14/java_build/csa",
+        "-cp",
+        "/artifact/examples/tifs_contribution_gate_20260910/external/official_sources/CSA/gson-2.10.1.jar",
+        "/artifact/examples/tifs_contribution_gate_20260910/external/official_sources/CSA/src/CSA.java",
+        "/artifact/examples/tifs_contribution_gate_20260910/external/official_sources/CSA/src/MerkleTrees.java",
+        "/artifact/scripts/contribution_gate_csa_20260910.java"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "command": [
+        "java",
+        "-Xmx2g",
+        "-cp",
+        "/mnt/d/DesktopProjects/论文/examples/tifs_external_extension_20260911/inputs/complete_h14/java_build/csa:/artifact/examples/tifs_contribution_gate_20260910/external/official_sources/CSA/gson-2.10.1.jar",
+        "contribution_gate_csa_20260910",
+        "14"
+      ],
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "javac",
+        "-d",
+        "/mnt/d/DesktopProjects/论文/examples/tifs_external_extension_20260911/inputs/complete_h14/java_build/index",
+        "-cp",
+        "/artifact/examples/tifs_contribution_gate_20260910/external/official_sources/CSA/gson-2.10.1.jar",
+        "/artifact/examples/tifs_contribution_gate_20260910/external/official_sources/TreePIR-Indexing/src/SubCSA.java",
+        "/artifact/scripts/contribution_gate_index_20260910.java"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "command": [
+        "java",
+        "-Xmx2g",
+        "-cp",
+        "/mnt/d/DesktopProjects/论文/examples/tifs_external_extension_20260911/inputs/complete_h14/java_build/index:/artifact/examples/tifs_contribution_gate_20260910/external/official_sources/CSA/gson-2.10.1.jar",
+        "contribution_gate_index_20260910",
+        "14"
+      ],
+      "returncode": 0,
+      "stderr": ""
+    }
+  ],
+  "all_occupied_targets_official_index_checked": 16384,
+  "original_index_order_preserved": true
+}

@@ -1,3 +1,0 @@
-label,source_path,height,key_mode,input_records,unique_keys,occupied_leaves,slot_collisions,active_nodes,exact_width,avg_active_path_len,max_active_path_len_by_leaf,dummy_fraction,ideal_max_bucket,profile_max_bucket,profile_size_gap,profile_over_ideal,profile_runtime_ms,valid
-smoke_smt_keys,examples\smt_workload_smoke_keys.csv,16,sha256,16,16,16,0,30,6,4.5,6,0.25,5,6,2,1.2,6.0761000495404005,True
-smoke_smt_keys,examples\smt_workload_smoke_keys.csv,32,sha256,16,16,16,0,30,6,4.5,6,0.25,5,6,2,1.2,5.2779000252485275,True

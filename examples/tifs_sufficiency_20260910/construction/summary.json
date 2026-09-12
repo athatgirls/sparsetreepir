@@ -1,0 +1,104 @@
+{
+  "base": {
+    "shapes": 1323,
+    "source": "examples\\tifs_remaining_gap_20260910\\theory\\all_1323_joint_bounds.json",
+    "source_sha256": "330eebce5f81f4d56ed34c2aa814e560170b0f1d226d8be6c31ee66ef936287d",
+    "total_wall_seconds": 3.434535100008361,
+    "scope": "base: n2..14,m<=6; holdout: n15..16,m<=6. One canonical orientation per unlabeled shape.",
+    "original_AB_budget_exhaustions": 0,
+    "original_AB": {
+      "OPT_attained": 1123,
+      "max_exact_gap": 0.25,
+      "actual_target_proofs_verified": 16642
+    },
+    "pair_union": {
+      "OPT_attained": 1125,
+      "max_exact_gap": 0.25,
+      "actual_target_proofs_verified": 16642
+    },
+    "three_color": {
+      "OPT_attained": 1314,
+      "max_exact_gap": 0.25,
+      "actual_target_proofs_verified": 16642
+    },
+    "three_then_four": {
+      "OPT_attained": 1321,
+      "max_exact_gap": 0.25,
+      "actual_target_proofs_verified": 16642
+    },
+    "original_AB_coloring_seconds": 1.3563084964407608,
+    "additional_seconds": {
+      "pair": 0.047720600152388215,
+      "three": 0.535555700189434,
+      "four": 0.18797929759602994
+    },
+    "remaining_ids": [
+      "S0606",
+      "S0710"
+    ],
+    "max_DP_cached_subproblems": 117
+  },
+  "holdout": {
+    "shapes": 2115,
+    "source": "examples\\tifs_remaining_gap_20260910\\theory\\expanded_exact_results.json",
+    "source_sha256": "9ed63cc78f17f98d85d1c32959757fb66ec3b0ac96b5ad08b4b052a900646383",
+    "total_wall_seconds": 10.438207599916495,
+    "scope": "base: n2..14,m<=6; holdout: n15..16,m<=6. One canonical orientation per unlabeled shape.",
+    "original_AB_budget_exhaustions": 0,
+    "original_AB": {
+      "OPT_attained": 1780,
+      "max_exact_gap": 0.2,
+      "actual_target_proofs_verified": 33015
+    },
+    "pair_union": {
+      "OPT_attained": 1796,
+      "max_exact_gap": 0.2,
+      "actual_target_proofs_verified": 33015
+    },
+    "three_color": {
+      "OPT_attained": 2073,
+      "max_exact_gap": 0.2,
+      "actual_target_proofs_verified": 33015
+    },
+    "three_then_four": {
+      "OPT_attained": 2112,
+      "max_exact_gap": 0.2,
+      "actual_target_proofs_verified": 33015
+    },
+    "original_AB_coloring_seconds": 3.4106118011986837,
+    "additional_seconds": {
+      "pair": 0.09891049878206104,
+      "three": 1.7377400010591373,
+      "four": 2.410008900682442
+    },
+    "remaining_ids": [
+      "H1199",
+      "H1265",
+      "H1285"
+    ],
+    "max_DP_cached_subproblems": 127
+  },
+  "subtree_audit": {
+    "cases": 200,
+    "candidate_subtrees": 3710,
+    "exhaustive_labeled_permutations": 309200
+  },
+  "python": "3.14.2",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "total_wall_seconds": 14.582206399994902,
+  "neighborhood": "Exact pair-component unions; exact 3-color induced-forest recoloring; then exact 4-color induced-forest recoloring. No more than four colors are optimized at once.",
+  "iteration_caps": 100,
+  "original_AB_round_cap": 20,
+  "state_cache_policy": "Cleared per shape and between pair/3-color stages. 4-color stage retains same-instance 3-color subproblem cache.",
+  "hard_scope_and_state_caps": "N<=30, m<=6; maximum 20000 profiles per merge and 10000 cached rooted subproblems. Exceeding a cap raises an explicit failure instead of claiming local optimality. No cap was reached.",
+  "lower_bound_scope": "B_joint from frozen theory results used only as a valid stopping certificate; exact OPT never influences move selection.",
+  "files_sha256": {
+    "scripts\\measure_construction_neighborhood_20260910.py": "957c06351535f81b81f1da477c3747dc6a03d31085e581da4026ce38e86af1d2",
+    "scripts\\prototype_construction_kempe_20260910.py": "1bff1ee01205280330ab2ddcfaa3cd1779c223fe31e813cc6b39c16b7ad9bc7b",
+    "scripts\\tifs_revision_smt.py": "f0dc6c6c9af2d7a9c032991f5407c7cca79e7353394d6a18d9f8e8bb5e72c740",
+    "scripts\\run_height_sparsity_profile_balance_experiment.py": "6e13f887cbe283ade74aad6cd2174aa3c1d66001ada2106fc27935b3284f63f5",
+    "examples\\tifs_remaining_gap_20260910\\theory\\all_1323_joint_bounds.json": "330eebce5f81f4d56ed34c2aa814e560170b0f1d226d8be6c31ee66ef936287d",
+    "examples\\tifs_remaining_gap_20260910\\theory\\expanded_exact_results.json": "9ed63cc78f17f98d85d1c32959757fb66ec3b0ac96b5ad08b4b052a900646383",
+    "examples\\tifs_remaining_gap_20260910\\algorithm\\small_shape_algorithm_results.json": "136aa72b7a782d41fd0c591a97657494a719a6d6be4e5aa161348ce2f4ad1d94"
+  }
+}

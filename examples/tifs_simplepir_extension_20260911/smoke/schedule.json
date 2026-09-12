@@ -1,0 +1,114 @@
+[
+  {
+    "case": "uniform_n100000",
+    "repeat": 0,
+    "method": "flat",
+    "pool_indices": [
+      3,
+      1
+    ],
+    "target_ids": [
+      4341,
+      2563
+    ],
+    "input_sha256": "4bb68311ad2c694fa7043566357af29283e63f759c911df84d8150829f117fa2"
+  },
+  {
+    "case": "uniform_n100000",
+    "repeat": 0,
+    "method": "pbc",
+    "pool_indices": [
+      3,
+      1
+    ],
+    "target_ids": [
+      4341,
+      2563
+    ],
+    "input_sha256": "74c289b5ab2ea31c0ad941fe5f72e54c011cdf86b3e2affd6f1a36a8caf538ef"
+  },
+  {
+    "case": "uniform_n100000",
+    "repeat": 0,
+    "method": "ab",
+    "pool_indices": [
+      3,
+      1
+    ],
+    "target_ids": [
+      4341,
+      2563
+    ],
+    "input_sha256": "d31201ec08209a7af5b7a6f8ea8dccab4acc62102848bf93a35da8964eee38d5"
+  },
+  {
+    "case": "uniform_n100000",
+    "repeat": 0,
+    "method": "first_fit",
+    "pool_indices": [
+      3,
+      1
+    ],
+    "target_ids": [
+      4341,
+      2563
+    ],
+    "input_sha256": "d92f0fc2b3ad84b6b96770e805517d3d793e6cd0e9db7882d0fb24fec9fe77b8"
+  },
+  {
+    "case": "uniform_n1000",
+    "repeat": 0,
+    "method": "ab",
+    "pool_indices": [
+      26,
+      25
+    ],
+    "target_ids": [
+      916,
+      798
+    ],
+    "input_sha256": "bf11d2133d04c85bb829957c34fc019dddf05dabea408fc577071d99c5a3ba34"
+  },
+  {
+    "case": "uniform_n1000",
+    "repeat": 0,
+    "method": "flat",
+    "pool_indices": [
+      26,
+      25
+    ],
+    "target_ids": [
+      916,
+      798
+    ],
+    "input_sha256": "caa37baaae4674569928c71f36a25296d91f11e36b02c1528a772924e1f81ddf"
+  },
+  {
+    "case": "uniform_n1000",
+    "repeat": 0,
+    "method": "first_fit",
+    "pool_indices": [
+      26,
+      25
+    ],
+    "target_ids": [
+      916,
+      798
+    ],
+    "input_sha256": "21e636579a0561eb10324c231f477c083c24d824febe07fcaf0acd1c3ed54999"
+  },
+  {
+    "case": "uniform_n1000",
+    "repeat": 0,
+    "method": "pbc",
+    "pool_indices": [
+      26,
+      25
+    ],
+    "target_ids": [
+      916,
+      798
+    ],
+    "input_sha256": "c20effd6c7d24a378edba641a663f4434bc88eb37d4f2a4b89f56fc77019b69b"
+  }
+]

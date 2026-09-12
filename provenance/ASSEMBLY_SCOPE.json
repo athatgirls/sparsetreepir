@@ -1,0 +1,30 @@
+{
+  "release": "2026-09-12-current-paper",
+  "native_archives": [
+    {
+      "source": "tifs_external_extension_20260911",
+      "archive_sha256": "f948de4393bea3be04424689f8972edecc2206fc0a414ab465f1c7d6e6c21893"
+    },
+    {
+      "source": "tifs_simplepir_extension_20260911",
+      "archive_sha256": "7b9235892ff5f454702f4c8b232227eb5bfe346d5174b76abfefeadafc4d985d"
+    }
+  ],
+  "supplement_evidence_roots": [
+    "examples/tifs_contribution_gate_20260910/external",
+    "examples/tifs_revision_20260910/verified_backend",
+    "examples/tifs_revision_20260910/correctness",
+    "examples/tifs_revision_20260910/ct_application/runs_verified_evidence",
+    "examples/tifs_revision_20260910/ct_application/source",
+    "examples/tifs_layout_transfer_20260910/system",
+    "examples/tifs_remaining_gap_20260910",
+    "examples/tifs_sufficiency_20260910/construction",
+    "examples/tifs_revision_20260910/balance_repeats",
+    "examples/tifs_breakthrough_20260910/backend",
+    "examples/tifs_breakthrough_20260910/cost_frontier",
+    "examples/tifs_revision_20260910/theory_exploration/final",
+    "datasets"
+  ],
+  "omissions": "Legacy repository entries, old manuscripts/review reports, PIANO, Respire feasibility, compiler caches, recorded executables and report PDFs. No observed run from the included native suites is filtered.",
+  "native_per_run_inputs": "Deduplicated copies are restored using archived per-run input hashes."
+}

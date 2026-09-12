@@ -1,0 +1,8 @@
+{
+  "runs": 79,
+  "complete": 78,
+  "timeouts": 1,
+  "failed": 0,
+  "invalid": 0,
+  "note": "Timeouts retain only the last completed valid colouring; coloring_s may precede timeout wall time. RSS includes Python/imports. Coloring timings exclude separately measured checkpoint validation and file IO; measured_total_s includes them."
+}

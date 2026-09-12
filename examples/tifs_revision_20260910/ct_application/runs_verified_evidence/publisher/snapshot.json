@@ -1,0 +1,29 @@
+{
+  "n": 512,
+  "N": 1022,
+  "m": 13,
+  "D": 17,
+  "height": 128,
+  "trusted_experimental_root_hex": "e37abfffd902ccd6b3547e9715771d389d7316e8e7b052a9e39692cc2fbd45fc",
+  "source_csv_sha256": "70d7daa6c33a8fee866eb62db0653019171fd6fb5698a25402b008efc11dce2d",
+  "hash_format": "sha256:leaf=H(00||value),internal=H(01||left||right),empty_leaf=H(02)",
+  "value": "SHA256(raw CT MerkleTreeLeaf record)",
+  "slot": "first 128 bits of the value digest",
+  "build_wall_ms": 737.6800719999892,
+  "build_timings_ms": {
+    "hash_tree": 39.651656000003754,
+    "active_extraction": 70.50579900000287,
+    "forest_build": 0.4836339999911843,
+    "coloring": 196.811155000006,
+    "metadata_build": 1.0880539999931216
+  },
+  "root_publication": "locally pinned experimental SMT root, not signed and not a native CT log root",
+  "max_bucket": {
+    "first_fit": 306,
+    "activebalance": 79,
+    "nonempty_depth": 196,
+    "full_cache": 1022
+  },
+  "activebalance_passes": 9,
+  "activebalance_moves": 8
+}

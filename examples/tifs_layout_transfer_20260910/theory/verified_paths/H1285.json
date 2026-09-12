@@ -1,0 +1,976 @@
+{
+  "id": "H1285",
+  "height": 5,
+  "m": 5,
+  "L": 6,
+  "root_hex": "48029a6725726b659650c3a64a27cc7fdf425bf4f0ba1d895f2c2fc2424c00b8",
+  "records": [
+    {
+      "heap_node": 4,
+      "parent": 3,
+      "children": [
+        11,
+        10
+      ],
+      "left": 1,
+      "right": 4,
+      "proof_level": 3,
+      "color": 4
+    },
+    {
+      "heap_node": 2,
+      "parent": null,
+      "children": [
+        7,
+        6
+      ],
+      "left": 5,
+      "right": 15,
+      "proof_level": 4,
+      "color": 1
+    },
+    {
+      "heap_node": 10,
+      "parent": 4,
+      "children": [
+        23,
+        22
+      ],
+      "left": 2,
+      "right": 4,
+      "proof_level": 2,
+      "color": 3
+    },
+    {
+      "heap_node": 5,
+      "parent": 3,
+      "children": [],
+      "left": 0,
+      "right": 0,
+      "proof_level": 3,
+      "color": 1
+    },
+    {
+      "heap_node": 22,
+      "parent": 10,
+      "children": [
+        47,
+        46
+      ],
+      "left": 3,
+      "right": 4,
+      "proof_level": 1,
+      "color": 2
+    },
+    {
+      "heap_node": 11,
+      "parent": 4,
+      "children": [],
+      "left": 1,
+      "right": 1,
+      "proof_level": 2,
+      "color": 1
+    },
+    {
+      "heap_node": 46,
+      "parent": 22,
+      "children": [],
+      "left": 4,
+      "right": 4,
+      "proof_level": 0,
+      "color": 1
+    },
+    {
+      "heap_node": 23,
+      "parent": 10,
+      "children": [],
+      "left": 2,
+      "right": 2,
+      "proof_level": 1,
+      "color": 2
+    },
+    {
+      "heap_node": 47,
+      "parent": 22,
+      "children": [],
+      "left": 3,
+      "right": 3,
+      "proof_level": 0,
+      "color": 1
+    },
+    {
+      "heap_node": 12,
+      "parent": 7,
+      "children": [
+        27,
+        26
+      ],
+      "left": 6,
+      "right": 8,
+      "proof_level": 2,
+      "color": 4
+    },
+    {
+      "heap_node": 6,
+      "parent": 2,
+      "children": [
+        15,
+        14
+      ],
+      "left": 9,
+      "right": 15,
+      "proof_level": 3,
+      "color": 2
+    },
+    {
+      "heap_node": 3,
+      "parent": null,
+      "children": [
+        5,
+        4
+      ],
+      "left": 0,
+      "right": 4,
+      "proof_level": 4,
+      "color": 5
+    },
+    {
+      "heap_node": 26,
+      "parent": 12,
+      "children": [
+        55,
+        54
+      ],
+      "left": 7,
+      "right": 8,
+      "proof_level": 1,
+      "color": 3
+    },
+    {
+      "heap_node": 13,
+      "parent": 7,
+      "children": [],
+      "left": 5,
+      "right": 5,
+      "proof_level": 2,
+      "color": 2
+    },
+    {
+      "heap_node": 54,
+      "parent": 26,
+      "children": [],
+      "left": 8,
+      "right": 8,
+      "proof_level": 0,
+      "color": 2
+    },
+    {
+      "heap_node": 27,
+      "parent": 12,
+      "children": [],
+      "left": 6,
+      "right": 6,
+      "proof_level": 1,
+      "color": 3
+    },
+    {
+      "heap_node": 55,
+      "parent": 26,
+      "children": [],
+      "left": 7,
+      "right": 7,
+      "proof_level": 0,
+      "color": 2
+    },
+    {
+      "heap_node": 28,
+      "parent": 15,
+      "children": [
+        59,
+        58
+      ],
+      "left": 10,
+      "right": 11,
+      "proof_level": 1,
+      "color": 4
+    },
+    {
+      "heap_node": 14,
+      "parent": 6,
+      "children": [
+        31,
+        30
+      ],
+      "left": 12,
+      "right": 15,
+      "proof_level": 2,
+      "color": 3
+    },
+    {
+      "heap_node": 7,
+      "parent": 2,
+      "children": [
+        13,
+        12
+      ],
+      "left": 5,
+      "right": 8,
+      "proof_level": 3,
+      "color": 5
+    },
+    {
+      "heap_node": 58,
+      "parent": 28,
+      "children": [],
+      "left": 11,
+      "right": 11,
+      "proof_level": 0,
+      "color": 3
+    },
+    {
+      "heap_node": 29,
+      "parent": 15,
+      "children": [],
+      "left": 9,
+      "right": 9,
+      "proof_level": 1,
+      "color": 4
+    },
+    {
+      "heap_node": 59,
+      "parent": 28,
+      "children": [],
+      "left": 10,
+      "right": 10,
+      "proof_level": 0,
+      "color": 3
+    },
+    {
+      "heap_node": 60,
+      "parent": 31,
+      "children": [],
+      "left": 13,
+      "right": 13,
+      "proof_level": 0,
+      "color": 5
+    },
+    {
+      "heap_node": 30,
+      "parent": 14,
+      "children": [
+        63,
+        62
+      ],
+      "left": 14,
+      "right": 15,
+      "proof_level": 1,
+      "color": 4
+    },
+    {
+      "heap_node": 15,
+      "parent": 6,
+      "children": [
+        29,
+        28
+      ],
+      "left": 9,
+      "right": 11,
+      "proof_level": 2,
+      "color": 5
+    },
+    {
+      "heap_node": 61,
+      "parent": 31,
+      "children": [],
+      "left": 12,
+      "right": 12,
+      "proof_level": 0,
+      "color": 5
+    },
+    {
+      "heap_node": 62,
+      "parent": 30,
+      "children": [],
+      "left": 15,
+      "right": 15,
+      "proof_level": 0,
+      "color": 5
+    },
+    {
+      "heap_node": 31,
+      "parent": 14,
+      "children": [
+        61,
+        60
+      ],
+      "left": 12,
+      "right": 13,
+      "proof_level": 1,
+      "color": 4
+    },
+    {
+      "heap_node": 63,
+      "parent": 30,
+      "children": [],
+      "left": 14,
+      "right": 14,
+      "proof_level": 0,
+      "color": 5
+    }
+  ],
+  "stage_colors": {
+    "initial": [
+      4,
+      1,
+      3,
+      1,
+      2,
+      1,
+      1,
+      2,
+      1,
+      4,
+      2,
+      5,
+      3,
+      2,
+      2,
+      3,
+      2,
+      4,
+      3,
+      5,
+      3,
+      4,
+      3,
+      5,
+      4,
+      5,
+      5,
+      5,
+      4,
+      5
+    ],
+    "neutral": [
+      1,
+      4,
+      2,
+      4,
+      3,
+      4,
+      4,
+      4,
+      4,
+      1,
+      3,
+      5,
+      2,
+      3,
+      3,
+      3,
+      3,
+      1,
+      1,
+      5,
+      2,
+      1,
+      2,
+      5,
+      2,
+      5,
+      5,
+      5,
+      2,
+      5
+    ],
+    "optimal": [
+      2,
+      4,
+      3,
+      4,
+      5,
+      4,
+      4,
+      4,
+      4,
+      3,
+      1,
+      1,
+      5,
+      1,
+      1,
+      1,
+      1,
+      5,
+      2,
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      3,
+      5,
+      5,
+      5
+    ]
+  },
+  "signatures": {
+    "initial": [
+      7,
+      6,
+      6,
+      6,
+      5
+    ],
+    "neutral": [
+      7,
+      6,
+      6,
+      6,
+      5
+    ],
+    "optimal": [
+      6,
+      6,
+      6,
+      6,
+      6
+    ]
+  },
+  "proofs": [
+    {
+      "slot": 0,
+      "value_hex": "6f8a60847a7cbbf3d8bb73ce05e3fec2dbce9a1c5bf4823ee43675cfef2ebf56",
+      "real_siblings": [
+        {
+          "level": 3,
+          "heap_node": 5,
+          "digest_hex": "8e70fe63bdde5b2f70727ef354ebd1bbe5527769c7442ee20c48aed4eaa9a79b",
+          "record_index": 3
+        },
+        {
+          "level": 4,
+          "heap_node": 3,
+          "digest_hex": "29b7256bb4b7566ee1eeead8f76cfcf28dda89521f075a98d53577ade9e2eb74",
+          "record_index": 11
+        }
+      ],
+      "all_three_layouts_root_verified": true
+    },
+    {
+      "slot": 8,
+      "value_hex": "b52c650a6402de26433e58637912dffcb851335bde9a9641ba36dde7d51ac272",
+      "real_siblings": [
+        {
+          "level": 2,
+          "heap_node": 11,
+          "digest_hex": "57d34eeef9132b740c7f088cd34a02d08e91c4f7dee63cc65fa251ff5c5cbee3",
+          "record_index": 5
+        },
+        {
+          "level": 3,
+          "heap_node": 4,
+          "digest_hex": "43699b3720f14686b119d531702810093f46ca0aa25ba3fd305df69171d9fb47",
+          "record_index": 0
+        },
+        {
+          "level": 4,
+          "heap_node": 3,
+          "digest_hex": "29b7256bb4b7566ee1eeead8f76cfcf28dda89521f075a98d53577ade9e2eb74",
+          "record_index": 11
+        }
+      ],
+      "all_three_layouts_root_verified": true
+    },
+    {
+      "slot": 12,
+      "value_hex": "892de3f281d42557885832b5ea6e54620ac178d0bcf3c07458fb36c6b1f4d246",
+      "real_siblings": [
+        {
+          "level": 1,
+          "heap_node": 23,
+          "digest_hex": "ed516c4ded4d688883f34a56eb90152d42b8b2fff8cb1539f2f2374e396f83f8",
+          "record_index": 7
+        },
+        {
+          "level": 2,
+          "heap_node": 10,
+          "digest_hex": "e7db13a82b40e1204d592c091e9ab5ca45d35ea60c8f1c2b691b5ae743bf2713",
+          "record_index": 2
+        },
+        {
+          "level": 3,
+          "heap_node": 4,
+          "digest_hex": "43699b3720f14686b119d531702810093f46ca0aa25ba3fd305df69171d9fb47",
+          "record_index": 0
+        },
+        {
+          "level": 4,
+          "heap_node": 3,
+          "digest_hex": "29b7256bb4b7566ee1eeead8f76cfcf28dda89521f075a98d53577ade9e2eb74",
+          "record_index": 11
+        }
+      ],
+      "all_three_layouts_root_verified": true
+    },
+    {
+      "slot": 14,
+      "value_hex": "f8ec9573345b1870c0d4c76fcaaa03ca9ef3a1741c89da63eedef10b97d71dd7",
+      "real_siblings": [
+        {
+          "level": 0,
+          "heap_node": 47,
+          "digest_hex": "305262b960ae80e41b9d7e4d2c41a9477b5cb49ff8a4aeccf0011e51f4545dd6",
+          "record_index": 8
+        },
+        {
+          "level": 1,
+          "heap_node": 22,
+          "digest_hex": "007e01caf2d7ff90243eb75854e5214b7666e598687f2d64f623d782bacbf78a",
+          "record_index": 4
+        },
+        {
+          "level": 2,
+          "heap_node": 10,
+          "digest_hex": "e7db13a82b40e1204d592c091e9ab5ca45d35ea60c8f1c2b691b5ae743bf2713",
+          "record_index": 2
+        },
+        {
+          "level": 3,
+          "heap_node": 4,
+          "digest_hex": "43699b3720f14686b119d531702810093f46ca0aa25ba3fd305df69171d9fb47",
+          "record_index": 0
+        },
+        {
+          "level": 4,
+          "heap_node": 3,
+          "digest_hex": "29b7256bb4b7566ee1eeead8f76cfcf28dda89521f075a98d53577ade9e2eb74",
+          "record_index": 11
+        }
+      ],
+      "all_three_layouts_root_verified": true
+    },
+    {
+      "slot": 15,
+      "value_hex": "4096195811b0f7f36755971e490baa7ff763964ebb60d62d44c2661dd5f4c5fc",
+      "real_siblings": [
+        {
+          "level": 0,
+          "heap_node": 46,
+          "digest_hex": "b7755cc0019cc832f65b0527b936c78706b304f5562eb2e2aa01179ff2000672",
+          "record_index": 6
+        },
+        {
+          "level": 1,
+          "heap_node": 22,
+          "digest_hex": "007e01caf2d7ff90243eb75854e5214b7666e598687f2d64f623d782bacbf78a",
+          "record_index": 4
+        },
+        {
+          "level": 2,
+          "heap_node": 10,
+          "digest_hex": "e7db13a82b40e1204d592c091e9ab5ca45d35ea60c8f1c2b691b5ae743bf2713",
+          "record_index": 2
+        },
+        {
+          "level": 3,
+          "heap_node": 4,
+          "digest_hex": "43699b3720f14686b119d531702810093f46ca0aa25ba3fd305df69171d9fb47",
+          "record_index": 0
+        },
+        {
+          "level": 4,
+          "heap_node": 3,
+          "digest_hex": "29b7256bb4b7566ee1eeead8f76cfcf28dda89521f075a98d53577ade9e2eb74",
+          "record_index": 11
+        }
+      ],
+      "all_three_layouts_root_verified": true
+    },
+    {
+      "slot": 16,
+      "value_hex": "8f97c7dd592e7c6c956db089ef3459b6a7e8eed82d0048c51b6d60934011aced",
+      "real_siblings": [
+        {
+          "level": 2,
+          "heap_node": 13,
+          "digest_hex": "107f4a03fe053c4262b4ba926da33c9f941633e9fc097f90efcd51a980551334",
+          "record_index": 13
+        },
+        {
+          "level": 3,
+          "heap_node": 7,
+          "digest_hex": "95fcf9a021e4047d0aecfbf81d87c18089effc1de27010f9957e458b0447cc40",
+          "record_index": 19
+        },
+        {
+          "level": 4,
+          "heap_node": 2,
+          "digest_hex": "b55681d4698e2b8c3e38d346eeb190cf6b69ed0dd74c995703b72da9cebcbcb1",
+          "record_index": 1
+        }
+      ],
+      "all_three_layouts_root_verified": true
+    },
+    {
+      "slot": 20,
+      "value_hex": "0ae40a1f1d306a437043706c4af8a1984ea43264a6cbe8c7d2fc3d7b5182d9f5",
+      "real_siblings": [
+        {
+          "level": 1,
+          "heap_node": 27,
+          "digest_hex": "979dba6a99d16ad2998629977212b66e2b3f864af88e19175b8d976141fd1dc3",
+          "record_index": 15
+        },
+        {
+          "level": 2,
+          "heap_node": 12,
+          "digest_hex": "a98a9907751273723a873c94539d5bde99d490a2e832e554ef0ad186f2a49b2b",
+          "record_index": 9
+        },
+        {
+          "level": 3,
+          "heap_node": 7,
+          "digest_hex": "95fcf9a021e4047d0aecfbf81d87c18089effc1de27010f9957e458b0447cc40",
+          "record_index": 19
+        },
+        {
+          "level": 4,
+          "heap_node": 2,
+          "digest_hex": "b55681d4698e2b8c3e38d346eeb190cf6b69ed0dd74c995703b72da9cebcbcb1",
+          "record_index": 1
+        }
+      ],
+      "all_three_layouts_root_verified": true
+    },
+    {
+      "slot": 22,
+      "value_hex": "8a7c712d589c96869780ac98a91a7af12c17617bdf42006d7432b0914b48c2d8",
+      "real_siblings": [
+        {
+          "level": 0,
+          "heap_node": 55,
+          "digest_hex": "92026d9e464b3eec6e4a6af6f7bcd728a9e9331e9ff56152f99c3151bfe55063",
+          "record_index": 16
+        },
+        {
+          "level": 1,
+          "heap_node": 26,
+          "digest_hex": "5ac256bd5b98d9d786b21d37818b3d2b039381d068ad761802271b17b5410cb5",
+          "record_index": 12
+        },
+        {
+          "level": 2,
+          "heap_node": 12,
+          "digest_hex": "a98a9907751273723a873c94539d5bde99d490a2e832e554ef0ad186f2a49b2b",
+          "record_index": 9
+        },
+        {
+          "level": 3,
+          "heap_node": 7,
+          "digest_hex": "95fcf9a021e4047d0aecfbf81d87c18089effc1de27010f9957e458b0447cc40",
+          "record_index": 19
+        },
+        {
+          "level": 4,
+          "heap_node": 2,
+          "digest_hex": "b55681d4698e2b8c3e38d346eeb190cf6b69ed0dd74c995703b72da9cebcbcb1",
+          "record_index": 1
+        }
+      ],
+      "all_three_layouts_root_verified": true
+    },
+    {
+      "slot": 23,
+      "value_hex": "fa91578629c3fa780f7a75d7d7ef484a15c4acdd88841eeb605762dc7983688b",
+      "real_siblings": [
+        {
+          "level": 0,
+          "heap_node": 54,
+          "digest_hex": "e17a9c128be54760755bb22652495c1fe610bd67a2700f6228a78f77e326aaa1",
+          "record_index": 14
+        },
+        {
+          "level": 1,
+          "heap_node": 26,
+          "digest_hex": "5ac256bd5b98d9d786b21d37818b3d2b039381d068ad761802271b17b5410cb5",
+          "record_index": 12
+        },
+        {
+          "level": 2,
+          "heap_node": 12,
+          "digest_hex": "a98a9907751273723a873c94539d5bde99d490a2e832e554ef0ad186f2a49b2b",
+          "record_index": 9
+        },
+        {
+          "level": 3,
+          "heap_node": 7,
+          "digest_hex": "95fcf9a021e4047d0aecfbf81d87c18089effc1de27010f9957e458b0447cc40",
+          "record_index": 19
+        },
+        {
+          "level": 4,
+          "heap_node": 2,
+          "digest_hex": "b55681d4698e2b8c3e38d346eeb190cf6b69ed0dd74c995703b72da9cebcbcb1",
+          "record_index": 1
+        }
+      ],
+      "all_three_layouts_root_verified": true
+    },
+    {
+      "slot": 24,
+      "value_hex": "dfdde6db12fedcee0efbc599d5237b4fcb239fe0e44938fc804d464707861963",
+      "real_siblings": [
+        {
+          "level": 1,
+          "heap_node": 29,
+          "digest_hex": "aac782beace56a959b4dbb6e7eb4b71721163ab3431c25e8535eb70f651b26c3",
+          "record_index": 21
+        },
+        {
+          "level": 2,
+          "heap_node": 15,
+          "digest_hex": "362702002daba04e5d7e2a60ed9da6c6f8cd2a3a8094d44b8a988c42bb983764",
+          "record_index": 25
+        },
+        {
+          "level": 3,
+          "heap_node": 6,
+          "digest_hex": "d370a370dc4e377d7167bec3a93b9fe778a6af682cb9a5b485378a239bf9c393",
+          "record_index": 10
+        },
+        {
+          "level": 4,
+          "heap_node": 2,
+          "digest_hex": "b55681d4698e2b8c3e38d346eeb190cf6b69ed0dd74c995703b72da9cebcbcb1",
+          "record_index": 1
+        }
+      ],
+      "all_three_layouts_root_verified": true
+    },
+    {
+      "slot": 26,
+      "value_hex": "b70546ee07f3cecbfc8e8b552cf99c330a80641b2d1bed36db6b9dee0f23978f",
+      "real_siblings": [
+        {
+          "level": 0,
+          "heap_node": 59,
+          "digest_hex": "e05b66c06945f9e20a5796a50db992cad29336de1a225fcfdc63e94621526da1",
+          "record_index": 22
+        },
+        {
+          "level": 1,
+          "heap_node": 28,
+          "digest_hex": "6784c03c8a632b4f931831084d7747c23567206a6860a1254f4784c2f99a7bae",
+          "record_index": 17
+        },
+        {
+          "level": 2,
+          "heap_node": 15,
+          "digest_hex": "362702002daba04e5d7e2a60ed9da6c6f8cd2a3a8094d44b8a988c42bb983764",
+          "record_index": 25
+        },
+        {
+          "level": 3,
+          "heap_node": 6,
+          "digest_hex": "d370a370dc4e377d7167bec3a93b9fe778a6af682cb9a5b485378a239bf9c393",
+          "record_index": 10
+        },
+        {
+          "level": 4,
+          "heap_node": 2,
+          "digest_hex": "b55681d4698e2b8c3e38d346eeb190cf6b69ed0dd74c995703b72da9cebcbcb1",
+          "record_index": 1
+        }
+      ],
+      "all_three_layouts_root_verified": true
+    },
+    {
+      "slot": 27,
+      "value_hex": "605be0a5501de8540ab517552e28e65024f9ca052272318ed90753abb292b3ca",
+      "real_siblings": [
+        {
+          "level": 0,
+          "heap_node": 58,
+          "digest_hex": "20b979c323a945bd5ccfaa94d2681c67a1e9020509c088587a6e6bc6af1bb13b",
+          "record_index": 20
+        },
+        {
+          "level": 1,
+          "heap_node": 28,
+          "digest_hex": "6784c03c8a632b4f931831084d7747c23567206a6860a1254f4784c2f99a7bae",
+          "record_index": 17
+        },
+        {
+          "level": 2,
+          "heap_node": 15,
+          "digest_hex": "362702002daba04e5d7e2a60ed9da6c6f8cd2a3a8094d44b8a988c42bb983764",
+          "record_index": 25
+        },
+        {
+          "level": 3,
+          "heap_node": 6,
+          "digest_hex": "d370a370dc4e377d7167bec3a93b9fe778a6af682cb9a5b485378a239bf9c393",
+          "record_index": 10
+        },
+        {
+          "level": 4,
+          "heap_node": 2,
+          "digest_hex": "b55681d4698e2b8c3e38d346eeb190cf6b69ed0dd74c995703b72da9cebcbcb1",
+          "record_index": 1
+        }
+      ],
+      "all_three_layouts_root_verified": true
+    },
+    {
+      "slot": 28,
+      "value_hex": "1d34cc65e8ef9c15363b3d12ed0ca4f723e4f964635e7fbd7bc30a35384d1896",
+      "real_siblings": [
+        {
+          "level": 0,
+          "heap_node": 61,
+          "digest_hex": "4a99e24bf36da9991d654d65a7c322774946da8a6ddaf57321055a4ba284d27e",
+          "record_index": 26
+        },
+        {
+          "level": 1,
+          "heap_node": 31,
+          "digest_hex": "fc5b5e7ba7b0d3271209ab051fd4d3270a67862c36d6249aa392c791b99c8d7c",
+          "record_index": 28
+        },
+        {
+          "level": 2,
+          "heap_node": 14,
+          "digest_hex": "aae38236b26f2bb5f7d65df35de8abba10925b0d82a29b1c2a41261ec3ae7340",
+          "record_index": 18
+        },
+        {
+          "level": 3,
+          "heap_node": 6,
+          "digest_hex": "d370a370dc4e377d7167bec3a93b9fe778a6af682cb9a5b485378a239bf9c393",
+          "record_index": 10
+        },
+        {
+          "level": 4,
+          "heap_node": 2,
+          "digest_hex": "b55681d4698e2b8c3e38d346eeb190cf6b69ed0dd74c995703b72da9cebcbcb1",
+          "record_index": 1
+        }
+      ],
+      "all_three_layouts_root_verified": true
+    },
+    {
+      "slot": 29,
+      "value_hex": "f38ec1e1a03065fdf53125fc6e9547f9262a6f198177ad6a230ef1351c5491ed",
+      "real_siblings": [
+        {
+          "level": 0,
+          "heap_node": 60,
+          "digest_hex": "bc06b6fdf5a8c051e14c0592638c2e66c8855308fde90cb0830e005feab3a9f0",
+          "record_index": 23
+        },
+        {
+          "level": 1,
+          "heap_node": 31,
+          "digest_hex": "fc5b5e7ba7b0d3271209ab051fd4d3270a67862c36d6249aa392c791b99c8d7c",
+          "record_index": 28
+        },
+        {
+          "level": 2,
+          "heap_node": 14,
+          "digest_hex": "aae38236b26f2bb5f7d65df35de8abba10925b0d82a29b1c2a41261ec3ae7340",
+          "record_index": 18
+        },
+        {
+          "level": 3,
+          "heap_node": 6,
+          "digest_hex": "d370a370dc4e377d7167bec3a93b9fe778a6af682cb9a5b485378a239bf9c393",
+          "record_index": 10
+        },
+        {
+          "level": 4,
+          "heap_node": 2,
+          "digest_hex": "b55681d4698e2b8c3e38d346eeb190cf6b69ed0dd74c995703b72da9cebcbcb1",
+          "record_index": 1
+        }
+      ],
+      "all_three_layouts_root_verified": true
+    },
+    {
+      "slot": 30,
+      "value_hex": "482af8e9fcaa2e19959c2352d3cc9841a414f3e0d9ef64a101e4bff0310d6d46",
+      "real_siblings": [
+        {
+          "level": 0,
+          "heap_node": 63,
+          "digest_hex": "8e7d558cd5a116984cabb2fc555b7570fbc1cd197a867b887bbdd0aa8c8c6249",
+          "record_index": 29
+        },
+        {
+          "level": 1,
+          "heap_node": 30,
+          "digest_hex": "4c3754feb5c825c23725a724e32bc5570e3c354ba9ef8a19ca38b4fdf48abc3f",
+          "record_index": 24
+        },
+        {
+          "level": 2,
+          "heap_node": 14,
+          "digest_hex": "aae38236b26f2bb5f7d65df35de8abba10925b0d82a29b1c2a41261ec3ae7340",
+          "record_index": 18
+        },
+        {
+          "level": 3,
+          "heap_node": 6,
+          "digest_hex": "d370a370dc4e377d7167bec3a93b9fe778a6af682cb9a5b485378a239bf9c393",
+          "record_index": 10
+        },
+        {
+          "level": 4,
+          "heap_node": 2,
+          "digest_hex": "b55681d4698e2b8c3e38d346eeb190cf6b69ed0dd74c995703b72da9cebcbcb1",
+          "record_index": 1
+        }
+      ],
+      "all_three_layouts_root_verified": true
+    },
+    {
+      "slot": 31,
+      "value_hex": "b8e8a90b66166338aa37fb75c5af5ef0ae0ba826cec9db91c566b418a02eb497",
+      "real_siblings": [
+        {
+          "level": 0,
+          "heap_node": 62,
+          "digest_hex": "3aadaf26ac683e56b6a0acaf002e2a7401c4d16413b00e186f3800e5be5bfab8",
+          "record_index": 27
+        },
+        {
+          "level": 1,
+          "heap_node": 30,
+          "digest_hex": "4c3754feb5c825c23725a724e32bc5570e3c354ba9ef8a19ca38b4fdf48abc3f",
+          "record_index": 24
+        },
+        {
+          "level": 2,
+          "heap_node": 14,
+          "digest_hex": "aae38236b26f2bb5f7d65df35de8abba10925b0d82a29b1c2a41261ec3ae7340",
+          "record_index": 18
+        },
+        {
+          "level": 3,
+          "heap_node": 6,
+          "digest_hex": "d370a370dc4e377d7167bec3a93b9fe778a6af682cb9a5b485378a239bf9c393",
+          "record_index": 10
+        },
+        {
+          "level": 4,
+          "heap_node": 2,
+          "digest_hex": "b55681d4698e2b8c3e38d346eeb190cf6b69ed0dd74c995703b72da9cebcbcb1",
+          "record_index": 1
+        }
+      ],
+      "all_three_layouts_root_verified": true
+    }
+  ]
+}

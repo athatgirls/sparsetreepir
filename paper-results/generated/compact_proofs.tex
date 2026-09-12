@@ -1,0 +1,219 @@
+\section{Retrieval and Capacity Proofs}
+
+\subsection{Co-occurrence and the query schedule}
+\label{sec:cooccurrence}
+For every active record $u$, its target-rank interval contains exactly
+the occupied targets whose proofs require $u$. Two records therefore
+co-occur if and only if their intervals intersect. An intersection of
+integer rank intervals contains an occupied rank. Laminarity turns this
+condition into ancestry in the interval forest. Consequently a color
+class is an antichain, and the records required by any target form a
+chain. Conversely, every chain shares the nonempty interval of its
+deepest member, so some target requires the entire chain. The maximum
+proof width equals the forest height.
+
+A widest proof needs a distinct color for each record. Coloring every
+vertex by its forest depth attains that many colors in one traversal.
+A proof has at most $h$ siblings. Its nonempty sibling subtrees are
+disjoint and each contains an occupied leaf other than the target,
+giving the additional bound $n-1$. To attain both bounds, put a target
+at $0^h$, set $k=\min\{h,n-1\}$, and add the $k$ coordinates
+$0^d1\,0^{h-d-1}$ for $0\le d<k$. If $n>h+1$, add any distinct unused
+coordinates until the occupancy is $n$. The target already has $h$
+nonempty siblings and retains them.
+
+Proper coloring gives at most one required record in each database.
+Backend correctness retrieves it; unused colors issue a dummy query.
+The client retains only real answers and completes all other levels
+with the public default chain. This reconstructs the usual membership
+proof, including the standard root check against the pinned snapshot.
+
+For the independent-instance privacy proof, condition on the setup leakage and fix two challenge
+targets. In hybrid $j$, colors $1,\ldots,j$ use the indices for the
+second target and the remaining colors use those for the first. Real
+and dummy indices both pass through the same PIR interface. Index
+privacy also covers a dummy mixture by averaging over its sampled
+index. Independent client states and coins allow a reduction to
+simulate the other colors. If $\epsilon_c$ bounds the distinguishing
+advantage for color $c$, the hybrid argument gives
+\begin{equation}
+ \operatorname{Adv}_{\rm target}
+ \le\sum_{c=1}^{m}\epsilon_c.
+ \label{eq:supp-privacy-hybrid}
+\end{equation}
+For polynomial $m$ and negligible $\epsilon_c$, this is negligible.
+The proof concerns the specified batch transcript and public setup;
+it uses the model's independently held target value and matching root
+and layout.
+
+For a shared-state backend, the required assumption instead concerns
+the complete batch-index vector, including shared evaluation keys and
+fixed message lengths. Each target induces a distribution over valid
+index vectors; joint query privacy makes the resulting server views
+indistinguishable, also after averaging over dummy choices. Local
+proof reconstruction adds no server-visible output. Thus the shared-state
+realization inherits the backend's joint privacy bound, rather than
+the independent-instance sum above. Both realizations inherit their
+backend correctness-error bounds.
+
+\subsection{Joint anchored-color capacity}
+\label{sec:joint-anchor-proof}
+Let $F$ be the record forest, with $N$ vertices and $m$ colors. Add a
+virtual root $o$ at depth zero. Context $F_o$ is all of $F$; context
+$F_x$ for a real vertex contains its strict descendants. Write
+$N_x=|F_x|$ and $q_x=m-d(x)$. The colors on the root--$x$ chain are
+unavailable throughout $F_x$, proving $N_x\le q_x U$ for every coloring
+of capacity $U$. Define the context bound by
+\begin{equation}
+ B(F)=\max_{x:q_x>0}\left\lceil\frac{N_x}{q_x}\right\rceil.
+ \label{eq:supp-context-bound}
+\end{equation}
+The virtual-root term is the average bound $\lceil N/m\rceil$.
+
+The maximum union of $t$ antichains is a standard poset coverage
+quantity~\cite{antichaincoverage}. Denote it here by $\beta_t$, with
+$\beta_0=0$. Values add over forest components. For a rooted tree $T_v$,
+consider whether its root belongs to the selected union:
+\begin{equation}
+ \beta_t(T_v)=\max\left\{\sum_w\beta_t(T_w),\;
+  1+\sum_w\beta_{t-1}(T_w)\right\},\quad t\ge1.
+ \label{eq:compact-beta}
+\end{equation}
+The sums range over children $w$ of $v$. Omitting $v$ leaves all $t$
+colors available in every child subtree. Including it excludes its
+color from all descendants. Both alternatives are attainable by
+combining optimal child subsets on a common palette, which proves
+the recurrence.
+
+Let $P=(v_1,\ldots,v_k)$ be a contiguous path starting at a component
+root of $F_x$, where $1\le k<q_x$. Its vertices anchor $k$ distinct
+colors. Let $S_0$ contain the other context components, and let $S_i$
+contain the subtrees branching from $v_i$ away from $v_{i+1}$.
+All $k$ anchored colors are available in $S_0$; only the last $k-i$
+are available in $S_i$. No anchored color is available below $v_k$.
+The union of the anchored classes is therefore bounded by
+\begin{equation}
+ J_x(P)=k+\beta_k(S_0)+\sum_{i=1}^{k-1}\beta_{k-i}(S_i).
+ \label{eq:supp-joint-union}
+\end{equation}
+This maximum is attained when individual color capacities are relaxed:
+choose a maximizing subset in each side forest, color it with its
+permitted suffix palette, and include the anchors. Side forests are
+pairwise incomparable, and each suffix excludes exactly the anchors
+that conflict with that region. Unselected records remain uncolored
+in this auxiliary problem. The other $q_x-k$ classes of a complete
+coloring contain at most $(q_x-k)U$ records. Hence
+\begin{equation}
+ U\ge\left\lceil\frac{N_x-J_x(P)}{q_x-k}\right\rceil.
+ \label{eq:supp-joint-ratio}
+\end{equation}
+Taking the maximum over contexts and paths, together with context
+averages, defines the joint certificate
+\begin{equation}
+ B_{\rm joint}(F)=\max\left\{B(F),\;
+ \max_{x,P:1\le |P|<q_x}
+ \left\lceil\frac{N_x-J_x(P)}{q_x-|P|}\right\rceil\right\}.
+ \label{eq:supp-joint-definition}
+\end{equation}
+Here $U^*$ is the minimum maximum class size among proper $m$-colorings.
+The preceding necessary inequalities prove $B_{\rm joint}\le U^*$.
+The empty forest has bound zero, and empty maxima add no term.
+
+For comparison, let $n_x$ count the occupied ranks of a context:
+$n_o=n$, and $n_x=|I_{\mathsf{srv}}(x)|$ for a nonempty real context.
+A class containing $v$ has at most
+$a_{x,v}=1+n_x-|I_{\mathsf{srv}}(v)|$ records. Its other intervals
+are nonempty, disjoint, and outside the interval of $v$.
+Thus $J_x(P)\le\sum_{v\in P}a_{x,v}$. Define
+\begin{equation}
+ B_{\rm hier}=\max\left\{B,\;
+ \max_{x,P:\,1\le |P|<q_x}
+ \left\lceil\frac{N_x-\sum_{v\in P}a_{x,v}}{q_x-|P|}\right\rceil
+ \right\}.
+ \label{eq:supp-individual-hierarchy}
+\end{equation}
+It follows that $B\le B_{\rm hier}\le B_{\rm joint}$. Empty contexts
+add no bound. A path with $k=q_x$ reaches total depth $m$; all its
+side forests have height at most the available suffix size, so
+$J_x(P)=N_x$. Such a path adds no positive-denominator test.
+
+\subsection{Computing all joint tests in $O(Nm)$ time}
+\label{sec:joint-evaluation}
+The following evaluation also applies to a supplied palette
+$m\ge\operatorname{height}(F)$. For each vertex, store its depth,
+subtree size, and the child sums
+\begin{equation}
+ S_t(u)=\sum_{z\text{ child of }u}\beta_t(T_z),
+ \qquad 0\le t\le m.
+ \label{eq:supp-child-coverage}
+\end{equation}
+The virtual root needs only these sums, not a record value.
+Equation~\eqref{eq:compact-beta} computes all values in postorder.
+There are $N$ child edges including virtual-root edges, so this stage
+costs $O(Nm)$ time and space.
+
+Fix a terminal depth $d\in\{1,\ldots,m-1\}$. Set $Q_d(o)=0$ and, for
+every edge $u\to w$ with $d(w)\le d$, compute
+\begin{equation}
+ Q_d(w)=Q_d(u)+1+S_{d-d(u)}(u)-\beta_{d-d(u)}(T_w).
+ \label{eq:supp-joint-potential}
+\end{equation}
+The difference of child sums counts the side forest away from $w$.
+For a terminal $v$ at depth $d$ and any strict ancestor context $x$,
+telescoping gives
+\begin{align}
+ J_x(v)&=Q_d(v)-Q_d(x),\label{eq:supp-joint-telescope}\\
+ q_x-|P|&=(m-d(x))-(d-d(x))=m-d.
+ \label{eq:supp-joint-denominator}
+\end{align}
+Each edge contributes one anchor and the coverage of its off-path
+forest by the remaining anchored suffix. This includes the other
+context components on the first edge and excludes descendants of
+the final anchor, exactly as in~\eqref{eq:supp-joint-union}.
+
+Since the denominator is independent of $x$, all tests ending at $v$
+reduce to
+\begin{equation}
+ \left\lceil
+ \frac{\max_{x\prec v}\{N_x+Q_d(x)\}-Q_d(v)}{m-d}
+ \right\rceil,
+ \label{eq:supp-joint-scan}
+\end{equation}
+where $x\prec v$ ranges over strict ancestors, including $o$.
+Maintain this ancestor maximum during the traversal, evaluating an
+endpoint before inserting it into the maximum. Store an attaining
+context with the maximum to recover a witness path. Each depth costs
+$O(N)$ time and $O(N)$ temporary storage. Including preprocessing, the
+total is $O(Nm)$ time and space, with
+$O(\log(N+m+2))$-bit words. Context averages are retained explicitly;
+the empty forest has bound zero. This computes a necessary certificate
+without solving complete capacity feasibility.
+
+\subsection{Exact assignment within an AB scan}
+\label{sec:ab-sorting-assignment}
+For one candidate subtree, let $s_i$ count its records in an allowed
+color and $a_j$ count outside records in an allowed destination color.
+Colors used by strict ancestors are excluded from this palette.
+The assignment cost is $\sum_i(s_i+a_{\pi(i)})^2$.
+For $s\le s'$ and $a\le a'$, the exchange difference is
+\begin{equation}
+ (s+a)^2+(s'+a')^2-(s+a')^2-(s'+a)^2
+ =2(s'-s)(a'-a)\ge0.
+ \label{eq:supp-count-exchange}
+\end{equation}
+Reverse pairing therefore minimizes the squared cost. It also
+minimizes the full sorted load vector: the crossed pair has the same
+sum and lies between the two original extreme loads. Every inversion
+removal weakly decreases the descending sorted vector. Repeating
+exchanges reaches reverse order from any assignment. If either
+difference is zero, the two paired-load multisets agree.
+
+Thus reverse sorting and a minimum-cost Hungarian assignment attain
+the same minimum candidate load multiset. Equal-count labels can be
+permuted differently, so their subsequent subtree assignments and
+refinement trajectories need not coincide. A scan builds histograms
+in $O(Nm)$ time and space, evaluates at most $N$ assignments using
+$O(m\log(m+1))$ work each, and applies at most one selected move in
+$O(N)$ time. At most $R_1$ scans cost $O(R_1Nm\log(m+1))$ time.
+Strictly decreasing global sorted vectors ensure termination; a scan
+without improvement establishes local optimality for these moves.

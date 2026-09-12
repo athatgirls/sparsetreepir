@@ -1,0 +1,11 @@
+{
+  "source_hashes_match": true,
+  "independent_pairs": 20,
+  "measured_proofs": 2000,
+  "paired_targets": true,
+  "distinct_targets_each_repeat": 100,
+  "root_and_actual_sibling_corruption_checks": true,
+  "fixed_wire_shape": true,
+  "tables_generated_from_summary_json": true,
+  "actual_recovered_sibling_evidence_retained": true
+}

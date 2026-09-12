@@ -1,0 +1,1 @@
+{"id": "saturated_n256_h16_ab-hungarian_p5_s20260910_r1", "status": "complete", "actual_n": 256, "m": 8, "max_bucket": 71, "U_over_B": 1.109375, "coloring_s": 0.02937709994148463, "valid": true}

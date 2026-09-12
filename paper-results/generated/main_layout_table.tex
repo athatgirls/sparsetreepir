@@ -1,0 +1,18 @@
+\begin{table*}[t]
+\centering\small
+\caption{Structural layout statistics on workload-derived coordinate sets: $q$ is the logical batch width and $U$ the largest database. AB is ours; FF, Hybrid, and Depth are internal controls. FF, Hybrid, and AB all use $q=m$ and store each of the $N$ active records once. Depth groups records by their original nonempty levels. Workload citations identify input sources, not competing PIR methods. Counts are identical at $h=128$ and $256$ and do not depend on the PIR record encoding.}
+\label{tab:real_workload_shape}
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{lrrrrrr}
+\toprule
+Workload & $n$ & $N$ & Depth $q/U$ & FF $U$ & Hybrid $U$ & AB $q/U$\\
+\midrule
+Fuel~\cite{fuelsmtgen} & 100 & 198 & 11/40 & 58 & 26 & 9/23\\
+Polygon recent~\cite{polygonzkevm} & 384 & 766 & 16/168 & 210 & 83 & 11/70\\
+ZKsync sample~\cite{zksyncdocs} & 956 & 1910 & 19/370 & 556 & 180 & 13/147\\
+Polygon multi~\cite{polygonzkevm} & 1348 & 2694 & 19/530 & 772 & 236 & 14/193\\
+Polygon broad~\cite{polygonzkevm} & 7040 & 14078 & 26/2762 & 3844 & 929 & 17/829\\
+ZKsync broad~\cite{zksyncdocs} & 7740 & 15478 & 25/3014 & 4282 & 1162 & 17/911\\
+\bottomrule
+\end{tabular}
+\end{table*}

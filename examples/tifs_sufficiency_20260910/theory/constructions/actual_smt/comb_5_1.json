@@ -1,0 +1,302 @@
+{
+  "shape": [
+    [],
+    [
+      [],
+      [
+        [],
+        [
+          [],
+          [
+            [],
+            []
+          ]
+        ]
+      ]
+    ]
+  ],
+  "height": 5,
+  "m": 5,
+  "N": 10,
+  "slots": [
+    0,
+    16,
+    24,
+    28,
+    30,
+    31
+  ],
+  "capacity": 2,
+  "colors_preorder": [
+    0,
+    0,
+    1,
+    1,
+    2,
+    2,
+    3,
+    3,
+    4,
+    4
+  ],
+  "loads": [
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "root_hex": "eb874777824594e10685f6082d237d25e277c98f00a1529a1581117bc246c487",
+  "interval_forest_matches": true,
+  "all_target_proofs_verified": true,
+  "records": [
+    {
+      "heap_index": "0x3",
+      "interval": [
+        0,
+        0
+      ],
+      "color": 0,
+      "digest_hex": "345abe97b9a3129c097f127e16597239976da9dc601184e591f014212253f301"
+    },
+    {
+      "heap_index": "0x2",
+      "interval": [
+        1,
+        5
+      ],
+      "color": 0,
+      "digest_hex": "a61000126e5a4872aa34d330c2eefb91b200fec7ba67f49cb46c0c96cc782473"
+    },
+    {
+      "heap_index": "0x7",
+      "interval": [
+        1,
+        1
+      ],
+      "color": 1,
+      "digest_hex": "0af396daeeb5748cbb3d503c4e095dda75191d591692322fe32c39c53c27d8d1"
+    },
+    {
+      "heap_index": "0x6",
+      "interval": [
+        2,
+        5
+      ],
+      "color": 1,
+      "digest_hex": "b1405288960f3b1b4cb691c9388c136c0c442e73ef7fa2846134504656efd530"
+    },
+    {
+      "heap_index": "0xf",
+      "interval": [
+        2,
+        2
+      ],
+      "color": 2,
+      "digest_hex": "c47e5a1eff8a3ede4977ded81c1c1b57cbaa7523dac9e24d3d5d089d1b8ef160"
+    },
+    {
+      "heap_index": "0xe",
+      "interval": [
+        3,
+        5
+      ],
+      "color": 2,
+      "digest_hex": "8963da7d3a2c26bb4c13bcfe13c794dacb36ba81584cd67279a2603b50f51269"
+    },
+    {
+      "heap_index": "0x1f",
+      "interval": [
+        3,
+        3
+      ],
+      "color": 3,
+      "digest_hex": "fc5b5e7ba7b0d3271209ab051fd4d3270a67862c36d6249aa392c791b99c8d7c"
+    },
+    {
+      "heap_index": "0x1e",
+      "interval": [
+        4,
+        5
+      ],
+      "color": 3,
+      "digest_hex": "93247f37be5a2e2882dc5d39447fe1c02991ad0e6e996b410f2c1b7d065abed1"
+    },
+    {
+      "heap_index": "0x3f",
+      "interval": [
+        4,
+        4
+      ],
+      "color": 4,
+      "digest_hex": "8e7d558cd5a116984cabb2fc555b7570fbc1cd197a867b887bbdd0aa8c8c6249"
+    },
+    {
+      "heap_index": "0x3e",
+      "interval": [
+        5,
+        5
+      ],
+      "color": 4,
+      "digest_hex": "3aadaf26ac683e56b6a0acaf002e2a7401c4d16413b00e186f3800e5be5bfab8"
+    }
+  ],
+  "proofs": [
+    {
+      "slot": 0,
+      "real_siblings": [
+        {
+          "level": 4,
+          "heap_index": "0x3",
+          "digest_hex": "345abe97b9a3129c097f127e16597239976da9dc601184e591f014212253f301",
+          "color": 0
+        }
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 16,
+      "real_siblings": [
+        {
+          "level": 3,
+          "heap_index": "0x7",
+          "digest_hex": "0af396daeeb5748cbb3d503c4e095dda75191d591692322fe32c39c53c27d8d1",
+          "color": 1
+        },
+        {
+          "level": 4,
+          "heap_index": "0x2",
+          "digest_hex": "a61000126e5a4872aa34d330c2eefb91b200fec7ba67f49cb46c0c96cc782473",
+          "color": 0
+        }
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 24,
+      "real_siblings": [
+        {
+          "level": 2,
+          "heap_index": "0xf",
+          "digest_hex": "c47e5a1eff8a3ede4977ded81c1c1b57cbaa7523dac9e24d3d5d089d1b8ef160",
+          "color": 2
+        },
+        {
+          "level": 3,
+          "heap_index": "0x6",
+          "digest_hex": "b1405288960f3b1b4cb691c9388c136c0c442e73ef7fa2846134504656efd530",
+          "color": 1
+        },
+        {
+          "level": 4,
+          "heap_index": "0x2",
+          "digest_hex": "a61000126e5a4872aa34d330c2eefb91b200fec7ba67f49cb46c0c96cc782473",
+          "color": 0
+        }
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 28,
+      "real_siblings": [
+        {
+          "level": 1,
+          "heap_index": "0x1f",
+          "digest_hex": "fc5b5e7ba7b0d3271209ab051fd4d3270a67862c36d6249aa392c791b99c8d7c",
+          "color": 3
+        },
+        {
+          "level": 2,
+          "heap_index": "0xe",
+          "digest_hex": "8963da7d3a2c26bb4c13bcfe13c794dacb36ba81584cd67279a2603b50f51269",
+          "color": 2
+        },
+        {
+          "level": 3,
+          "heap_index": "0x6",
+          "digest_hex": "b1405288960f3b1b4cb691c9388c136c0c442e73ef7fa2846134504656efd530",
+          "color": 1
+        },
+        {
+          "level": 4,
+          "heap_index": "0x2",
+          "digest_hex": "a61000126e5a4872aa34d330c2eefb91b200fec7ba67f49cb46c0c96cc782473",
+          "color": 0
+        }
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 30,
+      "real_siblings": [
+        {
+          "level": 0,
+          "heap_index": "0x3f",
+          "digest_hex": "8e7d558cd5a116984cabb2fc555b7570fbc1cd197a867b887bbdd0aa8c8c6249",
+          "color": 4
+        },
+        {
+          "level": 1,
+          "heap_index": "0x1e",
+          "digest_hex": "93247f37be5a2e2882dc5d39447fe1c02991ad0e6e996b410f2c1b7d065abed1",
+          "color": 3
+        },
+        {
+          "level": 2,
+          "heap_index": "0xe",
+          "digest_hex": "8963da7d3a2c26bb4c13bcfe13c794dacb36ba81584cd67279a2603b50f51269",
+          "color": 2
+        },
+        {
+          "level": 3,
+          "heap_index": "0x6",
+          "digest_hex": "b1405288960f3b1b4cb691c9388c136c0c442e73ef7fa2846134504656efd530",
+          "color": 1
+        },
+        {
+          "level": 4,
+          "heap_index": "0x2",
+          "digest_hex": "a61000126e5a4872aa34d330c2eefb91b200fec7ba67f49cb46c0c96cc782473",
+          "color": 0
+        }
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 31,
+      "real_siblings": [
+        {
+          "level": 0,
+          "heap_index": "0x3e",
+          "digest_hex": "3aadaf26ac683e56b6a0acaf002e2a7401c4d16413b00e186f3800e5be5bfab8",
+          "color": 4
+        },
+        {
+          "level": 1,
+          "heap_index": "0x1e",
+          "digest_hex": "93247f37be5a2e2882dc5d39447fe1c02991ad0e6e996b410f2c1b7d065abed1",
+          "color": 3
+        },
+        {
+          "level": 2,
+          "heap_index": "0xe",
+          "digest_hex": "8963da7d3a2c26bb4c13bcfe13c794dacb36ba81584cd67279a2603b50f51269",
+          "color": 2
+        },
+        {
+          "level": 3,
+          "heap_index": "0x6",
+          "digest_hex": "b1405288960f3b1b4cb691c9388c136c0c442e73ef7fa2846134504656efd530",
+          "color": 1
+        },
+        {
+          "level": 4,
+          "heap_index": "0x2",
+          "digest_hex": "a61000126e5a4872aa34d330c2eefb91b200fec7ba67f49cb46c0c96cc782473",
+          "color": 0
+        }
+      ],
+      "root_verified": true
+    }
+  ]
+}

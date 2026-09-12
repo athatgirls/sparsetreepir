@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "scheme": "SparseTreePIR-activebalance",
+  "height": 128,
+  "width": 3,
+  "active_nodes": 6,
+  "query_samples": 4,
+  "completed_queries": 4,
+  "warmup_queries": 2,
+  "warmup_wall_ms": 3.19345,
+  "record_bytes": 32,
+  "chunk_bits": 32,
+  "chunked_queries_per_color": 8,
+  "stored_records_with_padding": 6,
+  "unique_database_files": 3,
+  "setup": {
+    "pick_params_ms": 7.919246999999999,
+    "make_db_ms": 0.040692,
+    "init_ms": 3.678767,
+    "setup_api_ms": 0.24449600000000002,
+    "total_setup_wall_ms": 16.819442,
+    "offline_hint_bytes": 393216,
+    "public_shared_state_bytes": 196608
+  },
+  "parameters": [
+    {
+      "color": 1,
+      "records_with_empty_padding": 2,
+      "matrix_rows_l": 4,
+      "matrix_columns_m": 2,
+      "plaintext_modulus_p": 991,
+      "lwe_dimension_n": 1024,
+      "ciphertext_modulus_logq": 32,
+      "noise_sigma": 6.4
+    },
+    {
+      "color": 2,
+      "records_with_empty_padding": 2,
+      "matrix_rows_l": 4,
+      "matrix_columns_m": 2,
+      "plaintext_modulus_p": 991,
+      "lwe_dimension_n": 1024,
+      "ciphertext_modulus_logq": 32,
+      "noise_sigma": 6.4
+    },
+    {
+      "color": 3,
+      "records_with_empty_padding": 2,
+      "matrix_rows_l": 4,
+      "matrix_columns_m": 2,
+      "plaintext_modulus_p": 991,
+      "lwe_dimension_n": 1024,
+      "ciphertext_modulus_logq": 32,
+      "noise_sigma": 6.4
+    }
+  ],
+  "targets": [
+    {
+      "sample_index": 0,
+      "client_query_ms": 1.225207,
+      "server_answer_ms": 0.004511000000000001,
+      "client_decode_ms": 0.011277999999999998,
+      "backend_wall_ms": 1.244053,
+      "online_upload_bytes": 288,
+      "online_download_bytes": 384,
+      "online_total_bytes": 672,
+      "logical_record_queries": 3,
+      "chunk_query_count": 24,
+      "recovered_records": [
+        {
+          "color": 1,
+          "query_index": 0,
+          "record_hex": "85005c088b1496785883945d7236bc5652e7b6fc3c3b62680c11edaca2f7b4d7"
+        },
+        {
+          "color": 2,
+          "query_index": 0,
+          "record_hex": "3cf6993e0ddc956f7cf74548e90f87ac4951c75ab81f7897c17f2b386daf7e99"
+        },
+        {
+          "color": 3,
+          "query_index": 0,
+          "record_hex": "fc1d8cb8fc84e5f7a710034614571abf88a928e510afca011083aecee32ba04e"
+        }
+      ],
+      "chunk_checks_passed": true
+    },
+    {
+      "sample_index": 1,
+      "client_query_ms": 1.7481429999999998,
+      "server_answer_ms": 0.006935000000000001,
+      "client_decode_ms": 0.011628000000000003,
+      "backend_wall_ms": 1.771059,
+      "online_upload_bytes": 288,
+      "online_download_bytes": 384,
+      "online_total_bytes": 672,
+      "logical_record_queries": 3,
+      "chunk_query_count": 24,
+      "recovered_records": [
+        {
+          "color": 1,
+          "query_index": 0,
+          "record_hex": "85005c088b1496785883945d7236bc5652e7b6fc3c3b62680c11edaca2f7b4d7"
+        },
+        {
+          "color": 2,
+          "query_index": 0,
+          "record_hex": "3cf6993e0ddc956f7cf74548e90f87ac4951c75ab81f7897c17f2b386daf7e99"
+        },
+        {
+          "color": 3,
+          "query_index": 1,
+          "record_hex": "0baa08cf767f65d89f088e242db0915244bc1d54c42e898bc660bda27abba09e"
+        }
+      ],
+      "chunk_checks_passed": true
+    },
+    {
+      "sample_index": 2,
+      "client_query_ms": 1.1938440000000003,
+      "server_answer_ms": 0.004323,
+      "client_decode_ms": 0.009809,
+      "backend_wall_ms": 1.211038,
+      "online_upload_bytes": 288,
+      "online_download_bytes": 384,
+      "online_total_bytes": 672,
+      "logical_record_queries": 3,
+      "chunk_query_count": 24,
+      "recovered_records": [
+        {
+          "color": 1,
+          "query_index": 0,
+          "record_hex": "85005c088b1496785883945d7236bc5652e7b6fc3c3b62680c11edaca2f7b4d7"
+        },
+        {
+          "color": 2,
+          "query_index": 1,
+          "record_hex": "9075b67879b23d09e8a186ff673beddbda48305a9f161831e16874d81a581e70"
+        },
+        {
+          "color": 3,
+          "query_index": 0,
+          "record_hex": "fc1d8cb8fc84e5f7a710034614571abf88a928e510afca011083aecee32ba04e"
+        }
+      ],
+      "chunk_checks_passed": true
+    },
+    {
+      "sample_index": 3,
+      "client_query_ms": 1.759826,
+      "server_answer_ms": 0.006992,
+      "client_decode_ms": 0.012750000000000001,
+      "backend_wall_ms": 1.783894,
+      "online_upload_bytes": 288,
+      "online_download_bytes": 384,
+      "online_total_bytes": 672,
+      "logical_record_queries": 3,
+      "chunk_query_count": 24,
+      "recovered_records": [
+        {
+          "color": 1,
+          "query_index": 1,
+          "record_hex": "b12c52808b57797abdc3bd356edbd7e61800531cb4d42cc880074f2da8b3241e"
+        },
+        {
+          "color": 2,
+          "query_index": 0,
+          "record_hex": "3cf6993e0ddc956f7cf74548e90f87ac4951c75ab81f7897c17f2b386daf7e99"
+        },
+        {
+          "color": 3,
+          "query_index": 1,
+          "record_hex": "0baa08cf767f65d89f088e242db0915244bc1d54c42e898bc660bda27abba09e"
+        }
+      ],
+      "chunk_checks_passed": true
+    }
+  ],
+  "go_version": "go1.22.2",
+  "goos": "linux",
+  "goarch": "amd64",
+  "gomaxprocs": 1,
+  "byte_accounting": "PIR message matrix elements multiplied by Logq/8; excludes transport/framing and serialization",
+  "timing_scope": "sequential backend only; target wall includes chunk checks and record reassembly; excludes SMT verification, Python routing, process startup, network and output serialization",
+  "process_peak_rss_bytes": 9273344,
+  "process_peak_rss_scope": "Linux /proc/self/status VmHWM sampled after all retrievals, before JSON serialization; entire combined server/client runner including retained results, not client-only memory; null if unavailable"
+}

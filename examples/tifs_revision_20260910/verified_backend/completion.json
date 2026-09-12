@@ -1,0 +1,16 @@
+{
+  "completed_process_runs": 180,
+  "verified_proofs": 18000,
+  "failed_process_runs": [],
+  "requested_datasets": "fuel,polygon-recent,zksync-sample,polygon-multi,polygon-broad,zksync-broad",
+  "methods": [
+    "first_fit",
+    "hybrid",
+    "activebalance",
+    "nonempty_depth",
+    "flat_active",
+    "pbc_routed"
+  ],
+  "repeats": 5,
+  "samples": 100
+}

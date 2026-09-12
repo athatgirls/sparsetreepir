@@ -1,0 +1,32 @@
+{
+  "sha256": {
+    "examples/tifs_revision_20260910/verified_backend/fuel_h128/activebalance/layout_metadata.bin": "61749225f08de21a230b8759a95c0d71d93c2f68c7b5b3cc6978cba6211aa5f4",
+    "examples/tifs_revision_20260910/verified_backend/fuel_h128/first_fit/layout_metadata.bin": "caf979d925cf51cb3a0d08d380d68d4cf5c171657ee35b246df76a475b8728da",
+    "examples/tifs_revision_20260910/verified_backend/fuel_h128/layout_setup.json": "15a874bdba283e9d1ef854106aa20b7c4ab75daaed9e4a98133a0d2310585691",
+    "examples/tifs_remaining_gap_20260910/fuel/capacity22_result.json": "94dd81f17f4eebc90f3f0822276e72e4f3393642f1133051175b40e0470a56b7",
+    "examples/tifs_revision_20260910/verified_backend/fuel_h128/first_fit/repeat0/color_01.bin": "1dddd3944c80c7189c34677238f2b213ff2fe96603f4535ed1c041b903d088dd",
+    "examples/tifs_revision_20260910/verified_backend/fuel_h128/first_fit/repeat0/color_02.bin": "58b5007c06df4bc6cf0d8defc407f974a53d025a044846aca9e5ea137bf8ef48",
+    "examples/tifs_revision_20260910/verified_backend/fuel_h128/first_fit/repeat0/color_03.bin": "b95d498858fb91f872f6c7ef0ad7e83ea7a0fa158bee2e53c62d6c25b9fcc185",
+    "examples/tifs_revision_20260910/verified_backend/fuel_h128/first_fit/repeat0/color_04.bin": "ba4e56c82514dc2c4d70e56a5912590659605f1ddc37f8a07855a7d324765e8c",
+    "examples/tifs_revision_20260910/verified_backend/fuel_h128/first_fit/repeat0/color_05.bin": "5526049aeb4c8743ce20bcffafbdbb1c12b567588c25d6320e7039e9ccb53a85",
+    "examples/tifs_revision_20260910/verified_backend/fuel_h128/first_fit/repeat0/color_06.bin": "69eb5e5de1050ba81966e81c2e96f1b73a7177c351dc082149d33ec1a9ac638c",
+    "examples/tifs_revision_20260910/verified_backend/fuel_h128/first_fit/repeat0/color_07.bin": "68d6eb24df746546fe3920ada87628f33b0df1080a84cda92f06b506af1ecb7e",
+    "examples/tifs_revision_20260910/verified_backend/fuel_h128/first_fit/repeat0/color_08.bin": "4143be5dca3788e10302d3a13131157d938124263480d128e5841212d248b3e1",
+    "examples/tifs_revision_20260910/verified_backend/fuel_h128/first_fit/repeat0/color_09.bin": "805b6e6fcbb2ae933afa73d144e489f33dbc1439a83b18733ffb31cd0d8ea2f6",
+    "examples/tifs_revision_20260910/verified_backend/fuel_h128/activebalance/repeat0/color_01.bin": "d7b719f7084e8b8d39b1d47fda7e72f3ca04f02d67d1da77fc1f533694c82f51",
+    "examples/tifs_revision_20260910/verified_backend/fuel_h128/activebalance/repeat0/color_02.bin": "86ed51084644065ad4bdbd34ecba705bc5d5e465389c33598bd417315d1b497e",
+    "examples/tifs_revision_20260910/verified_backend/fuel_h128/activebalance/repeat0/color_03.bin": "a9db779e112ab1fb607a2a640135342bc0118cfad55ac375d126e817b02fcff8",
+    "examples/tifs_revision_20260910/verified_backend/fuel_h128/activebalance/repeat0/color_04.bin": "4739d75dda7cbdc386bc38674c65694e3fa1f4c88f6a2bc711ceade5882d881e",
+    "examples/tifs_revision_20260910/verified_backend/fuel_h128/activebalance/repeat0/color_05.bin": "b10fe9fb1bb29909d84f6ef0c486ec356b9c3f6b3dffe5b10f9d26f24832eb31",
+    "examples/tifs_revision_20260910/verified_backend/fuel_h128/activebalance/repeat0/color_06.bin": "469d51d7b10c81cd48214167121b4f2d491ee4660c728b28f72e3207e1638169",
+    "examples/tifs_revision_20260910/verified_backend/fuel_h128/activebalance/repeat0/color_07.bin": "063d481dccfb53de17b25e6b6be4c4408f3f6c0ac62250c4f1d595d26607542c",
+    "examples/tifs_revision_20260910/verified_backend/fuel_h128/activebalance/repeat0/color_08.bin": "da7c530ead6268fbddfd6d5dedac932f8825ab6fe772f4660092525aed2090d0",
+    "examples/tifs_revision_20260910/verified_backend/fuel_h128/activebalance/repeat0/color_09.bin": "0e445ffdc5624475736bdcc8b2a5562b3cd5a96e0c646b5f3ca80521b8c93666",
+    "scripts/run_layout_transfer_tcp_20260910.py": "d52885066c29d4e3da7aab9f2f201beeeee25e90d1996a1b9948d16fa7f24622",
+    "scripts/tifs_layout_transfer_tcp_20260910.go": "cd01ab8b78bf4c9e12cb452b5d319a1a088af43a147bc77df90c487cbdbdc9c0",
+    "backend/simplepir/tifs_tcp_certificate_backend.go": "4c70535af0818422057ad67e0fa4e4340087a496000c38065b9d05ceacc65a88",
+    "scripts/run_tifs_ct_application_20260910.py": "157c4e4f702ddda2d03ae5363d07ddef58e708a952f4cd989296f273bd68e51a",
+    "scripts/tifs_revision_smt.py": "f0dc6c6c9af2d7a9c032991f5407c7cca79e7353394d6a18d9f8e8bb5e72c740",
+    "examples/tifs_layout_transfer_20260910/system/tifs_layout_transfer_tcp": "0b9564155ef176cf862583c7d367e7ade13a5a794dad4c380a99f5426ed998f9"
+  }
+}

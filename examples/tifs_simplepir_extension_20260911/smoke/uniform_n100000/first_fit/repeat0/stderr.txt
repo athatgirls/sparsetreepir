@@ -1,0 +1,22 @@
+Working with: n=1024; db size=2^20 (l=1196, m=1150); logq=32; p=991; sigma=6.400000
+Total packed DB size is ~1.631856 MB
+Total packed DB size is ~1.631856 MB
+Total packed DB size is ~1.631856 MB
+Total packed DB size is ~1.631856 MB
+Total packed DB size is ~1.631856 MB
+Total packed DB size is ~1.631856 MB
+Total packed DB size is ~1.631856 MB
+Total packed DB size is ~1.631856 MB
+Total packed DB size is ~1.631856 MB
+Total packed DB size is ~1.631856 MB
+Total packed DB size is ~1.631856 MB
+Total packed DB size is ~1.631856 MB
+Total packed DB size is ~1.631856 MB
+Total packed DB size is ~1.631856 MB
+Total packed DB size is ~1.631856 MB
+Total packed DB size is ~1.631856 MB
+Total packed DB size is ~1.631856 MB
+Total packed DB size is ~1.631856 MB
+Total packed DB size is ~1.631856 MB
+Total packed DB size is ~1.631856 MB
+Total packed DB size is ~1.631856 MB

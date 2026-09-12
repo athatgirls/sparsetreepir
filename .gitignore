@@ -1,59 +1,9 @@
-# Python/cache artifacts
 __pycache__/
-*.py[cod]
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
+*.pyc
 .venv/
-venv/
-
-# Local dependency/cache directories
-.gocache/
-.gomodcache/
-.gopath/
-.pydeps/
-.tmp_pip/
-.tools/
-
-# Generated build outputs
-build/
-previews/
+/build/
+/output/
+/audit-output/
 *.aux
-*.bbl
-*.bcf
-*.blg
-*.fdb_latexmk
-*.fls
-*.log
-*.out
-*.run.xml
-*.synctex.gz
-*.toc
-
-# External toolchains and downloaded artifacts.
-# Reinstall these on Linux or fetch them with a setup script instead of
-# committing Windows-specific binaries.
-external/go/
-external/jre21/
-external/TreePIR-main/
-external/smt-test-generation-master/
-external/*.zip
-
-# Older local material not needed for Linux experiment reproduction
-archive/
-presentations/
-security_audit/
-
-# Regenerable backend layout dumps. Keep the CSV summaries in Git.
-examples/*_layouts/
-examples/sp_full_linux_*/layouts/
-
-# Smoke checks are for local dependency wiring; keep full result CSV/notes in Git.
-examples/sp_full_linux_smoke_*/
-notes/sp_full_linux_smoke_*/
-examples/treepir_pbc_active*/
-
-# OS/editor noise
-.DS_Store
-Thumbs.db
-desktop.ini
+*.log.tmp
+.reproduce/

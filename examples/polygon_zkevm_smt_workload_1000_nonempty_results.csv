@@ -1,3 +1,0 @@
-label,source_path,height,key_mode,input_records,unique_keys,occupied_leaves,slot_collisions,active_nodes,exact_width,avg_active_path_len,max_active_path_len_by_leaf,dummy_fraction,ideal_max_bucket,profile_max_bucket,profile_size_gap,profile_over_ideal,profile_runtime_ms,valid
-polygon_zkevm_1000_nonempty_account_leaf_workload,datasets\polygon_zkevm_account_leaf_workload_1000_nonempty.csv,128,sha256,652,652,652,0,1302,12,9.67638036809816,12,0.19363496932515337,109,109,1,1.0,1651.124799856916,True
-polygon_zkevm_1000_nonempty_account_leaf_workload,datasets\polygon_zkevm_account_leaf_workload_1000_nonempty.csv,256,sha256,652,652,652,0,1302,12,9.67638036809816,12,0.19363496932515337,109,109,1,1.0,1628.5329998936504,True

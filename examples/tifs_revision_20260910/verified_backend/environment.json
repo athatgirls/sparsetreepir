@@ -1,0 +1,16 @@
+{
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "python": "3.12.3",
+  "processor": "x86_64",
+  "gomaxprocs": 1,
+  "warmup_extra_queries": 5,
+  "samples_per_run": 100,
+  "independent_process_repeats": 5,
+  "height": 128,
+  "backend": "SimplePIR eight 32bit chunks per digest",
+  "network": "none; local API functional pipeline",
+  "value_source": "deterministic experiment values on workload-derived coordinates; not native chain state",
+  "hash_format": "sha256:leaf=H(00||value),internal=H(01||left||right),empty_leaf=H(02)",
+  "timing": "backend wall + Python routing + independent proof assembly/verification; excludes process startup, JSON transport and network",
+  "binary_sha256": "d633487b2913aee719ade941a9a9629d45f27559261fb9e0bd255e93235fca40"
+}

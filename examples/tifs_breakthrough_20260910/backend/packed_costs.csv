@@ -1,0 +1,16 @@
+method,variant,logical_queries,PIR_calls_per_proof,hint_matrix_bytes,expanded_A_matrix_bytes,seed_payload_bytes,online_matrix_bytes_per_proof,encoded_online_bytes_per_proof,encoded_bootstrap_bytes,metadata_and_slots_bytes,checked_records,all_correct
+first_fit,eight32_square_expanded,13,104,6553600,5668864,0,12544,17568,12279233,32842,65,True
+first_fit,packed256_square_expanded,13,13,2768896,1421312,0,4168,4824,4226593,32842,65,True
+first_fit,packed256_square_seeded,13,13,2768896,1421312,208,4168,4824,2805281,32842,65,True
+first_fit,packed256_wide_expanded,13,13,1384448,4186112,0,5504,6160,5606951,32842,65,True
+first_fit,packed256_wide_seeded,13,13,1384448,4186112,208,5504,6160,1420839,32842,65,True
+activebalance,eight32_square_expanded,13,104,8519680,6815744,0,15808,20832,15392350,32842,65,True
+activebalance,packed256_square_expanded,13,13,2768896,2109440,0,4828,5484,4914735,32842,65,True
+activebalance,packed256_square_seeded,13,13,2768896,2109440,208,4828,5484,2805295,32842,65,True
+activebalance,packed256_wide_expanded,13,13,1384448,4186112,0,5504,6160,5606959,32842,65,True
+activebalance,packed256_wide_seeded,13,13,1384448,4186112,208,5504,6160,1420847,32842,65,True
+nonempty_depth,eight32_square_expanded,17,136,7471104,6848512,0,14784,21344,14383745,32874,85,True
+nonempty_depth,packed256_square_expanded,17,17,3194880,1748992,0,4908,5756,4981352,32874,85,True
+nonempty_depth,packed256_square_seeded,17,17,3194880,1748992,272,4908,5756,3232360,32874,85,True
+nonempty_depth,packed256_wide_expanded,17,17,1810432,4186112,0,5944,6792,6034032,32874,85,True
+nonempty_depth,packed256_wide_seeded,17,17,1810432,4186112,272,5944,6792,1847920,32874,85,True

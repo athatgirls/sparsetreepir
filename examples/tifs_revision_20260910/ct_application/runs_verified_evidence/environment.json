@@ -1,0 +1,14 @@
+{
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "python": "3.12.3",
+  "go": "go version go1.22.2 linux/amd64",
+  "cpu": "Intel(R) Core(TM) Ultra 5 245K",
+  "gomaxprocs": 1,
+  "execution": "sequential independent server/client pair, 127.0.0.1 ephemeral TCP port",
+  "samples": 100,
+  "repeats": 5,
+  "warmup": 5,
+  "target_selection": "100 distinct records uniformly sampled per repeat, paired across methods; controlled workload, not an actual browser access trace",
+  "method_order": "independently shuffled for each repeat",
+  "server_client_role": "server opens only public snapshot files; client opens only target records and pinned root, receives all other state through TCP"
+}

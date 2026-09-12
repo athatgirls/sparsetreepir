@@ -1,0 +1,12 @@
+{
+  "available": [
+    "uniform_n1000",
+    "uniform_n10000",
+    "uniform_n100000",
+    "prefix64_n10000",
+    "cluster90_n10000",
+    "complete_h10",
+    "complete_h14"
+  ],
+  "unavailable": []
+}

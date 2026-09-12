@@ -1,0 +1,70 @@
+{
+  "shape": [
+    [],
+    []
+  ],
+  "height": 1,
+  "m": 1,
+  "N": 2,
+  "slots": [
+    0,
+    1
+  ],
+  "capacity": 2,
+  "colors_preorder": [
+    0,
+    0
+  ],
+  "loads": [
+    2
+  ],
+  "root_hex": "a478e70adf94af2a96ee0d45cd4469ce1dcda4626b5b807521542e83711fc4c5",
+  "interval_forest_matches": true,
+  "all_target_proofs_verified": true,
+  "records": [
+    {
+      "heap_index": "0x3",
+      "interval": [
+        0,
+        0
+      ],
+      "color": 0,
+      "digest_hex": "a18886620b24bf0c7eaf3d30d642a753fbe0a21c54c6a844bc1dd598046ef1d7"
+    },
+    {
+      "heap_index": "0x2",
+      "interval": [
+        1,
+        1
+      ],
+      "color": 0,
+      "digest_hex": "8de35b68da193da23672fa5c8fb827c8446ed47ad7299cb361e940ca87211ece"
+    }
+  ],
+  "proofs": [
+    {
+      "slot": 0,
+      "real_siblings": [
+        {
+          "level": 0,
+          "heap_index": "0x3",
+          "digest_hex": "a18886620b24bf0c7eaf3d30d642a753fbe0a21c54c6a844bc1dd598046ef1d7",
+          "color": 0
+        }
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 1,
+      "real_siblings": [
+        {
+          "level": 0,
+          "heap_index": "0x2",
+          "digest_hex": "8de35b68da193da23672fa5c8fb827c8446ed47ad7299cb361e940ca87211ece",
+          "color": 0
+        }
+      ],
+      "root_verified": true
+    }
+  ]
+}

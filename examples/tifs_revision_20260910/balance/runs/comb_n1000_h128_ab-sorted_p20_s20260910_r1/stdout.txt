@@ -1,0 +1,1 @@
+{"id": "comb_n1000_h128_ab-sorted_p20_s20260910_r1", "status": "complete", "actual_n": 1000, "m": 128, "max_bucket": 35, "U_over_B": 2.1875, "coloring_s": 2.083027199609205, "valid": true}

@@ -1,0 +1,13 @@
+{
+  "id": "polygon-recent_n384_h128_ab-sorted_p20_s20260910_r3",
+  "distribution": "real",
+  "n": 384,
+  "height": 128,
+  "algorithm": "ab-sorted",
+  "passes": 20,
+  "seed": 20260910,
+  "repeat": 3,
+  "label": "polygon-recent",
+  "source": "datasets/polygon_zkevm_account_leaf_workload.csv",
+  "key_mode": "sha256"
+}

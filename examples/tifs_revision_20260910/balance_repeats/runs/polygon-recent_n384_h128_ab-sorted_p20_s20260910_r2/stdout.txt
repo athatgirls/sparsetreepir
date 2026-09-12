@@ -1,0 +1,1 @@
+{"id": "polygon-recent_n384_h128_ab-sorted_p20_s20260910_r2", "status": "complete", "actual_n": 384, "m": 11, "max_bucket": 70, "U_over_B": 1.0, "coloring_s": 0.062201199936680496, "valid": true}

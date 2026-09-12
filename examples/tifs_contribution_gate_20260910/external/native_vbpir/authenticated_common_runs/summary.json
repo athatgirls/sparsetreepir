@@ -1,0 +1,36 @@
+{
+  "rows": [
+    {
+      "method": "activebalance",
+      "height": 10,
+      "processes": 1,
+      "queries": 10,
+      "proofs_verified": 10,
+      "process_wall_seconds": 5.770651600000001,
+      "query_us": 7206,
+      "answer_us": 338839,
+      "recover_us": 1211,
+      "query_artifact_estimate_KB": 385,
+      "answer_artifact_estimate_KB": 257
+    },
+    {
+      "method": "treepir_official",
+      "height": 10,
+      "processes": 1,
+      "queries": 10,
+      "proofs_verified": 10,
+      "process_wall_seconds": 5.933383676999995,
+      "query_us": 6761,
+      "answer_us": 338488,
+      "recover_us": 1263,
+      "query_artifact_estimate_KB": 385,
+      "answer_artifact_estimate_KB": 257
+    }
+  ],
+  "proofs_verified": 20,
+  "binary_sha256": "fe9715eb32dc0d933098e86a25c9cf4b366a96dce3342c112ef149cb3c20d054",
+  "source_sha256": "fb17f6283118d5c9ef3ec5a8915015af5e5b170a62f59b7ef07ad60eab743f31",
+  "scope": "Official VBPIR core plus portable input path/build adaptation and independent external authentication. One process per layout, fresh server/client objects per target as in official main; no warmup. Reported native microsecond means are descriptive only, not independent-run confidence intervals.",
+  "full_native_service_e2e_gate": "NOT COMPLETED: no network, external verifier excluded from native component timers, native code lacks client root verifier.",
+  "bytes_warning": "Original artifact query estimate uses Ciphertext.save_size()/2 and answer uses save_size(), rounded to integer KiB; these are not measured transport bytes."
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "coloring_s": 0.0002226999495178461,
+    "actual_passes": 0,
+    "actual_moves": 0,
+    "max_bucket": 58,
+    "U_over_B": 2.6363636363636362,
+    "valid": true,
+    "converged": false
+  },
+  {
+    "coloring_s": 0.0052062999457120895,
+    "actual_passes": 1,
+    "actual_moves": 1,
+    "max_bucket": 32,
+    "U_over_B": 1.4545454545454546,
+    "valid": true,
+    "converged": false
+  },
+  {
+    "coloring_s": 0.01050279987975955,
+    "actual_passes": 2,
+    "actual_moves": 2,
+    "max_bucket": 29,
+    "U_over_B": 1.3181818181818181,
+    "valid": true,
+    "converged": false
+  },
+  {
+    "coloring_s": 0.01632869988679886,
+    "actual_passes": 3,
+    "actual_moves": 3,
+    "max_bucket": 23,
+    "U_over_B": 1.0454545454545454,
+    "valid": true,
+    "converged": false
+  },
+  {
+    "coloring_s": 0.022378099849447608,
+    "actual_passes": 4,
+    "actual_moves": 4,
+    "max_bucket": 23,
+    "U_over_B": 1.0454545454545454,
+    "valid": true,
+    "converged": false
+  },
+  {
+    "coloring_s": 0.028034899849444628,
+    "actual_passes": 5,
+    "actual_moves": 4,
+    "max_bucket": 23,
+    "U_over_B": 1.0454545454545454,
+    "valid": true,
+    "converged": true
+  }
+]

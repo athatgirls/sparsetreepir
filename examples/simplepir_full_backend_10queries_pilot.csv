@@ -1,3 +1,0 @@
-height,sparsity,seed,occupied,active_nodes,exact_width,lower_bound,scheme,width,colors,stored_records_padded,query_samples,setup_ms,client_query_ms,server_total_ms,server_parallel_ms,client_decode_ms,offline_kb,online_upload_kb,online_download_kb,online_total_kb
-20,0.9995,116000,524,1046,12,0,flat_normal_pir_m,12,12,1046,10,2.1234,10.75448,0.15234,0.15234,0.31429999999999997,2048,24.75,24,48.75
-20,0.9995,116000,524,1046,12,88,profile_balanced,12,12,1046,10,2.1985,6.998710000000001,0,0,0.40118,7680,6.75,7.5,14.25

@@ -1,0 +1,44 @@
+{
+  "dataset": "Polygon multi",
+  "input_sha256": "8bdf3820a68d1b7a0e386b1a1f6b5f08df65c6fc02bb1d9ab07381ed0d61c78d",
+  "n": 1348,
+  "N": 2694,
+  "m": 14,
+  "root": "f4a48059b28a248c835ce32ee8783b99b1692eab9bf74e5d99c14eaba5f78ca2",
+  "build_timings_ms": {
+    "first_fit": {
+      "hash_tree": 82.90917899998362,
+      "active_extraction": 225.7869069999856,
+      "forest_build": 1.1647529999834205,
+      "coloring": 0.7360289999951419,
+      "metadata_build": 1.8633680000164077
+    },
+    "hybrid": {
+      "hash_tree": 88.23044800001867,
+      "active_extraction": 248.97757100001172,
+      "forest_build": 1.4945040000213794,
+      "coloring": 248.70852499998364,
+      "metadata_build": 2.0891440000241346
+    },
+    "activebalance": {
+      "hash_tree": 83.79402099998856,
+      "active_extraction": 254.33889800001452,
+      "forest_build": 1.2533459999986007,
+      "coloring": 576.22828800001,
+      "metadata_build": 2.1557689999838203
+    }
+  },
+  "pbc": {
+    "hash_seed": 202609100,
+    "public_setup_attempts": [
+      {
+        "seed": 202609100,
+        "failed_targets": 0,
+        "tested_targets": 1348
+      }
+    ],
+    "routing_preflight_ms": 20.6426770000121,
+    "bucket_count": 21,
+    "placement": "three distinct pseudorandom choices per active record; maximum bipartite matching; all occupied targets preflighted before publication"
+  }
+}

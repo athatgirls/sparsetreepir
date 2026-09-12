@@ -1,0 +1,106 @@
+{
+  "scheme": "activebalance",
+  "height": 4,
+  "width": 4,
+  "active_nodes": 30,
+  "query_samples": 16,
+  "record_bytes": 32,
+  "subdatabases": [
+    {
+      "color": 1,
+      "records": 7,
+      "record_bytes": 32,
+      "database_file": "/artifact/examples/tifs_contribution_gate_20260910/external/complete_h4/activebalance/color_01.bin",
+      "query_indices": [
+        1,
+        4,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        2,
+        0,
+        6,
+        3,
+        1,
+        6,
+        5,
+        0
+      ]
+    },
+    {
+      "color": 2,
+      "records": 8,
+      "record_bytes": 32,
+      "database_file": "/artifact/examples/tifs_contribution_gate_20260910/external/complete_h4/activebalance/color_02.bin",
+      "query_indices": [
+        2,
+        5,
+        6,
+        7,
+        6,
+        7,
+        7,
+        6,
+        4,
+        0,
+        7,
+        4,
+        3,
+        6,
+        5,
+        1
+      ]
+    },
+    {
+      "color": 3,
+      "records": 8,
+      "record_bytes": 32,
+      "database_file": "/artifact/examples/tifs_contribution_gate_20260910/external/complete_h4/activebalance/color_03.bin",
+      "query_indices": [
+        0,
+        1,
+        4,
+        6,
+        5,
+        7,
+        6,
+        3,
+        1,
+        0,
+        7,
+        1,
+        0,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "color": 4,
+      "records": 7,
+      "record_bytes": 32,
+      "database_file": "/artifact/examples/tifs_contribution_gate_20260910/external/complete_h4/activebalance/color_04.bin",
+      "query_indices": [
+        0,
+        0,
+        2,
+        4,
+        2,
+        6,
+        3,
+        1,
+        0,
+        0,
+        5,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    }
+  ]
+}

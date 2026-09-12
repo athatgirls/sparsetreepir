@@ -1,0 +1,25 @@
+{
+  "server": [
+    "/artifact/examples/tifs_revision_20260910/ct_application/tifs_tcp_certificate_backend",
+    "-mode",
+    "server",
+    "-manifest",
+    "examples/tifs_revision_20260910/ct_application/runs_verified_evidence/publisher/activebalance/server_manifest.json",
+    "-ready",
+    "examples/tifs_revision_20260910/ct_application/runs_verified_evidence/activebalance/repeat0/ready.json",
+    "-result",
+    "examples/tifs_revision_20260910/ct_application/runs_verified_evidence/activebalance/repeat0/server_result.json"
+  ],
+  "client": [
+    "/artifact/examples/tifs_revision_20260910/ct_application/tifs_tcp_certificate_backend",
+    "-mode",
+    "client",
+    "-address",
+    "127.0.0.1:42305",
+    "-input",
+    "examples/tifs_revision_20260910/ct_application/runs_verified_evidence/client_inputs/repeat0.json",
+    "-result",
+    "examples/tifs_revision_20260910/ct_application/runs_verified_evidence/activebalance/repeat0/client_result.json"
+  ],
+  "timeout_per_pair_seconds": 120
+}

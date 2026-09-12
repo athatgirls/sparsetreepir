@@ -1,0 +1,92 @@
+[
+  {
+    "coloring_s": 0.2796339000342414,
+    "actual_passes": 0,
+    "actual_moves": 0,
+    "max_bucket": 53062,
+    "U_over_B": 5.836761632383676,
+    "valid": true,
+    "converged": false
+  },
+  {
+    "coloring_s": 13.299245200003497,
+    "actual_passes": 1,
+    "actual_moves": 1,
+    "max_bucket": 26538,
+    "U_over_B": 2.919150808491915,
+    "valid": true,
+    "converged": false
+  },
+  {
+    "coloring_s": 25.404925699927844,
+    "actual_passes": 2,
+    "actual_moves": 2,
+    "max_bucket": 26525,
+    "U_over_B": 2.917720822791772,
+    "valid": true,
+    "converged": false
+  },
+  {
+    "coloring_s": 35.987188900006004,
+    "actual_passes": 3,
+    "actual_moves": 3,
+    "max_bucket": 14500,
+    "U_over_B": 1.5949840501594985,
+    "valid": true,
+    "converged": false
+  },
+  {
+    "coloring_s": 47.90125200001057,
+    "actual_passes": 4,
+    "actual_moves": 4,
+    "max_bucket": 13576,
+    "U_over_B": 1.4933450665493344,
+    "valid": true,
+    "converged": false
+  },
+  {
+    "coloring_s": 59.665258300025016,
+    "actual_passes": 5,
+    "actual_moves": 5,
+    "max_bucket": 13349,
+    "U_over_B": 1.4683753162468376,
+    "valid": true,
+    "converged": false
+  },
+  {
+    "coloring_s": 72.34783900005277,
+    "actual_passes": 6,
+    "actual_moves": 6,
+    "max_bucket": 13321,
+    "U_over_B": 1.4652953470465295,
+    "valid": true,
+    "converged": false
+  },
+  {
+    "coloring_s": 84.68969330005348,
+    "actual_passes": 7,
+    "actual_moves": 7,
+    "max_bucket": 13280,
+    "U_over_B": 1.4607853921460785,
+    "valid": true,
+    "converged": false
+  },
+  {
+    "coloring_s": 97.02253860014025,
+    "actual_passes": 8,
+    "actual_moves": 8,
+    "max_bucket": 13221,
+    "U_over_B": 1.4542954570454296,
+    "valid": true,
+    "converged": false
+  },
+  {
+    "coloring_s": 108.94134880008642,
+    "actual_passes": 9,
+    "actual_moves": 9,
+    "max_bucket": 13207,
+    "U_over_B": 1.4527554724452756,
+    "valid": true,
+    "converged": false
+  }
+]

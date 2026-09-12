@@ -1,0 +1,760 @@
+***************************************************
+             Starting example index = 1               
+***************************************************
+Merkle Proof: 2 4 8 16 32 64 128 256 512 1024 
+sub_indices: 0 1 0 3 0 0 1 1 0 2 
++---------------------------------------------------+
+|               ENCRYPTION PARAMETERS               |
++---------------------------------------------------+
+|  seal_params_.poly_modulus_degree  = 8192
+|  seal_params_.coeff_modulus().bit_count   = [42 + 58 + 58 + 60] bits
+|  seal_params_.coeff_modulus().size = 4
+|  seal_params_.plain_modulus().bit_count = 28
++---------------------------------------------------+
++---------------------------------------------------+
+|                  Batch Parameters                 |
++---------------------------------------------------+
+| batch_size_:      10
+| num_entries_:     2046
++---------------------------------------------------+
+BatchPIRServer: Populating raw database...
+BatchPIRServer: Raw database populated.
+BatchPIRServer: Reading Color sub-databases and balancing...
+BatchPIRServer: Bucket Statistics:
+===================
+BatchPIRServer: Number of Buckets: 10
+Max Bucket Size: 205
+BatchPIRServer: Reading Color sub-databases completed.
+BatchPIRServer: Preparing PIR servers......
+dim_size = 64
++---------------------------------------------------+
+|                 PIR PARAMETERS                    |
++---------------------------------------------------+
+|  num_entries_                  = 205
+|  num_rounded_entries_          = 256
+|  entry_size_                   = 32
+|  num_columns_per_entry_        = 10
+|  db_ptx_                       = 40
+|  dimensions_                   = [ 64 4 ]
++---------------------------------------------------+
+BatchPIRServer: Converting and merging databases. This may take some time...
+BatchPIRServer: Processed database 1 of 10
+BatchPIRServer: Processed database 2 of 10
+BatchPIRServer: Processed database 3 of 10
+BatchPIRServer: Processed database 4 of 10
+BatchPIRServer: Processed database 5 of 10
+BatchPIRServer: Processed database 6 of 10
+BatchPIRServer: Processed database 7 of 10
+BatchPIRServer: Processed database 8 of 10
+BatchPIRServer: Processed database 9 of 10
+BatchPIRServer: Processed database 10 of 10
+BatchPIRServer: Database converted to PIR DB and merged successfully!
+BatchPIRServer: Database is NTT processed!
+BatchPIRServer: PIR servers preparation complete.
+Main: Starting query generation for example 1...
+Main: Query generation complete for example 1.
+Main: Starting response generation for example 1...
+Main: Response generation complete for example 1.
+Main: Extracting responses for example 1...
+Main: Noise budget left in the response: 47
+Main: Extraction complete for example 1.
+Contents of decode_responses:
+Hexadecimal string: 0xed7ac3b4435a5703ace927972466bed309c0d01867ad1dc4323a4eff93d202be
+Hexadecimal string: 0xa00609be6088e9264a83fc7fb11391a5361c06408716aa169f4a917d43d29b2a
+Hexadecimal string: 0xd4c8159e64f296261f5cb36b19c3ecfe079b801edb55462ef837121e07e1fcd8
+Hexadecimal string: 0x3e5b42b2a903a84c36ef1cd605027e978e7834aa9825e88e75828c50b76b644f
+Hexadecimal string: 0x8d432d10177b403cf404e0321c2268811287828fe9140302c3c542fad37c6307
+Hexadecimal string: 0x6e3251aecc7af9827f534686d27f3bb37e016ea38b5f3f00d3d05376d3e0b26b
+Hexadecimal string: 0x9e4a0a449988abf64929593d4ddba1de9f1d0e483a53f88b2847d76cd3468645
+Hexadecimal string: 0x637fd939eddeaf94258987e390a8db8d97ecea3e8b2bc7fe3f34934e7a26ae78
+Hexadecimal string: 0x343bd9479ea5290a48b9d38a1681c2a2f01d8f45f3d7f8d6ed2519359aae8966
+Hexadecimal string: 0x19cb8ca56e36ffd9e15e73addd22e0ce3282961e842d24b0458930b3164ae2a7
+Total Query communication: 385 KB
+Total Answer communication: 257 KB
+Main: All the entries matched for example 1!!
+
+***************************************************
+             Starting example index = 2               
+***************************************************
+Merkle Proof: 2 4 8 16 32 64 128 256 512 1025 
+sub_indices: 0 1 0 4 0 0 1 1 0 2 
++---------------------------------------------------+
+|               ENCRYPTION PARAMETERS               |
++---------------------------------------------------+
+|  seal_params_.poly_modulus_degree  = 8192
+|  seal_params_.coeff_modulus().bit_count   = [42 + 58 + 58 + 60] bits
+|  seal_params_.coeff_modulus().size = 4
+|  seal_params_.plain_modulus().bit_count = 28
++---------------------------------------------------+
++---------------------------------------------------+
+|                  Batch Parameters                 |
++---------------------------------------------------+
+| batch_size_:      10
+| num_entries_:     2046
++---------------------------------------------------+
+BatchPIRServer: Populating raw database...
+BatchPIRServer: Raw database populated.
+BatchPIRServer: Reading Color sub-databases and balancing...
+BatchPIRServer: Bucket Statistics:
+===================
+BatchPIRServer: Number of Buckets: 10
+Max Bucket Size: 205
+BatchPIRServer: Reading Color sub-databases completed.
+BatchPIRServer: Preparing PIR servers......
+dim_size = 64
++---------------------------------------------------+
+|                 PIR PARAMETERS                    |
++---------------------------------------------------+
+|  num_entries_                  = 205
+|  num_rounded_entries_          = 256
+|  entry_size_                   = 32
+|  num_columns_per_entry_        = 10
+|  db_ptx_                       = 40
+|  dimensions_                   = [ 64 4 ]
++---------------------------------------------------+
+BatchPIRServer: Converting and merging databases. This may take some time...
+BatchPIRServer: Processed database 1 of 10
+BatchPIRServer: Processed database 2 of 10
+BatchPIRServer: Processed database 3 of 10
+BatchPIRServer: Processed database 4 of 10
+BatchPIRServer: Processed database 5 of 10
+BatchPIRServer: Processed database 6 of 10
+BatchPIRServer: Processed database 7 of 10
+BatchPIRServer: Processed database 8 of 10
+BatchPIRServer: Processed database 9 of 10
+BatchPIRServer: Processed database 10 of 10
+BatchPIRServer: Database converted to PIR DB and merged successfully!
+BatchPIRServer: Database is NTT processed!
+BatchPIRServer: PIR servers preparation complete.
+Main: Starting query generation for example 2...
+Main: Query generation complete for example 2.
+Main: Starting response generation for example 2...
+Main: Response generation complete for example 2.
+Main: Extracting responses for example 2...
+Main: Noise budget left in the response: 46
+Main: Extraction complete for example 2.
+Contents of decode_responses:
+Hexadecimal string: 0xed7ac3b4435a5703ace927972466bed309c0d01867ad1dc4323a4eff93d202be
+Hexadecimal string: 0xa00609be6088e9264a83fc7fb11391a5361c06408716aa169f4a917d43d29b2a
+Hexadecimal string: 0xd4c8159e64f296261f5cb36b19c3ecfe079b801edb55462ef837121e07e1fcd8
+Hexadecimal string: 0xe4cff728fd3e8d8a195d10e21f47b4de71cdfe744647edfc1aa3cece1d5c94f0
+Hexadecimal string: 0x8d432d10177b403cf404e0321c2268811287828fe9140302c3c542fad37c6307
+Hexadecimal string: 0x6e3251aecc7af9827f534686d27f3bb37e016ea38b5f3f00d3d05376d3e0b26b
+Hexadecimal string: 0x9e4a0a449988abf64929593d4ddba1de9f1d0e483a53f88b2847d76cd3468645
+Hexadecimal string: 0x637fd939eddeaf94258987e390a8db8d97ecea3e8b2bc7fe3f34934e7a26ae78
+Hexadecimal string: 0x343bd9479ea5290a48b9d38a1681c2a2f01d8f45f3d7f8d6ed2519359aae8966
+Hexadecimal string: 0x19cb8ca56e36ffd9e15e73addd22e0ce3282961e842d24b0458930b3164ae2a7
+Total Query communication: 385 KB
+Total Answer communication: 257 KB
+Main: All the entries matched for example 2!!
+
+***************************************************
+             Starting example index = 128               
+***************************************************
+Merkle Proof: 2 4 8 17 35 71 143 287 575 1151 
+sub_indices: 0 47 0 46 0 13 50 13 25 0 
++---------------------------------------------------+
+|               ENCRYPTION PARAMETERS               |
++---------------------------------------------------+
+|  seal_params_.poly_modulus_degree  = 8192
+|  seal_params_.coeff_modulus().bit_count   = [42 + 58 + 58 + 60] bits
+|  seal_params_.coeff_modulus().size = 4
+|  seal_params_.plain_modulus().bit_count = 28
++---------------------------------------------------+
++---------------------------------------------------+
+|                  Batch Parameters                 |
++---------------------------------------------------+
+| batch_size_:      10
+| num_entries_:     2046
++---------------------------------------------------+
+BatchPIRServer: Populating raw database...
+BatchPIRServer: Raw database populated.
+BatchPIRServer: Reading Color sub-databases and balancing...
+BatchPIRServer: Bucket Statistics:
+===================
+BatchPIRServer: Number of Buckets: 10
+Max Bucket Size: 205
+BatchPIRServer: Reading Color sub-databases completed.
+BatchPIRServer: Preparing PIR servers......
+dim_size = 64
++---------------------------------------------------+
+|                 PIR PARAMETERS                    |
++---------------------------------------------------+
+|  num_entries_                  = 205
+|  num_rounded_entries_          = 256
+|  entry_size_                   = 32
+|  num_columns_per_entry_        = 10
+|  db_ptx_                       = 40
+|  dimensions_                   = [ 64 4 ]
++---------------------------------------------------+
+BatchPIRServer: Converting and merging databases. This may take some time...
+BatchPIRServer: Processed database 1 of 10
+BatchPIRServer: Processed database 2 of 10
+BatchPIRServer: Processed database 3 of 10
+BatchPIRServer: Processed database 4 of 10
+BatchPIRServer: Processed database 5 of 10
+BatchPIRServer: Processed database 6 of 10
+BatchPIRServer: Processed database 7 of 10
+BatchPIRServer: Processed database 8 of 10
+BatchPIRServer: Processed database 9 of 10
+BatchPIRServer: Processed database 10 of 10
+BatchPIRServer: Database converted to PIR DB and merged successfully!
+BatchPIRServer: Database is NTT processed!
+BatchPIRServer: PIR servers preparation complete.
+Main: Starting query generation for example 3...
+Main: Query generation complete for example 3.
+Main: Starting response generation for example 3...
+Main: Response generation complete for example 3.
+Main: Extracting responses for example 3...
+Main: Noise budget left in the response: 47
+Main: Extraction complete for example 3.
+Contents of decode_responses:
+Hexadecimal string: 0xed7ac3b4435a5703ace927972466bed309c0d01867ad1dc4323a4eff93d202be
+Hexadecimal string: 0x64eba803a91cfab6fe108fcb1794c84a85f77d69c0ec7ae751920c696b193709
+Hexadecimal string: 0xd4c8159e64f296261f5cb36b19c3ecfe079b801edb55462ef837121e07e1fcd8
+Hexadecimal string: 0xbe803afe4b7eb09dabfb61cd71f8c5ba2383cf856e398fa3b1791421370c9049
+Hexadecimal string: 0x8d432d10177b403cf404e0321c2268811287828fe9140302c3c542fad37c6307
+Hexadecimal string: 0x413367b93e27798d78ce09a02c36fbe86c85b9c47127aa02144cff9428caa06f
+Hexadecimal string: 0x439e34221ca6335bd616c046bcde6e6df0b8a9f7dea693ee28e0c1a704e4b93d
+Hexadecimal string: 0x3ce6e3a4a6580085be5189dfb7ac447e499057314604bd5fb70a76507f962ede
+Hexadecimal string: 0xfa96da3dd90f8ddc9d072aa0fb8e1533da1df558bc0f0a1b701c1110d3e35189
+Hexadecimal string: 0xa2e2816a1828ee569e9f6c59ddb98f6a1b7036df57fc517b0c75191d00f3655b
+Total Query communication: 385 KB
+Total Answer communication: 257 KB
+Main: All the entries matched for example 3!!
+
+***************************************************
+             Starting example index = 256               
+***************************************************
+Merkle Proof: 2 4 9 19 39 79 159 319 639 1279 
+sub_indices: 0 97 0 97 50 25 0 39 39 50 
++---------------------------------------------------+
+|               ENCRYPTION PARAMETERS               |
++---------------------------------------------------+
+|  seal_params_.poly_modulus_degree  = 8192
+|  seal_params_.coeff_modulus().bit_count   = [42 + 58 + 58 + 60] bits
+|  seal_params_.coeff_modulus().size = 4
+|  seal_params_.plain_modulus().bit_count = 28
++---------------------------------------------------+
++---------------------------------------------------+
+|                  Batch Parameters                 |
++---------------------------------------------------+
+| batch_size_:      10
+| num_entries_:     2046
++---------------------------------------------------+
+BatchPIRServer: Populating raw database...
+BatchPIRServer: Raw database populated.
+BatchPIRServer: Reading Color sub-databases and balancing...
+BatchPIRServer: Bucket Statistics:
+===================
+BatchPIRServer: Number of Buckets: 10
+Max Bucket Size: 205
+BatchPIRServer: Reading Color sub-databases completed.
+BatchPIRServer: Preparing PIR servers......
+dim_size = 64
++---------------------------------------------------+
+|                 PIR PARAMETERS                    |
++---------------------------------------------------+
+|  num_entries_                  = 205
+|  num_rounded_entries_          = 256
+|  entry_size_                   = 32
+|  num_columns_per_entry_        = 10
+|  db_ptx_                       = 40
+|  dimensions_                   = [ 64 4 ]
++---------------------------------------------------+
+BatchPIRServer: Converting and merging databases. This may take some time...
+BatchPIRServer: Processed database 1 of 10
+BatchPIRServer: Processed database 2 of 10
+BatchPIRServer: Processed database 3 of 10
+BatchPIRServer: Processed database 4 of 10
+BatchPIRServer: Processed database 5 of 10
+BatchPIRServer: Processed database 6 of 10
+BatchPIRServer: Processed database 7 of 10
+BatchPIRServer: Processed database 8 of 10
+BatchPIRServer: Processed database 9 of 10
+BatchPIRServer: Processed database 10 of 10
+BatchPIRServer: Database converted to PIR DB and merged successfully!
+BatchPIRServer: Database is NTT processed!
+BatchPIRServer: PIR servers preparation complete.
+Main: Starting query generation for example 4...
+Main: Query generation complete for example 4.
+Main: Starting response generation for example 4...
+Main: Response generation complete for example 4.
+Main: Extracting responses for example 4...
+Main: Noise budget left in the response: 46
+Main: Extraction complete for example 4.
+Contents of decode_responses:
+Hexadecimal string: 0xed7ac3b4435a5703ace927972466bed309c0d01867ad1dc4323a4eff93d202be
+Hexadecimal string: 0xb2737b89403c9a5b479b23fb7e6a787355b4a589292012a7289e051169fd8e09
+Hexadecimal string: 0xd4c8159e64f296261f5cb36b19c3ecfe079b801edb55462ef837121e07e1fcd8
+Hexadecimal string: 0x5ae42f722dc6a37974fb9f5219451515283f54629397b4ba872180f6bf9c90a1
+Hexadecimal string: 0x3bf6932ade6e21cfcfc4f841b31b7bcb2018148a953e7ab177dc87590218b26e
+Hexadecimal string: 0x41770fb944e03f1dfd8c6e8c040ac8f9f806c0ccd0b4ca3ccd63577b4cc88023
+Hexadecimal string: 0x62f0b50423450ba355242aff81d7cd2394b7faa229d3a54caa4d81a1a0947e18
+Hexadecimal string: 0x7aa9534e17f2b585687e74eefbf7cf312e52c641842cfe80c80feeac50654c7d
+Hexadecimal string: 0xf4fbb96dddc8cd6b935807968e889d899ebec1b90405da07c3251a3064537aad
+Hexadecimal string: 0xe6551cdd8321be78140b5f5269462733a11c2f7ac0f39f62bacff6ea3c406124
+Total Query communication: 385 KB
+Total Answer communication: 257 KB
+Main: All the entries matched for example 4!!
+
+***************************************************
+             Starting example index = 512               
+***************************************************
+Merkle Proof: 2 5 11 23 47 95 191 383 767 1535 
+sub_indices: 0 199 96 0 101 102 51 77 90 90 
++---------------------------------------------------+
+|               ENCRYPTION PARAMETERS               |
++---------------------------------------------------+
+|  seal_params_.poly_modulus_degree  = 8192
+|  seal_params_.coeff_modulus().bit_count   = [42 + 58 + 58 + 60] bits
+|  seal_params_.coeff_modulus().size = 4
+|  seal_params_.plain_modulus().bit_count = 28
++---------------------------------------------------+
++---------------------------------------------------+
+|                  Batch Parameters                 |
++---------------------------------------------------+
+| batch_size_:      10
+| num_entries_:     2046
++---------------------------------------------------+
+BatchPIRServer: Populating raw database...
+BatchPIRServer: Raw database populated.
+BatchPIRServer: Reading Color sub-databases and balancing...
+BatchPIRServer: Bucket Statistics:
+===================
+BatchPIRServer: Number of Buckets: 10
+Max Bucket Size: 205
+BatchPIRServer: Reading Color sub-databases completed.
+BatchPIRServer: Preparing PIR servers......
+dim_size = 64
++---------------------------------------------------+
+|                 PIR PARAMETERS                    |
++---------------------------------------------------+
+|  num_entries_                  = 205
+|  num_rounded_entries_          = 256
+|  entry_size_                   = 32
+|  num_columns_per_entry_        = 10
+|  db_ptx_                       = 40
+|  dimensions_                   = [ 64 4 ]
++---------------------------------------------------+
+BatchPIRServer: Converting and merging databases. This may take some time...
+BatchPIRServer: Processed database 1 of 10
+BatchPIRServer: Processed database 2 of 10
+BatchPIRServer: Processed database 3 of 10
+BatchPIRServer: Processed database 4 of 10
+BatchPIRServer: Processed database 5 of 10
+BatchPIRServer: Processed database 6 of 10
+BatchPIRServer: Processed database 7 of 10
+BatchPIRServer: Processed database 8 of 10
+BatchPIRServer: Processed database 9 of 10
+BatchPIRServer: Processed database 10 of 10
+BatchPIRServer: Database converted to PIR DB and merged successfully!
+BatchPIRServer: Database is NTT processed!
+BatchPIRServer: PIR servers preparation complete.
+Main: Starting query generation for example 5...
+Main: Query generation complete for example 5.
+Main: Starting response generation for example 5...
+Main: Response generation complete for example 5.
+Main: Extracting responses for example 5...
+Main: Noise budget left in the response: 47
+Main: Extraction complete for example 5.
+Contents of decode_responses:
+Hexadecimal string: 0xed7ac3b4435a5703ace927972466bed309c0d01867ad1dc4323a4eff93d202be
+Hexadecimal string: 0xf7da942bbea24fa21498960e29f0d1b207a8abb4fb52e38bf9b3d098fde076dd
+Hexadecimal string: 0xa6075f8167b3a8e510de91fd64597a30e978a26b8d090bff93c54473d8349538
+Hexadecimal string: 0x3f57411d7c45d6be24119b9d26f2f03ccc469ee725511158f14d82e016e807ca
+Hexadecimal string: 0x1fd837741579dadba8637627f14712433329afc09532da1d974495b349d6b0dd
+Hexadecimal string: 0xfb7b7dc79e0219b8c5effe6f81dde51014947fb5d3b170aeacea442c81e73c6d
+Hexadecimal string: 0xebf43f108ef5640d9c1a956b81f37be4eda8c510ca9afb132509e4ec7df6af05
+Hexadecimal string: 0xeb651b9fc96f5826e4ef46b7da817bcdf593d345b0d52e9d2055f82c7dd094e4
+Hexadecimal string: 0xac821779ffaf9bd8f28243fa89c55050499176992b430c8195a57772c63133df
+Hexadecimal string: 0x0fc2e5b12ddb068403721597ad00b032178215455524d8080d550a5ec37f91b4
+Total Query communication: 385 KB
+Total Answer communication: 257 KB
+Main: All the entries matched for example 5!!
+
+***************************************************
+             Starting example index = 513               
+***************************************************
+Merkle Proof: 3 6 12 24 48 96 192 384 768 1536 
+sub_indices: 1 0 102 105 102 103 103 104 104 103 
++---------------------------------------------------+
+|               ENCRYPTION PARAMETERS               |
++---------------------------------------------------+
+|  seal_params_.poly_modulus_degree  = 8192
+|  seal_params_.coeff_modulus().bit_count   = [42 + 58 + 58 + 60] bits
+|  seal_params_.coeff_modulus().size = 4
+|  seal_params_.plain_modulus().bit_count = 28
++---------------------------------------------------+
++---------------------------------------------------+
+|                  Batch Parameters                 |
++---------------------------------------------------+
+| batch_size_:      10
+| num_entries_:     2046
++---------------------------------------------------+
+BatchPIRServer: Populating raw database...
+BatchPIRServer: Raw database populated.
+BatchPIRServer: Reading Color sub-databases and balancing...
+BatchPIRServer: Bucket Statistics:
+===================
+BatchPIRServer: Number of Buckets: 10
+Max Bucket Size: 205
+BatchPIRServer: Reading Color sub-databases completed.
+BatchPIRServer: Preparing PIR servers......
+dim_size = 64
++---------------------------------------------------+
+|                 PIR PARAMETERS                    |
++---------------------------------------------------+
+|  num_entries_                  = 205
+|  num_rounded_entries_          = 256
+|  entry_size_                   = 32
+|  num_columns_per_entry_        = 10
+|  db_ptx_                       = 40
+|  dimensions_                   = [ 64 4 ]
++---------------------------------------------------+
+BatchPIRServer: Converting and merging databases. This may take some time...
+BatchPIRServer: Processed database 1 of 10
+BatchPIRServer: Processed database 2 of 10
+BatchPIRServer: Processed database 3 of 10
+BatchPIRServer: Processed database 4 of 10
+BatchPIRServer: Processed database 5 of 10
+BatchPIRServer: Processed database 6 of 10
+BatchPIRServer: Processed database 7 of 10
+BatchPIRServer: Processed database 8 of 10
+BatchPIRServer: Processed database 9 of 10
+BatchPIRServer: Processed database 10 of 10
+BatchPIRServer: Database converted to PIR DB and merged successfully!
+BatchPIRServer: Database is NTT processed!
+BatchPIRServer: PIR servers preparation complete.
+Main: Starting query generation for example 6...
+Main: Query generation complete for example 6.
+Main: Starting response generation for example 6...
+Main: Response generation complete for example 6.
+Main: Extracting responses for example 6...
+Main: Noise budget left in the response: 46
+Main: Extraction complete for example 6.
+Contents of decode_responses:
+Hexadecimal string: 0x9b55bd7d832528a27c16b45590d57fe000e048ebe0eb86ec7240f67c37a4f554
+Hexadecimal string: 0x2a1dee388bd1bc9e40da28be086ef68aaa29d61787c9ec497191313f355faf9b
+Hexadecimal string: 0x7c9822e1f9dbb5451b18bb76911251e1f95afec114f11e31f40e169c77f87756
+Hexadecimal string: 0xab290446ecabf0b97684d89c557c2d0837b525b7306b70f7c2527fca537270d0
+Hexadecimal string: 0xe1c9631b02d5d3d6967cd2de68d61d1e1d79a40f55f3d10df795ac7424432774
+Hexadecimal string: 0xd62dfc8cbd9d2399c6a3d6a5923015759da705edf02e9993aace55a6d713b4b7
+Hexadecimal string: 0xa6ba11bc626cba41bded6d6341aed2e767f26a547ba19dd37fcb7554b169c22e
+Hexadecimal string: 0xcb962fb9be1ada8e387ccc76be20b09b244c844b8232b470537791317243af14
+Hexadecimal string: 0xb7960338d4b2c38237a032f639a1402ffc9b7566e47b960ccd2d989acf732cc4
+Hexadecimal string: 0x2f3f07f1f4ca54647c98e3dca67485559b36a70cbc18e19c5baf9cd7f666ef77
+Total Query communication: 385 KB
+Total Answer communication: 257 KB
+Main: All the entries matched for example 6!!
+
+***************************************************
+             Starting example index = 768               
+***************************************************
+Merkle Proof: 3 6 13 27 55 111 223 447 895 1791 
+sub_indices: 97 0 102 199 127 153 141 103 152 142 
++---------------------------------------------------+
+|               ENCRYPTION PARAMETERS               |
++---------------------------------------------------+
+|  seal_params_.poly_modulus_degree  = 8192
+|  seal_params_.coeff_modulus().bit_count   = [42 + 58 + 58 + 60] bits
+|  seal_params_.coeff_modulus().size = 4
+|  seal_params_.plain_modulus().bit_count = 28
++---------------------------------------------------+
++---------------------------------------------------+
+|                  Batch Parameters                 |
++---------------------------------------------------+
+| batch_size_:      10
+| num_entries_:     2046
++---------------------------------------------------+
+BatchPIRServer: Populating raw database...
+BatchPIRServer: Raw database populated.
+BatchPIRServer: Reading Color sub-databases and balancing...
+BatchPIRServer: Bucket Statistics:
+===================
+BatchPIRServer: Number of Buckets: 10
+Max Bucket Size: 205
+BatchPIRServer: Reading Color sub-databases completed.
+BatchPIRServer: Preparing PIR servers......
+dim_size = 64
++---------------------------------------------------+
+|                 PIR PARAMETERS                    |
++---------------------------------------------------+
+|  num_entries_                  = 205
+|  num_rounded_entries_          = 256
+|  entry_size_                   = 32
+|  num_columns_per_entry_        = 10
+|  db_ptx_                       = 40
+|  dimensions_                   = [ 64 4 ]
++---------------------------------------------------+
+BatchPIRServer: Converting and merging databases. This may take some time...
+BatchPIRServer: Processed database 1 of 10
+BatchPIRServer: Processed database 2 of 10
+BatchPIRServer: Processed database 3 of 10
+BatchPIRServer: Processed database 4 of 10
+BatchPIRServer: Processed database 5 of 10
+BatchPIRServer: Processed database 6 of 10
+BatchPIRServer: Processed database 7 of 10
+BatchPIRServer: Processed database 8 of 10
+BatchPIRServer: Processed database 9 of 10
+BatchPIRServer: Processed database 10 of 10
+BatchPIRServer: Database converted to PIR DB and merged successfully!
+BatchPIRServer: Database is NTT processed!
+BatchPIRServer: PIR servers preparation complete.
+Main: Starting query generation for example 7...
+Main: Query generation complete for example 7.
+Main: Starting response generation for example 7...
+Main: Response generation complete for example 7.
+Main: Extracting responses for example 7...
+Main: Noise budget left in the response: 47
+Main: Extraction complete for example 7.
+Contents of decode_responses:
+Hexadecimal string: 0xf4ce826aa8a277371db68fa13bac1ad3105de7a4e58790681491f1e02089453a
+Hexadecimal string: 0x2a1dee388bd1bc9e40da28be086ef68aaa29d61787c9ec497191313f355faf9b
+Hexadecimal string: 0x7c9822e1f9dbb5451b18bb76911251e1f95afec114f11e31f40e169c77f87756
+Hexadecimal string: 0xea457a492d953b9b133e9f0c5b4e6b1916629dcea99ff44fdf7224e919fff950
+Hexadecimal string: 0xdf3f669921b985fea0d6867f9c80f7d5e11ddc2c149264a2dc5326694c74944d
+Hexadecimal string: 0x9210f8c5b33cd46c2cba715790dfe0d54d8d70f5e352a08e5b4f2ed5a051814d
+Hexadecimal string: 0x4a2f259cb887e8580dc8b220c9bb678cea058e3e94ba1b555cf530134005b80d
+Hexadecimal string: 0x1f8f3679e9f72ef596e866bf48698589d95bbe9e49b81e8b9d402ebf13b32f36
+Hexadecimal string: 0xfed5c036f770fdb288e5a8d83ee75dfd5d3015757c95223b27ca0962c7ca661b
+Hexadecimal string: 0x9820e260f4efeef820f529c9094d6653e720ea10e769f9065ee818d98c1ab908
+Total Query communication: 385 KB
+Total Answer communication: 257 KB
+Main: All the entries matched for example 7!!
+
+***************************************************
+             Starting example index = 896               
+***************************************************
+Merkle Proof: 3 7 14 29 59 119 239 479 959 1919 
+sub_indices: 148 0 148 102 178 154 167 204 166 154 
++---------------------------------------------------+
+|               ENCRYPTION PARAMETERS               |
++---------------------------------------------------+
+|  seal_params_.poly_modulus_degree  = 8192
+|  seal_params_.coeff_modulus().bit_count   = [42 + 58 + 58 + 60] bits
+|  seal_params_.coeff_modulus().size = 4
+|  seal_params_.plain_modulus().bit_count = 28
++---------------------------------------------------+
++---------------------------------------------------+
+|                  Batch Parameters                 |
++---------------------------------------------------+
+| batch_size_:      10
+| num_entries_:     2046
++---------------------------------------------------+
+BatchPIRServer: Populating raw database...
+BatchPIRServer: Raw database populated.
+BatchPIRServer: Reading Color sub-databases and balancing...
+BatchPIRServer: Bucket Statistics:
+===================
+BatchPIRServer: Number of Buckets: 10
+Max Bucket Size: 205
+BatchPIRServer: Reading Color sub-databases completed.
+BatchPIRServer: Preparing PIR servers......
+dim_size = 64
++---------------------------------------------------+
+|                 PIR PARAMETERS                    |
++---------------------------------------------------+
+|  num_entries_                  = 205
+|  num_rounded_entries_          = 256
+|  entry_size_                   = 32
+|  num_columns_per_entry_        = 10
+|  db_ptx_                       = 40
+|  dimensions_                   = [ 64 4 ]
++---------------------------------------------------+
+BatchPIRServer: Converting and merging databases. This may take some time...
+BatchPIRServer: Processed database 1 of 10
+BatchPIRServer: Processed database 2 of 10
+BatchPIRServer: Processed database 3 of 10
+BatchPIRServer: Processed database 4 of 10
+BatchPIRServer: Processed database 5 of 10
+BatchPIRServer: Processed database 6 of 10
+BatchPIRServer: Processed database 7 of 10
+BatchPIRServer: Processed database 8 of 10
+BatchPIRServer: Processed database 9 of 10
+BatchPIRServer: Processed database 10 of 10
+BatchPIRServer: Database converted to PIR DB and merged successfully!
+BatchPIRServer: Database is NTT processed!
+BatchPIRServer: PIR servers preparation complete.
+Main: Starting query generation for example 8...
+Main: Query generation complete for example 8.
+Main: Starting response generation for example 8...
+Main: Response generation complete for example 8.
+Main: Extracting responses for example 8...
+Main: Noise budget left in the response: 46
+Main: Extraction complete for example 8.
+Contents of decode_responses:
+Hexadecimal string: 0xf7299c0e30569bfc90d4417d8d03600699fc65d724223282c457de13512b5355
+Hexadecimal string: 0x2a1dee388bd1bc9e40da28be086ef68aaa29d61787c9ec497191313f355faf9b
+Hexadecimal string: 0xe2f9502c473343f6b6e5d4108114c8d8b3520e561a4208b659c38448cb47a918
+Hexadecimal string: 0x8a5fb72c4cf0000c52c0ce9e4f8b1b3fdc5930e2189c903f209e0e59a04e2c08
+Hexadecimal string: 0x6407082d40ed267067ae29f7856d591ebd9cb11e412144ed88654b4e2c21546c
+Hexadecimal string: 0x3c7b3d38da994366261b4fed71646ed086286faa8a6de6e215d1c04dc58d31e5
+Hexadecimal string: 0xc07585d940ce628a64c827eaf21f3fb7bcf64dcbbc3a627cd678100600051585
+Hexadecimal string: 0x382d8a8dd640f775b2a3a5bcf8e43e245acd968035f502b621fbc9578ca02937
+Hexadecimal string: 0xc66fdc74493026bf6fe7670d852563e90c3b1671553a1243a783ac307ba461f0
+Hexadecimal string: 0x96ac2d5259a05fe139da97fe2090e05ba4dfb96a638275bba8f86c9a778efae9
+Total Query communication: 385 KB
+Total Answer communication: 257 KB
+Main: All the entries matched for example 8!!
+
+***************************************************
+             Starting example index = 1023               
+***************************************************
+Merkle Proof: 3 7 15 31 63 127 255 511 1023 2046 
+sub_indices: 199 0 198 102 203 204 179 154 192 193 
++---------------------------------------------------+
+|               ENCRYPTION PARAMETERS               |
++---------------------------------------------------+
+|  seal_params_.poly_modulus_degree  = 8192
+|  seal_params_.coeff_modulus().bit_count   = [42 + 58 + 58 + 60] bits
+|  seal_params_.coeff_modulus().size = 4
+|  seal_params_.plain_modulus().bit_count = 28
++---------------------------------------------------+
++---------------------------------------------------+
+|                  Batch Parameters                 |
++---------------------------------------------------+
+| batch_size_:      10
+| num_entries_:     2046
++---------------------------------------------------+
+BatchPIRServer: Populating raw database...
+BatchPIRServer: Raw database populated.
+BatchPIRServer: Reading Color sub-databases and balancing...
+BatchPIRServer: Bucket Statistics:
+===================
+BatchPIRServer: Number of Buckets: 10
+Max Bucket Size: 205
+BatchPIRServer: Reading Color sub-databases completed.
+BatchPIRServer: Preparing PIR servers......
+dim_size = 64
++---------------------------------------------------+
+|                 PIR PARAMETERS                    |
++---------------------------------------------------+
+|  num_entries_                  = 205
+|  num_rounded_entries_          = 256
+|  entry_size_                   = 32
+|  num_columns_per_entry_        = 10
+|  db_ptx_                       = 40
+|  dimensions_                   = [ 64 4 ]
++---------------------------------------------------+
+BatchPIRServer: Converting and merging databases. This may take some time...
+BatchPIRServer: Processed database 1 of 10
+BatchPIRServer: Processed database 2 of 10
+BatchPIRServer: Processed database 3 of 10
+BatchPIRServer: Processed database 4 of 10
+BatchPIRServer: Processed database 5 of 10
+BatchPIRServer: Processed database 6 of 10
+BatchPIRServer: Processed database 7 of 10
+BatchPIRServer: Processed database 8 of 10
+BatchPIRServer: Processed database 9 of 10
+BatchPIRServer: Processed database 10 of 10
+BatchPIRServer: Database converted to PIR DB and merged successfully!
+BatchPIRServer: Database is NTT processed!
+BatchPIRServer: PIR servers preparation complete.
+Main: Starting query generation for example 9...
+Main: Query generation complete for example 9.
+Main: Starting response generation for example 9...
+Main: Response generation complete for example 9.
+Main: Extracting responses for example 9...
+Main: Noise budget left in the response: 46
+Main: Extraction complete for example 9.
+Contents of decode_responses:
+Hexadecimal string: 0xd1abb446dc9acfda742b0fc691e1859a0fd168f2a7aa11818d7aae95175a414a
+Hexadecimal string: 0x2a1dee388bd1bc9e40da28be086ef68aaa29d61787c9ec497191313f355faf9b
+Hexadecimal string: 0x82a991880b1158eb1b6235e13920997394388fe56e76db365cd37ad04059ab7e
+Hexadecimal string: 0x8a5fb72c4cf0000c52c0ce9e4f8b1b3fdc5930e2189c903f209e0e59a04e2c08
+Hexadecimal string: 0xda836a58fb2063de65c0140501b1c4ba50eb3d18aa89bb20bdc31e76741fd74b
+Hexadecimal string: 0xb22ef2d4f22da4c033d29048b26a8ef815ceb36d8c7b867311b05b5482f274f6
+Hexadecimal string: 0xaf19cbef63a271889cbbdd08f592382b49a02d6b6e11930c9d6c2bd5acbb7b44
+Hexadecimal string: 0x645c4f424d6747e58839706d842b4a91a5ace9b69a0f553f7fea655c4acf9e6c
+Hexadecimal string: 0xebb06ba73e5f946de21fadd2da74d04cf4c5480fb479749079a15c42030bb4d2
+Hexadecimal string: 0x915d3c7f805431f9c931a7c95e618ba8814b1f27739881882b97b84896d9ee5c
+Total Query communication: 385 KB
+Total Answer communication: 257 KB
+Main: All the entries matched for example 9!!
+
+***************************************************
+             Starting example index = 1024               
+***************************************************
+Merkle Proof: 3 7 15 31 63 127 255 511 1023 2047 
+sub_indices: 199 0 198 102 204 204 179 154 192 193 
++---------------------------------------------------+
+|               ENCRYPTION PARAMETERS               |
++---------------------------------------------------+
+|  seal_params_.poly_modulus_degree  = 8192
+|  seal_params_.coeff_modulus().bit_count   = [42 + 58 + 58 + 60] bits
+|  seal_params_.coeff_modulus().size = 4
+|  seal_params_.plain_modulus().bit_count = 28
++---------------------------------------------------+
++---------------------------------------------------+
+|                  Batch Parameters                 |
++---------------------------------------------------+
+| batch_size_:      10
+| num_entries_:     2046
++---------------------------------------------------+
+BatchPIRServer: Populating raw database...
+BatchPIRServer: Raw database populated.
+BatchPIRServer: Reading Color sub-databases and balancing...
+BatchPIRServer: Bucket Statistics:
+===================
+BatchPIRServer: Number of Buckets: 10
+Max Bucket Size: 205
+BatchPIRServer: Reading Color sub-databases completed.
+BatchPIRServer: Preparing PIR servers......
+dim_size = 64
++---------------------------------------------------+
+|                 PIR PARAMETERS                    |
++---------------------------------------------------+
+|  num_entries_                  = 205
+|  num_rounded_entries_          = 256
+|  entry_size_                   = 32
+|  num_columns_per_entry_        = 10
+|  db_ptx_                       = 40
+|  dimensions_                   = [ 64 4 ]
++---------------------------------------------------+
+BatchPIRServer: Converting and merging databases. This may take some time...
+BatchPIRServer: Processed database 1 of 10
+BatchPIRServer: Processed database 2 of 10
+BatchPIRServer: Processed database 3 of 10
+BatchPIRServer: Processed database 4 of 10
+BatchPIRServer: Processed database 5 of 10
+BatchPIRServer: Processed database 6 of 10
+BatchPIRServer: Processed database 7 of 10
+BatchPIRServer: Processed database 8 of 10
+BatchPIRServer: Processed database 9 of 10
+BatchPIRServer: Processed database 10 of 10
+BatchPIRServer: Database converted to PIR DB and merged successfully!
+BatchPIRServer: Database is NTT processed!
+BatchPIRServer: PIR servers preparation complete.
+Main: Starting query generation for example 10...
+Main: Query generation complete for example 10.
+Main: Starting response generation for example 10...
+Main: Response generation complete for example 10.
+Main: Extracting responses for example 10...
+Main: Noise budget left in the response: 47
+Main: Extraction complete for example 10.
+Contents of decode_responses:
+Hexadecimal string: 0xd1abb446dc9acfda742b0fc691e1859a0fd168f2a7aa11818d7aae95175a414a
+Hexadecimal string: 0x2a1dee388bd1bc9e40da28be086ef68aaa29d61787c9ec497191313f355faf9b
+Hexadecimal string: 0x82a991880b1158eb1b6235e13920997394388fe56e76db365cd37ad04059ab7e
+Hexadecimal string: 0x8a5fb72c4cf0000c52c0ce9e4f8b1b3fdc5930e2189c903f209e0e59a04e2c08
+Hexadecimal string: 0x167b8d593cd5b6f35e3aabbc7194ebac85486d64f8230173f5239ebaf8b93e73
+Hexadecimal string: 0xb22ef2d4f22da4c033d29048b26a8ef815ceb36d8c7b867311b05b5482f274f6
+Hexadecimal string: 0xaf19cbef63a271889cbbdd08f592382b49a02d6b6e11930c9d6c2bd5acbb7b44
+Hexadecimal string: 0x645c4f424d6747e58839706d842b4a91a5ace9b69a0f553f7fea655c4acf9e6c
+Hexadecimal string: 0xebb06ba73e5f946de21fadd2da74d04cf4c5480fb479749079a15c42030bb4d2
+Hexadecimal string: 0x915d3c7f805431f9c931a7c95e618ba8814b1f27739881882b97b84896d9ee5c
+Total Query communication: 385 KB
+Total Answer communication: 257 KB
+Main: All the entries matched for example 10!!
+
+***********************
+     Timings Report    
+***********************
+Input Parameters: Batch Size: 10, Number of Entries: 2046, Entry Size: 32
+Query generation time: 6761 microseconds
+Response generation time: 338488 microseconds
+Extraction time: 1263 microseconds
+Total Query communication: 385 KB
+Total Answer communication: 257 KB
+

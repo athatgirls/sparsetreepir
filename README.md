@@ -1,129 +1,49 @@
-# SparseTreePIR experiments
+# SparseTreePIR
 
-This repository contains the SparseTreePIR paper sources, experiment scripts, small workload CSVs, generated result summaries, and Linux setup helpers.
+Reproducibility artifact for **SparseTreePIR: Target-Private Retrieval of Sparse Merkle Proofs via Interval Coloring**.
 
-## What is included
+Release: **2026-09-12-current-paper**. Start with the commands below and the [result-to-evidence map](docs/RESULTS.md).
 
-- `scripts/`: experiment, plotting, and summarization scripts.
-- `datasets/`: small fixed SMT workload CSVs used by the current paper experiments.
-- `examples/*.csv`: generated result summaries used by the paper.
-- `backend/`: local SimplePIR and PIANO runner adapters copied into external backend checkouts by the Linux setup script.
-- `figures/`, `manuscripts/`, `notes/`: paper figures, LaTeX sources, and experiment notes.
+SparseTreePIR retrieves the non-default sibling digests needed for **one complete sparse Merkle proof** as a structured batch. Interval coloring puts simultaneously required digests into distinct databases; ActiveBalance (AB) balances their loads. The client restores public default digests at their original levels and checks the trusted root. Here, batch retrieval refers to the multiple nodes of one proof.
 
-Large local toolchains, caches, downloaded zips, and generated layout dumps are intentionally ignored. They should be rebuilt on Linux.
+The main experiments compare AB with PBC on **SimplePIR and VBPIR**, with First-fit/Flat-active ablations and official TreePIR CSA complete-tree controls. Supporting directories contain the correctness, workload, theory, construction, and TCP experiments cited by the supplement.
 
-## Linux setup
+## Start here
 
-```bash
-git clone <repo-url> sparsetreepir
-cd sparsetreepir
-bash scripts/setup_linux_experiment_deps.sh
-source .venv/bin/activate
-```
+| Task | Entry point |
+|---|---|
+| Audit frozen native run records and recovered proofs | `python3 reproduce/verify.py --output ../sparsetreepir-audit` |
+| Build the two native backends on Linux | `python3 reproduce/build_native.py --output ../sparsetreepir-build` |
+| Execute a short fresh test and audit it | `python3 reproduce/run_native.py --build ../sparsetreepir-build --output ../sparsetreepir-smoke --mode smoke` |
+| Regenerate Tables III–IV, S2 and Figure 3; check the Table II example | `python3 reproduce_paper_results.py --output ../sparsetreepir-figures` |
+| Check release file hashes | `python3 verify_release_files.py` |
+| Check supplemental proof records and capacity certificates | `python3 reproduce_supplement.py --output ../sparsetreepir-supplement` |
 
-The setup script installs apt packages when available, creates a Python virtual environment, installs Python dependencies, clones pinned SimplePIR and PIANO checkouts under `.tools/`, and installs the local runner adapters.
+Use a new output directory for every command. Archived observations are never overwritten by these entry points. A frozen-evidence audit reconstructs and checks recorded recovered bytes; it does not rerun cryptographic operations or reproduce the old timings. A smoke run checks the executable pipeline and is not a substitute for the manuscript's repeated experiments.
 
-## Main experiment commands
+Use Python 3.12+ for the portable entry points. Install figure/theory dependencies with `python3 -m pip install -r requirements.txt`. Building/running the native backends requires Linux, a C++17 toolchain, CMake >=3.22, Go >=1.18, and OpenSSL/zlib/zstd development libraries. The VBPIR build helper uses pinned SEAL 4.3.2; an existing compatible installation can be supplied. See [native reproduction](docs/NATIVE_REPRODUCTION.md) for prerequisites, source pins, full-run commands, memory requirements, and output definitions, and [supplement reproduction](docs/SUPPLEMENT_REPRODUCTION.md) for the supporting checks.
 
-Structural and layout suite:
+## Reported experiment scope
 
-```bash
-python scripts/run_real_smt_final_experiment_suite.py
-```
+The main numerical cohorts comprise 72 independent processes, 720 measured proofs, and 144 warmups:
 
-SimplePIR backend evidence:
+- SimplePIR, uniform 1k/10k/100k occupied leaves: AB, PBC, Flat-active, First-fit (36 processes).
+- VBPIR, the same uniform snapshots: AB and PBC (18 processes).
+- VBPIR, complete trees of heights 10 and 14: AB, PBC, and official TreePIR CSA (18 processes).
 
-```bash
-python scripts/run_real_smt_final_experiment_suite.py --run-simplepir
-python scripts/run_real_smt_multi_pir_pbc_battle.py
-```
+Each process uses two warmups and ten measured targets. Compare layouts within a backend. Reported processing time includes routing, cryptographic processing, serialization, recovery, and root verification in one process; network delay and initialization are separate. Initialization, client state, encoded server storage, and the Full-cache reference are retained.
 
-TreePIR-compatible PBC active-record baseline:
+The source archives also contain prefix-concentrated and clustered sensitivity cohorts. All executed records in those cohorts are retained, including the partial SimplePIR PBC routing run. The independent verifier reports 83 complete SimplePIR processes and one audited partial process, not an all-successful full suite. The 72-process main cohort has its own explicit selection manifest. See [results and provenance](docs/RESULTS.md).
 
-```bash
-python scripts/run_treepir_pbc_active_backend.py \
-  --workloads all \
-  --heights 128 \
-  --seeds 73000,83000,93000 \
-  --queries 50 \
-  --output-dir examples/treepir_pbc_active_linux
-```
+## Repository structure
 
-Add `--run-simplepir --simplepir-root external/simplepir --go-exe external/go/bin/go`
-after running the Linux dependency setup to execute the generated PBC manifests
-through the same SimplePIR bridge. See
-`notes/treepir_pbc_active_backend_runbook.md`.
+- `reproduce/`: portable build, fresh-run, and frozen-audit entry points.
+- `scripts/`: experiment code and the dependency closure used by retained studies.
+- `examples/tifs_simplepir_extension_20260911/`: native 32-byte SimplePIR implementation, inputs, observations, and analyses.
+- `examples/tifs_external_extension_20260911/`: native VBPIR implementation, PBC/CSA sources, inputs, observations, and analyses.
+- Other selected `examples/` directories: evidence cited in the supplement.
+- `datasets/`: fixed input coordinate sets and their provenance.
+- `paper-results/`: current numerical table/figure generators, frozen summaries, and included vector figures.
+- `provenance/`: publication scope, original archive manifests, and declared release-copy transformations.
 
-PIANO backend evidence:
-
-```bash
-python scripts/run_piano_wsl_backend_from_layouts.py --queries 5 --timeout 300
-```
-
-Paper-facing real backend showcase:
-
-```bash
-python scripts/run_real_backend_showcase.py --workloads all --height 128 --backends simplepir,piano --query-samples 20
-```
-
-This command rebuilds the real SMT workload layouts and compares PBC-SMT
-against SparseTreePIR through executable SimplePIR and PIANO runners. It writes
-`examples/real_backend_showcase_raw.csv`,
-`examples/real_backend_showcase_summary.csv`, and
-`notes/real_backend_showcase_note.md`.
-
-Final repeated backend run for paper tables:
-
-```bash
-bash scripts/collect_linux_experiment_env.sh
-python scripts/run_real_backend_showcase_repeats.py --seeds 73000,83000,93000 --workloads all --height 128 --backends simplepir,piano --query-samples 50
-```
-
-Or run the same final checklist through one shell entrypoint:
-
-```bash
-bash scripts/run_final_linux_backend_experiments.sh
-```
-
-This produces per-seed backend results plus
-`examples/real_backend_showcase_repeats_summary.csv` and
-`notes/real_backend_showcase_repeats_note.md`. See
-`notes/linux_final_backend_runbook.md` for the final Linux checklist.
-
-For details, see `notes/linux_experiment_migration_plan.md`.
-
-## S&P full Linux experiment suite
-
-For a full paper-facing rerun aimed at the IEEE S&P submission, use:
-
-```bash
-bash scripts/run_sp_full_linux_experiments.sh smoke
-bash scripts/run_sp_full_linux_experiments.sh full
-```
-
-The full suite runs the real SMT layout study, exact small-instance
-ActiveBalance checks, scale/distribution sensitivity, paired SimplePIR/PIANO
-backend repeats, and end-to-end accounting. To include the optional official
-TreePIR artifact baseline, run:
-
-```bash
-SPARSETREEPIR_WITH_EXTRA_SETUP=1 SPARSETREEPIR_RUN_TREEPIR=1 \
-  bash scripts/run_sp_full_linux_experiments.sh full
-```
-
-See `notes/sp_full_linux_experiment_runbook.md` for outputs and overrides.
-
-## Backend scope
-
-The Linux setup intentionally installs only the current executable SparseTreePIR
-backend integrations: SimplePIR and PIANO. Other backend attempts and artifact
-checks are documented separately in `notes/backend_integration_status.md`.
-
-To fetch and inspect additional real backend artifacts on Linux, run:
-
-```bash
-bash scripts/setup_linux_extra_backend_sources.sh
-python scripts/check_linux_backend_readiness.py
-```
-
-See `notes/linux_extra_backend_runbook.md` for the suggested order and scope.
+Third-party implementations remain subject to their original notices; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Source availability alone does not grant an additional project-wide license.

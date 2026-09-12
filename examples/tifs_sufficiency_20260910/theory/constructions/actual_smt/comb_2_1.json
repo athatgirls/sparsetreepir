@@ -1,0 +1,119 @@
+{
+  "shape": [
+    [],
+    [
+      [],
+      []
+    ]
+  ],
+  "height": 2,
+  "m": 2,
+  "N": 4,
+  "slots": [
+    0,
+    2,
+    3
+  ],
+  "capacity": 2,
+  "colors_preorder": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "loads": [
+    2,
+    2
+  ],
+  "root_hex": "b5431cad8cb5dcdeaaa232b113632ed1e8730f82aa23e605203e565e0d385211",
+  "interval_forest_matches": true,
+  "all_target_proofs_verified": true,
+  "records": [
+    {
+      "heap_index": "0x3",
+      "interval": [
+        0,
+        0
+      ],
+      "color": 0,
+      "digest_hex": "4464fbea2c5c90a02faace1592ab7b8bc29105ba418ae5c7240548e147b3e6c7"
+    },
+    {
+      "heap_index": "0x2",
+      "interval": [
+        1,
+        2
+      ],
+      "color": 0,
+      "digest_hex": "6219f6911d3a376e1711b87b8309ff4302d4955d9db9182391e1cdb3f5aefcfd"
+    },
+    {
+      "heap_index": "0x7",
+      "interval": [
+        1,
+        1
+      ],
+      "color": 1,
+      "digest_hex": "c42cdbb64469a52299bf4f1e427e4be05ecebabc66e462a9d4fce639a2a2d390"
+    },
+    {
+      "heap_index": "0x6",
+      "interval": [
+        2,
+        2
+      ],
+      "color": 1,
+      "digest_hex": "56b4723a870e715b5e549d18ee2e8f4e59d02ed2622eaad37dc59fed074fff13"
+    }
+  ],
+  "proofs": [
+    {
+      "slot": 0,
+      "real_siblings": [
+        {
+          "level": 1,
+          "heap_index": "0x3",
+          "digest_hex": "4464fbea2c5c90a02faace1592ab7b8bc29105ba418ae5c7240548e147b3e6c7",
+          "color": 0
+        }
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 2,
+      "real_siblings": [
+        {
+          "level": 0,
+          "heap_index": "0x7",
+          "digest_hex": "c42cdbb64469a52299bf4f1e427e4be05ecebabc66e462a9d4fce639a2a2d390",
+          "color": 1
+        },
+        {
+          "level": 1,
+          "heap_index": "0x2",
+          "digest_hex": "6219f6911d3a376e1711b87b8309ff4302d4955d9db9182391e1cdb3f5aefcfd",
+          "color": 0
+        }
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 3,
+      "real_siblings": [
+        {
+          "level": 0,
+          "heap_index": "0x6",
+          "digest_hex": "56b4723a870e715b5e549d18ee2e8f4e59d02ed2622eaad37dc59fed074fff13",
+          "color": 1
+        },
+        {
+          "level": 1,
+          "heap_index": "0x2",
+          "digest_hex": "6219f6911d3a376e1711b87b8309ff4302d4955d9db9182391e1cdb3f5aefcfd",
+          "color": 0
+        }
+      ],
+      "root_verified": true
+    }
+  ]
+}

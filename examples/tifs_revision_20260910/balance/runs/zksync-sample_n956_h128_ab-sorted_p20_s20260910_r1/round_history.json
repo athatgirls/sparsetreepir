@@ -1,0 +1,128 @@
+[
+  {
+    "coloring_s": 0.001882400014437735,
+    "actual_passes": 0,
+    "actual_moves": 0,
+    "max_bucket": 556,
+    "U_over_B": 3.7823129251700682,
+    "valid": true,
+    "converged": false
+  },
+  {
+    "coloring_s": 0.014923200011253357,
+    "actual_passes": 1,
+    "actual_moves": 1,
+    "max_bucket": 299,
+    "U_over_B": 2.0340136054421767,
+    "valid": true,
+    "converged": false
+  },
+  {
+    "coloring_s": 0.02833379991352558,
+    "actual_passes": 2,
+    "actual_moves": 2,
+    "max_bucket": 259,
+    "U_over_B": 1.7619047619047619,
+    "valid": true,
+    "converged": false
+  },
+  {
+    "coloring_s": 0.04090429993811995,
+    "actual_passes": 3,
+    "actual_moves": 3,
+    "max_bucket": 178,
+    "U_over_B": 1.2108843537414966,
+    "valid": true,
+    "converged": false
+  },
+  {
+    "coloring_s": 0.054052699939347804,
+    "actual_passes": 4,
+    "actual_moves": 4,
+    "max_bucket": 167,
+    "U_over_B": 1.1360544217687074,
+    "valid": true,
+    "converged": false
+  },
+  {
+    "coloring_s": 0.06794629991054535,
+    "actual_passes": 5,
+    "actual_moves": 5,
+    "max_bucket": 160,
+    "U_over_B": 1.08843537414966,
+    "valid": true,
+    "converged": false
+  },
+  {
+    "coloring_s": 0.08387719991151243,
+    "actual_passes": 6,
+    "actual_moves": 6,
+    "max_bucket": 152,
+    "U_over_B": 1.034013605442177,
+    "valid": true,
+    "converged": false
+  },
+  {
+    "coloring_s": 0.09681259992066771,
+    "actual_passes": 7,
+    "actual_moves": 7,
+    "max_bucket": 151,
+    "U_over_B": 1.0272108843537415,
+    "valid": true,
+    "converged": false
+  },
+  {
+    "coloring_s": 0.111928999889642,
+    "actual_passes": 8,
+    "actual_moves": 8,
+    "max_bucket": 149,
+    "U_over_B": 1.0136054421768708,
+    "valid": true,
+    "converged": false
+  },
+  {
+    "coloring_s": 0.12343589996453375,
+    "actual_passes": 9,
+    "actual_moves": 9,
+    "max_bucket": 148,
+    "U_over_B": 1.0068027210884354,
+    "valid": true,
+    "converged": false
+  },
+  {
+    "coloring_s": 0.13127529993653297,
+    "actual_passes": 10,
+    "actual_moves": 10,
+    "max_bucket": 148,
+    "U_over_B": 1.0068027210884354,
+    "valid": true,
+    "converged": false
+  },
+  {
+    "coloring_s": 0.1409723999677226,
+    "actual_passes": 11,
+    "actual_moves": 11,
+    "max_bucket": 148,
+    "U_over_B": 1.0068027210884354,
+    "valid": true,
+    "converged": false
+  },
+  {
+    "coloring_s": 0.15260819997638464,
+    "actual_passes": 12,
+    "actual_moves": 12,
+    "max_bucket": 147,
+    "U_over_B": 1.0,
+    "valid": true,
+    "converged": false
+  },
+  {
+    "coloring_s": 0.16379639995284379,
+    "actual_passes": 13,
+    "actual_moves": 12,
+    "max_bucket": 147,
+    "U_over_B": 1.0,
+    "valid": true,
+    "converged": true
+  }
+]

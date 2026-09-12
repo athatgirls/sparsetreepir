@@ -1,0 +1,143 @@
+{
+  "status": "complete",
+  "case": "complete_h14",
+  "n": 16384,
+  "height": 14,
+  "N": 32766,
+  "m": 14,
+  "ab_loads": [
+    2305,
+    2351,
+    2348,
+    2315,
+    2346,
+    2353,
+    2337,
+    2329,
+    2344,
+    2354,
+    2349,
+    2351,
+    2344,
+    2340
+  ],
+  "ab_max_bucket": 2354,
+  "ab_scan_budget": 20,
+  "ab_reported_passes": 20,
+  "ab_reported_moves": 20,
+  "algorithm": "unchanged tifs_revision_smt.build_layout -> original best_count_profile_balanced (Hungarian)",
+  "root_hex": "19a3ac9f1b0e342784c08e4ee9e90185fd863206cc165736b2396b571d31246a",
+  "hash_format": "sha256:leaf=H(00||value),internal=H(01||left||right),empty_leaf=H(02)",
+  "generator": {
+    "generator": "all logical coordinates",
+    "collisions": 0
+  },
+  "target_pool": 32,
+  "target_rank_ids": [
+    630,
+    640,
+    1058,
+    1085,
+    1138,
+    1482,
+    2138,
+    2898,
+    2951,
+    2995,
+    6346,
+    6424,
+    6910,
+    7304,
+    7462,
+    7832,
+    8104,
+    8219,
+    8477,
+    9368,
+    9421,
+    9534,
+    11115,
+    11965,
+    12050,
+    13990,
+    14570,
+    14808,
+    14955,
+    15000,
+    15935,
+    16144
+  ],
+  "checks": {
+    "ab": {
+      "all_target_routes_checked": 16384,
+      "root_proofs_checked": 16384,
+      "root_sampling": "all",
+      "wrong_used_digest_rejections": 16384,
+      "routing_independent_of_target_expectations": true
+    },
+    "treepir": {
+      "all_target_routes_checked": 16384,
+      "root_proofs_checked": 16384,
+      "root_sampling": "all",
+      "wrong_used_digest_rejections": 16384,
+      "routing_independent_of_target_expectations": true
+    }
+  },
+  "build_layout_wall_s": 4.1962345029999994,
+  "build_layout_stages_ms": {
+    "hash_tree": 21.84222799999702,
+    "active_extraction": 117.55171499999051,
+    "forest_build": 55.74802900000009,
+    "coloring": 3978.4993490000033,
+    "metadata_build": 20.227337999983774
+  },
+  "total_preparation_wall_s": 8.273263776000022,
+  "peak_process_rss_bytes": 233189376,
+  "address_space_limit_bytes": 10737418240,
+  "environment": {
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "python": "3.12.3"
+  },
+  "sources_sha256": {
+    "scripts/prepare_external_extension_20260911.py": "067c072c331c4394ae445e1105f4751b00da749c8f886678f7f1d90e1884474a",
+    "scripts/tifs_revision_smt.py": "f0dc6c6c9af2d7a9c032991f5407c7cca79e7353394d6a18d9f8e8bb5e72c740",
+    "scripts/fixed_sparse_tree_coloring.py": "0e835f0d26bf71a78e0652f53c73bf942f071af0df68bd32cd496d0d8bef7cf0",
+    "scripts/generate_full_sparse_smt_example.py": "5cd3630af580fe03214fd9816ff66601e3f32e79a4e3d304b445bd8f12d17b1d",
+    "scripts/run_height_sparsity_profile_balance_experiment.py": "6e13f887cbe283ade74aad6cd2174aa3c1d66001ada2106fc27935b3284f63f5",
+    "scripts/run_sparse_smt_pir_backend_experiment.py": "2f0ae62851d8d3fe1219183e0a26bead1a5fcc9607612a15371927aacab248fb",
+    "scripts/contribution_gate_csa_20260910.java": "6028930b85e0ad9720c20f4494009b3f24be722c19c8b3234b4eb918dc1f851c",
+    "scripts/contribution_gate_index_20260910.java": "2e80f5ca2583283684f3eedee02a2000ff5daa2ed9d3c146e65b6b116d6d9e3e"
+  },
+  "outputs": {
+    "ab.json": {
+      "sha256": "52ca3a9b8b3acfee782cbf88f5a968a9870c61f81a84a1a267dee153cf4b962d",
+      "bytes": 6232870
+    },
+    "pbc.json": {
+      "sha256": "8959990961bc95a743e4b8e54c175101b6aa846179bb661807a06c980045625b",
+      "bytes": 4331713
+    },
+    "treepir.json": {
+      "sha256": "fd8135c884789ad9b047fa0cfb610c5a4d8bdb90d1a645abd9db4979d54dad04",
+      "bytes": 6232927
+    }
+  },
+  "scope": "Synthetic/complete experimental SMT input generation and direct-hash validation only; no PIR or latency benchmark performed.",
+  "pbc_scope": "Global records/intervals only; original external PBC implementation must construct its own placement and real/dummy routing.",
+  "treepir_loads": [
+    2340,
+    2340,
+    2340,
+    2340,
+    2340,
+    2340,
+    2340,
+    2340,
+    2341,
+    2341,
+    2341,
+    2341,
+    2341,
+    2341
+  ]
+}

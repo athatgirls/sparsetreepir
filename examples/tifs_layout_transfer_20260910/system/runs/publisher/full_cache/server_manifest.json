@@ -1,0 +1,8 @@
+{
+  "method": "full_cache",
+  "height": 128,
+  "metadata_file": "layout_metadata.bin",
+  "slots_file": "occupied_slots.bin",
+  "subdatabases": [],
+  "cache_file": "full_active_cache.bin"
+}

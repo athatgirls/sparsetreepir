@@ -1,0 +1,466 @@
+[
+  {
+    "slot": 0,
+    "records": [
+      {
+        "level": 0,
+        "node": 17,
+        "color": 2,
+        "position": 0
+      },
+      {
+        "level": 1,
+        "node": 9,
+        "color": 1,
+        "position": 0
+      },
+      {
+        "level": 2,
+        "node": 5,
+        "color": 3,
+        "position": 0
+      },
+      {
+        "level": 3,
+        "node": 3,
+        "color": 4,
+        "position": 0
+      }
+    ]
+  },
+  {
+    "slot": 1,
+    "records": [
+      {
+        "level": 0,
+        "node": 16,
+        "color": 2,
+        "position": 1
+      },
+      {
+        "level": 1,
+        "node": 9,
+        "color": 1,
+        "position": 0
+      },
+      {
+        "level": 2,
+        "node": 5,
+        "color": 3,
+        "position": 0
+      },
+      {
+        "level": 3,
+        "node": 3,
+        "color": 4,
+        "position": 0
+      }
+    ]
+  },
+  {
+    "slot": 2,
+    "records": [
+      {
+        "level": 0,
+        "node": 19,
+        "color": 2,
+        "position": 2
+      },
+      {
+        "level": 1,
+        "node": 8,
+        "color": 1,
+        "position": 1
+      },
+      {
+        "level": 2,
+        "node": 5,
+        "color": 3,
+        "position": 0
+      },
+      {
+        "level": 3,
+        "node": 3,
+        "color": 4,
+        "position": 0
+      }
+    ]
+  },
+  {
+    "slot": 3,
+    "records": [
+      {
+        "level": 0,
+        "node": 18,
+        "color": 2,
+        "position": 3
+      },
+      {
+        "level": 1,
+        "node": 8,
+        "color": 1,
+        "position": 1
+      },
+      {
+        "level": 2,
+        "node": 5,
+        "color": 3,
+        "position": 0
+      },
+      {
+        "level": 3,
+        "node": 3,
+        "color": 4,
+        "position": 0
+      }
+    ]
+  },
+  {
+    "slot": 4,
+    "records": [
+      {
+        "level": 0,
+        "node": 21,
+        "color": 1,
+        "position": 2
+      },
+      {
+        "level": 1,
+        "node": 11,
+        "color": 2,
+        "position": 4
+      },
+      {
+        "level": 2,
+        "node": 4,
+        "color": 3,
+        "position": 1
+      },
+      {
+        "level": 3,
+        "node": 3,
+        "color": 4,
+        "position": 0
+      }
+    ]
+  },
+  {
+    "slot": 5,
+    "records": [
+      {
+        "level": 0,
+        "node": 20,
+        "color": 1,
+        "position": 3
+      },
+      {
+        "level": 1,
+        "node": 11,
+        "color": 2,
+        "position": 4
+      },
+      {
+        "level": 2,
+        "node": 4,
+        "color": 3,
+        "position": 1
+      },
+      {
+        "level": 3,
+        "node": 3,
+        "color": 4,
+        "position": 0
+      }
+    ]
+  },
+  {
+    "slot": 6,
+    "records": [
+      {
+        "level": 0,
+        "node": 23,
+        "color": 1,
+        "position": 4
+      },
+      {
+        "level": 1,
+        "node": 10,
+        "color": 2,
+        "position": 5
+      },
+      {
+        "level": 2,
+        "node": 4,
+        "color": 3,
+        "position": 1
+      },
+      {
+        "level": 3,
+        "node": 3,
+        "color": 4,
+        "position": 0
+      }
+    ]
+  },
+  {
+    "slot": 7,
+    "records": [
+      {
+        "level": 0,
+        "node": 22,
+        "color": 1,
+        "position": 5
+      },
+      {
+        "level": 1,
+        "node": 10,
+        "color": 2,
+        "position": 5
+      },
+      {
+        "level": 2,
+        "node": 4,
+        "color": 3,
+        "position": 1
+      },
+      {
+        "level": 3,
+        "node": 3,
+        "color": 4,
+        "position": 0
+      }
+    ]
+  },
+  {
+    "slot": 8,
+    "records": [
+      {
+        "level": 0,
+        "node": 25,
+        "color": 3,
+        "position": 2
+      },
+      {
+        "level": 1,
+        "node": 13,
+        "color": 4,
+        "position": 1
+      },
+      {
+        "level": 2,
+        "node": 7,
+        "color": 2,
+        "position": 6
+      },
+      {
+        "level": 3,
+        "node": 2,
+        "color": 1,
+        "position": 6
+      }
+    ]
+  },
+  {
+    "slot": 9,
+    "records": [
+      {
+        "level": 0,
+        "node": 24,
+        "color": 3,
+        "position": 3
+      },
+      {
+        "level": 1,
+        "node": 13,
+        "color": 4,
+        "position": 1
+      },
+      {
+        "level": 2,
+        "node": 7,
+        "color": 2,
+        "position": 6
+      },
+      {
+        "level": 3,
+        "node": 2,
+        "color": 1,
+        "position": 6
+      }
+    ]
+  },
+  {
+    "slot": 10,
+    "records": [
+      {
+        "level": 0,
+        "node": 27,
+        "color": 3,
+        "position": 4
+      },
+      {
+        "level": 1,
+        "node": 12,
+        "color": 4,
+        "position": 2
+      },
+      {
+        "level": 2,
+        "node": 7,
+        "color": 2,
+        "position": 6
+      },
+      {
+        "level": 3,
+        "node": 2,
+        "color": 1,
+        "position": 6
+      }
+    ]
+  },
+  {
+    "slot": 11,
+    "records": [
+      {
+        "level": 0,
+        "node": 26,
+        "color": 3,
+        "position": 5
+      },
+      {
+        "level": 1,
+        "node": 12,
+        "color": 4,
+        "position": 2
+      },
+      {
+        "level": 2,
+        "node": 7,
+        "color": 2,
+        "position": 6
+      },
+      {
+        "level": 3,
+        "node": 2,
+        "color": 1,
+        "position": 6
+      }
+    ]
+  },
+  {
+    "slot": 12,
+    "records": [
+      {
+        "level": 0,
+        "node": 29,
+        "color": 4,
+        "position": 3
+      },
+      {
+        "level": 1,
+        "node": 15,
+        "color": 3,
+        "position": 6
+      },
+      {
+        "level": 2,
+        "node": 6,
+        "color": 2,
+        "position": 7
+      },
+      {
+        "level": 3,
+        "node": 2,
+        "color": 1,
+        "position": 6
+      }
+    ]
+  },
+  {
+    "slot": 13,
+    "records": [
+      {
+        "level": 0,
+        "node": 28,
+        "color": 4,
+        "position": 4
+      },
+      {
+        "level": 1,
+        "node": 15,
+        "color": 3,
+        "position": 6
+      },
+      {
+        "level": 2,
+        "node": 6,
+        "color": 2,
+        "position": 7
+      },
+      {
+        "level": 3,
+        "node": 2,
+        "color": 1,
+        "position": 6
+      }
+    ]
+  },
+  {
+    "slot": 14,
+    "records": [
+      {
+        "level": 0,
+        "node": 31,
+        "color": 4,
+        "position": 5
+      },
+      {
+        "level": 1,
+        "node": 14,
+        "color": 3,
+        "position": 7
+      },
+      {
+        "level": 2,
+        "node": 6,
+        "color": 2,
+        "position": 7
+      },
+      {
+        "level": 3,
+        "node": 2,
+        "color": 1,
+        "position": 6
+      }
+    ]
+  },
+  {
+    "slot": 15,
+    "records": [
+      {
+        "level": 0,
+        "node": 30,
+        "color": 4,
+        "position": 6
+      },
+      {
+        "level": 1,
+        "node": 14,
+        "color": 3,
+        "position": 7
+      },
+      {
+        "level": 2,
+        "node": 6,
+        "color": 2,
+        "position": 7
+      },
+      {
+        "level": 3,
+        "node": 2,
+        "color": 1,
+        "position": 6
+      }
+    ]
+  }
+]

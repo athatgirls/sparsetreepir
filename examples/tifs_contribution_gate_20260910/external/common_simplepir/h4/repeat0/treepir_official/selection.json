@@ -1,0 +1,27 @@
+{
+  "targets": [
+    11,
+    10,
+    1,
+    7,
+    3,
+    0,
+    15,
+    4,
+    12,
+    2,
+    9,
+    13,
+    8,
+    6,
+    5,
+    14
+  ],
+  "method_order": [
+    "treepir_official",
+    "first_fit",
+    "activebalance"
+  ],
+  "repeat": 0,
+  "seed": 20260911040
+}

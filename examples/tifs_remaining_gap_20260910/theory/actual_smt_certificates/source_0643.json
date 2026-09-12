@@ -1,0 +1,509 @@
+{
+  "height": 5,
+  "slots": [
+    0,
+    8,
+    12,
+    14,
+    16,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
+  ],
+  "shape": [
+    [
+      [],
+      [
+        [],
+        [
+          [],
+          []
+        ]
+      ]
+    ],
+    [
+      [],
+      [
+        [
+          [
+            [],
+            []
+          ],
+          [
+            [],
+            []
+          ]
+        ],
+        [
+          [
+            [],
+            []
+          ],
+          [
+            [],
+            []
+          ]
+        ]
+      ]
+    ]
+  ],
+  "N": 24,
+  "n": 13,
+  "m": 5,
+  "B": 5,
+  "C": 5,
+  "B_star": 5,
+  "hierarchical_bound": 5,
+  "C_witness": null,
+  "hierarchical_witness": null,
+  "optimum": 6,
+  "witness_loads": [
+    5,
+    6,
+    3,
+    4,
+    6
+  ],
+  "root_hex": "c423c18ddfc969b4dba8d5f07f6a0488860fba48aa417ab9a86384fa4d7c6b3c",
+  "actual_interval_forest_matches_abstract_shape": true,
+  "every_occupied_target_proof_verified": true,
+  "records": [
+    {
+      "heap_index": "0x3",
+      "interval": [
+        0,
+        3
+      ],
+      "color": 1,
+      "digest_hex": "3bb17cc784589e3f4e52c3a47a806e5c67231a01323bcdabb44aa3137fdab8b8"
+    },
+    {
+      "heap_index": "0x5",
+      "interval": [
+        0,
+        0
+      ],
+      "color": 4,
+      "digest_hex": "35b7fff323f4556c0085a01293a04074acaa5bf9c22ba6793de2830ae0990ca5"
+    },
+    {
+      "heap_index": "0x4",
+      "interval": [
+        1,
+        3
+      ],
+      "color": 4,
+      "digest_hex": "43699b3720f14686b119d531702810093f46ca0aa25ba3fd305df69171d9fb47"
+    },
+    {
+      "heap_index": "0xb",
+      "interval": [
+        1,
+        1
+      ],
+      "color": 3,
+      "digest_hex": "60dd708415b2e13a8f10e8ff35e450f8c07b6f02d5f74a1b5f7f146d80bec643"
+    },
+    {
+      "heap_index": "0xa",
+      "interval": [
+        2,
+        3
+      ],
+      "color": 3,
+      "digest_hex": "e7db13a82b40e1204d592c091e9ab5ca45d35ea60c8f1c2b691b5ae743bf2713"
+    },
+    {
+      "heap_index": "0x17",
+      "interval": [
+        2,
+        2
+      ],
+      "color": 2,
+      "digest_hex": "2957c6b534a099ff05c2b0afc5f6f6974bb6f58f1e778f94e088f503bb800b83"
+    },
+    {
+      "heap_index": "0x16",
+      "interval": [
+        3,
+        3
+      ],
+      "color": 2,
+      "digest_hex": "007e01caf2d7ff90243eb75854e5214b7666e598687f2d64f623d782bacbf78a"
+    },
+    {
+      "heap_index": "0x2",
+      "interval": [
+        4,
+        12
+      ],
+      "color": 2,
+      "digest_hex": "f4858733a330ad8524e231f7c9fcb6626580095f56c4a65ca1766aa794e0339c"
+    },
+    {
+      "heap_index": "0x7",
+      "interval": [
+        4,
+        4
+      ],
+      "color": 3,
+      "digest_hex": "6e62fb20010c801c52bf096de8b1485cfa1e26b296034a4707dff3b2c38a1aac"
+    },
+    {
+      "heap_index": "0x6",
+      "interval": [
+        5,
+        12
+      ],
+      "color": 3,
+      "digest_hex": "b1405288960f3b1b4cb691c9388c136c0c442e73ef7fa2846134504656efd530"
+    },
+    {
+      "heap_index": "0xf",
+      "interval": [
+        5,
+        8
+      ],
+      "color": 0,
+      "digest_hex": "362702002daba04e5d7e2a60ed9da6c6f8cd2a3a8094d44b8a988c42bb983764"
+    },
+    {
+      "heap_index": "0x1d",
+      "interval": [
+        5,
+        6
+      ],
+      "color": 1,
+      "digest_hex": "aac782beace56a959b4dbb6e7eb4b71721163ab3431c25e8535eb70f651b26c3"
+    },
+    {
+      "heap_index": "0x39",
+      "interval": [
+        5,
+        5
+      ],
+      "color": 4,
+      "digest_hex": "c7789eddfb7f2b131332e70e6e76707f8cb3303b20b8aa7707f215e5998b3944"
+    },
+    {
+      "heap_index": "0x38",
+      "interval": [
+        6,
+        6
+      ],
+      "color": 4,
+      "digest_hex": "1f0a41d5e65ca084c89c00d11dc754222b08c23ca612ca98100e9b0f54f9de8d"
+    },
+    {
+      "heap_index": "0x1c",
+      "interval": [
+        7,
+        8
+      ],
+      "color": 4,
+      "digest_hex": "5349514b8bc6586f8b4e7dcb6ceaefe3ffc75f09594839af48e73de848f585a5"
+    },
+    {
+      "heap_index": "0x3b",
+      "interval": [
+        7,
+        7
+      ],
+      "color": 1,
+      "digest_hex": "e05b66c06945f9e20a5796a50db992cad29336de1a225fcfdc63e94621526da1"
+    },
+    {
+      "heap_index": "0x3a",
+      "interval": [
+        8,
+        8
+      ],
+      "color": 1,
+      "digest_hex": "20b979c323a945bd5ccfaa94d2681c67a1e9020509c088587a6e6bc6af1bb13b"
+    },
+    {
+      "heap_index": "0xe",
+      "interval": [
+        9,
+        12
+      ],
+      "color": 4,
+      "digest_hex": "678d231a2551f09fc5823e9a6f216aac9a1f4697f47dbe471452dc2fef5839d2"
+    },
+    {
+      "heap_index": "0x1f",
+      "interval": [
+        9,
+        10
+      ],
+      "color": 1,
+      "digest_hex": "fc5b5e7ba7b0d3271209ab051fd4d3270a67862c36d6249aa392c791b99c8d7c"
+    },
+    {
+      "heap_index": "0x3d",
+      "interval": [
+        9,
+        9
+      ],
+      "color": 0,
+      "digest_hex": "4a99e24bf36da9991d654d65a7c322774946da8a6ddaf57321055a4ba284d27e"
+    },
+    {
+      "heap_index": "0x3c",
+      "interval": [
+        10,
+        10
+      ],
+      "color": 0,
+      "digest_hex": "bc06b6fdf5a8c051e14c0592638c2e66c8855308fde90cb0830e005feab3a9f0"
+    },
+    {
+      "heap_index": "0x1e",
+      "interval": [
+        11,
+        12
+      ],
+      "color": 1,
+      "digest_hex": "4c3754feb5c825c23725a724e32bc5570e3c354ba9ef8a19ca38b4fdf48abc3f"
+    },
+    {
+      "heap_index": "0x3f",
+      "interval": [
+        11,
+        11
+      ],
+      "color": 0,
+      "digest_hex": "8e7d558cd5a116984cabb2fc555b7570fbc1cd197a867b887bbdd0aa8c8c6249"
+    },
+    {
+      "heap_index": "0x3e",
+      "interval": [
+        12,
+        12
+      ],
+      "color": 0,
+      "digest_hex": "3aadaf26ac683e56b6a0acaf002e2a7401c4d16413b00e186f3800e5be5bfab8"
+    }
+  ],
+  "proofs": [
+    {
+      "slot": 0,
+      "levels": [
+        3,
+        4
+      ],
+      "colors": [
+        4,
+        1
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 8,
+      "levels": [
+        2,
+        3,
+        4
+      ],
+      "colors": [
+        3,
+        4,
+        1
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 12,
+      "levels": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "colors": [
+        2,
+        3,
+        4,
+        1
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 14,
+      "levels": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "colors": [
+        2,
+        3,
+        4,
+        1
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 16,
+      "levels": [
+        3,
+        4
+      ],
+      "colors": [
+        3,
+        2
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 24,
+      "levels": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "colors": [
+        4,
+        1,
+        0,
+        3,
+        2
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 25,
+      "levels": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "colors": [
+        4,
+        1,
+        0,
+        3,
+        2
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 26,
+      "levels": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "colors": [
+        1,
+        4,
+        0,
+        3,
+        2
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 27,
+      "levels": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "colors": [
+        1,
+        4,
+        0,
+        3,
+        2
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 28,
+      "levels": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "colors": [
+        0,
+        1,
+        4,
+        3,
+        2
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 29,
+      "levels": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "colors": [
+        0,
+        1,
+        4,
+        3,
+        2
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 30,
+      "levels": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "colors": [
+        0,
+        1,
+        4,
+        3,
+        2
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 31,
+      "levels": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "colors": [
+        0,
+        1,
+        4,
+        3,
+        2
+      ],
+      "root_verified": true
+    }
+  ]
+}

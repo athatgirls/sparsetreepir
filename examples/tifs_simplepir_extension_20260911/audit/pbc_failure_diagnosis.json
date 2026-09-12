@@ -1,0 +1,4270 @@
+{
+  "case": "prefix64_n10000",
+  "classification": "fixed candidate graph has no complete matching",
+  "completed_measured_requests": 7,
+  "completed_warmups": 2,
+  "failed_stage": "measured",
+  "failed_target_one_based_number": 8,
+  "failed_target_zero_based_index": 7,
+  "failure_replay": {
+    "cuckoo_succeeded": false,
+    "cuckoo_trace": [
+      {
+        "action": "place_empty",
+        "bucket": 14,
+        "depth": 0,
+        "record": 1
+      },
+      {
+        "action": "place_empty",
+        "bucket": 21,
+        "depth": 0,
+        "record": 2
+      },
+      {
+        "action": "place_empty",
+        "bucket": 4,
+        "depth": 0,
+        "record": 9
+      },
+      {
+        "action": "place_empty",
+        "bucket": 16,
+        "depth": 0,
+        "record": 18
+      },
+      {
+        "action": "place_empty",
+        "bucket": 20,
+        "depth": 0,
+        "record": 40
+      },
+      {
+        "action": "place_empty",
+        "bucket": 25,
+        "depth": 0,
+        "record": 85
+      },
+      {
+        "action": "place_empty",
+        "bucket": 18,
+        "depth": 0,
+        "record": 171
+      },
+      {
+        "action": "place_empty",
+        "bucket": 19,
+        "depth": 0,
+        "record": 343
+      },
+      {
+        "action": "place_empty",
+        "bucket": 24,
+        "depth": 0,
+        "record": 687
+      },
+      {
+        "action": "place_empty",
+        "bucket": 7,
+        "depth": 0,
+        "record": 1375
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 0,
+        "displaced_record": 171,
+        "record": 2745
+      },
+      {
+        "action": "place_empty",
+        "bucket": 23,
+        "depth": 1,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 0,
+        "displaced_record": 2745,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 16,
+        "depth": 1,
+        "displaced_record": 18,
+        "record": 2745
+      },
+      {
+        "action": "place_empty",
+        "bucket": 8,
+        "depth": 2,
+        "record": 18
+      },
+      {
+        "action": "place_empty",
+        "bucket": 22,
+        "depth": 0,
+        "record": 16030
+      },
+      {
+        "action": "place_empty",
+        "bucket": 9,
+        "depth": 0,
+        "record": 2929
+      },
+      {
+        "action": "place_empty",
+        "bucket": 6,
+        "depth": 0,
+        "record": 13249
+      },
+      {
+        "action": "place_empty",
+        "bucket": 5,
+        "depth": 0,
+        "record": 7936
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 0,
+        "displaced_record": 2,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 1,
+        "displaced_record": 5264,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 2,
+        "displaced_record": 2,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 3,
+        "displaced_record": 1536,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 9,
+        "depth": 4,
+        "displaced_record": 2929,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 9,
+        "depth": 5,
+        "displaced_record": 1536,
+        "record": 2929
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 6,
+        "displaced_record": 171,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 7,
+        "displaced_record": 5264,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 8,
+        "displaced_record": 9,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 9,
+        "displaced_record": 5264,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 10,
+        "displaced_record": 9,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 11,
+        "displaced_record": 16030,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 12,
+        "displaced_record": 171,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 13,
+        "displaced_record": 1536,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 9,
+        "depth": 14,
+        "displaced_record": 2929,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 9,
+        "depth": 15,
+        "displaced_record": 1536,
+        "record": 2929
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 16,
+        "displaced_record": 2,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 17,
+        "displaced_record": 16030,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 18,
+        "displaced_record": 40,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 19,
+        "displaced_record": 13249,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 20,
+        "displaced_record": 40,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 21,
+        "displaced_record": 16030,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 22,
+        "displaced_record": 2,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 23,
+        "displaced_record": 16030,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 24,
+        "displaced_record": 9,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 25,
+        "displaced_record": 13249,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 26,
+        "displaced_record": 9,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 27,
+        "displaced_record": 5264,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 28,
+        "displaced_record": 85,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 29,
+        "displaced_record": 40,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 30,
+        "displaced_record": 13249,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 31,
+        "displaced_record": 1536,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 32,
+        "displaced_record": 13249,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 33,
+        "displaced_record": 1536,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 34,
+        "displaced_record": 171,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 35,
+        "displaced_record": 2,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 36,
+        "displaced_record": 5264,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 37,
+        "displaced_record": 171,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 38,
+        "displaced_record": 1536,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 9,
+        "depth": 39,
+        "displaced_record": 2929,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 9,
+        "depth": 40,
+        "displaced_record": 1536,
+        "record": 2929
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 41,
+        "displaced_record": 13249,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 42,
+        "displaced_record": 16030,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 43,
+        "displaced_record": 13249,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 44,
+        "displaced_record": 16030,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 45,
+        "displaced_record": 13249,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 46,
+        "displaced_record": 16030,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 47,
+        "displaced_record": 13249,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 48,
+        "displaced_record": 16030,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 49,
+        "displaced_record": 13249,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 50,
+        "displaced_record": 40,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 51,
+        "displaced_record": 85,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 52,
+        "displaced_record": 40,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 53,
+        "displaced_record": 85,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 54,
+        "displaced_record": 40,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 55,
+        "displaced_record": 85,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 56,
+        "displaced_record": 9,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 57,
+        "displaced_record": 85,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 58,
+        "displaced_record": 40,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 59,
+        "displaced_record": 85,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 60,
+        "displaced_record": 9,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 61,
+        "displaced_record": 85,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 62,
+        "displaced_record": 40,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 9,
+        "depth": 63,
+        "displaced_record": 2929,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 64,
+        "displaced_record": 16030,
+        "record": 2929
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 65,
+        "displaced_record": 85,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 66,
+        "displaced_record": 2,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 67,
+        "displaced_record": 1536,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 68,
+        "displaced_record": 2,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 69,
+        "displaced_record": 5264,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 70,
+        "displaced_record": 9,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 71,
+        "displaced_record": 2929,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 72,
+        "displaced_record": 171,
+        "record": 2929
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 73,
+        "displaced_record": 2,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 74,
+        "displaced_record": 85,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 75,
+        "displaced_record": 2,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 76,
+        "displaced_record": 1536,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 77,
+        "displaced_record": 2,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 78,
+        "displaced_record": 85,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 79,
+        "displaced_record": 16030,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 80,
+        "displaced_record": 85,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 81,
+        "displaced_record": 5264,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 82,
+        "displaced_record": 171,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 16,
+        "depth": 83,
+        "displaced_record": 2745,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 16,
+        "depth": 84,
+        "displaced_record": 171,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 16,
+        "depth": 85,
+        "displaced_record": 2745,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 16,
+        "depth": 86,
+        "displaced_record": 171,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 16,
+        "depth": 87,
+        "displaced_record": 2745,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 16,
+        "depth": 88,
+        "displaced_record": 171,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 16,
+        "depth": 89,
+        "displaced_record": 2745,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 90,
+        "displaced_record": 2,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 91,
+        "displaced_record": 2745,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 92,
+        "displaced_record": 5264,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 93,
+        "displaced_record": 2,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 94,
+        "displaced_record": 5264,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 95,
+        "displaced_record": 85,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 96,
+        "displaced_record": 2,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 97,
+        "displaced_record": 85,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 98,
+        "displaced_record": 2,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 99,
+        "displaced_record": 2745,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 100,
+        "displaced_record": 2,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 101,
+        "displaced_record": 2745,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 102,
+        "displaced_record": 2,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 103,
+        "displaced_record": 85,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 104,
+        "displaced_record": 2,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 105,
+        "displaced_record": 1536,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 106,
+        "displaced_record": 2,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 107,
+        "displaced_record": 2745,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 108,
+        "displaced_record": 2,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 109,
+        "displaced_record": 1536,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 9,
+        "depth": 110,
+        "displaced_record": 40,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 9,
+        "depth": 111,
+        "displaced_record": 1536,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 112,
+        "displaced_record": 2,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 113,
+        "displaced_record": 85,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 114,
+        "displaced_record": 5264,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 115,
+        "displaced_record": 2,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 116,
+        "displaced_record": 2745,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 117,
+        "displaced_record": 5264,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 118,
+        "displaced_record": 2745,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 16,
+        "depth": 119,
+        "displaced_record": 171,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 16,
+        "depth": 120,
+        "displaced_record": 2745,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 121,
+        "displaced_record": 5264,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 122,
+        "displaced_record": 2745,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 123,
+        "displaced_record": 2,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 124,
+        "displaced_record": 5264,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 125,
+        "displaced_record": 2745,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 126,
+        "displaced_record": 2,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 127,
+        "displaced_record": 2745,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 128,
+        "displaced_record": 5264,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 129,
+        "displaced_record": 2745,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 130,
+        "displaced_record": 5264,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 131,
+        "displaced_record": 85,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 132,
+        "displaced_record": 5264,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 133,
+        "displaced_record": 2,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 134,
+        "displaced_record": 2745,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 16,
+        "depth": 135,
+        "displaced_record": 171,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 16,
+        "depth": 136,
+        "displaced_record": 2745,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 16,
+        "depth": 137,
+        "displaced_record": 171,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 138,
+        "displaced_record": 2929,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 9,
+        "depth": 139,
+        "displaced_record": 40,
+        "record": 2929
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 140,
+        "displaced_record": 13249,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 141,
+        "displaced_record": 40,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 9,
+        "depth": 142,
+        "displaced_record": 2929,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 143,
+        "displaced_record": 171,
+        "record": 2929
+      },
+      {
+        "action": "evict",
+        "bucket": 16,
+        "depth": 144,
+        "displaced_record": 2745,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 16,
+        "depth": 145,
+        "displaced_record": 171,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 146,
+        "displaced_record": 2,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 147,
+        "displaced_record": 171,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 148,
+        "displaced_record": 2,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 149,
+        "displaced_record": 5264,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 150,
+        "displaced_record": 171,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 16,
+        "depth": 151,
+        "displaced_record": 2745,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 16,
+        "depth": 152,
+        "displaced_record": 171,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 153,
+        "displaced_record": 2929,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 154,
+        "displaced_record": 171,
+        "record": 2929
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 155,
+        "displaced_record": 5264,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 156,
+        "displaced_record": 171,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 157,
+        "displaced_record": 5264,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 158,
+        "displaced_record": 85,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 159,
+        "displaced_record": 16030,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 160,
+        "displaced_record": 85,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 161,
+        "displaced_record": 5264,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 162,
+        "displaced_record": 85,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 163,
+        "displaced_record": 2,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 164,
+        "displaced_record": 85,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 165,
+        "displaced_record": 2,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 166,
+        "displaced_record": 1536,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 167,
+        "displaced_record": 2,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 168,
+        "displaced_record": 171,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 169,
+        "displaced_record": 2,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 170,
+        "displaced_record": 85,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 171,
+        "displaced_record": 2,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 172,
+        "displaced_record": 171,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 173,
+        "displaced_record": 2929,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 174,
+        "displaced_record": 171,
+        "record": 2929
+      },
+      {
+        "action": "evict",
+        "bucket": 16,
+        "depth": 175,
+        "displaced_record": 2745,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 176,
+        "displaced_record": 2,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 177,
+        "displaced_record": 1536,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 178,
+        "displaced_record": 2929,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 9,
+        "depth": 179,
+        "displaced_record": 40,
+        "record": 2929
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 180,
+        "displaced_record": 13249,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 181,
+        "displaced_record": 9,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 182,
+        "displaced_record": 40,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 9,
+        "depth": 183,
+        "displaced_record": 2929,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 184,
+        "displaced_record": 1536,
+        "record": 2929
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 185,
+        "displaced_record": 2,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 186,
+        "displaced_record": 2745,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 187,
+        "displaced_record": 2,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 188,
+        "displaced_record": 85,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 189,
+        "displaced_record": 2,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 190,
+        "displaced_record": 1536,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 191,
+        "displaced_record": 2929,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 192,
+        "displaced_record": 13249,
+        "record": 2929
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 193,
+        "displaced_record": 9,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 194,
+        "displaced_record": 13249,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 195,
+        "displaced_record": 2,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 196,
+        "displaced_record": 13249,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 197,
+        "displaced_record": 9,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 198,
+        "displaced_record": 2929,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 199,
+        "displaced_record": 1536,
+        "record": 2929
+      },
+      {
+        "action": "evict",
+        "bucket": 9,
+        "depth": 200,
+        "displaced_record": 40,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 201,
+        "displaced_record": 16030,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 202,
+        "displaced_record": 2745,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 16,
+        "depth": 203,
+        "displaced_record": 171,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 204,
+        "displaced_record": 16030,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 205,
+        "displaced_record": 9,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 206,
+        "displaced_record": 16030,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 207,
+        "displaced_record": 9,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 208,
+        "displaced_record": 5264,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 209,
+        "displaced_record": 9,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 210,
+        "displaced_record": 16030,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 211,
+        "displaced_record": 40,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 212,
+        "displaced_record": 16030,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 213,
+        "displaced_record": 40,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 214,
+        "displaced_record": 13249,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 215,
+        "displaced_record": 9,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 216,
+        "displaced_record": 40,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 217,
+        "displaced_record": 9,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 218,
+        "displaced_record": 40,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 219,
+        "displaced_record": 9,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 220,
+        "displaced_record": 5264,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 221,
+        "displaced_record": 171,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 16,
+        "depth": 222,
+        "displaced_record": 2745,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 223,
+        "displaced_record": 5264,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 224,
+        "displaced_record": 9,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 225,
+        "displaced_record": 5264,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 226,
+        "displaced_record": 9,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 227,
+        "displaced_record": 40,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 9,
+        "depth": 228,
+        "displaced_record": 1536,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 9,
+        "depth": 229,
+        "displaced_record": 40,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 230,
+        "displaced_record": 9,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 231,
+        "displaced_record": 13249,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 232,
+        "displaced_record": 2,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 233,
+        "displaced_record": 2745,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 234,
+        "displaced_record": 85,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 235,
+        "displaced_record": 2745,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 236,
+        "displaced_record": 85,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 237,
+        "displaced_record": 2745,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 16,
+        "depth": 238,
+        "displaced_record": 171,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 239,
+        "displaced_record": 2,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 240,
+        "displaced_record": 13249,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 241,
+        "displaced_record": 9,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 242,
+        "displaced_record": 40,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 243,
+        "displaced_record": 16030,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 244,
+        "displaced_record": 40,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 245,
+        "displaced_record": 9,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 246,
+        "displaced_record": 5264,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 247,
+        "displaced_record": 9,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 248,
+        "displaced_record": 13249,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 249,
+        "displaced_record": 2,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 250,
+        "displaced_record": 171,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 16,
+        "depth": 251,
+        "displaced_record": 2745,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 16,
+        "depth": 252,
+        "displaced_record": 171,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 253,
+        "displaced_record": 2929,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 254,
+        "displaced_record": 171,
+        "record": 2929
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 255,
+        "displaced_record": 2,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 256,
+        "displaced_record": 13249,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 257,
+        "displaced_record": 2,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 258,
+        "displaced_record": 13249,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 259,
+        "displaced_record": 9,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 260,
+        "displaced_record": 5264,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 261,
+        "displaced_record": 85,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 262,
+        "displaced_record": 5264,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 263,
+        "displaced_record": 85,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 264,
+        "displaced_record": 9,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 265,
+        "displaced_record": 13249,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 266,
+        "displaced_record": 2,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 267,
+        "displaced_record": 13249,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 268,
+        "displaced_record": 40,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 9,
+        "depth": 269,
+        "displaced_record": 1536,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 270,
+        "displaced_record": 2929,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 271,
+        "displaced_record": 1536,
+        "record": 2929
+      },
+      {
+        "action": "evict",
+        "bucket": 9,
+        "depth": 272,
+        "displaced_record": 40,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 273,
+        "displaced_record": 13249,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 274,
+        "displaced_record": 40,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 275,
+        "displaced_record": 13249,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 276,
+        "displaced_record": 40,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 9,
+        "depth": 277,
+        "displaced_record": 1536,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 9,
+        "depth": 278,
+        "displaced_record": 40,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 279,
+        "displaced_record": 16030,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 280,
+        "displaced_record": 9,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 281,
+        "displaced_record": 13249,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 282,
+        "displaced_record": 16030,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 283,
+        "displaced_record": 40,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 284,
+        "displaced_record": 16030,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 285,
+        "displaced_record": 13249,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 286,
+        "displaced_record": 9,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 287,
+        "displaced_record": 16030,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 288,
+        "displaced_record": 40,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 289,
+        "displaced_record": 13249,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 290,
+        "displaced_record": 2,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 291,
+        "displaced_record": 5264,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 292,
+        "displaced_record": 2,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 293,
+        "displaced_record": 5264,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 294,
+        "displaced_record": 85,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 295,
+        "displaced_record": 2,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 296,
+        "displaced_record": 13249,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 297,
+        "displaced_record": 9,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 298,
+        "displaced_record": 5264,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 299,
+        "displaced_record": 85,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 300,
+        "displaced_record": 16030,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 301,
+        "displaced_record": 13249,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 302,
+        "displaced_record": 16030,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 303,
+        "displaced_record": 171,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 304,
+        "displaced_record": 2929,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 305,
+        "displaced_record": 171,
+        "record": 2929
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 306,
+        "displaced_record": 2929,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 9,
+        "depth": 307,
+        "displaced_record": 1536,
+        "record": 2929
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 308,
+        "displaced_record": 171,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 16,
+        "depth": 309,
+        "displaced_record": 2745,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 310,
+        "displaced_record": 16030,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 311,
+        "displaced_record": 2745,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 16,
+        "depth": 312,
+        "displaced_record": 171,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 313,
+        "displaced_record": 16030,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 314,
+        "displaced_record": 13249,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 315,
+        "displaced_record": 40,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 316,
+        "displaced_record": 13249,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 317,
+        "displaced_record": 16030,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 318,
+        "displaced_record": 13249,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 319,
+        "displaced_record": 2,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 320,
+        "displaced_record": 5264,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 321,
+        "displaced_record": 171,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 322,
+        "displaced_record": 5264,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 323,
+        "displaced_record": 9,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 324,
+        "displaced_record": 40,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 325,
+        "displaced_record": 85,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 326,
+        "displaced_record": 2,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 327,
+        "displaced_record": 13249,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 328,
+        "displaced_record": 2,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 329,
+        "displaced_record": 85,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 330,
+        "displaced_record": 2,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 331,
+        "displaced_record": 171,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 16,
+        "depth": 332,
+        "displaced_record": 2745,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 16,
+        "depth": 333,
+        "displaced_record": 171,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 16,
+        "depth": 334,
+        "displaced_record": 2745,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 16,
+        "depth": 335,
+        "displaced_record": 171,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 336,
+        "displaced_record": 2,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 337,
+        "displaced_record": 85,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 338,
+        "displaced_record": 5264,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 339,
+        "displaced_record": 2,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 340,
+        "displaced_record": 171,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 341,
+        "displaced_record": 1536,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 9,
+        "depth": 342,
+        "displaced_record": 2929,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 343,
+        "displaced_record": 16030,
+        "record": 2929
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 344,
+        "displaced_record": 2,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 345,
+        "displaced_record": 16030,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 346,
+        "displaced_record": 40,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 347,
+        "displaced_record": 9,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 348,
+        "displaced_record": 85,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 349,
+        "displaced_record": 16030,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 350,
+        "displaced_record": 2929,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 351,
+        "displaced_record": 171,
+        "record": 2929
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 352,
+        "displaced_record": 2,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 353,
+        "displaced_record": 171,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 354,
+        "displaced_record": 2929,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 9,
+        "depth": 355,
+        "displaced_record": 1536,
+        "record": 2929
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 356,
+        "displaced_record": 13249,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 357,
+        "displaced_record": 40,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 358,
+        "displaced_record": 85,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 359,
+        "displaced_record": 5264,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 360,
+        "displaced_record": 85,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 361,
+        "displaced_record": 9,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 362,
+        "displaced_record": 16030,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 363,
+        "displaced_record": 2,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 364,
+        "displaced_record": 16030,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 365,
+        "displaced_record": 40,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 366,
+        "displaced_record": 16030,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 367,
+        "displaced_record": 40,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 368,
+        "displaced_record": 13249,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 369,
+        "displaced_record": 40,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 9,
+        "depth": 370,
+        "displaced_record": 2929,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 371,
+        "displaced_record": 171,
+        "record": 2929
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 372,
+        "displaced_record": 2,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 373,
+        "displaced_record": 171,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 374,
+        "displaced_record": 2929,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 375,
+        "displaced_record": 171,
+        "record": 2929
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 376,
+        "displaced_record": 2,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 377,
+        "displaced_record": 1536,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 378,
+        "displaced_record": 2929,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 379,
+        "displaced_record": 1536,
+        "record": 2929
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 380,
+        "displaced_record": 2929,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 381,
+        "displaced_record": 9,
+        "record": 2929
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 382,
+        "displaced_record": 2929,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 383,
+        "displaced_record": 9,
+        "record": 2929
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 384,
+        "displaced_record": 2929,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 385,
+        "displaced_record": 1536,
+        "record": 2929
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 386,
+        "displaced_record": 2,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 387,
+        "displaced_record": 1536,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 388,
+        "displaced_record": 2929,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 389,
+        "displaced_record": 9,
+        "record": 2929
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 390,
+        "displaced_record": 13249,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 391,
+        "displaced_record": 2929,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 9,
+        "depth": 392,
+        "displaced_record": 40,
+        "record": 2929
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 393,
+        "displaced_record": 16030,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 394,
+        "displaced_record": 171,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 16,
+        "depth": 395,
+        "displaced_record": 2745,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 16,
+        "depth": 396,
+        "displaced_record": 171,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 397,
+        "displaced_record": 1536,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 398,
+        "displaced_record": 171,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 399,
+        "displaced_record": 1536,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 9,
+        "depth": 400,
+        "displaced_record": 2929,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 9,
+        "depth": 401,
+        "displaced_record": 1536,
+        "record": 2929
+      },
+      {
+        "action": "evict",
+        "bucket": 9,
+        "depth": 402,
+        "displaced_record": 2929,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 9,
+        "depth": 403,
+        "displaced_record": 1536,
+        "record": 2929
+      },
+      {
+        "action": "evict",
+        "bucket": 9,
+        "depth": 404,
+        "displaced_record": 2929,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 9,
+        "depth": 405,
+        "displaced_record": 1536,
+        "record": 2929
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 406,
+        "displaced_record": 2,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 407,
+        "displaced_record": 5264,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 408,
+        "displaced_record": 16030,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 409,
+        "displaced_record": 40,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 9,
+        "depth": 410,
+        "displaced_record": 2929,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 411,
+        "displaced_record": 171,
+        "record": 2929
+      },
+      {
+        "action": "evict",
+        "bucket": 16,
+        "depth": 412,
+        "displaced_record": 2745,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 413,
+        "displaced_record": 2,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 414,
+        "displaced_record": 2745,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 415,
+        "displaced_record": 5264,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 416,
+        "displaced_record": 85,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 417,
+        "displaced_record": 2,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 418,
+        "displaced_record": 85,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 419,
+        "displaced_record": 2,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 420,
+        "displaced_record": 85,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 421,
+        "displaced_record": 16030,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 422,
+        "displaced_record": 2745,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 423,
+        "displaced_record": 2,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 424,
+        "displaced_record": 16030,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 425,
+        "displaced_record": 13249,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 426,
+        "displaced_record": 1536,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 427,
+        "displaced_record": 13249,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 428,
+        "displaced_record": 16030,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 429,
+        "displaced_record": 85,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 430,
+        "displaced_record": 2745,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 431,
+        "displaced_record": 2,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 432,
+        "displaced_record": 2745,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 433,
+        "displaced_record": 2,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 434,
+        "displaced_record": 85,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 435,
+        "displaced_record": 16030,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 436,
+        "displaced_record": 85,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 437,
+        "displaced_record": 16030,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 438,
+        "displaced_record": 2745,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 16,
+        "depth": 439,
+        "displaced_record": 171,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 440,
+        "displaced_record": 2929,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 9,
+        "depth": 441,
+        "displaced_record": 40,
+        "record": 2929
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 442,
+        "displaced_record": 85,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 443,
+        "displaced_record": 40,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 444,
+        "displaced_record": 9,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 445,
+        "displaced_record": 13249,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 446,
+        "displaced_record": 9,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 447,
+        "displaced_record": 5264,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 448,
+        "displaced_record": 2,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 449,
+        "displaced_record": 16030,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 450,
+        "displaced_record": 13249,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 451,
+        "displaced_record": 16030,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 452,
+        "displaced_record": 2,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 453,
+        "displaced_record": 16030,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 454,
+        "displaced_record": 85,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 455,
+        "displaced_record": 5264,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 456,
+        "displaced_record": 9,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 457,
+        "displaced_record": 13249,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 458,
+        "displaced_record": 9,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 459,
+        "displaced_record": 5264,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 460,
+        "displaced_record": 9,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 461,
+        "displaced_record": 5264,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 462,
+        "displaced_record": 9,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 463,
+        "displaced_record": 5264,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 464,
+        "displaced_record": 2,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 465,
+        "displaced_record": 1536,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 466,
+        "displaced_record": 171,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 467,
+        "displaced_record": 5264,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 468,
+        "displaced_record": 85,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 469,
+        "displaced_record": 9,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 470,
+        "displaced_record": 85,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 471,
+        "displaced_record": 9,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 472,
+        "displaced_record": 13249,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 473,
+        "displaced_record": 9,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 474,
+        "displaced_record": 85,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 475,
+        "displaced_record": 9,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 476,
+        "displaced_record": 85,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 477,
+        "displaced_record": 16030,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 478,
+        "displaced_record": 171,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 16,
+        "depth": 479,
+        "displaced_record": 2745,
+        "record": 171
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 480,
+        "displaced_record": 16030,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 481,
+        "displaced_record": 85,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 482,
+        "displaced_record": 16030,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 483,
+        "displaced_record": 2745,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 484,
+        "displaced_record": 5264,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 485,
+        "displaced_record": 2745,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 486,
+        "displaced_record": 5264,
+        "record": 2745
+      },
+      {
+        "action": "evict",
+        "bucket": 18,
+        "depth": 487,
+        "displaced_record": 16030,
+        "record": 5264
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 488,
+        "displaced_record": 85,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 4,
+        "depth": 489,
+        "displaced_record": 9,
+        "record": 85
+      },
+      {
+        "action": "evict",
+        "bucket": 6,
+        "depth": 490,
+        "displaced_record": 40,
+        "record": 9
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 491,
+        "displaced_record": 16030,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 20,
+        "depth": 492,
+        "displaced_record": 40,
+        "record": 16030
+      },
+      {
+        "action": "evict",
+        "bucket": 9,
+        "depth": 493,
+        "displaced_record": 2929,
+        "record": 40
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 494,
+        "displaced_record": 1536,
+        "record": 2929
+      },
+      {
+        "action": "evict",
+        "bucket": 23,
+        "depth": 495,
+        "displaced_record": 2929,
+        "record": 1536
+      },
+      {
+        "action": "evict",
+        "bucket": 22,
+        "depth": 496,
+        "displaced_record": 13249,
+        "record": 2929
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 497,
+        "displaced_record": 2,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 498,
+        "displaced_record": 13249,
+        "record": 2
+      },
+      {
+        "action": "evict",
+        "bucket": 21,
+        "depth": 499,
+        "displaced_record": 2,
+        "record": 13249
+      },
+      {
+        "action": "evict",
+        "bucket": 25,
+        "depth": 500,
+        "displaced_record": 2745,
+        "record": 2
+      }
+    ],
+    "effective_rng_seed": 2026091112,
+    "failed_insertion_index": 16,
+    "failure_depth": 501,
+    "failure_record": 2745,
+    "graph_left_nodes": [
+      {
+        "candidate_buckets": [
+          14,
+          15,
+          1
+        ],
+        "level": 63,
+        "real": true,
+        "record": 1
+      },
+      {
+        "candidate_buckets": [
+          21,
+          18,
+          25
+        ],
+        "level": 62,
+        "real": true,
+        "record": 2
+      },
+      {
+        "candidate_buckets": [
+          4,
+          22,
+          6
+        ],
+        "level": 61,
+        "real": true,
+        "record": 9
+      },
+      {
+        "candidate_buckets": [
+          16,
+          8,
+          23
+        ],
+        "level": 60,
+        "real": true,
+        "record": 18
+      },
+      {
+        "candidate_buckets": [
+          20,
+          9,
+          6
+        ],
+        "level": 59,
+        "real": true,
+        "record": 40
+      },
+      {
+        "candidate_buckets": [
+          4,
+          25,
+          20
+        ],
+        "level": 58,
+        "real": true,
+        "record": 85
+      },
+      {
+        "candidate_buckets": [
+          16,
+          18,
+          23
+        ],
+        "level": 57,
+        "real": true,
+        "record": 171
+      },
+      {
+        "candidate_buckets": [
+          19,
+          6,
+          17
+        ],
+        "level": 56,
+        "real": true,
+        "record": 343
+      },
+      {
+        "candidate_buckets": [
+          24,
+          18,
+          15
+        ],
+        "level": 55,
+        "real": true,
+        "record": 687
+      },
+      {
+        "candidate_buckets": [
+          7,
+          19,
+          12
+        ],
+        "level": 54,
+        "real": true,
+        "record": 1375
+      },
+      {
+        "candidate_buckets": [
+          16,
+          25,
+          18
+        ],
+        "level": 53,
+        "real": true,
+        "record": 2745
+      },
+      {
+        "candidate_buckets": [
+          25,
+          4,
+          18
+        ],
+        "level": 52,
+        "real": true,
+        "record": 5264
+      },
+      {
+        "candidate_buckets": [
+          20,
+          22,
+          18
+        ],
+        "real": false,
+        "record": 16030
+      },
+      {
+        "candidate_buckets": [
+          9,
+          23,
+          22
+        ],
+        "real": false,
+        "record": 2929
+      },
+      {
+        "candidate_buckets": [
+          22,
+          6,
+          21
+        ],
+        "real": false,
+        "record": 13249
+      },
+      {
+        "candidate_buckets": [
+          5,
+          4,
+          1
+        ],
+        "real": false,
+        "record": 7936
+      },
+      {
+        "candidate_buckets": [
+          9,
+          23,
+          21
+        ],
+        "real": false,
+        "record": 1536
+      }
+    ],
+    "max_processed_depth": 500,
+    "ordinal": 9,
+    "owner_at_termination": [
+      -1,
+      -1,
+      -1,
+      -1,
+      85,
+      7936,
+      9,
+      1375,
+      18,
+      40,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      171,
+      -1,
+      5264,
+      343,
+      16030,
+      13249,
+      2929,
+      1536,
+      687,
+      2
+    ],
+    "padded_records_in_insertion_order": [
+      1,
+      2,
+      9,
+      18,
+      40,
+      85,
+      171,
+      343,
+      687,
+      1375,
+      2745,
+      5264,
+      16030,
+      2929,
+      13249,
+      7936,
+      1536
+    ],
+    "padding_draws": [
+      {
+        "accepted": true,
+        "record": 16030
+      },
+      {
+        "accepted": true,
+        "record": 2929
+      },
+      {
+        "accepted": true,
+        "record": 13249
+      },
+      {
+        "accepted": true,
+        "record": 7936
+      },
+      {
+        "accepted": true,
+        "record": 1536
+      }
+    ],
+    "public_needed_intervals_outer_to_inner": [
+      {
+        "left": 0,
+        "right": 5022,
+        "level": 63,
+        "record": 1
+      },
+      {
+        "left": 2540,
+        "right": 5022,
+        "level": 62,
+        "record": 2
+      },
+      {
+        "left": 2540,
+        "right": 3742,
+        "level": 61,
+        "record": 9
+      },
+      {
+        "left": 3150,
+        "right": 3742,
+        "level": 60,
+        "record": 18
+      },
+      {
+        "left": 3451,
+        "right": 3742,
+        "level": 59,
+        "record": 40
+      },
+      {
+        "left": 3451,
+        "right": 3604,
+        "level": 58,
+        "record": 85
+      },
+      {
+        "left": 3451,
+        "right": 3525,
+        "level": 57,
+        "record": 171
+      },
+      {
+        "left": 3451,
+        "right": 3490,
+        "level": 56,
+        "record": 343
+      },
+      {
+        "left": 3451,
+        "right": 3470,
+        "level": 55,
+        "record": 687
+      },
+      {
+        "left": 3451,
+        "right": 3461,
+        "level": 54,
+        "record": 1375
+      },
+      {
+        "left": 3451,
+        "right": 3455,
+        "level": 53,
+        "record": 2745
+      },
+      {
+        "left": 3455,
+        "right": 3455,
+        "level": 52,
+        "record": 5264
+      }
+    ],
+    "replayed_picks": [],
+    "slot_hex": "0000000000000000581c8c7e975bf1bf",
+    "target_id": "3455"
+  },
+  "frozen_artifact_sha256": {
+    "/artifact/examples/tifs_simplepir_extension_20260911/backend/build/simplepir_proof_bench": "4a1c83d3f8dfa12557aec5b5666224cc36840e9aa2fe758b6f634437a69bfa02",
+    "/artifact/examples/tifs_simplepir_extension_20260911/backend/main.go": "64b6ac752c6616cb1f367a4a346839c6ce461143a68d482620e41dcb55f7cac6",
+    "runs/prefix64_n10000/pbc/repeat0/command.json": "b03982214a80e88930bdc22577cd903eea81c6ea9a94c1ea03a653b27a73589d",
+    "runs/prefix64_n10000/pbc/repeat0/input.json": "0444449b31d20395445dc7f85b4dea2ec83b67d885df92135a5f02be33f2a468",
+    "runs/prefix64_n10000/pbc/repeat0/result.json": "13ab417514f56977721cd6e21d5d3de8b3edd7f1e4cff3ed36b99b754e9e68fd"
+  },
+  "frozen_artifacts_unchanged": true,
+  "go_version": "go1.22.2",
+  "interpretation_boundary": "A maximum-matching diagnostic does not retroactively replace or repair the failed experimental request; any successful completion times remain conditioned on success and the original failure must be retained.",
+  "method": "pbc",
+  "original_error": "PBC cuckoo exceeded 500 recursive attempts; no global rehash or target replacement",
+  "original_status": "failed",
+  "padded_batch_matching": {
+    "algorithm": "Exact augmenting-path maximum bipartite matching with fresh right-vertex visited set for each left insertion",
+    "complete_matching_exists": false,
+    "hall_witness": {
+      "adjacency": [
+        {
+          "candidates": [
+            21,
+            18,
+            25
+          ],
+          "record": 2
+        },
+        {
+          "candidates": [
+            4,
+            22,
+            6
+          ],
+          "record": 9
+        },
+        {
+          "candidates": [
+            20,
+            9,
+            6
+          ],
+          "record": 40
+        },
+        {
+          "candidates": [
+            4,
+            25,
+            20
+          ],
+          "record": 85
+        },
+        {
+          "candidates": [
+            16,
+            18,
+            23
+          ],
+          "record": 171
+        },
+        {
+          "candidates": [
+            9,
+            23,
+            21
+          ],
+          "record": 1536
+        },
+        {
+          "candidates": [
+            16,
+            25,
+            18
+          ],
+          "record": 2745
+        },
+        {
+          "candidates": [
+            9,
+            23,
+            22
+          ],
+          "record": 2929
+        },
+        {
+          "candidates": [
+            25,
+            4,
+            18
+          ],
+          "record": 5264
+        },
+        {
+          "candidates": [
+            22,
+            6,
+            21
+          ],
+          "record": 13249
+        },
+        {
+          "candidates": [
+            20,
+            22,
+            18
+          ],
+          "record": 16030
+        }
+      ],
+      "check": "Every candidate of every listed record is in the listed neighbor union; record_count > neighbor_count proves that no complete assignment exists.",
+      "deficiency": 1,
+      "neighbor_buckets": [
+        4,
+        6,
+        9,
+        16,
+        18,
+        20,
+        21,
+        22,
+        23,
+        25
+      ],
+      "neighbor_count": 10,
+      "record_count": 11,
+      "records": [
+        2,
+        9,
+        40,
+        85,
+        171,
+        1536,
+        2745,
+        2929,
+        5264,
+        13249,
+        16030
+      ]
+    },
+    "left_count": 17,
+    "matching_certificate": [
+      {
+        "bucket": 4,
+        "record": 85
+      },
+      {
+        "bucket": 5,
+        "record": 7936
+      },
+      {
+        "bucket": 6,
+        "record": 9
+      },
+      {
+        "bucket": 7,
+        "record": 1375
+      },
+      {
+        "bucket": 8,
+        "record": 18
+      },
+      {
+        "bucket": 9,
+        "record": 40
+      },
+      {
+        "bucket": 14,
+        "record": 1
+      },
+      {
+        "bucket": 16,
+        "record": 171
+      },
+      {
+        "bucket": 18,
+        "record": 5264
+      },
+      {
+        "bucket": 19,
+        "record": 343
+      },
+      {
+        "bucket": 20,
+        "record": 16030
+      },
+      {
+        "bucket": 21,
+        "record": 2
+      },
+      {
+        "bucket": 22,
+        "record": 13249
+      },
+      {
+        "bucket": 23,
+        "record": 2929
+      },
+      {
+        "bucket": 24,
+        "record": 687
+      },
+      {
+        "bucket": 25,
+        "record": 2745
+      }
+    ],
+    "maximum_matching_cardinality": 16,
+    "right_count": 26
+  },
+  "real_needed_only_matching": {
+    "algorithm": "Exact augmenting-path maximum bipartite matching with fresh right-vertex visited set for each left insertion",
+    "complete_matching_exists": true,
+    "left_count": 12,
+    "matching_certificate": [
+      {
+        "bucket": 4,
+        "record": 85
+      },
+      {
+        "bucket": 7,
+        "record": 1375
+      },
+      {
+        "bucket": 8,
+        "record": 18
+      },
+      {
+        "bucket": 14,
+        "record": 1
+      },
+      {
+        "bucket": 16,
+        "record": 2745
+      },
+      {
+        "bucket": 18,
+        "record": 171
+      },
+      {
+        "bucket": 19,
+        "record": 343
+      },
+      {
+        "bucket": 20,
+        "record": 40
+      },
+      {
+        "bucket": 21,
+        "record": 2
+      },
+      {
+        "bucket": 22,
+        "record": 9
+      },
+      {
+        "bucket": 24,
+        "record": 687
+      },
+      {
+        "bucket": 25,
+        "record": 5264
+      }
+    ],
+    "maximum_matching_cardinality": 12,
+    "right_count": 26
+  },
+  "repeat": 0,
+  "scope": "Offline route-only diagnosis of the one preserved failed process; no PIR initialization, cryptography, benchmark, seed change, target change or candidate regeneration.",
+  "successful_prefix_replay_checks": [
+    {
+      "all_bucket_records_and_positions_match_saved_result": true,
+      "ordinal": 0,
+      "target_id": "3652"
+    },
+    {
+      "all_bucket_records_and_positions_match_saved_result": true,
+      "ordinal": 1,
+      "target_id": "3731"
+    },
+    {
+      "all_bucket_records_and_positions_match_saved_result": true,
+      "ordinal": 2,
+      "target_id": "3652"
+    },
+    {
+      "all_bucket_records_and_positions_match_saved_result": true,
+      "ordinal": 3,
+      "target_id": "3731"
+    },
+    {
+      "all_bucket_records_and_positions_match_saved_result": true,
+      "ordinal": 4,
+      "target_id": "1449"
+    },
+    {
+      "all_bucket_records_and_positions_match_saved_result": true,
+      "ordinal": 5,
+      "target_id": "8224"
+    },
+    {
+      "all_bucket_records_and_positions_match_saved_result": true,
+      "ordinal": 6,
+      "target_id": "320"
+    },
+    {
+      "all_bucket_records_and_positions_match_saved_result": true,
+      "ordinal": 7,
+      "target_id": "4684"
+    },
+    {
+      "all_bucket_records_and_positions_match_saved_result": true,
+      "ordinal": 8,
+      "target_id": "529"
+    }
+  ]
+}

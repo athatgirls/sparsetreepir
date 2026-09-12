@@ -1,0 +1,29 @@
+[
+  {
+    "coloring_s": 0.0013976000482216477,
+    "actual_passes": 0,
+    "actual_moves": 0,
+    "max_bucket": 562,
+    "U_over_B": 3.93006993006993,
+    "valid": true,
+    "converged": false
+  },
+  {
+    "coloring_s": 0.022470399970188737,
+    "actual_passes": 1,
+    "actual_moves": 1,
+    "max_bucket": 293,
+    "U_over_B": 2.0489510489510487,
+    "valid": true,
+    "converged": false
+  },
+  {
+    "coloring_s": 0.03948150004725903,
+    "actual_passes": 2,
+    "actual_moves": 2,
+    "max_bucket": 271,
+    "U_over_B": 1.8951048951048952,
+    "valid": true,
+    "converged": false
+  }
+]

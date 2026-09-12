@@ -1,0 +1,4469 @@
+{
+  "schema": 1,
+  "method": "full_cache",
+  "client_pid": 509,
+  "server_address": "127.0.0.1:45125",
+  "bootstrap_ms": 1.050027,
+  "bootstrap_upload_wire_bytes": 15,
+  "bootstrap_download_wire_bytes": 12815,
+  "metadata_bytes": 4778,
+  "slots_bytes": 1600,
+  "cache_payload_bytes": 6336,
+  "warmup_queries": 5,
+  "queries": [
+    {
+      "sample_index": 0,
+      "target_index": 10,
+      "end_to_end_ms": 0.030616,
+      "known_value_decode_and_routing_ms": 0.002909,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000386,
+      "assembly_rootcheck_ms": 0.023868,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 120,
+          "digest_hex": "972dca7a173a36a2df97e67df838c29cfe66c778dcf98f1b72fd19efbd1bfb9c"
+        },
+        {
+          "level": 121,
+          "digest_hex": "297cb565af098eecbe6b6202aac6d6b687f72f50c1fce919a158610caac143fa"
+        },
+        {
+          "level": 123,
+          "digest_hex": "7f19730e1b6fbcdf342dcf27961f932ca6ab4dd755cc158fa47f6e9ed840d96a"
+        },
+        {
+          "level": 124,
+          "digest_hex": "f14a10fa70c768bfd802cee24c74db14ff2588aab0c47c40adbeefe2e345d528"
+        },
+        {
+          "level": 125,
+          "digest_hex": "e99647cc6db780a3da4075137e80ce9c3c103839ee84e5ddc5e1fadb51546ca3"
+        },
+        {
+          "level": 126,
+          "digest_hex": "315e0c4751043a683a3bea17699a4d0483a7351d379a71b378fb8a4b6ee608a4"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 1,
+      "target_index": 7,
+      "end_to_end_ms": 0.028469,
+      "known_value_decode_and_routing_ms": 0.000732,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000257,
+      "assembly_rootcheck_ms": 0.023884,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 120,
+          "digest_hex": "00d756233a16a09c27305273b3659b6426aa7e1a7d8ebafe5c051aca5caabc27"
+        },
+        {
+          "level": 121,
+          "digest_hex": "9181f62547ae5af12f5307f29e76f4eaae1f59aab7f184fd43d53ae4ca77c7c8"
+        },
+        {
+          "level": 123,
+          "digest_hex": "7f19730e1b6fbcdf342dcf27961f932ca6ab4dd755cc158fa47f6e9ed840d96a"
+        },
+        {
+          "level": 124,
+          "digest_hex": "f14a10fa70c768bfd802cee24c74db14ff2588aab0c47c40adbeefe2e345d528"
+        },
+        {
+          "level": 125,
+          "digest_hex": "e99647cc6db780a3da4075137e80ce9c3c103839ee84e5ddc5e1fadb51546ca3"
+        },
+        {
+          "level": 126,
+          "digest_hex": "315e0c4751043a683a3bea17699a4d0483a7351d379a71b378fb8a4b6ee608a4"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 2,
+      "target_index": 64,
+      "end_to_end_ms": 0.028367,
+      "known_value_decode_and_routing_ms": 0.001056,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000443,
+      "assembly_rootcheck_ms": 0.023807,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 120,
+          "digest_hex": "ec984a709cf02b246e0690ddbfca7c292edb67f929ddec414f850146c29398b3"
+        },
+        {
+          "level": 121,
+          "digest_hex": "b6732e394465d5489becfb1a2f9e1e0470f6c04b8c5beca6ae3efc92541c2c8d"
+        },
+        {
+          "level": 123,
+          "digest_hex": "55ae57311f9c4897e80b18c9c5bc3c4aefa8fb358f5aca0873ec1d230cfb45b0"
+        },
+        {
+          "level": 124,
+          "digest_hex": "d251933359f24f6ab0385e437a222e01997d4870ace952d330284c208c079aee"
+        },
+        {
+          "level": 125,
+          "digest_hex": "e5872fcc90baee04b3549eb6524522f9e5f4738cf9711bd02a08feac9e363e99"
+        },
+        {
+          "level": 126,
+          "digest_hex": "e01b6602c5b23ea13716cf6fe63a1e9e49a1b1dd9e9d58491935637551d7b36f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 3,
+      "target_index": 77,
+      "end_to_end_ms": 0.028612,
+      "known_value_decode_and_routing_ms": 0.001192,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000379,
+      "assembly_rootcheck_ms": 0.023818,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 118,
+          "digest_hex": "4b2a5f00439957425a7539a6248f4d6d556356c0ea80da9ae8aa90613bb7c940"
+        },
+        {
+          "level": 120,
+          "digest_hex": "9fff7f66bf5fb4a564b1fc26ff0245b94691992201e0716dc9e726dd04ef28a7"
+        },
+        {
+          "level": 121,
+          "digest_hex": "6dbd4759f455750dba06ff8a9f28dd53e358575ec22bad49cc90c6bf4265c7d5"
+        },
+        {
+          "level": 123,
+          "digest_hex": "c68a0c114c7e4730f66b16386671571a18bcf4a1cdf5440b931defc2f69aa795"
+        },
+        {
+          "level": 124,
+          "digest_hex": "8f568b63de16712e0987fbd40f05524debcee56ba9789d5c8aa621d0a3d3f9ef"
+        },
+        {
+          "level": 125,
+          "digest_hex": "6997de0c1dd07363560e375f98fa4c3afd63860df0608d0fb82ec15a6783e3ac"
+        },
+        {
+          "level": 126,
+          "digest_hex": "38d2df1ec713ed325301c34d9e24cf6a25baf9b3f6c096eb21aea943ec9e980f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 4,
+      "target_index": 86,
+      "end_to_end_ms": 0.029297,
+      "known_value_decode_and_routing_ms": 0.001648,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000611,
+      "assembly_rootcheck_ms": 0.023878,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 119,
+          "digest_hex": "70142add60145dc86250a42143999b643d27b6b1e36a256755226e82975072b9"
+        },
+        {
+          "level": 120,
+          "digest_hex": "eb9676c9de04af4cf75da495907cecb8d47a737be46e3eb3f7e5b1837a8d8f8c"
+        },
+        {
+          "level": 121,
+          "digest_hex": "57ad095412cdd230e8a70579fb511d004cb182166b9e43026bd525a79ac20bad"
+        },
+        {
+          "level": 122,
+          "digest_hex": "4d46a05b508ec72ba72ae55f55be9e8b6dede780cf6fb55faa6b420c293bcd22"
+        },
+        {
+          "level": 123,
+          "digest_hex": "03f10449b5028f0d82bedf2413a4e7db250d4415adb695f8696dce0d9e052e7e"
+        },
+        {
+          "level": 124,
+          "digest_hex": "430ec155962640f226905643a9726ac7d3161f41c3fa25e332b4cd3bd7791288"
+        },
+        {
+          "level": 125,
+          "digest_hex": "6997de0c1dd07363560e375f98fa4c3afd63860df0608d0fb82ec15a6783e3ac"
+        },
+        {
+          "level": 126,
+          "digest_hex": "38d2df1ec713ed325301c34d9e24cf6a25baf9b3f6c096eb21aea943ec9e980f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 5,
+      "target_index": 61,
+      "end_to_end_ms": 0.028587,
+      "known_value_decode_and_routing_ms": 0.001081,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000293,
+      "assembly_rootcheck_ms": 0.023861,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 120,
+          "digest_hex": "cf01e5b62393fbc612fe51ab53bd596058a48c07c22e618c764fc9ed748ab9ad"
+        },
+        {
+          "level": 121,
+          "digest_hex": "b554c2d69dd12dbc50e3d39de48f05e00932468844c8b882eed95ad735110ecb"
+        },
+        {
+          "level": 123,
+          "digest_hex": "62aef58e89a5d57fc1db006cadb66343ecf4efb0ec2efe9442f03b33996a0a07"
+        },
+        {
+          "level": 124,
+          "digest_hex": "d251933359f24f6ab0385e437a222e01997d4870ace952d330284c208c079aee"
+        },
+        {
+          "level": 125,
+          "digest_hex": "e5872fcc90baee04b3549eb6524522f9e5f4738cf9711bd02a08feac9e363e99"
+        },
+        {
+          "level": 126,
+          "digest_hex": "e01b6602c5b23ea13716cf6fe63a1e9e49a1b1dd9e9d58491935637551d7b36f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 6,
+      "target_index": 18,
+      "end_to_end_ms": 0.028701,
+      "known_value_decode_and_routing_ms": 0.001187,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000316,
+      "assembly_rootcheck_ms": 0.023771,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 120,
+          "digest_hex": "a99b1ed334c0a07a857218128593465f328408d8da8de5ac4d30f2620611253f"
+        },
+        {
+          "level": 122,
+          "digest_hex": "8ac5f75169a2586491585bcbee6a47f0c0d429d78e72e7c47f4800195e4d3fc0"
+        },
+        {
+          "level": 123,
+          "digest_hex": "e62a1e8259f03a69922a668fb8962947361bb77472274f985e57682807c76752"
+        },
+        {
+          "level": 124,
+          "digest_hex": "9cf4e82baf206f56dd5b0c98ee2bcc0f3943a3e456fe81ae3ec445bd39cc97ca"
+        },
+        {
+          "level": 125,
+          "digest_hex": "0cf76ea1ff1977e0eccf349ea33e4f52d6b6d015dd69145da274e31eb2430036"
+        },
+        {
+          "level": 126,
+          "digest_hex": "315e0c4751043a683a3bea17699a4d0483a7351d379a71b378fb8a4b6ee608a4"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 7,
+      "target_index": 48,
+      "end_to_end_ms": 0.028375,
+      "known_value_decode_and_routing_ms": 0.001144,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000281,
+      "assembly_rootcheck_ms": 0.023776,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 122,
+          "digest_hex": "9f70155959e54057edddc444e0252b1f9515c2419169c4473f102f557957a982"
+        },
+        {
+          "level": 123,
+          "digest_hex": "0bdd92706bea8fcd0b242e116125b29be28561152c35b26c1a14f5136e9ef3e0"
+        },
+        {
+          "level": 124,
+          "digest_hex": "e0e2ad1b1c79dd2c3729678cfbff14ff748e98fb4f0354f21714901034d8df90"
+        },
+        {
+          "level": 125,
+          "digest_hex": "6793468840419c766ff8e5cf0cd377f57081c09468d3072bdac29bd7052dfd13"
+        },
+        {
+          "level": 126,
+          "digest_hex": "7bf8a33390ca8b03c73429b298fde20e07ab842d53189f7617929a5f5aee8fca"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 8,
+      "target_index": 38,
+      "end_to_end_ms": 0.029022,
+      "known_value_decode_and_routing_ms": 0.001108,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000374,
+      "assembly_rootcheck_ms": 0.023883,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 121,
+          "digest_hex": "65dd41a585d639f34310d72b979a5b55323f5ce12873d908d8eef1c01245df6b"
+        },
+        {
+          "level": 122,
+          "digest_hex": "50b14e97af0ff21507d0716982003eadd809f2d9956c6999a11312062df8157a"
+        },
+        {
+          "level": 123,
+          "digest_hex": "c820a8eb61a286ebd0576e6819420e4afeee1174c840c8dd23998a7fa78fc291"
+        },
+        {
+          "level": 124,
+          "digest_hex": "546f2717fad16bbc7b4c7a5ded7e30928a3a8b21c1c1983c275fa0308f4c5933"
+        },
+        {
+          "level": 125,
+          "digest_hex": "16686314da3ceeba8277009441d66add11621e51e3c1a39abec394b7df1e1736"
+        },
+        {
+          "level": 126,
+          "digest_hex": "7bf8a33390ca8b03c73429b298fde20e07ab842d53189f7617929a5f5aee8fca"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 9,
+      "target_index": 97,
+      "end_to_end_ms": 0.030314,
+      "known_value_decode_and_routing_ms": 0.002911,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000249,
+      "assembly_rootcheck_ms": 0.023836,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 120,
+          "digest_hex": "2d7742f684f4940a4f1ea932ed424cc44af290fd6acf351796082a5fac2701d6"
+        },
+        {
+          "level": 121,
+          "digest_hex": "7f1bca6e48a9e8378a54a7b23a946c905ea1df4476227e4bd964a7df7c63bfad"
+        },
+        {
+          "level": 123,
+          "digest_hex": "8ae449c13980c04f2da5c2da468c734e1b35e06089c1f46019b9de7b92a975ff"
+        },
+        {
+          "level": 124,
+          "digest_hex": "b9e57154f39b6479af3a5c656b25050c772f3f270a63a27ebed6354029a84350"
+        },
+        {
+          "level": 125,
+          "digest_hex": "71f0e9718caadc6301d222446dadf08835f3c3b061c7173f35931de02bc61723"
+        },
+        {
+          "level": 126,
+          "digest_hex": "38d2df1ec713ed325301c34d9e24cf6a25baf9b3f6c096eb21aea943ec9e980f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 10,
+      "target_index": 2,
+      "end_to_end_ms": 0.028656,
+      "known_value_decode_and_routing_ms": 0.000818,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000268,
+      "assembly_rootcheck_ms": 0.023959,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 122,
+          "digest_hex": "e73d545b246ee1373f3852d13adf358febe739e828b4cd04c1761836bdf362d4"
+        },
+        {
+          "level": 123,
+          "digest_hex": "efe91eb5d2d911747440a907c7d61b34927946a64078285f401ea897badaac05"
+        },
+        {
+          "level": 124,
+          "digest_hex": "e6e332c8eec00720011367d821c2a0f87bef9e35651b8ffee1cc11ef28990133"
+        },
+        {
+          "level": 125,
+          "digest_hex": "e99647cc6db780a3da4075137e80ce9c3c103839ee84e5ddc5e1fadb51546ca3"
+        },
+        {
+          "level": 126,
+          "digest_hex": "315e0c4751043a683a3bea17699a4d0483a7351d379a71b378fb8a4b6ee608a4"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 11,
+      "target_index": 1,
+      "end_to_end_ms": 0.028027,
+      "known_value_decode_and_routing_ms": 0.000745,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000219,
+      "assembly_rootcheck_ms": 0.023805,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 118,
+          "digest_hex": "8ec1c15697d520825fa8a51fbdd620344c6c44cec99bed473443ced2e606b3b2"
+        },
+        {
+          "level": 123,
+          "digest_hex": "f3435c8972a7e38a6cbdb45cdcb2b03e952deec3f7b964a1582282bbaae93aa5"
+        },
+        {
+          "level": 124,
+          "digest_hex": "e6e332c8eec00720011367d821c2a0f87bef9e35651b8ffee1cc11ef28990133"
+        },
+        {
+          "level": 125,
+          "digest_hex": "e99647cc6db780a3da4075137e80ce9c3c103839ee84e5ddc5e1fadb51546ca3"
+        },
+        {
+          "level": 126,
+          "digest_hex": "315e0c4751043a683a3bea17699a4d0483a7351d379a71b378fb8a4b6ee608a4"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 12,
+      "target_index": 9,
+      "end_to_end_ms": 0.028433,
+      "known_value_decode_and_routing_ms": 0.000829,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000328,
+      "assembly_rootcheck_ms": 0.023788,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 119,
+          "digest_hex": "b0958777fe044aa9dc9e9f8a4c46f7e1caa72c4e7f8070f8ce74225754cb1777"
+        },
+        {
+          "level": 120,
+          "digest_hex": "d511018bb8058a0dd25c80c1732bb5183c2996f963f384a7aaad8e72e24399e3"
+        },
+        {
+          "level": 121,
+          "digest_hex": "9181f62547ae5af12f5307f29e76f4eaae1f59aab7f184fd43d53ae4ca77c7c8"
+        },
+        {
+          "level": 123,
+          "digest_hex": "7f19730e1b6fbcdf342dcf27961f932ca6ab4dd755cc158fa47f6e9ed840d96a"
+        },
+        {
+          "level": 124,
+          "digest_hex": "f14a10fa70c768bfd802cee24c74db14ff2588aab0c47c40adbeefe2e345d528"
+        },
+        {
+          "level": 125,
+          "digest_hex": "e99647cc6db780a3da4075137e80ce9c3c103839ee84e5ddc5e1fadb51546ca3"
+        },
+        {
+          "level": 126,
+          "digest_hex": "315e0c4751043a683a3bea17699a4d0483a7351d379a71b378fb8a4b6ee608a4"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 13,
+      "target_index": 68,
+      "end_to_end_ms": 0.028256,
+      "known_value_decode_and_routing_ms": 0.000988,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000227,
+      "assembly_rootcheck_ms": 0.023814,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 121,
+          "digest_hex": "8f445dbebc79bddddc7ceea46d5af12866fff9becc003327e1c5ed3692fdbd56"
+        },
+        {
+          "level": 122,
+          "digest_hex": "4144a69750944a8e6b83342283984aae805d1830899e52c5f1df78d8b67079c2"
+        },
+        {
+          "level": 123,
+          "digest_hex": "7e4618d8ed676162c94b361acbcd6f3f141154a41eeb7510ef5e4f217966888c"
+        },
+        {
+          "level": 124,
+          "digest_hex": "5ddd4fa2bc3cc52b2720271e3ac14515ecc3dccb146065fa4dd9d0bc146d457f"
+        },
+        {
+          "level": 125,
+          "digest_hex": "e5872fcc90baee04b3549eb6524522f9e5f4738cf9711bd02a08feac9e363e99"
+        },
+        {
+          "level": 126,
+          "digest_hex": "e01b6602c5b23ea13716cf6fe63a1e9e49a1b1dd9e9d58491935637551d7b36f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 14,
+      "target_index": 78,
+      "end_to_end_ms": 0.028567,
+      "known_value_decode_and_routing_ms": 0.000983,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000279,
+      "assembly_rootcheck_ms": 0.023743,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 118,
+          "digest_hex": "a4241e0a16d8576fc3e93adee1aa04040495e7e3fe3bcaca83679809c3503f5a"
+        },
+        {
+          "level": 120,
+          "digest_hex": "9fff7f66bf5fb4a564b1fc26ff0245b94691992201e0716dc9e726dd04ef28a7"
+        },
+        {
+          "level": 121,
+          "digest_hex": "6dbd4759f455750dba06ff8a9f28dd53e358575ec22bad49cc90c6bf4265c7d5"
+        },
+        {
+          "level": 123,
+          "digest_hex": "c68a0c114c7e4730f66b16386671571a18bcf4a1cdf5440b931defc2f69aa795"
+        },
+        {
+          "level": 124,
+          "digest_hex": "8f568b63de16712e0987fbd40f05524debcee56ba9789d5c8aa621d0a3d3f9ef"
+        },
+        {
+          "level": 125,
+          "digest_hex": "6997de0c1dd07363560e375f98fa4c3afd63860df0608d0fb82ec15a6783e3ac"
+        },
+        {
+          "level": 126,
+          "digest_hex": "38d2df1ec713ed325301c34d9e24cf6a25baf9b3f6c096eb21aea943ec9e980f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 15,
+      "target_index": 91,
+      "end_to_end_ms": 0.030708,
+      "known_value_decode_and_routing_ms": 0.001767,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000431,
+      "assembly_rootcheck_ms": 0.023816,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 119,
+          "digest_hex": "2b9fde550367a456e13b5a16b4211fbdc00ca60396b107d5958cdd4c72ba1a2c"
+        },
+        {
+          "level": 122,
+          "digest_hex": "98183e3e3b84cf6251ad9eabcbb8428581a79d9b0483da8e2b84bdf985a707e1"
+        },
+        {
+          "level": 123,
+          "digest_hex": "03f10449b5028f0d82bedf2413a4e7db250d4415adb695f8696dce0d9e052e7e"
+        },
+        {
+          "level": 124,
+          "digest_hex": "430ec155962640f226905643a9726ac7d3161f41c3fa25e332b4cd3bd7791288"
+        },
+        {
+          "level": 125,
+          "digest_hex": "6997de0c1dd07363560e375f98fa4c3afd63860df0608d0fb82ec15a6783e3ac"
+        },
+        {
+          "level": 126,
+          "digest_hex": "38d2df1ec713ed325301c34d9e24cf6a25baf9b3f6c096eb21aea943ec9e980f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 16,
+      "target_index": 14,
+      "end_to_end_ms": 0.033434,
+      "known_value_decode_and_routing_ms": 0.003817,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000342,
+      "assembly_rootcheck_ms": 0.023788,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 121,
+          "digest_hex": "2c06798f5c9dc6d70f616521e79bda335695193b7c133606380361f0cec646af"
+        },
+        {
+          "level": 123,
+          "digest_hex": "46766f96255f7f01f199c9d2fec86a2bf4610ca221556e199707c76d860ad8dc"
+        },
+        {
+          "level": 124,
+          "digest_hex": "9cf4e82baf206f56dd5b0c98ee2bcc0f3943a3e456fe81ae3ec445bd39cc97ca"
+        },
+        {
+          "level": 125,
+          "digest_hex": "0cf76ea1ff1977e0eccf349ea33e4f52d6b6d015dd69145da274e31eb2430036"
+        },
+        {
+          "level": 126,
+          "digest_hex": "315e0c4751043a683a3bea17699a4d0483a7351d379a71b378fb8a4b6ee608a4"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 17,
+      "target_index": 3,
+      "end_to_end_ms": 0.02847,
+      "known_value_decode_and_routing_ms": 0.000865,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000372,
+      "assembly_rootcheck_ms": 0.023807,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 120,
+          "digest_hex": "63b3dce2f7436a93d50028a91cef812dd405b15e4289adc314614992c4c6c5ae"
+        },
+        {
+          "level": 121,
+          "digest_hex": "edd645a0c9980406acf1156ef2de737893b6954a3b30b7ebf46462ad97474ee8"
+        },
+        {
+          "level": 122,
+          "digest_hex": "b2aec8cfe9ea6c1fd358f9488e53f774f66b464cf688393e100546ada1950d78"
+        },
+        {
+          "level": 123,
+          "digest_hex": "efe91eb5d2d911747440a907c7d61b34927946a64078285f401ea897badaac05"
+        },
+        {
+          "level": 124,
+          "digest_hex": "e6e332c8eec00720011367d821c2a0f87bef9e35651b8ffee1cc11ef28990133"
+        },
+        {
+          "level": 125,
+          "digest_hex": "e99647cc6db780a3da4075137e80ce9c3c103839ee84e5ddc5e1fadb51546ca3"
+        },
+        {
+          "level": 126,
+          "digest_hex": "315e0c4751043a683a3bea17699a4d0483a7351d379a71b378fb8a4b6ee608a4"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 18,
+      "target_index": 26,
+      "end_to_end_ms": 0.028853,
+      "known_value_decode_and_routing_ms": 0.001184,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000265,
+      "assembly_rootcheck_ms": 0.024051,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 120,
+          "digest_hex": "f8539c846791e2a76ebf113fad0f6c92cf6fc4adb29fb450cf4ae1a0d372f869"
+        },
+        {
+          "level": 121,
+          "digest_hex": "6a0c01e659af98600cd2c1597fbc99ee7e2f83ff14ed8b815f044e1cc6cbcdd6"
+        },
+        {
+          "level": 122,
+          "digest_hex": "a294d75afbfc782a44b7430102b87a465ec9a90ba1e8f9bdde85cdf392f3e226"
+        },
+        {
+          "level": 124,
+          "digest_hex": "be506c35ea18c129fef8ad5753a7de7a13ac172e42f5e292452b519f97bc1506"
+        },
+        {
+          "level": 125,
+          "digest_hex": "16686314da3ceeba8277009441d66add11621e51e3c1a39abec394b7df1e1736"
+        },
+        {
+          "level": 126,
+          "digest_hex": "7bf8a33390ca8b03c73429b298fde20e07ab842d53189f7617929a5f5aee8fca"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 19,
+      "target_index": 87,
+      "end_to_end_ms": 0.029011,
+      "known_value_decode_and_routing_ms": 0.00128,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.00033,
+      "assembly_rootcheck_ms": 0.023871,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 120,
+          "digest_hex": "5bca2b44a829c4205f911ead0843e96a9a8b40aa61212b8544ef3d1d041ef7a3"
+        },
+        {
+          "level": 121,
+          "digest_hex": "57ad095412cdd230e8a70579fb511d004cb182166b9e43026bd525a79ac20bad"
+        },
+        {
+          "level": 122,
+          "digest_hex": "4d46a05b508ec72ba72ae55f55be9e8b6dede780cf6fb55faa6b420c293bcd22"
+        },
+        {
+          "level": 123,
+          "digest_hex": "03f10449b5028f0d82bedf2413a4e7db250d4415adb695f8696dce0d9e052e7e"
+        },
+        {
+          "level": 124,
+          "digest_hex": "430ec155962640f226905643a9726ac7d3161f41c3fa25e332b4cd3bd7791288"
+        },
+        {
+          "level": 125,
+          "digest_hex": "6997de0c1dd07363560e375f98fa4c3afd63860df0608d0fb82ec15a6783e3ac"
+        },
+        {
+          "level": 126,
+          "digest_hex": "38d2df1ec713ed325301c34d9e24cf6a25baf9b3f6c096eb21aea943ec9e980f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 20,
+      "target_index": 71,
+      "end_to_end_ms": 0.028222,
+      "known_value_decode_and_routing_ms": 0.000969,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000229,
+      "assembly_rootcheck_ms": 0.023801,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 121,
+          "digest_hex": "f6e7c9aa9958172410e3d585454a9fcef8025427cd88e06a9c56910385e00b00"
+        },
+        {
+          "level": 122,
+          "digest_hex": "9981c970f63268c852ece001812ba3c7f928faaf97f413628061bb5b57824335"
+        },
+        {
+          "level": 123,
+          "digest_hex": "7e4618d8ed676162c94b361acbcd6f3f141154a41eeb7510ef5e4f217966888c"
+        },
+        {
+          "level": 124,
+          "digest_hex": "5ddd4fa2bc3cc52b2720271e3ac14515ecc3dccb146065fa4dd9d0bc146d457f"
+        },
+        {
+          "level": 125,
+          "digest_hex": "e5872fcc90baee04b3549eb6524522f9e5f4738cf9711bd02a08feac9e363e99"
+        },
+        {
+          "level": 126,
+          "digest_hex": "e01b6602c5b23ea13716cf6fe63a1e9e49a1b1dd9e9d58491935637551d7b36f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 21,
+      "target_index": 57,
+      "end_to_end_ms": 0.028313,
+      "known_value_decode_and_routing_ms": 0.001021,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000276,
+      "assembly_rootcheck_ms": 0.023788,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 118,
+          "digest_hex": "77f86f385dbb02f00583540d7c6fc5dce70edc074500db6e219cd5aa7ed19d4c"
+        },
+        {
+          "level": 121,
+          "digest_hex": "b6e02df7f589b18e2522f7fb7a67b0e46321dfeb96185405f6e40dac28caf503"
+        },
+        {
+          "level": 122,
+          "digest_hex": "b6bc862997180d0b084bf23f406d335950bba1c78abeca1974e7ef8f02cf212f"
+        },
+        {
+          "level": 124,
+          "digest_hex": "5c70d3c31dd0a9b2e87343711b9586e76b0c91eab00d032e9953a87cefcd66bf"
+        },
+        {
+          "level": 125,
+          "digest_hex": "33ed0295599fba9562575b79eb736d699cb0025f41971fd2a296c1e87da97577"
+        },
+        {
+          "level": 126,
+          "digest_hex": "e01b6602c5b23ea13716cf6fe63a1e9e49a1b1dd9e9d58491935637551d7b36f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 22,
+      "target_index": 80,
+      "end_to_end_ms": 0.029973,
+      "known_value_decode_and_routing_ms": 0.001005,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000297,
+      "assembly_rootcheck_ms": 0.023836,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 121,
+          "digest_hex": "92c4ec049d7ceabf69680c60e540ad0fc0ff50ac09084af3eea356051e2a5bb6"
+        },
+        {
+          "level": 122,
+          "digest_hex": "5056769174d35787ff6eb17e9129ffa6fda8628c8ff13b949ec78892f62360ad"
+        },
+        {
+          "level": 123,
+          "digest_hex": "f1bf8f33e60f8f16fcc877fa04536ec85ab7523f926e59374c59678e346c4165"
+        },
+        {
+          "level": 124,
+          "digest_hex": "8f568b63de16712e0987fbd40f05524debcee56ba9789d5c8aa621d0a3d3f9ef"
+        },
+        {
+          "level": 125,
+          "digest_hex": "6997de0c1dd07363560e375f98fa4c3afd63860df0608d0fb82ec15a6783e3ac"
+        },
+        {
+          "level": 126,
+          "digest_hex": "38d2df1ec713ed325301c34d9e24cf6a25baf9b3f6c096eb21aea943ec9e980f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 23,
+      "target_index": 73,
+      "end_to_end_ms": 0.054022,
+      "known_value_decode_and_routing_ms": 0.024914,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000722,
+      "assembly_rootcheck_ms": 0.024437,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 120,
+          "digest_hex": "2b36b41ee9d26e88d15f15aa49d54790128f0e1d761f78f44ef9e0009ce75410"
+        },
+        {
+          "level": 122,
+          "digest_hex": "c9093c21c1bb7ba96bbca60489fb1ad1be14b5b1f6f1da9900bf5ed4585d1440"
+        },
+        {
+          "level": 123,
+          "digest_hex": "17151266f78378c7a3241be396cf536a1c64eb7e28b6e27bd078a21c1caede4e"
+        },
+        {
+          "level": 124,
+          "digest_hex": "5ddd4fa2bc3cc52b2720271e3ac14515ecc3dccb146065fa4dd9d0bc146d457f"
+        },
+        {
+          "level": 125,
+          "digest_hex": "e5872fcc90baee04b3549eb6524522f9e5f4738cf9711bd02a08feac9e363e99"
+        },
+        {
+          "level": 126,
+          "digest_hex": "e01b6602c5b23ea13716cf6fe63a1e9e49a1b1dd9e9d58491935637551d7b36f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 24,
+      "target_index": 56,
+      "end_to_end_ms": 0.028786,
+      "known_value_decode_and_routing_ms": 0.001113,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000263,
+      "assembly_rootcheck_ms": 0.024069,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 121,
+          "digest_hex": "4dca07128626f942a64acafbd5d035164e586d0a1eba898f8e2ba01c1e626aa9"
+        },
+        {
+          "level": 122,
+          "digest_hex": "b6bc862997180d0b084bf23f406d335950bba1c78abeca1974e7ef8f02cf212f"
+        },
+        {
+          "level": 124,
+          "digest_hex": "5c70d3c31dd0a9b2e87343711b9586e76b0c91eab00d032e9953a87cefcd66bf"
+        },
+        {
+          "level": 125,
+          "digest_hex": "33ed0295599fba9562575b79eb736d699cb0025f41971fd2a296c1e87da97577"
+        },
+        {
+          "level": 126,
+          "digest_hex": "e01b6602c5b23ea13716cf6fe63a1e9e49a1b1dd9e9d58491935637551d7b36f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 25,
+      "target_index": 99,
+      "end_to_end_ms": 0.034341,
+      "known_value_decode_and_routing_ms": 0.001073,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000347,
+      "assembly_rootcheck_ms": 0.029222,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 122,
+          "digest_hex": "073e192ffe247431d612f2fc7c96146088ed637e5cc8ccb79b6b560b466a5d38"
+        },
+        {
+          "level": 124,
+          "digest_hex": "dd6d863b9c531a3ca849ab8b04c6481ab62def75885b21f57bcfa9c9b812dc17"
+        },
+        {
+          "level": 125,
+          "digest_hex": "71f0e9718caadc6301d222446dadf08835f3c3b061c7173f35931de02bc61723"
+        },
+        {
+          "level": 126,
+          "digest_hex": "38d2df1ec713ed325301c34d9e24cf6a25baf9b3f6c096eb21aea943ec9e980f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 26,
+      "target_index": 50,
+      "end_to_end_ms": 0.034218,
+      "known_value_decode_and_routing_ms": 0.001016,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000332,
+      "assembly_rootcheck_ms": 0.029152,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 119,
+          "digest_hex": "392fd2dcf7691e28ddea43df911b2db06f226b95c5147b2e576e517d0407f5f9"
+        },
+        {
+          "level": 121,
+          "digest_hex": "7d376b59de2d0011dc5b5ac12801539ff356f4de688df6953e5327bb7ba59c37"
+        },
+        {
+          "level": 123,
+          "digest_hex": "65e13bc6b488a211b040acbcaee2d855a9cb69113a337d37341526c97803e927"
+        },
+        {
+          "level": 124,
+          "digest_hex": "ea0e4a563829e0812902f4c35dd2ce829fc84bf0865d575122d19bd0d961bf3a"
+        },
+        {
+          "level": 125,
+          "digest_hex": "33ed0295599fba9562575b79eb736d699cb0025f41971fd2a296c1e87da97577"
+        },
+        {
+          "level": 126,
+          "digest_hex": "e01b6602c5b23ea13716cf6fe63a1e9e49a1b1dd9e9d58491935637551d7b36f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 27,
+      "target_index": 76,
+      "end_to_end_ms": 0.030168,
+      "known_value_decode_and_routing_ms": 0.000828,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000298,
+      "assembly_rootcheck_ms": 0.023804,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 120,
+          "digest_hex": "e464c14956776ccff7dcd9fd1c59f2c1cdcb52744d668c84165c8807bc143c85"
+        },
+        {
+          "level": 121,
+          "digest_hex": "6dbd4759f455750dba06ff8a9f28dd53e358575ec22bad49cc90c6bf4265c7d5"
+        },
+        {
+          "level": 123,
+          "digest_hex": "c68a0c114c7e4730f66b16386671571a18bcf4a1cdf5440b931defc2f69aa795"
+        },
+        {
+          "level": 124,
+          "digest_hex": "8f568b63de16712e0987fbd40f05524debcee56ba9789d5c8aa621d0a3d3f9ef"
+        },
+        {
+          "level": 125,
+          "digest_hex": "6997de0c1dd07363560e375f98fa4c3afd63860df0608d0fb82ec15a6783e3ac"
+        },
+        {
+          "level": 126,
+          "digest_hex": "38d2df1ec713ed325301c34d9e24cf6a25baf9b3f6c096eb21aea943ec9e980f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 28,
+      "target_index": 81,
+      "end_to_end_ms": 0.028394,
+      "known_value_decode_and_routing_ms": 0.000844,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000288,
+      "assembly_rootcheck_ms": 0.023765,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 121,
+          "digest_hex": "950a9ad15f0a3101836b2a2781eec1451946474438578ca6933faf2d804be7b5"
+        },
+        {
+          "level": 122,
+          "digest_hex": "5056769174d35787ff6eb17e9129ffa6fda8628c8ff13b949ec78892f62360ad"
+        },
+        {
+          "level": 123,
+          "digest_hex": "f1bf8f33e60f8f16fcc877fa04536ec85ab7523f926e59374c59678e346c4165"
+        },
+        {
+          "level": 124,
+          "digest_hex": "8f568b63de16712e0987fbd40f05524debcee56ba9789d5c8aa621d0a3d3f9ef"
+        },
+        {
+          "level": 125,
+          "digest_hex": "6997de0c1dd07363560e375f98fa4c3afd63860df0608d0fb82ec15a6783e3ac"
+        },
+        {
+          "level": 126,
+          "digest_hex": "38d2df1ec713ed325301c34d9e24cf6a25baf9b3f6c096eb21aea943ec9e980f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 29,
+      "target_index": 41,
+      "end_to_end_ms": 0.028422,
+      "known_value_decode_and_routing_ms": 0.00094,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000278,
+      "assembly_rootcheck_ms": 0.023828,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 118,
+          "digest_hex": "340e95503d6caedeffba054ab2519db0a49354d0bc4ec2a69c09826e35a1c4b2"
+        },
+        {
+          "level": 119,
+          "digest_hex": "ca493719661f56daad6cb2664540c023b5b490b1066c30f9fbd300f4c91e885c"
+        },
+        {
+          "level": 121,
+          "digest_hex": "12fbed6b426a7c88cf60460d8dcc45058dfd236d772af0114121f4fcc33c287e"
+        },
+        {
+          "level": 124,
+          "digest_hex": "b0babbd5eeb2242c85a526622567f21ea19757b4b8e977ab068eb5853b2476c3"
+        },
+        {
+          "level": 125,
+          "digest_hex": "6793468840419c766ff8e5cf0cd377f57081c09468d3072bdac29bd7052dfd13"
+        },
+        {
+          "level": 126,
+          "digest_hex": "7bf8a33390ca8b03c73429b298fde20e07ab842d53189f7617929a5f5aee8fca"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 30,
+      "target_index": 90,
+      "end_to_end_ms": 0.02854,
+      "known_value_decode_and_routing_ms": 0.000937,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000351,
+      "assembly_rootcheck_ms": 0.023927,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 119,
+          "digest_hex": "74bff273de7dc00106353c36b35eebe9e51262dae7763a216eb66654960f2255"
+        },
+        {
+          "level": 122,
+          "digest_hex": "98183e3e3b84cf6251ad9eabcbb8428581a79d9b0483da8e2b84bdf985a707e1"
+        },
+        {
+          "level": 123,
+          "digest_hex": "03f10449b5028f0d82bedf2413a4e7db250d4415adb695f8696dce0d9e052e7e"
+        },
+        {
+          "level": 124,
+          "digest_hex": "430ec155962640f226905643a9726ac7d3161f41c3fa25e332b4cd3bd7791288"
+        },
+        {
+          "level": 125,
+          "digest_hex": "6997de0c1dd07363560e375f98fa4c3afd63860df0608d0fb82ec15a6783e3ac"
+        },
+        {
+          "level": 126,
+          "digest_hex": "38d2df1ec713ed325301c34d9e24cf6a25baf9b3f6c096eb21aea943ec9e980f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 31,
+      "target_index": 20,
+      "end_to_end_ms": 0.028467,
+      "known_value_decode_and_routing_ms": 0.00095,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000326,
+      "assembly_rootcheck_ms": 0.02379,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 121,
+          "digest_hex": "9181548c5dfa1d971c170d6f231e090bcdb097f6408c33d02b0664f83025db15"
+        },
+        {
+          "level": 122,
+          "digest_hex": "d15a25a749aa69b7c66ceb4ae9e2c13d905bbcc606d1aba50cf4875d64f26f63"
+        },
+        {
+          "level": 123,
+          "digest_hex": "67d0b3ab291b4d805a82049982c6172041bce1f14c5a813ca1026d8dc863fefa"
+        },
+        {
+          "level": 124,
+          "digest_hex": "833fb9b71d9b1c9765205f861fb8619048914463b7541305d5ce771c0a756a2c"
+        },
+        {
+          "level": 125,
+          "digest_hex": "0cf76ea1ff1977e0eccf349ea33e4f52d6b6d015dd69145da274e31eb2430036"
+        },
+        {
+          "level": 126,
+          "digest_hex": "315e0c4751043a683a3bea17699a4d0483a7351d379a71b378fb8a4b6ee608a4"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 32,
+      "target_index": 53,
+      "end_to_end_ms": 0.028288,
+      "known_value_decode_and_routing_ms": 0.000743,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000275,
+      "assembly_rootcheck_ms": 0.023915,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 122,
+          "digest_hex": "6987b5d3bd57b59f7db70bbf20c59b149385c187e54d3b322e0ad9a625a2ecf1"
+        },
+        {
+          "level": 123,
+          "digest_hex": "c5562d3bd4b43acd80d3feea05d151d7563cc8274b62d2682d064756a999a71b"
+        },
+        {
+          "level": 124,
+          "digest_hex": "ea0e4a563829e0812902f4c35dd2ce829fc84bf0865d575122d19bd0d961bf3a"
+        },
+        {
+          "level": 125,
+          "digest_hex": "33ed0295599fba9562575b79eb736d699cb0025f41971fd2a296c1e87da97577"
+        },
+        {
+          "level": 126,
+          "digest_hex": "e01b6602c5b23ea13716cf6fe63a1e9e49a1b1dd9e9d58491935637551d7b36f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 33,
+      "target_index": 58,
+      "end_to_end_ms": 0.029675,
+      "known_value_decode_and_routing_ms": 0.00097,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000282,
+      "assembly_rootcheck_ms": 0.023772,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 118,
+          "digest_hex": "7c491f76e87ee7e2c1e64f817b2b0ad1d0d744fc8ca0c57f820de091af0887a5"
+        },
+        {
+          "level": 121,
+          "digest_hex": "b6e02df7f589b18e2522f7fb7a67b0e46321dfeb96185405f6e40dac28caf503"
+        },
+        {
+          "level": 122,
+          "digest_hex": "b6bc862997180d0b084bf23f406d335950bba1c78abeca1974e7ef8f02cf212f"
+        },
+        {
+          "level": 124,
+          "digest_hex": "5c70d3c31dd0a9b2e87343711b9586e76b0c91eab00d032e9953a87cefcd66bf"
+        },
+        {
+          "level": 125,
+          "digest_hex": "33ed0295599fba9562575b79eb736d699cb0025f41971fd2a296c1e87da97577"
+        },
+        {
+          "level": 126,
+          "digest_hex": "e01b6602c5b23ea13716cf6fe63a1e9e49a1b1dd9e9d58491935637551d7b36f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 34,
+      "target_index": 79,
+      "end_to_end_ms": 0.028202,
+      "known_value_decode_and_routing_ms": 0.000871,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000276,
+      "assembly_rootcheck_ms": 0.023766,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 121,
+          "digest_hex": "5bd4afa92b3c20a9520255e3f7ab7406e2b1b6bfef89a5cb6d9c7fe4fc390f47"
+        },
+        {
+          "level": 123,
+          "digest_hex": "c68a0c114c7e4730f66b16386671571a18bcf4a1cdf5440b931defc2f69aa795"
+        },
+        {
+          "level": 124,
+          "digest_hex": "8f568b63de16712e0987fbd40f05524debcee56ba9789d5c8aa621d0a3d3f9ef"
+        },
+        {
+          "level": 125,
+          "digest_hex": "6997de0c1dd07363560e375f98fa4c3afd63860df0608d0fb82ec15a6783e3ac"
+        },
+        {
+          "level": 126,
+          "digest_hex": "38d2df1ec713ed325301c34d9e24cf6a25baf9b3f6c096eb21aea943ec9e980f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 35,
+      "target_index": 93,
+      "end_to_end_ms": 0.029373,
+      "known_value_decode_and_routing_ms": 0.001951,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000316,
+      "assembly_rootcheck_ms": 0.023873,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 122,
+          "digest_hex": "864f5121745c10173cb26f213ce90a295c42aab3653b4e1098dc6738536e1dae"
+        },
+        {
+          "level": 123,
+          "digest_hex": "6a5fc3738cd9c47382853f6f8d8bd2cca139155c3e6d56f9500fd43a9d749033"
+        },
+        {
+          "level": 124,
+          "digest_hex": "b9e57154f39b6479af3a5c656b25050c772f3f270a63a27ebed6354029a84350"
+        },
+        {
+          "level": 125,
+          "digest_hex": "71f0e9718caadc6301d222446dadf08835f3c3b061c7173f35931de02bc61723"
+        },
+        {
+          "level": 126,
+          "digest_hex": "38d2df1ec713ed325301c34d9e24cf6a25baf9b3f6c096eb21aea943ec9e980f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 36,
+      "target_index": 74,
+      "end_to_end_ms": 0.028321,
+      "known_value_decode_and_routing_ms": 0.001044,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.00024,
+      "assembly_rootcheck_ms": 0.023848,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 120,
+          "digest_hex": "1462a0a713b58df8282805b3cfd627d26bfd2b47804214e2f02ee77eeec2a1b5"
+        },
+        {
+          "level": 122,
+          "digest_hex": "c9093c21c1bb7ba96bbca60489fb1ad1be14b5b1f6f1da9900bf5ed4585d1440"
+        },
+        {
+          "level": 123,
+          "digest_hex": "17151266f78378c7a3241be396cf536a1c64eb7e28b6e27bd078a21c1caede4e"
+        },
+        {
+          "level": 124,
+          "digest_hex": "5ddd4fa2bc3cc52b2720271e3ac14515ecc3dccb146065fa4dd9d0bc146d457f"
+        },
+        {
+          "level": 125,
+          "digest_hex": "e5872fcc90baee04b3549eb6524522f9e5f4738cf9711bd02a08feac9e363e99"
+        },
+        {
+          "level": 126,
+          "digest_hex": "e01b6602c5b23ea13716cf6fe63a1e9e49a1b1dd9e9d58491935637551d7b36f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 37,
+      "target_index": 63,
+      "end_to_end_ms": 0.032597,
+      "known_value_decode_and_routing_ms": 0.005149,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000263,
+      "assembly_rootcheck_ms": 0.023927,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 121,
+          "digest_hex": "878ca07bae9473ccd2484f4248c92646942974116a0b8ce48bdbd1e485cc62d7"
+        },
+        {
+          "level": 123,
+          "digest_hex": "62aef58e89a5d57fc1db006cadb66343ecf4efb0ec2efe9442f03b33996a0a07"
+        },
+        {
+          "level": 124,
+          "digest_hex": "d251933359f24f6ab0385e437a222e01997d4870ace952d330284c208c079aee"
+        },
+        {
+          "level": 125,
+          "digest_hex": "e5872fcc90baee04b3549eb6524522f9e5f4738cf9711bd02a08feac9e363e99"
+        },
+        {
+          "level": 126,
+          "digest_hex": "e01b6602c5b23ea13716cf6fe63a1e9e49a1b1dd9e9d58491935637551d7b36f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 38,
+      "target_index": 16,
+      "end_to_end_ms": 0.02722,
+      "known_value_decode_and_routing_ms": 0.000988,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000294,
+      "assembly_rootcheck_ms": 0.022663,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 122,
+          "digest_hex": "f3e75e54f496070cf65492f54c58adc399197f925924e832bfe1fa0d681ada93"
+        },
+        {
+          "level": 123,
+          "digest_hex": "e62a1e8259f03a69922a668fb8962947361bb77472274f985e57682807c76752"
+        },
+        {
+          "level": 124,
+          "digest_hex": "9cf4e82baf206f56dd5b0c98ee2bcc0f3943a3e456fe81ae3ec445bd39cc97ca"
+        },
+        {
+          "level": 125,
+          "digest_hex": "0cf76ea1ff1977e0eccf349ea33e4f52d6b6d015dd69145da274e31eb2430036"
+        },
+        {
+          "level": 126,
+          "digest_hex": "315e0c4751043a683a3bea17699a4d0483a7351d379a71b378fb8a4b6ee608a4"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 39,
+      "target_index": 85,
+      "end_to_end_ms": 0.028123,
+      "known_value_decode_and_routing_ms": 0.001866,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000447,
+      "assembly_rootcheck_ms": 0.02271,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 119,
+          "digest_hex": "6322c1dd63bef736d2680e52565466451f2079da60c8b510fed5ce0c44a58694"
+        },
+        {
+          "level": 120,
+          "digest_hex": "eb9676c9de04af4cf75da495907cecb8d47a737be46e3eb3f7e5b1837a8d8f8c"
+        },
+        {
+          "level": 121,
+          "digest_hex": "57ad095412cdd230e8a70579fb511d004cb182166b9e43026bd525a79ac20bad"
+        },
+        {
+          "level": 122,
+          "digest_hex": "4d46a05b508ec72ba72ae55f55be9e8b6dede780cf6fb55faa6b420c293bcd22"
+        },
+        {
+          "level": 123,
+          "digest_hex": "03f10449b5028f0d82bedf2413a4e7db250d4415adb695f8696dce0d9e052e7e"
+        },
+        {
+          "level": 124,
+          "digest_hex": "430ec155962640f226905643a9726ac7d3161f41c3fa25e332b4cd3bd7791288"
+        },
+        {
+          "level": 125,
+          "digest_hex": "6997de0c1dd07363560e375f98fa4c3afd63860df0608d0fb82ec15a6783e3ac"
+        },
+        {
+          "level": 126,
+          "digest_hex": "38d2df1ec713ed325301c34d9e24cf6a25baf9b3f6c096eb21aea943ec9e980f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 40,
+      "target_index": 27,
+      "end_to_end_ms": 0.026878,
+      "known_value_decode_and_routing_ms": 0.000892,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000239,
+      "assembly_rootcheck_ms": 0.022701,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 119,
+          "digest_hex": "9210b136324db286640b7dfae16ae3965591d83172931d2d6005464baf40d1f7"
+        },
+        {
+          "level": 121,
+          "digest_hex": "2d7a540f556d1f33fc7ef4bf847711704dd68f0a47c8a79b12a4b0e5aac95ec1"
+        },
+        {
+          "level": 122,
+          "digest_hex": "a294d75afbfc782a44b7430102b87a465ec9a90ba1e8f9bdde85cdf392f3e226"
+        },
+        {
+          "level": 124,
+          "digest_hex": "be506c35ea18c129fef8ad5753a7de7a13ac172e42f5e292452b519f97bc1506"
+        },
+        {
+          "level": 125,
+          "digest_hex": "16686314da3ceeba8277009441d66add11621e51e3c1a39abec394b7df1e1736"
+        },
+        {
+          "level": 126,
+          "digest_hex": "7bf8a33390ca8b03c73429b298fde20e07ab842d53189f7617929a5f5aee8fca"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 41,
+      "target_index": 35,
+      "end_to_end_ms": 0.027539,
+      "known_value_decode_and_routing_ms": 0.000976,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000296,
+      "assembly_rootcheck_ms": 0.022675,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 119,
+          "digest_hex": "6c19882b15a4ad777e33d7d0757f6b29ee11d1ac67c2f4c7de92435a91364be4"
+        },
+        {
+          "level": 121,
+          "digest_hex": "122b56691dd719e16d0fc9783f8a97d38efb3941fdb370b16755c5461530d8ba"
+        },
+        {
+          "level": 122,
+          "digest_hex": "ca54b1678b79967f4edfa2c85e178942b70635ba24de3cdc92ee4851cae5eff4"
+        },
+        {
+          "level": 123,
+          "digest_hex": "74064c60fe58cb811cfbfdf7262e8c8bae63490b47eddf93bc5448ff16a8a301"
+        },
+        {
+          "level": 124,
+          "digest_hex": "546f2717fad16bbc7b4c7a5ded7e30928a3a8b21c1c1983c275fa0308f4c5933"
+        },
+        {
+          "level": 125,
+          "digest_hex": "16686314da3ceeba8277009441d66add11621e51e3c1a39abec394b7df1e1736"
+        },
+        {
+          "level": 126,
+          "digest_hex": "7bf8a33390ca8b03c73429b298fde20e07ab842d53189f7617929a5f5aee8fca"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 42,
+      "target_index": 98,
+      "end_to_end_ms": 0.026669,
+      "known_value_decode_and_routing_ms": 0.000818,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000233,
+      "assembly_rootcheck_ms": 0.022656,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 122,
+          "digest_hex": "a0a19288d31690253e8edd5f021232f66cff8688359161da19648db27c890967"
+        },
+        {
+          "level": 124,
+          "digest_hex": "dd6d863b9c531a3ca849ab8b04c6481ab62def75885b21f57bcfa9c9b812dc17"
+        },
+        {
+          "level": 125,
+          "digest_hex": "71f0e9718caadc6301d222446dadf08835f3c3b061c7173f35931de02bc61723"
+        },
+        {
+          "level": 126,
+          "digest_hex": "38d2df1ec713ed325301c34d9e24cf6a25baf9b3f6c096eb21aea943ec9e980f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 43,
+      "target_index": 24,
+      "end_to_end_ms": 0.026677,
+      "known_value_decode_and_routing_ms": 0.000871,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000247,
+      "assembly_rootcheck_ms": 0.022643,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 122,
+          "digest_hex": "4ccbf4cc0d5726abce72d0c9a8841860a80391b1e1d69c65d4ff3a1098b0f56f"
+        },
+        {
+          "level": 123,
+          "digest_hex": "9423a986603a43df6418f491eb3439eeea80a367aa023b584bd476bfcc827c4d"
+        },
+        {
+          "level": 124,
+          "digest_hex": "833fb9b71d9b1c9765205f861fb8619048914463b7541305d5ce771c0a756a2c"
+        },
+        {
+          "level": 125,
+          "digest_hex": "0cf76ea1ff1977e0eccf349ea33e4f52d6b6d015dd69145da274e31eb2430036"
+        },
+        {
+          "level": 126,
+          "digest_hex": "315e0c4751043a683a3bea17699a4d0483a7351d379a71b378fb8a4b6ee608a4"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 44,
+      "target_index": 47,
+      "end_to_end_ms": 0.027025,
+      "known_value_decode_and_routing_ms": 0.000821,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000199,
+      "assembly_rootcheck_ms": 0.022772,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 122,
+          "digest_hex": "1577d9a1109ed14f20361c2ba7d55af3cc9cf44337894e56b7b6ae4fb1b6ac88"
+        },
+        {
+          "level": 123,
+          "digest_hex": "0bdd92706bea8fcd0b242e116125b29be28561152c35b26c1a14f5136e9ef3e0"
+        },
+        {
+          "level": 124,
+          "digest_hex": "e0e2ad1b1c79dd2c3729678cfbff14ff748e98fb4f0354f21714901034d8df90"
+        },
+        {
+          "level": 125,
+          "digest_hex": "6793468840419c766ff8e5cf0cd377f57081c09468d3072bdac29bd7052dfd13"
+        },
+        {
+          "level": 126,
+          "digest_hex": "7bf8a33390ca8b03c73429b298fde20e07ab842d53189f7617929a5f5aee8fca"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 45,
+      "target_index": 37,
+      "end_to_end_ms": 0.026713,
+      "known_value_decode_and_routing_ms": 0.000894,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000258,
+      "assembly_rootcheck_ms": 0.022641,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 120,
+          "digest_hex": "69f234a436bb341804b7e036eb03f47182c98f8a697a4ea80dee99d1447e053b"
+        },
+        {
+          "level": 121,
+          "digest_hex": "b3d55c2086123af329aeab2edab2946c4a74ff44eb4740f001871b81f6b18e09"
+        },
+        {
+          "level": 122,
+          "digest_hex": "50b14e97af0ff21507d0716982003eadd809f2d9956c6999a11312062df8157a"
+        },
+        {
+          "level": 123,
+          "digest_hex": "c820a8eb61a286ebd0576e6819420e4afeee1174c840c8dd23998a7fa78fc291"
+        },
+        {
+          "level": 124,
+          "digest_hex": "546f2717fad16bbc7b4c7a5ded7e30928a3a8b21c1c1983c275fa0308f4c5933"
+        },
+        {
+          "level": 125,
+          "digest_hex": "16686314da3ceeba8277009441d66add11621e51e3c1a39abec394b7df1e1736"
+        },
+        {
+          "level": 126,
+          "digest_hex": "7bf8a33390ca8b03c73429b298fde20e07ab842d53189f7617929a5f5aee8fca"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 46,
+      "target_index": 31,
+      "end_to_end_ms": 0.027261,
+      "known_value_decode_and_routing_ms": 0.001174,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000366,
+      "assembly_rootcheck_ms": 0.022657,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 119,
+          "digest_hex": "2a1958e199cf7d48828f115c3d42ae72e9176967e0c0f8b2ac3ca4dcb8f624b2"
+        },
+        {
+          "level": 120,
+          "digest_hex": "b4153ef1ce9dd501aafb7d97e2d86d8e420e926856d10430587d5be9ecb9989a"
+        },
+        {
+          "level": 122,
+          "digest_hex": "ad62e6f0aa8802ae14cc0e4e7f47c6eb0a58e9c24eb0199f9722a35ccdd60dd7"
+        },
+        {
+          "level": 123,
+          "digest_hex": "74064c60fe58cb811cfbfdf7262e8c8bae63490b47eddf93bc5448ff16a8a301"
+        },
+        {
+          "level": 124,
+          "digest_hex": "546f2717fad16bbc7b4c7a5ded7e30928a3a8b21c1c1983c275fa0308f4c5933"
+        },
+        {
+          "level": 125,
+          "digest_hex": "16686314da3ceeba8277009441d66add11621e51e3c1a39abec394b7df1e1736"
+        },
+        {
+          "level": 126,
+          "digest_hex": "7bf8a33390ca8b03c73429b298fde20e07ab842d53189f7617929a5f5aee8fca"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 47,
+      "target_index": 88,
+      "end_to_end_ms": 0.027105,
+      "known_value_decode_and_routing_ms": 0.000991,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000222,
+      "assembly_rootcheck_ms": 0.022696,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 120,
+          "digest_hex": "5a65a279167906db4e20ccb851b4b4474b7245d69fea7e32cdf470a634552d3f"
+        },
+        {
+          "level": 121,
+          "digest_hex": "c2528105617bc7675883acd0d0b9d8e86596e2daf35b75e3661d9dd373732ec1"
+        },
+        {
+          "level": 122,
+          "digest_hex": "4d46a05b508ec72ba72ae55f55be9e8b6dede780cf6fb55faa6b420c293bcd22"
+        },
+        {
+          "level": 123,
+          "digest_hex": "03f10449b5028f0d82bedf2413a4e7db250d4415adb695f8696dce0d9e052e7e"
+        },
+        {
+          "level": 124,
+          "digest_hex": "430ec155962640f226905643a9726ac7d3161f41c3fa25e332b4cd3bd7791288"
+        },
+        {
+          "level": 125,
+          "digest_hex": "6997de0c1dd07363560e375f98fa4c3afd63860df0608d0fb82ec15a6783e3ac"
+        },
+        {
+          "level": 126,
+          "digest_hex": "38d2df1ec713ed325301c34d9e24cf6a25baf9b3f6c096eb21aea943ec9e980f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 48,
+      "target_index": 21,
+      "end_to_end_ms": 0.026752,
+      "known_value_decode_and_routing_ms": 0.000795,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000241,
+      "assembly_rootcheck_ms": 0.022718,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 122,
+          "digest_hex": "1e6bc6efd23935efa3dd092c6ac254836c6e5ef791d81f7ae48460bf0b5313b4"
+        },
+        {
+          "level": 123,
+          "digest_hex": "67d0b3ab291b4d805a82049982c6172041bce1f14c5a813ca1026d8dc863fefa"
+        },
+        {
+          "level": 124,
+          "digest_hex": "833fb9b71d9b1c9765205f861fb8619048914463b7541305d5ce771c0a756a2c"
+        },
+        {
+          "level": 125,
+          "digest_hex": "0cf76ea1ff1977e0eccf349ea33e4f52d6b6d015dd69145da274e31eb2430036"
+        },
+        {
+          "level": 126,
+          "digest_hex": "315e0c4751043a683a3bea17699a4d0483a7351d379a71b378fb8a4b6ee608a4"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 49,
+      "target_index": 30,
+      "end_to_end_ms": 0.026747,
+      "known_value_decode_and_routing_ms": 0.000843,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000216,
+      "assembly_rootcheck_ms": 0.022686,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 120,
+          "digest_hex": "ae91becb3a74e2d11dd4755a747d6abbe0a45c5846cf44ace0894b28dfef90b0"
+        },
+        {
+          "level": 122,
+          "digest_hex": "ad62e6f0aa8802ae14cc0e4e7f47c6eb0a58e9c24eb0199f9722a35ccdd60dd7"
+        },
+        {
+          "level": 123,
+          "digest_hex": "74064c60fe58cb811cfbfdf7262e8c8bae63490b47eddf93bc5448ff16a8a301"
+        },
+        {
+          "level": 124,
+          "digest_hex": "546f2717fad16bbc7b4c7a5ded7e30928a3a8b21c1c1983c275fa0308f4c5933"
+        },
+        {
+          "level": 125,
+          "digest_hex": "16686314da3ceeba8277009441d66add11621e51e3c1a39abec394b7df1e1736"
+        },
+        {
+          "level": 126,
+          "digest_hex": "7bf8a33390ca8b03c73429b298fde20e07ab842d53189f7617929a5f5aee8fca"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 50,
+      "target_index": 23,
+      "end_to_end_ms": 0.03652,
+      "known_value_decode_and_routing_ms": 0.000786,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000255,
+      "assembly_rootcheck_ms": 0.0322,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 121,
+          "digest_hex": "89c80a68feb77f8fedbe0e89313322abde77cb511d0d76f074c0776ee570e6de"
+        },
+        {
+          "level": 122,
+          "digest_hex": "d68bc1eea57af8bd7ec3967e6df7102774aec1c4adbb13c7603a1eb4ed25ed88"
+        },
+        {
+          "level": 123,
+          "digest_hex": "9423a986603a43df6418f491eb3439eeea80a367aa023b584bd476bfcc827c4d"
+        },
+        {
+          "level": 124,
+          "digest_hex": "833fb9b71d9b1c9765205f861fb8619048914463b7541305d5ce771c0a756a2c"
+        },
+        {
+          "level": 125,
+          "digest_hex": "0cf76ea1ff1977e0eccf349ea33e4f52d6b6d015dd69145da274e31eb2430036"
+        },
+        {
+          "level": 126,
+          "digest_hex": "315e0c4751043a683a3bea17699a4d0483a7351d379a71b378fb8a4b6ee608a4"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 51,
+      "target_index": 67,
+      "end_to_end_ms": 0.036236,
+      "known_value_decode_and_routing_ms": 0.00918,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000387,
+      "assembly_rootcheck_ms": 0.022742,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 120,
+          "digest_hex": "01a9be4f6facb45265c0387a14a5a333fa196ee4489e2bdadb35ec8974d47ef2"
+        },
+        {
+          "level": 121,
+          "digest_hex": "7821d342f1ff975b21d4396ea0881e80ccf2377f518ebf6ccde2f7fb5e97a111"
+        },
+        {
+          "level": 123,
+          "digest_hex": "55ae57311f9c4897e80b18c9c5bc3c4aefa8fb358f5aca0873ec1d230cfb45b0"
+        },
+        {
+          "level": 124,
+          "digest_hex": "d251933359f24f6ab0385e437a222e01997d4870ace952d330284c208c079aee"
+        },
+        {
+          "level": 125,
+          "digest_hex": "e5872fcc90baee04b3549eb6524522f9e5f4738cf9711bd02a08feac9e363e99"
+        },
+        {
+          "level": 126,
+          "digest_hex": "e01b6602c5b23ea13716cf6fe63a1e9e49a1b1dd9e9d58491935637551d7b36f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 52,
+      "target_index": 34,
+      "end_to_end_ms": 0.027357,
+      "known_value_decode_and_routing_ms": 0.001256,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000341,
+      "assembly_rootcheck_ms": 0.022704,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 119,
+          "digest_hex": "4d308a33e0a24b0a18a9b50ef6a91886caa85988c6c903480e10f4b19a40300a"
+        },
+        {
+          "level": 121,
+          "digest_hex": "122b56691dd719e16d0fc9783f8a97d38efb3941fdb370b16755c5461530d8ba"
+        },
+        {
+          "level": 122,
+          "digest_hex": "ca54b1678b79967f4edfa2c85e178942b70635ba24de3cdc92ee4851cae5eff4"
+        },
+        {
+          "level": 123,
+          "digest_hex": "74064c60fe58cb811cfbfdf7262e8c8bae63490b47eddf93bc5448ff16a8a301"
+        },
+        {
+          "level": 124,
+          "digest_hex": "546f2717fad16bbc7b4c7a5ded7e30928a3a8b21c1c1983c275fa0308f4c5933"
+        },
+        {
+          "level": 125,
+          "digest_hex": "16686314da3ceeba8277009441d66add11621e51e3c1a39abec394b7df1e1736"
+        },
+        {
+          "level": 126,
+          "digest_hex": "7bf8a33390ca8b03c73429b298fde20e07ab842d53189f7617929a5f5aee8fca"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 53,
+      "target_index": 42,
+      "end_to_end_ms": 0.026924,
+      "known_value_decode_and_routing_ms": 0.000882,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.00019,
+      "assembly_rootcheck_ms": 0.022626,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 119,
+          "digest_hex": "541b2cec4f25195af20438694ec12d3cbdca5ccf278e363c5caa42fd9d6fcd99"
+        },
+        {
+          "level": 121,
+          "digest_hex": "12fbed6b426a7c88cf60460d8dcc45058dfd236d772af0114121f4fcc33c287e"
+        },
+        {
+          "level": 124,
+          "digest_hex": "b0babbd5eeb2242c85a526622567f21ea19757b4b8e977ab068eb5853b2476c3"
+        },
+        {
+          "level": 125,
+          "digest_hex": "6793468840419c766ff8e5cf0cd377f57081c09468d3072bdac29bd7052dfd13"
+        },
+        {
+          "level": 126,
+          "digest_hex": "7bf8a33390ca8b03c73429b298fde20e07ab842d53189f7617929a5f5aee8fca"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 54,
+      "target_index": 72,
+      "end_to_end_ms": 0.027244,
+      "known_value_decode_and_routing_ms": 0.000924,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000251,
+      "assembly_rootcheck_ms": 0.022708,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 121,
+          "digest_hex": "8b4a968a92d8f245f12fe90e2f64fc7a8c103dcd82d04ff424503fa41e7121ee"
+        },
+        {
+          "level": 122,
+          "digest_hex": "9981c970f63268c852ece001812ba3c7f928faaf97f413628061bb5b57824335"
+        },
+        {
+          "level": 123,
+          "digest_hex": "7e4618d8ed676162c94b361acbcd6f3f141154a41eeb7510ef5e4f217966888c"
+        },
+        {
+          "level": 124,
+          "digest_hex": "5ddd4fa2bc3cc52b2720271e3ac14515ecc3dccb146065fa4dd9d0bc146d457f"
+        },
+        {
+          "level": 125,
+          "digest_hex": "e5872fcc90baee04b3549eb6524522f9e5f4738cf9711bd02a08feac9e363e99"
+        },
+        {
+          "level": 126,
+          "digest_hex": "e01b6602c5b23ea13716cf6fe63a1e9e49a1b1dd9e9d58491935637551d7b36f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 55,
+      "target_index": 44,
+      "end_to_end_ms": 0.037872,
+      "known_value_decode_and_routing_ms": 0.000723,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000313,
+      "assembly_rootcheck_ms": 0.022666,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 120,
+          "digest_hex": "02c2f5b89be61eb89386811106a2633adb22d9980da378f6ba9f13fe3319a860"
+        },
+        {
+          "level": 122,
+          "digest_hex": "48cf7b9857fdd6d70e267aa782ca88fc783efe35a5dd9514fe13843e887496b1"
+        },
+        {
+          "level": 123,
+          "digest_hex": "ec8b7dcf10e04fcdb618f1b95aff56469590303abe61b6f2f14e97c6d2934e01"
+        },
+        {
+          "level": 124,
+          "digest_hex": "e0e2ad1b1c79dd2c3729678cfbff14ff748e98fb4f0354f21714901034d8df90"
+        },
+        {
+          "level": 125,
+          "digest_hex": "6793468840419c766ff8e5cf0cd377f57081c09468d3072bdac29bd7052dfd13"
+        },
+        {
+          "level": 126,
+          "digest_hex": "7bf8a33390ca8b03c73429b298fde20e07ab842d53189f7617929a5f5aee8fca"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 56,
+      "target_index": 89,
+      "end_to_end_ms": 0.027197,
+      "known_value_decode_and_routing_ms": 0.00105,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000241,
+      "assembly_rootcheck_ms": 0.022678,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 120,
+          "digest_hex": "41994bd7a3c77c2aa053f31843a9bdb7514165e31d4c026dbc15213149701372"
+        },
+        {
+          "level": 121,
+          "digest_hex": "c2528105617bc7675883acd0d0b9d8e86596e2daf35b75e3661d9dd373732ec1"
+        },
+        {
+          "level": 122,
+          "digest_hex": "4d46a05b508ec72ba72ae55f55be9e8b6dede780cf6fb55faa6b420c293bcd22"
+        },
+        {
+          "level": 123,
+          "digest_hex": "03f10449b5028f0d82bedf2413a4e7db250d4415adb695f8696dce0d9e052e7e"
+        },
+        {
+          "level": 124,
+          "digest_hex": "430ec155962640f226905643a9726ac7d3161f41c3fa25e332b4cd3bd7791288"
+        },
+        {
+          "level": 125,
+          "digest_hex": "6997de0c1dd07363560e375f98fa4c3afd63860df0608d0fb82ec15a6783e3ac"
+        },
+        {
+          "level": 126,
+          "digest_hex": "38d2df1ec713ed325301c34d9e24cf6a25baf9b3f6c096eb21aea943ec9e980f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 57,
+      "target_index": 45,
+      "end_to_end_ms": 0.027069,
+      "known_value_decode_and_routing_ms": 0.000866,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000206,
+      "assembly_rootcheck_ms": 0.02263,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 120,
+          "digest_hex": "995bd3c9f91b069f6ee2c5bacbd840f5c30311bbe075d9cd8e374d6a0d1e3534"
+        },
+        {
+          "level": 122,
+          "digest_hex": "48cf7b9857fdd6d70e267aa782ca88fc783efe35a5dd9514fe13843e887496b1"
+        },
+        {
+          "level": 123,
+          "digest_hex": "ec8b7dcf10e04fcdb618f1b95aff56469590303abe61b6f2f14e97c6d2934e01"
+        },
+        {
+          "level": 124,
+          "digest_hex": "e0e2ad1b1c79dd2c3729678cfbff14ff748e98fb4f0354f21714901034d8df90"
+        },
+        {
+          "level": 125,
+          "digest_hex": "6793468840419c766ff8e5cf0cd377f57081c09468d3072bdac29bd7052dfd13"
+        },
+        {
+          "level": 126,
+          "digest_hex": "7bf8a33390ca8b03c73429b298fde20e07ab842d53189f7617929a5f5aee8fca"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 58,
+      "target_index": 84,
+      "end_to_end_ms": 0.026974,
+      "known_value_decode_and_routing_ms": 0.000844,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000268,
+      "assembly_rootcheck_ms": 0.022612,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 122,
+          "digest_hex": "407fcae8f26a58619c6187e3a43e8bb3d603447e36a22a46e6ea7d7a60cb6a69"
+        },
+        {
+          "level": 123,
+          "digest_hex": "c4eccec9801a911a30eb94fb1027dbe768f064242a02d7e17d2acb718a12237a"
+        },
+        {
+          "level": 124,
+          "digest_hex": "430ec155962640f226905643a9726ac7d3161f41c3fa25e332b4cd3bd7791288"
+        },
+        {
+          "level": 125,
+          "digest_hex": "6997de0c1dd07363560e375f98fa4c3afd63860df0608d0fb82ec15a6783e3ac"
+        },
+        {
+          "level": 126,
+          "digest_hex": "38d2df1ec713ed325301c34d9e24cf6a25baf9b3f6c096eb21aea943ec9e980f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 59,
+      "target_index": 0,
+      "end_to_end_ms": 0.026913,
+      "known_value_decode_and_routing_ms": 0.000836,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000283,
+      "assembly_rootcheck_ms": 0.022675,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 118,
+          "digest_hex": "998be4dbea1c5eab68387b304ea3d6237584793b5784b36d3ebf7c6b74c2003a"
+        },
+        {
+          "level": 123,
+          "digest_hex": "f3435c8972a7e38a6cbdb45cdcb2b03e952deec3f7b964a1582282bbaae93aa5"
+        },
+        {
+          "level": 124,
+          "digest_hex": "e6e332c8eec00720011367d821c2a0f87bef9e35651b8ffee1cc11ef28990133"
+        },
+        {
+          "level": 125,
+          "digest_hex": "e99647cc6db780a3da4075137e80ce9c3c103839ee84e5ddc5e1fadb51546ca3"
+        },
+        {
+          "level": 126,
+          "digest_hex": "315e0c4751043a683a3bea17699a4d0483a7351d379a71b378fb8a4b6ee608a4"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 60,
+      "target_index": 54,
+      "end_to_end_ms": 0.034159,
+      "known_value_decode_and_routing_ms": 0.00109,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000297,
+      "assembly_rootcheck_ms": 0.029429,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 119,
+          "digest_hex": "820e045f802caa4e0c8aac411215bb4a56787e4a48cc688acaacda3d6c736e19"
+        },
+        {
+          "level": 122,
+          "digest_hex": "30eb8bb99f4f7f8cc8e1673bac1b5bf0d3101c8fdb6113b2b38f6cb3d7179ef2"
+        },
+        {
+          "level": 123,
+          "digest_hex": "c5562d3bd4b43acd80d3feea05d151d7563cc8274b62d2682d064756a999a71b"
+        },
+        {
+          "level": 124,
+          "digest_hex": "ea0e4a563829e0812902f4c35dd2ce829fc84bf0865d575122d19bd0d961bf3a"
+        },
+        {
+          "level": 125,
+          "digest_hex": "33ed0295599fba9562575b79eb736d699cb0025f41971fd2a296c1e87da97577"
+        },
+        {
+          "level": 126,
+          "digest_hex": "e01b6602c5b23ea13716cf6fe63a1e9e49a1b1dd9e9d58491935637551d7b36f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 61,
+      "target_index": 70,
+      "end_to_end_ms": 0.028563,
+      "known_value_decode_and_routing_ms": 0.001025,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000326,
+      "assembly_rootcheck_ms": 0.022795,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 120,
+          "digest_hex": "c94748b83399a3a1c24332c3941fcfc7efa2c4aa094d566f102860315220ac28"
+        },
+        {
+          "level": 121,
+          "digest_hex": "51b5800878d97056e68db8a60b65372d9a216a42efaa3e260f92bc6ba338605e"
+        },
+        {
+          "level": 122,
+          "digest_hex": "4144a69750944a8e6b83342283984aae805d1830899e52c5f1df78d8b67079c2"
+        },
+        {
+          "level": 123,
+          "digest_hex": "7e4618d8ed676162c94b361acbcd6f3f141154a41eeb7510ef5e4f217966888c"
+        },
+        {
+          "level": 124,
+          "digest_hex": "5ddd4fa2bc3cc52b2720271e3ac14515ecc3dccb146065fa4dd9d0bc146d457f"
+        },
+        {
+          "level": 125,
+          "digest_hex": "e5872fcc90baee04b3549eb6524522f9e5f4738cf9711bd02a08feac9e363e99"
+        },
+        {
+          "level": 126,
+          "digest_hex": "e01b6602c5b23ea13716cf6fe63a1e9e49a1b1dd9e9d58491935637551d7b36f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 62,
+      "target_index": 13,
+      "end_to_end_ms": 0.02706,
+      "known_value_decode_and_routing_ms": 0.000908,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000267,
+      "assembly_rootcheck_ms": 0.022621,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 122,
+          "digest_hex": "21e2b69f28c45bde1e71a8eb4cac8357ec74ec3f07b7abe83b63decb8594eea9"
+        },
+        {
+          "level": 123,
+          "digest_hex": "185a00cc6ce2a696a3259dd844da78f3225b0820b5710c325fc956f19d358f93"
+        },
+        {
+          "level": 124,
+          "digest_hex": "f14a10fa70c768bfd802cee24c74db14ff2588aab0c47c40adbeefe2e345d528"
+        },
+        {
+          "level": 125,
+          "digest_hex": "e99647cc6db780a3da4075137e80ce9c3c103839ee84e5ddc5e1fadb51546ca3"
+        },
+        {
+          "level": 126,
+          "digest_hex": "315e0c4751043a683a3bea17699a4d0483a7351d379a71b378fb8a4b6ee608a4"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 63,
+      "target_index": 29,
+      "end_to_end_ms": 0.026754,
+      "known_value_decode_and_routing_ms": 0.000715,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000235,
+      "assembly_rootcheck_ms": 0.022686,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 122,
+          "digest_hex": "67699e77673389bacd967ad6407adb711b6bf70f9db4342bf1856c4bba34944c"
+        },
+        {
+          "level": 124,
+          "digest_hex": "be506c35ea18c129fef8ad5753a7de7a13ac172e42f5e292452b519f97bc1506"
+        },
+        {
+          "level": 125,
+          "digest_hex": "16686314da3ceeba8277009441d66add11621e51e3c1a39abec394b7df1e1736"
+        },
+        {
+          "level": 126,
+          "digest_hex": "7bf8a33390ca8b03c73429b298fde20e07ab842d53189f7617929a5f5aee8fca"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 64,
+      "target_index": 92,
+      "end_to_end_ms": 0.030746,
+      "known_value_decode_and_routing_ms": 0.000849,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000275,
+      "assembly_rootcheck_ms": 0.026661,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 122,
+          "digest_hex": "f8e5e91b44b52c3b5c18a6f7b96e3822c261a2470123efb4654d6d03acb46478"
+        },
+        {
+          "level": 123,
+          "digest_hex": "6a5fc3738cd9c47382853f6f8d8bd2cca139155c3e6d56f9500fd43a9d749033"
+        },
+        {
+          "level": 124,
+          "digest_hex": "b9e57154f39b6479af3a5c656b25050c772f3f270a63a27ebed6354029a84350"
+        },
+        {
+          "level": 125,
+          "digest_hex": "71f0e9718caadc6301d222446dadf08835f3c3b061c7173f35931de02bc61723"
+        },
+        {
+          "level": 126,
+          "digest_hex": "38d2df1ec713ed325301c34d9e24cf6a25baf9b3f6c096eb21aea943ec9e980f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 65,
+      "target_index": 12,
+      "end_to_end_ms": 0.028771,
+      "known_value_decode_and_routing_ms": 0.002627,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000301,
+      "assembly_rootcheck_ms": 0.022675,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 122,
+          "digest_hex": "4d75b55dcd6c27e06b81ae604114246922b0a8f62cdfdfe17cadd3a7434585c0"
+        },
+        {
+          "level": 123,
+          "digest_hex": "185a00cc6ce2a696a3259dd844da78f3225b0820b5710c325fc956f19d358f93"
+        },
+        {
+          "level": 124,
+          "digest_hex": "f14a10fa70c768bfd802cee24c74db14ff2588aab0c47c40adbeefe2e345d528"
+        },
+        {
+          "level": 125,
+          "digest_hex": "e99647cc6db780a3da4075137e80ce9c3c103839ee84e5ddc5e1fadb51546ca3"
+        },
+        {
+          "level": 126,
+          "digest_hex": "315e0c4751043a683a3bea17699a4d0483a7351d379a71b378fb8a4b6ee608a4"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 66,
+      "target_index": 36,
+      "end_to_end_ms": 0.027282,
+      "known_value_decode_and_routing_ms": 0.000794,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000323,
+      "assembly_rootcheck_ms": 0.022686,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 120,
+          "digest_hex": "6ef8cb66060616e04a390ea944a43bd6f1d8dd611926f78101931c83f7a4d67d"
+        },
+        {
+          "level": 121,
+          "digest_hex": "b3d55c2086123af329aeab2edab2946c4a74ff44eb4740f001871b81f6b18e09"
+        },
+        {
+          "level": 122,
+          "digest_hex": "50b14e97af0ff21507d0716982003eadd809f2d9956c6999a11312062df8157a"
+        },
+        {
+          "level": 123,
+          "digest_hex": "c820a8eb61a286ebd0576e6819420e4afeee1174c840c8dd23998a7fa78fc291"
+        },
+        {
+          "level": 124,
+          "digest_hex": "546f2717fad16bbc7b4c7a5ded7e30928a3a8b21c1c1983c275fa0308f4c5933"
+        },
+        {
+          "level": 125,
+          "digest_hex": "16686314da3ceeba8277009441d66add11621e51e3c1a39abec394b7df1e1736"
+        },
+        {
+          "level": 126,
+          "digest_hex": "7bf8a33390ca8b03c73429b298fde20e07ab842d53189f7617929a5f5aee8fca"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 67,
+      "target_index": 22,
+      "end_to_end_ms": 0.026918,
+      "known_value_decode_and_routing_ms": 0.000685,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000216,
+      "assembly_rootcheck_ms": 0.022759,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 121,
+          "digest_hex": "43677d7ed73d078194b7436120bf53684e829f386987837bc07819f58934be97"
+        },
+        {
+          "level": 122,
+          "digest_hex": "d68bc1eea57af8bd7ec3967e6df7102774aec1c4adbb13c7603a1eb4ed25ed88"
+        },
+        {
+          "level": 123,
+          "digest_hex": "9423a986603a43df6418f491eb3439eeea80a367aa023b584bd476bfcc827c4d"
+        },
+        {
+          "level": 124,
+          "digest_hex": "833fb9b71d9b1c9765205f861fb8619048914463b7541305d5ce771c0a756a2c"
+        },
+        {
+          "level": 125,
+          "digest_hex": "0cf76ea1ff1977e0eccf349ea33e4f52d6b6d015dd69145da274e31eb2430036"
+        },
+        {
+          "level": 126,
+          "digest_hex": "315e0c4751043a683a3bea17699a4d0483a7351d379a71b378fb8a4b6ee608a4"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 68,
+      "target_index": 75,
+      "end_to_end_ms": 0.027354,
+      "known_value_decode_and_routing_ms": 0.001278,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000297,
+      "assembly_rootcheck_ms": 0.022633,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 122,
+          "digest_hex": "d7b5a7b41e19bd41209c29195aeb2eea7b8d0145bed90ce7f76c0ec5357c5600"
+        },
+        {
+          "level": 123,
+          "digest_hex": "17151266f78378c7a3241be396cf536a1c64eb7e28b6e27bd078a21c1caede4e"
+        },
+        {
+          "level": 124,
+          "digest_hex": "5ddd4fa2bc3cc52b2720271e3ac14515ecc3dccb146065fa4dd9d0bc146d457f"
+        },
+        {
+          "level": 125,
+          "digest_hex": "e5872fcc90baee04b3549eb6524522f9e5f4738cf9711bd02a08feac9e363e99"
+        },
+        {
+          "level": 126,
+          "digest_hex": "e01b6602c5b23ea13716cf6fe63a1e9e49a1b1dd9e9d58491935637551d7b36f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 69,
+      "target_index": 46,
+      "end_to_end_ms": 0.027063,
+      "known_value_decode_and_routing_ms": 0.00085,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000279,
+      "assembly_rootcheck_ms": 0.022766,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 122,
+          "digest_hex": "07854edd4e56b74dbbfdfcc6858d7e682cba63e338279adb38d07fd5296fd339"
+        },
+        {
+          "level": 123,
+          "digest_hex": "ec8b7dcf10e04fcdb618f1b95aff56469590303abe61b6f2f14e97c6d2934e01"
+        },
+        {
+          "level": 124,
+          "digest_hex": "e0e2ad1b1c79dd2c3729678cfbff14ff748e98fb4f0354f21714901034d8df90"
+        },
+        {
+          "level": 125,
+          "digest_hex": "6793468840419c766ff8e5cf0cd377f57081c09468d3072bdac29bd7052dfd13"
+        },
+        {
+          "level": 126,
+          "digest_hex": "7bf8a33390ca8b03c73429b298fde20e07ab842d53189f7617929a5f5aee8fca"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 70,
+      "target_index": 11,
+      "end_to_end_ms": 0.026727,
+      "known_value_decode_and_routing_ms": 0.000848,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000208,
+      "assembly_rootcheck_ms": 0.022694,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 120,
+          "digest_hex": "301a3fa9ba38a26eb95df2c605a6a4af7e6a523f4d2a26483eb73917955405b0"
+        },
+        {
+          "level": 121,
+          "digest_hex": "297cb565af098eecbe6b6202aac6d6b687f72f50c1fce919a158610caac143fa"
+        },
+        {
+          "level": 123,
+          "digest_hex": "7f19730e1b6fbcdf342dcf27961f932ca6ab4dd755cc158fa47f6e9ed840d96a"
+        },
+        {
+          "level": 124,
+          "digest_hex": "f14a10fa70c768bfd802cee24c74db14ff2588aab0c47c40adbeefe2e345d528"
+        },
+        {
+          "level": 125,
+          "digest_hex": "e99647cc6db780a3da4075137e80ce9c3c103839ee84e5ddc5e1fadb51546ca3"
+        },
+        {
+          "level": 126,
+          "digest_hex": "315e0c4751043a683a3bea17699a4d0483a7351d379a71b378fb8a4b6ee608a4"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 71,
+      "target_index": 15,
+      "end_to_end_ms": 0.02695,
+      "known_value_decode_and_routing_ms": 0.000932,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000285,
+      "assembly_rootcheck_ms": 0.02267,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 121,
+          "digest_hex": "a7c54e7b96fb9a08b265c37a78585a32d46bf0ad1f8cd89926488cbce8fc988e"
+        },
+        {
+          "level": 123,
+          "digest_hex": "46766f96255f7f01f199c9d2fec86a2bf4610ca221556e199707c76d860ad8dc"
+        },
+        {
+          "level": 124,
+          "digest_hex": "9cf4e82baf206f56dd5b0c98ee2bcc0f3943a3e456fe81ae3ec445bd39cc97ca"
+        },
+        {
+          "level": 125,
+          "digest_hex": "0cf76ea1ff1977e0eccf349ea33e4f52d6b6d015dd69145da274e31eb2430036"
+        },
+        {
+          "level": 126,
+          "digest_hex": "315e0c4751043a683a3bea17699a4d0483a7351d379a71b378fb8a4b6ee608a4"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 72,
+      "target_index": 4,
+      "end_to_end_ms": 0.026704,
+      "known_value_decode_and_routing_ms": 0.000803,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.00026,
+      "assembly_rootcheck_ms": 0.022636,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 120,
+          "digest_hex": "d122e783a42f35d7ffc7324ac129d338815e11be3e765b01872cfc9c6d7b6f49"
+        },
+        {
+          "level": 121,
+          "digest_hex": "edd645a0c9980406acf1156ef2de737893b6954a3b30b7ebf46462ad97474ee8"
+        },
+        {
+          "level": 122,
+          "digest_hex": "b2aec8cfe9ea6c1fd358f9488e53f774f66b464cf688393e100546ada1950d78"
+        },
+        {
+          "level": 123,
+          "digest_hex": "efe91eb5d2d911747440a907c7d61b34927946a64078285f401ea897badaac05"
+        },
+        {
+          "level": 124,
+          "digest_hex": "e6e332c8eec00720011367d821c2a0f87bef9e35651b8ffee1cc11ef28990133"
+        },
+        {
+          "level": 125,
+          "digest_hex": "e99647cc6db780a3da4075137e80ce9c3c103839ee84e5ddc5e1fadb51546ca3"
+        },
+        {
+          "level": 126,
+          "digest_hex": "315e0c4751043a683a3bea17699a4d0483a7351d379a71b378fb8a4b6ee608a4"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 73,
+      "target_index": 69,
+      "end_to_end_ms": 0.026801,
+      "known_value_decode_and_routing_ms": 0.000833,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.00025,
+      "assembly_rootcheck_ms": 0.022608,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 120,
+          "digest_hex": "c36aef2b55a9e4f7c71a96e278f46733cfa7f59b6b7498affb73e32e8aa178e8"
+        },
+        {
+          "level": 121,
+          "digest_hex": "51b5800878d97056e68db8a60b65372d9a216a42efaa3e260f92bc6ba338605e"
+        },
+        {
+          "level": 122,
+          "digest_hex": "4144a69750944a8e6b83342283984aae805d1830899e52c5f1df78d8b67079c2"
+        },
+        {
+          "level": 123,
+          "digest_hex": "7e4618d8ed676162c94b361acbcd6f3f141154a41eeb7510ef5e4f217966888c"
+        },
+        {
+          "level": 124,
+          "digest_hex": "5ddd4fa2bc3cc52b2720271e3ac14515ecc3dccb146065fa4dd9d0bc146d457f"
+        },
+        {
+          "level": 125,
+          "digest_hex": "e5872fcc90baee04b3549eb6524522f9e5f4738cf9711bd02a08feac9e363e99"
+        },
+        {
+          "level": 126,
+          "digest_hex": "e01b6602c5b23ea13716cf6fe63a1e9e49a1b1dd9e9d58491935637551d7b36f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 74,
+      "target_index": 6,
+      "end_to_end_ms": 0.026691,
+      "known_value_decode_and_routing_ms": 0.000753,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000256,
+      "assembly_rootcheck_ms": 0.022675,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 117,
+          "digest_hex": "b2df2db1dc101b4610c955590afd4b4fbfc2487a7525e45fc9b143c25a66e02b"
+        },
+        {
+          "level": 121,
+          "digest_hex": "9de76315d5e9232fe6558ed20a67b28c8e1170339c262b509449846683b2f266"
+        },
+        {
+          "level": 122,
+          "digest_hex": "b2aec8cfe9ea6c1fd358f9488e53f774f66b464cf688393e100546ada1950d78"
+        },
+        {
+          "level": 123,
+          "digest_hex": "efe91eb5d2d911747440a907c7d61b34927946a64078285f401ea897badaac05"
+        },
+        {
+          "level": 124,
+          "digest_hex": "e6e332c8eec00720011367d821c2a0f87bef9e35651b8ffee1cc11ef28990133"
+        },
+        {
+          "level": 125,
+          "digest_hex": "e99647cc6db780a3da4075137e80ce9c3c103839ee84e5ddc5e1fadb51546ca3"
+        },
+        {
+          "level": 126,
+          "digest_hex": "315e0c4751043a683a3bea17699a4d0483a7351d379a71b378fb8a4b6ee608a4"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 75,
+      "target_index": 8,
+      "end_to_end_ms": 0.026175,
+      "known_value_decode_and_routing_ms": 0.00067,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.00021,
+      "assembly_rootcheck_ms": 0.022577,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 119,
+          "digest_hex": "e4d761dedece7c92dfd91158b7f12de64b8ae4982b85689977a22750b1ebb736"
+        },
+        {
+          "level": 120,
+          "digest_hex": "d511018bb8058a0dd25c80c1732bb5183c2996f963f384a7aaad8e72e24399e3"
+        },
+        {
+          "level": 121,
+          "digest_hex": "9181f62547ae5af12f5307f29e76f4eaae1f59aab7f184fd43d53ae4ca77c7c8"
+        },
+        {
+          "level": 123,
+          "digest_hex": "7f19730e1b6fbcdf342dcf27961f932ca6ab4dd755cc158fa47f6e9ed840d96a"
+        },
+        {
+          "level": 124,
+          "digest_hex": "f14a10fa70c768bfd802cee24c74db14ff2588aab0c47c40adbeefe2e345d528"
+        },
+        {
+          "level": 125,
+          "digest_hex": "e99647cc6db780a3da4075137e80ce9c3c103839ee84e5ddc5e1fadb51546ca3"
+        },
+        {
+          "level": 126,
+          "digest_hex": "315e0c4751043a683a3bea17699a4d0483a7351d379a71b378fb8a4b6ee608a4"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 76,
+      "target_index": 17,
+      "end_to_end_ms": 0.028339,
+      "known_value_decode_and_routing_ms": 0.000821,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000271,
+      "assembly_rootcheck_ms": 0.022769,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 120,
+          "digest_hex": "acc5ef40bd2b9f0f408dbc8ed5cb0e26bcb1a801508b40f8b7de43afcc5299a2"
+        },
+        {
+          "level": 122,
+          "digest_hex": "8ac5f75169a2586491585bcbee6a47f0c0d429d78e72e7c47f4800195e4d3fc0"
+        },
+        {
+          "level": 123,
+          "digest_hex": "e62a1e8259f03a69922a668fb8962947361bb77472274f985e57682807c76752"
+        },
+        {
+          "level": 124,
+          "digest_hex": "9cf4e82baf206f56dd5b0c98ee2bcc0f3943a3e456fe81ae3ec445bd39cc97ca"
+        },
+        {
+          "level": 125,
+          "digest_hex": "0cf76ea1ff1977e0eccf349ea33e4f52d6b6d015dd69145da274e31eb2430036"
+        },
+        {
+          "level": 126,
+          "digest_hex": "315e0c4751043a683a3bea17699a4d0483a7351d379a71b378fb8a4b6ee608a4"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 77,
+      "target_index": 94,
+      "end_to_end_ms": 0.028072,
+      "known_value_decode_and_routing_ms": 0.000832,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000246,
+      "assembly_rootcheck_ms": 0.023879,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 120,
+          "digest_hex": "8a986d7049af8c6e83a96cf60975dc5b895c7a09bec6df1b9ab8f62eeea5324e"
+        },
+        {
+          "level": 121,
+          "digest_hex": "34541826fd8f2d76e32dabd8f192b13e8d841dae1d4e307cc2cfe31db6c91c6d"
+        },
+        {
+          "level": 123,
+          "digest_hex": "8ae449c13980c04f2da5c2da468c734e1b35e06089c1f46019b9de7b92a975ff"
+        },
+        {
+          "level": 124,
+          "digest_hex": "b9e57154f39b6479af3a5c656b25050c772f3f270a63a27ebed6354029a84350"
+        },
+        {
+          "level": 125,
+          "digest_hex": "71f0e9718caadc6301d222446dadf08835f3c3b061c7173f35931de02bc61723"
+        },
+        {
+          "level": 126,
+          "digest_hex": "38d2df1ec713ed325301c34d9e24cf6a25baf9b3f6c096eb21aea943ec9e980f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 78,
+      "target_index": 32,
+      "end_to_end_ms": 0.028721,
+      "known_value_decode_and_routing_ms": 0.001276,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000346,
+      "assembly_rootcheck_ms": 0.02378,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 119,
+          "digest_hex": "ad3668a17b433e1ea5d365a279457b428b7582122b5d566d430a2e1b72caa322"
+        },
+        {
+          "level": 120,
+          "digest_hex": "b4153ef1ce9dd501aafb7d97e2d86d8e420e926856d10430587d5be9ecb9989a"
+        },
+        {
+          "level": 122,
+          "digest_hex": "ad62e6f0aa8802ae14cc0e4e7f47c6eb0a58e9c24eb0199f9722a35ccdd60dd7"
+        },
+        {
+          "level": 123,
+          "digest_hex": "74064c60fe58cb811cfbfdf7262e8c8bae63490b47eddf93bc5448ff16a8a301"
+        },
+        {
+          "level": 124,
+          "digest_hex": "546f2717fad16bbc7b4c7a5ded7e30928a3a8b21c1c1983c275fa0308f4c5933"
+        },
+        {
+          "level": 125,
+          "digest_hex": "16686314da3ceeba8277009441d66add11621e51e3c1a39abec394b7df1e1736"
+        },
+        {
+          "level": 126,
+          "digest_hex": "7bf8a33390ca8b03c73429b298fde20e07ab842d53189f7617929a5f5aee8fca"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 79,
+      "target_index": 66,
+      "end_to_end_ms": 0.037747,
+      "known_value_decode_and_routing_ms": 0.00933,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000445,
+      "assembly_rootcheck_ms": 0.024011,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 120,
+          "digest_hex": "b1a14502b773abac2baa79af8eaa22b2f09365f815a52eb4975f7656d55454a1"
+        },
+        {
+          "level": 121,
+          "digest_hex": "7821d342f1ff975b21d4396ea0881e80ccf2377f518ebf6ccde2f7fb5e97a111"
+        },
+        {
+          "level": 123,
+          "digest_hex": "55ae57311f9c4897e80b18c9c5bc3c4aefa8fb358f5aca0873ec1d230cfb45b0"
+        },
+        {
+          "level": 124,
+          "digest_hex": "d251933359f24f6ab0385e437a222e01997d4870ace952d330284c208c079aee"
+        },
+        {
+          "level": 125,
+          "digest_hex": "e5872fcc90baee04b3549eb6524522f9e5f4738cf9711bd02a08feac9e363e99"
+        },
+        {
+          "level": 126,
+          "digest_hex": "e01b6602c5b23ea13716cf6fe63a1e9e49a1b1dd9e9d58491935637551d7b36f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 80,
+      "target_index": 59,
+      "end_to_end_ms": 0.028529,
+      "known_value_decode_and_routing_ms": 0.001144,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.00029,
+      "assembly_rootcheck_ms": 0.023817,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 121,
+          "digest_hex": "116cdb513225dfa7388eaeaaf5a2a0d0b539ccd7fc0ef6246e44c35f776cdc90"
+        },
+        {
+          "level": 122,
+          "digest_hex": "f12d841e355c613c68fb64fb3920ce5e7a2dd602203605bc3df69224b8c5bda6"
+        },
+        {
+          "level": 124,
+          "digest_hex": "5c70d3c31dd0a9b2e87343711b9586e76b0c91eab00d032e9953a87cefcd66bf"
+        },
+        {
+          "level": 125,
+          "digest_hex": "33ed0295599fba9562575b79eb736d699cb0025f41971fd2a296c1e87da97577"
+        },
+        {
+          "level": 126,
+          "digest_hex": "e01b6602c5b23ea13716cf6fe63a1e9e49a1b1dd9e9d58491935637551d7b36f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 81,
+      "target_index": 25,
+      "end_to_end_ms": 0.027861,
+      "known_value_decode_and_routing_ms": 0.000712,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000249,
+      "assembly_rootcheck_ms": 0.023802,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 120,
+          "digest_hex": "fbad509ce3920a60923b187208a7590ab41d8668782c3870454f626859a70293"
+        },
+        {
+          "level": 121,
+          "digest_hex": "6a0c01e659af98600cd2c1597fbc99ee7e2f83ff14ed8b815f044e1cc6cbcdd6"
+        },
+        {
+          "level": 122,
+          "digest_hex": "a294d75afbfc782a44b7430102b87a465ec9a90ba1e8f9bdde85cdf392f3e226"
+        },
+        {
+          "level": 124,
+          "digest_hex": "be506c35ea18c129fef8ad5753a7de7a13ac172e42f5e292452b519f97bc1506"
+        },
+        {
+          "level": 125,
+          "digest_hex": "16686314da3ceeba8277009441d66add11621e51e3c1a39abec394b7df1e1736"
+        },
+        {
+          "level": 126,
+          "digest_hex": "7bf8a33390ca8b03c73429b298fde20e07ab842d53189f7617929a5f5aee8fca"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 82,
+      "target_index": 43,
+      "end_to_end_ms": 0.028251,
+      "known_value_decode_and_routing_ms": 0.000927,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000277,
+      "assembly_rootcheck_ms": 0.023804,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 121,
+          "digest_hex": "2e9aa5cdb970d38e1d9791815e23846f5cf5ca9f20382a97e3b1f9317cbb6206"
+        },
+        {
+          "level": 124,
+          "digest_hex": "b0babbd5eeb2242c85a526622567f21ea19757b4b8e977ab068eb5853b2476c3"
+        },
+        {
+          "level": 125,
+          "digest_hex": "6793468840419c766ff8e5cf0cd377f57081c09468d3072bdac29bd7052dfd13"
+        },
+        {
+          "level": 126,
+          "digest_hex": "7bf8a33390ca8b03c73429b298fde20e07ab842d53189f7617929a5f5aee8fca"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 83,
+      "target_index": 65,
+      "end_to_end_ms": 0.028147,
+      "known_value_decode_and_routing_ms": 0.000953,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000239,
+      "assembly_rootcheck_ms": 0.023748,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 120,
+          "digest_hex": "828b9bfda7407f8b9a2f0ab4e623c6b32073d7c9659d680247a271fcc0d5832d"
+        },
+        {
+          "level": 121,
+          "digest_hex": "b6732e394465d5489becfb1a2f9e1e0470f6c04b8c5beca6ae3efc92541c2c8d"
+        },
+        {
+          "level": 123,
+          "digest_hex": "55ae57311f9c4897e80b18c9c5bc3c4aefa8fb358f5aca0873ec1d230cfb45b0"
+        },
+        {
+          "level": 124,
+          "digest_hex": "d251933359f24f6ab0385e437a222e01997d4870ace952d330284c208c079aee"
+        },
+        {
+          "level": 125,
+          "digest_hex": "e5872fcc90baee04b3549eb6524522f9e5f4738cf9711bd02a08feac9e363e99"
+        },
+        {
+          "level": 126,
+          "digest_hex": "e01b6602c5b23ea13716cf6fe63a1e9e49a1b1dd9e9d58491935637551d7b36f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 84,
+      "target_index": 60,
+      "end_to_end_ms": 0.028136,
+      "known_value_decode_and_routing_ms": 0.000771,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000252,
+      "assembly_rootcheck_ms": 0.023741,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 121,
+          "digest_hex": "a4e9ddbd9c721177d6c5e8aee6c003d46494be517f59f2e4520052c9ab0b0be2"
+        },
+        {
+          "level": 122,
+          "digest_hex": "f12d841e355c613c68fb64fb3920ce5e7a2dd602203605bc3df69224b8c5bda6"
+        },
+        {
+          "level": 124,
+          "digest_hex": "5c70d3c31dd0a9b2e87343711b9586e76b0c91eab00d032e9953a87cefcd66bf"
+        },
+        {
+          "level": 125,
+          "digest_hex": "33ed0295599fba9562575b79eb736d699cb0025f41971fd2a296c1e87da97577"
+        },
+        {
+          "level": 126,
+          "digest_hex": "e01b6602c5b23ea13716cf6fe63a1e9e49a1b1dd9e9d58491935637551d7b36f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 85,
+      "target_index": 55,
+      "end_to_end_ms": 0.028338,
+      "known_value_decode_and_routing_ms": 0.000856,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000275,
+      "assembly_rootcheck_ms": 0.023804,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 119,
+          "digest_hex": "f22ec6bffa4e0a50c5f3e11e73ea5a520e614b7f0b6dd4ca45040b6812f2f561"
+        },
+        {
+          "level": 122,
+          "digest_hex": "30eb8bb99f4f7f8cc8e1673bac1b5bf0d3101c8fdb6113b2b38f6cb3d7179ef2"
+        },
+        {
+          "level": 123,
+          "digest_hex": "c5562d3bd4b43acd80d3feea05d151d7563cc8274b62d2682d064756a999a71b"
+        },
+        {
+          "level": 124,
+          "digest_hex": "ea0e4a563829e0812902f4c35dd2ce829fc84bf0865d575122d19bd0d961bf3a"
+        },
+        {
+          "level": 125,
+          "digest_hex": "33ed0295599fba9562575b79eb736d699cb0025f41971fd2a296c1e87da97577"
+        },
+        {
+          "level": 126,
+          "digest_hex": "e01b6602c5b23ea13716cf6fe63a1e9e49a1b1dd9e9d58491935637551d7b36f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 86,
+      "target_index": 51,
+      "end_to_end_ms": 0.028133,
+      "known_value_decode_and_routing_ms": 0.000869,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000229,
+      "assembly_rootcheck_ms": 0.023747,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 120,
+          "digest_hex": "6a6546254e887d10f6cf69d1591823a9a0286ebb5e68bec6444ac14b565bbf25"
+        },
+        {
+          "level": 121,
+          "digest_hex": "e079b6f0e31b900ac1d71e3b1ad0235c360476a721f06ebb8904e6631a7ab55c"
+        },
+        {
+          "level": 123,
+          "digest_hex": "65e13bc6b488a211b040acbcaee2d855a9cb69113a337d37341526c97803e927"
+        },
+        {
+          "level": 124,
+          "digest_hex": "ea0e4a563829e0812902f4c35dd2ce829fc84bf0865d575122d19bd0d961bf3a"
+        },
+        {
+          "level": 125,
+          "digest_hex": "33ed0295599fba9562575b79eb736d699cb0025f41971fd2a296c1e87da97577"
+        },
+        {
+          "level": 126,
+          "digest_hex": "e01b6602c5b23ea13716cf6fe63a1e9e49a1b1dd9e9d58491935637551d7b36f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 87,
+      "target_index": 96,
+      "end_to_end_ms": 0.028327,
+      "known_value_decode_and_routing_ms": 0.000876,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000227,
+      "assembly_rootcheck_ms": 0.023812,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 120,
+          "digest_hex": "3713a754cac74c9edabe8537dfd694a0a9269cb8854d0f085d225b36639c2247"
+        },
+        {
+          "level": 121,
+          "digest_hex": "7f1bca6e48a9e8378a54a7b23a946c905ea1df4476227e4bd964a7df7c63bfad"
+        },
+        {
+          "level": 123,
+          "digest_hex": "8ae449c13980c04f2da5c2da468c734e1b35e06089c1f46019b9de7b92a975ff"
+        },
+        {
+          "level": 124,
+          "digest_hex": "b9e57154f39b6479af3a5c656b25050c772f3f270a63a27ebed6354029a84350"
+        },
+        {
+          "level": 125,
+          "digest_hex": "71f0e9718caadc6301d222446dadf08835f3c3b061c7173f35931de02bc61723"
+        },
+        {
+          "level": 126,
+          "digest_hex": "38d2df1ec713ed325301c34d9e24cf6a25baf9b3f6c096eb21aea943ec9e980f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 88,
+      "target_index": 33,
+      "end_to_end_ms": 0.027954,
+      "known_value_decode_and_routing_ms": 0.000939,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000229,
+      "assembly_rootcheck_ms": 0.023703,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 121,
+          "digest_hex": "7e1533001bfbe90fda08609638769d7d86b28191c7f57aa2d6c9ae99b988b4fb"
+        },
+        {
+          "level": 122,
+          "digest_hex": "ca54b1678b79967f4edfa2c85e178942b70635ba24de3cdc92ee4851cae5eff4"
+        },
+        {
+          "level": 123,
+          "digest_hex": "74064c60fe58cb811cfbfdf7262e8c8bae63490b47eddf93bc5448ff16a8a301"
+        },
+        {
+          "level": 124,
+          "digest_hex": "546f2717fad16bbc7b4c7a5ded7e30928a3a8b21c1c1983c275fa0308f4c5933"
+        },
+        {
+          "level": 125,
+          "digest_hex": "16686314da3ceeba8277009441d66add11621e51e3c1a39abec394b7df1e1736"
+        },
+        {
+          "level": 126,
+          "digest_hex": "7bf8a33390ca8b03c73429b298fde20e07ab842d53189f7617929a5f5aee8fca"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 89,
+      "target_index": 28,
+      "end_to_end_ms": 0.028318,
+      "known_value_decode_and_routing_ms": 0.000931,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000292,
+      "assembly_rootcheck_ms": 0.023789,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 119,
+          "digest_hex": "3084921dfdc51467ec86dfb9c17e6498951beb29aadea784da25ec15b4509a85"
+        },
+        {
+          "level": 121,
+          "digest_hex": "2d7a540f556d1f33fc7ef4bf847711704dd68f0a47c8a79b12a4b0e5aac95ec1"
+        },
+        {
+          "level": 122,
+          "digest_hex": "a294d75afbfc782a44b7430102b87a465ec9a90ba1e8f9bdde85cdf392f3e226"
+        },
+        {
+          "level": 124,
+          "digest_hex": "be506c35ea18c129fef8ad5753a7de7a13ac172e42f5e292452b519f97bc1506"
+        },
+        {
+          "level": 125,
+          "digest_hex": "16686314da3ceeba8277009441d66add11621e51e3c1a39abec394b7df1e1736"
+        },
+        {
+          "level": 126,
+          "digest_hex": "7bf8a33390ca8b03c73429b298fde20e07ab842d53189f7617929a5f5aee8fca"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 90,
+      "target_index": 49,
+      "end_to_end_ms": 0.028058,
+      "known_value_decode_and_routing_ms": 0.000744,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000231,
+      "assembly_rootcheck_ms": 0.023775,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 119,
+          "digest_hex": "8b4beb0f67b2cba924fb4504525565598139e5362036202dfd35f40524c7a53f"
+        },
+        {
+          "level": 121,
+          "digest_hex": "7d376b59de2d0011dc5b5ac12801539ff356f4de688df6953e5327bb7ba59c37"
+        },
+        {
+          "level": 123,
+          "digest_hex": "65e13bc6b488a211b040acbcaee2d855a9cb69113a337d37341526c97803e927"
+        },
+        {
+          "level": 124,
+          "digest_hex": "ea0e4a563829e0812902f4c35dd2ce829fc84bf0865d575122d19bd0d961bf3a"
+        },
+        {
+          "level": 125,
+          "digest_hex": "33ed0295599fba9562575b79eb736d699cb0025f41971fd2a296c1e87da97577"
+        },
+        {
+          "level": 126,
+          "digest_hex": "e01b6602c5b23ea13716cf6fe63a1e9e49a1b1dd9e9d58491935637551d7b36f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 91,
+      "target_index": 83,
+      "end_to_end_ms": 0.028541,
+      "known_value_decode_and_routing_ms": 0.000885,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.00029,
+      "assembly_rootcheck_ms": 0.023777,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 122,
+          "digest_hex": "22fbbafd29795b498ac142d13933e42d6f7ed7d55beef1201a71cf86736b5240"
+        },
+        {
+          "level": 123,
+          "digest_hex": "c4eccec9801a911a30eb94fb1027dbe768f064242a02d7e17d2acb718a12237a"
+        },
+        {
+          "level": 124,
+          "digest_hex": "430ec155962640f226905643a9726ac7d3161f41c3fa25e332b4cd3bd7791288"
+        },
+        {
+          "level": 125,
+          "digest_hex": "6997de0c1dd07363560e375f98fa4c3afd63860df0608d0fb82ec15a6783e3ac"
+        },
+        {
+          "level": 126,
+          "digest_hex": "38d2df1ec713ed325301c34d9e24cf6a25baf9b3f6c096eb21aea943ec9e980f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 92,
+      "target_index": 52,
+      "end_to_end_ms": 0.028323,
+      "known_value_decode_and_routing_ms": 0.0009,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000333,
+      "assembly_rootcheck_ms": 0.023874,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 120,
+          "digest_hex": "1f03af31beb99bfdbff7080ca3ddde15c6331b4e1845275bde0d6c1d7f289ff5"
+        },
+        {
+          "level": 121,
+          "digest_hex": "e079b6f0e31b900ac1d71e3b1ad0235c360476a721f06ebb8904e6631a7ab55c"
+        },
+        {
+          "level": 123,
+          "digest_hex": "65e13bc6b488a211b040acbcaee2d855a9cb69113a337d37341526c97803e927"
+        },
+        {
+          "level": 124,
+          "digest_hex": "ea0e4a563829e0812902f4c35dd2ce829fc84bf0865d575122d19bd0d961bf3a"
+        },
+        {
+          "level": 125,
+          "digest_hex": "33ed0295599fba9562575b79eb736d699cb0025f41971fd2a296c1e87da97577"
+        },
+        {
+          "level": 126,
+          "digest_hex": "e01b6602c5b23ea13716cf6fe63a1e9e49a1b1dd9e9d58491935637551d7b36f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 93,
+      "target_index": 19,
+      "end_to_end_ms": 0.046198,
+      "known_value_decode_and_routing_ms": 0.002653,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.016508,
+      "assembly_rootcheck_ms": 0.023888,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 121,
+          "digest_hex": "22b5720ca1d646959256f20fd843fa41af267c77dd149464a3c6db2e9f9ea31b"
+        },
+        {
+          "level": 122,
+          "digest_hex": "d15a25a749aa69b7c66ceb4ae9e2c13d905bbcc606d1aba50cf4875d64f26f63"
+        },
+        {
+          "level": 123,
+          "digest_hex": "67d0b3ab291b4d805a82049982c6172041bce1f14c5a813ca1026d8dc863fefa"
+        },
+        {
+          "level": 124,
+          "digest_hex": "833fb9b71d9b1c9765205f861fb8619048914463b7541305d5ce771c0a756a2c"
+        },
+        {
+          "level": 125,
+          "digest_hex": "0cf76ea1ff1977e0eccf349ea33e4f52d6b6d015dd69145da274e31eb2430036"
+        },
+        {
+          "level": 126,
+          "digest_hex": "315e0c4751043a683a3bea17699a4d0483a7351d379a71b378fb8a4b6ee608a4"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 94,
+      "target_index": 82,
+      "end_to_end_ms": 0.029024,
+      "known_value_decode_and_routing_ms": 0.001383,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000338,
+      "assembly_rootcheck_ms": 0.023833,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 122,
+          "digest_hex": "f51264984aba517fa8437068cc9d61d000ecbb027c56f6977818063f23e8a942"
+        },
+        {
+          "level": 123,
+          "digest_hex": "f1bf8f33e60f8f16fcc877fa04536ec85ab7523f926e59374c59678e346c4165"
+        },
+        {
+          "level": 124,
+          "digest_hex": "8f568b63de16712e0987fbd40f05524debcee56ba9789d5c8aa621d0a3d3f9ef"
+        },
+        {
+          "level": 125,
+          "digest_hex": "6997de0c1dd07363560e375f98fa4c3afd63860df0608d0fb82ec15a6783e3ac"
+        },
+        {
+          "level": 126,
+          "digest_hex": "38d2df1ec713ed325301c34d9e24cf6a25baf9b3f6c096eb21aea943ec9e980f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 95,
+      "target_index": 5,
+      "end_to_end_ms": 0.028024,
+      "known_value_decode_and_routing_ms": 0.00085,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000255,
+      "assembly_rootcheck_ms": 0.023869,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 117,
+          "digest_hex": "08403c68bbb9a3bd986b99583133af9e3a3f5e8d71e50169f36043c46f33c098"
+        },
+        {
+          "level": 121,
+          "digest_hex": "9de76315d5e9232fe6558ed20a67b28c8e1170339c262b509449846683b2f266"
+        },
+        {
+          "level": 122,
+          "digest_hex": "b2aec8cfe9ea6c1fd358f9488e53f774f66b464cf688393e100546ada1950d78"
+        },
+        {
+          "level": 123,
+          "digest_hex": "efe91eb5d2d911747440a907c7d61b34927946a64078285f401ea897badaac05"
+        },
+        {
+          "level": 124,
+          "digest_hex": "e6e332c8eec00720011367d821c2a0f87bef9e35651b8ffee1cc11ef28990133"
+        },
+        {
+          "level": 125,
+          "digest_hex": "e99647cc6db780a3da4075137e80ce9c3c103839ee84e5ddc5e1fadb51546ca3"
+        },
+        {
+          "level": 126,
+          "digest_hex": "315e0c4751043a683a3bea17699a4d0483a7351d379a71b378fb8a4b6ee608a4"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 96,
+      "target_index": 62,
+      "end_to_end_ms": 0.028068,
+      "known_value_decode_and_routing_ms": 0.000859,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000249,
+      "assembly_rootcheck_ms": 0.023813,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 120,
+          "digest_hex": "a7ffd6759338357d6e2ed151f2110b5c9f8d3706e7643b63176d352dabd50bb8"
+        },
+        {
+          "level": 121,
+          "digest_hex": "b554c2d69dd12dbc50e3d39de48f05e00932468844c8b882eed95ad735110ecb"
+        },
+        {
+          "level": 123,
+          "digest_hex": "62aef58e89a5d57fc1db006cadb66343ecf4efb0ec2efe9442f03b33996a0a07"
+        },
+        {
+          "level": 124,
+          "digest_hex": "d251933359f24f6ab0385e437a222e01997d4870ace952d330284c208c079aee"
+        },
+        {
+          "level": 125,
+          "digest_hex": "e5872fcc90baee04b3549eb6524522f9e5f4738cf9711bd02a08feac9e363e99"
+        },
+        {
+          "level": 126,
+          "digest_hex": "e01b6602c5b23ea13716cf6fe63a1e9e49a1b1dd9e9d58491935637551d7b36f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 97,
+      "target_index": 95,
+      "end_to_end_ms": 0.028415,
+      "known_value_decode_and_routing_ms": 0.001274,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.00024,
+      "assembly_rootcheck_ms": 0.023746,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 120,
+          "digest_hex": "cffc4c95c7af871e256e4db65653163c37bbf29707f6fce72a87131c0d4effdb"
+        },
+        {
+          "level": 121,
+          "digest_hex": "34541826fd8f2d76e32dabd8f192b13e8d841dae1d4e307cc2cfe31db6c91c6d"
+        },
+        {
+          "level": 123,
+          "digest_hex": "8ae449c13980c04f2da5c2da468c734e1b35e06089c1f46019b9de7b92a975ff"
+        },
+        {
+          "level": 124,
+          "digest_hex": "b9e57154f39b6479af3a5c656b25050c772f3f270a63a27ebed6354029a84350"
+        },
+        {
+          "level": 125,
+          "digest_hex": "71f0e9718caadc6301d222446dadf08835f3c3b061c7173f35931de02bc61723"
+        },
+        {
+          "level": 126,
+          "digest_hex": "38d2df1ec713ed325301c34d9e24cf6a25baf9b3f6c096eb21aea943ec9e980f"
+        },
+        {
+          "level": 127,
+          "digest_hex": "c8388628e7bb108f12608fa1a01abea3402af69b79655745f6acd288fdc4ff64"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 98,
+      "target_index": 40,
+      "end_to_end_ms": 0.028258,
+      "known_value_decode_and_routing_ms": 0.000981,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000237,
+      "assembly_rootcheck_ms": 0.02375,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 118,
+          "digest_hex": "fd4848e4b21cb9a5965ae1e88a4e32d993458709f3f4fbea34c689d81b0d640c"
+        },
+        {
+          "level": 119,
+          "digest_hex": "ca493719661f56daad6cb2664540c023b5b490b1066c30f9fbd300f4c91e885c"
+        },
+        {
+          "level": 121,
+          "digest_hex": "12fbed6b426a7c88cf60460d8dcc45058dfd236d772af0114121f4fcc33c287e"
+        },
+        {
+          "level": 124,
+          "digest_hex": "b0babbd5eeb2242c85a526622567f21ea19757b4b8e977ab068eb5853b2476c3"
+        },
+        {
+          "level": 125,
+          "digest_hex": "6793468840419c766ff8e5cf0cd377f57081c09468d3072bdac29bd7052dfd13"
+        },
+        {
+          "level": 126,
+          "digest_hex": "7bf8a33390ca8b03c73429b298fde20e07ab842d53189f7617929a5f5aee8fca"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    },
+    {
+      "sample_index": 99,
+      "target_index": 39,
+      "end_to_end_ms": 0.029847,
+      "known_value_decode_and_routing_ms": 0.000949,
+      "query_generation_ms": 0,
+      "serialize_transport_answer_ms": 0,
+      "decode_ms": 0.000363,
+      "assembly_rootcheck_ms": 0.023791,
+      "upload_wire_bytes": 0,
+      "download_wire_bytes": 0,
+      "valid_root": true,
+      "corruption_rejected": true,
+      "recovered_siblings": [
+        {
+          "level": 122,
+          "digest_hex": "3c3b5df85f66dca3e98a7c25e5f0dacce7d7cdeeacdf963eec9cbc31079b49a8"
+        },
+        {
+          "level": 123,
+          "digest_hex": "c820a8eb61a286ebd0576e6819420e4afeee1174c840c8dd23998a7fa78fc291"
+        },
+        {
+          "level": 124,
+          "digest_hex": "546f2717fad16bbc7b4c7a5ded7e30928a3a8b21c1c1983c275fa0308f4c5933"
+        },
+        {
+          "level": 125,
+          "digest_hex": "16686314da3ceeba8277009441d66add11621e51e3c1a39abec394b7df1e1736"
+        },
+        {
+          "level": 126,
+          "digest_hex": "7bf8a33390ca8b03c73429b298fde20e07ab842d53189f7617929a5f5aee8fca"
+        },
+        {
+          "level": 127,
+          "digest_hex": "a854a8743ea7befa730539e0ab2b7bfdd29468c00eb65c7234c71b983da875de"
+        }
+      ],
+      "logical_queries": 0
+    }
+  ],
+  "client_peak_rss_bytes": 5767168,
+  "scope": "Separate client/server processes; one persistent TCP connection on loopback. End-to-end includes known-value decoding and public-directory routing, query generation, serialization, transport, server answer, decode, and SMT root verification. Excludes initial bootstrap and process launch; bootstrap separately measured. Wire bytes count successful socket application reads/writes including framing, not TCP/IP headers or retransmissions."
+}

@@ -1,0 +1,106 @@
+{
+  "reason": "Before formal measurements, replace obsolete eight-by-32-bit metadata with the new native 256-bit SimplePIR policy; no record, bucket, target or route changed",
+  "prior_producer_sha256": "79f94ff86ebbe458a6f72b96ee6b0e988f70e511856e25d1cfd78ce07be417ff",
+  "files": {
+    "ab.json": {
+      "prior": {
+        "sha256": "9c18cb8c820489cebae5dc441466e5597db7cbbc89f955ed081b54c14dbb5826",
+        "simplepir": {
+          "record_bytes": 32,
+          "chunk_bits": 32,
+          "chunks_per_record": 8,
+          "flat_shared_hint_and_public_A": false
+        },
+        "pir": {
+          "poly_degree": 8192,
+          "coeff_bits": [
+            42,
+            58,
+            58,
+            60
+          ],
+          "plain_bits": 28,
+          "first_dimension": 64,
+          "batch_size": 17
+        }
+      },
+      "corrected_sha256": "ef01ed77453c884022e1cb92d128ce0d5c5909dc88d5b3ae0edd852b38a81e0a",
+      "all_other_fields_unchanged": true
+    },
+    "pbc.json": {
+      "prior": {
+        "sha256": "22453d59fc561469b50c853aabff1d7e007767521f720f3570f36cd168d77288",
+        "simplepir": {
+          "record_bytes": 32,
+          "chunk_bits": 32,
+          "chunks_per_record": 8,
+          "flat_shared_hint_and_public_A": false
+        },
+        "pir": {
+          "poly_degree": 8192,
+          "coeff_bits": [
+            42,
+            58,
+            58,
+            60
+          ],
+          "plain_bits": 28,
+          "first_dimension": 64,
+          "batch_size": 17
+        }
+      },
+      "corrected_sha256": "e2c951cec124d2e0dd7e5f352323cb8969781106551c6790ea2d06833b87b862",
+      "all_other_fields_unchanged": true
+    },
+    "flat.json": {
+      "prior": {
+        "sha256": "953066a1d949c80f5f07109bb6ab6ba7989ab061234eeaf6027dab40b1bd29da",
+        "simplepir": {
+          "record_bytes": 32,
+          "chunk_bits": 32,
+          "chunks_per_record": 8,
+          "flat_shared_hint_and_public_A": true
+        },
+        "pir": {
+          "poly_degree": 8192,
+          "coeff_bits": [
+            42,
+            58,
+            58,
+            60
+          ],
+          "plain_bits": 28,
+          "first_dimension": 64,
+          "batch_size": 17
+        }
+      },
+      "corrected_sha256": "916fd50ca66f2819b34ebad92b05631f5ec7f4aa060f846da5011e7c6da5ea09",
+      "all_other_fields_unchanged": true
+    },
+    "first_fit.json": {
+      "prior": {
+        "sha256": "b2cf3d1e4a08301ad78ee8a273b98e7b202f2c224e61ff2d6f897b5821fdebc2",
+        "simplepir": {
+          "record_bytes": 32,
+          "chunk_bits": 32,
+          "chunks_per_record": 8,
+          "flat_shared_hint_and_public_A": false
+        },
+        "pir": {
+          "poly_degree": 8192,
+          "coeff_bits": [
+            42,
+            58,
+            58,
+            60
+          ],
+          "plain_bits": 28,
+          "first_dimension": 64,
+          "batch_size": 17
+        }
+      },
+      "corrected_sha256": "a5e27ae1bc4c77ab45e2c7f084a9c67bc236786e677773a2f9e91cf821bc74bd",
+      "all_other_fields_unchanged": true
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "command": [
+    "javac",
+    "-d",
+    "/artifact/examples/tifs_contribution_gate_20260910/external/java_build/csa",
+    "-cp",
+    "/artifact/examples/tifs_contribution_gate_20260910/external/official_sources/CSA/gson-2.10.1.jar",
+    "/artifact/examples/tifs_contribution_gate_20260910/external/official_sources/CSA/src/CSA.java",
+    "/artifact/examples/tifs_contribution_gate_20260910/external/official_sources/CSA/src/MerkleTrees.java",
+    "/artifact/scripts/contribution_gate_csa_20260910.java"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": ""
+}

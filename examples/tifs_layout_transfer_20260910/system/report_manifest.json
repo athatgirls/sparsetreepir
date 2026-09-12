@@ -1,0 +1,11 @@
+{
+  "report_script_sha256": "d66806b30f05a7acf8bdba8d04fa13dfa9b867e66f059af1ab14680332d6cd49",
+  "outputs": {
+    "README.md": "b7c34dda85c8ae9144f6c0a738f4294b63b229af668e17c9bd88481494360b37",
+    "fuel_layout_transfer.tex": "1d046d91eabb0f8c15391f5a013e8530672c475987015fa19c970460321c59e4",
+    "fuel_layout_transfer_bytes.tex": "c6464de79ba478e21a9bbe5cac4e21237a337ad385bfc56c5fbd644094269bdb",
+    "process_mean_CIs.json": "5a9cf561506b642535854d42c9678584df381d7c180e58014cd16ccfc04ce7d9",
+    "fuel_layout_transfer.pdf": "a8b0b6510d4c9cb7123db59532bca6778edb49e0b8f5c135a3090e30dc9db89d",
+    "fuel_layout_transfer.png": "005a58a32f2e710292daeb6b6b8c09a5ba62fc4cf6d651faa16328884a0680b4"
+  }
+}

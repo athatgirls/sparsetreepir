@@ -1,0 +1,28 @@
+{
+  "method": "first_fit",
+  "height": 4,
+  "metadata_file": "layout_metadata.bin",
+  "slots_file": "occupied_slots.bin",
+  "subdatabases": [
+    {
+      "color": 1,
+      "records": 2,
+      "database_file": "color_01.bin"
+    },
+    {
+      "color": 2,
+      "records": 4,
+      "database_file": "color_02.bin"
+    },
+    {
+      "color": 3,
+      "records": 8,
+      "database_file": "color_03.bin"
+    },
+    {
+      "color": 4,
+      "records": 16,
+      "database_file": "color_04.bin"
+    }
+  ]
+}

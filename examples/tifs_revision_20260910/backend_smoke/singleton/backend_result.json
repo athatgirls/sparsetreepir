@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "scheme": "SparseTreePIR-activebalance",
+  "height": 128,
+  "width": 0,
+  "active_nodes": 0,
+  "query_samples": 1,
+  "completed_queries": 1,
+  "warmup_queries": 2,
+  "warmup_wall_ms": 0.000691,
+  "record_bytes": 32,
+  "chunk_bits": 32,
+  "chunked_queries_per_color": 8,
+  "stored_records_with_padding": 0,
+  "unique_database_files": 0,
+  "setup": {
+    "pick_params_ms": 0,
+    "make_db_ms": 0,
+    "init_ms": 0,
+    "setup_api_ms": 0,
+    "total_setup_wall_ms": 0.000225,
+    "offline_hint_bytes": 0,
+    "public_shared_state_bytes": 0
+  },
+  "parameters": [],
+  "targets": [
+    {
+      "sample_index": 0,
+      "client_query_ms": 0,
+      "server_answer_ms": 0,
+      "client_decode_ms": 0,
+      "backend_wall_ms": 0.000017,
+      "online_upload_bytes": 0,
+      "online_download_bytes": 0,
+      "online_total_bytes": 0,
+      "logical_record_queries": 0,
+      "chunk_query_count": 0,
+      "recovered_records": [],
+      "chunk_checks_passed": true
+    }
+  ],
+  "go_version": "go1.22.2",
+  "goos": "linux",
+  "goarch": "amd64",
+  "gomaxprocs": 1,
+  "byte_accounting": "PIR message matrix elements multiplied by Logq/8; excludes transport/framing and serialization",
+  "timing_scope": "sequential backend only; target wall includes chunk checks and record reassembly; excludes SMT verification, Python routing, process startup, network and output serialization",
+  "process_peak_rss_bytes": 4194304,
+  "process_peak_rss_scope": "Linux /proc/self/status VmHWM sampled after all retrievals, before JSON serialization; entire combined server/client runner including retained results, not client-only memory; null if unavailable"
+}

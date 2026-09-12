@@ -1,0 +1,18 @@
+\begin{table*}[t]
+\centering\small
+\caption{Official VBPIR core~\cite{vectorbatchpir} with portability changes and an external root-verification adapter, on the common height-10 tree. AB is ours. Times are descriptive means over ten paired targets in one process per layout, using the original C++ timing boundaries and fresh client/server objects per target. No confidence interval is estimated. Estimated query/answer sizes are the original program's serialization-size estimates, not measured wire traffic, and are not directly comparable with SimplePIR matrix bytes or TCP application bytes.}
+\label{tab:official-vbpir-components}
+\setlength{\tabcolsep}{8pt}
+\begin{tabular}{lrrrrr}
+\toprule
+Layout & Query (ms) & Answer (ms) & Recover (ms) & Est. query (KiB) & Est. answer (KiB)\\
+\midrule
+TreePIR CSA~\cite{treepir} & 6.761 & 338.488 & 1.263 & 385 & 257\\
+AB & 7.206 & 338.839 & 1.211 & 385 & 257\\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{minipage}{.97\textwidth}\small
+Initialization: N/A, original setup is untimed. Full client state and isolated client RSS: N/A, unmeasured in this combined process. Actual wire bytes and full-service E2E: N/A, no transport and verification is outside the timers. The original estimates use query \texttt{save\_size()/2} and answer \texttt{save\_size()}, then integer division by 1024. All 20 output proofs pass independent root verification and corruption rejection.
+\end{minipage}
+\end{table*}

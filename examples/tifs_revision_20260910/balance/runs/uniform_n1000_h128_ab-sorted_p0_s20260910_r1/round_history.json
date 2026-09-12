@@ -1,0 +1,11 @@
+[
+  {
+    "coloring_s": 0.002902999985963106,
+    "actual_passes": 0,
+    "actual_moves": 0,
+    "max_bucket": 566,
+    "U_over_B": 3.958041958041958,
+    "valid": true,
+    "converged": false
+  }
+]

@@ -1,0 +1,552 @@
+{
+  "groups": {
+    "first_fit": {
+      "proofs_verified": {
+        "mean": 2,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "max_bucket": {
+        "mean": 58,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_e2e_ms": {
+        "mean": 5.1651229999999995,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_query_ms": {
+        "mean": 4.4434355,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_server_answer_ms": {
+        "mean": 0.01975,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_recover_ms": {
+        "mean": 0.2854185,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_route_ms": {
+        "mean": 0.006919999999999999,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_verify_ms": {
+        "mean": 0.0114795,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_request_response_ms": {
+        "mean": 0.4169425,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_upload_wire_bytes": {
+        "mean": 4336,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_download_wire_bytes": {
+        "mean": 4304,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_online_wire_bytes": {
+        "mean": 8640,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "bootstrap_ms": {
+        "mean": 18.944298,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "bootstrap_upload_wire_bytes": {
+        "mean": 15,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "bootstrap_download_wire_bytes": {
+        "mean": 4938163,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "bootstrap_total_wire_bytes": {
+        "mean": 4938178,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "metadata_bytes": {
+        "mean": 4842,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "slots_bytes": {
+        "mean": 1600,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "hint_matrix_bytes": {
+        "mean": 2621440,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "shared_A_matrix_bytes": {
+        "mean": 2293760,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "cache_payload_bytes": {
+        "mean": 0,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "client_peak_rss_bytes": {
+        "mean": 20840448,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "server_peak_rss_bytes": {
+        "mean": 30408704,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "server_setup_ms": {
+        "mean": 122.500682,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "logical_queries": {
+        "mean": 9,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "pair_wall_seconds": {
+        "mean": 0.2797264340000005,
+        "sample_sd": null,
+        "runs": 1
+      }
+    },
+    "activebalance": {
+      "proofs_verified": {
+        "mean": 2,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "max_bucket": {
+        "mean": 23,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_e2e_ms": {
+        "mean": 7.535414,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_query_ms": {
+        "mean": 6.602,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_server_answer_ms": {
+        "mean": 0.020590499999999998,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_recover_ms": {
+        "mean": 0.2898565,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_route_ms": {
+        "mean": 0.013291999999999998,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_verify_ms": {
+        "mean": 0.0161165,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_request_response_ms": {
+        "mean": 0.611496,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_upload_wire_bytes": {
+        "mean": 4336,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_download_wire_bytes": {
+        "mean": 5200,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_online_wire_bytes": {
+        "mean": 9536,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "bootstrap_ms": {
+        "mean": 27.228885,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "bootstrap_upload_wire_bytes": {
+        "mean": 15,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "bootstrap_download_wire_bytes": {
+        "mean": 5888459,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "bootstrap_total_wire_bytes": {
+        "mean": 5888474,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "metadata_bytes": {
+        "mean": 4842,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "slots_bytes": {
+        "mean": 1600,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "hint_matrix_bytes": {
+        "mean": 3538944,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "shared_A_matrix_bytes": {
+        "mean": 2326528,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "cache_payload_bytes": {
+        "mean": 0,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "client_peak_rss_bytes": {
+        "mean": 24772608,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "server_peak_rss_bytes": {
+        "mean": 32841728,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "server_setup_ms": {
+        "mean": 130.229471,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "logical_queries": {
+        "mean": 9,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "pair_wall_seconds": {
+        "mean": 0.2930956139999985,
+        "sample_sd": null,
+        "runs": 1
+      }
+    },
+    "opt_witness22": {
+      "proofs_verified": {
+        "mean": 2,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "max_bucket": {
+        "mean": 22,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_e2e_ms": {
+        "mean": 7.182969,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_query_ms": {
+        "mean": 6.4115645,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_server_answer_ms": {
+        "mean": 0.0198235,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_recover_ms": {
+        "mean": 0.3254775,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_route_ms": {
+        "mean": 0.0100995,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_verify_ms": {
+        "mean": 0.01473,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_request_response_ms": {
+        "mean": 0.42010749999999997,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_upload_wire_bytes": {
+        "mean": 4336,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_download_wire_bytes": {
+        "mean": 5200,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_online_wire_bytes": {
+        "mean": 9536,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "bootstrap_ms": {
+        "mean": 31.950535,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "bootstrap_upload_wire_bytes": {
+        "mean": 15,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "bootstrap_download_wire_bytes": {
+        "mean": 5921227,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "bootstrap_total_wire_bytes": {
+        "mean": 5921242,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "metadata_bytes": {
+        "mean": 4842,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "slots_bytes": {
+        "mean": 1600,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "hint_matrix_bytes": {
+        "mean": 3538944,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "shared_A_matrix_bytes": {
+        "mean": 2359296,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "cache_payload_bytes": {
+        "mean": 0,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "client_peak_rss_bytes": {
+        "mean": 21889024,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "server_peak_rss_bytes": {
+        "mean": 31248384,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "server_setup_ms": {
+        "mean": 125.714439,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "logical_queries": {
+        "mean": 9,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "pair_wall_seconds": {
+        "mean": 0.29754762800000023,
+        "sample_sd": null,
+        "runs": 1
+      }
+    },
+    "full_cache": {
+      "proofs_verified": {
+        "mean": 2,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "max_bucket": {
+        "mean": 198,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_e2e_ms": {
+        "mean": 0.014229,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_query_ms": {
+        "mean": 0,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_server_answer_ms": {
+        "mean": 0,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_recover_ms": {
+        "mean": 0.000192,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_route_ms": {
+        "mean": 0.00069,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_verify_ms": {
+        "mean": 0.011644,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_request_response_ms": {
+        "mean": 0,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_upload_wire_bytes": {
+        "mean": 0,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_download_wire_bytes": {
+        "mean": 0,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "mean_online_wire_bytes": {
+        "mean": 0,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "bootstrap_ms": {
+        "mean": 0.486511,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "bootstrap_upload_wire_bytes": {
+        "mean": 15,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "bootstrap_download_wire_bytes": {
+        "mean": 12815,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "bootstrap_total_wire_bytes": {
+        "mean": 12830,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "metadata_bytes": {
+        "mean": 4778,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "slots_bytes": {
+        "mean": 1600,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "hint_matrix_bytes": {
+        "mean": 0,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "shared_A_matrix_bytes": {
+        "mean": 0,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "cache_payload_bytes": {
+        "mean": 6336,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "client_peak_rss_bytes": {
+        "mean": 4587520,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "server_peak_rss_bytes": {
+        "mean": 4325376,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "server_setup_ms": {
+        "mean": 0.002069,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "logical_queries": {
+        "mean": 0,
+        "sample_sd": null,
+        "runs": 1
+      },
+      "pair_wall_seconds": {
+        "mean": 0.07150744100000139,
+        "sample_sd": null,
+        "runs": 1
+      }
+    }
+  },
+  "paired_e2e_ratios": {
+    "first_fit_over_opt_witness22": {
+      "values": [
+        0.719079116170486
+      ],
+      "mean": 0.719079116170486,
+      "sample_sd": null
+    },
+    "activebalance_over_opt_witness22": {
+      "values": [
+        1.0490667577710555
+      ],
+      "mean": 1.0490667577710555,
+      "sample_sd": null
+    }
+  },
+  "completed_process_pairs": 4,
+  "verified_measured_proofs": 8,
+  "statistical_unit": "one independent server/client process-pair mean; five paired repeats, not 500 independent targets",
+  "scope": "TCP loopback application-byte framing included; excludes TCP/IP headers, initial bootstrap from warm E2E, publisher setup, and network deployment claims."
+}

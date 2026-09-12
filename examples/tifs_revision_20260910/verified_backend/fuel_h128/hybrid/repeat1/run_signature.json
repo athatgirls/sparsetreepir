@@ -1,0 +1,18 @@
+{
+  "manifest_sha256": "6f0351b5373c7e81871c66150b6e5457e6ba82581e3551825684a4ccb048b7f1",
+  "database_sha256": {
+    "color_01.bin": "8bb25e1b6911abbd74e5159b320c0f16d2674a1a23b0ae132a70b87bd0a9a5cd",
+    "color_02.bin": "7c30cd40c423427bdedcd9262496e9ec259302d1a27df4fb887be822f4df12fe",
+    "color_03.bin": "52d4c791a7a6d2e6efc747f54a5d224950ce8aacdb3aad939757b093265e2b67",
+    "color_04.bin": "1c0f38f8705dd253115d9582cd4cf9209bf2fc624b92656d6007c06b6a2539d8",
+    "color_05.bin": "a6f7f89b8fc77a76e0f3fa5d50d7b3faaff24099bec06e452043eac382c33b8e",
+    "color_06.bin": "ea6711e8376f55f505c0c3f6389cc4497451ad8e391514c08e5f6c9ed65345c1",
+    "color_07.bin": "12062a405f0fcf16e6cd332587c3aa7f578d593130975302c950adb4eafd58f6",
+    "color_08.bin": "579616e9eddde66e2d7cf83dff25e9976258cbc45a3be5de39de0afd0bfed740",
+    "color_09.bin": "c0958c5d9a75f18bba84467617a2a4778f77e155c05e81133c79abac9a42456c"
+  },
+  "binary_sha256": "d633487b2913aee719ade941a9a9629d45f27559261fb9e0bd255e93235fca40",
+  "warmup": 5,
+  "gomaxprocs": 1,
+  "schema": "verified-backend-v2"
+}

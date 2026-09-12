@@ -1,0 +1,10 @@
+{
+  "id": "uniform_n100000_h128_ab-sorted_p20_s20260910_r2",
+  "distribution": "uniform",
+  "n": 100000,
+  "height": 128,
+  "algorithm": "ab-sorted",
+  "passes": 20,
+  "seed": 20260910,
+  "repeat": 2
+}

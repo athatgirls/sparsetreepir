@@ -1,0 +1,10 @@
+{
+  "id": "saturated_n65536_h16_first-fit_p0_s20260910_r1",
+  "distribution": "saturated",
+  "n": 65536,
+  "height": 16,
+  "algorithm": "first-fit",
+  "passes": 0,
+  "seed": 20260910,
+  "repeat": 1
+}

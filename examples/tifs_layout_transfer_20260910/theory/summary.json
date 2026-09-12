@@ -1,0 +1,28 @@
+{
+  "case_ids": [
+    "S0606",
+    "S0710",
+    "H1199",
+    "H1265",
+    "H1285"
+  ],
+  "cases": 5,
+  "critical_palettes": 27,
+  "joint_projection_infeasibility_certificates": 27,
+  "neutral_then_strict_rescued": 5,
+  "seconds": 1.6448264000937343,
+  "budget_seconds": 75,
+  "neutral_limit_per_case": 128,
+  "source_files": [
+    {
+      "path": "examples\\tifs_sufficiency_20260910\\construction\\base_construction_results.json",
+      "sha256": "2afc4d81d25169d9e9fa4626f51f947b6b7b18a3fc708e2293c2985d243e13fe"
+    },
+    {
+      "path": "examples\\tifs_sufficiency_20260910\\construction\\holdout_construction_results.json",
+      "sha256": "5d7b7d34646e93448cb11a32046bc9b7b25743e9fdc41f70d6024c74c0174050"
+    }
+  ],
+  "script_sha256": "10cf2550ee75aa1e9361f2eef4b770ed6c10c01a8ea59d704f7c687a8a5eb05e",
+  "local_algorithm_sha256": "1bff1ee01205280330ab2ddcfaa3cd1779c223fe31e813cc6b39c16b7ad9bc7b"
+}

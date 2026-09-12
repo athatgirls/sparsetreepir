@@ -1,0 +1,126 @@
+{
+  "status": "complete",
+  "case": "uniform_n1000",
+  "n": 1000,
+  "height": 128,
+  "N": 1998,
+  "m": 13,
+  "ab_loads": [
+    154,
+    153,
+    153,
+    153,
+    154,
+    154,
+    154,
+    153,
+    154,
+    154,
+    154,
+    154,
+    154
+  ],
+  "ab_max_bucket": 154,
+  "ab_scan_budget": 20,
+  "ab_reported_passes": 13,
+  "ab_reported_moves": 12,
+  "algorithm": "unchanged tifs_revision_smt.build_layout -> original best_count_profile_balanced (Hungarian)",
+  "root_hex": "257259c5eaab8b07fb14030ade3bd9f999c67353428713127161e4c8e50eac02",
+  "hash_format": "sha256:leaf=H(00||value),internal=H(01||left||right),empty_leaf=H(02)",
+  "generator": {
+    "generator": "SHA256(domain || seed_uint64_be || source_index_uint64_be), first 128 bits",
+    "key_domain_hex": "537061727365547265655049522d65787465726e616c2d32303236303931312d6b657900",
+    "source_indices": [
+      0,
+      999
+    ],
+    "seed": 2026091103,
+    "collisions": 0,
+    "shared_prefix_bits": 0,
+    "prefix_transform": "none",
+    "cluster_fraction": null,
+    "scope": "Synthetic deterministic coordinates; not real keys or a real request trace",
+    "unsorted_uniform_coordinates_sha256": "43b12a826889dc2adf4e45b0f67035870126cb5e364ae0d67a2031f9cf9a3de1"
+  },
+  "target_pool": 32,
+  "target_rank_ids": [
+    19,
+    33,
+    46,
+    66,
+    92,
+    198,
+    200,
+    215,
+    228,
+    233,
+    292,
+    297,
+    376,
+    437,
+    455,
+    468,
+    514,
+    542,
+    560,
+    565,
+    575,
+    666,
+    702,
+    759,
+    770,
+    798,
+    916,
+    923,
+    958,
+    976,
+    989,
+    997
+  ],
+  "checks": {
+    "ab": {
+      "all_target_routes_checked": 1000,
+      "root_proofs_checked": 1000,
+      "root_sampling": "all",
+      "wrong_used_digest_rejections": 1000,
+      "routing_independent_of_target_expectations": true
+    }
+  },
+  "build_layout_wall_s": 0.6442831920000174,
+  "build_layout_stages_ms": {
+    "hash_tree": 71.06689699998014,
+    "active_extraction": 179.39123000002155,
+    "forest_build": 1.0736130000168487,
+    "coloring": 389.9735690000057,
+    "metadata_build": 1.490017999998372
+  },
+  "total_preparation_wall_s": 1.2869790009999917,
+  "peak_process_rss_bytes": 123420672,
+  "address_space_limit_bytes": 10737418240,
+  "environment": {
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "python": "3.12.3"
+  },
+  "sources_sha256": {
+    "scripts/prepare_external_extension_20260911.py": "067c072c331c4394ae445e1105f4751b00da749c8f886678f7f1d90e1884474a",
+    "scripts/tifs_revision_smt.py": "f0dc6c6c9af2d7a9c032991f5407c7cca79e7353394d6a18d9f8e8bb5e72c740",
+    "scripts/fixed_sparse_tree_coloring.py": "0e835f0d26bf71a78e0652f53c73bf942f071af0df68bd32cd496d0d8bef7cf0",
+    "scripts/generate_full_sparse_smt_example.py": "5cd3630af580fe03214fd9816ff66601e3f32e79a4e3d304b445bd8f12d17b1d",
+    "scripts/run_height_sparsity_profile_balance_experiment.py": "6e13f887cbe283ade74aad6cd2174aa3c1d66001ada2106fc27935b3284f63f5",
+    "scripts/run_sparse_smt_pir_backend_experiment.py": "2f0ae62851d8d3fe1219183e0a26bead1a5fcc9607612a15371927aacab248fb",
+    "scripts/contribution_gate_csa_20260910.java": "6028930b85e0ad9720c20f4494009b3f24be722c19c8b3234b4eb918dc1f851c",
+    "scripts/contribution_gate_index_20260910.java": "2e80f5ca2583283684f3eedee02a2000ff5daa2ed9d3c146e65b6b116d6d9e3e"
+  },
+  "outputs": {
+    "ab.json": {
+      "sha256": "bb1324c6622c6cb9ef711c37342d6ee5d9801388d81dbafd8f12cb3bc03004e1",
+      "bytes": 419796
+    },
+    "pbc.json": {
+      "sha256": "34e8ecc0cf59c5b7bd94a530d1ef7b447beb2b862067eaeb93d79f08ada0b227",
+      "bytes": 309058
+    }
+  },
+  "scope": "Synthetic/complete experimental SMT input generation and direct-hash validation only; no PIR or latency benchmark performed.",
+  "pbc_scope": "Global records/intervals only; original external PBC implementation must construct its own placement and real/dummy routing."
+}

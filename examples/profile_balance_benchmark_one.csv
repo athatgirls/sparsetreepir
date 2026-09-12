@@ -1,2 +1,0 @@
-height,sparsity,skipped,trials,occupied,active,m,ideal_max,structural_lb,pruned_max,pruned_gap,count_max,count_gap,hybrid_max,hybrid_gap,profile_max,profile_gap,profile_ratio,profile_over_ideal,profile_over_lb,reduction_vs_hybrid,runtime_ms,moves,valid_rate
-24,0.9995,0.0,1.0,8389,16776,17,987,987,3390,3388,2114,2112,1203,616,1069,192,1.083273724368145,1.083080040526849,1.083080040526849,11.138819617622609,3555.7508002966642,8,1.0

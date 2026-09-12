@@ -1,0 +1,19 @@
+{
+  "width_inches": 7.1,
+  "height_inches": 3.6500000000000004,
+  "font_sizes_pt": [
+    8.5,
+    9.5,
+    10.5
+  ],
+  "minimum_text_font_pt": 8.5,
+  "visual_QA": "pass: labels, legend and panels do not overlap",
+  "intended_placement": "full textwidth 7.16 inches; no extra reduction",
+  "sources_unchanged": true,
+  "files": {
+    "summary.json": "504c118c34eed936694022f1e49ae9869f68c26c4c6d540c3880357163949cce",
+    "render_compact_gap_figure.py": "6dab323c12c4d9601a2753e3da1d7cc9f48a99127f7f5d8e3fad3f2f7424ddaf",
+    "absolute_gap_distribution_compact.pdf": "aeaafa7cae81d2a3fe4a4fec198fa8609bca8e263edab4c6bf4df76fc7e5d468",
+    "absolute_gap_distribution_compact.png": "1f0cecb2b18c66a167a8e733ae1555c23b6e6e2b6b82cfba8a139ee2fc6efb3d"
+  }
+}

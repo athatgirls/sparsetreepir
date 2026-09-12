@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "candidate_cases": 939,
+  "permutations_checked": 181665,
+  "all_permutations_checked_for_each_candidate": true,
+  "extractor_legacy_order_checks": 24,
+  "hybrid_exact_wrapper_checks": 24,
+  "original_ab_exact_wrapper_checks": 24,
+  "whole_run_equal_signature_cases": 24,
+  "whole_run_differences": [],
+  "note": "Equal per-candidate optimal signatures do not imply identical colouring tie decisions or all later trajectories.",
+  "elapsed_s": 0.3476200000150129
+}

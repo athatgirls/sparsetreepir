@@ -1,0 +1,10 @@
+{
+  "id": "uniform_n10000_h128_ab-hungarian_p20_s20260910_r1",
+  "distribution": "uniform",
+  "n": 10000,
+  "height": 128,
+  "algorithm": "ab-hungarian",
+  "passes": 20,
+  "seed": 20260910,
+  "repeat": 1
+}

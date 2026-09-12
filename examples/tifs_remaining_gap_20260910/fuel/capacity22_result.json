@@ -1,0 +1,3189 @@
+{
+  "source": "examples\\tifs_revision_20260910\\verified_backend\\fuel_h128\\activebalance\\layout_metadata.bin",
+  "source_sha256": "61749225f08de21a230b8759a95c0d71d93c2f68c7b5b3cc6978cba6211aa5f4",
+  "script_sha256": "f23c5845d4987fe694b52516108407243e6599dff1b4150cc0e733e75415b7de",
+  "N": 198,
+  "n": 100,
+  "m": 9,
+  "capacity_tested": 22,
+  "time_limit_seconds": 120,
+  "elapsed_seconds": 0.18483779998496175,
+  "scipy": "1.17.0",
+  "python": "3.14.2",
+  "status": 0,
+  "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+  "scope": "Offline feasibility witness; not an AB algorithm or runtime improvement.",
+  "integer_coloring_verified": true,
+  "loads": [
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22
+  ],
+  "records": [
+    {
+      "left": 0,
+      "right": 48,
+      "level": 127,
+      "original_color": 6,
+      "original_position": 0,
+      "ancestors": [],
+      "parent": -1,
+      "witness_color": 6
+    },
+    {
+      "left": 0,
+      "right": 24,
+      "level": 126,
+      "original_color": 5,
+      "original_position": 0,
+      "ancestors": [
+        0
+      ],
+      "parent": 0,
+      "witness_color": 5
+    },
+    {
+      "left": 0,
+      "right": 13,
+      "level": 125,
+      "original_color": 9,
+      "original_position": 0,
+      "ancestors": [
+        0,
+        1
+      ],
+      "parent": 1,
+      "witness_color": 2
+    },
+    {
+      "left": 0,
+      "right": 6,
+      "level": 124,
+      "original_color": 1,
+      "original_position": 0,
+      "ancestors": [
+        0,
+        1,
+        2
+      ],
+      "parent": 2,
+      "witness_color": 4
+    },
+    {
+      "left": 0,
+      "right": 1,
+      "level": 123,
+      "original_color": 4,
+      "original_position": 0,
+      "ancestors": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "parent": 3,
+      "witness_color": 1
+    },
+    {
+      "left": 0,
+      "right": 0,
+      "level": 118,
+      "original_color": 3,
+      "original_position": 0,
+      "ancestors": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "parent": 4,
+      "witness_color": 7
+    },
+    {
+      "left": 1,
+      "right": 1,
+      "level": 118,
+      "original_color": 3,
+      "original_position": 1,
+      "ancestors": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "parent": 4,
+      "witness_color": 7
+    },
+    {
+      "left": 2,
+      "right": 6,
+      "level": 123,
+      "original_color": 4,
+      "original_position": 1,
+      "ancestors": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "parent": 3,
+      "witness_color": 8
+    },
+    {
+      "left": 2,
+      "right": 2,
+      "level": 122,
+      "original_color": 3,
+      "original_position": 2,
+      "ancestors": [
+        0,
+        1,
+        2,
+        3,
+        7
+      ],
+      "parent": 7,
+      "witness_color": 0
+    },
+    {
+      "left": 3,
+      "right": 6,
+      "level": 122,
+      "original_color": 3,
+      "original_position": 3,
+      "ancestors": [
+        0,
+        1,
+        2,
+        3,
+        7
+      ],
+      "parent": 7,
+      "witness_color": 1
+    },
+    {
+      "left": 3,
+      "right": 4,
+      "level": 121,
+      "original_color": 2,
+      "original_position": 0,
+      "ancestors": [
+        0,
+        1,
+        2,
+        3,
+        7,
+        9
+      ],
+      "parent": 9,
+      "witness_color": 0
+    },
+    {
+      "left": 3,
+      "right": 3,
+      "level": 120,
+      "original_color": 8,
+      "original_position": 0,
+      "ancestors": [
+        0,
+        1,
+        2,
+        3,
+        7,
+        9,
+        10
+      ],
+      "parent": 10,
+      "witness_color": 7
+    },
+    {
+      "left": 4,
+      "right": 4,
+      "level": 120,
+      "original_color": 8,
+      "original_position": 1,
+      "ancestors": [
+        0,
+        1,
+        2,
+        3,
+        7,
+        9,
+        10
+      ],
+      "parent": 10,
+      "witness_color": 7
+    },
+    {
+      "left": 5,
+      "right": 6,
+      "level": 121,
+      "original_color": 2,
+      "original_position": 1,
+      "ancestors": [
+        0,
+        1,
+        2,
+        3,
+        7,
+        9
+      ],
+      "parent": 9,
+      "witness_color": 7
+    },
+    {
+      "left": 5,
+      "right": 5,
+      "level": 117,
+      "original_color": 8,
+      "original_position": 2,
+      "ancestors": [
+        0,
+        1,
+        2,
+        3,
+        7,
+        9,
+        13
+      ],
+      "parent": 13,
+      "witness_color": 0
+    },
+    {
+      "left": 6,
+      "right": 6,
+      "level": 117,
+      "original_color": 8,
+      "original_position": 3,
+      "ancestors": [
+        0,
+        1,
+        2,
+        3,
+        7,
+        9,
+        13
+      ],
+      "parent": 13,
+      "witness_color": 0
+    },
+    {
+      "left": 7,
+      "right": 13,
+      "level": 124,
+      "original_color": 1,
+      "original_position": 1,
+      "ancestors": [
+        0,
+        1,
+        2
+      ],
+      "parent": 2,
+      "witness_color": 8
+    },
+    {
+      "left": 7,
+      "right": 11,
+      "level": 123,
+      "original_color": 4,
+      "original_position": 2,
+      "ancestors": [
+        0,
+        1,
+        2,
+        16
+      ],
+      "parent": 16,
+      "witness_color": 7
+    },
+    {
+      "left": 7,
+      "right": 9,
+      "level": 121,
+      "original_color": 3,
+      "original_position": 4,
+      "ancestors": [
+        0,
+        1,
+        2,
+        16,
+        17
+      ],
+      "parent": 17,
+      "witness_color": 3
+    },
+    {
+      "left": 7,
+      "right": 7,
+      "level": 120,
+      "original_color": 2,
+      "original_position": 2,
+      "ancestors": [
+        0,
+        1,
+        2,
+        16,
+        17,
+        18
+      ],
+      "parent": 18,
+      "witness_color": 0
+    },
+    {
+      "left": 8,
+      "right": 9,
+      "level": 120,
+      "original_color": 2,
+      "original_position": 3,
+      "ancestors": [
+        0,
+        1,
+        2,
+        16,
+        17,
+        18
+      ],
+      "parent": 18,
+      "witness_color": 4
+    },
+    {
+      "left": 8,
+      "right": 8,
+      "level": 119,
+      "original_color": 8,
+      "original_position": 4,
+      "ancestors": [
+        0,
+        1,
+        2,
+        16,
+        17,
+        18,
+        20
+      ],
+      "parent": 20,
+      "witness_color": 0
+    },
+    {
+      "left": 9,
+      "right": 9,
+      "level": 119,
+      "original_color": 8,
+      "original_position": 5,
+      "ancestors": [
+        0,
+        1,
+        2,
+        16,
+        17,
+        18,
+        20
+      ],
+      "parent": 20,
+      "witness_color": 0
+    },
+    {
+      "left": 10,
+      "right": 11,
+      "level": 121,
+      "original_color": 3,
+      "original_position": 5,
+      "ancestors": [
+        0,
+        1,
+        2,
+        16,
+        17
+      ],
+      "parent": 17,
+      "witness_color": 0
+    },
+    {
+      "left": 10,
+      "right": 10,
+      "level": 120,
+      "original_color": 2,
+      "original_position": 4,
+      "ancestors": [
+        0,
+        1,
+        2,
+        16,
+        17,
+        23
+      ],
+      "parent": 23,
+      "witness_color": 4
+    },
+    {
+      "left": 11,
+      "right": 11,
+      "level": 120,
+      "original_color": 2,
+      "original_position": 5,
+      "ancestors": [
+        0,
+        1,
+        2,
+        16,
+        17,
+        23
+      ],
+      "parent": 23,
+      "witness_color": 4
+    },
+    {
+      "left": 12,
+      "right": 13,
+      "level": 123,
+      "original_color": 4,
+      "original_position": 3,
+      "ancestors": [
+        0,
+        1,
+        2,
+        16
+      ],
+      "parent": 16,
+      "witness_color": 7
+    },
+    {
+      "left": 12,
+      "right": 12,
+      "level": 122,
+      "original_color": 3,
+      "original_position": 6,
+      "ancestors": [
+        0,
+        1,
+        2,
+        16,
+        26
+      ],
+      "parent": 26,
+      "witness_color": 4
+    },
+    {
+      "left": 13,
+      "right": 13,
+      "level": 122,
+      "original_color": 3,
+      "original_position": 7,
+      "ancestors": [
+        0,
+        1,
+        2,
+        16,
+        26
+      ],
+      "parent": 26,
+      "witness_color": 0
+    },
+    {
+      "left": 14,
+      "right": 24,
+      "level": 125,
+      "original_color": 4,
+      "original_position": 4,
+      "ancestors": [
+        0,
+        1
+      ],
+      "parent": 1,
+      "witness_color": 8
+    },
+    {
+      "left": 14,
+      "right": 18,
+      "level": 124,
+      "original_color": 8,
+      "original_position": 6,
+      "ancestors": [
+        0,
+        1,
+        29
+      ],
+      "parent": 29,
+      "witness_color": 0
+    },
+    {
+      "left": 14,
+      "right": 15,
+      "level": 123,
+      "original_color": 2,
+      "original_position": 6,
+      "ancestors": [
+        0,
+        1,
+        29,
+        30
+      ],
+      "parent": 30,
+      "witness_color": 4
+    },
+    {
+      "left": 14,
+      "right": 14,
+      "level": 121,
+      "original_color": 1,
+      "original_position": 2,
+      "ancestors": [
+        0,
+        1,
+        29,
+        30,
+        31
+      ],
+      "parent": 31,
+      "witness_color": 7
+    },
+    {
+      "left": 15,
+      "right": 15,
+      "level": 121,
+      "original_color": 1,
+      "original_position": 3,
+      "ancestors": [
+        0,
+        1,
+        29,
+        30,
+        31
+      ],
+      "parent": 31,
+      "witness_color": 2
+    },
+    {
+      "left": 16,
+      "right": 18,
+      "level": 123,
+      "original_color": 2,
+      "original_position": 7,
+      "ancestors": [
+        0,
+        1,
+        29,
+        30
+      ],
+      "parent": 30,
+      "witness_color": 4
+    },
+    {
+      "left": 16,
+      "right": 16,
+      "level": 122,
+      "original_color": 1,
+      "original_position": 4,
+      "ancestors": [
+        0,
+        1,
+        29,
+        30,
+        34
+      ],
+      "parent": 34,
+      "witness_color": 2
+    },
+    {
+      "left": 17,
+      "right": 18,
+      "level": 122,
+      "original_color": 1,
+      "original_position": 5,
+      "ancestors": [
+        0,
+        1,
+        29,
+        30,
+        34
+      ],
+      "parent": 34,
+      "witness_color": 7
+    },
+    {
+      "left": 17,
+      "right": 17,
+      "level": 120,
+      "original_color": 9,
+      "original_position": 1,
+      "ancestors": [
+        0,
+        1,
+        29,
+        30,
+        34,
+        36
+      ],
+      "parent": 36,
+      "witness_color": 1
+    },
+    {
+      "left": 18,
+      "right": 18,
+      "level": 120,
+      "original_color": 9,
+      "original_position": 2,
+      "ancestors": [
+        0,
+        1,
+        29,
+        30,
+        34,
+        36
+      ],
+      "parent": 36,
+      "witness_color": 2
+    },
+    {
+      "left": 19,
+      "right": 24,
+      "level": 124,
+      "original_color": 8,
+      "original_position": 7,
+      "ancestors": [
+        0,
+        1,
+        29
+      ],
+      "parent": 29,
+      "witness_color": 7
+    },
+    {
+      "left": 19,
+      "right": 21,
+      "level": 123,
+      "original_color": 2,
+      "original_position": 8,
+      "ancestors": [
+        0,
+        1,
+        29,
+        39
+      ],
+      "parent": 39,
+      "witness_color": 4
+    },
+    {
+      "left": 19,
+      "right": 20,
+      "level": 122,
+      "original_color": 1,
+      "original_position": 6,
+      "ancestors": [
+        0,
+        1,
+        29,
+        39,
+        40
+      ],
+      "parent": 40,
+      "witness_color": 0
+    },
+    {
+      "left": 19,
+      "right": 19,
+      "level": 121,
+      "original_color": 9,
+      "original_position": 3,
+      "ancestors": [
+        0,
+        1,
+        29,
+        39,
+        40,
+        41
+      ],
+      "parent": 41,
+      "witness_color": 1
+    },
+    {
+      "left": 20,
+      "right": 20,
+      "level": 121,
+      "original_color": 9,
+      "original_position": 4,
+      "ancestors": [
+        0,
+        1,
+        29,
+        39,
+        40,
+        41
+      ],
+      "parent": 41,
+      "witness_color": 2
+    },
+    {
+      "left": 21,
+      "right": 21,
+      "level": 122,
+      "original_color": 1,
+      "original_position": 7,
+      "ancestors": [
+        0,
+        1,
+        29,
+        39,
+        40
+      ],
+      "parent": 40,
+      "witness_color": 2
+    },
+    {
+      "left": 22,
+      "right": 24,
+      "level": 123,
+      "original_color": 2,
+      "original_position": 9,
+      "ancestors": [
+        0,
+        1,
+        29,
+        39
+      ],
+      "parent": 39,
+      "witness_color": 0
+    },
+    {
+      "left": 22,
+      "right": 23,
+      "level": 122,
+      "original_color": 1,
+      "original_position": 8,
+      "ancestors": [
+        0,
+        1,
+        29,
+        39,
+        45
+      ],
+      "parent": 45,
+      "witness_color": 2
+    },
+    {
+      "left": 22,
+      "right": 22,
+      "level": 121,
+      "original_color": 9,
+      "original_position": 5,
+      "ancestors": [
+        0,
+        1,
+        29,
+        39,
+        45,
+        46
+      ],
+      "parent": 46,
+      "witness_color": 1
+    },
+    {
+      "left": 23,
+      "right": 23,
+      "level": 121,
+      "original_color": 9,
+      "original_position": 6,
+      "ancestors": [
+        0,
+        1,
+        29,
+        39,
+        45,
+        46
+      ],
+      "parent": 46,
+      "witness_color": 1
+    },
+    {
+      "left": 24,
+      "right": 24,
+      "level": 122,
+      "original_color": 1,
+      "original_position": 9,
+      "ancestors": [
+        0,
+        1,
+        29,
+        39,
+        45
+      ],
+      "parent": 45,
+      "witness_color": 4
+    },
+    {
+      "left": 25,
+      "right": 48,
+      "level": 126,
+      "original_color": 5,
+      "original_position": 1,
+      "ancestors": [
+        0
+      ],
+      "parent": 0,
+      "witness_color": 4
+    },
+    {
+      "left": 25,
+      "right": 39,
+      "level": 125,
+      "original_color": 4,
+      "original_position": 5,
+      "ancestors": [
+        0,
+        50
+      ],
+      "parent": 50,
+      "witness_color": 3
+    },
+    {
+      "left": 25,
+      "right": 29,
+      "level": 124,
+      "original_color": 8,
+      "original_position": 8,
+      "ancestors": [
+        0,
+        50,
+        51
+      ],
+      "parent": 51,
+      "witness_color": 0
+    },
+    {
+      "left": 25,
+      "right": 28,
+      "level": 122,
+      "original_color": 2,
+      "original_position": 10,
+      "ancestors": [
+        0,
+        50,
+        51,
+        52
+      ],
+      "parent": 52,
+      "witness_color": 5
+    },
+    {
+      "left": 25,
+      "right": 26,
+      "level": 121,
+      "original_color": 1,
+      "original_position": 10,
+      "ancestors": [
+        0,
+        50,
+        51,
+        52,
+        53
+      ],
+      "parent": 53,
+      "witness_color": 1
+    },
+    {
+      "left": 25,
+      "right": 25,
+      "level": 120,
+      "original_color": 9,
+      "original_position": 7,
+      "ancestors": [
+        0,
+        50,
+        51,
+        52,
+        53,
+        54
+      ],
+      "parent": 54,
+      "witness_color": 2
+    },
+    {
+      "left": 26,
+      "right": 26,
+      "level": 120,
+      "original_color": 9,
+      "original_position": 8,
+      "ancestors": [
+        0,
+        50,
+        51,
+        52,
+        53,
+        54
+      ],
+      "parent": 54,
+      "witness_color": 2
+    },
+    {
+      "left": 27,
+      "right": 28,
+      "level": 121,
+      "original_color": 1,
+      "original_position": 11,
+      "ancestors": [
+        0,
+        50,
+        51,
+        52,
+        53
+      ],
+      "parent": 53,
+      "witness_color": 8
+    },
+    {
+      "left": 27,
+      "right": 27,
+      "level": 119,
+      "original_color": 9,
+      "original_position": 9,
+      "ancestors": [
+        0,
+        50,
+        51,
+        52,
+        53,
+        57
+      ],
+      "parent": 57,
+      "witness_color": 2
+    },
+    {
+      "left": 28,
+      "right": 28,
+      "level": 119,
+      "original_color": 9,
+      "original_position": 10,
+      "ancestors": [
+        0,
+        50,
+        51,
+        52,
+        53,
+        57
+      ],
+      "parent": 57,
+      "witness_color": 7
+    },
+    {
+      "left": 29,
+      "right": 29,
+      "level": 122,
+      "original_color": 2,
+      "original_position": 11,
+      "ancestors": [
+        0,
+        50,
+        51,
+        52
+      ],
+      "parent": 52,
+      "witness_color": 7
+    },
+    {
+      "left": 30,
+      "right": 39,
+      "level": 124,
+      "original_color": 8,
+      "original_position": 9,
+      "ancestors": [
+        0,
+        50,
+        51
+      ],
+      "parent": 51,
+      "witness_color": 7
+    },
+    {
+      "left": 30,
+      "right": 35,
+      "level": 123,
+      "original_color": 2,
+      "original_position": 12,
+      "ancestors": [
+        0,
+        50,
+        51,
+        61
+      ],
+      "parent": 61,
+      "witness_color": 2
+    },
+    {
+      "left": 30,
+      "right": 32,
+      "level": 122,
+      "original_color": 1,
+      "original_position": 12,
+      "ancestors": [
+        0,
+        50,
+        51,
+        61,
+        62
+      ],
+      "parent": 62,
+      "witness_color": 1
+    },
+    {
+      "left": 30,
+      "right": 30,
+      "level": 120,
+      "original_color": 9,
+      "original_position": 11,
+      "ancestors": [
+        0,
+        50,
+        51,
+        61,
+        62,
+        63
+      ],
+      "parent": 63,
+      "witness_color": 0
+    },
+    {
+      "left": 31,
+      "right": 32,
+      "level": 120,
+      "original_color": 9,
+      "original_position": 12,
+      "ancestors": [
+        0,
+        50,
+        51,
+        61,
+        62,
+        63
+      ],
+      "parent": 63,
+      "witness_color": 8
+    },
+    {
+      "left": 31,
+      "right": 31,
+      "level": 119,
+      "original_color": 3,
+      "original_position": 8,
+      "ancestors": [
+        0,
+        50,
+        51,
+        61,
+        62,
+        63,
+        65
+      ],
+      "parent": 65,
+      "witness_color": 0
+    },
+    {
+      "left": 32,
+      "right": 32,
+      "level": 119,
+      "original_color": 3,
+      "original_position": 9,
+      "ancestors": [
+        0,
+        50,
+        51,
+        61,
+        62,
+        63,
+        65
+      ],
+      "parent": 65,
+      "witness_color": 0
+    },
+    {
+      "left": 33,
+      "right": 35,
+      "level": 122,
+      "original_color": 1,
+      "original_position": 13,
+      "ancestors": [
+        0,
+        50,
+        51,
+        61,
+        62
+      ],
+      "parent": 62,
+      "witness_color": 0
+    },
+    {
+      "left": 33,
+      "right": 33,
+      "level": 121,
+      "original_color": 9,
+      "original_position": 13,
+      "ancestors": [
+        0,
+        50,
+        51,
+        61,
+        62,
+        68
+      ],
+      "parent": 68,
+      "witness_color": 8
+    },
+    {
+      "left": 34,
+      "right": 35,
+      "level": 121,
+      "original_color": 9,
+      "original_position": 14,
+      "ancestors": [
+        0,
+        50,
+        51,
+        61,
+        62,
+        68
+      ],
+      "parent": 68,
+      "witness_color": 8
+    },
+    {
+      "left": 34,
+      "right": 34,
+      "level": 119,
+      "original_color": 3,
+      "original_position": 10,
+      "ancestors": [
+        0,
+        50,
+        51,
+        61,
+        62,
+        68,
+        70
+      ],
+      "parent": 70,
+      "witness_color": 5
+    },
+    {
+      "left": 35,
+      "right": 35,
+      "level": 119,
+      "original_color": 3,
+      "original_position": 11,
+      "ancestors": [
+        0,
+        50,
+        51,
+        61,
+        62,
+        68,
+        70
+      ],
+      "parent": 70,
+      "witness_color": 1
+    },
+    {
+      "left": 36,
+      "right": 39,
+      "level": 123,
+      "original_color": 2,
+      "original_position": 13,
+      "ancestors": [
+        0,
+        50,
+        51,
+        61
+      ],
+      "parent": 61,
+      "witness_color": 1
+    },
+    {
+      "left": 36,
+      "right": 38,
+      "level": 122,
+      "original_color": 1,
+      "original_position": 14,
+      "ancestors": [
+        0,
+        50,
+        51,
+        61,
+        73
+      ],
+      "parent": 73,
+      "witness_color": 2
+    },
+    {
+      "left": 36,
+      "right": 37,
+      "level": 121,
+      "original_color": 9,
+      "original_position": 15,
+      "ancestors": [
+        0,
+        50,
+        51,
+        61,
+        73,
+        74
+      ],
+      "parent": 74,
+      "witness_color": 8
+    },
+    {
+      "left": 36,
+      "right": 36,
+      "level": 120,
+      "original_color": 3,
+      "original_position": 12,
+      "ancestors": [
+        0,
+        50,
+        51,
+        61,
+        73,
+        74,
+        75
+      ],
+      "parent": 75,
+      "witness_color": 0
+    },
+    {
+      "left": 37,
+      "right": 37,
+      "level": 120,
+      "original_color": 3,
+      "original_position": 13,
+      "ancestors": [
+        0,
+        50,
+        51,
+        61,
+        73,
+        74,
+        75
+      ],
+      "parent": 75,
+      "witness_color": 0
+    },
+    {
+      "left": 38,
+      "right": 38,
+      "level": 121,
+      "original_color": 9,
+      "original_position": 16,
+      "ancestors": [
+        0,
+        50,
+        51,
+        61,
+        73,
+        74
+      ],
+      "parent": 74,
+      "witness_color": 0
+    },
+    {
+      "left": 39,
+      "right": 39,
+      "level": 122,
+      "original_color": 1,
+      "original_position": 15,
+      "ancestors": [
+        0,
+        50,
+        51,
+        61,
+        73
+      ],
+      "parent": 73,
+      "witness_color": 8
+    },
+    {
+      "left": 40,
+      "right": 48,
+      "level": 125,
+      "original_color": 4,
+      "original_position": 6,
+      "ancestors": [
+        0,
+        50
+      ],
+      "parent": 50,
+      "witness_color": 7
+    },
+    {
+      "left": 40,
+      "right": 43,
+      "level": 124,
+      "original_color": 8,
+      "original_position": 10,
+      "ancestors": [
+        0,
+        50,
+        80
+      ],
+      "parent": 80,
+      "witness_color": 0
+    },
+    {
+      "left": 40,
+      "right": 42,
+      "level": 121,
+      "original_color": 2,
+      "original_position": 14,
+      "ancestors": [
+        0,
+        50,
+        80,
+        81
+      ],
+      "parent": 81,
+      "witness_color": 2
+    },
+    {
+      "left": 40,
+      "right": 41,
+      "level": 119,
+      "original_color": 1,
+      "original_position": 16,
+      "ancestors": [
+        0,
+        50,
+        80,
+        81,
+        82
+      ],
+      "parent": 82,
+      "witness_color": 5
+    },
+    {
+      "left": 40,
+      "right": 40,
+      "level": 118,
+      "original_color": 9,
+      "original_position": 17,
+      "ancestors": [
+        0,
+        50,
+        80,
+        81,
+        82,
+        83
+      ],
+      "parent": 83,
+      "witness_color": 1
+    },
+    {
+      "left": 41,
+      "right": 41,
+      "level": 118,
+      "original_color": 9,
+      "original_position": 18,
+      "ancestors": [
+        0,
+        50,
+        80,
+        81,
+        82,
+        83
+      ],
+      "parent": 83,
+      "witness_color": 1
+    },
+    {
+      "left": 42,
+      "right": 42,
+      "level": 119,
+      "original_color": 1,
+      "original_position": 17,
+      "ancestors": [
+        0,
+        50,
+        80,
+        81,
+        82
+      ],
+      "parent": 82,
+      "witness_color": 5
+    },
+    {
+      "left": 43,
+      "right": 43,
+      "level": 121,
+      "original_color": 2,
+      "original_position": 15,
+      "ancestors": [
+        0,
+        50,
+        80,
+        81
+      ],
+      "parent": 81,
+      "witness_color": 8
+    },
+    {
+      "left": 44,
+      "right": 48,
+      "level": 124,
+      "original_color": 8,
+      "original_position": 11,
+      "ancestors": [
+        0,
+        50,
+        80
+      ],
+      "parent": 80,
+      "witness_color": 1
+    },
+    {
+      "left": 44,
+      "right": 46,
+      "level": 123,
+      "original_color": 2,
+      "original_position": 16,
+      "ancestors": [
+        0,
+        50,
+        80,
+        88
+      ],
+      "parent": 88,
+      "witness_color": 8
+    },
+    {
+      "left": 44,
+      "right": 45,
+      "level": 122,
+      "original_color": 1,
+      "original_position": 18,
+      "ancestors": [
+        0,
+        50,
+        80,
+        88,
+        89
+      ],
+      "parent": 89,
+      "witness_color": 5
+    },
+    {
+      "left": 44,
+      "right": 44,
+      "level": 120,
+      "original_color": 9,
+      "original_position": 19,
+      "ancestors": [
+        0,
+        50,
+        80,
+        88,
+        89,
+        90
+      ],
+      "parent": 90,
+      "witness_color": 3
+    },
+    {
+      "left": 45,
+      "right": 45,
+      "level": 120,
+      "original_color": 9,
+      "original_position": 20,
+      "ancestors": [
+        0,
+        50,
+        80,
+        88,
+        89,
+        90
+      ],
+      "parent": 90,
+      "witness_color": 3
+    },
+    {
+      "left": 46,
+      "right": 46,
+      "level": 122,
+      "original_color": 1,
+      "original_position": 19,
+      "ancestors": [
+        0,
+        50,
+        80,
+        88,
+        89
+      ],
+      "parent": 89,
+      "witness_color": 5
+    },
+    {
+      "left": 47,
+      "right": 48,
+      "level": 123,
+      "original_color": 2,
+      "original_position": 17,
+      "ancestors": [
+        0,
+        50,
+        80,
+        88
+      ],
+      "parent": 88,
+      "witness_color": 3
+    },
+    {
+      "left": 47,
+      "right": 47,
+      "level": 122,
+      "original_color": 1,
+      "original_position": 20,
+      "ancestors": [
+        0,
+        50,
+        80,
+        88,
+        94
+      ],
+      "parent": 94,
+      "witness_color": 5
+    },
+    {
+      "left": 48,
+      "right": 48,
+      "level": 122,
+      "original_color": 1,
+      "original_position": 21,
+      "ancestors": [
+        0,
+        50,
+        80,
+        88,
+        94
+      ],
+      "parent": 94,
+      "witness_color": 8
+    },
+    {
+      "left": 49,
+      "right": 99,
+      "level": 127,
+      "original_color": 1,
+      "original_position": 22,
+      "ancestors": [],
+      "parent": -1,
+      "witness_color": 0
+    },
+    {
+      "left": 49,
+      "right": 75,
+      "level": 126,
+      "original_color": 2,
+      "original_position": 18,
+      "ancestors": [
+        97
+      ],
+      "parent": 97,
+      "witness_color": 7
+    },
+    {
+      "left": 49,
+      "right": 60,
+      "level": 125,
+      "original_color": 3,
+      "original_position": 14,
+      "ancestors": [
+        97,
+        98
+      ],
+      "parent": 98,
+      "witness_color": 5
+    },
+    {
+      "left": 49,
+      "right": 55,
+      "level": 124,
+      "original_color": 4,
+      "original_position": 7,
+      "ancestors": [
+        97,
+        98,
+        99
+      ],
+      "parent": 99,
+      "witness_color": 1
+    },
+    {
+      "left": 49,
+      "right": 52,
+      "level": 123,
+      "original_color": 5,
+      "original_position": 2,
+      "ancestors": [
+        97,
+        98,
+        99,
+        100
+      ],
+      "parent": 100,
+      "witness_color": 8
+    },
+    {
+      "left": 49,
+      "right": 50,
+      "level": 121,
+      "original_color": 6,
+      "original_position": 1,
+      "ancestors": [
+        97,
+        98,
+        99,
+        100,
+        101
+      ],
+      "parent": 101,
+      "witness_color": 4
+    },
+    {
+      "left": 49,
+      "right": 49,
+      "level": 119,
+      "original_color": 7,
+      "original_position": 0,
+      "ancestors": [
+        97,
+        98,
+        99,
+        100,
+        101,
+        102
+      ],
+      "parent": 102,
+      "witness_color": 6
+    },
+    {
+      "left": 50,
+      "right": 50,
+      "level": 119,
+      "original_color": 7,
+      "original_position": 1,
+      "ancestors": [
+        97,
+        98,
+        99,
+        100,
+        101,
+        102
+      ],
+      "parent": 102,
+      "witness_color": 6
+    },
+    {
+      "left": 51,
+      "right": 52,
+      "level": 121,
+      "original_color": 6,
+      "original_position": 2,
+      "ancestors": [
+        97,
+        98,
+        99,
+        100,
+        101
+      ],
+      "parent": 101,
+      "witness_color": 4
+    },
+    {
+      "left": 51,
+      "right": 51,
+      "level": 120,
+      "original_color": 7,
+      "original_position": 2,
+      "ancestors": [
+        97,
+        98,
+        99,
+        100,
+        101,
+        105
+      ],
+      "parent": 105,
+      "witness_color": 3
+    },
+    {
+      "left": 52,
+      "right": 52,
+      "level": 120,
+      "original_color": 7,
+      "original_position": 3,
+      "ancestors": [
+        97,
+        98,
+        99,
+        100,
+        101,
+        105
+      ],
+      "parent": 105,
+      "witness_color": 3
+    },
+    {
+      "left": 53,
+      "right": 55,
+      "level": 123,
+      "original_color": 5,
+      "original_position": 3,
+      "ancestors": [
+        97,
+        98,
+        99,
+        100
+      ],
+      "parent": 100,
+      "witness_color": 2
+    },
+    {
+      "left": 53,
+      "right": 53,
+      "level": 122,
+      "original_color": 6,
+      "original_position": 3,
+      "ancestors": [
+        97,
+        98,
+        99,
+        100,
+        108
+      ],
+      "parent": 108,
+      "witness_color": 4
+    },
+    {
+      "left": 54,
+      "right": 55,
+      "level": 122,
+      "original_color": 6,
+      "original_position": 4,
+      "ancestors": [
+        97,
+        98,
+        99,
+        100,
+        108
+      ],
+      "parent": 108,
+      "witness_color": 4
+    },
+    {
+      "left": 54,
+      "right": 54,
+      "level": 119,
+      "original_color": 7,
+      "original_position": 4,
+      "ancestors": [
+        97,
+        98,
+        99,
+        100,
+        108,
+        110
+      ],
+      "parent": 110,
+      "witness_color": 6
+    },
+    {
+      "left": 55,
+      "right": 55,
+      "level": 119,
+      "original_color": 7,
+      "original_position": 5,
+      "ancestors": [
+        97,
+        98,
+        99,
+        100,
+        108,
+        110
+      ],
+      "parent": 110,
+      "witness_color": 3
+    },
+    {
+      "left": 56,
+      "right": 60,
+      "level": 124,
+      "original_color": 4,
+      "original_position": 8,
+      "ancestors": [
+        97,
+        98,
+        99
+      ],
+      "parent": 99,
+      "witness_color": 1
+    },
+    {
+      "left": 56,
+      "right": 58,
+      "level": 122,
+      "original_color": 5,
+      "original_position": 4,
+      "ancestors": [
+        97,
+        98,
+        99,
+        113
+      ],
+      "parent": 113,
+      "witness_color": 8
+    },
+    {
+      "left": 56,
+      "right": 56,
+      "level": 121,
+      "original_color": 6,
+      "original_position": 5,
+      "ancestors": [
+        97,
+        98,
+        99,
+        113,
+        114
+      ],
+      "parent": 114,
+      "witness_color": 6
+    },
+    {
+      "left": 57,
+      "right": 58,
+      "level": 121,
+      "original_color": 6,
+      "original_position": 6,
+      "ancestors": [
+        97,
+        98,
+        99,
+        113,
+        114
+      ],
+      "parent": 114,
+      "witness_color": 3
+    },
+    {
+      "left": 57,
+      "right": 57,
+      "level": 118,
+      "original_color": 7,
+      "original_position": 6,
+      "ancestors": [
+        97,
+        98,
+        99,
+        113,
+        114,
+        116
+      ],
+      "parent": 116,
+      "witness_color": 4
+    },
+    {
+      "left": 58,
+      "right": 58,
+      "level": 118,
+      "original_color": 7,
+      "original_position": 7,
+      "ancestors": [
+        97,
+        98,
+        99,
+        113,
+        114,
+        116
+      ],
+      "parent": 116,
+      "witness_color": 6
+    },
+    {
+      "left": 59,
+      "right": 60,
+      "level": 122,
+      "original_color": 5,
+      "original_position": 5,
+      "ancestors": [
+        97,
+        98,
+        99,
+        113
+      ],
+      "parent": 113,
+      "witness_color": 4
+    },
+    {
+      "left": 59,
+      "right": 59,
+      "level": 121,
+      "original_color": 6,
+      "original_position": 7,
+      "ancestors": [
+        97,
+        98,
+        99,
+        113,
+        119
+      ],
+      "parent": 119,
+      "witness_color": 3
+    },
+    {
+      "left": 60,
+      "right": 60,
+      "level": 121,
+      "original_color": 6,
+      "original_position": 8,
+      "ancestors": [
+        97,
+        98,
+        99,
+        113,
+        119
+      ],
+      "parent": 119,
+      "witness_color": 6
+    },
+    {
+      "left": 61,
+      "right": 75,
+      "level": 125,
+      "original_color": 3,
+      "original_position": 15,
+      "ancestors": [
+        97,
+        98
+      ],
+      "parent": 98,
+      "witness_color": 8
+    },
+    {
+      "left": 61,
+      "right": 67,
+      "level": 124,
+      "original_color": 4,
+      "original_position": 9,
+      "ancestors": [
+        97,
+        98,
+        122
+      ],
+      "parent": 122,
+      "witness_color": 5
+    },
+    {
+      "left": 61,
+      "right": 63,
+      "level": 123,
+      "original_color": 5,
+      "original_position": 6,
+      "ancestors": [
+        97,
+        98,
+        122,
+        123
+      ],
+      "parent": 123,
+      "witness_color": 2
+    },
+    {
+      "left": 61,
+      "right": 62,
+      "level": 121,
+      "original_color": 6,
+      "original_position": 9,
+      "ancestors": [
+        97,
+        98,
+        122,
+        123,
+        124
+      ],
+      "parent": 124,
+      "witness_color": 1
+    },
+    {
+      "left": 61,
+      "right": 61,
+      "level": 120,
+      "original_color": 7,
+      "original_position": 8,
+      "ancestors": [
+        97,
+        98,
+        122,
+        123,
+        124,
+        125
+      ],
+      "parent": 125,
+      "witness_color": 6
+    },
+    {
+      "left": 62,
+      "right": 62,
+      "level": 120,
+      "original_color": 7,
+      "original_position": 9,
+      "ancestors": [
+        97,
+        98,
+        122,
+        123,
+        124,
+        125
+      ],
+      "parent": 125,
+      "witness_color": 3
+    },
+    {
+      "left": 63,
+      "right": 63,
+      "level": 121,
+      "original_color": 6,
+      "original_position": 10,
+      "ancestors": [
+        97,
+        98,
+        122,
+        123,
+        124
+      ],
+      "parent": 124,
+      "witness_color": 3
+    },
+    {
+      "left": 64,
+      "right": 67,
+      "level": 123,
+      "original_color": 5,
+      "original_position": 7,
+      "ancestors": [
+        97,
+        98,
+        122,
+        123
+      ],
+      "parent": 123,
+      "witness_color": 3
+    },
+    {
+      "left": 64,
+      "right": 65,
+      "level": 121,
+      "original_color": 6,
+      "original_position": 11,
+      "ancestors": [
+        97,
+        98,
+        122,
+        123,
+        129
+      ],
+      "parent": 129,
+      "witness_color": 6
+    },
+    {
+      "left": 64,
+      "right": 64,
+      "level": 120,
+      "original_color": 7,
+      "original_position": 10,
+      "ancestors": [
+        97,
+        98,
+        122,
+        123,
+        129,
+        130
+      ],
+      "parent": 130,
+      "witness_color": 2
+    },
+    {
+      "left": 65,
+      "right": 65,
+      "level": 120,
+      "original_color": 7,
+      "original_position": 11,
+      "ancestors": [
+        97,
+        98,
+        122,
+        123,
+        129,
+        130
+      ],
+      "parent": 130,
+      "witness_color": 2
+    },
+    {
+      "left": 66,
+      "right": 67,
+      "level": 121,
+      "original_color": 6,
+      "original_position": 12,
+      "ancestors": [
+        97,
+        98,
+        122,
+        123,
+        129
+      ],
+      "parent": 129,
+      "witness_color": 1
+    },
+    {
+      "left": 66,
+      "right": 66,
+      "level": 120,
+      "original_color": 7,
+      "original_position": 12,
+      "ancestors": [
+        97,
+        98,
+        122,
+        123,
+        129,
+        133
+      ],
+      "parent": 133,
+      "witness_color": 6
+    },
+    {
+      "left": 67,
+      "right": 67,
+      "level": 120,
+      "original_color": 7,
+      "original_position": 13,
+      "ancestors": [
+        97,
+        98,
+        122,
+        123,
+        129,
+        133
+      ],
+      "parent": 133,
+      "witness_color": 6
+    },
+    {
+      "left": 68,
+      "right": 75,
+      "level": 124,
+      "original_color": 4,
+      "original_position": 10,
+      "ancestors": [
+        97,
+        98,
+        122
+      ],
+      "parent": 122,
+      "witness_color": 2
+    },
+    {
+      "left": 68,
+      "right": 72,
+      "level": 123,
+      "original_color": 5,
+      "original_position": 8,
+      "ancestors": [
+        97,
+        98,
+        122,
+        136
+      ],
+      "parent": 136,
+      "witness_color": 5
+    },
+    {
+      "left": 68,
+      "right": 70,
+      "level": 122,
+      "original_color": 6,
+      "original_position": 13,
+      "ancestors": [
+        97,
+        98,
+        122,
+        136,
+        137
+      ],
+      "parent": 137,
+      "witness_color": 1
+    },
+    {
+      "left": 68,
+      "right": 68,
+      "level": 121,
+      "original_color": 7,
+      "original_position": 14,
+      "ancestors": [
+        97,
+        98,
+        122,
+        136,
+        137,
+        138
+      ],
+      "parent": 138,
+      "witness_color": 3
+    },
+    {
+      "left": 69,
+      "right": 70,
+      "level": 121,
+      "original_color": 7,
+      "original_position": 15,
+      "ancestors": [
+        97,
+        98,
+        122,
+        136,
+        137,
+        138
+      ],
+      "parent": 138,
+      "witness_color": 4
+    },
+    {
+      "left": 69,
+      "right": 69,
+      "level": 120,
+      "original_color": 8,
+      "original_position": 12,
+      "ancestors": [
+        97,
+        98,
+        122,
+        136,
+        137,
+        138,
+        140
+      ],
+      "parent": 140,
+      "witness_color": 3
+    },
+    {
+      "left": 70,
+      "right": 70,
+      "level": 120,
+      "original_color": 8,
+      "original_position": 13,
+      "ancestors": [
+        97,
+        98,
+        122,
+        136,
+        137,
+        138,
+        140
+      ],
+      "parent": 140,
+      "witness_color": 3
+    },
+    {
+      "left": 71,
+      "right": 72,
+      "level": 122,
+      "original_color": 6,
+      "original_position": 14,
+      "ancestors": [
+        97,
+        98,
+        122,
+        136,
+        137
+      ],
+      "parent": 137,
+      "witness_color": 6
+    },
+    {
+      "left": 71,
+      "right": 71,
+      "level": 121,
+      "original_color": 7,
+      "original_position": 16,
+      "ancestors": [
+        97,
+        98,
+        122,
+        136,
+        137,
+        143
+      ],
+      "parent": 143,
+      "witness_color": 1
+    },
+    {
+      "left": 72,
+      "right": 72,
+      "level": 121,
+      "original_color": 7,
+      "original_position": 17,
+      "ancestors": [
+        97,
+        98,
+        122,
+        136,
+        137,
+        143
+      ],
+      "parent": 143,
+      "witness_color": 3
+    },
+    {
+      "left": 73,
+      "right": 75,
+      "level": 123,
+      "original_color": 5,
+      "original_position": 9,
+      "ancestors": [
+        97,
+        98,
+        122,
+        136
+      ],
+      "parent": 136,
+      "witness_color": 3
+    },
+    {
+      "left": 73,
+      "right": 74,
+      "level": 122,
+      "original_color": 6,
+      "original_position": 15,
+      "ancestors": [
+        97,
+        98,
+        122,
+        136,
+        146
+      ],
+      "parent": 146,
+      "witness_color": 5
+    },
+    {
+      "left": 73,
+      "right": 73,
+      "level": 120,
+      "original_color": 7,
+      "original_position": 18,
+      "ancestors": [
+        97,
+        98,
+        122,
+        136,
+        146,
+        147
+      ],
+      "parent": 147,
+      "witness_color": 1
+    },
+    {
+      "left": 74,
+      "right": 74,
+      "level": 120,
+      "original_color": 7,
+      "original_position": 19,
+      "ancestors": [
+        97,
+        98,
+        122,
+        136,
+        146,
+        147
+      ],
+      "parent": 147,
+      "witness_color": 1
+    },
+    {
+      "left": 75,
+      "right": 75,
+      "level": 122,
+      "original_color": 6,
+      "original_position": 16,
+      "ancestors": [
+        97,
+        98,
+        122,
+        136,
+        146
+      ],
+      "parent": 146,
+      "witness_color": 6
+    },
+    {
+      "left": 76,
+      "right": 99,
+      "level": 126,
+      "original_color": 9,
+      "original_position": 21,
+      "ancestors": [
+        97
+      ],
+      "parent": 97,
+      "witness_color": 1
+    },
+    {
+      "left": 76,
+      "right": 91,
+      "level": 125,
+      "original_color": 6,
+      "original_position": 17,
+      "ancestors": [
+        97,
+        151
+      ],
+      "parent": 151,
+      "witness_color": 2
+    },
+    {
+      "left": 76,
+      "right": 82,
+      "level": 124,
+      "original_color": 2,
+      "original_position": 19,
+      "ancestors": [
+        97,
+        151,
+        152
+      ],
+      "parent": 152,
+      "witness_color": 6
+    },
+    {
+      "left": 76,
+      "right": 79,
+      "level": 123,
+      "original_color": 8,
+      "original_position": 14,
+      "ancestors": [
+        97,
+        151,
+        152,
+        153
+      ],
+      "parent": 153,
+      "witness_color": 3
+    },
+    {
+      "left": 76,
+      "right": 78,
+      "level": 121,
+      "original_color": 4,
+      "original_position": 11,
+      "ancestors": [
+        97,
+        151,
+        152,
+        153,
+        154
+      ],
+      "parent": 154,
+      "witness_color": 7
+    },
+    {
+      "left": 76,
+      "right": 76,
+      "level": 120,
+      "original_color": 5,
+      "original_position": 10,
+      "ancestors": [
+        97,
+        151,
+        152,
+        153,
+        154,
+        155
+      ],
+      "parent": 155,
+      "witness_color": 5
+    },
+    {
+      "left": 77,
+      "right": 78,
+      "level": 120,
+      "original_color": 5,
+      "original_position": 11,
+      "ancestors": [
+        97,
+        151,
+        152,
+        153,
+        154,
+        155
+      ],
+      "parent": 155,
+      "witness_color": 8
+    },
+    {
+      "left": 77,
+      "right": 77,
+      "level": 118,
+      "original_color": 3,
+      "original_position": 16,
+      "ancestors": [
+        97,
+        151,
+        152,
+        153,
+        154,
+        155,
+        157
+      ],
+      "parent": 157,
+      "witness_color": 5
+    },
+    {
+      "left": 78,
+      "right": 78,
+      "level": 118,
+      "original_color": 3,
+      "original_position": 17,
+      "ancestors": [
+        97,
+        151,
+        152,
+        153,
+        154,
+        155,
+        157
+      ],
+      "parent": 157,
+      "witness_color": 5
+    },
+    {
+      "left": 79,
+      "right": 79,
+      "level": 121,
+      "original_color": 4,
+      "original_position": 12,
+      "ancestors": [
+        97,
+        151,
+        152,
+        153,
+        154
+      ],
+      "parent": 154,
+      "witness_color": 5
+    },
+    {
+      "left": 80,
+      "right": 82,
+      "level": 123,
+      "original_color": 8,
+      "original_position": 15,
+      "ancestors": [
+        97,
+        151,
+        152,
+        153
+      ],
+      "parent": 153,
+      "witness_color": 8
+    },
+    {
+      "left": 80,
+      "right": 81,
+      "level": 122,
+      "original_color": 4,
+      "original_position": 13,
+      "ancestors": [
+        97,
+        151,
+        152,
+        153,
+        161
+      ],
+      "parent": 161,
+      "witness_color": 4
+    },
+    {
+      "left": 80,
+      "right": 80,
+      "level": 121,
+      "original_color": 5,
+      "original_position": 12,
+      "ancestors": [
+        97,
+        151,
+        152,
+        153,
+        161,
+        162
+      ],
+      "parent": 162,
+      "witness_color": 5
+    },
+    {
+      "left": 81,
+      "right": 81,
+      "level": 121,
+      "original_color": 5,
+      "original_position": 13,
+      "ancestors": [
+        97,
+        151,
+        152,
+        153,
+        161,
+        162
+      ],
+      "parent": 162,
+      "witness_color": 5
+    },
+    {
+      "left": 82,
+      "right": 82,
+      "level": 122,
+      "original_color": 4,
+      "original_position": 14,
+      "ancestors": [
+        97,
+        151,
+        152,
+        153,
+        161
+      ],
+      "parent": 161,
+      "witness_color": 3
+    },
+    {
+      "left": 83,
+      "right": 91,
+      "level": 124,
+      "original_color": 2,
+      "original_position": 20,
+      "ancestors": [
+        97,
+        151,
+        152
+      ],
+      "parent": 152,
+      "witness_color": 3
+    },
+    {
+      "left": 83,
+      "right": 84,
+      "level": 123,
+      "original_color": 8,
+      "original_position": 16,
+      "ancestors": [
+        97,
+        151,
+        152,
+        166
+      ],
+      "parent": 166,
+      "witness_color": 8
+    },
+    {
+      "left": 83,
+      "right": 83,
+      "level": 122,
+      "original_color": 4,
+      "original_position": 15,
+      "ancestors": [
+        97,
+        151,
+        152,
+        166,
+        167
+      ],
+      "parent": 167,
+      "witness_color": 6
+    },
+    {
+      "left": 84,
+      "right": 84,
+      "level": 122,
+      "original_color": 4,
+      "original_position": 16,
+      "ancestors": [
+        97,
+        151,
+        152,
+        166,
+        167
+      ],
+      "parent": 167,
+      "witness_color": 4
+    },
+    {
+      "left": 85,
+      "right": 91,
+      "level": 123,
+      "original_color": 8,
+      "original_position": 17,
+      "ancestors": [
+        97,
+        151,
+        152,
+        166
+      ],
+      "parent": 166,
+      "witness_color": 4
+    },
+    {
+      "left": 85,
+      "right": 89,
+      "level": 122,
+      "original_color": 4,
+      "original_position": 17,
+      "ancestors": [
+        97,
+        151,
+        152,
+        166,
+        170
+      ],
+      "parent": 170,
+      "witness_color": 5
+    },
+    {
+      "left": 85,
+      "right": 87,
+      "level": 121,
+      "original_color": 5,
+      "original_position": 14,
+      "ancestors": [
+        97,
+        151,
+        152,
+        166,
+        170,
+        171
+      ],
+      "parent": 171,
+      "witness_color": 6
+    },
+    {
+      "left": 85,
+      "right": 86,
+      "level": 120,
+      "original_color": 3,
+      "original_position": 18,
+      "ancestors": [
+        97,
+        151,
+        152,
+        166,
+        170,
+        171,
+        172
+      ],
+      "parent": 172,
+      "witness_color": 7
+    },
+    {
+      "left": 85,
+      "right": 85,
+      "level": 119,
+      "original_color": 7,
+      "original_position": 20,
+      "ancestors": [
+        97,
+        151,
+        152,
+        166,
+        170,
+        171,
+        172,
+        173
+      ],
+      "parent": 173,
+      "witness_color": 8
+    },
+    {
+      "left": 86,
+      "right": 86,
+      "level": 119,
+      "original_color": 7,
+      "original_position": 21,
+      "ancestors": [
+        97,
+        151,
+        152,
+        166,
+        170,
+        171,
+        172,
+        173
+      ],
+      "parent": 173,
+      "witness_color": 8
+    },
+    {
+      "left": 87,
+      "right": 87,
+      "level": 120,
+      "original_color": 3,
+      "original_position": 19,
+      "ancestors": [
+        97,
+        151,
+        152,
+        166,
+        170,
+        171,
+        172
+      ],
+      "parent": 172,
+      "witness_color": 7
+    },
+    {
+      "left": 88,
+      "right": 89,
+      "level": 121,
+      "original_color": 5,
+      "original_position": 15,
+      "ancestors": [
+        97,
+        151,
+        152,
+        166,
+        170,
+        171
+      ],
+      "parent": 171,
+      "witness_color": 6
+    },
+    {
+      "left": 88,
+      "right": 88,
+      "level": 120,
+      "original_color": 3,
+      "original_position": 20,
+      "ancestors": [
+        97,
+        151,
+        152,
+        166,
+        170,
+        171,
+        177
+      ],
+      "parent": 177,
+      "witness_color": 7
+    },
+    {
+      "left": 89,
+      "right": 89,
+      "level": 120,
+      "original_color": 3,
+      "original_position": 21,
+      "ancestors": [
+        97,
+        151,
+        152,
+        166,
+        170,
+        171,
+        177
+      ],
+      "parent": 177,
+      "witness_color": 7
+    },
+    {
+      "left": 90,
+      "right": 91,
+      "level": 122,
+      "original_color": 4,
+      "original_position": 18,
+      "ancestors": [
+        97,
+        151,
+        152,
+        166,
+        170
+      ],
+      "parent": 170,
+      "witness_color": 5
+    },
+    {
+      "left": 90,
+      "right": 90,
+      "level": 119,
+      "original_color": 5,
+      "original_position": 16,
+      "ancestors": [
+        97,
+        151,
+        152,
+        166,
+        170,
+        180
+      ],
+      "parent": 180,
+      "witness_color": 6
+    },
+    {
+      "left": 91,
+      "right": 91,
+      "level": 119,
+      "original_color": 5,
+      "original_position": 17,
+      "ancestors": [
+        97,
+        151,
+        152,
+        166,
+        170,
+        180
+      ],
+      "parent": 180,
+      "witness_color": 6
+    },
+    {
+      "left": 92,
+      "right": 99,
+      "level": 125,
+      "original_color": 2,
+      "original_position": 21,
+      "ancestors": [
+        97,
+        151
+      ],
+      "parent": 151,
+      "witness_color": 3
+    },
+    {
+      "left": 92,
+      "right": 97,
+      "level": 124,
+      "original_color": 4,
+      "original_position": 19,
+      "ancestors": [
+        97,
+        151,
+        183
+      ],
+      "parent": 183,
+      "witness_color": 6
+    },
+    {
+      "left": 92,
+      "right": 93,
+      "level": 123,
+      "original_color": 5,
+      "original_position": 18,
+      "ancestors": [
+        97,
+        151,
+        183,
+        184
+      ],
+      "parent": 184,
+      "witness_color": 7
+    },
+    {
+      "left": 92,
+      "right": 92,
+      "level": 122,
+      "original_color": 8,
+      "original_position": 18,
+      "ancestors": [
+        97,
+        151,
+        183,
+        184,
+        185
+      ],
+      "parent": 185,
+      "witness_color": 5
+    },
+    {
+      "left": 93,
+      "right": 93,
+      "level": 122,
+      "original_color": 8,
+      "original_position": 19,
+      "ancestors": [
+        97,
+        151,
+        183,
+        184,
+        185
+      ],
+      "parent": 185,
+      "witness_color": 4
+    },
+    {
+      "left": 94,
+      "right": 97,
+      "level": 123,
+      "original_color": 5,
+      "original_position": 19,
+      "ancestors": [
+        97,
+        151,
+        183,
+        184
+      ],
+      "parent": 184,
+      "witness_color": 5
+    },
+    {
+      "left": 94,
+      "right": 95,
+      "level": 121,
+      "original_color": 8,
+      "original_position": 20,
+      "ancestors": [
+        97,
+        151,
+        183,
+        184,
+        188
+      ],
+      "parent": 188,
+      "witness_color": 4
+    },
+    {
+      "left": 94,
+      "right": 94,
+      "level": 120,
+      "original_color": 6,
+      "original_position": 18,
+      "ancestors": [
+        97,
+        151,
+        183,
+        184,
+        188,
+        189
+      ],
+      "parent": 189,
+      "witness_color": 7
+    },
+    {
+      "left": 95,
+      "right": 95,
+      "level": 120,
+      "original_color": 6,
+      "original_position": 19,
+      "ancestors": [
+        97,
+        151,
+        183,
+        184,
+        188,
+        189
+      ],
+      "parent": 189,
+      "witness_color": 2
+    },
+    {
+      "left": 96,
+      "right": 97,
+      "level": 121,
+      "original_color": 8,
+      "original_position": 21,
+      "ancestors": [
+        97,
+        151,
+        183,
+        184,
+        188
+      ],
+      "parent": 188,
+      "witness_color": 8
+    },
+    {
+      "left": 96,
+      "right": 96,
+      "level": 120,
+      "original_color": 6,
+      "original_position": 20,
+      "ancestors": [
+        97,
+        151,
+        183,
+        184,
+        188,
+        192
+      ],
+      "parent": 192,
+      "witness_color": 2
+    },
+    {
+      "left": 97,
+      "right": 97,
+      "level": 120,
+      "original_color": 6,
+      "original_position": 21,
+      "ancestors": [
+        97,
+        151,
+        183,
+        184,
+        188,
+        192
+      ],
+      "parent": 192,
+      "witness_color": 2
+    },
+    {
+      "left": 98,
+      "right": 99,
+      "level": 124,
+      "original_color": 4,
+      "original_position": 20,
+      "ancestors": [
+        97,
+        151,
+        183
+      ],
+      "parent": 183,
+      "witness_color": 8
+    },
+    {
+      "left": 98,
+      "right": 98,
+      "level": 122,
+      "original_color": 5,
+      "original_position": 20,
+      "ancestors": [
+        97,
+        151,
+        183,
+        195
+      ],
+      "parent": 195,
+      "witness_color": 6
+    },
+    {
+      "left": 99,
+      "right": 99,
+      "level": 122,
+      "original_color": 5,
+      "original_position": 21,
+      "ancestors": [
+        97,
+        151,
+        183,
+        195
+      ],
+      "parent": 195,
+      "witness_color": 6
+    }
+  ],
+  "verified_target_ranks": 100,
+  "optimum": 22,
+  "optimality_reason": "Legal capacity22 witness matches ceil(198/9)=22."
+}

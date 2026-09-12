@@ -1,0 +1,6 @@
+{
+  "measurement_runner_snapshot": "examples\\tifs_revision_20260910\\balance_repeats\\source_snapshots\\run_tifs_balance_repeats_20260910_measured.py",
+  "measurement_runner_sha256": "44ce434fd6a00bed6e103afb749545a1ed310cc897fc333f0a3e988d326418f0",
+  "current_postprocessor_sha256": "f90b7a1c24675b6038c408202fbded6c3f18e88504bb130f383e5b7b3ffa335d",
+  "note": "After measurements finished, only summary null handling and table wording/footnote output were corrected. The worker implementation and raw results were unchanged."
+}

@@ -1,0 +1,222 @@
+{
+  "shape": [
+    [
+      [],
+      []
+    ],
+    [
+      [],
+      [
+        [],
+        []
+      ]
+    ]
+  ],
+  "height": 3,
+  "m": 3,
+  "N": 8,
+  "slots": [
+    0,
+    2,
+    4,
+    6,
+    7
+  ],
+  "capacity": 3,
+  "colors_preorder": [
+    1,
+    0,
+    0,
+    0,
+    1,
+    1,
+    2,
+    2
+  ],
+  "loads": [
+    3,
+    3,
+    2
+  ],
+  "root_hex": "b7e7dc26ec9192bf028b676208fedd6ab6db7d80c572e6e6b8e6a58e74ea0973",
+  "interval_forest_matches": true,
+  "all_target_proofs_verified": true,
+  "records": [
+    {
+      "heap_index": "0x3",
+      "interval": [
+        0,
+        1
+      ],
+      "color": 1,
+      "digest_hex": "a216c7e88e4d0e5925cb3ad6a0d9b263cc381a31c32d2642faa18873b8d9d5af"
+    },
+    {
+      "heap_index": "0x5",
+      "interval": [
+        0,
+        0
+      ],
+      "color": 0,
+      "digest_hex": "ce587088af715e462f8690153e8fc02f4d2ed3d6690243c9dc388544fde00ba6"
+    },
+    {
+      "heap_index": "0x4",
+      "interval": [
+        1,
+        1
+      ],
+      "color": 0,
+      "digest_hex": "8147473f8b719a822e87ac0c005ff608fefd0c2a523fc6beecbdfa913c7ae4e1"
+    },
+    {
+      "heap_index": "0x2",
+      "interval": [
+        2,
+        4
+      ],
+      "color": 0,
+      "digest_hex": "9a4767c4ee909ea685f5a82a628a01a3f4cfad3d7966936ce81b9a6b0308fa3d"
+    },
+    {
+      "heap_index": "0x7",
+      "interval": [
+        2,
+        2
+      ],
+      "color": 1,
+      "digest_hex": "4920263d11b0e26bddb5ea2143efa1be7eb30e62bf31e58378de343fd7cccbe8"
+    },
+    {
+      "heap_index": "0x6",
+      "interval": [
+        3,
+        4
+      ],
+      "color": 1,
+      "digest_hex": "e3fd10248dfc3dbc7028062e9e709c621661593f4e8a0261379d2f9cc17edec7"
+    },
+    {
+      "heap_index": "0xf",
+      "interval": [
+        3,
+        3
+      ],
+      "color": 2,
+      "digest_hex": "6ef291baab58befc619e31fdb436b1434f02861841f2c2d747ff50c95434fd51"
+    },
+    {
+      "heap_index": "0xe",
+      "interval": [
+        4,
+        4
+      ],
+      "color": 2,
+      "digest_hex": "f76960f611d4334c1c576fc0c55c57d3012f29e7acd9db898704b098b21f75c6"
+    }
+  ],
+  "proofs": [
+    {
+      "slot": 0,
+      "real_siblings": [
+        {
+          "level": 1,
+          "heap_index": "0x5",
+          "digest_hex": "ce587088af715e462f8690153e8fc02f4d2ed3d6690243c9dc388544fde00ba6",
+          "color": 0
+        },
+        {
+          "level": 2,
+          "heap_index": "0x3",
+          "digest_hex": "a216c7e88e4d0e5925cb3ad6a0d9b263cc381a31c32d2642faa18873b8d9d5af",
+          "color": 1
+        }
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 2,
+      "real_siblings": [
+        {
+          "level": 1,
+          "heap_index": "0x4",
+          "digest_hex": "8147473f8b719a822e87ac0c005ff608fefd0c2a523fc6beecbdfa913c7ae4e1",
+          "color": 0
+        },
+        {
+          "level": 2,
+          "heap_index": "0x3",
+          "digest_hex": "a216c7e88e4d0e5925cb3ad6a0d9b263cc381a31c32d2642faa18873b8d9d5af",
+          "color": 1
+        }
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 4,
+      "real_siblings": [
+        {
+          "level": 1,
+          "heap_index": "0x7",
+          "digest_hex": "4920263d11b0e26bddb5ea2143efa1be7eb30e62bf31e58378de343fd7cccbe8",
+          "color": 1
+        },
+        {
+          "level": 2,
+          "heap_index": "0x2",
+          "digest_hex": "9a4767c4ee909ea685f5a82a628a01a3f4cfad3d7966936ce81b9a6b0308fa3d",
+          "color": 0
+        }
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 6,
+      "real_siblings": [
+        {
+          "level": 0,
+          "heap_index": "0xf",
+          "digest_hex": "6ef291baab58befc619e31fdb436b1434f02861841f2c2d747ff50c95434fd51",
+          "color": 2
+        },
+        {
+          "level": 1,
+          "heap_index": "0x6",
+          "digest_hex": "e3fd10248dfc3dbc7028062e9e709c621661593f4e8a0261379d2f9cc17edec7",
+          "color": 1
+        },
+        {
+          "level": 2,
+          "heap_index": "0x2",
+          "digest_hex": "9a4767c4ee909ea685f5a82a628a01a3f4cfad3d7966936ce81b9a6b0308fa3d",
+          "color": 0
+        }
+      ],
+      "root_verified": true
+    },
+    {
+      "slot": 7,
+      "real_siblings": [
+        {
+          "level": 0,
+          "heap_index": "0xe",
+          "digest_hex": "f76960f611d4334c1c576fc0c55c57d3012f29e7acd9db898704b098b21f75c6",
+          "color": 2
+        },
+        {
+          "level": 1,
+          "heap_index": "0x6",
+          "digest_hex": "e3fd10248dfc3dbc7028062e9e709c621661593f4e8a0261379d2f9cc17edec7",
+          "color": 1
+        },
+        {
+          "level": 2,
+          "heap_index": "0x2",
+          "digest_hex": "9a4767c4ee909ea685f5a82a628a01a3f4cfad3d7966936ce81b9a6b0308fa3d",
+          "color": 0
+        }
+      ],
+      "root_verified": true
+    }
+  ]
+}

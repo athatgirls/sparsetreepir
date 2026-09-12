@@ -1,0 +1,7 @@
+{
+  "independent_process_pairs": 4,
+  "verified_measured_proofs": 8,
+  "status": "complete",
+  "warmup_proofs_per_pair": 1,
+  "failures": 0
+}

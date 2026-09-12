@@ -1,0 +1,1 @@
+{"id": "fuel_n100_h128_first-fit_p0_s20260910_r1", "status": "complete", "actual_n": 100, "m": 9, "max_bucket": 58, "U_over_B": 2.6363636363636362, "coloring_s": 0.00028000003658235073, "valid": true}

@@ -1,0 +1,13 @@
+{
+  "scope": "all pairs 1<=b<=a<=20; explicit construction, not exact-search coloring",
+  "comb_pairs": 210,
+  "comb_pair_actual_target_proofs": 4410,
+  "all_valid": true,
+  "unbounded_theorem": "all integers a>=b>=1 have OPT=ceil((2a+2b-2)/a)",
+  "new_bound_required_for_this_subclass": false,
+  "induction_counterexample_proofs": 8,
+  "monotone_bridge_counterexample_proofs": 4,
+  "seconds": 0.7373433000175282,
+  "python": "3.14.2",
+  "script_sha256": "a4d041355c0d5db4a22c3575297806d019cf5d60c5f280b7650281efe7617fab"
+}

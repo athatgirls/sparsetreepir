@@ -1,0 +1,470 @@
+{
+  "shape": [
+    [
+      [
+        [
+          [
+            [],
+            []
+          ],
+          [
+            [],
+            []
+          ]
+        ],
+        [
+          [
+            [],
+            []
+          ],
+          [
+            [],
+            []
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            [],
+            []
+          ],
+          [
+            [],
+            []
+          ]
+        ],
+        [
+          [
+            [],
+            []
+          ],
+          [
+            [],
+            []
+          ]
+        ]
+      ]
+    ],
+    [
+      [
+        [],
+        []
+      ],
+      [
+        [],
+        []
+      ]
+    ]
+  ],
+  "height": 5,
+  "slots": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    20,
+    24,
+    28
+  ],
+  "N": 38,
+  "n": 20,
+  "m": 5,
+  "B": 8,
+  "C": 9,
+  "B_star": 9,
+  "hierarchical_bound": 9,
+  "C_witness": {
+    "node": 0,
+    "depth": 1,
+    "sum_anchor_capacities": 5,
+    "denominator": 4,
+    "N_minus_sum": 33
+  },
+  "hierarchical_witness": null,
+  "optimum": 9,
+  "preorder_coloring_zero_based": [
+    0,
+    1,
+    3,
+    2,
+    4,
+    4,
+    4,
+    2,
+    2,
+    4,
+    2,
+    3,
+    3,
+    3,
+    2,
+    2,
+    2,
+    3,
+    1,
+    4,
+    4,
+    4,
+    1,
+    1,
+    4,
+    1,
+    3,
+    3,
+    3,
+    1,
+    1,
+    4,
+    0,
+    2,
+    1,
+    0,
+    2,
+    1
+  ],
+  "loads": [
+    3,
+    9,
+    9,
+    8,
+    9
+  ],
+  "nodes": [
+    {
+      "parent": -1,
+      "children": [
+        1,
+        16
+      ],
+      "leaves": 16,
+      "size": 31,
+      "depth": 1
+    },
+    {
+      "parent": 0,
+      "children": [
+        2,
+        9
+      ],
+      "leaves": 8,
+      "size": 15,
+      "depth": 2
+    },
+    {
+      "parent": 1,
+      "children": [
+        3,
+        6
+      ],
+      "leaves": 4,
+      "size": 7,
+      "depth": 3
+    },
+    {
+      "parent": 2,
+      "children": [
+        4,
+        5
+      ],
+      "leaves": 2,
+      "size": 3,
+      "depth": 4
+    },
+    {
+      "parent": 3,
+      "children": [],
+      "leaves": 1,
+      "size": 1,
+      "depth": 5
+    },
+    {
+      "parent": 3,
+      "children": [],
+      "leaves": 1,
+      "size": 1,
+      "depth": 5
+    },
+    {
+      "parent": 2,
+      "children": [
+        7,
+        8
+      ],
+      "leaves": 2,
+      "size": 3,
+      "depth": 4
+    },
+    {
+      "parent": 6,
+      "children": [],
+      "leaves": 1,
+      "size": 1,
+      "depth": 5
+    },
+    {
+      "parent": 6,
+      "children": [],
+      "leaves": 1,
+      "size": 1,
+      "depth": 5
+    },
+    {
+      "parent": 1,
+      "children": [
+        10,
+        13
+      ],
+      "leaves": 4,
+      "size": 7,
+      "depth": 3
+    },
+    {
+      "parent": 9,
+      "children": [
+        11,
+        12
+      ],
+      "leaves": 2,
+      "size": 3,
+      "depth": 4
+    },
+    {
+      "parent": 10,
+      "children": [],
+      "leaves": 1,
+      "size": 1,
+      "depth": 5
+    },
+    {
+      "parent": 10,
+      "children": [],
+      "leaves": 1,
+      "size": 1,
+      "depth": 5
+    },
+    {
+      "parent": 9,
+      "children": [
+        14,
+        15
+      ],
+      "leaves": 2,
+      "size": 3,
+      "depth": 4
+    },
+    {
+      "parent": 13,
+      "children": [],
+      "leaves": 1,
+      "size": 1,
+      "depth": 5
+    },
+    {
+      "parent": 13,
+      "children": [],
+      "leaves": 1,
+      "size": 1,
+      "depth": 5
+    },
+    {
+      "parent": 0,
+      "children": [
+        17,
+        24
+      ],
+      "leaves": 8,
+      "size": 15,
+      "depth": 2
+    },
+    {
+      "parent": 16,
+      "children": [
+        18,
+        21
+      ],
+      "leaves": 4,
+      "size": 7,
+      "depth": 3
+    },
+    {
+      "parent": 17,
+      "children": [
+        19,
+        20
+      ],
+      "leaves": 2,
+      "size": 3,
+      "depth": 4
+    },
+    {
+      "parent": 18,
+      "children": [],
+      "leaves": 1,
+      "size": 1,
+      "depth": 5
+    },
+    {
+      "parent": 18,
+      "children": [],
+      "leaves": 1,
+      "size": 1,
+      "depth": 5
+    },
+    {
+      "parent": 17,
+      "children": [
+        22,
+        23
+      ],
+      "leaves": 2,
+      "size": 3,
+      "depth": 4
+    },
+    {
+      "parent": 21,
+      "children": [],
+      "leaves": 1,
+      "size": 1,
+      "depth": 5
+    },
+    {
+      "parent": 21,
+      "children": [],
+      "leaves": 1,
+      "size": 1,
+      "depth": 5
+    },
+    {
+      "parent": 16,
+      "children": [
+        25,
+        28
+      ],
+      "leaves": 4,
+      "size": 7,
+      "depth": 3
+    },
+    {
+      "parent": 24,
+      "children": [
+        26,
+        27
+      ],
+      "leaves": 2,
+      "size": 3,
+      "depth": 4
+    },
+    {
+      "parent": 25,
+      "children": [],
+      "leaves": 1,
+      "size": 1,
+      "depth": 5
+    },
+    {
+      "parent": 25,
+      "children": [],
+      "leaves": 1,
+      "size": 1,
+      "depth": 5
+    },
+    {
+      "parent": 24,
+      "children": [
+        29,
+        30
+      ],
+      "leaves": 2,
+      "size": 3,
+      "depth": 4
+    },
+    {
+      "parent": 28,
+      "children": [],
+      "leaves": 1,
+      "size": 1,
+      "depth": 5
+    },
+    {
+      "parent": 28,
+      "children": [],
+      "leaves": 1,
+      "size": 1,
+      "depth": 5
+    },
+    {
+      "parent": -1,
+      "children": [
+        32,
+        35
+      ],
+      "leaves": 4,
+      "size": 7,
+      "depth": 1
+    },
+    {
+      "parent": 31,
+      "children": [
+        33,
+        34
+      ],
+      "leaves": 2,
+      "size": 3,
+      "depth": 2
+    },
+    {
+      "parent": 32,
+      "children": [],
+      "leaves": 1,
+      "size": 1,
+      "depth": 3
+    },
+    {
+      "parent": 32,
+      "children": [],
+      "leaves": 1,
+      "size": 1,
+      "depth": 3
+    },
+    {
+      "parent": 31,
+      "children": [
+        36,
+        37
+      ],
+      "leaves": 2,
+      "size": 3,
+      "depth": 2
+    },
+    {
+      "parent": 35,
+      "children": [],
+      "leaves": 1,
+      "size": 1,
+      "depth": 3
+    },
+    {
+      "parent": 35,
+      "children": [],
+      "leaves": 1,
+      "size": 1,
+      "depth": 3
+    }
+  ],
+  "exact_dp_capacity8_infeasible": true,
+  "capacity9_witness_valid": true
+}

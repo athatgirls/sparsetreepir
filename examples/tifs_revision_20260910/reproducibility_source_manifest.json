@@ -1,0 +1,93 @@
+{
+  "scope": "Package dependencies and post-run read-only provenance check, 2026-09-10; no benchmark was executed while creating this manifest",
+  "local_script_dependency_closure": [
+    "scripts/analyze_tifs_verified_results_20260910.py",
+    "scripts/fixed_sparse_tree_coloring.py",
+    "scripts/generate_full_sparse_smt_example.py",
+    "scripts/run_height_sparsity_profile_balance_experiment.py",
+    "scripts/run_real_smt_workload_experiment.py",
+    "scripts/run_sparse_smt_pir_backend_experiment.py",
+    "scripts/run_tifs_balance_repeats_20260910.py",
+    "scripts/run_tifs_balance_study_20260910.py",
+    "scripts/run_tifs_verified_backend_suite_20260910.py",
+    "scripts/subtree_permutation_balance.py",
+    "scripts/test_tifs_revision_routing.py",
+    "scripts/test_tifs_revision_smt.py",
+    "scripts/tifs_revision_smt.py",
+    "scripts/verify_tifs_backend_smoke.py"
+  ],
+  "required_package_file_sha256": {
+    "scripts/analyze_tifs_verified_results_20260910.py": "1804bee4823d5810509c091ac7f740dc02eddc583e1f705b7fc3b357c2168414",
+    "scripts/fixed_sparse_tree_coloring.py": "0e835f0d26bf71a78e0652f53c73bf942f071af0df68bd32cd496d0d8bef7cf0",
+    "scripts/generate_full_sparse_smt_example.py": "5cd3630af580fe03214fd9816ff66601e3f32e79a4e3d304b445bd8f12d17b1d",
+    "scripts/run_height_sparsity_profile_balance_experiment.py": "6e13f887cbe283ade74aad6cd2174aa3c1d66001ada2106fc27935b3284f63f5",
+    "scripts/run_real_smt_workload_experiment.py": "860fed331a383ea4bbd3aa61e7a05dd411951b55484d2dda0ed28e76ba1b583a",
+    "scripts/run_sparse_smt_pir_backend_experiment.py": "2f0ae62851d8d3fe1219183e0a26bead1a5fcc9607612a15371927aacab248fb",
+    "scripts/run_tifs_balance_repeats_20260910.py": "f90b7a1c24675b6038c408202fbded6c3f18e88504bb130f383e5b7b3ffa335d",
+    "scripts/run_tifs_balance_study_20260910.py": "626462af47390b198e6e62eca78290bea758dc06e251ca767cd2e9638c9581f4",
+    "scripts/run_tifs_verified_backend_suite_20260910.py": "bf441840014a4059024229a989a356b771b694b001d05c975807ee08c8b5c589",
+    "scripts/subtree_permutation_balance.py": "3cc15ec56c39eadcefcee8790bf879ac164714a810884d9f20659732ab06ebee",
+    "scripts/test_tifs_revision_routing.py": "27652f2226c4879fd5c30875128fb2770637c58a2ae99b733c828766b8cbf8ee",
+    "scripts/test_tifs_revision_smt.py": "2d8a40dc9daf0a5b5c30961011879c2f9f6267f5b08acc29802615808e84edd9",
+    "scripts/tifs_revision_smt.py": "f0dc6c6c9af2d7a9c032991f5407c7cca79e7353394d6a18d9f8e8bb5e72c740",
+    "scripts/verify_tifs_backend_smoke.py": "64dbce198776116c26ac30297a258f5367c608b1c9e8166fb30530dd9ed6a4f6",
+    "datasets/fuel_smt_test_workload.csv": "6dc83a59a37929033f2518c374b6545f0dec43282b28f640b08117a47699e25b",
+    "datasets/polygon_zkevm_account_leaf_workload.csv": "fd843ae994964a7d99ba36d34f173b47e64068914d44476811efb6594a8e9622",
+    "datasets/zksync_era_account_leaf_workload_sample.csv": "7f105c1cbf2dad192bd6f6b6734e7c96b7bbafe24d1007eba9e728d2e14c1343",
+    "datasets/polygon_zkevm_account_leaf_workload_multiwindow.csv": "8bdf3820a68d1b7a0e386b1a1f6b5f08df65c6fc02bb1d9ab07381ed0d61c78d",
+    "datasets/polygon_zkevm_account_leaf_workload_broad_multiwindow.csv": "674277165c8cd686560b72c4805f8b247230226510f1e3f893120a0d5cfe9dcd",
+    "datasets/zksync_era_account_leaf_workload_broad_sample.csv": "efdb4aa351714249089a60ab89fe2fb71ea2df2501c976d20b751fab71f76eb3",
+    "backend/simplepir/tifs_full_proof_backend.go": "adfb8b83d972a1efda836d449eff9a795d61a7641200f022f2ca00f6812e260e",
+    "backend/simplepir/TIFS_RUNNER_README.md": "f3ef669bd08d4f247604239c067834e58469118498fd6799b11e627bd377bcf4"
+  },
+  "simplepir": {
+    "origin": "https://github.com/ahenzinger/simplepir.git",
+    "commit": "e9020b03bf2872c75b8954e749e32408b5db87ed",
+    "archive_path": ".tools/downloads/simplepir-main.zip",
+    "archive_sha256": "8a325b140e74c3742209c30fb1cc3ebe965c97a95755d73662a0e234ed52f614",
+    "all_23_tracked_files_match_archive": true,
+    "upstream_tracked_file_sha256": {
+      "LICENSE": "fefacddd05c33c09efdcf994082865eaf85dd8d895aab76dd37ccacae929e16f",
+      "README.md": "bb47e2a20702dda36f9626b96bc996a1f597f3bc9f7375a2bd1616361e084562",
+      "eval/.gitignore": "5124d200caedd01424799d2e2722d722f858b944630a4119a4b2adfff1875718",
+      "eval/plot.py": "1d5a823f5a4d391fec9abf126e69eb6ed4dc032bf7fc770487389820cd9f7cf1",
+      "go.mod": "c88f360a80734fce345af8f3bcb7f6830817bc2ed7a5fbb805282297887b4796",
+      "performance.png": "6c3afab905f807082c729f03c232aa7d98459b470cf30d6c49324c2853fdd736",
+      "pir/.gitignore": "beb0e14271320466c2c65dbcbf09e9804022159e2652c2f66cb775d34e8ef5f2",
+      "pir/database.go": "1622cd3e91621e10d992fbbfdb0f74d7a7a20e137b00b986590a5324ccb18fd8",
+      "pir/double_pir.go": "066ab6cffae3147c2cb4e2e1aaebb057e75903bf8b123ab428c8af2cc7fb5614",
+      "pir/experiments.sh": "3c89f2c6e1cd75c6360b982fa9b3e402f9493abe7b336ae591666256a744afb2",
+      "pir/gauss.go": "c326558cc9c536ee522188263e298081132965663a8d5e88433ce04bf2e253d5",
+      "pir/gauss_test.go": "f9ac3bd6d16929a5b2a13c75513b460fc448c4996a4816b792b40a4b8b71ea06",
+      "pir/logging.go": "928ee1d28149d4fd1df9f453b03ed0d90002fa51bb7bc20996a92480fb97663f",
+      "pir/matrix.go": "ec6d5bf10a26546d8c8082fe5bc0e173c8f94c3a14e5e7a75f3c6df7c3b97f53",
+      "pir/params.csv": "b3db22f70c038f741dacda0aec7a531397a32c4bfca0df4a98156f37adf089ca",
+      "pir/params.go": "c520a84e2fb712c791ea64fe228bd64259f93a1f59399fdf162109aa22db05bd",
+      "pir/pir.c": "744eb6ff6fd1c7e5ae91977eab175d8cfaa177165446e75c2edbee73b182e3c1",
+      "pir/pir.go": "81c80ac872b215fc6e5161568241714b37ad4a0453979ec232b4fd0cde59b993",
+      "pir/pir.h": "dde206eccaf7b58b641015945b4c672082dc18f2f3cf6693dc035b27c1a82d41",
+      "pir/pir_test.go": "a086df6dc421690cf7cd4febe1bdf1bca990b02d73eece0ba33d6e83d6c9c5a8",
+      "pir/rand.go": "15da8cea8ab4f77b6a29aa83c76cbda9465b97c0a2f143ef4c2704b8a97d34d3",
+      "pir/simple_pir.go": "84d8cb9f016154827a1bbaa578a3dad2b7188526f91e5f3ca617bd89b8119f15",
+      "pir/utils.go": "fe6d4b3c3a66a6fc6d07a12d0ee7139c57316ee684b836916ce15d7144de99a9"
+    },
+    "go_sum_present": false,
+    "status": "upstream tracked files unchanged; only author runners are untracked in eval"
+  },
+  "post_run_environment_confirmation": {
+    "WSL": {
+      "python": "3.12.3",
+      "numpy": "1.26.4",
+      "matplotlib": "3.11.1",
+      "go": "1.22.2 linux/amd64",
+      "gcc": "13.3.0",
+      "gomaxprocs": 1,
+      "venv_used": "/var/tmp/tifs_revision_20260910_venv"
+    },
+    "Windows": {
+      "python": "3.14.2",
+      "numpy": "2.4.1",
+      "matplotlib": "3.10.8"
+    }
+  }
+}

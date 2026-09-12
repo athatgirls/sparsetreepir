@@ -1,0 +1,183 @@
+{
+  "status": "pass",
+  "native_results": 6,
+  "proof_roots": 72,
+  "positions": 1224,
+  "real_digest_checks": 1014,
+  "pbc_filled_slot_checks": 612,
+  "pbc_empty_sentinel_slots": 324,
+  "native_result_sha256": {
+    "examples/tifs_external_extension_20260911/runs/uniform_n10000/pbc/repeat0/result.json": "c6a90b91ff5c367d67ce78851e88eb78ff9727af3b592cc7cf3ef94b29c542c8",
+    "examples/tifs_external_extension_20260911/runs/uniform_n10000/pbc/repeat1/result.json": "96198841b82175fbf73e36f834a178a71656ff35db091a02c6cdbb5da59af51f",
+    "examples/tifs_external_extension_20260911/runs/uniform_n10000/pbc/repeat2/result.json": "70278676b3789f6d28dc750ad2a62d0560426701455b4116ed494731094f1e4e",
+    "examples/tifs_external_extension_20260911/runs/uniform_n10000/ab/repeat0/result.json": "2f54aba008f60e492ba6915ec9cf73994742643f7cae1b694c9227a194ac8836",
+    "examples/tifs_external_extension_20260911/runs/uniform_n10000/ab/repeat1/result.json": "7d80d3a72017e4d8adb936f456ede90f091bea33179555b8c5d2fe88a0158ff3",
+    "examples/tifs_external_extension_20260911/runs/uniform_n10000/ab/repeat2/result.json": "795898a9ae75e739f721c8d8db2f70eebb0416defda8275cbf289cf115e1f45e"
+  },
+  "pbc_placement_scope": "Every record has the same three distinct official candidates, in ascending-record insertion order; all frozen recovered record/position pairs match. This does not assert identical fresh cuckoo route randomness across backends.",
+  "case": "uniform_n10000",
+  "records": 19998,
+  "height": 128,
+  "m": 17,
+  "first_fit_all_occupied_routes_checked": 10000,
+  "source_vbpir_input_sha256": "04b6d1d6a8f3ce48d651795f545304c6bb0f2646c20d952b185b2287badf99c7",
+  "source_schedule_sha256": "92f3d7b59bfdb79dd0cc9926e8d65d40089fcc18a9bb8842835f3a3be2218cf6",
+  "source_common_fields_sha256": {
+    "schema_version": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+    "case": "a07c4a0739debf1605ea26b8dc017e27907b68b1134abf613fcb0261864b149a",
+    "height": "2747b7c718564ba5f066f0523b03e17f6a496b06851333d2d59ab6d863225848",
+    "root_hex": "b8045dddf7cb93083c18f7ccbf512a0ba237576d21f62dae12a999bf98d5d3d5",
+    "default_hashes": "bf945f53d22ed8ce1b981a943586a3ef4bc262d478dcb8dae2f6c44dbd6814e0",
+    "records": "41d272f4c50f2603e025dee9adb539a5ea6f9e86b367a8bbf8b5c6c0bcd15be9",
+    "record_heap_ids_hex": "944754a1517fab0cb226a5cccc65bd38eece19fbc7f62975834765e98b44b961",
+    "record_intervals": "22bebdd6f3acb91ea478940797d446dd940c285ba912d21f0f3f7091f21eee6c",
+    "occupied_slots_hex": "8fde72371b0d9489f37e210e2ad09cc6e405b41c5eac9b252b13c3593d40b90c",
+    "seed": "62851dbbae0042f5a30ac8f427bb3fe545e3c8b0357c21fefb4799fb4e347d35",
+    "generator": "6f55711e0d15d8bfb96d24bc18410d1df9928ae08a32d06413a1414ae31047af"
+  },
+  "AB_buckets_identical_to_frozen_native_input": true,
+  "target_pool_preserved": 32,
+  "target_schedule": [
+    {
+      "case": "uniform_n10000",
+      "repeat": 0,
+      "pool_indices": [
+        11,
+        17,
+        26,
+        25,
+        22,
+        31,
+        20,
+        2,
+        3,
+        15
+      ],
+      "target_ids": [
+        3455,
+        4684,
+        8224,
+        7967,
+        6995,
+        9468,
+        5982,
+        529,
+        542,
+        4109
+      ]
+    },
+    {
+      "case": "uniform_n10000",
+      "repeat": 1,
+      "pool_indices": [
+        28,
+        29,
+        31,
+        4,
+        24,
+        15,
+        12,
+        16,
+        20,
+        13
+      ],
+      "target_ids": [
+        8963,
+        9052,
+        9468,
+        741,
+        7500,
+        4109,
+        3652,
+        4238,
+        5982,
+        3731
+      ]
+    },
+    {
+      "case": "uniform_n10000",
+      "repeat": 2,
+      "pool_indices": [
+        26,
+        8,
+        20,
+        10,
+        4,
+        21,
+        7,
+        9,
+        18,
+        11
+      ],
+      "target_ids": [
+        8224,
+        1497,
+        5982,
+        3212,
+        741,
+        6025,
+        1475,
+        3173,
+        4767,
+        3455
+      ]
+    }
+  ],
+  "official_candidates_sha256": "fdd4ebf39c87b9f70d8f0e0ef8b51b22acf4e1243a4cdaabe30649099a0aef1a",
+  "pbc_record_replication": 3,
+  "pbc_distinct_candidates_per_record": 3,
+  "original_first_fit_sha256": "6e13f887cbe283ade74aad6cd2174aa3c1d66001ada2106fc27935b3284f63f5",
+  "original_interval_forest_sha256": "5cd3630af580fe03214fd9816ff66601e3f32e79a4e3d304b445bd8f12d17b1d",
+  "producer_sha256": "f8b62244d4e435f873d20a65e72f315167ff43643b125071bac36a1e6cedbecb",
+  "outputs": {
+    "ab.json": {
+      "sha256": "ef01ed77453c884022e1cb92d128ce0d5c5909dc88d5b3ae0edd852b38a81e0a",
+      "bytes": 4135794,
+      "bucket_count": 17,
+      "max_bucket_records": 1179,
+      "stored_record_copies": 19998,
+      "logical_queries_per_proof": 17
+    },
+    "pbc.json": {
+      "sha256": "e2c951cec124d2e0dd7e5f352323cb8969781106551c6790ea2d06833b87b862",
+      "bytes": 6677035,
+      "bucket_count": 26,
+      "max_bucket_records": 2379,
+      "stored_record_copies": 59994,
+      "logical_queries_per_proof": 26
+    },
+    "flat.json": {
+      "sha256": "916fd50ca66f2819b34ebad92b05631f5ec7f4aa060f846da5011e7c6da5ea09",
+      "bytes": 4133567,
+      "bucket_count": 1,
+      "max_bucket_records": 19998,
+      "stored_record_copies": 19998,
+      "logical_queries_per_proof": 17
+    },
+    "first_fit.json": {
+      "sha256": "a5e27ae1bc4c77ab45e2c7f084a9c67bc236786e677773a2f9e91cf821bc74bd",
+      "bytes": 4135564,
+      "bucket_count": 17,
+      "max_bucket_records": 5646,
+      "stored_record_copies": 19998,
+      "logical_queries_per_proof": 17
+    }
+  },
+  "prepare_wall_s": 2.453637495999999,
+  "environment": {
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "python": "3.12.3"
+  },
+  "scope": "Input transformation, public placement and frozen native-result audit only; no SMT rehash, no new AB run, no new PIR measurement",
+  "simplepir_parameter_policy": {
+    "record_bytes": 32,
+    "record_bits": 256,
+    "parts": 1,
+    "encoding": "native base-p long record",
+    "parameter_policy": "PickParams(U, 256, 1024, 32)",
+    "parameter_U": "public maximum bucket load; N for flat",
+    "secret_dimension": 1024,
+    "logq": 32,
+    "public_A": "expanded"
+  }
+}

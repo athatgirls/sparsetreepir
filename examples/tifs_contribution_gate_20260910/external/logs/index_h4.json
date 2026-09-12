@@ -1,0 +1,12 @@
+{
+  "command": [
+    "java",
+    "-cp",
+    "/artifact/examples/tifs_contribution_gate_20260910/external/java_build/index:/artifact/examples/tifs_contribution_gate_20260910/external/official_sources/CSA/gson-2.10.1.jar",
+    "contribution_gate_index_20260910",
+    "4"
+  ],
+  "returncode": 0,
+  "stdout": "target_slot\tcolor\tposition\tswapped_node\n0\tA\t0\t2\n0\tC\t0\t4\n0\tD\t1\t8\n0\tB\t2\t16\n1\tA\t0\t2\n1\tC\t0\t4\n1\tD\t1\t8\n1\tB\t3\t17\n2\tA\t0\t2\n2\tC\t0\t4\n2\tB\t1\t9\n2\tD\t2\t18\n3\tA\t0\t2\n3\tC\t0\t4\n3\tB\t1\t9\n3\tD\t3\t19\n4\tA\t0\t2\n4\tD\t0\t5\n4\tC\t1\t10\n4\tB\t5\t20\n5\tA\t0\t2\n5\tD\t0\t5\n5\tC\t1\t10\n5\tB\t6\t21\n6\tA\t0\t2\n6\tD\t0\t5\n6\tB\t4\t11\n6\tC\t2\t22\n7\tA\t0\t2\n7\tD\t0\t5\n7\tB\t4\t11\n7\tC\t3\t23\n8\tB\t0\t3\n8\tC\t4\t6\n8\tD\t5\t12\n8\tA\t2\t24\n9\tB\t0\t3\n9\tC\t4\t6\n9\tD\t5\t12\n9\tA\t3\t25\n10\tB\t0\t3\n10\tC\t4\t6\n10\tA\t1\t13\n10\tD\t6\t26\n11\tB\t0\t3\n11\tC\t4\t6\n11\tA\t1\t13\n11\tD\t7\t27\n12\tB\t0\t3\n12\tD\t4\t7\n12\tC\t5\t14\n12\tA\t5\t28\n13\tB\t0\t3\n13\tD\t4\t7\n13\tC\t5\t14\n13\tA\t6\t29\n14\tB\t0\t3\n14\tD\t4\t7\n14\tA\t4\t15\n14\tC\t6\t30\n15\tB\t0\t3\n15\tD\t4\t7\n15\tA\t4\t15\n15\tC\t7\t31\n",
+  "stderr": ""
+}

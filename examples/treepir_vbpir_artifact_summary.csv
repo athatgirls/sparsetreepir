@@ -1,3 +1,0 @@
-artifact,height,num_entries,entry_size_bytes,batch_size,num_buckets,max_bucket_size,min_bucket_size,avg_bucket_size,query_gen_us,response_gen_us,extract_us,query_kb,response_kb,total_kb,matched_examples,status
-VBPIR_PBC,10,2046,32,15,15,446,381,409,30603,7709105,17253,384,256,640,10,success
-VBPIR_TreePIR,10,2046,32,10,10,205,,,32652,7451751,17270,384,256,640,10,success

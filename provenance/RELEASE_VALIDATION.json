@@ -1,0 +1,70 @@
+{
+  "schema": 1,
+  "validation_date": "2026-09-12",
+  "status": "validated_with_preserved_observed_failure",
+  "normalized_release_frozen_evidence": {
+    "vbpir": {
+      "status": "passed",
+      "process_results_verified": 48,
+      "measured_proofs_verified": 480,
+      "proofs_including_warmups_verified": 576,
+      "failed_process_results_audited": 0,
+      "run_inputs_restored": 48
+    },
+    "simplepir": {
+      "status": "audited_with_observed_failures",
+      "process_results_verified": 83,
+      "measured_proofs_verified": 837,
+      "proofs_including_warmups_verified": 1005,
+      "failed_process_results_audited": 1,
+      "run_inputs_restored": 84
+    }
+  },
+  "current_main_selection": {
+    "complete_processes": 72,
+    "measured_proofs": 720,
+    "warmups": 144
+  },
+  "fresh_native_build": {
+    "status": "passed",
+    "simplepir_adapter_go_tests": "passed",
+    "seal_version": "4.3.2",
+    "seal_origin": "existing local installation; exact version checked",
+    "simplepir_source_files_hash_checked": 19,
+    "vbpir_source_files_hash_checked": 46
+  },
+  "fresh_native_smoke": {
+    "status": "passed",
+    "processes": 6,
+    "measured_proofs": 12,
+    "warmups": 6,
+    "proofs_including_warmups": 18,
+    "failures": 0,
+    "independently_audited": true,
+    "excluded_from_performance_evidence": true
+  },
+  "supplementary_verification": {
+    "status": "passed",
+    "earlier_workload_processes": 180,
+    "root_checks": 18000,
+    "tamper_rejections": 18000,
+    "record_byte_checks": 282000,
+    "frozen_joint_bound_rows": 3438,
+    "joint_bound_mismatches": 0,
+    "wrapper_family_proofs": 109,
+    "five_state_proofs": 222,
+    "five_state_projected_inequalities": 27
+  },
+  "paper_figures_and_tables": {
+    "status": "passed",
+    "scope": "regenerated outputs checked by the release assembler"
+  },
+  "limits": {
+    "full_native_benchmarks_rerun": false,
+    "fresh_seal_bootstrap_tested": false,
+    "recorded_backend_executables_authenticated": false,
+    "frozen_native_audit_scope": "recorded hashes, schedules, recovered bytes, authentication and accounting; no replay of lattice decryption or timings",
+    "supplementary_check_scope": "frozen observations and mathematical certificates; no new performance measurements",
+    "legacy_audits_requiring_omitted_executables": "not claimed to pass unchanged in the source-only release"
+  }
+}
